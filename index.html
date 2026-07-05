@@ -615,6 +615,161 @@ setTimeout(()=>{
   update();
 })();
 
+
+/* ── ORBITAL SPHERE ── */
+(function(){
+  const cont = document.querySelector('.av-r');
+  if(!cont) return;
+
+  const W = ()=>cont.clientWidth, H = ()=>cont.clientHeight;
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(50, W()/H(), 0.1, 100);
+  cam.position.set(0, 0, 5);
+
+  const canvas = document.getElementById('orbit-canvas');
+  const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.setSize(W(), H());
+
+  // Core sphere
+  const coreGeo = new THREE.SphereGeometry(0.8, 32, 32);
+  const coreMat = new THREE.MeshPhongMaterial({
+    color:0xD40000, transparent:true, opacity:0.15,
+    wireframe:false, emissive:0xD40000, emissiveIntensity:0.3
+  });
+  const core = new THREE.Mesh(coreGeo, coreMat);
+  scene.add(core);
+
+  // Core wireframe
+  const wireGeo = new THREE.SphereGeometry(0.82, 16, 16);
+  const wireMat = new THREE.MeshBasicMaterial({color:0xD40000, wireframe:true, transparent:true, opacity:0.15});
+  scene.add(new THREE.Mesh(wireGeo, wireMat));
+
+  // Glow
+  const glowGeo = new THREE.SphereGeometry(1.1, 32, 32);
+  const glowMat = new THREE.MeshBasicMaterial({color:0xD40000, transparent:true, opacity:0.04, side:THREE.BackSide});
+  scene.add(new THREE.Mesh(glowGeo, glowMat));
+
+  // Orbit rings
+  const rings = [];
+  [1.8, 2.6, 3.3].forEach((r, i) => {
+    const geo = new THREE.TorusGeometry(r, 0.008, 4, 120);
+    const mat = new THREE.MeshBasicMaterial({color:0xD40000, transparent:true, opacity:0.2-i*0.05});
+    const ring = new THREE.Mesh(geo, mat);
+    ring.rotation.x = Math.PI/2 + (i-1)*0.3;
+    ring.rotation.y = i*0.4;
+    rings.push(ring);
+    scene.add(ring);
+  });
+
+  // Orbit nodes (services)
+  const services = [
+    'Веб-розробка', 'Telegram-боти', 'Екосистема',
+    'SEO', 'CI/CD', 'FastAPI', 'PostgreSQL', 'Railway'
+  ];
+
+  const nodes = [];
+  services.forEach((label, i) => {
+    const angle = (i / services.length) * Math.PI * 2;
+    const orbitR = i % 2 === 0 ? 1.8 : 2.6;
+    const tilt = i % 3 === 0 ? 0.3 : -0.2;
+
+    // Node dot
+    const dotGeo = new THREE.SphereGeometry(0.06, 8, 8);
+    const dotMat = new THREE.MeshBasicMaterial({color: i < 3 ? 0xD40000 : 0xEDE8E5, transparent:true, opacity:0.9});
+    const dot = new THREE.Mesh(dotGeo, dotMat);
+    
+    dot._orbit = {r: orbitR, angle, speed: 0.003 + i*0.0005, tilt};
+    nodes.push(dot);
+    scene.add(dot);
+
+    // Sprite label
+    const div = document.createElement('div');
+    div.style.cssText = `
+      position:absolute;pointer-events:none;
+      font-family:'Space Grotesk',sans-serif;
+      font-size:10px;font-weight:600;letter-spacing:0.14em;
+      text-transform:uppercase;white-space:nowrap;
+      color:${i<3?'#D40000':'#EDE8E5'};
+      opacity:0.85;
+      text-shadow:0 0 10px rgba(212,0,0,0.5);
+    `;
+    div.textContent = label;
+    cont.appendChild(div);
+    dot._label = div;
+  });
+
+  // Particles
+  const pGeo = new THREE.BufferGeometry();
+  const pPos = new Float32Array(300*3);
+  for(let i=0;i<300*3;i++) pPos[i] = (Math.random()-.5)*10;
+  pGeo.setAttribute('position', new THREE.BufferAttribute(pPos,3));
+  scene.add(new THREE.Points(pGeo, new THREE.PointsMaterial({
+    color:0xD40000, size:0.018, transparent:true, opacity:0.4,
+    blending:THREE.AdditiveBlending
+  })));
+
+  // Lights
+  scene.add(new THREE.AmbientLight(0xffffff, 0.3));
+  const rl = new THREE.PointLight(0xD40000, 3, 8);
+  rl.position.set(0,0,2);
+  scene.add(rl);
+
+  let mx=0, my=0, cx=0, cy=0;
+  cont.addEventListener('mousemove', e=>{
+    const r=cont.getBoundingClientRect();
+    mx=(e.clientX-r.left)/r.width-.5;
+    my=(e.clientY-r.top)/r.height-.5;
+  });
+
+  const clk = new THREE.Clock();
+  (function animate(){
+    requestAnimationFrame(animate);
+    const t = clk.getElapsedTime();
+    cx+=(mx-cx)*.04; cy+=(my-cy)*.04;
+
+    // Rotate rings
+    rings.forEach((ring, i) => {
+      ring.rotation.z += 0.002 + i*0.001;
+      ring.rotation.x += 0.001;
+    });
+
+    // Pulse core
+    rl.intensity = 2.5 + Math.sin(t*2)*1.5;
+    core.material.emissiveIntensity = 0.2 + Math.sin(t*2)*0.15;
+
+    // Orbit nodes
+    nodes.forEach((dot, i) => {
+      const o = dot._orbit;
+      o.angle += o.speed;
+      dot.position.x = Math.cos(o.angle) * o.r;
+      dot.position.y = Math.sin(o.angle) * o.r * Math.sin(o.tilt);
+      dot.position.z = Math.sin(o.angle) * o.r * Math.cos(o.tilt);
+
+      // Project to screen for label
+      const v = dot.position.clone().project(cam);
+      const rect = cont.getBoundingClientRect();
+      const lx = (v.x+1)/2 * rect.width + 12;
+      const ly = (-v.y+1)/2 * rect.height;
+      if(dot._label){
+        dot._label.style.left = lx+'px';
+        dot._label.style.top = ly+'px';
+        dot._label.style.opacity = v.z < 1 ? '0.85' : '0';
+      }
+    });
+
+    // Camera mouse parallax
+    cam.position.x += (cx*.8 - cam.position.x)*.04;
+    cam.position.y += (-cy*.8 - cam.position.y)*.04;
+    cam.lookAt(0,0,0);
+
+    renderer.setSize(W(), H());
+    cam.aspect = W()/H();
+    cam.updateProjectionMatrix();
+    renderer.render(scene, cam);
+  })();
+})();
+
 </script>
 </body>
 </html>
