@@ -267,6 +267,21 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 /* Glow pulse on core */
 @keyframes coreGlow{0%,100%{opacity:.18}50%{opacity:.32}}
 .o-core{animation:coreGlow 4s ease-in-out infinite;}
+
+.av-attr-item{position:relative;cursor:default;}
+.av-attr-item::after{
+  content:attr(data-tip);
+  position:absolute;bottom:calc(100% + 10px);left:0;
+  background:rgba(11,7,7,.95);border:1px solid rgba(237,232,229,.1);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  color:#EDE8E5;font-family:'Inter',sans-serif;font-size:12px;
+  line-height:1.6;padding:12px 16px;width:260px;
+  opacity:0;pointer-events:none;
+  transform:translateY(6px);
+  transition:opacity .2s,transform .2s;
+  z-index:100;
+}
+.av-attr-item:hover::after{opacity:1;transform:translateY(0);}
 </style>
 </head>
 <body>
@@ -391,10 +406,10 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
     <div class="slabel" style="margin-bottom:24px;">Infinite Union</div>
     <div class="av-quote">Ми — <span>орли</span> цифрового світу. Беремо проект і доводимо до <span>результату</span>.</div>
     <div class="av-attrs">
-      <div><div class="av-attr-l">Підхід</div><div class="av-attr-v">Без технічного боргу</div></div>
-      <div><div class="av-attr-l">Стек</div><div class="av-attr-v">Python · JS · SQL</div></div>
-      <div><div class="av-attr-l">Деплой</div><div class="av-attr-v">Railway · GitHub Pages</div></div>
-      <div><div class="av-attr-l">Підтримка</div><div class="av-attr-v">24/7 моніторинг</div></div>
+      <div class="av-attr-item" data-tip="Код написаний так, що його легко розширювати і не треба переписувати через рік. Нові функції — без зламаної архітектури."><div class="av-attr-l">Підхід</div><div class="av-attr-v">Zero Technical Debt</div></div>
+      <div class="av-attr-item" data-tip="Система розбита на незалежні сервіси — кожен масштабується окремо. Падіння одного не валить все."><div class="av-attr-l">Стек</div><div class="av-attr-v">Microservice Architecture</div></div>
+      <div class="av-attr-item" data-tip="Нові версії деплояться автоматично без downtime. Ваші користувачі взагалі не помічають що щось оновилось."><div class="av-attr-l">Деплой</div><div class="av-attr-v">CI/CD · Blue-Green Deploy</div></div>
+      <div class="av-attr-item" data-tip="Можете не боятись що сайт впаде. При будь-якій найменшій помилці ми помітимо це першими — і усунемо до того як ви взнаєте."><div class="av-attr-l">Підтримка</div><div class="av-attr-v">SLA 99.9% · 15min Response</div></div>
     </div>
   </div>
   <div class="av-right" id="orbit-cont">
