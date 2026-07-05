@@ -243,23 +243,23 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 </head>
 <body>
 
-<div id="curO">
+<div id="curO"></div>
 
 <!-- PRELOADER -->
 <div id="loader">
-  
-    
-  
+  <div class="l-left">
+    <img class="l-avatar" id="lavatar" src="avatar.jpeg" alt="Infinite Union mascot"/>
+  </div>
   <div class="l-right" style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;">
-    <div class="l-logo">INFINITE <span>UNION</span>
+    <div class="l-logo">INFINITE <span>UNION</span></div>
     <div>
-      <div class="l-pct"><span id="lnum">0</span><em>%</em>
-      <div class="l-bar-wrap"><div class="l-bar" id="lbar"></div>
-      <div class="l-status" id="lstatus">• Ініціалізація
-    
-    <div class="l-coords">50° 27′ N / 30° 31′ E<br/>Kyiv, Ukraine
-  
-
+      <div class="l-pct"><span id="lnum">0</span><em>%</em></div>
+      <div class="l-bar-wrap"><div class="l-bar" id="lbar"></div></div>
+      <div class="l-status" id="lstatus">• Ініціалізація</div>
+    </div>
+    <div class="l-coords">50° 27′ N / 30° 31′ E<br/>Kyiv, Ukraine</div>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -270,29 +270,29 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
     <li><a href="#contact">Контакт</a></li>
   </ul>
   <a href="#contact" class="n-cta">Замовити проект</a>
-  <div class="burger" id="burger"><span></span><span></span><span></span>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
 </nav>
 <div class="mob" id="mob">
   <button class="mob-x" id="mobX">&times;</button>
   <a href="#services" onclick="closeMob()">Послуги</a>
   <a href="#portfolio" onclick="closeMob()">Роботи</a>
   <a href="#contact" onclick="closeMob()">Контакт</a>
-
+</div>
 
 <!-- HERO -->
 <section id="hero">
   <div class="h-avatar-col">
 <canvas id="hero-snake-c" style="position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;"></canvas>
-    <div class="h-avatar-bg">
+    <div class="h-avatar-bg"></div>
     <canvas id="hero-3d"></canvas>
     <img class="h-avatar" id="havatar" src="avatar.jpeg" alt="Infinite Union — Eagle mascot"/>
-    <div class="h-avatar-glow">
-  
+    <div class="h-avatar-glow"></div>
+  </div>
   <div class="h-content">
     <div class="h-meta" id="hm">
       <span>Україна <b>◆</b> 50° 27′ N</span>
       <span>2026 <b>◆</b> Web · Bots</span>
-    
+    </div>
     <h1 class="h1">
       <span class="li"><span class="lin" id="hl1">Будуємо</span></span>
       <span class="li"><span class="lin" id="hl2">цифрові</span></span>
@@ -302,115 +302,115 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
     <div class="h-btns" id="hbtns">
       <a href="#contact" class="btn-p">Замовити проект</a>
       <a href="#portfolio" class="btn-o">Роботи</a>
-    
+    </div>
     <div class="h-scroll" id="hscroll">
-      <div class="h-scroll-line">
+      <div class="h-scroll-line"></div>
       <span>scroll</span>
-    
-  
+    </div>
+  </div>
 </section>
 
 <!-- MARQUEE -->
 <div class="mq"><div class="mq-t">
   <s>aiogram 3</s><s>FastAPI</s><s>PostgreSQL</s><s>Redis</s><s>Railway</s><s>Python</s><s>Three.js</s><s>SEO</s><s>CI/CD</s><s>WebGL</s>
   <s>aiogram 3</s><s>FastAPI</s><s>PostgreSQL</s><s>Redis</s><s>Railway</s><s>Python</s><s>Three.js</s><s>SEO</s><s>CI/CD</s><s>WebGL</s>
-</div>
+</div></div>
 
 <!-- STATS -->
 <section id="stats">
   <div class="sg">
-    <div class="si rev"><div class="sn" data-target="7">0+<div class="sl">Проєктів в продакшні</div></div>
-    <div class="si rev"><div class="sn">0<div class="sl">Технічного боргу</div></div>
-    <div class="si rev"><div class="sn">24/7<div class="sl">Моніторинг</div></div>
-    <div class="si rev"><div class="sn">15хв<div class="sl">Час відповіді</div></div>
-  
+    <div class="si rev"><div class="sn" data-target="7">0+</div><div class="sl">Проєктів в продакшні</div></div>
+    <div class="si rev"><div class="sn">0</div><div class="sl">Технічного боргу</div></div>
+    <div class="si rev"><div class="sn">24/7</div><div class="sl">Моніторинг</div></div>
+    <div class="si rev"><div class="sn">15хв</div><div class="sl">Час відповіді</div></div>
+  </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="sec">
   <div class="sec-in">
-    <div class="sh rev"><div><div class="slabel">Послуги<h2 class="stitle split-chars" id="srv-title">Що ми робимо</h2></div><div class="snum">01 / 03</div></div>
+    <div class="sh rev"><div><div class="slabel">Послуги</div><h2 class="stitle split-chars" id="srv-title">Що ми робимо</h2></div><div class="snum">01 / 03</div></div>
     <div class="srv-list">
-      <div class="srv rev"><span class="srv-n">01</span><span class="srv-name">Веб-розробка</span><div class="srv-tags"><span class="stg">HTML/CSS/JS</span><span class="stg">FastAPI</span><span class="stg">SEO</span><span class="srv-arr">↗</span></div>
-      <div class="srv rev"><span class="srv-n">02</span><span class="srv-name">Telegram-боти</span><div class="srv-tags"><span class="stg">aiogram 3</span><span class="stg">PostgreSQL</span><span class="stg">Redis</span><span class="srv-arr">↗</span></div>
-      <div class="srv rev"><span class="srv-n">03</span><span class="srv-name">Цифрова екосистема</span><div class="srv-tags"><span class="stg">Full-stack</span><span class="stg">CI/CD</span><span class="stg">Railway</span><span class="srv-arr">↗</span></div>
-    
-  
+      <div class="srv rev"><span class="srv-n">01</span><span class="srv-name">Веб-розробка</span><div class="srv-tags"><span class="stg">HTML/CSS/JS</span><span class="stg">FastAPI</span><span class="stg">SEO</span></div><span class="srv-arr">↗</span></div>
+      <div class="srv rev"><span class="srv-n">02</span><span class="srv-name">Telegram-боти</span><div class="srv-tags"><span class="stg">aiogram 3</span><span class="stg">PostgreSQL</span><span class="stg">Redis</span></div><span class="srv-arr">↗</span></div>
+      <div class="srv rev"><span class="srv-n">03</span><span class="srv-name">Цифрова екосистема</span><div class="srv-tags"><span class="stg">Full-stack</span><span class="stg">CI/CD</span><span class="stg">Railway</span></div><span class="srv-arr">↗</span></div>
+    </div>
+  </div>
 </section>
 
 <!-- PORTFOLIO -->
 <section id="portfolio" class="sec">
-  <div class="sec-in" style="padding-bottom:0;"><div class="sh rev"><div><div class="slabel">Роботи<h2 class="stitle">Портфоліо</h2></div><div class="snum">02 / 03</div></div></div>
+  <div class="sec-in" style="padding-bottom:0;"><div class="sh rev"><div><div class="slabel">Роботи</div><h2 class="stitle">Портфоліо</h2></div><div class="snum">02 / 03</div></div></div>
   <div class="pf-grid">
     <div class="pf-item feat rev">
-      <div><div class="pf-badge">⭐ Флагманський кейс<h3 class="pf-title">Transfer Kharkiv</h3><p class="pf-desc">Комерційний сервіс міжміського таксі — лендінг, два Telegram-боти, бекенд, SEO, Google Ads та Meta-кампанії під ключ.</p></div>
-      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">SEO-сторінок</span><span class="pv">119</span><div><span class="pk">CI тестів</span><span class="pv">35/35</span></div><div><span class="pk">Uptime</span><span class="pv">24/7</span></div></div><a href="https://transferkharkiv.com.ua" target="_blank" class="pf-link">Переглянути</a></div>
-    
+      <div><div class="pf-badge">⭐ Флагманський кейс</div><h3 class="pf-title">Transfer Kharkiv</h3><p class="pf-desc">Комерційний сервіс міжміського таксі — лендінг, два Telegram-боти, бекенд, SEO, Google Ads та Meta-кампанії під ключ.</p></div>
+      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">SEO-сторінок</span><span class="pv">119</span></div><div><span class="pk">CI тестів</span><span class="pv">35/35</span></div><div><span class="pk">Uptime</span><span class="pv">24/7</span></div></div><a href="https://transferkharkiv.com.ua" target="_blank" class="pf-link">Переглянути</a></div>
+    </div>
     <div class="pf-item rev">
-      <div><div class="pf-badge">Telegram-бот<h3 class="pf-title">Realty Monitor</h3><p class="pf-desc">Моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю.</p></div>
-      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">Оплата</span><span class="pv">LiqPay</span></div></div>
-    
+      <div><div class="pf-badge">Telegram-бот</div><h3 class="pf-title">Realty Monitor</h3><p class="pf-desc">Моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю.</p></div>
+      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">Оплата</span><span class="pv">LiqPay</span></div></div></div>
+    </div>
     <div class="pf-item rev">
-      <div><div class="pf-badge">Університет<h3 class="pf-title">KNEU Bot</h3><p class="pf-desc">Бот розкладу КНЕУ з офіційною підтримкою адміністрації та системою старост.</p></div>
-      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">Стек</span><span class="pv">aiogram 3</span></div></div>
-    
-  
+      <div><div class="pf-badge">Університет</div><h3 class="pf-title">KNEU Bot</h3><p class="pf-desc">Бот розкладу КНЕУ з офіційною підтримкою адміністрації та системою старост.</p></div>
+      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">Стек</span><span class="pv">aiogram 3</span></div></div></div>
+    </div>
+  </div>
 </section>
 
 <!-- AVATAR SECTION -->
 <section id="avatar-sec">
   <div class="av-left rev">
-    <div class="slabel" style="margin-bottom:24px;">Infinite Union
-    <div class="av-quote">Ми — <span>орли</span> цифрового світу. Беремо проект і доводимо до <span>результату</span>.
+    <div class="slabel" style="margin-bottom:24px;">Infinite Union</div>
+    <div class="av-quote">Ми — <span>орли</span> цифрового світу. Беремо проект і доводимо до <span>результату</span>.</div>
     <div class="av-attrs">
-      <div><div class="av-attr-l">Підхід<div class="av-attr-v">Без технічного боргу</div></div>
-      <div><div class="av-attr-l">Стек<div class="av-attr-v">Python · JS · SQL</div></div>
-      <div><div class="av-attr-l">Деплой<div class="av-attr-v">Railway · GitHub Pages</div></div>
-      <div><div class="av-attr-l">Підтримка<div class="av-attr-v">24/7 моніторинг</div></div>
-    
-  
+      <div><div class="av-attr-l">Підхід</div><div class="av-attr-v">Без технічного боргу</div></div>
+      <div><div class="av-attr-l">Стек</div><div class="av-attr-v">Python · JS · SQL</div></div>
+      <div><div class="av-attr-l">Деплой</div><div class="av-attr-v">Railway · GitHub Pages</div></div>
+      <div><div class="av-attr-l">Підтримка</div><div class="av-attr-v">24/7 моніторинг</div></div>
+    </div>
+  </div>
   <div class="av-right">
     <img src="avatar.jpeg" alt="Infinite Union Eagle mascot"/>
-  
+  </div>
 </section>
 
 <!-- PHILOSOPHY -->
 <section id="philo">
   <div class="ph-in rev">
-    <div class="ph-q">Наша філософія
+    <div class="ph-q">Наша філософія</div>
     <h2 class="ph-h">Ми не просто розробляємо сайти — ми будуємо <span>цифрові екосистеми</span>.</h2>
-  
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <div class="ct">
     <div class="ct-l rev">
-      <div><div class="slabel">Контакт<h2 class="ct-title">Почнемо<br/><span>разом?</span></h2></div>
-      <div class="ct-coords">50° 27′ N / 30° 31′ E<br/>Kyiv, Ukraine · 2026
-    
+      <div><div class="slabel">Контакт</div><h2 class="ct-title">Почнемо<br/><span>разом?</span></h2></div>
+      <div class="ct-coords">50° 27′ N / 30° 31′ E<br/>Kyiv, Ukraine · 2026</div>
+    </div>
     <div class="ct-r rev">
       <form class="form" id="cForm">
-        <div class="fg"><label>Ім'я</label><input id="cn" type="text" placeholder="Як тебе звати?" required/>
-        <div class="fg"><label>Telegram або телефон</label><input id="cc" type="text" placeholder="@username або +380..." required/>
-        <div class="fg"><label>Про проект</label><textarea id="cp" rows="3" placeholder="Що хочеш зробити?"></textarea>
-        <div class="form-ok" id="cOk">✓ ЗАЯВКУ НАДІСЛАНО — ВІДПОВІМО ПРОТЯГОМ 15 ХВ
+        <div class="fg"><label>Ім'я</label><input id="cn" type="text" placeholder="Як тебе звати?" required/></div>
+        <div class="fg"><label>Telegram або телефон</label><input id="cc" type="text" placeholder="@username або +380..." required/></div>
+        <div class="fg"><label>Про проект</label><textarea id="cp" rows="3" placeholder="Що хочеш зробити?"></textarea></div>
+        <div class="form-ok" id="cOk">✓ ЗАЯВКУ НАДІСЛАНО — ВІДПОВІМО ПРОТЯГОМ 15 ХВ</div>
         <button type="submit" class="btn-p" style="align-self:flex-start;margin-top:8px;">Надіслати →</button>
       </form>
       <div class="ct-info">
-        <div><div class="ci-l">Telegram<div class="ci-v"><a href="https://t.me/infiniteunion_manager" target="_blank">@infiniteunion_manager</a></div></div>
-        <div><div class="ci-l">Email<div class="ci-v"><a href="mailto:ceoinfiniteunion@gmail.com">ceoinfiniteunion@gmail.com</a></div></div>
-        <div><div class="ci-l">Час відповіді<div class="ci-v">15 хвилин</div></div>
-      
-    
-  
+        <div><div class="ci-l">Telegram</div><div class="ci-v"><a href="https://t.me/infiniteunion_manager" target="_blank">@infiniteunion_manager</a></div></div>
+        <div><div class="ci-l">Email</div><div class="ci-v"><a href="mailto:ceoinfiniteunion@gmail.com">ceoinfiniteunion@gmail.com</a></div></div>
+        <div><div class="ci-l">Час відповіді</div><div class="ci-v">15 хвилин</div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="fl">INFINITE <span>UNION</span>
-  <div class="fc">© 2026 · Kyiv, Ukraine · 50° 27′ N / 30° 31′ E
-  <div class="flinks"><a href="https://github.com/ceoinfiniteunion-cell" target="_blank">GitHub</a><a href="https://t.me/infiniteunion_manager" target="_blank">Telegram</a>
+  <div class="fl">INFINITE <span>UNION</span></div>
+  <div class="fc">© 2026 · Kyiv, Ukraine · 50° 27′ N / 30° 31′ E</div>
+  <div class="flinks"><a href="https://github.com/ceoinfiniteunion-cell" target="_blank">GitHub</a><a href="https://t.me/infiniteunion_manager" target="_blank">Telegram</a></div>
 </footer>
 
 <script src="https://unpkg.com/three@0.125.0/build/three.min.js"></script>
