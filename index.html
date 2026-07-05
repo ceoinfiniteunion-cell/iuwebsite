@@ -617,7 +617,149 @@ setTimeout(()=>{
 })();
 
 
-/* ── ORBITAL SPHERE ── */
+/* ── ORBITAL SPHERE v2 ── */
+(function(){
+  const cont = document.querySelector('.av-right');
+  if(!cont) return;
+  const W=()=>cont.clientWidth, H=()=>cont.clientHeight;
+
+  const scene=new THREE.Scene();
+  const cam=new THREE.PerspectiveCamera(50,W()/H(),.1,100);
+  cam.position.set(0,0,5);
+
+  const canvas=document.getElementById('orbit-canvas');
+  const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.setSize(W(),H());
+
+  // Core sphere
+  const coreG=new THREE.SphereGeometry(.7,32,32);
+  const coreM=new THREE.MeshPhongMaterial({color:0xD40000,transparent:true,opacity:.12,emissive:0xD40000,emissiveIntensity:.4});
+  scene.add(new THREE.Mesh(coreG,coreM));
+  const wireG=new THREE.SphereGeometry(.72,14,14);
+  scene.add(new THREE.Mesh(wireG,new THREE.MeshBasicMaterial({color:0xD40000,wireframe:true,transparent:true,opacity:.12})));
+
+  // Orbit rings
+  const rings=[];
+  [{r:1.6,rx:.4,ry:.2},{r:2.2,rx:-.3,ry:.5},{r:2.9,rx:.6,ry:-.3}].forEach(o=>{
+    const m=new THREE.Mesh(new THREE.TorusGeometry(o.r,.006,4,128),new THREE.MeshBasicMaterial({color:0xD40000,transparent:true,opacity:.25}));
+    m.rotation.x=o.rx; m.rotation.y=o.ry; m._rx=o.rx; m._ry=o.ry;
+    rings.push(m); scene.add(m);
+  });
+
+  // Tooltip div
+  const tip=document.createElement('div');
+  tip.style.cssText='position:absolute;pointer-events:none;z-index:10;opacity:0;transition:opacity .2s;background:rgba(10,6,6,.9);border:1px solid rgba(212,0,0,.4);border-radius:4px;padding:10px 14px;min-width:160px;';
+  cont.appendChild(tip);
+
+  // Services data
+  const services=[
+    {n:'Веб-розробка',d:'Лендінги та вебзастосунки з SEO',r:1.6,a:0,s:.012,col:0xD40000,tilt:.3},
+    {n:'Telegram-боти',d:'FSM боти з платежами та адмінкою',r:1.6,a:2.1,s:.012,col:0xD40000,tilt:.3},
+    {n:'Екосистема',d:'Сайт + бот + бекенд під ключ',r:1.6,a:4.2,s:.012,col:0xD40000,tilt:.3},
+    {n:'FastAPI',d:'Python бекенд з REST API',r:2.2,a:.8,s:.008,col:0xEDE8E5,tilt:-.2},
+    {n:'PostgreSQL',d:'Реляційна БД для проектів',r:2.2,a:2.9,s:.008,col:0xEDE8E5,tilt:-.2},
+    {n:'CI/CD',d:'Автодеплой через GitHub Actions',r:2.2,a:5.0,s:.008,col:0xEDE8E5,tilt:-.2},
+    {n:'SEO',d:'119+ сторінок з органічним трафіком',r:2.9,a:1.2,s:.005,col:0xEDE8E5,tilt:.5},
+    {n:'Railway',d:'Хмарний деплой 24/7',r:2.9,a:3.8,s:.005,col:0xEDE8E5,tilt:.5},
+  ];
+
+  const nodes=[];
+  services.forEach(sv=>{
+    const dot=new THREE.Mesh(
+      new THREE.SphereGeometry(sv.col===0xD40000?.09:.07,10,10),
+      new THREE.MeshBasicMaterial({color:sv.col})
+    );
+    dot._sv=sv; nodes.push(dot); scene.add(dot);
+
+    const lbl=document.createElement('div');
+    lbl.style.cssText=`position:absolute;pointer-events:none;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:${sv.col===0xD40000?'#D40000':'rgba(237,232,229,.7)'};`;
+    cont.appendChild(lbl);
+    dot._lbl=lbl;
+  });
+
+  // Particles
+  const pp=new Float32Array(200*3);
+  for(let i=0;i<200*3;i++) pp[i]=(Math.random()-.5)*8;
+  const pGeo=new THREE.BufferGeometry();
+  pGeo.setAttribute('position',new THREE.BufferAttribute(pp,3));
+  scene.add(new THREE.Points(pGeo,new THREE.PointsMaterial({color:0xD40000,size:.015,transparent:true,opacity:.35,blending:THREE.AdditiveBlending})));
+
+  scene.add(new THREE.AmbientLight(0xffffff,.3));
+  const rl=new THREE.PointLight(0xD40000,3,8);
+  rl.position.set(0,0,2);
+  scene.add(rl);
+
+  let mx=0,my=0,cx=0,cy=0,hovNode=null;
+  const raycaster=new THREE.Raycaster();
+  const mouse=new THREE.Vector2();
+
+  cont.addEventListener('mousemove',e=>{
+    const r=cont.getBoundingClientRect();
+    mx=(e.clientX-r.left)/r.width-.5;
+    my=(e.clientY-r.top)/r.height-.5;
+    mouse.x=(e.clientX-r.left)/r.width*2-1;
+    mouse.y=-((e.clientY-r.top)/r.height)*2+1;
+
+    raycaster.setFromCamera(mouse,cam);
+    const hits=raycaster.intersectObjects(nodes);
+    if(hits.length>0){
+      const n=hits[0].object;
+      hovNode=n;
+      tip.innerHTML=`<div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:#D40000;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px">${n._sv.n}</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(237,232,229,.7);line-height:1.5">${n._sv.d}</div>`;
+      tip.style.opacity='1';
+      const vp=n.position.clone().project(cam);
+      const rect=cont.getBoundingClientRect();
+      tip.style.left=(((vp.x+1)/2)*rect.width+16)+'px';
+      tip.style.top=(((-vp.y+1)/2)*rect.height-20)+'px';
+    } else {
+      hovNode=null;
+      tip.style.opacity='0';
+    }
+  });
+  cont.addEventListener('mouseleave',()=>{hovNode=null;tip.style.opacity='0';});
+
+  const clk=new THREE.Clock();
+  (function animate(){
+    requestAnimationFrame(animate);
+    const t=clk.getElapsedTime();
+    cx+=(mx-cx)*.04; cy+=(my-cy)*.04;
+
+    rings.forEach((ring,i)=>{ring.rotation.z+=.003+i*.001;ring.rotation.x=ring._rx+cy*.3;ring.rotation.y=ring._ry+cx*.3;});
+    rl.intensity=2.5+Math.sin(t*2)*1.2;
+
+    nodes.forEach(dot=>{
+      const sv=dot._sv;
+      if(dot===hovNode){
+        // Freeze on hover
+      } else {
+        sv.a+=sv.s;
+      }
+      const tilt=sv.tilt;
+      dot.position.x=Math.cos(sv.a)*sv.r;
+      dot.position.y=Math.sin(sv.a)*sv.r*Math.sin(tilt);
+      dot.position.z=Math.sin(sv.a)*sv.r*Math.cos(tilt);
+
+      const v=dot.position.clone().project(cam);
+      const rect=cont.getBoundingClientRect();
+      const lx=((v.x+1)/2)*rect.width+10;
+      const ly=((-v.y+1)/2)*rect.height;
+      if(dot._lbl){
+        dot._lbl.style.left=lx+'px';
+        dot._lbl.style.top=ly+'px';
+        dot._lbl.style.opacity=v.z<1&&dot!==hovNode?'0.8':'0';
+      }
+    });
+
+    cam.position.x+=(cx*.5-cam.position.x)*.04;
+    cam.position.y+=(-cy*.5-cam.position.y)*.04;
+    cam.lookAt(0,0,0);
+    renderer.setSize(W(),H());
+    cam.aspect=W()/H();
+    cam.updateProjectionMatrix();
+    renderer.render(scene,cam);
+  })();
+})();
 (function(){
   const cont = document.querySelector('.av-right');
   if(!cont) return;
