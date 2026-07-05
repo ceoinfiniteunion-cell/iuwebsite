@@ -34,7 +34,7 @@ a{color:inherit;text-decoration:none;}
 @media(hover:none){#cur,#curO{display:none;}body{cursor:auto;}}
 
 /* PRELOADER */
-#loader{position:fixed;inset:0;background:var(--bg);z-index:9000;display:flex;overflow:hidden;}
+#loader{position:fixed;inset:0;background:var(--bg);z-index:9000;display:flex;overflow:hidden;}.l-left{display:none !important;}.l-right{width:100% !important;align-items:center !important;justify-content:center !important;}
 #loader.done{animation:loaderOut 1s var(--ease) forwards;}
 @keyframes loaderOut{to{clip-path:polygon(0 0,100% 0,100% 0,0 0);}}
 .l-left{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:48px;border-right:1px solid var(--border);position:relative;overflow:hidden;}
