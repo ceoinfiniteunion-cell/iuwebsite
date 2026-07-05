@@ -239,6 +239,34 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   .l-left{display:none;}.l-right{width:100%;padding:32px 24px;}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.rev,.h-meta,.h-sub,.h-btns,.h-scroll,.h1 .lin,.l-avatar{opacity:1;transform:none !important;}}
+
+/* ── ORBIT SVG SPHERE ── */
+#orbit-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:2;}
+.o-core{fill:none;stroke:var(--red);stroke-width:1.5;opacity:.18;}
+.o-core-wire{fill:none;stroke:var(--red);stroke-width:.6;opacity:.10;}
+.o-ring{fill:none;stroke:var(--red);stroke-width:.8;opacity:.22;
+  filter:drop-shadow(0 0 3px rgba(212,0,0,.35));}
+.o-dot{cursor:pointer;transition:r .2s,opacity .2s;
+  filter:drop-shadow(0 0 6px rgba(212,0,0,.8));}
+.o-dot:hover{opacity:1!important;}
+.o-label{font-family:var(--fh);font-size:10px;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;fill:var(--muted2);
+  pointer-events:none;transition:opacity .3s;}
+.o-label.red{fill:var(--fg);font-weight:600;letter-spacing:.08em;
+  font-size:11px;filter:drop-shadow(0 0 8px rgba(212,0,0,.6));}
+/* Tooltip */
+.o-tip{position:absolute;pointer-events:none;opacity:0;transform:translateY(4px) scale(.97);
+  transition:opacity .22s var(--ease),transform .22s var(--ease);
+  background:rgba(11,7,7,.92);border:1px solid var(--border);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  padding:12px 16px;max-width:220px;z-index:10;}
+.o-tip.show{opacity:1;transform:translateY(0) scale(1);}
+.o-tip-name{font-family:var(--fh);font-size:11px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:5px;}
+.o-tip-desc{font-family:var(--fb);font-size:12px;color:var(--muted2);line-height:1.6;}
+/* Glow pulse on core */
+@keyframes coreGlow{0%,100%{opacity:.18}50%{opacity:.32}}
+.o-core{animation:coreGlow 4s ease-in-out infinite;}
 </style>
 </head>
 <body>
@@ -369,7 +397,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
       <div><div class="av-attr-l">Підтримка</div><div class="av-attr-v">24/7 моніторинг</div></div>
     </div>
   </div>
-  <div class="av-right">
+  <div class="av-right" id="orbit-cont">
     <img src="avatar.jpeg" alt="Infinite Union Eagle mascot"/>
   </div>
 </section>
@@ -617,158 +645,7 @@ setTimeout(()=>{
 
 
 })();
-(function(){
-  const cont = document.querySelector('.av-right');
-  if(!cont) return;
 
-  const W = ()=>cont.clientWidth, H = ()=>cont.clientHeight;
-  const scene = new THREE.Scene();
-  const cam = new THREE.PerspectiveCamera(50, W()/H(), 0.1, 100);
-  cam.position.set(0, 0, 5);
-
-  const canvas = document.getElementById('orbit-canvas');
-  const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
-  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-  renderer.setSize(W(), H());
-
-  // Core sphere
-  const coreGeo = new THREE.SphereGeometry(0.8, 32, 32);
-  const coreMat = new THREE.MeshPhongMaterial({
-    color:0xD40000, transparent:true, opacity:0.15,
-    wireframe:false, emissive:0xD40000, emissiveIntensity:0.3
-  });
-  const core = new THREE.Mesh(coreGeo, coreMat);
-  scene.add(core);
-
-  // Core wireframe
-  const wireGeo = new THREE.SphereGeometry(0.82, 16, 16);
-  const wireMat = new THREE.MeshBasicMaterial({color:0xD40000, wireframe:true, transparent:true, opacity:0.15});
-  scene.add(new THREE.Mesh(wireGeo, wireMat));
-
-  // Glow
-  const glowGeo = new THREE.SphereGeometry(1.1, 32, 32);
-  const glowMat = new THREE.MeshBasicMaterial({color:0xD40000, transparent:true, opacity:0.04, side:THREE.BackSide});
-  scene.add(new THREE.Mesh(glowGeo, glowMat));
-
-  // Orbit rings
-  const rings = [];
-  [1.8, 2.6, 3.3].forEach((r, i) => {
-    const geo = new THREE.TorusGeometry(r, 0.008, 4, 120);
-    const mat = new THREE.MeshBasicMaterial({color:0xD40000, transparent:true, opacity:0.2-i*0.05});
-    const ring = new THREE.Mesh(geo, mat);
-    ring.rotation.x = Math.PI/2 + (i-1)*0.3;
-    ring.rotation.y = i*0.4;
-    rings.push(ring);
-    scene.add(ring);
-  });
-
-  // Orbit nodes (services)
-  const services = [
-    'Веб-розробка', 'Telegram-боти', 'Екосистема',
-    'SEO', 'CI/CD', 'FastAPI', 'PostgreSQL', 'Railway'
-  ];
-
-  const nodes = [];
-  services.forEach((label, i) => {
-    const angle = (i / services.length) * Math.PI * 2;
-    const orbitR = i % 2 === 0 ? 1.8 : 2.6;
-    const tilt = i % 3 === 0 ? 0.3 : -0.2;
-
-    // Node dot
-    const dotGeo = new THREE.SphereGeometry(0.06, 8, 8);
-    const dotMat = new THREE.MeshBasicMaterial({color: i < 3 ? 0xD40000 : 0xEDE8E5, transparent:true, opacity:0.9});
-    const dot = new THREE.Mesh(dotGeo, dotMat);
-    
-    dot._orbit = {r: orbitR, angle, speed: 0.003 + i*0.0005, tilt};
-    nodes.push(dot);
-    scene.add(dot);
-
-    // Sprite label
-    const div = document.createElement('div');
-    div.style.cssText = `
-      position:absolute;pointer-events:none;
-      font-family:'Space Grotesk',sans-serif;
-      font-size:10px;font-weight:600;letter-spacing:0.14em;
-      text-transform:uppercase;white-space:nowrap;
-      color:${i<3?'#D40000':'#EDE8E5'};
-      opacity:0.85;
-      text-shadow:0 0 10px rgba(212,0,0,0.5);
-    `;
-    div.textContent = label;
-    cont.appendChild(div);
-    dot._label = div;
-  });
-
-  // Particles
-  const pGeo = new THREE.BufferGeometry();
-  const pPos = new Float32Array(300*3);
-  for(let i=0;i<300*3;i++) pPos[i] = (Math.random()-.5)*10;
-  pGeo.setAttribute('position', new THREE.BufferAttribute(pPos,3));
-  scene.add(new THREE.Points(pGeo, new THREE.PointsMaterial({
-    color:0xD40000, size:0.018, transparent:true, opacity:0.4,
-    blending:THREE.AdditiveBlending
-  })));
-
-  // Lights
-  scene.add(new THREE.AmbientLight(0xffffff, 0.3));
-  const rl = new THREE.PointLight(0xD40000, 3, 8);
-  rl.position.set(0,0,2);
-  scene.add(rl);
-
-  let mx=0, my=0, cx=0, cy=0;
-  cont.addEventListener('mousemove', e=>{
-    const r=cont.getBoundingClientRect();
-    mx=(e.clientX-r.left)/r.width-.5;
-    my=(e.clientY-r.top)/r.height-.5;
-  });
-
-  const clk = new THREE.Clock();
-  (function animate(){
-    requestAnimationFrame(animate);
-    const t = clk.getElapsedTime();
-    cx+=(mx-cx)*.04; cy+=(my-cy)*.04;
-
-    // Rotate rings
-    rings.forEach((ring, i) => {
-      ring.rotation.z += 0.002 + i*0.001;
-      ring.rotation.x += 0.001;
-    });
-
-    // Pulse core
-    rl.intensity = 2.5 + Math.sin(t*2)*1.5;
-    core.material.emissiveIntensity = 0.2 + Math.sin(t*2)*0.15;
-
-    // Orbit nodes
-    nodes.forEach((dot, i) => {
-      const o = dot._orbit;
-      o.angle += o.speed;
-      dot.position.x = Math.cos(o.angle) * o.r;
-      dot.position.y = Math.sin(o.angle) * o.r * Math.sin(o.tilt);
-      dot.position.z = Math.sin(o.angle) * o.r * Math.cos(o.tilt);
-
-      // Project to screen for label
-      const v = dot.position.clone().project(cam);
-      const rect = cont.getBoundingClientRect();
-      const lx = (v.x+1)/2 * rect.width + 12;
-      const ly = (-v.y+1)/2 * rect.height;
-      if(dot._label){
-        dot._label.style.left = lx+'px';
-        dot._label.style.top = ly+'px';
-        dot._label.style.opacity = v.z < 1 ? '0.85' : '0';
-      }
-    });
-
-    // Camera mouse parallax
-    cam.position.x += (cx*.8 - cam.position.x)*.04;
-    cam.position.y += (-cy*.8 - cam.position.y)*.04;
-    cam.lookAt(0,0,0);
-
-    renderer.setSize(W(), H());
-    cam.aspect = W()/H();
-    cam.updateProjectionMatrix();
-    renderer.render(scene, cam);
-  })();
-})();
 
 
 /* ── SVG ORBIT SPHERE ── */
@@ -777,14 +654,16 @@ setTimeout(()=>{
   if(!cont) return;
 
   const services = [
-    {n:'Веб-розробка', d:'Лендінги та вебзастосунки з SEO та аналітикою', orbit:0, speed:.008, startA:0, red:true},
-    {n:'Telegram-боти', d:'FSM боти з платежами, CRM та адмінкою', orbit:0, speed:.008, startA:2.1, red:true},
-    {n:'Екосистема', d:'Сайт + бот + бекенд + БД під ключ', orbit:0, speed:.008, startA:4.2, red:true},
-    {n:'FastAPI', d:'Python бекенд з REST API та документацією', orbit:1, speed:.005, startA:.5, red:false},
-    {n:'PostgreSQL', d:'Реляційна БД, міграції, оптимізація', orbit:1, speed:.005, startA:2.6, red:false},
-    {n:'CI/CD', d:'Автодеплой через GitHub Actions + Railway', orbit:1, speed:.005, startA:4.8, red:false},
-    {n:'SEO', d:'119+ сторінок з органічним трафіком', orbit:2, speed:.003, startA:1.0, red:false},
-    {n:'Railway', d:'Хмарний деплой 24/7 з моніторингом', orbit:2, speed:.003, startA:3.8, red:false},
+    {n:'Веб-розробка',   d:'Лендінги та вебзастосунки з SEO та аналітикою', orbit:0, speed:.0075, startA:0,    red:true},
+    {n:'Telegram-боти',  d:'FSM боти з платежами, CRM та адмінкою',          orbit:0, speed:.0075, startA:2.09, red:true},
+    {n:'Екосистема',     d:'Сайт + бот + бекенд + БД під ключ',              orbit:0, speed:.0075, startA:4.19, red:true},
+    {n:'FastAPI',        d:'Python бекенд з REST API та документацією',       orbit:1, speed:.005,  startA:.5,   red:false},
+    {n:'PostgreSQL',     d:'Реляційна БД, міграції, оптимізація запитів',     orbit:1, speed:.005,  startA:2.6,  red:false},
+    {n:'CI/CD',          d:'Автодеплой через GitHub Actions + Railway',       orbit:1, speed:.005,  startA:4.8,  red:false},
+    {n:'Three.js / 3D',  d:'Інтерактивна 3D графіка та WebGL анімації',      orbit:2, speed:.003,  startA:0.3,  red:false},
+    {n:'SEO',            d:'Технічний SEO + контент стратегія',               orbit:2, speed:.003,  startA:1.9,  red:false},
+    {n:'Railway',        d:'Хмарний деплой 24/7 з моніторингом та логами',   orbit:2, speed:.003,  startA:3.8,  red:false},
+    {n:'Redis / Queue',  d:'Кешування, черги задач, сесії в реальному часі',  orbit:2, speed:.003,  startA:5.4,  red:false},
   ];
 
   // orbit params [rx, ry, rotationDeg]
@@ -895,7 +774,11 @@ setTimeout(()=>{
         lbl.setAttribute('y',y);
         // Depth: hide labels behind sphere
         const depth=Math.sin(a);
-        lbl.style.opacity=depth>-.2?'0.8':'0';
+        lbl.style.opacity=depth>-.15?'0.85':'0';
+        // Depth scale для 3D ефекту
+        const scale = 0.65 + 0.35*((Math.sin(a)+1)/2);
+        const baseR = sv.red ? 8 : 6;
+        if(dot){ dot.setAttribute('r', baseR * scale); }
       }
     });
     requestAnimationFrame(()=>animate(cx,cy));
