@@ -293,33 +293,44 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   #pf-globe{max-height:60vw;}
 }
 
-/* ── GLOBE PORTFOLIO SECTION ── */
-#portfolio{transition:background .6s ease;}
-#portfolio.globe-light{background:#fff;}
-#portfolio.globe-light .slabel{color:rgba(0,0,0,0.4);}
-#portfolio.globe-light .stitle{color:#0a0a0a;}
-#portfolio.globe-light .snum{color:rgba(0,0,0,0.25);}
-.globe-layout{display:grid;grid-template-columns:1fr 1fr;min-height:600px;border-top:1px solid var(--border);}
-.globe-iframe-wrap{position:relative;overflow:hidden;background:#fff;}
-.globe-iframe-wrap iframe{width:100%;height:100%;border:none;display:block;}
-.globe-info{display:flex;flex-direction:column;border-left:1px solid var(--border);}
-.globe-project{flex:1;padding:48px 40px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;transition:background .4s;}
-.globe-project:last-child{border-bottom:none;}
-.globe-project::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 100% 0%,rgba(212,0,0,0.07),transparent 60%);opacity:0;transition:opacity .5s;}
-.globe-project:hover{background:var(--bg2);}
-.globe-project:hover::before{opacity:1;}
-.gp-badge{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
-.gp-title{font-family:var(--fh);font-size:clamp(22px,2.5vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:12px;color:var(--fg);}
-.gp-desc{font-size:13px;color:var(--muted2);line-height:1.8;max-width:380px;margin-bottom:16px;}
-.gp-stats{display:flex;gap:20px;flex-wrap:wrap;}
-.gp-stats span{font-size:12px;color:var(--muted2);}
-.gp-stats b{color:var(--fg);font-weight:600;}
-.gp-link{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2);transition:color .25s;display:inline-block;margin-top:14px;}
-.globe-project:hover .gp-link{color:var(--fg);}
-@media(max-width:768px){
-  .globe-layout{grid-template-columns:1fr;}
+
   .globe-iframe-wrap{height:80vw;}
   .globe-info{border-left:none;border-top:1px solid var(--border);}
+}
+
+/* ── GLOBE SCROLL SECTION ── */
+#portfolio{position:relative;padding:0;}
+#portfolio .sec-in{padding-bottom:0;}
+.globe-scroll-outer{height:400vh;position:relative;}
+.globe-scroll-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:stretch;}
+.globe-scroll-left{flex:0 0 55%;position:relative;background:#fff;}
+.globe-scroll-left iframe{width:100%;height:100%;border:none;display:block;}
+.globe-scroll-right{flex:1;position:relative;background:var(--bg);border-left:1px solid var(--border);display:flex;align-items:center;}
+.gs-card{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:60px 48px;opacity:0;transform:translateY(24px);transition:opacity .5s,transform .5s;pointer-events:none;}
+.gs-card.active{opacity:1;transform:translateY(0);pointer-events:auto;}
+.gs-badge{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:16px;}
+.gs-num{font-family:var(--fh);font-size:11px;color:var(--muted2);letter-spacing:.16em;margin-bottom:8px;}
+.gs-title{font-family:var(--fh);font-size:clamp(28px,3vw,48px);font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:16px;color:var(--fg);}
+.gs-desc{font-size:13px;color:var(--muted2);line-height:1.8;max-width:380px;margin-bottom:24px;}
+.gs-stats{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:24px;}
+.gs-stats span{font-size:12px;color:var(--muted2);}
+.gs-stats b{color:var(--fg);font-weight:600;}
+.gs-link{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--fg);border-bottom:1px solid var(--border);padding-bottom:4px;display:inline-block;transition:border-color .25s;}
+.gs-link:hover{border-color:var(--red);color:var(--red);}
+.gs-progress{position:absolute;bottom:40px;left:48px;display:flex;gap:8px;}
+.gs-dot{width:24px;height:2px;background:var(--border);transition:background .4s,width .4s;}
+.gs-dot.active{background:var(--red);width:40px;}
+/* Scroll indicator */
+.gs-scroll-hint{position:absolute;bottom:40px;right:40px;display:flex;align-items:center;gap:8px;font-family:var(--fh);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2);opacity:1;transition:opacity .4s;}
+.gs-scroll-hint.hidden{opacity:0;}
+@keyframes scrollBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+.gs-scroll-hint svg{animation:scrollBounce 1.5s ease-in-out infinite;}
+/* White bg transition */
+.globe-scroll-sticky{transition:background .6s;}
+@media(max-width:768px){
+  .globe-scroll-left{flex:0 0 100%;position:absolute;inset:0;z-index:0;opacity:.3;}
+  .globe-scroll-right{flex:1;z-index:1;background:transparent;}
+  .gs-card{padding:40px 20px;background:rgba(10,5,5,.85);backdrop-filter:blur(8px);}
 }
 </style>
 </head>
@@ -423,33 +434,53 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 <!-- PORTFOLIO -->
 <section id="portfolio" class="sec">
   <div class="sec-in" style="padding-bottom:0;"><div class="sh rev"><div><div class="slabel">Роботи</div><h2 class="stitle">Портфоліо</h2></div><div class="snum">02 / 03</div></div></div>
-  <div class="globe-layout rev">
-    <div class="globe-iframe-wrap">
-      <iframe src="https://ceoinfiniteunion-cell.github.io/iu-globe/" title="Projects Globe" loading="lazy" allow="accelerometer"></iframe>
-    </div>
-    <div class="globe-info">
-      <div class="globe-project">
-        <div class="gp-badge">⭐ Флагманський кейс</div>
-        <div class="gp-title">Transfer Kharkiv</div>
-        <div class="gp-desc">Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти для клієнтів і водіїв, бекенд, SEO та рекламні кампанії.</div>
-        <div class="gp-stats">
-          <span><b>119</b> SEO-сторінок</span>
-          <span><b>35/35</b> CI тестів</span>
-          <span><b>24/7</b> Uptime</span>
+  <div class="globe-scroll-outer" id="globe-scroll-outer">
+    <div class="globe-scroll-sticky" id="globe-sticky">
+      <div class="globe-scroll-left">
+        <iframe src="https://ceoinfiniteunion-cell.github.io/iu-globe/" title="Projects Globe" id="globe-iframe" loading="lazy"></iframe>
+      </div>
+      <div class="globe-scroll-right">
+        <div class="gs-card active" id="gs-card-0">
+          <div class="gs-num">01 / 03</div>
+          <div class="gs-badge">⭐ Флагманський кейс</div>
+          <div class="gs-title">Transfer Kharkiv</div>
+          <div class="gs-desc">Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти для клієнтів і водіїв, бекенд, SEO та рекламні кампанії під ключ.</div>
+          <div class="gs-stats">
+            <span><b>119</b> SEO-сторінок</span>
+            <span><b>35/35</b> CI тестів</span>
+            <span><b>24/7</b> Uptime</span>
+          </div>
+          <a href="https://transferkharkiv.com.ua" target="_blank" class="gs-link">Переглянути проект ↗</a>
         </div>
-        <a href="https://transferkharkiv.com.ua" target="_blank" class="gp-link">Переглянути ↗</a>
-      </div>
-      <div class="globe-project">
-        <div class="gp-badge">Telegram-бот</div>
-        <div class="gp-title">Realty Monitor</div>
-        <div class="gp-desc">SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю.</div>
-        <div class="gp-stats"><span><b>LiqPay</b> оплата</span></div>
-      </div>
-      <div class="globe-project">
-        <div class="gp-badge">Університет</div>
-        <div class="gp-title">KNEU Bot</div>
-        <div class="gp-desc">Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу та система сповіщень.</div>
-        <div class="gp-stats"><span><b>aiogram 3</b> стек</span></div>
+        <div class="gs-card" id="gs-card-1">
+          <div class="gs-num">02 / 03</div>
+          <div class="gs-badge">Telegram-бот</div>
+          <div class="gs-title">Realty Monitor</div>
+          <div class="gs-desc">SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю — пасивний дохід без участі команди.</div>
+          <div class="gs-stats">
+            <span><b>LiqPay</b> оплата</span>
+            <span><b>FSM</b> архітектура</span>
+          </div>
+        </div>
+        <div class="gs-card" id="gs-card-2">
+          <div class="gs-num">03 / 03</div>
+          <div class="gs-badge">Університет</div>
+          <div class="gs-title">KNEU Bot</div>
+          <div class="gs-desc">Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу, комунікація деканату і студентів.</div>
+          <div class="gs-stats">
+            <span><b>3 000+</b> користувачів</span>
+            <span><b>aiogram 3</b> стек</span>
+          </div>
+        </div>
+        <div class="gs-progress">
+          <div class="gs-dot active" id="gs-dot-0"></div>
+          <div class="gs-dot" id="gs-dot-1"></div>
+          <div class="gs-dot" id="gs-dot-2"></div>
+        </div>
+        <div class="gs-scroll-hint" id="gs-scroll-hint">
+          <svg width="12" height="16" viewBox="0 0 12 16" fill="none"><rect x="4.5" y="1" width="3" height="5" rx="1.5" fill="currentColor" opacity=".4"/><path d="M6 8v6M3 11l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          scroll
+        </div>
       </div>
     </div>
   </div>
@@ -963,20 +994,47 @@ setTimeout(()=>{
   }, 3000);
 })();
 
-/* ── GLOBE SCROLL TRANSITION ── */
+/* ── GLOBE SCROLL CONTROLLER ── */
 (function(){
-  const section = document.getElementById('portfolio');
-  if(!section) return;
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if(e.isIntersecting) {
-        section.classList.add('globe-light');
-      } else {
-        section.classList.remove('globe-light');
-      }
-    });
-  }, { threshold: 0.2 });
-  observer.observe(section);
+  const outer = document.getElementById('globe-scroll-outer');
+  if(!outer) return;
+  const TOTAL = 3;
+  let current = 0;
+
+  function setCard(idx){
+    if(idx === current && document.getElementById('gs-card-'+idx)?.classList.contains('active')) return;
+    for(let i=0;i<TOTAL;i++){
+      const card = document.getElementById('gs-card-'+i);
+      const dot  = document.getElementById('gs-dot-'+i);
+      if(card) card.classList.toggle('active', i===idx);
+      if(dot)  dot.classList.toggle('active',  i===idx);
+    }
+    // Rotate globe via postMessage
+    const iframe = document.getElementById('globe-iframe');
+    if(iframe && iframe.contentWindow){
+      const angles = [2.0, 3.5, 5.0];
+      iframe.contentWindow.postMessage({type:'rotateTo', phi: angles[idx]}, '*');
+    }
+    // Hide scroll hint on last card
+    const hint = document.getElementById('gs-scroll-hint');
+    if(hint) hint.classList.toggle('hidden', idx === TOTAL-1);
+    current = idx;
+  }
+
+  window.addEventListener('scroll', function(){
+    const rect = outer.getBoundingClientRect();
+    const outerH = outer.offsetHeight;
+    const viewH  = window.innerHeight;
+    // progress: 0 when section enters, 1 when section fully scrolled
+    const scrolled = -rect.top;
+    const total    = outerH - viewH;
+    const progress = Math.max(0, Math.min(1, scrolled / total));
+    // Map progress to card index
+    const idx = Math.min(TOTAL-1, Math.floor(progress * TOTAL));
+    setCard(idx);
+  }, {passive:true});
+
+  setCard(0);
 })();
 
 </script>
