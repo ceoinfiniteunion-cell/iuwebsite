@@ -305,16 +305,15 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .globe-scroll-sticky{
   position:sticky;top:0;height:100vh;overflow:hidden;
   background:#060303;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:24px;
 }
 #gs-globe{
-  width:62vmin;height:62vmin;
+  position:absolute;
+  left:50%;top:44%;
+  transform:translate(-50%,-50%);
+  width:70vmin;height:70vmin;
   display:block;opacity:0;
   transition:opacity 1.2s;
   cursor:grab;touch-action:none;
-  flex-shrink:0;
-  margin-top:-40px;
 }
 .gs-cards-row{
   display:flex;
@@ -324,8 +323,10 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   width:100%;
   max-width:1080px;
   padding:0 24px;
-  flex-shrink:0;
   z-index:6;
+  position:absolute;
+  left:50%;bottom:40px;
+  transform:translateX(-50%);
 }
 .gs-card{
   flex:1;
