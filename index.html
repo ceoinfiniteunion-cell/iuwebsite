@@ -1197,7 +1197,8 @@ setTimeout(()=>{
     const scrolled = -rect.top;
     const total = outer.offsetHeight - window.innerHeight;
     const progress = Math.max(0, Math.min(1, scrolled/total));
-    const idx = Math.min(PROJECTS.length-1, Math.floor(progress*PROJECTS.length));
+    // Кожен проект займає 33% прогресу з буфером зупинки
+    const idx = Math.min(PROJECTS.length-1, Math.floor(progress * PROJECTS.length));
     setCard(idx);
   },{passive:true});
 
