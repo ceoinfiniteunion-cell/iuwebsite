@@ -1141,19 +1141,21 @@ setTimeout(()=>{
   window.addEventListener('resize', initGlobe);
 
   window.addEventListener('scroll', function(){
-    const rect  = outer.getBoundingClientRect();
+    const rect = outer.getBoundingClientRect();
     const scrolled = -rect.top;
-    const total    = outer.offsetHeight - window.innerHeight;
+    const total = outer.offsetHeight - window.innerHeight;
     const progress = Math.max(0, Math.min(1, scrolled / total));
-    let idx;
-    if(progress < 0.25)      idx = -1;
-    else if(progress < 0.50) idx = 0;
-    else if(progress < 0.75) idx = 1;
-    else                     idx = 2;
-    setCard(idx);
+    // Кожна картка має свій поріг появи — незалежно один від одного
+    const cards = document.querySelectorAll('.gs-card');
+    const thresholds = [0.15, 0.42, 0.68];
+    cards.forEach((c,i)=>{
+      c.classList.toggle('active', progress >= thresholds[i]);
+    });
+    // Глобус повертається до відповідного проекту
+    let idx = -1;
+    for(let i=0;i<thresholds.length;i++){ if(progress>=thresholds[i]) idx=i; }
+    if(idx>=0 && idx!==currentCard){ targetPhi = PROJECTS[idx].phi; currentCard = idx; }
   },{passive:true});
-
-  setCard(-1);
 })();
 </script>
 </body>
