@@ -302,9 +302,9 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 #portfolio{position:relative;padding:0;}
 #portfolio .sec-in{padding-bottom:0;}
 .globe-scroll-outer{height:400vh;position:relative;}
-.globe-scroll-sticky{position:sticky;top:0;height:100vh;overflow:hidden;background:#0a0505;}
-.globe-scroll-left{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
-#gs-globe{width:100vh;height:100vh;max-width:100%;display:block;opacity:0;transition:opacity 1.2s;cursor:grab;touch-action:none;}
+.globe-scroll-sticky{position:sticky;top:0;height:100vh;overflow:hidden;background:#0a0505;display:flex;align-items:center;justify-content:center;}
+.globe-scroll-left{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1;}
+#gs-globe{width:100vmin;height:100vmin;display:block;opacity:0;transition:opacity 1.2s;cursor:grab;touch-action:none;}
 /* Cards */
 .gs-card{position:absolute;top:50%;transform:translateY(-50%) translateX(20px);right:6%;width:320px;
   opacity:0;transition:opacity .5s,transform .5s;pointer-events:none;
@@ -1042,10 +1042,8 @@ setTimeout(()=>{
   let currentCard = -1;
 
   function initGlobe(){
-    const size = window.innerHeight;
+    const size = Math.min(window.innerWidth, window.innerHeight);
     if(!size || globe) return;
-    canvas.style.width = size + 'px';
-    canvas.style.height = size + 'px';
     globe = createGlobe(canvas, {
       devicePixelRatio: Math.min(window.devicePixelRatio||1,2),
       width: size, height: size,
