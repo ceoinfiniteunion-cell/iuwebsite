@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Infinite Union | Веб-розробка та Telegram-боти</title>
-<meta name="description" content="Infinite Union — преміальна агенція повного циклу. Сайти, Telegram-боти та цифрові екосистеми під ключ."/>
+<title>Infinite Union — Цифрові продукти, що генерують прибуток</title>
+<meta name="description" content="Infinite Union — будуємо цифрові продукти, які автоматизують бізнес, збільшують конверсію і масштабуються без обмежень."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://infiniteunion.com.ua/"/>
 <meta property="og:title" content="Infinite Union"/>
-<meta property="og:description" content="Сайти, боти, екосистеми під ключ."/>
+<meta property="og:description" content="Цифрові продукти, що генерують прибуток. Від ідеї до продакшну."/>
 <meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -268,20 +268,31 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 @keyframes coreGlow{0%,100%{opacity:.18}50%{opacity:.32}}
 .o-core{animation:coreGlow 4s ease-in-out infinite;}
 
-.av-attr-item{position:relative;cursor:default;}
-.av-attr-item::after{
-  content:attr(data-tip);
-  position:absolute;bottom:calc(100% + 10px);left:0;
-  background:rgba(11,7,7,.95);border:1px solid rgba(237,232,229,.1);
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  color:#EDE8E5;font-family:'Inter',sans-serif;font-size:12px;
-  line-height:1.6;padding:12px 16px;width:260px;
-  opacity:0;pointer-events:none;
-  transform:translateY(6px);
-  transition:opacity .2s,transform .2s;
-  z-index:100;
+/* ── PORTFOLIO GLOBE ── */
+.globe-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:600px;border-top:1px solid var(--border);}
+.globe-wrap canvas{display:block;width:100%;height:100%;cursor:grab;}
+#pf-globe{width:100%;aspect-ratio:1;opacity:0;transition:opacity 1.2s ease;}
+.globe-cards{display:flex;flex-direction:column;border-left:1px solid var(--border);}
+.globe-card{flex:1;padding:48px 40px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;transition:background .4s;cursor:default;}
+.globe-card:last-child{border-bottom:none;}
+.globe-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 100% 0%,rgba(212,0,0,0.07),transparent 60%);opacity:0;transition:opacity .5s;}
+.globe-card.active,.globe-card:hover{background:var(--bg2);}
+.globe-card.active::before,.globe-card:hover::before{opacity:1;}
+.gc-badge{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.gc-title{font-family:var(--fh);font-size:clamp(22px,2.5vw,38px);font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:14px;color:var(--fg);}
+.gc-desc{font-size:13px;color:var(--muted2);line-height:1.8;max-width:380px;margin-bottom:20px;}
+.gc-stats{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px;}
+.gc-stats span{font-size:12px;color:var(--muted2);}
+.gc-stats b{color:var(--fg);font-weight:600;}
+.gc-link{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2);transition:color .25s;}
+.globe-card:hover .gc-link{color:var(--fg);}
+/* pulse dot on active marker */
+@keyframes markerPulse{0%,100%{opacity:.6}50%{opacity:1}}
+@media(max-width:768px){
+  .globe-wrap{grid-template-columns:1fr;}
+  .globe-cards{border-left:none;border-top:1px solid var(--border);}
+  #pf-globe{max-height:60vw;}
 }
-.av-attr-item:hover::after{opacity:1;transform:translateY(0);}
 </style>
 </head>
 <body>
@@ -337,11 +348,11 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
       <span>2026 <b>◆</b> Web · Bots</span>
     </div>
     <h1 class="h1">
-      <span class="li"><span class="lin" id="hl1">Будуємо</span></span>
+      <span class="li"><span class="lin" id="hl1">Перетворюємо</span></span>
       <span class="li"><span class="lin" id="hl2">цифрові</span></span>
       <span class="li"><span class="lin acc" id="hl3">продукти.</span></span>
     </h1>
-    <p class="h-sub" id="hsub">Сайти, Telegram-боти та повні екосистеми під ключ — від ідеї до продакшну без технічного боргу.</p>
+    <p class="h-sub" id="hsub">Перетворюємо бізнес-задачі на цифрові продукти, які автоматизують процеси, залучають клієнтів і масштабуються разом з вашим ростом.</p>
     <div class="h-btns" id="hbtns">
       <a href="#contact" class="btn-p">Замовити проект</a>
       <a href="#portfolio" class="btn-o">Роботи</a>
@@ -374,9 +385,9 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   <div class="sec-in">
     <div class="sh rev"><div><div class="slabel">Послуги</div><h2 class="stitle split-chars" id="srv-title">Що ми робимо</h2></div><div class="snum">01 / 03</div></div>
     <div class="srv-list">
-      <div class="srv rev"><span class="srv-n">01</span><span class="srv-name">Веб-розробка</span><div class="srv-tags"><span class="stg">HTML/CSS/JS</span><span class="stg">FastAPI</span><span class="stg">SEO</span></div><span class="srv-arr">↗</span></div>
-      <div class="srv rev"><span class="srv-n">02</span><span class="srv-name">Telegram-боти</span><div class="srv-tags"><span class="stg">aiogram 3</span><span class="stg">PostgreSQL</span><span class="stg">Redis</span></div><span class="srv-arr">↗</span></div>
-      <div class="srv rev"><span class="srv-n">03</span><span class="srv-name">Цифрова екосистема</span><div class="srv-tags"><span class="stg">Full-stack</span><span class="stg">CI/CD</span><span class="stg">Railway</span></div><span class="srv-arr">↗</span></div>
+      <div class="srv rev"><span class="srv-n">01</span><span class="srv-name">Конверсійні сайти</span><div class="srv-tags"><span class="stg">+40% конверсія</span><span class="stg">SEO-трафік</span><span class="stg">Google Ads ready</span></div><span class="srv-arr">↗</span></div>
+      <div class="srv rev"><span class="srv-n">02</span><span class="srv-name">Автоматизація продажів</span><div class="srv-tags"><span class="stg">CRM інтеграція</span><span class="stg">Платежі 24/7</span><span class="stg">0 менеджерів</span></div><span class="srv-arr">↗</span></div>
+      <div class="srv rev"><span class="srv-n">03</span><span class="srv-name">Цифрова екосистема</span><div class="srv-tags"><span class="stg">Від ідеї до продакшну</span><span class="stg">Масштабування</span><span class="stg">ROI x3+</span></div><span class="srv-arr">↗</span></div>
     </div>
   </div>
 </section>
@@ -384,18 +395,32 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 <!-- PORTFOLIO -->
 <section id="portfolio" class="sec">
   <div class="sec-in" style="padding-bottom:0;"><div class="sh rev"><div><div class="slabel">Роботи</div><h2 class="stitle">Портфоліо</h2></div><div class="snum">02 / 03</div></div></div>
-  <div class="pf-grid">
-    <div class="pf-item feat rev">
-      <div><div class="pf-badge">⭐ Флагманський кейс</div><h3 class="pf-title">Transfer Kharkiv</h3><p class="pf-desc">Комерційний сервіс міжміського таксі — лендінг, два Telegram-боти, бекенд, SEO, Google Ads та Meta-кампанії під ключ.</p></div>
-      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">SEO-сторінок</span><span class="pv">119</span></div><div><span class="pk">CI тестів</span><span class="pv">35/35</span></div><div><span class="pk">Uptime</span><span class="pv">24/7</span></div></div><a href="https://transferkharkiv.com.ua" target="_blank" class="pf-link">Переглянути</a></div>
-    </div>
-    <div class="pf-item rev">
-      <div><div class="pf-badge">Telegram-бот</div><h3 class="pf-title">Realty Monitor</h3><p class="pf-desc">Моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю.</p></div>
-      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">Оплата</span><span class="pv">LiqPay</span></div></div></div>
-    </div>
-    <div class="pf-item rev">
-      <div><div class="pf-badge">Університет</div><h3 class="pf-title">KNEU Bot</h3><p class="pf-desc">Бот розкладу КНЕУ з офіційною підтримкою адміністрації та системою старост.</p></div>
-      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">Стек</span><span class="pv">aiogram 3</span></div></div></div>
+  <div class="globe-wrap rev">
+    <canvas id="pf-globe"></canvas>
+    <div class="globe-cards">
+      <div class="globe-card active" data-idx="0">
+        <div class="gc-badge">⭐ Флагманський кейс</div>
+        <div class="gc-title">Transfer Kharkiv</div>
+        <div class="gc-desc">Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти для клієнтів і водіїв, бекенд, SEO та рекламні кампанії.</div>
+        <div class="gc-stats">
+          <span><b>119</b> SEO-сторінок</span>
+          <span><b>35/35</b> CI тестів</span>
+          <span><b>24/7</b> Uptime</span>
+        </div>
+        <a href="https://transferkharkiv.com.ua" target="_blank" class="gc-link">Переглянути ↗</a>
+      </div>
+      <div class="globe-card" data-idx="1">
+        <div class="gc-badge">Telegram-бот</div>
+        <div class="gc-title">Realty Monitor</div>
+        <div class="gc-desc">SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю — пасивний дохід без участі команди.</div>
+        <div class="gc-stats"><span><b>LiqPay</b> оплата</span></div>
+      </div>
+      <div class="globe-card" data-idx="2">
+        <div class="gc-badge">Університет</div>
+        <div class="gc-title">KNEU Bot</div>
+        <div class="gc-desc">Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу та система сповіщень.</div>
+        <div class="gc-stats"><span><b>aiogram 3</b> стек</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -404,12 +429,12 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 <section id="avatar-sec">
   <div class="av-left rev">
     <div class="slabel" style="margin-bottom:24px;">Infinite Union</div>
-    <div class="av-quote">Ми — <span>орли</span> цифрового світу. Беремо проект і доводимо до <span>результату</span>.</div>
+    <div class="av-quote">Ваш бізнес заслуговує на <span>продукт</span>, який працює на вас — і <span>генерує прибуток</span> навіть коли ви спите.</div>
     <div class="av-attrs">
-      <div class="av-attr-item" data-tip="Код написаний так, що його легко розширювати і не треба переписувати через рік. Нові функції — без зламаної архітектури."><div class="av-attr-l">Підхід</div><div class="av-attr-v">Zero Technical Debt</div></div>
-      <div class="av-attr-item" data-tip="Система розбита на незалежні сервіси — кожен масштабується окремо. Падіння одного не валить все."><div class="av-attr-l">Стек</div><div class="av-attr-v">Microservice Architecture</div></div>
-      <div class="av-attr-item" data-tip="Нові версії деплояться автоматично без downtime. Ваші користувачі взагалі не помічають що щось оновилось."><div class="av-attr-l">Деплой</div><div class="av-attr-v">CI/CD · Blue-Green Deploy</div></div>
-      <div class="av-attr-item" data-tip="Можете не боятись що сайт впаде. При будь-якій найменшій помилці ми помітимо це першими — і усунемо до того як ви взнаєте."><div class="av-attr-l">Підтримка</div><div class="av-attr-v">SLA 99.9% · 15min Response</div></div>
+      <div><div class="av-attr-l">Підхід</div><div class="av-attr-v">Код, що масштабується</div></div>
+      <div><div class="av-attr-l">Стек</div><div class="av-attr-v">Сучасний продакшн-стек</div></div>
+      <div><div class="av-attr-l">Деплой</div><div class="av-attr-v">Хмара з uptime 99.9%</div></div>
+      <div><div class="av-attr-l">Підтримка</div><div class="av-attr-v">Реакція за 15 хвилин</div></div>
     </div>
   </div>
   <div class="av-right" id="orbit-cont">
@@ -420,8 +445,8 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 <!-- PHILOSOPHY -->
 <section id="philo">
   <div class="ph-in rev">
-    <div class="ph-q">Наша філософія</div>
-    <h2 class="ph-h">Ми не просто розробляємо сайти — ми будуємо <span>цифрові екосистеми</span>.</h2>
+    <div class="ph-q">Наш підхід</div>
+    <h2 class="ph-h">Кожен продукт, який ми запускаємо — це актив вашого бізнесу. Він залучає клієнтів, автоматизує рутину і приносить <span>вимірювальний результат</span>.</h2>
   </div>
 </section>
 
@@ -429,7 +454,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 <section id="contact">
   <div class="ct">
     <div class="ct-l rev">
-      <div><div class="slabel">Контакт</div><h2 class="ct-title">Почнемо<br/><span>разом?</span></h2></div>
+      <div><div class="slabel">Контакт</div><h2 class="ct-title">Готові<br/><span>до росту?</span></h2></div>
       <div class="ct-coords">50° 27′ N / 30° 31′ E<br/>Kyiv, Ukraine · 2026</div>
     </div>
     <div class="ct-r rev">
@@ -456,6 +481,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   <div class="flinks"><a href="https://github.com/ceoinfiniteunion-cell" target="_blank">GitHub</a><a href="https://t.me/infiniteunion_manager" target="_blank">Telegram</a></div>
 </footer>
 
+<script src="https://unpkg.com/cobe@0.6.3/dist/cobe.umd.js"></script>
 <script src="https://unpkg.com/three@0.125.0/build/three.min.js"></script>
 <script src="https://unpkg.com/three@0.125.0/examples/js/loaders/GLTFLoader.js"></script>
 <script src="https://unpkg.com/three@0.125.0/examples/js/loaders/DRACOLoader.js"></script>
@@ -669,16 +695,16 @@ setTimeout(()=>{
   if(!cont) return;
 
   const services = [
-    {n:'Веб-розробка',   d:'Лендінги та вебзастосунки з SEO та аналітикою', orbit:0, speed:.0075, startA:0,    red:true},
-    {n:'Telegram-боти',  d:'FSM боти з платежами, CRM та адмінкою',          orbit:0, speed:.0075, startA:2.09, red:true},
-    {n:'Екосистема',     d:'Сайт + бот + бекенд + БД під ключ',              orbit:0, speed:.0075, startA:4.19, red:true},
-    {n:'FastAPI',        d:'Python бекенд з REST API та документацією',       orbit:1, speed:.005,  startA:.5,   red:false},
-    {n:'PostgreSQL',     d:'Реляційна БД, міграції, оптимізація запитів',     orbit:1, speed:.005,  startA:2.6,  red:false},
+    {n:'Конверсія +40%', d:'Сайти, що продають: лендінги, SPA, SEO-трафік', orbit:0, speed:.0075, startA:0,    red:true},
+    {n:'Автопродажі 24/7', d:'Боти, що замінюють менеджера: CRM, оплати, квізи',          orbit:0, speed:.0075, startA:2.09, red:true},
+    {n:'ROI x3+',        d:'Повна цифрова інфраструктура під ключ',              orbit:0, speed:.0075, startA:4.19, red:true},
+    {n:'Швидкий бекенд', d:'API що витримує будь-яке навантаження',       orbit:1, speed:.005,  startA:.5,   red:false},
+    {n:'Надійна БД',     d:'Дані завжди доступні, захищені, оптимізовані',     orbit:1, speed:.005,  startA:2.6,  red:false},
     {n:'CI/CD',          d:'Автодеплой через GitHub Actions + Railway',       orbit:1, speed:.005,  startA:4.8,  red:false},
-    {n:'Three.js / 3D',  d:'Інтерактивна 3D графіка та WebGL анімації',      orbit:2, speed:.003,  startA:0.3,  red:false},
-    {n:'SEO',            d:'Технічний SEO + контент стратегія',               orbit:2, speed:.003,  startA:1.9,  red:false},
-    {n:'Railway',        d:'Хмарний деплой 24/7 з моніторингом та логами',   orbit:2, speed:.003,  startA:3.8,  red:false},
-    {n:'Redis / Queue',  d:'Кешування, черги задач, сесії в реальному часі',  orbit:2, speed:.003,  startA:5.4,  red:false},
+    {n:'WOW-ефект',      d:'3D та WebGL — сайт, який запам\'ятовують',      orbit:2, speed:.003,  startA:0.3,  red:false},
+    {n:'Органік трафік', d:'SEO що генерує ліди без рекламного бюджету',               orbit:2, speed:.003,  startA:1.9,  red:false},
+    {n:'Uptime 99.9%',   d:'Хмарний деплой — продукт завжди онлайн',   orbit:2, speed:.003,  startA:3.8,  red:false},
+    {n:'Реальний час',   d:'Миттєві сповіщення, черги, кешування',  orbit:2, speed:.003,  startA:5.4,  red:false},
   ];
 
   // orbit params [rx, ry, rotationDeg]
@@ -801,6 +827,110 @@ setTimeout(()=>{
 
   init();
   window.addEventListener('resize',init);
+})();
+
+/* ── PORTFOLIO GLOBE ── */
+(function(){
+  const canvas = document.getElementById('pf-globe');
+  if(!canvas) return;
+
+  const projects = [
+    { id:'transfer', lat:49.99, lng:36.23, card:'gc-transfer' }, // Kharkiv
+    { id:'realty',   lat:50.45, lng:30.52, card:'gc-realty'   }, // Kyiv
+    { id:'kneu',     lat:50.45, lng:30.52, card:'gc-kneu'     }, // Kyiv (KNEU)
+  ];
+
+  // Offset KNEU marker slightly so it doesn't overlap
+  projects[2].lat = 50.48;
+  projects[2].lng = 30.62;
+
+  const markers = projects.map(p => ({ location:[p.lat, p.lng], size:0.07 }));
+
+  const arcs = [
+    { startLat:49.99, startLng:36.23, endLat:50.45, endLng:30.52 },
+    { startLat:50.45, startLng:30.52, endLat:50.48, endLng:30.62 },
+  ];
+
+  let phi = 2.0;
+  let width = 0;
+  let globe;
+  let animId;
+  let activeIdx = 0;
+
+  function setActive(idx) {
+    activeIdx = idx;
+    document.querySelectorAll('.globe-card').forEach((c,i) => {
+      c.classList.toggle('active', i === idx);
+    });
+  }
+  setActive(0);
+
+  // Click on cards — rotate globe to project
+  document.querySelectorAll('.globe-card').forEach((card, i) => {
+    card.addEventListener('click', () => {
+      setActive(i);
+      const p = projects[i];
+      // animate phi/theta toward marker
+      targetPhi = p.lng * Math.PI / 180 + Math.PI;
+    });
+  });
+
+  let targetPhi = phi;
+  let isDragging = false;
+  let lastX = 0;
+
+  canvas.addEventListener('pointerdown', e => {
+    isDragging = true; lastX = e.clientX;
+    canvas.style.cursor = 'grabbing';
+  });
+  window.addEventListener('pointerup', () => {
+    isDragging = false;
+    canvas.style.cursor = 'grab';
+  });
+  window.addEventListener('pointermove', e => {
+    if(isDragging) { phi -= (e.clientX - lastX) / 300; lastX = e.clientX; }
+  }, {passive:true});
+
+  function init() {
+    width = canvas.offsetWidth;
+    if(!width || globe) return;
+
+    globe = createGlobe(canvas, {
+      devicePixelRatio: Math.min(window.devicePixelRatio||1, 2),
+      width, height: width,
+      phi: 2.0, theta: 0.25,
+      dark: 1,
+      diffuse: 1.2,
+      mapSamples: 20000,
+      mapBrightness: 4,
+      baseColor: [0.12, 0.06, 0.06],
+      markerColor: [0.85, 0.0, 0.0],
+      glowColor: [0.5, 0.05, 0.05],
+      markers,
+      onRender(state) {
+        if(!isDragging) phi += 0.002;
+        state.phi = phi;
+        state.theta = 0.25;
+        state.width = canvas.offsetWidth;
+        state.height = canvas.offsetWidth;
+      }
+    });
+
+    canvas.style.opacity = '1';
+  }
+
+  if(canvas.offsetWidth > 0) { init(); }
+  else {
+    const ro = new ResizeObserver(entries => {
+      if(entries[0]?.contentRect.width > 0){ ro.disconnect(); init(); }
+    });
+    ro.observe(canvas);
+  }
+
+  // Auto-cycle active card every 3s
+  setInterval(() => {
+    setActive((activeIdx + 1) % projects.length);
+  }, 3000);
 })();
 
 </script>
