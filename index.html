@@ -318,8 +318,9 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 .globe-scroll-right{
   position:absolute;
-  right:48px;top:50%;transform:translateY(-50%);
-  width:300px;z-index:10;
+  right:32px;top:50%;transform:translateY(-50%);
+  width:320px;z-index:10;
+  pointer-events:none;
 }
 .gs-card{
   position:absolute;top:0;left:0;right:0;
@@ -327,11 +328,12 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   transition:opacity .6s,transform .6s;
   pointer-events:none;
   padding:0;
+  pointer-events:none;
 }
 .gs-card.active{opacity:1;transform:translateX(0);pointer-events:auto;}
 .gs-num{font-family:var(--fh);font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.2em;margin-bottom:10px;text-transform:uppercase;}
 .gs-badge{font-family:var(--fh);font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
-.gs-title{font-family:var(--fh);font-size:clamp(24px,2.5vw,38px);font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:14px;color:#fff;text-shadow:0 0 40px rgba(212,0,0,.3);}
+.gs-title{font-family:var(--fh);font-size:clamp(28px,3vw,48px);font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:16px;color:#fff;text-shadow:0 0 60px rgba(212,0,0,.4),0 0 20px rgba(212,0,0,.2);}
 .gs-desc{font-size:12px;color:rgba(255,255,255,.45);line-height:1.9;margin-bottom:20px;max-width:300px;}
 .gs-stats{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;}
 .gs-stats span{font-size:11px;color:rgba(255,255,255,.3);}
