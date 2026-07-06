@@ -988,7 +988,7 @@ setTimeout(()=>{
 
     // 3D → 2D проекція маркера
     const latR = proj.lat * Math.PI / 180;
-    const lngR = proj.lng * Math.PI / 180 + globePhi;
+    const lngR = globePhi - proj.lng * Math.PI / 180;
     const x3 = Math.cos(latR) * Math.sin(lngR);
     const y3 = Math.sin(latR) * Math.cos(0.3) - Math.cos(latR) * Math.cos(lngR) * Math.sin(0.3);
     const z3 = Math.sin(latR) * Math.sin(0.3) + Math.cos(latR) * Math.cos(lngR) * Math.cos(0.3);
