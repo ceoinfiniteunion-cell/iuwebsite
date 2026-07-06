@@ -304,7 +304,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .globe-scroll-outer{height:400vh;position:relative;}
 .globe-scroll-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:stretch;}
 .globe-scroll-left{flex:0 0 55%;position:relative;background:#fff;}
-.globe-scroll-left iframe{width:100%;height:100%;border:none;display:block;}
+#gs-globe{width:100%;height:100%;display:block;opacity:0;transition:opacity 1.2s;cursor:grab;touch-action:none;}
 .globe-scroll-right{flex:1;position:relative;background:var(--bg);border-left:1px solid var(--border);display:flex;align-items:center;}
 .gs-card{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:60px 48px;opacity:0;transform:translateY(24px);transition:opacity .5s,transform .5s;pointer-events:none;}
 .gs-card.active{opacity:1;transform:translateY(0);pointer-events:auto;}
@@ -437,7 +437,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   <div class="globe-scroll-outer" id="globe-scroll-outer">
     <div class="globe-scroll-sticky" id="globe-sticky">
       <div class="globe-scroll-left">
-        <iframe src="https://ceoinfiniteunion-cell.github.io/iu-globe/" title="Projects Globe" id="globe-iframe" loading="lazy"></iframe>
+        <canvas id="gs-globe"></canvas>
       </div>
       <div class="globe-scroll-right">
         <div class="gs-card active" id="gs-card-0">
@@ -542,8 +542,11 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   <div class="flinks"><a href="https://github.com/ceoinfiniteunion-cell" target="_blank">GitHub</a><a href="https://t.me/infiniteunion_manager" target="_blank">Telegram</a></div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/cobe@0.6.1/dist/cobe.umd.js"></script>
 <script src="https://unpkg.com/three@0.125.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cobe@0.6.1/dist/cobe.umd.js"></script>
 <script src="https://unpkg.com/three@0.125.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cobe@0.6.1/dist/cobe.umd.js"></script>
 <script src="https://unpkg.com/three@0.125.0/examples/js/loaders/DRACOLoader.js"></script>
 <script>
 /* PRELOADER */
@@ -997,42 +1000,97 @@ setTimeout(()=>{
 /* ── GLOBE SCROLL CONTROLLER ── */
 (function(){
   const outer = document.getElementById('globe-scroll-outer');
-  if(!outer) return;
-  const TOTAL = 3;
-  let current = 0;
+  const canvas = document.getElementById('gs-globe');
+  if(!outer || !canvas) return;
+
+  // Проекти та їх кути на глобусі
+  const PROJECTS = [
+    { phi: 2.0,  badge:'⭐ Флагманський кейс', num:'01 / 03', title:'Transfer Kharkiv' },
+    { phi: 3.8,  badge:'Telegram-бот',          num:'02 / 03', title:'Realty Monitor'  },
+    { phi: 5.4,  badge:'Університет',           num:'03 / 03', title:'KNEU Bot'        },
+  ];
+
+  // ── Cobe globe init ──
+  let globePhi = 2.0;
+  let targetPhi = 2.0;
+  let isDragging = false;
+  let lastX = 0;
+  let dragDelta = 0;
+  let globe;
+  let currentCard = -1;
+
+  function initGlobe(){
+    const size = canvas.offsetWidth;
+    if(!size || globe) return;
+    globe = createGlobe(canvas, {
+      devicePixelRatio: Math.min(window.devicePixelRatio||1,2),
+      width: size, height: size,
+      phi: 2.0, theta: 0.25,
+      dark: 0, diffuse: 1.2,
+      mapSamples: 16000, mapBrightness: 6,
+      baseColor: [1,1,1],
+      markerColor: [0.85,0,0],
+      glowColor: [0.94,0.93,0.91],
+      markers: [
+        { location:[49.99,36.23], size:0.06 }, // Transfer Kharkiv
+        { location:[50.45,30.52], size:0.05 }, // Realty Monitor
+        { location:[48.85,2.35],  size:0.05 }, // EU (KNEU)
+      ],
+      onRender(state){
+        // Smooth interpolation to target
+        globePhi += (targetPhi - globePhi) * 0.06;
+        state.phi = globePhi + (isDragging ? dragDelta : 0);
+        state.theta = 0.25;
+        state.width = canvas.offsetWidth;
+        state.height = canvas.offsetWidth;
+      }
+    });
+    setTimeout(()=>{ canvas.style.opacity='1'; });
+  }
+
+  // Drag to rotate
+  canvas.addEventListener('pointerdown', e=>{
+    isDragging=true; lastX=e.clientX; dragDelta=0;
+    canvas.style.cursor='grabbing';
+  });
+  window.addEventListener('pointerup', ()=>{
+    if(isDragging){ targetPhi += dragDelta; globePhi = targetPhi; dragDelta=0; }
+    isDragging=false; canvas.style.cursor='grab';
+  });
+  window.addEventListener('pointermove', e=>{
+    if(isDragging) dragDelta = (e.clientX-lastX)/200;
+  },{passive:true});
 
   function setCard(idx){
-    if(idx === current && document.getElementById('gs-card-'+idx)?.classList.contains('active')) return;
-    for(let i=0;i<TOTAL;i++){
+    if(idx === currentCard) return;
+    for(let i=0;i<PROJECTS.length;i++){
       const card = document.getElementById('gs-card-'+i);
       const dot  = document.getElementById('gs-dot-'+i);
       if(card) card.classList.toggle('active', i===idx);
       if(dot)  dot.classList.toggle('active',  i===idx);
     }
-    // Rotate globe via postMessage
-    const iframe = document.getElementById('globe-iframe');
-    if(iframe && iframe.contentWindow){
-      const angles = [2.0, 3.5, 5.0];
-      iframe.contentWindow.postMessage({type:'rotateTo', phi: angles[idx]}, '*');
-    }
-    // Hide scroll hint on last card
+    // Rotate globe to project
+    targetPhi = PROJECTS[idx].phi;
+    // Hide scroll hint on last
     const hint = document.getElementById('gs-scroll-hint');
-    if(hint) hint.classList.toggle('hidden', idx === TOTAL-1);
-    current = idx;
+    if(hint) hint.classList.toggle('hidden', idx===PROJECTS.length-1);
+    currentCard = idx;
   }
 
+  // Init globe when visible
+  const ro = new ResizeObserver(()=>{ if(!globe && canvas.offsetWidth>0) initGlobe(); });
+  ro.observe(canvas);
+  if(canvas.offsetWidth>0) initGlobe();
+
+  // Scroll controller
   window.addEventListener('scroll', function(){
     const rect = outer.getBoundingClientRect();
-    const outerH = outer.offsetHeight;
-    const viewH  = window.innerHeight;
-    // progress: 0 when section enters, 1 when section fully scrolled
     const scrolled = -rect.top;
-    const total    = outerH - viewH;
-    const progress = Math.max(0, Math.min(1, scrolled / total));
-    // Map progress to card index
-    const idx = Math.min(TOTAL-1, Math.floor(progress * TOTAL));
+    const total = outer.offsetHeight - window.innerHeight;
+    const progress = Math.max(0, Math.min(1, scrolled/total));
+    const idx = Math.min(PROJECTS.length-1, Math.floor(progress*PROJECTS.length));
     setCard(idx);
-  }, {passive:true});
+  },{passive:true});
 
   setCard(0);
 })();
