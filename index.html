@@ -321,23 +321,21 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 .gs-card{
   position:absolute;top:0;left:0;right:0;
-  opacity:0;transform:translateY(20px);
-  transition:opacity .5s,transform .5s;
+  opacity:0;transform:translateX(16px);
+  transition:opacity .6s,transform .6s;
   pointer-events:none;
-  background:rgba(6,3,3,.88);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border:1px solid rgba(255,255,255,.08);
-  padding:32px 28px;
+  padding:0;
 }
-.gs-card.active{opacity:1;transform:translateY(0);pointer-events:auto;}
-.gs-num{font-family:var(--fh);font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.16em;margin-bottom:8px;}
-.gs-badge{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:14px;}
-.gs-title{font-family:var(--fh);font-size:clamp(20px,2.2vw,30px);font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:12px;color:#fff;}
-.gs-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:18px;}
-.gs-stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:18px;}
-.gs-stats span{font-size:11px;color:rgba(255,255,255,.35);}
-.gs-stats b{color:#fff;font-weight:600;}
-.gs-link{font-family:var(--fh);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--red);border-bottom:1px solid rgba(212,0,0,.3);padding-bottom:3px;display:inline-block;}
+.gs-card.active{opacity:1;transform:translateX(0);pointer-events:auto;}
+.gs-num{font-family:var(--fh);font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.2em;margin-bottom:10px;text-transform:uppercase;}
+.gs-badge{font-family:var(--fh);font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.gs-title{font-family:var(--fh);font-size:clamp(24px,2.5vw,38px);font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:14px;color:#fff;text-shadow:0 0 40px rgba(212,0,0,.3);}
+.gs-desc{font-size:12px;color:rgba(255,255,255,.45);line-height:1.9;margin-bottom:20px;max-width:300px;}
+.gs-stats{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;}
+.gs-stats span{font-size:11px;color:rgba(255,255,255,.3);}
+.gs-stats b{color:rgba(255,255,255,.9);font-weight:600;}
+.gs-link{font-family:var(--fh);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--red);opacity:.8;transition:opacity .2s;}
+.gs-link:hover{opacity:1;}
 .gs-progress{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10;}
 .gs-dot{width:20px;height:2px;background:rgba(255,255,255,.15);transition:background .4s,width .4s;}
 .gs-dot.active{background:var(--red);width:36px;}
@@ -490,8 +488,15 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
     <div class="globe-scroll-sticky" id="globe-sticky">
       <canvas id="gs-globe"></canvas>
       <svg id="gs-connector" viewBox="0 0 1000 1000" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5;">
-        <line id="gs-line" x1="500" y1="500" x2="800" y2="500" stroke="rgba(212,0,0,0.6)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0"/>
-        <circle id="gs-dot-marker" cx="500" cy="500" r="5" fill="#d40000" opacity="0"/>
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <line id="gs-line" x1="500" y1="500" x2="800" y2="500" stroke="rgba(212,0,0,0.5)" stroke-width="1" stroke-dasharray="3 5" opacity="0" filter="url(#glow)"/>
+        <circle id="gs-dot-marker" cx="500" cy="500" r="4" fill="#d40000" opacity="0" filter="url(#glow)"/>
+        <circle id="gs-dot-pulse" cx="500" cy="500" r="4" fill="none" stroke="#d40000" stroke-width="1" opacity="0"/>
       </svg>
       <div class="globe-scroll-right">
         <div class="gs-card active" id="gs-card-0">
@@ -1126,23 +1131,19 @@ setTimeout(()=>{
 
   function updateConnector(proj){
     if(!svgLine || !svgDot || !svgEl) return;
-    const cw = svgEl.clientWidth;
-    const ch = svgEl.clientHeight;
-    // Маркер на глобусі (приблизна позиція)
+    const cw = svgEl.clientWidth || window.innerWidth;
+    const ch = svgEl.clientHeight || window.innerHeight;
     const mx = cw * proj.markerX;
     const my = ch * proj.markerY;
-    // Кінець лінії — ліво від картки
-    const cardRight = cw * 0.94;
-    const cardMid = ch * 0.5;
-    const ex = cardRight - 320; // ліво від картки
-    const ey = cardMid;
-    svgLine.setAttribute('x1', mx);
-    svgLine.setAttribute('y1', my);
-    svgLine.setAttribute('x2', ex);
-    svgLine.setAttribute('y2', ey);
-    svgDot.setAttribute('cx', mx);
-    svgDot.setAttribute('cy', my);
-    svgLine.setAttribute('opacity','1');
+    // Кінець лінії - ліво від картки (картка справа 40px від краю, шириною 340px)
+    const ex = cw - 380;
+    const ey = ch * 0.5;
+    svgLine.setAttribute('x1', mx); svgLine.setAttribute('y1', my);
+    svgLine.setAttribute('x2', ex); svgLine.setAttribute('y2', ey);
+    svgDot.setAttribute('cx', mx);  svgDot.setAttribute('cy', my);
+    const pulse = document.getElementById('gs-dot-pulse');
+    if(pulse){ pulse.setAttribute('cx', mx); pulse.setAttribute('cy', my); pulse.setAttribute('opacity','0.6'); }
+    svgLine.setAttribute('opacity','0.7');
     svgDot.setAttribute('opacity','1');
   }
 
