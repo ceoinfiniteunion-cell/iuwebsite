@@ -304,29 +304,22 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .globe-scroll-outer{height:600vh;position:relative;}
 .globe-scroll-sticky{
   position:sticky;top:0;height:100vh;overflow:hidden;
-  background:radial-gradient(ellipse at 50% 25%, #0d0505 0%, #060303 65%);
+  background:#060303;
+  display:flex;align-items:center;justify-content:center;
 }
 #gs-globe{
-  position:absolute;
-  left:50%;top:50%;
-  transform:translate(-50%,-50%);
-  width:min(95vh,95vw);height:min(95vh,95vw);
+  width:min(88vh,88vw);height:min(88vh,88vw);
   display:block;opacity:0;
   transition:opacity 1.2s;
   cursor:grab;touch-action:none;
+  flex-shrink:0;
   z-index:1;
 }
 .gs-cards-row{
-  display:flex;
-  gap:16px;
-  justify-content:center;
-  align-items:stretch;
-  width:100%;
-  max-width:1120px;
-  padding:0 24px;
+  display:flex;gap:16px;justify-content:center;align-items:stretch;
+  width:100%;max-width:1120px;padding:0 24px;
   z-index:6;
-  position:absolute;
-  left:50%;bottom:60px;
+  position:absolute;left:50%;bottom:48px;
   transform:translateX(-50%);
 }
 .gs-card{
