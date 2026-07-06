@@ -1132,31 +1132,26 @@ setTimeout(()=>{
   },{passive:true});
 
   function projectMarker(lat, lng, phi, theta){
-    // Конвертуємо lat/lng в 3D точку
     const latR = lat * Math.PI / 180;
     const lngR = lng * Math.PI / 180 - phi;
     const x = Math.cos(latR) * Math.sin(lngR);
     const y = Math.sin(latR) * Math.cos(theta) - Math.cos(latR) * Math.cos(lngR) * Math.sin(theta);
     const z = Math.sin(latR) * Math.sin(theta) + Math.cos(latR) * Math.cos(lngR) * Math.cos(theta);
-    // Видимість (z > 0 = передня сторона)
     const visible = z > 0;
-    // Проекція на екран
-    const cw = window.innerWidth;
-    const ch = window.innerHeight;
-    const size = Math.min(cw, ch) * 0.9;
-    const cx = cw / 2 + x * size * 0.48;
-    const cy = ch / 2 - y * size * 0.48;
+    // Беремо реальний bounding rect canvas
+    const rect = canvas.getBoundingClientRect();
+    const cx = rect.left + rect.width  * (0.5 + x * 0.48);
+    const cy = rect.top  + rect.height * (0.5 - y * 0.48);
     return { x: cx, y: cy, visible };
   }
 
   function updateConnector(proj){
     if(!svgLine || !svgDot || !svgEl) return;
-    const cw = window.innerWidth;
-    const ch = window.innerHeight;
-    // Проектуємо маркер
     const pos = projectMarker(proj.lat, proj.lng, globePhi, 0.3);
     if(!pos.visible){ svgLine.setAttribute('opacity','0'); svgDot.setAttribute('opacity','0'); return; }
     // SVG viewBox 0 0 1000 1000 → масштабуємо
+    const cw = window.innerWidth;
+    const ch = window.innerHeight;
     const sx = pos.x / cw * 1000;
     const sy = pos.y / ch * 1000;
     // Кінець лінії — початок картки
