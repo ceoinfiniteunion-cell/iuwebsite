@@ -305,16 +305,42 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .globe-scroll-sticky{
   position:sticky;top:0;height:100vh;overflow:hidden;
   background:#060303;
-  display:flex;align-items:center;justify-content:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+  padding-top:40px;
 }
 #gs-globe{
-  position:absolute;
-  left:50%;top:50%;
-  transform:translate(-50%,-50%);
-  width:90vmin;height:90vmin;
+  width:52vmin;height:52vmin;
   display:block;opacity:0;
   transition:opacity 1.2s;
   cursor:grab;touch-action:none;
+  flex-shrink:0;
+}
+.gs-cards-row{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  align-items:stretch;
+  width:100%;
+  max-width:1100px;
+  padding:0 24px;
+  margin-top:24px;
+  flex-shrink:0;
+}
+.gs-card{
+  flex:1;
+  max-width:320px;
+  background:rgba(8,3,3,0.9);
+  border:1px solid rgba(212,0,0,0.15);
+  padding:28px 24px;
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity .5s var(--ease2), transform .5s var(--ease2);
+  pointer-events:none;
+}
+.gs-card.active{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
 }
 .globe-scroll-right{
   position:absolute;
@@ -503,47 +529,44 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
         <circle id="gs-dot-marker" cx="500" cy="500" r="4" fill="#d40000" opacity="0" filter="url(#glow)"/>
         <circle id="gs-dot-pulse" cx="500" cy="500" r="4" fill="none" stroke="#d40000" stroke-width="1" opacity="0"/>
       </svg>
-      <div class="globe-scroll-right">
-        <div class="gs-card active" id="gs-card-0">
-          <div class="gs-num">01 / 03</div>
-          <div class="gs-badge">⭐ Флагманський кейс</div>
-          <div class="gs-title">Transfer Kharkiv</div>
-          <div class="gs-desc">Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти для клієнтів і водіїв, бекенд, SEO та рекламні кампанії під ключ.</div>
-          <div class="gs-stats">
-            <span><b>119</b> SEO-сторінок</span>
-            <span><b>35/35</b> CI тестів</span>
-            <span><b>24/7</b> Uptime</span>
+      <div class="gs-cards-row">
+        <div class="gs-card" id="gs-card-0">
+          <div class="gs-card-inner">
+            <div class="gs-num">01 / 03</div>
+            <div class="gs-badge">⭐ Флагманський кейс</div>
+            <div class="gs-title">Transfer Kharkiv</div>
+            <div class="gs-desc">Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти для клієнтів і водіїв, бекенд, SEO та рекламні кампанії під ключ.</div>
+            <div class="gs-stats">
+              <span><b>119</b> SEO-сторінок</span>
+              <span><b>35/35</b> CI тестів</span>
+              <span><b>24/7</b> Uptime</span>
+            </div>
+            <a href="https://transferkharkiv.com.ua" target="_blank" class="gs-link">Переглянути ↗</a>
           </div>
-          <a href="https://transferkharkiv.com.ua" target="_blank" class="gs-link">Переглянути проект ↗</a>
         </div>
         <div class="gs-card" id="gs-card-1">
-          <div class="gs-num">02 / 03</div>
-          <div class="gs-badge">Telegram-бот</div>
-          <div class="gs-title">Realty Monitor</div>
-          <div class="gs-desc">SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю — пасивний дохід без участі команди.</div>
-          <div class="gs-stats">
-            <span><b>LiqPay</b> оплата</span>
-            <span><b>FSM</b> архітектура</span>
+          <div class="gs-card-inner">
+            <div class="gs-num">02 / 03</div>
+            <div class="gs-badge">Telegram-бот</div>
+            <div class="gs-title">Realty Monitor</div>
+            <div class="gs-desc">SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю — пасивний дохід без участі команди.</div>
+            <div class="gs-stats">
+              <span><b>LiqPay</b> оплата</span>
+              <span><b>FSM</b> архітектура</span>
+            </div>
           </div>
         </div>
         <div class="gs-card" id="gs-card-2">
-          <div class="gs-num">03 / 03</div>
-          <div class="gs-badge">Університет</div>
-          <div class="gs-title">KNEU Bot</div>
-          <div class="gs-desc">Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу, комунікація деканату і студентів.</div>
-          <div class="gs-stats">
-            <span><b>3 000+</b> користувачів</span>
-            <span><b>aiogram 3</b> стек</span>
+          <div class="gs-card-inner">
+            <div class="gs-num">03 / 03</div>
+            <div class="gs-badge">Університет</div>
+            <div class="gs-title">KNEU Bot</div>
+            <div class="gs-desc">Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу, комунікація деканату і студентів.</div>
+            <div class="gs-stats">
+              <span><b>3 000+</b> користувачів</span>
+              <span><b>aiogram 3</b> стек</span>
+            </div>
           </div>
-        </div>
-        <div class="gs-progress">
-          <div class="gs-dot active" id="gs-dot-0"></div>
-          <div class="gs-dot" id="gs-dot-1"></div>
-          <div class="gs-dot" id="gs-dot-2"></div>
-        </div>
-        <div class="gs-scroll-hint" id="gs-scroll-hint">
-          <svg width="12" height="16" viewBox="0 0 12 16" fill="none"><rect x="4.5" y="1" width="3" height="5" rx="1.5" fill="currentColor" opacity=".4"/><path d="M6 8v6M3 11l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          scroll
         </div>
       </div>
     </div>
