@@ -998,6 +998,7 @@ setTimeout(()=>{
 
   // Connector update — викликається кожен рендер-кадр
   function updateConnector(idx){
+    return; // disabled — no SVG line
     if(!svgLine || !svgDot || !svgEl) return;
     const proj = PROJECTS[idx];
 
