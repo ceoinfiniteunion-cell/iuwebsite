@@ -304,13 +304,13 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .globe-scroll-outer{height:600vh;position:relative;}
 .globe-scroll-sticky{
   position:sticky;top:0;height:100vh;overflow:hidden;
-  background:#060303;
+  background:radial-gradient(ellipse at 50% 30%, #0d0505 0%, #060303 70%);
 }
 #gs-globe{
   position:absolute;
-  left:50%;top:44%;
+  left:50%;top:38%;
   transform:translate(-50%,-50%);
-  width:70vmin;height:70vmin;
+  width:56vmin;height:56vmin;
   display:block;opacity:0;
   transition:opacity 1.2s;
   cursor:grab;touch-action:none;
@@ -331,18 +331,20 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .gs-card{
   flex:1;
   max-width:340px;
-  background:rgba(10,4,4,0.92);
-  border:1px solid rgba(212,0,0,0.18);
-  backdrop-filter:blur(10px);
-  padding:24px 22px;
+  background:linear-gradient(160deg, rgba(20,8,8,0.95) 0%, rgba(8,3,3,0.95) 100%);
+  border:1px solid rgba(212,0,0,0.2);
+  border-radius:2px;
+  backdrop-filter:blur(16px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(212,0,0,0.08);
+  padding:28px 26px;
   opacity:0;
-  transform:translateY(24px);
-  transition:opacity .55s var(--ease2), transform .55s var(--ease2);
+  transform:translateY(40px) scale(0.96);
+  transition:opacity .6s var(--ease2), transform .6s var(--ease2);
   pointer-events:none;
 }
 .gs-card.active{
   opacity:1;
-  transform:translateY(0);
+  transform:translateY(0) scale(1);
   pointer-events:auto;
 }
 .globe-scroll-right{
