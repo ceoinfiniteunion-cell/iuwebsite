@@ -301,7 +301,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 /* ── GLOBE SCROLL SECTION ── */
 #portfolio{position:relative;padding:0;}
 #portfolio .sec-in{padding-bottom:0;}
-.globe-scroll-outer{height:400vh;position:relative;}
+.globe-scroll-outer{height:600vh;position:relative;}
 .globe-scroll-sticky{
   position:sticky;top:0;height:100vh;overflow:hidden;
   background:#060303;
@@ -1197,8 +1197,12 @@ setTimeout(()=>{
     const scrolled = -rect.top;
     const total = outer.offsetHeight - window.innerHeight;
     const progress = Math.max(0, Math.min(1, scrolled/total));
-    // Кожен проект займає 33% прогресу з буфером зупинки
-    const idx = Math.min(PROJECTS.length-1, Math.floor(progress * PROJECTS.length));
+    // Зони: 0-0.33 → project 0, 0.33-0.66 → project 1, 0.66-1 → project 2
+    // Але перехід між зонами плавний - глобус крутиться тільки в перехідних 15%
+    let idx;
+    if(progress < 0.33) idx = 0;
+    else if(progress < 0.66) idx = 1;
+    else idx = 2;
     setCard(idx);
   },{passive:true});
 
