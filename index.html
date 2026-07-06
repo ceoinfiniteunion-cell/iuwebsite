@@ -968,9 +968,9 @@ setTimeout(()=>{
   if(!outer || !canvas) return;
 
   const PROJECTS = [
-    { phi:-0.632, lat:49.99,  lng:36.23  }, // Transfer Kharkiv
-    { phi:1.292,  lat:40.71,  lng:-74.01 }, // Realty Monitor (NY)
-    { phi:-2.639, lat:-33.86, lng:151.20 }, // KNEU Bot (Sydney)
+    { phi:-4.974, lat:49.99,  lng:36.23  }, // Transfer Kharkiv
+    { phi:2.426,  lat:40.71,  lng:-74.01 }, // Realty Monitor (NY)
+    { phi:-0.750, lat:-33.86, lng:151.20 }, // KNEU Bot (Sydney)
   ];
 
   let globePhi   = PROJECTS[0].phi;
@@ -987,11 +987,17 @@ setTimeout(()=>{
     const proj = PROJECTS[idx];
 
     // 3D → 2D проекція маркера
+    // Точна проекція з шейдера cobe.js M(phi, theta)
     const latR = proj.lat * Math.PI / 180;
-    const lngR = globePhi - proj.lng * Math.PI / 180;
-    const x3 = Math.cos(latR) * Math.sin(lngR);
-    const y3 = Math.sin(latR) * Math.cos(0.3) - Math.cos(latR) * Math.cos(lngR) * Math.sin(0.3);
-    const z3 = Math.sin(latR) * Math.sin(0.3) + Math.cos(latR) * Math.cos(lngR) * Math.cos(0.3);
+    const lngR = proj.lng * Math.PI / 180;
+    const mx = Math.cos(latR) * Math.cos(lngR);
+    const my = Math.sin(latR);
+    const mz = Math.cos(latR) * Math.sin(lngR);
+    const a = globePhi, b = 0.3;
+    const ca = Math.cos(a), sa = Math.sin(a), cb = Math.cos(b), sb = Math.sin(b);
+    const x3 = cb*mx + sb*mz;
+    const y3 = sb*sa*mx + ca*my - cb*sa*mz;
+    const z3 = -sb*ca*mx + sa*my + cb*ca*mz;
 
     // Маркер видимий тільки якщо z > 0 і глобус близько до цільового кута
     if(z3 < 0.05){
