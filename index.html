@@ -309,15 +309,17 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 #gs-globe{
   position:absolute;
-  width:100vmin;height:100vmin;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  width:90vmin;height:90vmin;
   display:block;opacity:0;
   transition:opacity 1.2s;
   cursor:grab;touch-action:none;
 }
 .globe-scroll-right{
   position:absolute;
-  right:40px;top:50%;transform:translateY(-50%);
-  width:340px;z-index:10;
+  right:48px;top:50%;transform:translateY(-50%);
+  width:300px;z-index:10;
 }
 .gs-card{
   position:absolute;top:0;left:0;right:0;
@@ -1067,15 +1069,15 @@ setTimeout(()=>{
 
   // Проекти: phi = кут глобуса, markerX/Y = відносна позиція маркера (0-1)
   const PROJECTS = [
-    { phi:2.0,  markerX:.58, markerY:.36, badge:'⭐ Флагманський кейс', num:'01 / 03', title:'Transfer Kharkiv',
+    { phi:2.0,  markerX:.18, markerY:-.12, badge:'⭐ Флагманський кейс', num:'01 / 03', title:'Transfer Kharkiv',
       desc:'Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти, бекенд, SEO та рекламні кампанії.',
       stats:[{b:'119',t:'SEO-сторінок'},{b:'35/35',t:'CI тестів'},{b:'24/7',t:'Uptime'}],
       link:'https://transferkharkiv.com.ua', linkText:'Переглянути проект' },
-    { phi:3.8,  markerX:.52, markerY:.38, badge:'Telegram-бот', num:'02 / 03', title:'Realty Monitor',
+    { phi:3.8,  markerX:.15, markerY:-.10, badge:'Telegram-бот', num:'02 / 03', title:'Realty Monitor',
       desc:'SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю.',
       stats:[{b:'LiqPay',t:'оплата'},{b:'FSM',t:'архітектура'}],
       link:'', linkText:'' },
-    { phi:5.2,  markerX:.55, markerY:.40, badge:'Університет', num:'03 / 03', title:'KNEU Bot',
+    { phi:5.2,  markerX:.10, markerY:-.08, badge:'Університет', num:'03 / 03', title:'KNEU Bot',
       desc:'Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу і сповіщень.',
       stats:[{b:'3 000+',t:'користувачів'},{b:'aiogram 3',t:'стек'}],
       link:'', linkText:'' },
@@ -1131,19 +1133,28 @@ setTimeout(()=>{
 
   function updateConnector(proj){
     if(!svgLine || !svgDot || !svgEl) return;
-    const cw = svgEl.clientWidth || window.innerWidth;
-    const ch = svgEl.clientHeight || window.innerHeight;
-    const mx = cw * proj.markerX;
-    const my = ch * proj.markerY;
-    // Кінець лінії - ліво від картки (картка справа 40px від краю, шириною 340px)
-    const ex = cw - 380;
-    const ey = ch * 0.5;
+    const cw = window.innerWidth;
+    const ch = window.innerHeight;
+    // SVG viewBox 1000x1000 - конвертуємо координати
+    const scaleX = 1000 / cw;
+    const scaleY = 1000 / ch;
+    // Центр глобуса
+    const gcx = 500;
+    const gcy = 500;
+    // Радіус глобуса в SVG координатах
+    const r = Math.min(cw, ch) * 0.45 * scaleX;
+    // Позиція маркера на глобусі через кут
+    const mx = gcx + r * proj.markerX;
+    const my = gcy + r * proj.markerY;
+    // Кінець лінії - ліво від картки
+    const ex = (cw - 360) * scaleX;
+    const ey = 500;
     svgLine.setAttribute('x1', mx); svgLine.setAttribute('y1', my);
     svgLine.setAttribute('x2', ex); svgLine.setAttribute('y2', ey);
     svgDot.setAttribute('cx', mx);  svgDot.setAttribute('cy', my);
     const pulse = document.getElementById('gs-dot-pulse');
-    if(pulse){ pulse.setAttribute('cx', mx); pulse.setAttribute('cy', my); pulse.setAttribute('opacity','0.6'); }
-    svgLine.setAttribute('opacity','0.7');
+    if(pulse){ pulse.setAttribute('cx', mx); pulse.setAttribute('cy', my); pulse.setAttribute('opacity','0.5'); }
+    svgLine.setAttribute('opacity','0.8');
     svgDot.setAttribute('opacity','1');
   }
 
