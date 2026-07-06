@@ -1017,10 +1017,15 @@ setTimeout(()=>{
 
     const rect = canvas.getBoundingClientRect();
     const svgRect = svgEl.getBoundingClientRect();
-    const px = rect.left + rect.width  * (0.5 + x3 * 0.46);
-    const py = rect.top  + rect.height * (0.5 - y3 * 0.46);
-    const sx = (px - svgRect.left) / svgRect.width  * 1000;
-    const sy = (py - svgRect.top)  / svgRect.height * 1000;
+    // Лінія стартує з краю глобуса в напрямку маркера
+    const gcx = rect.left + rect.width  * 0.5;
+    const gcy = rect.top  + rect.height * 0.5;
+    const grad = rect.width * 0.47;
+    const glen = Math.sqrt(x3*x3 + y3*y3) || 1;
+    const epx = gcx + (x3/glen) * grad;
+    const epy = gcy - (y3/glen) * grad;
+    const sx = (epx - svgRect.left) / svgRect.width  * 1000;
+    const sy = (epy - svgRect.top)  / svgRect.height * 1000;
     const cardPanel = document.querySelector('.globe-scroll-right');
     let ex = 780, ey = 500;
     if(cardPanel){
