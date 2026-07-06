@@ -1073,11 +1073,11 @@ setTimeout(()=>{
       desc:'Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти, бекенд, SEO та рекламні кампанії.',
       stats:[{b:'119',t:'SEO-сторінок'},{b:'35/35',t:'CI тестів'},{b:'24/7',t:'Uptime'}],
       link:'https://transferkharkiv.com.ua', linkText:'Переглянути проект' },
-    { phi:3.8, lat:50.45, lng:30.52, badge:'Telegram-бот', num:'02 / 03', title:'Realty Monitor',
+    { phi:3.4, lat:40.71, lng:-74.01, badge:'Telegram-бот', num:'02 / 03', title:'Realty Monitor',
       desc:'SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю.',
       stats:[{b:'LiqPay',t:'оплата'},{b:'FSM',t:'архітектура'}],
       link:'', linkText:'' },
-    { phi:5.2, lat:48.85, lng:2.35, badge:'Університет', num:'03 / 03', title:'KNEU Bot',
+    { phi:5.6, lat:-33.86, lng:151.20, badge:'Університет', num:'03 / 03', title:'KNEU Bot',
       desc:'Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу і сповіщень.',
       stats:[{b:'3 000+',t:'користувачів'},{b:'aiogram 3',t:'стек'}],
       link:'', linkText:'' },
@@ -1104,9 +1104,9 @@ setTimeout(()=>{
       markerColor: [0.9, 0.0, 0.0],
       glowColor: [0.5, 0.05, 0.05],
       markers: [
-        { location:[49.99,36.23], size:0.06 },
-        { location:[50.45,30.52], size:0.05 },
-        { location:[48.85,2.35],  size:0.05 },
+        { location:[49.99, 36.23], size:0.07 }, // Харків - Transfer
+        { location:[40.71,-74.01], size:0.07 }, // Нью-Йорк - Realty
+        { location:[-33.86,151.20], size:0.07 }, // Сідней - KNEU
       ],
       onRender(state){
         globePhi += (targetPhi - globePhi) * 0.04;
