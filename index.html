@@ -1150,6 +1150,7 @@ setTimeout(()=>{
     else if(progress < 0.50) idx = 0;
     else if(progress < 0.75) idx = 1;
     else                     idx = 2;
+    console.log('progress:', progress.toFixed(3), 'idx:', idx);
     setCard(idx);
   },{passive:true});
 
