@@ -1090,6 +1090,7 @@ setTimeout(()=>{
   let dragDelta = 0;
   let globe;
   let currentCard = -1;
+  let activeMarkerIdx = 0;
 
   function initGlobe(){
     const size = Math.min(window.innerWidth, window.innerHeight);
@@ -1176,6 +1177,11 @@ setTimeout(()=>{
     }
     targetPhi = PROJECTS[idx].phi;
     updateConnector(PROJECTS[idx]);
+    // Підсвічуємо активний маркер білим
+    if(globe) {
+      const colors = PROJECTS.map((_,i) => i===idx ? [1,1,1] : [0.7,0,0]);
+      activeMarkerIdx = idx;
+    }
     const hint = document.getElementById('gs-scroll-hint');
     if(hint) hint.classList.toggle('hidden', idx===PROJECTS.length-1);
     currentCard = idx;
