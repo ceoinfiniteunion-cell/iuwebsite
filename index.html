@@ -269,9 +269,8 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .o-core{animation:coreGlow 4s ease-in-out infinite;}
 
 /* ── PORTFOLIO GLOBE ── */
-.globe-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:600px;border-top:1px solid var(--border);}
-.globe-wrap canvas{display:block;width:100%;height:100%;cursor:grab;}
-#pf-globe{width:100%;aspect-ratio:1;opacity:0;transition:opacity 1.2s ease;}
+.globe-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border);align-items:stretch;}
+#pf-globe{width:100%;aspect-ratio:1/1;display:block;cursor:grab;opacity:0;transition:opacity 1.2s ease;border-radius:50%;}
 .globe-cards{display:flex;flex-direction:column;border-left:1px solid var(--border);}
 .globe-card{flex:1;padding:48px 40px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;transition:background .4s;cursor:default;}
 .globe-card:last-child{border-bottom:none;}
@@ -292,6 +291,100 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   .globe-wrap{grid-template-columns:1fr;}
   .globe-cards{border-left:none;border-top:1px solid var(--border);}
   #pf-globe{max-height:60vw;}
+}
+
+
+  .globe-iframe-wrap{height:80vw;}
+  .globe-info{border-left:none;border-top:1px solid var(--border);}
+}
+
+/* ── GLOBE SCROLL SECTION ── */
+#portfolio{position:relative;padding:0;}
+#portfolio .sec-in{padding-bottom:0;}
+.globe-scroll-outer{height:600vh;position:relative;}
+.globe-scroll-sticky{
+  position:sticky;top:0;height:100vh;overflow:hidden;
+  background:#060303;
+  display:flex;align-items:center;justify-content:center;
+}
+#gs-globe{
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  width:90vmin;height:90vmin;
+  display:block;opacity:0;
+  transition:opacity 1.2s;
+  cursor:grab;touch-action:none;
+}
+.globe-scroll-right{
+  position:absolute;
+  right:32px;top:50%;transform:translateY(-50%);
+  width:320px;z-index:10;
+  pointer-events:none;
+}
+.gs-card{
+  position:absolute;top:0;left:0;right:0;
+  opacity:0;transform:translateX(16px);
+  transition:opacity .6s,transform .6s;
+  pointer-events:none;
+  padding:0;
+  pointer-events:none;
+}
+.gs-card.active{opacity:1;transform:translateX(0);pointer-events:auto;}
+.gs-num{font-family:var(--fh);font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.2em;margin-bottom:10px;text-transform:uppercase;}
+.gs-badge{font-family:var(--fh);font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.gs-title{font-family:var(--fh);font-size:clamp(28px,3vw,48px);font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:16px;color:#fff;text-shadow:0 0 60px rgba(212,0,0,.4),0 0 20px rgba(212,0,0,.2);}
+.gs-desc{font-size:12px;color:rgba(255,255,255,.45);line-height:1.9;margin-bottom:20px;max-width:300px;}
+.gs-stats{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;}
+.gs-stats span{font-size:11px;color:rgba(255,255,255,.3);}
+.gs-stats b{color:rgba(255,255,255,.9);font-weight:600;}
+.gs-link{font-family:var(--fh);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--red);opacity:.8;transition:opacity .2s;}
+.gs-link:hover{opacity:1;}
+.gs-progress{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10;}
+.gs-dot{width:20px;height:2px;background:rgba(255,255,255,.15);transition:background .4s,width .4s;}
+.gs-dot.active{background:var(--red);width:36px;}
+.gs-scroll-hint{position:absolute;bottom:32px;right:48px;display:flex;align-items:center;gap:8px;font-family:var(--fh);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.25);z-index:10;transition:opacity .4s;}
+.gs-scroll-hint.hidden{opacity:0;}
+@keyframes scrollBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+.gs-scroll-hint svg{animation:scrollBounce 1.5s ease-in-out infinite;}
+@media(max-width:768px){
+  .globe-scroll-right{right:16px;left:16px;width:auto;}
+  #gs-globe{width:100vw;height:100vw;}
+}
+
+/* Cards */
+.gs-card{position:absolute;top:50%;transform:translateY(-50%) translateX(20px);right:6%;width:320px;
+  opacity:0;transition:opacity .5s,transform .5s;pointer-events:none;
+  background:rgba(10,5,5,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.08);padding:32px 28px;}
+.gs-card.active{opacity:1;transform:translateY(-50%) translateX(0);pointer-events:auto;}
+.gs-num{font-family:var(--fh);font-size:10px;color:var(--muted2);letter-spacing:.16em;margin-bottom:8px;}
+.gs-badge{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:14px;}
+.gs-title{font-family:var(--fh);font-size:clamp(22px,2.5vw,32px);font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:12px;color:#fff;}
+.gs-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:20px;}
+.gs-stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;}
+.gs-stats span{font-size:11px;color:rgba(255,255,255,.4);}
+.gs-stats b{color:#fff;font-weight:600;}
+.gs-link{font-family:var(--fh);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--red);border-bottom:1px solid rgba(212,0,0,.3);padding-bottom:3px;display:inline-block;transition:border-color .25s;}
+.gs-link:hover{border-color:var(--red);}
+/* SVG connector line */
+#gs-connector{position:absolute;inset:0;pointer-events:none;z-index:5;}
+/* Progress dots */
+.gs-progress{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10;}
+.gs-dot{width:20px;height:2px;background:rgba(255,255,255,.2);transition:background .4s,width .4s;}
+.gs-dot.active{background:var(--red);width:36px;}
+/* Scroll hint */
+.gs-scroll-hint{position:absolute;bottom:32px;right:6%;display:flex;align-items:center;gap:8px;
+  font-family:var(--fh);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);z-index:10;transition:opacity .4s;}
+.gs-scroll-hint.hidden{opacity:0;}
+@keyframes scrollBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+.gs-scroll-hint svg{animation:scrollBounce 1.5s ease-in-out infinite;}
+@media(max-width:768px){
+  #gs-globe{width:100vw;height:100vw;}
+  .gs-card{right:4%;left:4%;width:auto;top:auto;bottom:80px;transform:translateY(10px);}
+  .gs-card.active{transform:translateY(0);}
 }
 </style>
 </head>
@@ -395,31 +488,62 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 <!-- PORTFOLIO -->
 <section id="portfolio" class="sec">
   <div class="sec-in" style="padding-bottom:0;"><div class="sh rev"><div><div class="slabel">Роботи</div><h2 class="stitle">Портфоліо</h2></div><div class="snum">02 / 03</div></div></div>
-  <div class="globe-wrap rev">
-    <canvas id="pf-globe"></canvas>
-    <div class="globe-cards">
-      <div class="globe-card active" data-idx="0">
-        <div class="gc-badge">⭐ Флагманський кейс</div>
-        <div class="gc-title">Transfer Kharkiv</div>
-        <div class="gc-desc">Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти для клієнтів і водіїв, бекенд, SEO та рекламні кампанії.</div>
-        <div class="gc-stats">
-          <span><b>119</b> SEO-сторінок</span>
-          <span><b>35/35</b> CI тестів</span>
-          <span><b>24/7</b> Uptime</span>
+  <div class="globe-scroll-outer" id="globe-scroll-outer">
+    <div class="globe-scroll-sticky" id="globe-sticky">
+      <canvas id="gs-globe"></canvas>
+      <svg id="gs-connector" viewBox="0 0 1000 1000" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5;">
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <line id="gs-line" x1="500" y1="500" x2="800" y2="500" stroke="rgba(212,0,0,0.5)" stroke-width="1" stroke-dasharray="3 5" opacity="0" filter="url(#glow)"/>
+        <circle id="gs-dot-marker" cx="500" cy="500" r="4" fill="#d40000" opacity="0" filter="url(#glow)"/>
+        <circle id="gs-dot-pulse" cx="500" cy="500" r="4" fill="none" stroke="#d40000" stroke-width="1" opacity="0"/>
+      </svg>
+      <div class="globe-scroll-right">
+        <div class="gs-card active" id="gs-card-0">
+          <div class="gs-num">01 / 03</div>
+          <div class="gs-badge">⭐ Флагманський кейс</div>
+          <div class="gs-title">Transfer Kharkiv</div>
+          <div class="gs-desc">Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти для клієнтів і водіїв, бекенд, SEO та рекламні кампанії під ключ.</div>
+          <div class="gs-stats">
+            <span><b>119</b> SEO-сторінок</span>
+            <span><b>35/35</b> CI тестів</span>
+            <span><b>24/7</b> Uptime</span>
+          </div>
+          <a href="https://transferkharkiv.com.ua" target="_blank" class="gs-link">Переглянути проект ↗</a>
         </div>
-        <a href="https://transferkharkiv.com.ua" target="_blank" class="gc-link">Переглянути ↗</a>
-      </div>
-      <div class="globe-card" data-idx="1">
-        <div class="gc-badge">Telegram-бот</div>
-        <div class="gc-title">Realty Monitor</div>
-        <div class="gc-desc">SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю — пасивний дохід без участі команди.</div>
-        <div class="gc-stats"><span><b>LiqPay</b> оплата</span></div>
-      </div>
-      <div class="globe-card" data-idx="2">
-        <div class="gc-badge">Університет</div>
-        <div class="gc-title">KNEU Bot</div>
-        <div class="gc-desc">Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу та система сповіщень.</div>
-        <div class="gc-stats"><span><b>aiogram 3</b> стек</span></div>
+        <div class="gs-card" id="gs-card-1">
+          <div class="gs-num">02 / 03</div>
+          <div class="gs-badge">Telegram-бот</div>
+          <div class="gs-title">Realty Monitor</div>
+          <div class="gs-desc">SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю — пасивний дохід без участі команди.</div>
+          <div class="gs-stats">
+            <span><b>LiqPay</b> оплата</span>
+            <span><b>FSM</b> архітектура</span>
+          </div>
+        </div>
+        <div class="gs-card" id="gs-card-2">
+          <div class="gs-num">03 / 03</div>
+          <div class="gs-badge">Університет</div>
+          <div class="gs-title">KNEU Bot</div>
+          <div class="gs-desc">Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу, комунікація деканату і студентів.</div>
+          <div class="gs-stats">
+            <span><b>3 000+</b> користувачів</span>
+            <span><b>aiogram 3</b> стек</span>
+          </div>
+        </div>
+        <div class="gs-progress">
+          <div class="gs-dot active" id="gs-dot-0"></div>
+          <div class="gs-dot" id="gs-dot-1"></div>
+          <div class="gs-dot" id="gs-dot-2"></div>
+        </div>
+        <div class="gs-scroll-hint" id="gs-scroll-hint">
+          <svg width="12" height="16" viewBox="0 0 12 16" fill="none"><rect x="4.5" y="1" width="3" height="5" rx="1.5" fill="currentColor" opacity=".4"/><path d="M6 8v6M3 11l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          scroll
+        </div>
       </div>
     </div>
   </div>
@@ -481,7 +605,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   <div class="flinks"><a href="https://github.com/ceoinfiniteunion-cell" target="_blank">GitHub</a><a href="https://t.me/infiniteunion_manager" target="_blank">Telegram</a></div>
 </footer>
 
-<script src="https://unpkg.com/cobe@0.6.3/dist/cobe.umd.js"></script>
+<script src="cobe.umd.js"></script>
 <script src="https://unpkg.com/three@0.125.0/build/three.min.js"></script>
 <script src="https://unpkg.com/three@0.125.0/examples/js/loaders/GLTFLoader.js"></script>
 <script src="https://unpkg.com/three@0.125.0/examples/js/loaders/DRACOLoader.js"></script>
@@ -829,110 +953,180 @@ setTimeout(()=>{
   window.addEventListener('resize',init);
 })();
 
-/* ── PORTFOLIO GLOBE ── */
+
+
+/* ── GLOBE SCROLL CONTROLLER ── */
 (function(){
-  const canvas = document.getElementById('pf-globe');
-  if(!canvas) return;
+  const outer  = document.getElementById('globe-scroll-outer');
+  const canvas = document.getElementById('gs-globe');
+  const svgLine = document.getElementById('gs-line');
+  const svgDot  = document.getElementById('gs-dot-marker');
+  const svgEl   = document.getElementById('gs-connector');
+  if(!outer || !canvas) return;
 
-  const projects = [
-    { id:'transfer', lat:49.99, lng:36.23, card:'gc-transfer' }, // Kharkiv
-    { id:'realty',   lat:50.45, lng:30.52, card:'gc-realty'   }, // Kyiv
-    { id:'kneu',     lat:50.45, lng:30.52, card:'gc-kneu'     }, // Kyiv (KNEU)
+  const PROJECTS = [
+    { phi:2.0,  lat:49.99,  lng:36.23  }, // Transfer Kharkiv
+    { phi:3.4,  lat:40.71,  lng:-74.01 }, // Realty Monitor (NY)
+    { phi:5.6,  lat:-33.86, lng:151.20 }, // KNEU Bot (Sydney)
   ];
 
-  // Offset KNEU marker slightly so it doesn't overlap
-  projects[2].lat = 50.48;
-  projects[2].lng = 30.62;
-
-  const markers = projects.map(p => ({ location:[p.lat, p.lng], size:0.07 }));
-
-  const arcs = [
-    { startLat:49.99, startLng:36.23, endLat:50.45, endLng:30.52 },
-    { startLat:50.45, startLng:30.52, endLat:50.48, endLng:30.62 },
-  ];
-
-  let phi = 2.0;
-  let width = 0;
-  let globe;
-  let animId;
-  let activeIdx = 0;
-
-  function setActive(idx) {
-    activeIdx = idx;
-    document.querySelectorAll('.globe-card').forEach((c,i) => {
-      c.classList.toggle('active', i === idx);
-    });
-  }
-  setActive(0);
-
-  // Click on cards — rotate globe to project
-  document.querySelectorAll('.globe-card').forEach((card, i) => {
-    card.addEventListener('click', () => {
-      setActive(i);
-      const p = projects[i];
-      // animate phi/theta toward marker
-      targetPhi = p.lng * Math.PI / 180 + Math.PI;
-    });
-  });
-
-  let targetPhi = phi;
+  let globePhi   = PROJECTS[0].phi;
+  let targetPhi  = PROJECTS[0].phi;
   let isDragging = false;
-  let lastX = 0;
+  let lastX      = 0;
+  let dragDelta  = 0;
+  let globe;
+  let currentCard = -1;
 
-  canvas.addEventListener('pointerdown', e => {
-    isDragging = true; lastX = e.clientX;
-    canvas.style.cursor = 'grabbing';
-  });
-  window.addEventListener('pointerup', () => {
-    isDragging = false;
-    canvas.style.cursor = 'grab';
-  });
-  window.addEventListener('pointermove', e => {
-    if(isDragging) { phi -= (e.clientX - lastX) / 300; lastX = e.clientX; }
-  }, {passive:true});
+  // Connector update — викликається кожен рендер-кадр
+  function updateConnector(idx){
+    if(!svgLine || !svgDot || !svgEl) return;
+    const proj = PROJECTS[idx];
 
-  function init() {
-    width = canvas.offsetWidth;
-    if(!width || globe) return;
+    // 3D → 2D проекція маркера
+    const latR = proj.lat * Math.PI / 180;
+    const lngR = proj.lng * Math.PI / 180 - globePhi;
+    const x3 = Math.cos(latR) * Math.sin(lngR);
+    const y3 = Math.sin(latR) * Math.cos(0.3) - Math.cos(latR) * Math.cos(lngR) * Math.sin(0.3);
+    const z3 = Math.sin(latR) * Math.sin(0.3) + Math.cos(latR) * Math.cos(lngR) * Math.cos(0.3);
 
+    // Маркер видимий тільки якщо z > 0 і глобус близько до цільового кута
+    const aligned = Math.abs(globePhi - targetPhi) < 0.08;
+    if(!aligned || z3 < 0.05){
+      svgLine.setAttribute('opacity','0');
+      svgDot.setAttribute('opacity','0');
+      const pulse = document.getElementById('gs-dot-pulse');
+      if(pulse) pulse.setAttribute('opacity','0');
+      return;
+    }
+
+    const rect = canvas.getBoundingClientRect();
+    // Піксельна позиція маркера
+    const px = rect.left + rect.width  * (0.5 + x3 * 0.47);
+    const py = rect.top  + rect.height * (0.5 - y3 * 0.47);
+
+    // SVG viewBox 0 0 1000 1000
+    const cw = window.innerWidth;
+    const ch = window.innerHeight;
+    const sx = px / cw * 1000;
+    const sy = py / ch * 1000;
+
+    // Кінець лінії — ліво картки (права панель)
+    const cardPanel = document.querySelector('.globe-scroll-right');
+    let ex = 780, ey = 500;
+    if(cardPanel){
+      const cr = cardPanel.getBoundingClientRect();
+      ex = cr.left / cw * 1000;
+      // Знаходимо активну картку
+      const activeCard = document.getElementById('gs-card-' + idx);
+      if(activeCard){
+        const ar = activeCard.getBoundingClientRect();
+        ey = (ar.top + ar.height * 0.5) / ch * 1000;
+      }
+    }
+
+    svgLine.setAttribute('x1', sx.toFixed(1));
+    svgLine.setAttribute('y1', sy.toFixed(1));
+    svgLine.setAttribute('x2', ex.toFixed(1));
+    svgLine.setAttribute('y2', ey.toFixed(1));
+    svgDot.setAttribute('cx', sx.toFixed(1));
+    svgDot.setAttribute('cy', sy.toFixed(1));
+
+    const pulse = document.getElementById('gs-dot-pulse');
+    if(pulse){
+      pulse.setAttribute('cx', sx.toFixed(1));
+      pulse.setAttribute('cy', sy.toFixed(1));
+      pulse.setAttribute('opacity','0.5');
+    }
+
+    svgLine.setAttribute('opacity','0.75');
+    svgDot.setAttribute('opacity','1');
+  }
+
+  function initGlobe(){
+    if(globe){ globe.destroy(); globe = null; }
+    // Беремо реальний розмір canvas після CSS
+    const size = canvas.offsetWidth || Math.min(window.innerWidth, window.innerHeight) * 0.9;
+    if(!size) return;
     globe = createGlobe(canvas, {
       devicePixelRatio: Math.min(window.devicePixelRatio||1, 2),
-      width, height: width,
-      phi: 2.0, theta: 0.25,
-      dark: 1,
-      diffuse: 1.2,
-      mapSamples: 20000,
-      mapBrightness: 4,
-      baseColor: [0.12, 0.06, 0.06],
-      markerColor: [0.85, 0.0, 0.0],
+      width: size, height: size,
+      phi: globePhi, theta: 0.3,
+      dark: 1, diffuse: 1.2,
+      mapSamples: 20000, mapBrightness: 6,
+      baseColor: [0.08, 0.04, 0.04],
+      markerColor: [0.9, 0.0, 0.0],
       glowColor: [0.5, 0.05, 0.05],
-      markers,
-      onRender(state) {
-        if(!isDragging) phi += 0.002;
-        state.phi = phi;
-        state.theta = 0.25;
-        state.width = canvas.offsetWidth;
-        state.height = canvas.offsetWidth;
+      markers: [
+        { location:[49.99,  36.23 ], size:0.07 },
+        { location:[40.71, -74.01 ], size:0.07 },
+        { location:[-33.86, 151.20], size:0.07 },
+      ],
+      onRender(state){
+        const diff = targetPhi - globePhi;
+        if(Math.abs(diff) > 0.001){
+          globePhi += diff * 0.05;
+        } else {
+          globePhi = targetPhi;
+        }
+        state.phi    = globePhi + (isDragging ? dragDelta : 0);
+        state.theta  = 0.3;
+        state.width  = canvas.offsetWidth  || size;
+        state.height = canvas.offsetWidth  || size;
+        updateConnector(currentCard >= 0 ? currentCard : 0);
       }
     });
-
     canvas.style.opacity = '1';
   }
 
-  if(canvas.offsetWidth > 0) { init(); }
-  else {
-    const ro = new ResizeObserver(entries => {
-      if(entries[0]?.contentRect.width > 0){ ro.disconnect(); init(); }
+  canvas.addEventListener('pointerdown', e=>{
+    isDragging=true; lastX=e.clientX; dragDelta=0;
+    canvas.style.cursor='grabbing';
+  });
+  window.addEventListener('pointerup', ()=>{
+    if(isDragging){ targetPhi += dragDelta; globePhi = targetPhi; dragDelta=0; }
+    isDragging=false; canvas.style.cursor='grab';
+  },{passive:true});
+  window.addEventListener('pointermove', e=>{
+    if(isDragging) dragDelta = (e.clientX - lastX) / 150;
+  },{passive:true});
+
+  function setCard(idx){
+    if(idx === currentCard) return;
+    document.querySelectorAll('.gs-card').forEach((c,i) =>{
+      c.classList.toggle('active', i === idx);
     });
-    ro.observe(canvas);
+    document.querySelectorAll('.gs-dot').forEach((d,i) =>{
+      d.classList.toggle('active', i === idx);
+    });
+    targetPhi = PROJECTS[idx].phi;
+    const hint = document.getElementById('gs-scroll-hint');
+    if(hint) hint.classList.toggle('hidden', idx === PROJECTS.length - 1);
+    currentCard = idx;
   }
 
-  // Auto-cycle active card every 3s
-  setInterval(() => {
-    setActive((activeIdx + 1) % projects.length);
-  }, 3000);
-})();
+  // Чекаємо поки sticky layout відрендериться і canvas отримає розмір
+  function tryInit(){
+    if(canvas.offsetWidth > 0){ initGlobe(); }
+    else { setTimeout(tryInit, 100); }
+  }
+  tryInit();
+  window.addEventListener('resize', initGlobe);
 
+  window.addEventListener('scroll', function(){
+    const rect  = outer.getBoundingClientRect();
+    const scrolled = -rect.top;
+    const total    = outer.offsetHeight - window.innerHeight;
+    const progress = Math.max(0, Math.min(1, scrolled / total));
+    let idx;
+    if(progress < 0.33)      idx = 0;
+    else if(progress < 0.66) idx = 1;
+    else                     idx = 2;
+    setCard(idx);
+  },{passive:true});
+
+  setCard(0);
+})();
 </script>
 </body>
 </html>
