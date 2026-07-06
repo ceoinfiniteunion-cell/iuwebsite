@@ -1,0 +1,11 @@
+"use client"
+import { GlobeCdn } from "@/components/ui/cobe-globe-cdn"
+export default function GlobePage() {
+  return (
+    <div style={{ width: "100vw", height: "100vh", background: "white", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ width: "90%", maxWidth: "600px" }}>
+        <GlobeCdn />
+      </div>
+    </div>
+  )
+}

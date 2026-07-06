@@ -292,6 +292,35 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   .globe-cards{border-left:none;border-top:1px solid var(--border);}
   #pf-globe{max-height:60vw;}
 }
+
+/* ── GLOBE PORTFOLIO SECTION ── */
+#portfolio{transition:background .6s ease;}
+#portfolio.globe-light{background:#fff;}
+#portfolio.globe-light .slabel{color:rgba(0,0,0,0.4);}
+#portfolio.globe-light .stitle{color:#0a0a0a;}
+#portfolio.globe-light .snum{color:rgba(0,0,0,0.25);}
+.globe-layout{display:grid;grid-template-columns:1fr 1fr;min-height:600px;border-top:1px solid var(--border);}
+.globe-iframe-wrap{position:relative;overflow:hidden;background:#fff;}
+.globe-iframe-wrap iframe{width:100%;height:100%;border:none;display:block;}
+.globe-info{display:flex;flex-direction:column;border-left:1px solid var(--border);}
+.globe-project{flex:1;padding:48px 40px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;transition:background .4s;}
+.globe-project:last-child{border-bottom:none;}
+.globe-project::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 100% 0%,rgba(212,0,0,0.07),transparent 60%);opacity:0;transition:opacity .5s;}
+.globe-project:hover{background:var(--bg2);}
+.globe-project:hover::before{opacity:1;}
+.gp-badge{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.gp-title{font-family:var(--fh);font-size:clamp(22px,2.5vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:12px;color:var(--fg);}
+.gp-desc{font-size:13px;color:var(--muted2);line-height:1.8;max-width:380px;margin-bottom:16px;}
+.gp-stats{display:flex;gap:20px;flex-wrap:wrap;}
+.gp-stats span{font-size:12px;color:var(--muted2);}
+.gp-stats b{color:var(--fg);font-weight:600;}
+.gp-link{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2);transition:color .25s;display:inline-block;margin-top:14px;}
+.globe-project:hover .gp-link{color:var(--fg);}
+@media(max-width:768px){
+  .globe-layout{grid-template-columns:1fr;}
+  .globe-iframe-wrap{height:80vw;}
+  .globe-info{border-left:none;border-top:1px solid var(--border);}
+}
 </style>
 </head>
 <body>
@@ -394,18 +423,34 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 <!-- PORTFOLIO -->
 <section id="portfolio" class="sec">
   <div class="sec-in" style="padding-bottom:0;"><div class="sh rev"><div><div class="slabel">Роботи</div><h2 class="stitle">Портфоліо</h2></div><div class="snum">02 / 03</div></div></div>
-  <div class="pf-grid">
-    <div class="pf-item feat rev">
-      <div><div class="pf-badge">⭐ Флагманський кейс</div><h3 class="pf-title">Transfer Kharkiv</h3><p class="pf-desc">Комерційний сервіс міжміського таксі — лендінг, два Telegram-боти, бекенд, SEO, Google Ads та Meta-кампанії під ключ.</p></div>
-      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">SEO-сторінок</span><span class="pv">119</span></div><div><span class="pk">CI тестів</span><span class="pv">35/35</span></div><div><span class="pk">Uptime</span><span class="pv">24/7</span></div></div><a href="https://transferkharkiv.com.ua" target="_blank" class="pf-link">Переглянути</a></div>
+  <div class="globe-layout rev">
+    <div class="globe-iframe-wrap">
+      <iframe src="https://ceoinfiniteunion-cell.github.io/iu-globe/" title="Projects Globe" loading="lazy" allow="accelerometer"></iframe>
     </div>
-    <div class="pf-item rev">
-      <div><div class="pf-badge">Telegram-бот</div><h3 class="pf-title">Realty Monitor</h3><p class="pf-desc">Моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю.</p></div>
-      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">Оплата</span><span class="pv">LiqPay</span></div></div></div>
-    </div>
-    <div class="pf-item rev">
-      <div><div class="pf-badge">Університет</div><h3 class="pf-title">KNEU Bot</h3><p class="pf-desc">Бот розкладу КНЕУ з офіційною підтримкою адміністрації та системою старост.</p></div>
-      <div class="pf-foot"><div class="pf-kv"><div><span class="pk">Стек</span><span class="pv">aiogram 3</span></div></div></div>
+    <div class="globe-info">
+      <div class="globe-project">
+        <div class="gp-badge">⭐ Флагманський кейс</div>
+        <div class="gp-title">Transfer Kharkiv</div>
+        <div class="gp-desc">Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти для клієнтів і водіїв, бекенд, SEO та рекламні кампанії.</div>
+        <div class="gp-stats">
+          <span><b>119</b> SEO-сторінок</span>
+          <span><b>35/35</b> CI тестів</span>
+          <span><b>24/7</b> Uptime</span>
+        </div>
+        <a href="https://transferkharkiv.com.ua" target="_blank" class="gp-link">Переглянути ↗</a>
+      </div>
+      <div class="globe-project">
+        <div class="gp-badge">Telegram-бот</div>
+        <div class="gp-title">Realty Monitor</div>
+        <div class="gp-desc">SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю.</div>
+        <div class="gp-stats"><span><b>LiqPay</b> оплата</span></div>
+      </div>
+      <div class="globe-project">
+        <div class="gp-badge">Університет</div>
+        <div class="gp-title">KNEU Bot</div>
+        <div class="gp-desc">Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу та система сповіщень.</div>
+        <div class="gp-stats"><span><b>aiogram 3</b> стек</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -916,6 +961,22 @@ setTimeout(()=>{
   setInterval(() => {
     setActive((activeIdx + 1) % projects.length);
   }, 3000);
+})();
+
+/* ── GLOBE SCROLL TRANSITION ── */
+(function(){
+  const section = document.getElementById('portfolio');
+  if(!section) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        section.classList.add('globe-light');
+      } else {
+        section.classList.remove('globe-light');
+      }
+    });
+  }, { threshold: 0.2 });
+  observer.observe(section);
 })();
 
 </script>
