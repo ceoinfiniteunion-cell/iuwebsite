@@ -175,3 +175,4 @@ var createGlobe = (() => {
   };
   return __toCommonJS(index_esm_exports);
 })();
+createGlobe = createGlobe.default || createGlobe;
