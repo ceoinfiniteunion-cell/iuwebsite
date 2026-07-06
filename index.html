@@ -353,7 +353,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 
 /* Cards */
-.gs-card{position:absolute;top:50%;transform:translateY(-50%) translateX(20px);right:6%;width:320px;
+.gs-card{position:absolute;top:50%;transform:translateY(-50%) translateX(30px);right:3%;width:380px;
   opacity:0;transition:opacity .5s,transform .5s;pointer-events:none;
   background:rgba(10,5,5,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   border:1px solid rgba(255,255,255,.08);padding:32px 28px;}
@@ -994,7 +994,7 @@ setTimeout(()=>{
     const z3 = Math.sin(latR) * Math.sin(0.3) + Math.cos(latR) * Math.cos(lngR) * Math.cos(0.3);
 
     // Маркер видимий тільки якщо z > 0 і глобус близько до цільового кута
-    const aligned = Math.abs(globePhi - targetPhi) < 0.08;
+    const aligned = Math.abs(globePhi - targetPhi) < 0.25;
     if(!aligned || z3 < 0.05){
       svgLine.setAttribute('opacity','0');
       svgDot.setAttribute('opacity','0');
