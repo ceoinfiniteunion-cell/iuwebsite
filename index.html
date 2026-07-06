@@ -1177,13 +1177,9 @@ setTimeout(()=>{
       if(card) card.classList.toggle('active', i===idx);
       if(dot)  dot.classList.toggle('active',  i===idx);
     }
+    // Встановлюємо ціль один раз - глобус крутиться до неї і зупиняється
     targetPhi = PROJECTS[idx].phi;
-    updateConnector(PROJECTS[idx]);
-    // Підсвічуємо активний маркер білим
-    if(globe) {
-      const colors = PROJECTS.map((_,i) => i===idx ? [1,1,1] : [0.7,0,0]);
-      activeMarkerIdx = idx;
-    }
+    activeMarkerIdx = idx;
     const hint = document.getElementById('gs-scroll-hint');
     if(hint) hint.classList.toggle('hidden', idx===PROJECTS.length-1);
     currentCard = idx;
