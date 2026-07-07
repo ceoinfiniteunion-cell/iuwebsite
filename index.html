@@ -306,7 +306,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   position:sticky;top:0;height:100vh;overflow:hidden;
   background:#060303;
 }
-#gs-overlay{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;pointer-events:none;z-index:5;}
+#gs-overlay{position:absolute !important;left:28% !important;top:0% !important;width:78% !important;height:78% !important;pointer-events:none;z-index:5;}
 #gs-globe{
   position:absolute !important;
   left:28% !important;top:0% !important;
@@ -1089,8 +1089,8 @@ setTimeout(()=>{
     // cx/cy — РЕАЛЬНИЙ центр глобуса в CSS-пікселях відносно overlay
     const overlayRect = overlay.getBoundingClientRect();
     const globeRect = canvas.getBoundingClientRect();
-    const cx = globeRect.left + Math.min(globeRect.width, globeRect.height)*0.5 - overlayRect.left - 250;
-    const cy = globeRect.top  + globeRect.height*0.5 - overlayRect.top - 50;
+    const cx = globeRect.left + Math.min(globeRect.width, globeRect.height)*0.5 - overlayRect.left;
+    const cy = globeRect.top  + globeRect.height*0.5 - overlayRect.top;
     document.querySelectorAll('.gs-card').forEach((card, i) => {
       if(!card.classList.contains('active')) return;
       const cr = card.getBoundingClientRect();
@@ -1185,7 +1185,7 @@ setTimeout(()=>{
 
   // Чекаємо поки sticky layout відрендериться і canvas отримає розмір
   function tryInit(){
-    if(canvas.offsetWidth > 0){ initGlobe(); document.querySelectorAll(".gs-card").forEach(c=>c.classList.add("active")); }
+    if(canvas.offsetWidth > 0){ initGlobe(); }
     else { setTimeout(tryInit, 100); }
   }
   tryInit();
