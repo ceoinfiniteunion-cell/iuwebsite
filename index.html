@@ -1086,11 +1086,11 @@ setTimeout(()=>{
     if(cards.length === 0) return;
     ctx2d.save();
     ctx2d.scale(dpr, dpr);
-    // cx/cy — РЕАЛЬНИЙ центр глобуса в CSS-пікселях відносно overlay
+    // Всі координати в CSS пікселях (ctx вже заскейлений на dpr)
     const overlayRect = overlay.getBoundingClientRect();
     const globeRect = canvas.getBoundingClientRect();
-    const cx = globeRect.left + Math.min(globeRect.width, globeRect.height)*0.5 - overlayRect.left;
-    const cy = globeRect.top  + globeRect.height*0.5 - overlayRect.top;
+    const cx = (globeRect.left + Math.min(globeRect.width, globeRect.height)*0.5 - overlayRect.left) / dpr;
+    const cy = (globeRect.top  + globeRect.height*0.5 - overlayRect.top) / dpr;
     document.querySelectorAll('.gs-card').forEach((card, i) => {
       if(!card.classList.contains('active')) return;
       const cr = card.getBoundingClientRect();
