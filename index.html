@@ -1067,60 +1067,48 @@ setTimeout(()=>{
   const overlay = document.getElementById('gs-overlay');
   const ctx2d = overlay ? overlay.getContext('2d') : null;
 
-  function resizeOverlay(){
-    const dpr = Math.min(window.devicePixelRatio||1,2);
-    const w = canvas.offsetWidth;
-    const h = canvas.offsetHeight || canvas.offsetWidth;
-    if(!w) return;
-    if(overlay.width !== Math.round(w*dpr)){
-      overlay.width  = Math.round(w*dpr);
-      overlay.height = Math.round(h*dpr);
-    }
-  }
   function drawLines(){
-    if(!ctx2d || !overlay) return;
-    resizeOverlay();
-    const dpr = Math.min(window.devicePixelRatio||1,2);
+    if(!ctx2d || !overlay || !canvas) return;
+    // Розмір overlay canvas = розмір екрана в фізичних пікселях
+    const dpr = window.devicePixelRatio || 1;
+    const W = window.innerWidth;
+    const H = window.innerHeight;
+    if(overlay.width !== W * dpr){ overlay.width = W * dpr; overlay.height = H * dpr; }
     ctx2d.clearRect(0, 0, overlay.width, overlay.height);
     const cards = document.querySelectorAll('.gs-card.active');
     if(cards.length === 0) return;
-    ctx2d.save();
-    // cx/cy = центр кулі в screen coords, переведені відносно overlay
-    const overlayRect = overlay.getBoundingClientRect();
-    const globeRect = canvas.getBoundingClientRect();
-    // 0.42/0.55 — знайдені емпірично як центр видимої кулі в canvas
-    const globeCenterX = globeRect.left + globeRect.width  * 0.42;
-    const globeCenterY = globeRect.top  + globeRect.height * 0.55;
-    const cx = globeCenterX - overlayRect.left;
-    const cy = globeCenterY - overlayRect.top;
-    document.querySelectorAll('.gs-card').forEach((card, i) => {
+    // Центр глобуса в screen coords
+    const gr = canvas.getBoundingClientRect();
+    const globeX = gr.left + gr.width  * 0.42;
+    const globeY = gr.top  + gr.height * 0.55;
+    // Малюємо в фізичних пікселях
+    const sx = globeX * dpr;
+    const sy = globeY * dpr;
+    document.querySelectorAll('.gs-card').forEach((card) => {
       if(!card.classList.contains('active')) return;
       const cr = card.getBoundingClientRect();
-      // Центр картки в screen coords відносно overlay
-      const ex = (cr.left + cr.width*0.5) - overlayRect.left;
-      const ey = (cr.top  + cr.height*0.5) - overlayRect.top;
-      const grad = ctx2d.createLinearGradient(cx, cy, ex, ey);
+      const ex = (cr.left + cr.width  * 0.5) * dpr;
+      const ey = (cr.top  + cr.height * 0.5) * dpr;
+      const grad = ctx2d.createLinearGradient(sx, sy, ex, ey);
       grad.addColorStop(0, 'rgba(212,0,0,0.9)');
       grad.addColorStop(1, 'rgba(212,0,0,0.2)');
       ctx2d.beginPath();
-      ctx2d.moveTo(cx, cy);
+      ctx2d.moveTo(sx, sy);
       ctx2d.lineTo(ex, ey);
       ctx2d.strokeStyle = grad;
-      ctx2d.lineWidth = 1.5;
-      ctx2d.shadowBlur = 8;
+      ctx2d.lineWidth = 1.5 * dpr;
+      ctx2d.shadowBlur = 8 * dpr;
       ctx2d.shadowColor = '#d40000';
       ctx2d.stroke();
-      // Dot на кінці
       ctx2d.beginPath();
-      ctx2d.arc(ex, ey, 4, 0, Math.PI*2);
+      ctx2d.arc(ex, ey, 4 * dpr, 0, Math.PI*2);
       ctx2d.fillStyle = '#d40000';
-      ctx2d.shadowBlur = 12;
+      ctx2d.shadowBlur = 12 * dpr;
       ctx2d.fill();
     });
-    ctx2d.restore();
   }
 
-  function initGlobe(){
+    function initGlobe(){
     if(globe){ globe.destroy(); globe = null; }
     const size = canvas.offsetWidth || Math.min(window.innerWidth, window.innerHeight) * 0.9;
     if(!size) return;
