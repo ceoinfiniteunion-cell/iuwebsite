@@ -1089,8 +1089,8 @@ setTimeout(()=>{
     // Всі координати в CSS пікселях (ctx вже заскейлений на dpr)
     const overlayRect = overlay.getBoundingClientRect();
     const globeRect = canvas.getBoundingClientRect();
-    const cx = (globeRect.left + globeRect.width*0.42 - overlayRect.left) / dpr;
-    const cy = (globeRect.top  + globeRect.height*0.55 - overlayRect.top) / dpr;
+    const cx = globeRect.left + globeRect.width*0.42 - overlayRect.left;
+    const cy = globeRect.top  + globeRect.height*0.55 - overlayRect.top;
     document.querySelectorAll('.gs-card').forEach((card, i) => {
       if(!card.classList.contains('active')) return;
       const cr = card.getBoundingClientRect();
