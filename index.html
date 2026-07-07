@@ -266,8 +266,8 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .o-tip-desc{font-family:var(--fb);font-size:12px;color:var(--muted2);line-height:1.6;}
 /* Glow pulse on core */
 @keyframes coreGlow{0%,100%{opacity:.18}50%{opacity:.32}}
-@keyframes iuSpin{0%{transform:scaleX(1);opacity:.85}25%{transform:scaleX(.15);opacity:.3}50%{transform:scaleX(1);opacity:.85}75%{transform:scaleX(.15);opacity:.3}100%{transform:scaleX(1);opacity:.85}}
-.o-iu-text{transform-origin:center;animation:iuSpin 3s ease-in-out infinite;}
+@keyframes iuPulse{0%,100%{opacity:.85}50%{opacity:.25}}
+.o-iu-text{animation:iuPulse 2.5s ease-in-out infinite;}
 .o-core{animation:coreGlow 4s ease-in-out infinite;}
 
 /* ── PORTFOLIO GLOBE ── */
