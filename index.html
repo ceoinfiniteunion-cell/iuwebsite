@@ -306,15 +306,16 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   position:sticky;top:0;height:100vh;overflow:hidden;
   background:#060303;
 }
-#gs-overlay{position:absolute !important;left:28% !important;top:0% !important;width:78% !important;height:78% !important;pointer-events:none;z-index:5;}
+#gs-overlay{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;pointer-events:none;z-index:5;}
 #gs-globe{
   position:absolute !important;
-  left:28% !important;top:0% !important;
-  width:78% !important;height:78% !important;
+  left:50% !important;top:50% !important;
+  width:44vh !important;height:44vh !important;
+  transform:translate(-50%,-50%) !important;
   display:block;opacity:0;
   transition:opacity 1.2s;
   cursor:grab;touch-action:none;
-  z-index:1;transform:none !important;
+  z-index:2;
 }
 .gs-cards-row{
   position:absolute;inset:0;
@@ -323,55 +324,48 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 .gs-card{
   position:absolute;
-  width:280px;
+  width:210px;
   background:linear-gradient(160deg, rgba(20,8,8,0.95) 0%, rgba(8,3,3,0.95) 100%);
   border:1px solid rgba(212,0,0,0.2);
   border-radius:2px;
   backdrop-filter:blur(16px);
   box-shadow:0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(212,0,0,0.08);
-  padding:24px 22px;
+  padding:20px 18px;
   opacity:0;
   pointer-events:none;
   transition:opacity .6s var(--ease2), transform .6s var(--ease2);
 }
-/* Картка 1 — зліва вгорі */
-#gs-card-0{
-  left:1%;top:20%;
-  transform:translateX(-30px);
-  width:220px;
-}
-/* Картка 2 — знизу по центру */
-#gs-card-1{
-  left:50%;bottom:13%;
-  transform:translateX(-50%) translateY(20px);
-  width:160px;
-}
-/* Картка 3 — справа вгорі */
-#gs-card-2{
-  right:1%;top:20%;
-  transform:translateX(30px);
-  width:220px;
-}
-/* Картка 4 — зліва знизу */
-#gs-card-3{
-  left:1%;bottom:18%;
-  transform:translateX(-30px);
-  width:210px;
-}
+.gs-card.active{ opacity:1; pointer-events:auto; }
+/* Порядок появи: 1,2,3,4,5,6,7,8 = id 0..7 */
+/* 1 — зліва зверху */
+#gs-card-0{ left:2%;  top:16%;  transform:translateX(-40px); }
+#gs-card-0.active{ transform:translateX(0); }
+/* 2 — справа знизу */
+#gs-card-1{ right:2%; bottom:8%; transform:translateX(40px); }
+#gs-card-1.active{ transform:translateX(0); }
+/* 3 — знизу по центру */
+#gs-card-2{ left:50%; bottom:4%; transform:translateX(-50%) translateY(30px); width:190px; }
+#gs-card-2.active{ transform:translateX(-50%) translateY(0); }
+/* 4 — зліва знизу */
+#gs-card-3{ left:2%;  bottom:8%; transform:translateX(-40px); }
 #gs-card-3.active{ transform:translateX(0); }
-/* Картка 5 — справа знизу */
-#gs-card-4{
-  right:1%;bottom:18%;
-  transform:translateX(30px);
-  width:210px;
-}
-#gs-card-4.active{ transform:translateX(0); }
+/* 5 — справа зверху (ближче до центру) */
+#gs-card-4{ right:24%; top:14%;  transform:translateY(-30px); width:190px; }
+#gs-card-4.active{ transform:translateY(0); }
+/* 6 — зліва зверху (ближче до центру) */
+#gs-card-5{ left:24%;  top:14%;  transform:translateY(-30px); width:190px; }
+#gs-card-5.active{ transform:translateY(0); }
+/* 7 — справа знизу (ближче до центру) */
+#gs-card-6{ right:24%; bottom:8%; transform:translateY(30px); width:190px; }
+#gs-card-6.active{ transform:translateY(0); }
+/* 8 — зліва знизу (ближче до центру) */
+#gs-card-7{ left:24%;  bottom:8%; transform:translateY(30px); width:190px; }
+#gs-card-7.active{ transform:translateY(0); }
+/* 9 — справа зверху (край) */
+#gs-card-8{ right:2%; top:16%; transform:translateX(40px); }
+#gs-card-8.active{ transform:translateX(0); }
 .gs-line-active{stroke-dashoffset:0 !important;}
 .gs-dot-active{opacity:1 !important;}
-.gs-card.active{ opacity:1; pointer-events:auto; }
-#gs-card-0.active{ transform:translateX(0); }
-#gs-card-1.active{ transform:translateX(-50%) translateY(0); }
-#gs-card-2.active{ transform:translateX(0); }
 
 .globe-scroll-right{
   position:absolute;
@@ -547,68 +541,16 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
         <circle id="gs-dot-pulse" cx="500" cy="500" r="4" fill="none" stroke="#d40000" stroke-width="1" opacity="0"/>
       </svg>
       <div class="gs-cards-row">
-        <div class="gs-card" id="gs-card-0">
-          <div class="gs-card-inner">
-            <div class="gs-num">01 / 05</div>
-            <div class="gs-badge">⭐ Флагманський кейс</div>
-            <div class="gs-title">Transfer Kharkiv</div>
-            <div class="gs-desc">Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти для клієнтів і водіїв, бекенд, SEO та рекламні кампанії під ключ.</div>
-            <div class="gs-stats">
-              <span><b>119</b> SEO-сторінок</span>
-              <span><b>35/35</b> CI тестів</span>
-              <span><b>24/7</b> Uptime</span>
-            </div>
-            <a href="https://transferkharkiv.com.ua" target="_blank" class="gs-link">Переглянути ↗</a>
-          </div>
-        </div>
-        <div class="gs-card" id="gs-card-1">
-          <div class="gs-card-inner">
-            <div class="gs-num">02 / 05</div>
-            <div class="gs-badge">Telegram-бот</div>
-            <div class="gs-title">Realty Monitor</div>
-            <div class="gs-desc">SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю — пасивний дохід без участі команди.</div>
-            <div class="gs-stats">
-              <span><b>LiqPay</b> оплата</span>
-              <span><b>FSM</b> архітектура</span>
-            </div>
-          </div>
-        </div>
-        <div class="gs-card" id="gs-card-2">
-          <div class="gs-card-inner">
-            <div class="gs-num">03 / 05</div>
-            <div class="gs-badge">Університет</div>
-            <div class="gs-title">KNEU Bot</div>
-            <div class="gs-desc">Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу, комунікація деканату і студентів.</div>
-            <div class="gs-stats">
-              <span><b>3 000+</b> користувачів</span>
-              <span><b>aiogram 3</b> стек</span>
-            </div>
-          </div>
-        </div>
-        <div class="gs-card" id="gs-card-3">
-          <div class="gs-card-inner">
-            <div class="gs-num">04 / 05</div>
-            <div class="gs-badge">Автоматизація</div>
-            <div class="gs-title">Infinite Union Bot</div>
-            <div class="gs-desc">Telegram lead-бот з квізом, кваліфікацією клієнтів, PostgreSQL та Railway деплоєм — генерує заявки 24/7.</div>
-            <div class="gs-stats">
-              <span><b>FastAPI</b> бекенд</span>
-              <span><b>Redis</b> черга</span>
-            </div>
-          </div>
-        </div>
-        <div class="gs-card" id="gs-card-4">
-          <div class="gs-card-inner">
-            <div class="gs-num">05 / 05</div>
-            <div class="gs-badge">SaaS</div>
-            <div class="gs-title">Ще один проект</div>
-            <div class="gs-desc">Опис вашого п'ятого проекту — замініть цей текст на реальний кейс з метриками та результатами.</div>
-            <div class="gs-stats">
-              <span><b>—</b> метрика</span>
-              <span><b>—</b> стек</span>
-            </div>
-          </div>
-        </div>
+        <div class="gs-card" id="gs-card-0"><div class="gs-num">01</div><div class="gs-badge">⭐ Флагман</div><div class="gs-title">Transfer Kharkiv</div><div class="gs-desc">Лендінг з конверсією 8.4%, боти, SEO під ключ.</div><div class="gs-stats"><span><b>119</b> SEO</span><span><b>24/7</b></span></div><a href="https://transferkharkiv.com.ua" target="_blank" class="gs-link">Переглянути ↗</a></div>
+        <div class="gs-card" id="gs-card-1"><div class="gs-num">02</div><div class="gs-badge">SaaS</div><div class="gs-title">Realty Monitor</div><div class="gs-desc">Моніторинг нерухомості з LiqPay та FSM.</div><div class="gs-stats"><span><b>LiqPay</b></span><span><b>FSM</b></span></div></div>
+        <div class="gs-card" id="gs-card-2"><div class="gs-num">03</div><div class="gs-badge">Університет</div><div class="gs-title">KNEU Bot</div><div class="gs-desc">Офіційний бот з 3 000+ користувачів.</div><div class="gs-stats"><span><b>3 000+</b></span><span><b>aiogram</b></span></div></div>
+        <div class="gs-card" id="gs-card-3"><div class="gs-num">04</div><div class="gs-badge">Автоматизація</div><div class="gs-title">IU Bot</div><div class="gs-desc">Lead-бот з квізом, PostgreSQL, Railway.</div><div class="gs-stats"><span><b>FastAPI</b></span><span><b>Redis</b></span></div></div>
+        <div class="gs-card" id="gs-card-4"><div class="gs-num">05</div><div class="gs-badge">—</div><div class="gs-title">Проект 5</div><div class="gs-desc">—</div></div>
+        <div class="gs-card" id="gs-card-5"><div class="gs-num">06</div><div class="gs-badge">—</div><div class="gs-title">Проект 6</div><div class="gs-desc">—</div></div>
+        <div class="gs-card" id="gs-card-6"><div class="gs-num">07</div><div class="gs-badge">—</div><div class="gs-title">Проект 7</div><div class="gs-desc">—</div></div>
+        <div class="gs-card" id="gs-card-7"><div class="gs-num">08</div><div class="gs-badge">—</div><div class="gs-title">Проект 8</div><div class="gs-desc">—</div></div>
+        <div class="gs-card" id="gs-card-8"><div class="gs-num">09</div><div class="gs-badge">—</div><div class="gs-title">Проект 9</div><div class="gs-desc">—</div></div>
+      
       </div>
     </div>
   </div>
@@ -1255,7 +1197,7 @@ setTimeout(()=>{
     const progress = Math.max(0, Math.min(1, scrolled / total));
     // Кожна картка має свій поріг появи — незалежно один від одного
     const cards = document.querySelectorAll('.gs-card');
-    const thresholds = [0.12, 0.28, 0.44, 0.60, 0.76];
+    const thresholds = [0.08, 0.18, 0.28, 0.38, 0.48, 0.58, 0.68, 0.78, 0.88];
     cards.forEach((c,i)=>{
       const wasActive = c.classList.contains('active');
       const isActive = progress >= thresholds[i];
