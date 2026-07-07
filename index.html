@@ -536,7 +536,6 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
         <circle id="gs-dot-marker" cx="500" cy="500" r="4" fill="#d40000" opacity="0" filter="url(#glow)"/>
         <circle id="gs-dot-pulse" cx="500" cy="500" r="4" fill="none" stroke="#d40000" stroke-width="1" opacity="0"/>
       </svg>
-      <div class="gs-globe-cell"><canvas id="gs-globe"></canvas></div>
       <div class="gs-card" id="gs-card-0"><div class="gs-num">01</div><div class="gs-badge">⭐ Флагман</div><div class="gs-title">Transfer Kharkiv</div><div class="gs-desc">Лендінг з конверсією 8.4%, боти, SEO.</div><div class="gs-stats"><span><b>119</b> SEO</span><span><b>24/7</b></span></div><a href="https://transferkharkiv.com.ua" target="_blank" class="gs-link">↗</a></div>
       <div class="gs-card" id="gs-card-7"><div class="gs-num">02</div><div class="gs-badge">SaaS</div><div class="gs-title">Realty Monitor</div><div class="gs-desc">Моніторинг нерухомості з LiqPay.</div><div class="gs-stats"><span><b>LiqPay</b></span><span><b>FSM</b></span></div></div>
       <div class="gs-card" id="gs-card-2"><div class="gs-num">03</div><div class="gs-badge">Університет</div><div class="gs-title">KNEU Bot</div><div class="gs-desc">3 000+ активних користувачів.</div><div class="gs-stats"><span><b>3 000+</b></span></div></div>
@@ -1294,7 +1293,7 @@ setTimeout(()=>{
     // Глобус повертається до відповідного проекту
     let idx = -1;
     for(let i=0;i<thresholds.length;i++){ if(progress>=thresholds[i]) idx=i; }
-    if(idx>=0 && idx!==currentCard){ targetPhi = PROJECTS[idx].phi; currentCard = idx; }
+    if(idx>=0 && idx!==currentCard && PROJECTS[idx]){ targetPhi = PROJECTS[idx].phi; currentCard = idx; }
   },{passive:true});
 })();
 </script>
