@@ -1094,14 +1094,8 @@ setTimeout(()=>{
     document.querySelectorAll('.gs-card').forEach((card, i) => {
       if(!card.classList.contains('active')) return;
       const cr = card.getBoundingClientRect();
-      // Координати центру картки відносно overlay
-      const cardCx = cr.left + cr.width*0.5 - overlayRect.left;
-      const cardCy = cr.top  + cr.height*0.5 - overlayRect.top;
-      // Лінія йде до краю картки (найближча точка до центру глобуса)
-      const dx = cardCx - cx, dy = cardCy - cy;
-      const dist = Math.sqrt(dx*dx+dy*dy)||1;
-      const ex = cardCx - (dx/dist)*(cr.width*0.5);
-      const ey = cardCy - (dy/dist)*(cr.height*0.5);
+      const ex = cr.left + cr.width*0.5 - overlayRect.left;
+      const ey = cr.top  + cr.height*0.5 - overlayRect.top;
       const grad = ctx2d.createLinearGradient(cx, cy, ex, ey);
       grad.addColorStop(0, 'rgba(212,0,0,0.9)');
       grad.addColorStop(1, 'rgba(212,0,0,0.2)');
