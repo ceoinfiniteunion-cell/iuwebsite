@@ -1231,7 +1231,7 @@ setTimeout(()=>{
     // Глобус повертається до відповідного проекту
     let idx = -1;
     for(let i=0;i<thresholds.length;i++){ if(progress>=thresholds[i]) idx=i; }
-    if(idx>=0 && idx!==currentCard){ targetPhi = PROJECTS[idx].phi; currentCard = idx; }
+    if(idx>=0 && idx<PROJECTS.length && idx!==currentCard){ targetPhi = PROJECTS[idx].phi; currentCard = idx; }
   },{passive:true});
 })();
 </script>
