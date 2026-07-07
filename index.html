@@ -333,27 +333,30 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   pointer-events:none;
   transition:opacity .6s var(--ease2), transform .6s var(--ease2);
 }
-/* Картка 1 — зліва */
+/* Картка 1 — зліва вгорі */
 #gs-card-0{
-  left:2%;top:50%;
-  transform:translateY(-50%) translateX(-40px);
+  left:1%;top:20%;
+  transform:translateX(-30px);
+  width:220px;
 }
 /* Картка 2 — знизу по центру */
 #gs-card-1{
-  left:50%;bottom:3%;
-  transform:translateX(-50%) translateY(40px);
+  left:50%;bottom:2%;
+  transform:translateX(-50%) translateY(30px);
+  width:220px;
 }
-/* Картка 3 — справа */
+/* Картка 3 — справа вгорі */
 #gs-card-2{
-  right:2%;top:50%;
-  transform:translateY(-50%) translateX(40px);
+  right:1%;top:20%;
+  transform:translateX(30px);
+  width:220px;
 }
 .gs-line-active{stroke-dashoffset:0 !important;}
 .gs-dot-active{opacity:1 !important;}
 .gs-card.active{ opacity:1; pointer-events:auto; }
-#gs-card-0.active{ transform:translateY(-50%) translateX(0); }
+#gs-card-0.active{ transform:translateX(0); }
 #gs-card-1.active{ transform:translateX(-50%) translateY(0); }
-#gs-card-2.active{ transform:translateY(-50%) translateX(0); }
+#gs-card-2.active{ transform:translateX(0); }
 
 .globe-scroll-right{
   position:absolute;
@@ -1183,15 +1186,20 @@ setTimeout(()=>{
           const svgEl = document.getElementById('gs-lines');
           const svgRect = svgEl ? svgEl.getBoundingClientRect() : null;
           if(svgRect){
+            // Реальний центр глобуса
+            const gr = canvas.getBoundingClientRect();
+            const gx = (gr.left + gr.width*0.5 - svgRect.left) / svgRect.width * 1000;
+            const gy = (gr.top + gr.height*0.5 - svgRect.top) / svgRect.height * 1000;
+            // Оновити x1,y1 всіх ліній
+            document.querySelectorAll('#gs-lines line').forEach(l=>{ l.setAttribute('x1', gx.toFixed(0)); l.setAttribute('y1', gy.toFixed(0)); });
             const cr = c.getBoundingClientRect();
             const ex = (cr.left + cr.width*0.5 - svgRect.left) / svgRect.width * 1000;
-            const ey = (cr.top - svgRect.top) / svgRect.height * 1000;
+            const ey = (cr.top + cr.height*0.5 - svgRect.top) / svgRect.height * 1000;
             line.setAttribute('x2', ex.toFixed(0));
             line.setAttribute('y2', ey.toFixed(0));
             dot.setAttribute('cx', ex.toFixed(0));
             dot.setAttribute('cy', ey.toFixed(0));
-            // Скинути і запустити анімацію
-            const len = Math.hypot(ex-500, ey-500) + 50;
+            const len = Math.hypot(ex-gx, ey-gy) + 20;
             line.setAttribute('stroke-dasharray', len.toFixed(0));
             line.setAttribute('stroke-dashoffset', len.toFixed(0));
             setTimeout(()=>{ line.classList.add('gs-line-active'); dot.classList.add('gs-dot-active'); }, 50);
