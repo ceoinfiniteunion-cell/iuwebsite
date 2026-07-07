@@ -308,13 +308,13 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 #gs-globe{
   position:absolute !important;
-  left:50% !important;top:50% !important;
-  transform:translate(-50%,-50%) !important;
-  width:min(88vh,88vw) !important;height:min(88vh,88vw) !important;
+  inset:0 !important;
+  width:100% !important;height:100% !important;
   display:block;opacity:0;
   transition:opacity 1.2s;
   cursor:grab;touch-action:none;
   z-index:1;
+  transform:none !important;
 }
 .gs-cards-row{
   display:flex;gap:16px;justify-content:center;align-items:stretch;
