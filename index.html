@@ -300,69 +300,78 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 
 /* ── GLOBE SCROLL SECTION ── */
 #portfolio{position:relative;padding:0 !important;margin:0;}#portfolio.sec{padding:0 !important;}
-#portfolio .sec-in{padding-bottom:0;position:absolute;top:0;left:0;right:0;z-index:20;pointer-events:none;}
+#portfolio .sec-in{padding-bottom:0;position:absolute;top:0;left:0;right:0;z-index:10;pointer-events:none;}
 .globe-scroll-outer{height:600vh;position:relative;}
 .globe-scroll-sticky{
   position:sticky;top:0;height:100vh;overflow:hidden;
   background:#060303;
-  display:grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  align-items: stretch;
-  isolation:isolate;
 }
-#gs-overlay{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;pointer-events:none;z-index:7;}
-/* #gs-globe moved to .gs-globe-cell block */
+#gs-overlay{position:absolute !important;left:28% !important;top:0% !important;width:78% !important;height:78% !important;pointer-events:none;z-index:5;}
+#gs-globe{
+  position:absolute !important;
+  left:28% !important;top:0% !important;
+  width:78% !important;height:78% !important;
+  display:block;opacity:0;
+  transition:opacity 1.2s;
+  cursor:grab;touch-action:none;
+  z-index:1;transform:none !important;
+}
 .gs-cards-row{
   position:absolute;inset:0;
   pointer-events:none;
   z-index:6;
 }
 .gs-card{
+  position:absolute;
+  width:280px;
   background:linear-gradient(160deg, rgba(20,8,8,0.95) 0%, rgba(8,3,3,0.95) 100%);
-  border:1px solid rgba(212,0,0,0.15);
-  padding:20px 18px;
+  border:1px solid rgba(212,0,0,0.2);
+  border-radius:2px;
+  backdrop-filter:blur(16px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(212,0,0,0.08);
+  padding:24px 22px;
   opacity:0;
   pointer-events:none;
   transition:opacity .6s var(--ease2), transform .6s var(--ease2);
-  transform:scale(0.96);
-  overflow:hidden;
-  position:relative;
 }
-.gs-card.active{opacity:1;pointer-events:auto;transform:scale(1);}
-.gs-globe-cell{
-  grid-column:3;
-  grid-row:1/3;
-  position:relative;
-  min-height:0;
-  min-width:0;
-  overflow:hidden;
+/* Картка 1 — зліва вгорі */
+#gs-card-0{
+  left:1%;top:20%;
+  transform:translateX(-30px);
+  width:220px;
 }
-#gs-globe{
-  position:absolute !important;
-  top:0 !important; left:0 !important;
-  width:100% !important;
-  height:100% !important;
-  display:block !important;
-  opacity:0;
-  transition:opacity 1.2s;
-  cursor:grab;
-  touch-action:none;
+/* Картка 2 — знизу по центру */
+#gs-card-1{
+  left:50%;bottom:13%;
+  transform:translateX(-50%) translateY(20px);
+  width:160px;
+}
+/* Картка 3 — справа вгорі */
+#gs-card-2{
+  right:1%;top:20%;
+  transform:translateX(30px);
+  width:220px;
 }
 /* Картка 4 — зліва знизу */
+#gs-card-3{
+  left:1%;bottom:18%;
+  transform:translateX(-30px);
+  width:210px;
+}
+#gs-card-3.active{ transform:translateX(0); }
 /* Картка 5 — справа знизу */
-/* grid positions: порядок появи 1-8, глобус займає col3 row1+2 */
-#gs-card-0{ grid-column:1; grid-row:1; } /* 1 — верх ліво */
-#gs-card-5{ grid-column:2; grid-row:1; } /* 6 — верх ліво-центр */
-#gs-card-4{ grid-column:4; grid-row:1; } /* 5 — верх право-центр */
-#gs-card-7{ grid-column:5; grid-row:1; } /* 9 — верх право */
-#gs-card-3{ grid-column:1; grid-row:2; } /* 4 — низ ліво */
-#gs-card-1{ grid-column:2; grid-row:2; } /* 8 — низ ліво-центр */
-#gs-card-2{ grid-column:4; grid-row:2; } /* 7 — низ право-центр */
-#gs-card-6{ grid-column:5; grid-row:2; } /* 2 — низ право */
+#gs-card-4{
+  right:1%;bottom:18%;
+  transform:translateX(30px);
+  width:210px;
+}
+#gs-card-4.active{ transform:translateX(0); }
 .gs-line-active{stroke-dashoffset:0 !important;}
 .gs-dot-active{opacity:1 !important;}
 .gs-card.active{ opacity:1; pointer-events:auto; }
+#gs-card-0.active{ transform:translateX(0); }
+#gs-card-1.active{ transform:translateX(-50%) translateY(0); }
+#gs-card-2.active{ transform:translateX(0); }
 
 .globe-scroll-right{
   position:absolute;
@@ -524,7 +533,8 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   <div class="globe-scroll-outer" id="globe-scroll-outer">
     <div class="globe-scroll-sticky" id="globe-sticky">
       <div class="sec-in" style="position:absolute;top:0;left:0;right:0;z-index:10;pointer-events:none;padding:32px 48px;"><div class="sh rev"><div><div class="slabel">Роботи</div><h2 class="stitle">Портфоліо</h2></div><div class="snum">02 / 03</div></div></div>
-      <canvas id="gs-overlay" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:7;"></canvas>
+      <canvas id="gs-globe"></canvas>
+      <canvas id="gs-overlay" style="pointer-events:none;z-index:5;"></canvas>
       <svg id="gs-connector" viewBox="0 0 1000 1000" preserveAspectRatio="none" style="display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5;">
         <defs>
           <filter id="glow">
@@ -536,16 +546,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
         <circle id="gs-dot-marker" cx="500" cy="500" r="4" fill="#d40000" opacity="0" filter="url(#glow)"/>
         <circle id="gs-dot-pulse" cx="500" cy="500" r="4" fill="none" stroke="#d40000" stroke-width="1" opacity="0"/>
       </svg>
-      <div class="gs-card" id="gs-card-0"><div class="gs-num">01</div><div class="gs-badge">⭐ Флагман</div><div class="gs-title">Transfer Kharkiv</div><div class="gs-desc">Лендінг з конверсією 8.4%, боти, SEO.</div><div class="gs-stats"><span><b>119</b> SEO</span><span><b>24/7</b></span></div><a href="https://transferkharkiv.com.ua" target="_blank" class="gs-link">↗</a></div>
-      <div class="gs-card" id="gs-card-7"><div class="gs-num">02</div><div class="gs-badge">SaaS</div><div class="gs-title">Realty Monitor</div><div class="gs-desc">Моніторинг нерухомості з LiqPay.</div><div class="gs-stats"><span><b>LiqPay</b></span><span><b>FSM</b></span></div></div>
-      <div class="gs-card" id="gs-card-2"><div class="gs-num">03</div><div class="gs-badge">Університет</div><div class="gs-title">KNEU Bot</div><div class="gs-desc">3 000+ активних користувачів.</div><div class="gs-stats"><span><b>3 000+</b></span></div></div>
-      <div class="gs-card" id="gs-card-3"><div class="gs-num">04</div><div class="gs-badge">Автоматизація</div><div class="gs-title">IU Bot</div><div class="gs-desc">Lead-бот з квізом, FastAPI, Redis.</div></div>
-      <div class="gs-card" id="gs-card-4"><div class="gs-num">05</div><div class="gs-badge">—</div><div class="gs-title">Проект 5</div><div class="gs-desc">—</div></div>
-      <div class="gs-card" id="gs-card-5"><div class="gs-num">06</div><div class="gs-badge">—</div><div class="gs-title">Проект 6</div><div class="gs-desc">—</div></div>
-      <div class="gs-card" id="gs-card-6"><div class="gs-num">07</div><div class="gs-badge">—</div><div class="gs-title">Проект 7</div><div class="gs-desc">—</div></div>
-      <div class="gs-card" id="gs-card-1"><div class="gs-num">08</div><div class="gs-badge">—</div><div class="gs-title">Проект 8</div><div class="gs-desc">—</div></div>
-      <div class="gs-card" id="gs-card-8"><div class="gs-num">09</div><div class="gs-badge">—</div><div class="gs-title">Проект 9</div><div class="gs-desc">—</div></div>
-      <div style="display:none">
+      <div class="gs-cards-row">
         <div class="gs-card" id="gs-card-0">
           <div class="gs-card-inner">
             <div class="gs-num">01 / 05</div>
@@ -1254,7 +1255,7 @@ setTimeout(()=>{
     const progress = Math.max(0, Math.min(1, scrolled / total));
     // Кожна картка має свій поріг появи — незалежно один від одного
     const cards = document.querySelectorAll('.gs-card');
-    const thresholds = [0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80];
+    const thresholds = [0.12, 0.28, 0.44, 0.60, 0.76];
     cards.forEach((c,i)=>{
       const wasActive = c.classList.contains('active');
       const isActive = progress >= thresholds[i];
@@ -1293,7 +1294,7 @@ setTimeout(()=>{
     // Глобус повертається до відповідного проекту
     let idx = -1;
     for(let i=0;i<thresholds.length;i++){ if(progress>=thresholds[i]) idx=i; }
-    if(idx>=0 && idx!==currentCard && PROJECTS[idx]){ targetPhi = PROJECTS[idx].phi; currentCard = idx; }
+    if(idx>=0 && idx!==currentCard){ targetPhi = PROJECTS[idx].phi; currentCard = idx; }
   },{passive:true});
 })();
 </script>
