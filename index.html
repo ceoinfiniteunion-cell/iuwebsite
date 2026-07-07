@@ -841,9 +841,9 @@ setTimeout(()=>{
 
   // orbit params [rx, ry, rotationDeg]
   const orbits = [
-    {rx:90, ry:28, rot:-15},
-    {rx:130, ry:42, rot:20},
-    {rx:168, ry:58, rot:-8},
+    {rx:225, ry:70, rot:-15},
+    {rx:325, ry:105, rot:20},
+    {rx:420, ry:145, rot:-8},
   ];
 
   function buildSVG(){
@@ -854,9 +854,9 @@ setTimeout(()=>{
     svg += `<defs><radialGradient id="coreGrad" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#D40000" stop-opacity=".35"/><stop offset="100%" stop-color="#D40000" stop-opacity=".0"/></radialGradient></defs>`;
 
     // Glow
-    svg += `<circle cx="${cx}" cy="${cy}" r="110" fill="url(#coreGrad)"/>`;
+    svg += `<circle cx="${cx}" cy="${cy}" r="275" fill="url(#coreGrad)"/>`;
     // Core sphere
-    svg += `<circle class="o-core" cx="${cx}" cy="${cy}" r="62"/>`;
+    svg += `<circle class="o-core" cx="${cx}" cy="${cy}" r="155"/>`;
     // Core wireframe lines
     for(let i=0;i<8;i++){
       const a=i/8*Math.PI;
