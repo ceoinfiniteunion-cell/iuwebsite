@@ -1185,7 +1185,7 @@ setTimeout(()=>{
 
   // Чекаємо поки sticky layout відрендериться і canvas отримає розмір
   function tryInit(){
-    if(canvas.offsetWidth > 0){ initGlobe(); }
+    if(canvas.offsetWidth > 0){ initGlobe(); document.querySelectorAll(".gs-card").forEach(c=>c.classList.add("active")); }
     else { setTimeout(tryInit, 100); }
   }
   tryInit();
