@@ -1088,8 +1088,8 @@ setTimeout(()=>{
     // Без scale — малюємо в CSS пікселях напряму
     const overlayRect = overlay.getBoundingClientRect();
     const globeRect = canvas.getBoundingClientRect();
-    const cx = globeRect.left + globeRect.width*0.42 - overlayRect.left;
-    const cy = globeRect.top  + globeRect.height*0.55 - overlayRect.top;
+    const cx = globeRect.left + globeRect.width*0.47 - overlayRect.left;
+    const cy = globeRect.top  + globeRect.height*0.60 - overlayRect.top;
     document.querySelectorAll('.gs-card').forEach((card, i) => {
       if(!card.classList.contains('active')) return;
       const cr = card.getBoundingClientRect();
