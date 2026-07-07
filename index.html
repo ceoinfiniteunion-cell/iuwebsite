@@ -1154,6 +1154,7 @@ setTimeout(()=>{
         state.width  = canvas.offsetWidth  || size;
         state.height = canvas.offsetWidth  || size;
         updateConnector(currentCard >= 0 ? currentCard : 0);
+        drawLines();
       }
     });
     canvas.style.opacity = '1';
