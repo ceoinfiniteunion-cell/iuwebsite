@@ -1085,17 +1085,20 @@ setTimeout(()=>{
     const cards = document.querySelectorAll('.gs-card.active');
     if(cards.length === 0) return;
     ctx2d.save();
-    // Без scale — малюємо в CSS пікселях напряму
+    // cx/cy = центр кулі в screen coords, переведені відносно overlay
     const overlayRect = overlay.getBoundingClientRect();
     const globeRect = canvas.getBoundingClientRect();
-    const cx = globeRect.left + globeRect.width*0.47 - overlayRect.left;
-    const cy = globeRect.top  + globeRect.height*0.60 - overlayRect.top;
+    // 0.42/0.55 — знайдені емпірично як центр видимої кулі в canvas
+    const globeCenterX = globeRect.left + globeRect.width  * 0.42;
+    const globeCenterY = globeRect.top  + globeRect.height * 0.55;
+    const cx = globeCenterX - overlayRect.left;
+    const cy = globeCenterY - overlayRect.top;
     document.querySelectorAll('.gs-card').forEach((card, i) => {
       if(!card.classList.contains('active')) return;
       const cr = card.getBoundingClientRect();
-      // Координати в CSS-пікселях відносно overlay
-      const ex = cr.left + cr.width*0.5 - overlayRect.left;
-      const ey = cr.top  + cr.height*0.5 - overlayRect.top;
+      // Центр картки в screen coords відносно overlay
+      const ex = (cr.left + cr.width*0.5) - overlayRect.left;
+      const ey = (cr.top  + cr.height*0.5) - overlayRect.top;
       const grad = ctx2d.createLinearGradient(cx, cy, ex, ey);
       grad.addColorStop(0, 'rgba(212,0,0,0.9)');
       grad.addColorStop(1, 'rgba(212,0,0,0.2)');
