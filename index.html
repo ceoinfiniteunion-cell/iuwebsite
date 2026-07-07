@@ -342,9 +342,9 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 /* Картка 2 — знизу по центру */
 #gs-card-1{
-  left:50%;bottom:9%;
+  left:50%;bottom:13%;
   transform:translateX(-50%) translateY(20px);
-  width:170px;
+  width:160px;
 }
 /* Картка 3 — справа вгорі */
 #gs-card-2{
@@ -1139,24 +1139,22 @@ setTimeout(()=>{
   function drawLines(){
     if(!ctx2d || !overlay) return;
     resizeOverlay();
-    ctx2d.save();
     const dpr = Math.min(window.devicePixelRatio||1,2);
     ctx2d.clearRect(0, 0, overlay.width, overlay.height);
-    ctx2d.scale(dpr, dpr);
     const cards = document.querySelectorAll('.gs-card.active');
     if(cards.length === 0) return;
-    const cx = overlay.width * 0.5;
-    const cy = overlay.height * 0.5;
-    const globeRect = canvas.getBoundingClientRect();
+    ctx2d.save();
+    ctx2d.scale(dpr, dpr);
+    // cx/cy — центр overlay в CSS-пікселях
     const overlayRect = overlay.getBoundingClientRect();
+    const cx = overlayRect.width * 0.5;
+    const cy = overlayRect.height * 0.5;
     document.querySelectorAll('.gs-card').forEach((card, i) => {
       if(!card.classList.contains('active')) return;
       const cr = card.getBoundingClientRect();
-      // Координати в overlay canvas
-      const scaleX = overlay.width / overlayRect.width;
-      const scaleY = overlay.height / overlayRect.height;
-      const ex = (cr.left + cr.width*0.5 - overlayRect.left) * scaleX;
-      const ey = (cr.top + cr.height*0.5 - overlayRect.top) * scaleY;
+      // Координати в CSS-пікселях відносно overlay
+      const ex = cr.left + cr.width*0.5 - overlayRect.left;
+      const ey = cr.top  + cr.height*0.5 - overlayRect.top;
       const grad = ctx2d.createLinearGradient(cx, cy, ex, ey);
       grad.addColorStop(0, 'rgba(212,0,0,0.9)');
       grad.addColorStop(1, 'rgba(212,0,0,0.2)');
