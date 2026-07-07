@@ -1094,6 +1094,7 @@ setTimeout(()=>{
     document.querySelectorAll('.gs-card').forEach((card, i) => {
       if(!card.classList.contains('active')) return;
       const cr = card.getBoundingClientRect();
+      // Координати в CSS-пікселях відносно overlay
       const ex = cr.left + cr.width*0.5 - overlayRect.left;
       const ey = cr.top  + cr.height*0.5 - overlayRect.top;
       const grad = ctx2d.createLinearGradient(cx, cy, ex, ey);
