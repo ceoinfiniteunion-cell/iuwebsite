@@ -342,9 +342,9 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 /* Картка 2 — знизу по центру */
 #gs-card-1{
-  left:50%;bottom:4%;
+  left:50%;bottom:9%;
   transform:translateX(-50%) translateY(20px);
-  width:200px;
+  width:170px;
 }
 /* Картка 3 — справа вгорі */
 #gs-card-2{
@@ -352,6 +352,20 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   transform:translateX(30px);
   width:220px;
 }
+/* Картка 4 — зліва знизу */
+#gs-card-3{
+  left:1%;bottom:18%;
+  transform:translateX(-30px);
+  width:210px;
+}
+#gs-card-3.active{ transform:translateX(0); }
+/* Картка 5 — справа знизу */
+#gs-card-4{
+  right:1%;bottom:18%;
+  transform:translateX(30px);
+  width:210px;
+}
+#gs-card-4.active{ transform:translateX(0); }
 .gs-line-active{stroke-dashoffset:0 !important;}
 .gs-dot-active{opacity:1 !important;}
 .gs-card.active{ opacity:1; pointer-events:auto; }
@@ -535,7 +549,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
       <div class="gs-cards-row">
         <div class="gs-card" id="gs-card-0">
           <div class="gs-card-inner">
-            <div class="gs-num">01 / 03</div>
+            <div class="gs-num">01 / 05</div>
             <div class="gs-badge">⭐ Флагманський кейс</div>
             <div class="gs-title">Transfer Kharkiv</div>
             <div class="gs-desc">Комерційний сервіс міжміського таксі — лендінг з конверсією 8.4%, два боти для клієнтів і водіїв, бекенд, SEO та рекламні кампанії під ключ.</div>
@@ -549,7 +563,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
         </div>
         <div class="gs-card" id="gs-card-1">
           <div class="gs-card-inner">
-            <div class="gs-num">02 / 03</div>
+            <div class="gs-num">02 / 05</div>
             <div class="gs-badge">Telegram-бот</div>
             <div class="gs-title">Realty Monitor</div>
             <div class="gs-desc">SaaS моніторинг нерухомості з платними підписками, реферальною системою та адмін-панеллю — пасивний дохід без участі команди.</div>
@@ -561,13 +575,37 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
         </div>
         <div class="gs-card" id="gs-card-2">
           <div class="gs-card-inner">
-            <div class="gs-num">03 / 03</div>
+            <div class="gs-num">03 / 05</div>
             <div class="gs-badge">Університет</div>
             <div class="gs-title">KNEU Bot</div>
             <div class="gs-desc">Офіційний бот університету з 3 000+ активних користувачів: автоматизація розкладу, комунікація деканату і студентів.</div>
             <div class="gs-stats">
               <span><b>3 000+</b> користувачів</span>
               <span><b>aiogram 3</b> стек</span>
+            </div>
+          </div>
+        </div>
+        <div class="gs-card" id="gs-card-3">
+          <div class="gs-card-inner">
+            <div class="gs-num">04 / 05</div>
+            <div class="gs-badge">Автоматизація</div>
+            <div class="gs-title">Infinite Union Bot</div>
+            <div class="gs-desc">Telegram lead-бот з квізом, кваліфікацією клієнтів, PostgreSQL та Railway деплоєм — генерує заявки 24/7.</div>
+            <div class="gs-stats">
+              <span><b>FastAPI</b> бекенд</span>
+              <span><b>Redis</b> черга</span>
+            </div>
+          </div>
+        </div>
+        <div class="gs-card" id="gs-card-4">
+          <div class="gs-card-inner">
+            <div class="gs-num">05 / 05</div>
+            <div class="gs-badge">SaaS</div>
+            <div class="gs-title">Ще один проект</div>
+            <div class="gs-desc">Опис вашого п'ятого проекту — замініть цей текст на реальний кейс з метриками та результатами.</div>
+            <div class="gs-stats">
+              <span><b>—</b> метрика</span>
+              <span><b>—</b> стек</span>
             </div>
           </div>
         </div>
@@ -997,6 +1035,8 @@ setTimeout(()=>{
     { phi:-4.974, lat:49.99,  lng:36.23  }, // Transfer Kharkiv
     { phi:2.426,  lat:40.71,  lng:-74.01 }, // Realty Monitor (NY)
     { phi:-0.750, lat:-33.86, lng:151.20 }, // KNEU Bot (Sydney)
+    { phi:1.200,  lat:50.45,  lng:30.52  }, // IU Bot (Kyiv)
+    { phi:-2.500, lat:48.85,  lng:2.35   }, // Project 5 (Paris)
   ];
 
   let globePhi   = PROJECTS[0].phi;
@@ -1086,10 +1126,23 @@ setTimeout(()=>{
   const overlay = document.getElementById('gs-overlay');
   const ctx2d = overlay ? overlay.getContext('2d') : null;
 
+  function resizeOverlay(){
+    const dpr = Math.min(window.devicePixelRatio||1,2);
+    const w = canvas.offsetWidth;
+    const h = canvas.offsetHeight || canvas.offsetWidth;
+    if(!w) return;
+    if(overlay.width !== Math.round(w*dpr)){
+      overlay.width  = Math.round(w*dpr);
+      overlay.height = Math.round(h*dpr);
+    }
+  }
   function drawLines(){
     if(!ctx2d || !overlay) return;
-    if(overlay.width !== canvas.width){ overlay.width = canvas.width; overlay.height = canvas.height; }
+    resizeOverlay();
+    ctx2d.save();
+    const dpr = Math.min(window.devicePixelRatio||1,2);
     ctx2d.clearRect(0, 0, overlay.width, overlay.height);
+    ctx2d.scale(dpr, dpr);
     const cards = document.querySelectorAll('.gs-card.active');
     if(cards.length === 0) return;
     const cx = overlay.width * 0.5;
@@ -1122,6 +1175,7 @@ setTimeout(()=>{
       ctx2d.shadowBlur = 12;
       ctx2d.fill();
     });
+    ctx2d.restore();
   }
 
   function initGlobe(){
@@ -1141,6 +1195,8 @@ setTimeout(()=>{
         { location:[49.99,  36.23 ], size:0.07 },
         { location:[40.71, -74.01 ], size:0.07 },
         { location:[-33.86, 151.20], size:0.07 },
+        { location:[50.45,  30.52 ], size:0.07 },
+        { location:[48.85,  2.35  ], size:0.07 },
       ],
       onRender(state){
         const diff = targetPhi - globePhi;
@@ -1201,7 +1257,7 @@ setTimeout(()=>{
     const progress = Math.max(0, Math.min(1, scrolled / total));
     // Кожна картка має свій поріг появи — незалежно один від одного
     const cards = document.querySelectorAll('.gs-card');
-    const thresholds = [0.15, 0.42, 0.68];
+    const thresholds = [0.12, 0.28, 0.44, 0.60, 0.76];
     cards.forEach((c,i)=>{
       const wasActive = c.classList.contains('active');
       const isActive = progress >= thresholds[i];
