@@ -857,6 +857,7 @@ setTimeout(()=>{
     svg += `<circle cx="${cx}" cy="${cy}" r="275" fill="url(#coreGrad)"/>`;
     // Core sphere
     svg += `<circle class="o-core" cx="${cx}" cy="${cy}" r="155"/>`;
+    svg += `<text x="${cx}" y="${cy+28}" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="72" letter-spacing="-4" fill="#D40000" opacity="0.85">IU</text>`;
     // Core wireframe lines
     for(let i=0;i<8;i++){
       const a=i/8*Math.PI;
