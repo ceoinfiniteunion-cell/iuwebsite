@@ -1085,8 +1085,7 @@ setTimeout(()=>{
     const cards = document.querySelectorAll('.gs-card.active');
     if(cards.length === 0) return;
     ctx2d.save();
-    ctx2d.scale(dpr, dpr);
-    // Всі координати в CSS пікселях (ctx вже заскейлений на dpr)
+    // Без scale — малюємо в CSS пікселях напряму
     const overlayRect = overlay.getBoundingClientRect();
     const globeRect = canvas.getBoundingClientRect();
     const cx = globeRect.left + globeRect.width*0.42 - overlayRect.left;
