@@ -785,42 +785,7 @@ function makeSnake(canvasId, cont){
 }
 setTimeout(()=>{
   makeSnake('hero-snake-c',document.querySelector('.h-avatar-col'));
-  makeSnake('av-snake-c',document.querySelector('.av-right'));
 },200);
-
-
-/* ── HORIZONTAL PORTFOLIO SCROLL ── */
-(function(){
-  const wrap = document.getElementById('portfolio-wrap');
-  const track = document.getElementById('portfolio-track');
-  if(!wrap || !track) return;
-  const slides = track.querySelectorAll('.pf-slide');
-  const total = slides.length;
-
-  function update(){
-    const rect = wrap.getBoundingClientRect();
-    const scrolled = -rect.top;
-    const max = rect.height - window.innerHeight;
-    if(scrolled < 0 || scrolled > max) return;
-    const progress = scrolled / max;
-    const offset = progress * (total - 1) * window.innerWidth;
-    track.style.transform = `translateX(-${offset}px)`;
-
-    // Update progress bars
-    slides.forEach((s, i) => {
-      const bar = s.querySelector('.pf-slide-progress-bar');
-      if(!bar) return;
-      const slideProgress = Math.max(0, Math.min(1, progress * (total-1) - i + 1));
-      bar.style.width = (slideProgress * 100) + '%';
-    });
-  }
-
-  window.addEventListener('scroll', update, {passive: true});
-  update();
-
-
-
-})();
 
 
 
@@ -982,6 +947,10 @@ setTimeout(()=>{
     { phi:-0.750, lat:-33.86, lng:151.20 }, // KNEU Bot (Sydney)
     { phi:1.200,  lat:50.45,  lng:30.52  }, // IU Bot (Kyiv)
     { phi:-2.500, lat:48.85,  lng:2.35   }, // Project 5 (Paris)
+    { phi:0.500,  lat:51.50,  lng:-0.12  }, // Project 6 (London)
+    { phi:3.200,  lat:35.68,  lng:139.69 }, // Project 7 (Tokyo)
+    { phi:-1.800, lat:52.52,  lng:13.40  }, // Project 8 (Berlin)
+    { phi:1.800,  lat:52.37,  lng:4.90   }, // Project 9 (Amsterdam)
   ];
 
   let globePhi   = PROJECTS[0].phi;
