@@ -424,6 +424,25 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   .gs-card{right:4%;left:4%;width:auto;top:auto;bottom:80px;transform:translateY(10px);}
   .gs-card.active{transform:translateY(0);}
 }
+
+/* ── SNAKE INTRO ── */
+#snake-intro{height:350vh;position:relative;}
+.si-sticky{position:sticky;top:0;height:100vh;overflow:hidden;background:#060404;display:flex;align-items:center;justify-content:center;}
+.si-bg-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Space Grotesk',sans-serif;font-size:clamp(80px,15vw,200px);font-weight:700;color:#fff;white-space:nowrap;letter-spacing:-.02em;pointer-events:none;user-select:none;z-index:1;}
+#hero-snake-c{position:absolute;inset:0;width:100%;height:100%;z-index:2;}
+.si-coords{position:absolute;bottom:32px;left:40px;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.35);z-index:10;font-family:'Space Grotesk',sans-serif;}
+.si-year{position:absolute;bottom:32px;right:40px;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.35);z-index:10;font-family:'Space Grotesk',sans-serif;}
+.si-tag{position:absolute;z-index:10;opacity:0;transition:none;font-family:'Space Grotesk',sans-serif;}
+.si-tag p{font-size:13px;line-height:1.4;color:#fff;margin:4px 0 0;text-transform:uppercase;letter-spacing:.08em;}
+.si-num{font-size:10px;letter-spacing:.15em;color:#D40000;font-weight:600;background:rgba(212,0,0,.12);padding:2px 8px;border:1px solid rgba(212,0,0,.3);}
+.si-tag--1{top:18%;left:4%;}
+.si-tag--2{top:18%;right:4%;}
+.si-tag--3{bottom:22%;left:4%;}
+.si-tag--4{bottom:22%;right:4%;}
+.si-crosshair{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:320px;height:320px;border-radius:50%;border:1px solid rgba(212,0,0,0);z-index:3;transition:none;pointer-events:none;}
+.si-crosshair::before,.si-crosshair::after{content:'';position:absolute;background:rgba(212,0,0,0);transition:none;}
+.si-crosshair::before{width:1px;height:40px;left:50%;top:-20px;}
+.si-crosshair::after{width:40px;height:1px;top:50%;left:-20px;}
 </style>
 </head>
 <body>
@@ -466,43 +485,34 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 </div>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="h-avatar-col">
-<canvas id="hero-snake-c" style="position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;"></canvas>
-    <div class="h-avatar-bg"></div>
-    <canvas id="hero-3d"></canvas>
-    <img class="h-avatar" id="havatar" src="avatar.jpeg" alt="Infinite Union — Eagle mascot"/>
-    <div class="h-avatar-glow"></div>
-  </div>
-  <div class="h-content">
-    <div class="h-meta" id="hm">
-      <span>Україна <b>◆</b> 50° 27′ N</span>
-      <span>2026 <b>◆</b> Web · Bots</span>
+<section id="snake-intro">
+  <div class="si-sticky">
+    <div class="si-bg-text">INFINITE</div>
+    <canvas id="hero-snake-c"></canvas>
+    <div class="si-coords">49° 59′ N &nbsp;•&nbsp; 36° 23′ E</div>
+    <div class="si-year">2025 • UA</div>
+
+    <div class="si-tag si-tag--1">
+      <span class="si-num">NO-001</span>
+      <p>Конверсійні сайти<br>що продають</p>
     </div>
-    <h1 class="h1">
-      <span class="li"><span class="lin" id="hl1">Перетворюємо</span></span>
-      <span class="li"><span class="lin" id="hl2">цифрові</span></span>
-      <span class="li"><span class="lin acc" id="hl3">продукти.</span></span>
-    </h1>
-    <p class="h-sub" id="hsub">Перетворюємо бізнес-задачі на цифрові продукти, які автоматизують процеси, залучають клієнтів і масштабуються разом з вашим ростом.</p>
-    <div class="h-btns" id="hbtns">
-      <a href="#contact" class="btn-p">Замовити проект</a>
-      <a href="#portfolio" class="btn-o">Роботи</a>
+    <div class="si-tag si-tag--2">
+      <span class="si-num">NO-002</span>
+      <p>Telegram боти<br>та автоматизація</p>
     </div>
-    <div class="h-scroll" id="hscroll">
-      <div class="h-scroll-line"></div>
-      <span>scroll</span>
+    <div class="si-tag si-tag--3">
+      <span class="si-num">NO-003</span>
+      <p>Платформи<br>та вебдодатки</p>
     </div>
+    <div class="si-tag si-tag--4">
+      <span class="si-num">NO-004</span>
+      <p>Цифрові екосистеми<br>під бізнес</p>
+    </div>
+
+    <div class="si-crosshair"></div>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="mq"><div class="mq-t">
-  <s>aiogram 3</s><s>FastAPI</s><s>PostgreSQL</s><s>Redis</s><s>Railway</s><s>Python</s><s>Three.js</s><s>SEO</s><s>CI/CD</s><s>WebGL</s>
-  <s>aiogram 3</s><s>FastAPI</s><s>PostgreSQL</s><s>Redis</s><s>Railway</s><s>Python</s><s>Three.js</s><s>SEO</s><s>CI/CD</s><s>WebGL</s>
-</div></div>
-
-<!-- STATS -->
 <section id="stats">
   <div class="sg">
     <div class="si rev"><div class="sn" data-target="7">0+</div><div class="sl">Проєктів в продакшні</div></div>
@@ -783,9 +793,130 @@ function makeSnake(canvasId, cont){
     renderer.render(scene,cam);
   })();
 }
-setTimeout(()=>{
-  makeSnake('hero-snake-c',document.querySelector('.h-avatar-col'));
-},200);
+/* ── SNAKE INTRO SCROLL ── */
+(function(){
+  const cont = document.getElementById('snake-intro');
+  if(!cont) return;
+
+  const c = document.getElementById('hero-snake-c');
+  if(!c) return;
+
+  const W = () => window.innerWidth;
+  const H = () => window.innerHeight;
+
+  const renderer = new THREE.WebGLRenderer({canvas:c, alpha:true, antialias:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.setSize(W(), H());
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.4;
+
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(45, W()/H(), .1, 100);
+  cam.position.set(0, .3, 4.5);
+
+  scene.add(new THREE.AmbientLight(0xffffff, .5));
+  const dl = new THREE.DirectionalLight(0xffffff, 1.2);
+  dl.position.set(2,4,3); scene.add(dl);
+  const rl = new THREE.PointLight(0xD40000, 4, 8);
+  rl.position.set(-1,1,2); scene.add(rl);
+  const rl2 = new THREE.PointLight(0xD40000, 3, 6);
+  rl2.position.set(1,-1,1); scene.add(rl2);
+
+  let snake = null;
+  let scrollProgress = 0;
+  let mx = 0, my = 0, smx = 0, smy = 0;
+
+  const draco = new THREE.DRACOLoader();
+  draco.setDecoderPath("https://unpkg.com/three@0.125.0/examples/js/libs/draco/");
+  const loader = new THREE.GLTFLoader();
+  loader.setDRACOLoader(draco);
+
+  loader.load('https://res.cloudinary.com/etdq5y69/raw/upload/v1783282631/snake3d.glb',
+    g => {
+      snake = g.scene;
+      const box = new THREE.Box3().setFromObject(snake);
+      const ctr = box.getCenter(new THREE.Vector3());
+      const sz = box.getSize(new THREE.Vector3());
+      const sc = 2.6 / Math.max(sz.x, sz.y, sz.z);
+      snake.scale.setScalar(sc);
+      snake.position.sub(ctr.multiplyScalar(sc));
+      snake.position.y -= .2;
+      snake.rotation.y = Math.PI;
+      scene.add(snake);
+    },
+    undefined,
+    e => console.warn('GLB err', e)
+  );
+
+  window.addEventListener('mousemove', e => {
+    mx = (e.clientX / W() - .5);
+    my = (e.clientY / H() - .5);
+  });
+
+  const tags = document.querySelectorAll('.si-tag');
+  const crosshair = document.querySelector('.si-crosshair');
+
+  window.addEventListener('scroll', () => {
+    const rect = cont.getBoundingClientRect();
+    const total = cont.offsetHeight - H();
+    const scrolled = -rect.top;
+    scrollProgress = Math.max(0, Math.min(1, scrolled / total));
+
+    // Теги вилітають при progress > 0.45
+    tags.forEach((tag, i) => {
+      const delay = i * 0.08;
+      const p = Math.max(0, Math.min(1, (scrollProgress - 0.45 - delay) / 0.2));
+      tag.style.opacity = p;
+      const dirs = [
+        [-60, -30], [60, -30], [-60, 30], [60, 30]
+      ];
+      const tx = dirs[i][0] * (1 - p);
+      const ty = dirs[i][1] * (1 - p);
+      tag.style.transform = `translate(${tx}px, ${ty}px)`;
+    });
+
+    // Crosshair з'являється при progress > 0.4
+    if(crosshair) {
+      const cp = Math.max(0, Math.min(1, (scrollProgress - 0.4) / 0.2));
+      crosshair.style.borderColor = `rgba(212,0,0,${cp * 0.4})`;
+      crosshair.style.boxShadow = cp > 0 ? `0 0 ${cp*40}px rgba(212,0,0,${cp*0.15})` : 'none';
+      if(crosshair.style['--before-color'] !== undefined) {}
+      document.documentElement.style.setProperty('--ch-op', cp);
+    }
+  });
+
+  const clk = new THREE.Clock();
+  (function frame(){
+    requestAnimationFrame(frame);
+    const t = clk.getElapsedTime();
+
+    smx += (mx - smx) * .05;
+    smy += (my - smy) * .05;
+
+    if(snake){
+      // При скролі 0→1: повертається від π до 0
+      const targetY = Math.PI * (1 - scrollProgress);
+      snake.rotation.y += (targetY + smx * .9 * (1 - scrollProgress) - snake.rotation.y) * .06;
+      snake.rotation.x += (-smy * .4 * (1 - scrollProgress) - snake.rotation.x) * .06;
+      snake.position.y = -.2 + Math.sin(t * .8) * .12;
+
+      // Масштаб трохи збільшується при скролі
+      const sc = 1 + scrollProgress * 0.15;
+      snake.scale.setScalar(snake.scale.x > 0 ? snake.scale.x + (sc * 2.6/Math.max(1) - snake.scale.x) * 0.05 : snake.scale.x);
+    }
+
+    rl.intensity = 3 + Math.sin(t * 2.5) * 1.5;
+    cam.position.x += (smx * .3 * (1-scrollProgress*0.5) - cam.position.x) * .04;
+    cam.position.y += (-smy * .2 + .3 - cam.position.y) * .04;
+    cam.lookAt(0, 0, 0);
+
+    renderer.setSize(W(), H());
+    cam.aspect = W() / H();
+    cam.updateProjectionMatrix();
+    renderer.render(scene, cam);
+  })();
+})();
 
 
 
