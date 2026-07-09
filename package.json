@@ -1,0 +1,21 @@
+{
+  "name": "iu-site",
+  "version": "1.0.0",
+  "description": "Infinite Union website",
+  "scripts": {
+    "lint:html": "html-validate index.html services/*.html",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:js": "eslint index.html services/*.html",
+    "lint": "npm run lint:html && npm run lint:js",
+    "lhci": "lhci autorun"
+  },
+  "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.63.0",
+    "@html-eslint/parser": "^0.63.0",
+    "@lhci/cli": "^0.15.1",
+    "eslint": "^10.6.0",
+    "html-validate": "^11.5.5",
+    "stylelint": "^17.14.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}
