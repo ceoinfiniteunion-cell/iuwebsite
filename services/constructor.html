@@ -380,11 +380,12 @@ async function generate() {
         ls.classList.remove('show');
         let html = data.content[0].text;
         // Видаляємо markdown блок якщо є
-        const match = html.match(/```(?:html)?\s*([\s\S]*?)```/i);
-        if (match) html = match[1].trim();
-        else html = html.replace(/^```(?:html)?\s*/i, '').replace(/```\s*$/i, '').trim();
+        let siteHtml = data.content[0].text;
+        const match = siteHtml.match(/```(?:html)?\s*([\s\S]*?)```/i);
+        if (match) siteHtml = match[1].trim();
+        else siteHtml = siteHtml.replace(/^```(?:html)?\s*/i, '').replace(/```\s*$/i, '').trim();
         const frame = document.getElementById('previewFrame');
-        frame.srcdoc = html;
+        frame.srcdoc = siteHtml;
         frame.style.display = 'block';
         document.getElementById('toolbarUrl').textContent = prompt.substring(0, 50) + '...';
         document.getElementById('orderPanel').classList.add('show');
