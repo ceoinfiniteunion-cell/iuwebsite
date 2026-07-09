@@ -8,9 +8,14 @@ export default [
     languageOptions: { parser },
     rules: {
       ...html.configs["flat/recommended"].rules,
+      "@html-eslint/indent": "off",
+      "@html-eslint/element-newline": "off",
+      "@html-eslint/attrs-newline": "off",
       "@html-eslint/no-inline-styles": "off",
       "@html-eslint/require-lang": "off",
-      "@html-eslint/no-target-blank": "warn"
+      "@html-eslint/no-target-blank": "warn",
+      "@html-eslint/require-closing-tags": "warn",
+      "@html-eslint/no-extra-spacing-tags": "warn"
     }
   }
 ];
