@@ -443,6 +443,10 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .si-crosshair::before,.si-crosshair::after{content:'';position:absolute;background:rgba(212,0,0,0);transition:none;}
 .si-crosshair::before{width:1px;height:40px;left:50%;top:-20px;}
 .si-crosshair::after{width:40px;height:1px;top:50%;left:-20px;}
+.fg--row{display:flex;gap:16px;}.fg--row .fg{flex:1;}
+select{width:100%;background:transparent;border:none;border-bottom:1px solid var(--border);color:var(--fg);font-family:var(--body);font-size:14px;padding:12px 0;outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;}
+select option{background:#0e0b0b;color:#fff;}
+input[type="date"]{color-scheme:dark;}
 </style>
 </head>
 <body>
@@ -605,7 +609,15 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
     <div class="ct-r rev">
       <form class="form" id="cForm">
         <div class="fg"><label>Ім'я</label><input id="cn" type="text" placeholder="Як тебе звати?" required/></div>
-        <div class="fg"><label>Telegram або телефон</label><input id="cc" type="text" placeholder="@username або +380..." required/></div>
+        <div class="fg fg--row">
+          <div class="fg"><label>Telegram</label><input id="cc" type="text" placeholder="@username" required/></div>
+          <div class="fg"><label>Телефон</label><input id="cphone" type="text" placeholder="+380..."/></div>
+        </div>
+        <div class="fg"><label>Тип проєкту</label><select id="ctype"><option value="">Оберіть...</option><option value="Конверсійний сайт">🌐 Конверсійний сайт</option><option value="Telegram-бот">🤖 Telegram-бот</option><option value="Платформа / вебдодаток">⚡ Платформа / вебдодаток</option><option value="Цифрова екосистема">🔗 Цифрова екосистема</option><option value="Інше">💬 Інше</option></select></div>
+        <div class="fg fg--row">
+          <div class="fg"><label>Бюджет</label><select id="cbudget"><option value="">Оберіть...</option><option value="до $500">до $500</option><option value="$500–$1 000">$500–$1 000</option><option value="$1 000–$3 000">$1 000–$3 000</option><option value="$3 000+">$3 000+</option></select></div>
+          <div class="fg"><label>Дедлайн</label><input id="cdeadline" type="date" /></div>
+        </div>
         <div class="fg"><label>Про проект</label><textarea id="cp" rows="3" placeholder="Що хочеш зробити?"></textarea></div>
         <div class="form-ok" id="cOk">✓ ЗАЯВКУ НАДІСЛАНО — ВІДПОВІМО ПРОТЯГОМ 15 ХВ</div>
         <button type="submit" class="btn-p" style="align-self:flex-start;margin-top:8px;">Надіслати →</button>
@@ -735,7 +747,7 @@ window.addEventListener('scroll',()=>{
 /* FORM */
 document.getElementById('cForm').addEventListener('submit',function(e){
   e.preventDefault();
-  fetch('https://iu-lead-bot-production.up.railway.app/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('cn').value,contact:document.getElementById('cc').value,project:document.getElementById('cp').value})}).catch(()=>{});
+  fetch('https://iu-lead-bot-production.up.railway.app/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('cn').value,contact:document.getElementById('cc').value,phone:document.getElementById('cphone').value,project_type:document.getElementById('ctype').value,budget:document.getElementById('cbudget').value,deadline:document.getElementById('cdeadline').value,project:document.getElementById('cp').value})}).catch(()=>{});
   this.querySelector('button[type=submit]').style.display='none';
   document.getElementById('cOk').style.display='block';
 });
