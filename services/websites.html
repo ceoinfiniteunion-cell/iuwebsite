@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Конверсійні сайти — Infinite Union</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --red:#D40000;
+  --bg:#060404;
+  --bg2:#0e0b0b;
+  --border:rgba(255,255,255,0.08);
+  --text:#fff;
+  --muted:rgba(255,255,255,0.45);
+  --font:'Space Grotesk',sans-serif;
+  --body:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:border-color .3s,background .3s;}
+nav.scrolled{background:rgba(6,4,4,.92);backdrop-filter:blur(12px);border-color:var(--border);}
+.nav-logo{font-family:var(--font);font-weight:700;font-size:15px;letter-spacing:.12em;text-decoration:none;color:#fff;}
+.nav-logo span{color:var(--red);}
+.nav-back{font-size:12px;letter-spacing:.1em;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s;}
+.nav-back:hover{color:#fff;}
+.nav-cta{background:var(--red);color:#fff;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.1em;padding:10px 24px;text-decoration:none;transition:opacity .2s;}
+.nav-cta:hover{opacity:.85;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 40px 80px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 70% 40%, rgba(212,0,0,.12) 0%, transparent 70%);}
+.hero-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:24px;}
+.hero-title{font-family:var(--font);font-size:clamp(52px,8vw,120px);font-weight:700;line-height:.92;letter-spacing:-.03em;max-width:900px;}
+.hero-title em{font-style:normal;color:var(--red);}
+.hero-sub{margin-top:40px;font-size:18px;color:var(--muted);max-width:520px;line-height:1.6;font-weight:300;}
+.hero-stats{margin-top:60px;display:flex;gap:60px;border-top:1px solid var(--border);padding-top:40px;}
+.hero-stat-num{font-family:var(--font);font-size:48px;font-weight:700;line-height:1;}
+.hero-stat-num span{color:var(--red);}
+.hero-stat-label{font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:.05em;}
+.hero-flagship{position:absolute;right:40px;top:50%;transform:translateY(-50%);width:420px;background:var(--bg2);border:1px solid var(--border);padding:32px;}
+.flagship-tag{font-size:10px;letter-spacing:.15em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
+.flagship-name{font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:8px;}
+.flagship-url{font-size:12px;color:var(--muted);margin-bottom:24px;}
+.flagship-metrics{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.fm{background:rgba(255,255,255,.03);padding:16px;}
+.fm-val{font-family:var(--font);font-size:28px;font-weight:700;}
+.fm-val span{color:var(--red);}
+.fm-key{font-size:11px;color:var(--muted);margin-top:4px;}
+
+/* SECTION BASE */
+section{padding:120px 40px;}
+.sec-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
+.sec-title{font-family:var(--font);font-size:clamp(36px,5vw,72px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:60px;}
+
+/* WHAT WE DO */
+.what{background:var(--bg2);}
+.what-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
+.what-item{background:var(--bg2);padding:48px;position:relative;overflow:hidden;}
+.what-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.what-item:hover::before{transform:scaleX(1);}
+.what-num{font-family:var(--font);font-size:11px;letter-spacing:.15em;color:var(--muted);margin-bottom:20px;}
+.what-name{font-family:var(--font);font-size:24px;font-weight:700;margin-bottom:12px;}
+.what-desc{font-size:14px;color:var(--muted);line-height:1.7;}
+.what-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+.wtag{font-size:11px;padding:4px 12px;border:1px solid var(--border);color:var(--muted);font-family:var(--font);}
+
+/* LEVELS */
+.levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.level{border:1px solid var(--border);padding:40px;position:relative;transition:border-color .3s;}
+.level:hover{border-color:rgba(212,0,0,.4);}
+.level--pro{border-color:var(--red);}
+.level-badge{position:absolute;top:-1px;left:40px;background:var(--red);font-family:var(--font);font-size:10px;font-weight:700;letter-spacing:.1em;padding:4px 12px;color:#fff;}
+.level-name{font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:8px;margin-top:8px;}
+.level-price{font-family:var(--font);font-size:36px;font-weight:700;color:var(--red);margin-bottom:4px;}
+.level-price-note{font-size:12px;color:var(--muted);margin-bottom:32px;}
+.level-features{list-style:none;}
+.level-features li{font-size:14px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;line-height:1.4;}
+.level-features li::before{content:'';width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0;}
+.level-features li.active{color:#fff;}
+.level-cta{display:block;margin-top:32px;text-align:center;padding:14px;border:1px solid var(--border);font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.08em;color:#fff;text-decoration:none;transition:all .2s;}
+.level--pro .level-cta{background:var(--red);border-color:var(--red);}
+.level-cta:hover{background:var(--red);border-color:var(--red);}
+
+/* PROCESS */
+.process{background:var(--bg2);}
+.process-list{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;}
+.process-list::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--border);}
+.process-step{text-align:center;padding:0 20px;}
+.process-dot{width:56px;height:56px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:var(--font);font-size:14px;font-weight:700;background:var(--bg2);position:relative;z-index:1;}
+.process-step.active .process-dot{background:var(--red);border-color:var(--red);}
+.process-step-name{font-family:var(--font);font-size:14px;font-weight:600;margin-bottom:8px;}
+.process-step-desc{font-size:12px;color:var(--muted);line-height:1.6;}
+.process-time{font-size:11px;color:var(--red);font-family:var(--font);margin-top:8px;font-weight:600;}
+
+/* TEAM */
+.team-row{display:flex;gap:60px;align-items:flex-start;}
+.team-text{flex:1;}
+.team-text p{font-size:18px;color:var(--muted);line-height:1.8;margin-bottom:24px;font-weight:300;}
+.team-text strong{color:#fff;font-weight:500;}
+.team-creds{flex:0 0 380px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.cred{background:var(--bg2);border:1px solid var(--border);padding:24px;}
+.cred-val{font-family:var(--font);font-size:32px;font-weight:700;}
+.cred-val span{color:var(--red);}
+.cred-label{font-size:12px;color:var(--muted);margin-top:4px;}
+
+/* PROMO */
+.promo{background:linear-gradient(135deg,rgba(212,0,0,.15) 0%,transparent 60%);border:1px solid rgba(212,0,0,.3);margin:0 40px;padding:60px;}
+.promo-timer{display:flex;gap:24px;margin-bottom:40px;}
+.promo-unit{text-align:center;}
+.promo-num{font-family:var(--font);font-size:56px;font-weight:700;line-height:1;min-width:80px;}
+.promo-label{font-size:11px;letter-spacing:.1em;color:var(--muted);margin-top:4px;}
+.promo-sep{font-family:var(--font);font-size:48px;font-weight:300;color:var(--red);align-self:flex-start;margin-top:8px;}
+.promo-title{font-family:var(--font);font-size:clamp(28px,4vw,52px);font-weight:700;line-height:1.1;margin-bottom:20px;}
+.promo-title em{font-style:normal;color:var(--red);}
+.promo-desc{font-size:16px;color:var(--muted);max-width:600px;line-height:1.7;margin-bottom:32px;}
+.promo-includes{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px;}
+.promo-tag{border:1px solid rgba(212,0,0,.4);padding:8px 16px;font-size:13px;color:var(--red);font-family:var(--font);font-weight:500;}
+.promo-note{font-size:12px;color:var(--muted);margin-top:16px;}
+.promo-cta{display:inline-block;background:var(--red);color:#fff;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:.08em;padding:18px 48px;text-decoration:none;transition:opacity .2s;}
+.promo-cta:hover{opacity:.85;}
+
+/* SERVICES EXTRA */
+.extra-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.extra-card{border:1px solid var(--border);padding:40px;transition:border-color .3s;}
+.extra-card:hover{border-color:rgba(212,0,0,.3);}
+.extra-icon{font-size:32px;margin-bottom:20px;}
+.extra-name{font-family:var(--font);font-size:18px;font-weight:700;margin-bottom:12px;}
+.extra-desc{font-size:14px;color:var(--muted);line-height:1.7;}
+.extra-price{margin-top:20px;font-family:var(--font);font-size:13px;color:var(--red);font-weight:600;}
+
+/* FAQ */
+.faq{background:var(--bg2);}
+.faq-list{max-width:800px;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:18px;font-weight:600;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.faq-q span{font-size:20px;color:var(--red);transition:transform .3s;}
+.faq-item.open .faq-q span{transform:rotate(45deg);}
+.faq-a{font-size:15px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:28px;}
+
+/* CTA FINAL */
+.cta-final{text-align:center;padding:160px 40px;}
+.cta-final-title{font-family:var(--font);font-size:clamp(40px,6vw,90px);font-weight:700;line-height:.95;letter-spacing:-.03em;margin-bottom:32px;}
+.cta-final-title em{font-style:normal;color:var(--red);}
+.cta-final-sub{font-size:18px;color:var(--muted);margin-bottom:48px;}
+.cta-btn{display:inline-block;background:var(--red);color:#fff;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:.1em;padding:20px 60px;text-decoration:none;transition:opacity .2s;margin-right:16px;}
+.cta-btn:hover{opacity:.85;}
+.cta-btn-ghost{display:inline-block;border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;letter-spacing:.1em;padding:20px 48px;text-decoration:none;transition:border-color .2s;}
+.cta-btn-ghost:hover{border-color:rgba(255,255,255,.4);}
+
+footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.1em;}
+.footer-logo span{color:var(--red);}
+.footer-copy{font-size:12px;color:var(--muted);}
+
+@media(max-width:768px){
+  nav{padding:16px 20px;}
+  .hero{padding:0 20px 60px;}
+  .hero-flagship{display:none;}
+  .hero-stats{gap:32px;flex-wrap:wrap;}
+  section{padding:80px 20px;}
+  .what-grid,.levels-grid,.extra-grid{grid-template-columns:1fr;}
+  .process-list{grid-template-columns:1fr;gap:32px;}
+  .process-list::before{display:none;}
+  .team-row{flex-direction:column;}
+  .team-creds{flex:none;width:100%;}
+  .promo{margin:0 20px;padding:40px 24px;}
+  .promo-timer{gap:12px;}
+  .promo-num{font-size:36px;min-width:50px;}
+  footer{flex-direction:column;gap:16px;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="../index.html" class="nav-back">← Назад</a>
+  <a href="../index.html" class="nav-logo">INFINITE <span>UNION</span></a>
+  <a href="#contact" class="nav-cta">ЗАМОВИТИ САЙТ</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:120px;">
+  <div class="hero-bg"></div>
+  <div class="hero-label">ПОСЛУГА 01 · КОНВЕРСІЙНІ САЙТИ</div>
+  <h1 class="hero-title">Сайти що<br><em>продають.</em></h1>
+  <p class="hero-sub">Розробляємо конверсійні сайти будь-якої складності — від лендінгів до складних вебплатформ. Senior-команда, унікальний дизайн, результат у цифрах.</p>
+  <div class="hero-stats">
+    <div>
+      <div class="hero-stat-num">7<span>+</span></div>
+      <div class="hero-stat-label">ПРОЄКТІВ В ПРОДАКШНІ</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">0</div>
+      <div class="hero-stat-label">ТЕХНІЧНОГО БОРГУ</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">+40<span>%</span></div>
+      <div class="hero-stat-label">КОНВЕРСІЯ В СЕРЕДНЬОМУ</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">15<span>хв</span></div>
+      <div class="hero-stat-label">ЧАС ВІДПОВІДІ</div>
+    </div>
+  </div>
+  <div class="hero-flagship">
+    <div class="flagship-tag">ФЛАГМАНСЬКИЙ ПРОЄКТ</div>
+    <div class="flagship-name">Transfer Kharkiv</div>
+    <div class="flagship-url">transfer-kharkiv.com</div>
+    <div class="flagship-metrics">
+      <div class="fm"><div class="fm-val">119<span>+</span></div><div class="fm-key">Позицій в Google</div></div>
+      <div class="fm"><div class="fm-val"><span>#</span>1</div><div class="fm-key">По ключових запитах</div></div>
+      <div class="fm"><div class="fm-val">3<span>x</span></div><div class="fm-key">Зростання трафіку</div></div>
+      <div class="fm"><div class="fm-val">2<span>тж</span></div><div class="fm-key">Час розробки</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT -->
+<section class="what">
+  <div class="sec-label">ЩО ВХОДИТЬ</div>
+  <h2 class="sec-title">Повний цикл<br>розробки</h2>
+  <div class="what-grid">
+    <div class="what-item">
+      <div class="what-num">01</div>
+      <div class="what-name">Стратегія та аналіз</div>
+      <div class="what-desc">Аналізуємо конкурентів, ЦА та бізнес-цілі. Формуємо структуру сайту на основі даних, а не інтуїції.</div>
+      <div class="what-tags"><span class="wtag">CJM</span><span class="wtag">Competitor audit</span><span class="wtag">User research</span></div>
+    </div>
+    <div class="what-item">
+      <div class="what-num">02</div>
+      <div class="what-name">UI/UX дизайн Senior рівня</div>
+      <div class="what-desc">Унікальний дизайн під вашу нішу. Жодних шаблонів — кожен пікселів проходить дизайн-рев'ю.</div>
+      <div class="what-tags"><span class="wtag">Figma</span><span class="wtag">Motion design</span><span class="wtag">Mobile-first</span></div>
+    </div>
+    <div class="what-item">
+      <div class="what-num">03</div>
+      <div class="what-name">Frontend розробка</div>
+      <div class="what-desc">Чистий семантичний код, швидке завантаження, анімації що не гальмують. Core Web Vitals — green.</div>
+      <div class="what-tags"><span class="wtag">React / Vanilla JS</span><span class="wtag">GSAP</span><span class="wtag">Three.js</span></div>
+    </div>
+    <div class="what-item">
+      <div class="what-num">04</div>
+      <div class="what-name">Технічна SEO-оптимізація</div>
+      <div class="what-desc">Schema markup, sitemap, robots.txt, meta-теги, швидкість — все налаштовано до запуску.</div>
+      <div class="what-tags"><span class="wtag">On-page SEO</span><span class="wtag">Core Web Vitals</span><span class="wtag">Schema.org</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEVELS -->
+<section>
+  <div class="sec-label">РІВНІ СКЛАДНОСТІ</div>
+  <h2 class="sec-title">Оберіть рівень<br>під задачу</h2>
+  <div class="levels-grid">
+    <div class="level">
+      <div class="level-name">Basic</div>
+      <div class="level-price">від $600</div>
+      <div class="level-price-note">Лендінг · до 3 тижнів</div>
+      <ul class="level-features">
+        <li class="active">До 5 секцій</li>
+        <li class="active">Унікальний дизайн</li>
+        <li class="active">Адаптив під мобайл</li>
+        <li class="active">Базова SEO-оптимізація</li>
+        <li class="active">Форма заявки</li>
+        <li>3D елементи</li>
+        <li>Анімації GSAP</li>
+        <li>CRM інтеграція</li>
+      </ul>
+      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
+    </div>
+    <div class="level level--pro">
+      <div class="level-badge">ПОПУЛЯРНИЙ</div>
+      <div class="level-name">Pro</div>
+      <div class="level-price">від $1 200</div>
+      <div class="level-price-note">Повноцінний сайт · до 5 тижнів</div>
+      <ul class="level-features">
+        <li class="active">До 10 секцій</li>
+        <li class="active">Преміум UI/UX дизайн</li>
+        <li class="active">3D елементи + анімації</li>
+        <li class="active">Повна SEO-оптимізація</li>
+        <li class="active">CRM / CMS інтеграція</li>
+        <li class="active">Аналітика та події</li>
+        <li class="active">Місяць підтримки</li>
+        <li>Мультимова</li>
+      </ul>
+      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
+    </div>
+    <div class="level">
+      <div class="level-name">Enterprise</div>
+      <div class="level-price">від $2 500</div>
+      <div class="level-price-note">Платформа · індивідуально</div>
+      <ul class="level-features">
+        <li class="active">Необмежена складність</li>
+        <li class="active">Команда: дизайн + dev + PM</li>
+        <li class="active">3D / WebGL / Shader</li>
+        <li class="active">Мультимова + i18n</li>
+        <li class="active">Custom CMS/Admin panel</li>
+        <li class="active">A/B тестування</li>
+        <li class="active">3 місяці підтримки</li>
+        <li class="active">Growth стратегія</li>
+      </ul>
+      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="sec-label">ЯК МИ ПРАЦЮЄМО</div>
+  <h2 class="sec-title">Від брифу<br>до продакшну</h2>
+  <div class="process-list">
+    <div class="process-step active">
+      <div class="process-dot">01</div>
+      <div class="process-step-name">Бриф</div>
+      <div class="process-step-desc">Збираємо вимоги, аналізуємо нішу і конкурентів</div>
+      <div class="process-time">День 1–2</div>
+    </div>
+    <div class="process-step">
+      <div class="process-dot">02</div>
+      <div class="process-step-name">Дизайн</div>
+      <div class="process-step-desc">Wireframe → UI концепт → фінальний дизайн</div>
+      <div class="process-time">День 3–10</div>
+    </div>
+    <div class="process-step">
+      <div class="process-dot">03</div>
+      <div class="process-step-name">Розробка</div>
+      <div class="process-step-desc">Верстка, анімації, інтеграції, тести</div>
+      <div class="process-time">День 10–25</div>
+    </div>
+    <div class="process-step">
+      <div class="process-dot">04</div>
+      <div class="process-step-name">Запуск</div>
+      <div class="process-step-desc">Деплой, SEO-налаштування, аналітика</div>
+      <div class="process-time">День 25–28</div>
+    </div>
+    <div class="process-step">
+      <div class="process-dot">05</div>
+      <div class="process-step-name">Підтримка</div>
+      <div class="process-step-desc">Моніторинг, правки, просування</div>
+      <div class="process-time">Місяць+</div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section>
+  <div class="sec-label">НАША КОМАНДА</div>
+  <h2 class="sec-title">Senior-рівень<br>на кожному етапі</h2>
+  <div class="team-row">
+    <div class="team-text">
+      <p>До кожного проєкту ми підходимо як до <strong>продукту що має заробляти</strong>, а не просто гарно виглядати. Кожен розробник має 3+ роки комерційного досвіду і пройшов внутрішній технічний відбір.</p>
+      <p>Ми не аутсорсимо дизайн студентам і не використовуємо шаблони з Themeforest. <strong>Кожен проєкт — це унікальне рішення</strong>, зроблене з нуля під вашу задачу і цільову аудиторію.</p>
+      <p>Будь-яка задача будь-якої складності. Від простого лендінгу до WebGL платформи з 3D-візуалізацією — ми беремось і доводимо до результату.</p>
+    </div>
+    <div class="team-creds">
+      <div class="cred"><div class="cred-val">3<span>+</span></div><div class="cred-label">Роки досвіду команди</div></div>
+      <div class="cred"><div class="cred-val">0</div><div class="cred-label">Провалених дедлайнів</div></div>
+      <div class="cred"><div class="cred-val">100<span>%</span></div><div class="cred-label">Унікальний дизайн</div></div>
+      <div class="cred"><div class="cred-val">24<span>/7</span></div><div class="cred-label">Моніторинг продакшну</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRA SERVICES -->
+<section style="background:var(--bg2);">
+  <div class="sec-label">ДОДАТКОВІ ПОСЛУГИ</div>
+  <h2 class="sec-title">Більше ніж<br>просто сайт</h2>
+  <div class="extra-grid">
+    <div class="extra-card">
+      <div class="extra-icon">📈</div>
+      <div class="extra-name">SEO-просування</div>
+      <div class="extra-desc">Семантичне ядро, технічний аудит, контентна стратегія, посилання. Органічний трафік що зростає щомісяця.</div>
+      <div class="extra-price">від $150 / місяць</div>
+    </div>
+    <div class="extra-card">
+      <div class="extra-icon">🎯</div>
+      <div class="extra-name">Контекстна реклама</div>
+      <div class="extra-desc">Google Ads, Meta Ads — налаштування кампаній, А/Б тести оголошень, оптимізація ставок і конверсій.</div>
+      <div class="extra-price">від $200 / місяць + бюджет</div>
+    </div>
+    <div class="extra-card">
+      <div class="extra-icon">🔍</div>
+      <div class="extra-name">Аудит сайту</div>
+      <div class="extra-desc">Технічний, SEO та UX аудит. Отримуєте детальний звіт з пріоритизованим планом виправлень.</div>
+      <div class="extra-price">від $100 / разово</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section style="padding:80px 0;" id="promo">
+  <div class="promo">
+    <div style="display:flex;gap:80px;align-items:flex-start;flex-wrap:wrap;">
+      <div style="flex:1;min-width:280px;">
+        <div class="sec-label" style="margin-bottom:20px;">СПЕЦІАЛЬНА ПРОПОЗИЦІЯ</div>
+        <div class="promo-title">Замовте зараз —<br>отримайте <em>місяць<br>просування</em> безкоштовно</div>
+        <div class="promo-desc">При замовленні сайту до кінця акції — перший місяць після запуску SEO-просування, налаштування реклами та аналітики від нашої команди входить у вартість розробки.</div>
+        <div class="promo-includes">
+          <span class="promo-tag">SEO-просування</span>
+          <span class="promo-tag">Google Ads налаштування</span>
+          <span class="promo-tag">Аналітика</span>
+          <span class="promo-tag">Технічний моніторинг</span>
+        </div>
+        <a href="#contact" class="promo-cta">ЗАМОВИТИ ЗІ ЗНИЖКОЮ</a>
+        <div class="promo-note">* Рекламні бюджети оплачуються замовником окремо. Після акційного місяця послуги просування — від $150 до $600/міс залежно від обсягу.</div>
+      </div>
+      <div style="flex:0 0 auto;">
+        <div style="font-size:11px;letter-spacing:.15em;color:var(--muted);margin-bottom:16px;font-family:var(--font);">АКЦІЯ ДІЄ</div>
+        <div class="promo-timer">
+          <div class="promo-unit"><div class="promo-num" id="days">03</div><div class="promo-label">ДНІВ</div></div>
+          <div class="promo-sep">:</div>
+          <div class="promo-unit"><div class="promo-num" id="hours">00</div><div class="promo-label">ГОДИН</div></div>
+          <div class="promo-sep">:</div>
+          <div class="promo-unit"><div class="promo-num" id="mins">00</div><div class="promo-label">ХВИЛИН</div></div>
+          <div class="promo-sep">:</div>
+          <div class="promo-unit"><div class="promo-num" id="secs">00</div><div class="promo-label">СЕКУНД</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
+  <h2 class="sec-title">Відповіді на<br>ваші питання</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q">Скільки часу займає розробка? <span>+</span></button>
+      <div class="faq-a">Лендінг — від 2 тижнів. Повноцінний сайт — від 3 до 5 тижнів. Enterprise проєкти — індивідуально. Дедлайни фіксуємо в договорі і не порушуємо.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Чи можете зробити сайт на WordPress або іншій CMS? <span>+</span></button>
+      <div class="faq-a">Так, працюємо з WordPress, Webflow, Next.js, та кастомними рішеннями. Рекомендуємо технологію виходячи з ваших задач — не нав'язуємо.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Чи є у вас договір? <span>+</span></button>
+      <div class="faq-a">Так, укладаємо договір на кожен проєкт. Фіксуємо обсяг робіт, терміни, вартість та умови оплати. Ніяких сюрпризів після підписання.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Що якщо мені не сподобається дизайн? <span>+</span></button>
+      <div class="faq-a">До затвердження фінального дизайну надаємо 2 раунди правок безкоштовно. Спочатку узгоджуємо концепт, потім деталі — щоб не переробляти все з нуля.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Як відбувається оплата? <span>+</span></button>
+      <div class="faq-a">50% передоплата при старті, 50% після здачі проєкту. Для великих проєктів — поетапна оплата по майлстоунах.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Чи надаєте підтримку після запуску? <span>+</span></button>
+      <div class="faq-a">Так, базовий план включає місяць підтримки після запуску. Далі — абонентське обслуговування від $150/міс або погодинна оплата.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="contact">
+  <div class="sec-label" style="justify-content:center;display:flex;">ГОТОВІ ПОЧАТИ?</div>
+  <div class="cta-final-title">Обговоримо<br>ваш <em>проєкт</em></div>
+  <div class="cta-final-sub">Розкажіть про задачу — відповімо протягом 15 хвилин</div>
+  <a href="https://t.me/infiniteunion_bot" class="cta-btn">НАПИСАТИ В TELEGRAM</a>
+  <a href="../index.html#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
+</section>
+
+<footer>
+  <div class="footer-logo">INFINITE <span>UNION</span></div>
+  <div class="footer-copy">© 2025 Infinite Union. Харків, Україна.</div>
+</footer>
+
+<script>
+// Nav scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+},{passive:true});
+
+// FAQ
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  });
+});
+
+// Timer — 3 days from now
+(function(){
+  const end = new Date();
+  end.setDate(end.getDate()+3);
+  end.setHours(23,59,59,0);
+  function tick(){
+    const diff = end - new Date();
+    if(diff<=0){document.getElementById('days').textContent='00';return;}
+    const d=Math.floor(diff/864e5);
+    const h=Math.floor((diff%864e5)/36e5);
+    const m=Math.floor((diff%36e5)/6e4);
+    const s=Math.floor((diff%6e4)/1e3);
+    document.getElementById('days').textContent=String(d).padStart(2,'0');
+    document.getElementById('hours').textContent=String(h).padStart(2,'0');
+    document.getElementById('mins').textContent=String(m).padStart(2,'0');
+    document.getElementById('secs').textContent=String(s).padStart(2,'0');
+  }
+  tick();setInterval(tick,1000);
+})();
+
+// Scroll reveal
+const obs=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.style.opacity='1';
+      e.target.style.transform='translateY(0)';
+    }
+  });
+},{threshold:0.1});
+document.querySelectorAll('.what-item,.level,.extra-card,.process-step,.cred').forEach(el=>{
+  el.style.opacity='0';
+  el.style.transform='translateY(30px)';
+  el.style.transition='opacity .6s ease, transform .6s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
