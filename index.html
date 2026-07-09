@@ -426,15 +426,15 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 
 /* ── SNAKE INTRO ── */
-#snake-intro{height:350vh;position:relative;}
+#snake-intro{height:600vh;position:relative;}
 .si-sticky{position:sticky;top:0;height:100vh;overflow:hidden;background:#060404;display:flex;align-items:center;justify-content:center;}
 .si-bg-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Space Grotesk',sans-serif;font-size:clamp(80px,15vw,200px);font-weight:700;color:#fff;white-space:nowrap;letter-spacing:-.02em;pointer-events:none;user-select:none;z-index:1;}
 #hero-snake-c{position:absolute;inset:0;width:100%;height:100%;z-index:2;}
 .si-coords{position:absolute;bottom:32px;left:40px;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.35);z-index:10;font-family:'Space Grotesk',sans-serif;}
 .si-year{position:absolute;bottom:32px;right:40px;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.35);z-index:10;font-family:'Space Grotesk',sans-serif;}
 .si-tag{position:absolute;z-index:10;opacity:0;transition:none;font-family:'Space Grotesk',sans-serif;}
-.si-tag p{font-size:13px;line-height:1.4;color:#fff;margin:4px 0 0;text-transform:uppercase;letter-spacing:.08em;}
-.si-num{font-size:10px;letter-spacing:.15em;color:#D40000;font-weight:600;background:rgba(212,0,0,.12);padding:2px 8px;border:1px solid rgba(212,0,0,.3);}
+.si-tag p{font-size:17px;line-height:1.35;color:#fff;margin:6px 0 0;text-transform:uppercase;letter-spacing:.06em;font-weight:500;}
+.si-num{font-size:12px;letter-spacing:.1em;color:#D40000;font-weight:700;}
 .si-tag--1{top:18%;left:4%;}
 .si-tag--2{top:18%;right:4%;}
 .si-tag--3{bottom:22%;left:4%;}
@@ -490,22 +490,22 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
     <div class="si-bg-text">INFINITE</div>
     <canvas id="hero-snake-c"></canvas>
     <div class="si-coords">49° 59′ N &nbsp;•&nbsp; 36° 23′ E</div>
-    <div class="si-year">2025 • UA</div>
+
 
     <div class="si-tag si-tag--1">
-      <span class="si-num">NO-001</span>
+      <span class="si-num">01 ·</span>
       <p>Конверсійні сайти<br>що продають</p>
     </div>
     <div class="si-tag si-tag--2">
-      <span class="si-num">NO-002</span>
+      <span class="si-num">02 ·</span>
       <p>Telegram боти<br>та автоматизація</p>
     </div>
     <div class="si-tag si-tag--3">
-      <span class="si-num">NO-003</span>
+      <span class="si-num">03 ·</span>
       <p>Платформи<br>та вебдодатки</p>
     </div>
     <div class="si-tag si-tag--4">
-      <span class="si-num">NO-004</span>
+      <span class="si-num">04 ·</span>
       <p>Цифрові екосистеми<br>під бізнес</p>
     </div>
 
@@ -738,56 +738,6 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   document.getElementById('cOk').style.display='block';
 });
 
-function makeSnake(canvasId, cont){
-  const c=document.getElementById(canvasId);if(!c)return;
-  const W=()=>window.innerWidth, H=()=>window.innerHeight;
-  const renderer=new THREE.WebGLRenderer({canvas:c,alpha:true,antialias:true});
-  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-  renderer.setSize(W(),H());
-  renderer.outputEncoding=THREE.sRGBEncoding;
-  renderer.toneMapping=THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure=1.4;
-  const scene=new THREE.Scene();
-  const cam=new THREE.PerspectiveCamera(45,W()/H(),.1,100);
-  cam.position.set(0,.3,4.5);
-  scene.add(new THREE.AmbientLight(0xffffff,.5));
-  const dl=new THREE.DirectionalLight(0xffffff,1.2);dl.position.set(2,4,3);scene.add(dl);
-  const rl=new THREE.PointLight(0xD40000,4,8);rl.position.set(-1,1,2);scene.add(rl);
-  const rl2=new THREE.PointLight(0xD40000,3,6);rl2.position.set(1,-1,1);scene.add(rl2);
-  let snake=null,mx=0,my=0,cx=0,cy=0;
-  const draco=new THREE.DRACOLoader();draco.setDecoderPath("https://unpkg.com/three@0.125.0/examples/js/libs/draco/");const loader=new THREE.GLTFLoader();loader.setDRACOLoader(draco);
-  loader.load('https://res.cloudinary.com/etdq5y69/raw/upload/v1783282631/snake3d.glb',
-    g=>{
-      snake=g.scene;
-      const box=new THREE.Box3().setFromObject(snake);
-      const ctr=box.getCenter(new THREE.Vector3());
-      const sz=box.getSize(new THREE.Vector3());
-      const sc=2.6/Math.max(sz.x,sz.y,sz.z);
-      snake.scale.setScalar(sc);
-      snake.position.sub(ctr.multiplyScalar(sc));
-      snake.position.y-=.2;
-      scene.add(snake);
-    },
-    undefined,
-    e=>console.warn('GLB err',e)
-  );
-  cont.addEventListener('mousemove',e=>{const r=cont.getBoundingClientRect();mx=(e.clientX-r.left)/r.width-.5;my=(e.clientY-r.top)/r.height-.5;});
-  cont.addEventListener('mouseleave',()=>{mx=0;my=0;});
-  const clk=new THREE.Clock();
-  (function frame(){
-    requestAnimationFrame(frame);
-    const t=clk.getElapsedTime();
-    cx+=(mx-cx)*.05;cy+=(my-cy)*.05;
-    if(snake){snake.rotation.y=cx*.9+Math.sin(t*.4)*.2;snake.rotation.x=-cy*.4;snake.position.y=-.2+Math.sin(t*.8)*.12;}
-    rl.intensity=3+Math.sin(t*2.5)*1.5;
-    cam.position.x+=(cx*.3-cam.position.x)*.04;
-    cam.position.y+=(-cy*.2+.3-cam.position.y)*.04;
-    cam.lookAt(0,0,0);
-    renderer.setSize(W(),H());
-    cam.aspect=W()/H();cam.updateProjectionMatrix();
-    renderer.render(scene,cam);
-  })();
-}
 /* ── SNAKE INTRO SCROLL ── */
 (function(){
   const cont = document.getElementById('snake-intro');
@@ -837,7 +787,7 @@ function makeSnake(canvasId, cont){
       snake.scale.setScalar(sc);
       snake.position.sub(ctr.multiplyScalar(sc));
       snake.position.y -= .2;
-      snake.rotation.y = Math.PI;
+      snake.rotation.y = 0;
       scene.add(snake);
     },
     undefined,
@@ -857,8 +807,8 @@ function makeSnake(canvasId, cont){
 
     // Теги вилітають при progress > 0.45
     tags.forEach((tag, i) => {
-      const delay = i * 0.08;
-      const p = Math.max(0, Math.min(1, (scrollProgress - 0.45 - delay) / 0.2));
+      const delay = i * 0.05;
+      const p = Math.max(0, Math.min(1, (scrollProgress - 0.42 - delay) / 0.12));
       tag.style.opacity = p;
       const dirs = [
         [-60, -30], [60, -30], [-60, 30], [60, 30]
@@ -870,7 +820,7 @@ function makeSnake(canvasId, cont){
 
     // Crosshair з'являється при progress > 0.4
     if(crosshair) {
-      const cp = Math.max(0, Math.min(1, (scrollProgress - 0.4) / 0.2));
+      const cp = Math.max(0, Math.min(1, (scrollProgress - 0.40) / 0.12));
       crosshair.style.borderColor = `rgba(212,0,0,${cp * 0.4})`;
       crosshair.style.boxShadow = cp > 0 ? `0 0 ${cp*40}px rgba(212,0,0,${cp*0.15})` : 'none';
       if(crosshair.style['--before-color'] !== undefined) {}
@@ -888,10 +838,12 @@ function makeSnake(canvasId, cont){
 
     if(snake){
       // При скролі 0→1: повертається від π до 0
-      const targetY = Math.PI * (1 - scrollProgress);
-      snake.rotation.y += (targetY - snake.rotation.y) * .06;
+      const targetY = Math.PI * 2 * scrollProgress;
+      snake.rotation.y += (targetY - snake.rotation.y) * .04;
       snake.rotation.x += (0 - snake.rotation.x) * .06;
-      snake.position.y = -.2;
+      const riseProgress = Math.min(1, scrollProgress / 0.4);
+      const targetPosY = -5 + riseProgress * 5.0;
+      snake.position.y += (targetPosY - snake.position.y) * .05;
 
       // Масштаб трохи збільшується при скролі
       const sc = 1 + scrollProgress * 0.15;
