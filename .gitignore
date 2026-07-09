@@ -1,2 +1,3 @@
 globe-app/
-globe-app/
+.DS_Store
+*.DS_Store
