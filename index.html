@@ -652,8 +652,9 @@ function startHero(){
 /* HERO THREE.JS — wireframe geometry behind avatar */
 (function(){
   const c=document.getElementById('hero-3d');
-  const W=()=>c.width=c.parentElement.clientWidth;
-  const H=()=>c.height=c.parentElement.clientHeight;
+  if(!c)return;
+  const W=()=>c.width=window.innerWidth;
+  const H=()=>c.height=window.innerHeight;
   W();H();
   const s=new THREE.Scene(),cam=new THREE.PerspectiveCamera(55,c.width/c.height,.1,100);
   cam.position.z=7;
