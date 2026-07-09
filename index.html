@@ -844,10 +844,7 @@ function makeSnake(canvasId, cont){
     e => console.warn('GLB err', e)
   );
 
-  window.addEventListener('mousemove', e => {
-    mx = (e.clientX / W() - .5);
-    my = (e.clientY / H() - .5);
-  });
+  /* mousemove вимкнено — керуємо тільки скролом */
 
   const tags = document.querySelectorAll('.si-tag');
   const crosshair = document.querySelector('.si-crosshair');
@@ -892,9 +889,9 @@ function makeSnake(canvasId, cont){
     if(snake){
       // При скролі 0→1: повертається від π до 0
       const targetY = Math.PI * (1 - scrollProgress);
-      snake.rotation.y += (targetY + smx * .9 * (1 - scrollProgress) - snake.rotation.y) * .06;
-      snake.rotation.x += (-smy * .4 * (1 - scrollProgress) - snake.rotation.x) * .06;
-      snake.position.y = -.2 + Math.sin(t * .8) * .12;
+      snake.rotation.y += (targetY - snake.rotation.y) * .06;
+      snake.rotation.x += (0 - snake.rotation.x) * .06;
+      snake.position.y = -.2;
 
       // Масштаб трохи збільшується при скролі
       const sc = 1 + scrollProgress * 0.15;
