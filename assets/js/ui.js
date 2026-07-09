@@ -37,6 +37,7 @@ document.querySelectorAll('[data-target]').forEach(el=>co.observe(el));
 /* FORM */
 document.getElementById('cForm').addEventListener('submit',function(e){
   e.preventDefault();
+  if(document.getElementById('website').value){return;}
   const _btn=this.querySelector('button[type=submit]');
   _btn.disabled=true;_btn.textContent='Надсилаємо...';
   fetch('https://iu-lead-bot-production.up.railway.app/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('cn').value,contact:document.getElementById('cc').value,phone:document.getElementById('cphone').value,project_type:document.getElementById('ctype').value,budget:document.getElementById('cbudget').value,deadline:document.getElementById('cdeadline').value,project:document.getElementById('cp').value})})
