@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Infinite Union website",
   "scripts": {
-    "lint:html": "html-validate index.html services/*.html",
+    "lint:html": "html-validate index.html services/constructor.html services/websites.html services/privacy.html",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:js": "eslint index.html services/*.html",
     "lint": "npm run lint:html && npm run lint:js",
