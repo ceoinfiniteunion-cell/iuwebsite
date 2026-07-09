@@ -387,7 +387,9 @@ async function generate() {
         const frame = document.getElementById('previewFrame');
         frame.removeAttribute('style');
         frame.style.cssText = 'width:100%;height:100%;border:none;display:block;';
-        frame.srcdoc = siteHtml;
+        const blob = new Blob([siteHtml], {type: 'text/html'});
+        const blobUrl = URL.createObjectURL(blob);
+        frame.src = blobUrl;
         document.getElementById('toolbarUrl').textContent = prompt.substring(0, 50) + '...';
         document.getElementById('orderPanel').classList.add('show');
 
