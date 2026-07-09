@@ -231,7 +231,7 @@ iframe{width:100%;height:100%;border:none;}
         <div class="loading-step" id="loadingStep">Підбираємо стиль і структуру</div>
       </div>
 
-      <iframe id="previewFrame" style="display:none;"></iframe>
+      <iframe id="previewFrame" sandbox="allow-scripts allow-same-origin" style="display:none;"></iframe>
       <div class="watermark">INFINITE UNION · DEMO</div>
     </div>
   </div>
@@ -378,7 +378,6 @@ async function generate() {
 
       setTimeout(() => {
         ls.classList.remove('show');
-        let html = data.content[0].text;
         // Видаляємо markdown блок якщо є
         let siteHtml = data.content[0].text;
         // Видаляємо markdown блок

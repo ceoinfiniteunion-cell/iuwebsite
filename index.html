@@ -297,10 +297,6 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 
 
-  .globe-iframe-wrap{height:80vw;}
-  .globe-info{border-left:none;border-top:1px solid var(--border);}
-}
-
 /* ── GLOBE SCROLL SECTION ── */
 #portfolio{position:relative;padding:0 !important;margin:0;}#portfolio.sec{padding:0 !important;}
 #portfolio .sec-in{padding-bottom:0;position:absolute;top:0;left:0;right:0;z-index:10;pointer-events:none;}
@@ -802,9 +798,11 @@ window.addEventListener('scroll',()=>{
 /* FORM */
 document.getElementById('cForm').addEventListener('submit',function(e){
   e.preventDefault();
-  fetch('https://iu-lead-bot-production.up.railway.app/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('cn').value,contact:document.getElementById('cc').value,phone:document.getElementById('cphone').value,project_type:document.getElementById('ctype').value,budget:document.getElementById('cbudget').value,deadline:document.getElementById('cdeadline').value,project:document.getElementById('cp').value})}).catch(()=>{});
-  this.querySelector('button[type=submit]').style.display='none';
-  document.getElementById('cOk').style.display='block';
+  const _btn=this.querySelector('button[type=submit]');
+  _btn.disabled=true;_btn.textContent='Надсилаємо...';
+  fetch('https://iu-lead-bot-production.up.railway.app/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('cn').value,contact:document.getElementById('cc').value,phone:document.getElementById('cphone').value,project_type:document.getElementById('ctype').value,budget:document.getElementById('cbudget').value,deadline:document.getElementById('cdeadline').value,project:document.getElementById('cp').value})})
+  .then(r=>{if(!r.ok)throw new Error('server');_btn.style.display='none';document.getElementById('cOk').style.display='block';})
+  .catch(()=>{_btn.disabled=false;_btn.textContent='Надіслати →';alert('Помилка відправки. Перевірте зʼєднання або напишіть нам напряму в Telegram.');});
 });
 
 /* ── SNAKE INTRO SCROLL ── */
@@ -1107,81 +1105,7 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   let globe;
   let currentCard = -1;
 
-  // Connector update — викликається кожен рендер-кадр
-  function updateConnector(idx){
-    return; // disabled — no SVG line
-    if(!svgLine || !svgDot || !svgEl) return;
-    const proj = PROJECTS[idx];
-
-    // 3D → 2D проекція маркера
-    // Проекція маркера через rotation matrix cobe (phi=globePhi, theta=0.3)
-    const latR = proj.lat * Math.PI / 180;
-    const lngR = proj.lng * Math.PI / 180;
-    // Маркер на одиничній сфері
-    const mx = Math.cos(latR) * Math.cos(lngR);
-    const my = Math.sin(latR);
-    const mz = Math.cos(latR) * Math.sin(lngR);
-    // cobe rotation: спочатку по Y на -phi, потім по X на theta
-    const cp = Math.cos(-globePhi), sp = Math.sin(-globePhi);
-    const ct = Math.cos(0.3),       st = Math.sin(0.3);
-    // Rotate Y
-    const rx = cp*mx + sp*mz;
-    const ry = my;
-    const rz = -sp*mx + cp*mz;
-    // Rotate X
-    const x3 = rx;
-    const y3 = ct*ry - st*rz;
-    const z3 = st*ry + ct*rz;
-
-    // Маркер видимий тільки якщо z > 0 і глобус близько до цільового кута
-    if(z3 < 0.05){
-      svgLine.setAttribute('opacity','0');
-      svgDot.setAttribute('opacity','0');
-      const pulse = document.getElementById('gs-dot-pulse');
-      if(pulse) pulse.setAttribute('opacity','0');
-      return;
-    }
-
-    const rect = canvas.getBoundingClientRect();
-    const svgRect = svgEl.getBoundingClientRect();
-    // Лінія стартує з краю глобуса в напрямку маркера
-    const gcx = rect.left + rect.width  * 0.5;
-    const gcy = rect.top  + rect.height * 0.5;
-    const grad = rect.width * 0.47;
-    const glen = Math.sqrt(x3*x3 + y3*y3) || 1;
-    const epx = gcx + (x3/glen) * grad;
-    const epy = gcy - (y3/glen) * grad;
-    const sx = (epx - svgRect.left) / svgRect.width  * 1000;
-    const sy = (epy - svgRect.top)  / svgRect.height * 1000;
-    const cardPanel = document.querySelector('.globe-scroll-right');
-    let ex = 780, ey = 500;
-    if(cardPanel){
-      const cr = cardPanel.getBoundingClientRect();
-      ex = (cr.left - svgRect.left) / svgRect.width * 1000;
-      const activeCard = document.getElementById('gs-card-' + idx);
-      if(activeCard){
-        const ar = activeCard.getBoundingClientRect();
-        ey = (ar.top + ar.height * 0.5 - svgRect.top) / svgRect.height * 1000;
-      }
-    }
-
-    svgLine.setAttribute('x1', sx.toFixed(1));
-    svgLine.setAttribute('y1', sy.toFixed(1));
-    svgLine.setAttribute('x2', ex.toFixed(1));
-    svgLine.setAttribute('y2', ey.toFixed(1));
-    svgDot.setAttribute('cx', sx.toFixed(1));
-    svgDot.setAttribute('cy', sy.toFixed(1));
-
-    const pulse = document.getElementById('gs-dot-pulse');
-    if(pulse){
-      pulse.setAttribute('cx', sx.toFixed(1));
-      pulse.setAttribute('cy', sy.toFixed(1));
-      pulse.setAttribute('opacity','0.5');
-    }
-
-    svgLine.setAttribute('opacity','0.75');
-    svgDot.setAttribute('opacity','1');
-  }
+  // updateConnector removed (disabled)
 
   const overlay = document.getElementById('gs-overlay');
   const ctx2d = overlay ? overlay.getContext('2d') : null;
