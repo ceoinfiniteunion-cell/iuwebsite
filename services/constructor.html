@@ -378,7 +378,9 @@ async function generate() {
 
       setTimeout(() => {
         ls.classList.remove('show');
-        const html = data.content[0].text;
+        let html = data.content[0].text;
+        // Видаляємо markdown блок якщо є
+        html = html.replace(/^```html\s*/i, '').replace(/^```\s*/i, '').replace(/```\s*$/i, '').trim();
         const frame = document.getElementById('previewFrame');
         frame.srcdoc = html;
         frame.style.display = 'block';
