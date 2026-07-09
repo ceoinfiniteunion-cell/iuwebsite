@@ -381,15 +381,15 @@ async function generate() {
         let html = data.content[0].text;
         // Видаляємо markdown блок якщо є
         let siteHtml = data.content[0].text;
-        const match = siteHtml.match(/```(?:html)?\s*([\s\S]*?)```/i);
-        if (match) siteHtml = match[1].trim();
-        else siteHtml = siteHtml.replace(/^```(?:html)?\s*/i, '').replace(/```\s*$/i, '').trim();
+        // Видаляємо markdown блок
+        siteHtml = siteHtml.replace(/^```(?:html)?[\r\n]*/i, '').replace(/[\r\n]*```\s*$/i, '').trim();
         const frame = document.getElementById('previewFrame');
         frame.removeAttribute('style');
         frame.style.cssText = 'width:100%;height:100%;border:none;display:block;';
-        const blob = new Blob([siteHtml], {type: 'text/html'});
-        const blobUrl = URL.createObjectURL(blob);
-        frame.src = blobUrl;
+        document.getElementById('emptyState').style.display = 'none';
+        document.getElementById('loadingState').classList.remove('show');
+        frame.srcdoc = siteHtml;
+        window._lastHtml = siteHtml;
         document.getElementById('toolbarUrl').textContent = prompt.substring(0, 50) + '...';
         document.getElementById('orderPanel').classList.add('show');
 
