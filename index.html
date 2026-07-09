@@ -645,14 +645,8 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 })();
 
 function startHero(){
-  document.getElementById('havatar').classList.add('v');
-  document.getElementById('hm').classList.add('v');
-  setTimeout(()=>document.getElementById('hl1').classList.add('v'),100);
-  setTimeout(()=>document.getElementById('hl2').classList.add('v'),220);
-  setTimeout(()=>document.getElementById('hl3').classList.add('v'),340);
-  setTimeout(()=>document.getElementById('hsub').classList.add('v'),480);
-  setTimeout(()=>document.getElementById('hbtns').classList.add('v'),600);
-  setTimeout(()=>document.getElementById('hscroll').classList.add('v'),800);
+  const ids=['havatar','hm','hl1','hl2','hl3','hsub','hbtns','hscroll'];
+  ids.forEach((id,i)=>{const el=document.getElementById(id);if(el)setTimeout(()=>el.classList.add('v'),i*120);});
 }
 
 /* HERO THREE.JS — wireframe geometry behind avatar */
@@ -745,7 +739,7 @@ document.getElementById('cForm').addEventListener('submit',function(e){
 
 function makeSnake(canvasId, cont){
   const c=document.getElementById(canvasId);if(!c)return;
-  const W=()=>cont.clientWidth, H=()=>cont.clientHeight;
+  const W=()=>window.innerWidth, H=()=>window.innerHeight;
   const renderer=new THREE.WebGLRenderer({canvas:c,alpha:true,antialias:true});
   renderer.setPixelRatio(Math.min(devicePixelRatio,2));
   renderer.setSize(W(),H());
