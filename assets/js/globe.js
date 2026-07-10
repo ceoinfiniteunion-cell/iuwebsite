@@ -220,9 +220,9 @@
   function getProgress(){
     const r    = section.getBoundingClientRect();
     const winH = window.innerHeight;
-    /* 0 = секція тільки з'явилась знизу, 1 = секція повністю пройшла */
-    const start = winH;
-    const end   = winH * 0.1;
+    /* 0 = верх секції торкнувся центру екрану, 1 = низ секції пройшов центр */
+    const start = winH * 0.6;
+    const end   = -section.offsetHeight * 0.3;
     const raw   = (start - r.top) / (start - end);
     return Math.max(0, Math.min(1, raw));
   }
