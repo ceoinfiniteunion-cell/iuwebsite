@@ -299,13 +299,16 @@
     animate();
   }
 
-  window.addEventListener('load', () => {
-    resize();
-    const io = new IntersectionObserver(entries => {
-      if(entries[0].isIntersecting) { start(); io.disconnect(); }
-    }, { threshold: 0.1 });
-    io.observe(section);
-  });
-
   window.addEventListener('resize', () => { if(started) resize(); }, {passive:true});
+
+  /* Запуск тільки коли секція реально видима на 30% */
+  const io = new IntersectionObserver(entries => {
+    const e = entries[0];
+    if(e.isIntersecting && !started) {
+      resize();
+      start();
+      io.disconnect();
+    }
+  }, { threshold: 0.3, rootMargin: '0px 0px -100px 0px' });
+  io.observe(section);
 })();
