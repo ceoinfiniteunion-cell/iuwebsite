@@ -49,3 +49,18 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   .then(r=>{if(!r.ok)throw new Error('server');_btn.style.display='none';document.getElementById('cOk').style.display='block';})
   .catch(()=>{_btn.disabled=false;_btn.textContent='Надіслати →';alert('Помилка відправки. Перевірте зʼєднання або напишіть нам напряму в Telegram.');});
 });
+
+/* ── DIRECTIONS SECTION REVEAL ── */
+(function(){
+  const section = document.getElementById('directions');
+  if(!section) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        e.target.classList.add('v');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  io.observe(section);
+})();
