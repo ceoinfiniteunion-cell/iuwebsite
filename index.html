@@ -95,7 +95,7 @@
   <div class="l-left">
     <img class="l-avatar" id="lavatar" src="avatar.jpeg" alt="Infinite Union mascot">
   </div>
-  <div class="l-right" style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;">
+  <div class="l-right">
     <div class="l-logo">INFINITE <span>UNION</span></div>
     <div>
       <div class="l-pct"><span id="lnum">0</span><em>%</em></div>
@@ -167,7 +167,7 @@
   <div class="sec-in">
     <div class="sh rev"><div><div class="slabel">Послуги</div><h2 class="stitle split-chars" id="srv-title">Що ми робимо</h2></div><div class="snum">01 / 05</div></div>
     <div class="srv-list">
-      <div class="srv rev" onclick="location.href='services/websites.html'" style="cursor:pointer;"><span class="srv-n">01</span><span class="srv-name">Конверсійні сайти</span><div class="srv-tags"><span class="stg">+40% конверсія</span><span class="stg">SEO-трафік</span><span class="stg">Google Ads ready</span></div><span class="srv-arr">↗</span></div>
+      <div class="srv rev" onclick="location.href='services/websites.html'" role="button" tabindex="0"><span class="srv-n">01</span><span class="srv-name">Конверсійні сайти</span><div class="srv-tags"><span class="stg">+40% конверсія</span><span class="stg">SEO-трафік</span><span class="stg">Google Ads ready</span></div><span class="srv-arr">↗</span></div>
       <div class="srv rev"><span class="srv-n">02</span><span class="srv-name">Telegram боти та автоматизація</span><div class="srv-tags"><span class="stg">CRM інтеграція</span><span class="stg">Платежі 24/7</span><span class="stg">0 менеджерів</span></div><span class="srv-arr">↗</span></div>
       <div class="srv rev"><span class="srv-n">03</span><span class="srv-name">Платформи та вебдодатки</span><div class="srv-tags"><span class="stg">SPA / PWA</span><span class="stg">API інтеграції</span><span class="stg">Масштабування</span></div><span class="srv-arr">↗</span></div>
       <div class="srv rev"><span class="srv-n">04</span><span class="srv-name">Цифрові екосистеми під бізнес</span><div class="srv-tags"><span class="stg">Від ідеї до продакшну</span><span class="stg">ROI x3+</span><span class="stg">Під ключ</span></div><span class="srv-arr">↗</span></div>
@@ -177,30 +177,30 @@
 </section>
 
 <!-- PORTFOLIO -->
-<section id="ai-constructor" style="padding:100px 40px;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:60px;flex-wrap:wrap;">
-    <div style="flex:1;min-width:280px;">
-      <div class="slabel" style="margin-bottom:16px;">AI · ІННОВАЦІЯ</div>
-      <h2 style="font-family:var(--fh);font-size:clamp(32px,4vw,56px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:20px;">Побачте свій сайт<br>до замовлення</h2>
-      <p style="font-size:15px;color:var(--muted2);line-height:1.8;max-width:440px;margin-bottom:32px;">Опишіть ідею — наш AI згенерує живий прев'ю вашого майбутнього сайту за 15 секунд. Безкоштовно, без реєстрації.</p>
-      <a href="services/constructor.html" style="display:inline-flex;align-items:center;gap:12px;padding:18px 36px;background:var(--red);color:#fff;font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+<section id="ai-constructor">
+  <div class="ai-inner">
+    <div class="ai-text">
+      <div class="slabel">AI · ІННОВАЦІЯ</div>
+      <h2 class="ai-title">Побачте свій сайт<br>до замовлення</h2>
+      <p class="ai-desc">Опишіть ідею — наш AI згенерує живий прев'ю вашого майбутнього сайту за 15 секунд. Безкоштовно, без реєстрації.</p>
+      <a href="services/constructor.html" class="ai-cta">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         Спробувати конструктор
       </a>
     </div>
-    <div style="flex:0 0 420px;background:var(--bg);border:1px solid var(--border);padding:0;overflow:hidden;">
-      <div style="padding:10px 16px;border-bottom:1px solid var(--border);display:flex;gap:6px;align-items:center;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
-        <span style="width:10px;height:10px;border-radius:50%;background:#ffbd2e;display:inline-block;"></span>
-        <span style="width:10px;height:10px;border-radius:50%;background:#28c840;display:inline-block;"></span>
-        <span style="flex:1;background:rgba(255,255,255,.05);margin-left:8px;padding:4px 12px;font-size:10px;font-family:var(--fh);color:var(--muted);letter-spacing:.05em;">infiniteunion.ai/constructor</span>
+    <div class="ai-preview">
+      <div class="ai-preview-bar">
+        <span class="ai-dot ai-dot--red"></span>
+        <span class="ai-dot ai-dot--yellow"></span>
+        <span class="ai-dot ai-dot--green"></span>
+        <span class="ai-preview-url">infiniteunion.ai/constructor</span>
       </div>
-      <div style="padding:32px;font-family:var(--fh);">
-        <div style="font-size:10px;letter-spacing:.15em;color:var(--red);margin-bottom:12px;">AI · ГЕНЕРАЦІЯ</div>
-        <div style="font-size:18px;font-weight:700;margin-bottom:20px;">Барбершоп у Харкові,<br>темний стиль...</div>
-        <div style="height:4px;background:var(--border);margin-bottom:8px;border-radius:2px;overflow:hidden;"><div style="height:4px;background:var(--red);width:75%;border-radius:2px;"></div></div>
-        <div style="font-size:11px;color:var(--muted);letter-spacing:.08em;">ГЕНЕРУЄМО КОД... 75%</div>
-        <div style="margin-top:20px;background:rgba(255,255,255,.03);border:1px solid var(--border);padding:16px;font-size:12px;color:var(--muted);line-height:1.6;">
+      <div class="ai-preview-body">
+        <div class="ai-preview-label">AI · ГЕНЕРАЦІЯ</div>
+        <div class="ai-preview-heading">Барбершоп у Харкові,<br>темний стиль...</div>
+        <div class="ai-progress-wrap"><div class="ai-progress-bar"></div></div>
+        <div class="ai-progress-label">ГЕНЕРУЄМО КОД... 75%</div>
+        <div class="ai-code-preview">
           ← Підбираємо кольорову палітру<br>← Будуємо структуру сторінки<br>← Додаємо анімації...
         </div>
       </div>
@@ -211,10 +211,10 @@
 <section id="portfolio" class="sec">
   <div class="globe-scroll-outer" id="globe-scroll-outer">
     <div class="globe-scroll-sticky" id="globe-sticky">
-      <div class="sec-in" style="position:absolute;top:0;left:0;right:0;z-index:10;pointer-events:none;padding:48px 48px 16px 48px;"><div class="sh rev"><div><div class="slabel">Роботи</div><h2 class="stitle" style="font-size:clamp(28px,3vw,48px);line-height:1;">Портфоліо</h2></div><div class="snum">02 / 03</div></div></div>
+      <div class="sec-in sec-in--portfolio"><div class="sh rev"><div><div class="slabel">Роботи</div><h2 class="stitle stitle--sm">Портфоліо</h2></div><div class="snum">02 / 03</div></div></div>
       <canvas id="gs-globe"></canvas>
-      <canvas id="gs-overlay" style="pointer-events:none;z-index:5;"></canvas>
-      <svg id="gs-connector" viewBox="0 0 1000 1000" preserveAspectRatio="none" style="display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5;">
+      <canvas id="gs-overlay"></canvas>
+      <svg id="gs-connector" viewBox="0 0 1000 1000" preserveAspectRatio="none">
         <defs>
           <filter id="glow">
             <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
@@ -244,7 +244,7 @@
 <!-- AVATAR SECTION -->
 <section id="avatar-sec">
   <div class="av-left rev">
-    <div class="slabel" style="margin-bottom:24px;">Infinite Union</div>
+    <div class="slabel">Infinite Union</div>
     <div class="av-quote">Ваш бізнес заслуговує на <span>продукт</span>, який працює на вас — і <span>генерує прибуток</span> навіть коли ви спите.</div>
     <div class="av-attrs">
       <div><div class="av-attr-l">Підхід</div><div class="av-attr-v">Код, що масштабується</div></div>
@@ -271,9 +271,9 @@
   <div class="ct">
     <div class="ct-l rev">
       <div><div class="slabel">Контакт</div><h2 class="ct-title">Готові<br><span>до росту?</span></h2></div>
-      <div style="margin-top:20px;display:flex;align-items:flex-start;gap:16px;max-width:380px;">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;margin-top:3px;"><circle cx="16" cy="16" r="15" stroke="#D40000" stroke-width="1"/><path d="M8 16.5L13.5 22L24 11" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p style="font-size:16px;color:rgba(255,255,255,0.7);line-height:1.75;margin:0;">Хочете безкоштовну консультацію? Пишіть нашому менеджеру — відповідаємо в будь-який день і час доби протягом <strong style="color:#fff;font-weight:500;">5–10 хвилин.</strong> Без вихідних.</p>
+      <div class="mgr-note">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="mgr-note__icon"><circle cx="16" cy="16" r="15" stroke="#D40000" stroke-width="1"/><path d="M8 16.5L13.5 22L24 11" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p class="mgr-note__text">Хочете безкоштовну консультацію? Пишіть нашому менеджеру — відповідаємо в будь-який день і час доби протягом <strong class="mgr-note__accent">5–10 хвилин.</strong> Без вихідних.</p>
       </div>
       <a href="https://t.me/infiniteunion_manager" target="_blank" rel="noreferrer" class="mgr-btn">
         <span class="mgr-btn__bg"></span>
@@ -283,7 +283,7 @@
           <svg class="mgr-arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </span>
       </a>
-      <div class="ct-coords" style="margin-top:32px;">50° 27′ N / 30° 31′ E<br>Kyiv, Ukraine · 2026</div>
+      <div class="ct-coords">50° 27′ N / 30° 31′ E<br>Kyiv, Ukraine · 2026</div>
     </div>
     <div class="ct-r rev">
       <form class="form" id="cForm">
@@ -299,7 +299,7 @@
         </div>
         <div class="fg"><label>Про проект</label><textarea id="cp" rows="3" placeholder="Що хочеш зробити?"></textarea></div>
         <div class="form-ok" id="cOk">✓ ЗАЯВКУ НАДІСЛАНО — ВІДПОВІМО ПРОТЯГОМ 15 ХВ</div>
-        <button type="submit" class="btn-p" style="align-self:flex-start;margin-top:8px;">Надіслати →</button>
+        <button type="submit" class="btn-p btn-p--form">Надіслати →</button>
       <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none;" aria-hidden="true">
         <label for="website">Website</label>
         <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
@@ -319,8 +319,8 @@
   <div class="fl">INFINITE <span>UNION</span></div>
   <div class="fc">© 2026 · Kyiv, Ukraine · 50° 27′ N / 30° 31′ E</div>
   <div class="flinks"><a href="https://github.com/ceoinfiniteunion-cell" target="_blank" rel="noreferrer">GitHub</a><a href="https://t.me/infiniteunion_manager" target="_blank" rel="noreferrer">Telegram</a></div>
-  <div style="border-top:1px solid rgba(255,255,255,0.05);padding:16px 40px;text-align:center;">
-    <a href="services/privacy.html" style="font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.3);text-decoration:none;font-family:var(--fh);transition:color .2s;" onmouseover="this.style.color='rgba(255,255,255,.6)'" onmouseout="this.style.color='rgba(255,255,255,.3)'">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</a>
+  <div class="footer-privacy">
+    <a href="services/privacy.html" class="footer-privacy__link">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</a>
   </div>
 </footer>
 
@@ -329,6 +329,7 @@
 <script src="vendor/three/GLTFLoader.js"></script>
 <script src="vendor/three/DRACOLoader.js"></script>
 
+  <script src="assets/js/main.js"></script>
   <script src="assets/js/preloader.js"></script>
   <script src="assets/js/hero.js"></script>
   <script src="assets/js/ui.js"></script>

@@ -1,3 +1,34 @@
+/**
+ * Infinite Union — Main Stylesheet
+ *
+ * Table of Contents:
+ *  1. Variables & Reset
+ *  2. Cursor
+ *  3. Preloader
+ *  4. Navigation
+ *  5. Hero Section
+ *  6. Marquee
+ *  7. Stats
+ *  8. Sections (shared layout)
+ *  9. Services
+ * 10. Portfolio Grid
+ * 11. Avatar Section
+ * 12. Philosophy Section
+ * 13. Contact & Form
+ * 14. Footer
+ * 15. Reveal Animations
+ * 16. Orbit SVG Sphere
+ * 17. Portfolio Globe (cobe)
+ * 18. Globe Scroll Section
+ * 19. Snake Intro
+ * 20. Manager Button
+ * 21. AI Constructor Section
+ * 22. Responsive
+ */
+
+/* ─────────────────────────────────────────
+ * 1. Variables & Reset
+ * ───────────────────────────────────────── */
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
   --bg:#060404;--bg2:#0C0808;--bg3:#110D0D;
@@ -12,11 +43,19 @@ html{scroll-behavior:smooth;}
 a{color:inherit;text-decoration:none;}
 ::selection{background:var(--red);color:#fff;}
 
+
+/* ─────────────────────────────────────────
+ * 2. Cursor
+ * ───────────────────────────────────────── */
 /* CURSOR */
 #cur{position:fixed;width:5px;height:5px;background:var(--fg);border-radius:50%;pointer-events:none;z-index:10000;mix-blend-mode:difference;}
 #curO{position:fixed;width:32px;height:32px;border:1px solid rgba(237,232,229,0.18);border-radius:50%;pointer-events:none;z-index:9999;transition:all .15s var(--ease2);}
 @media(hover:none){#cur,#curO{display:none;}body{cursor:auto;}}
 
+
+/* ─────────────────────────────────────────
+ * 3. Preloader
+ * ───────────────────────────────────────── */
 /* PRELOADER */
 #loader{position:fixed;inset:0;background:var(--bg);z-index:9000;display:flex;overflow:hidden;}.l-left{display:none !important;}.l-right{width:100% !important;align-items:center !important;justify-content:center !important;}
 #loader.done{animation:loaderOut 1s var(--ease) forwards;}
@@ -34,6 +73,10 @@ a{color:inherit;text-decoration:none;}
 .l-status{font-family:var(--fh);font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--muted);margin-top:16px;}
 .l-coords{font-family:var(--fh);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);}
 
+
+/* ─────────────────────────────────────────
+ * 4. Navigation
+ * ───────────────────────────────────────── */
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;transition:all .4s;}
 nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);backdrop-filter:blur(24px);}
@@ -49,6 +92,10 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .burger{display:none;flex-direction:column;gap:6px;}
 .burger span{width:22px;height:1px;background:var(--fg);}
 
+
+/* ─────────────────────────────────────────
+ * 4b. Mobile Menu
+ * ───────────────────────────────────────── */
 /* MOBILE */
 .mob{display:none;position:fixed;inset:0;background:var(--bg);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:36px;}
 .mob.open{display:flex;}
@@ -56,6 +103,10 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .mob a:hover{color:var(--fg);}
 .mob-x{position:absolute;top:24px;right:24px;font-size:32px;color:var(--muted2);background:none;border:none;}
 
+
+/* ─────────────────────────────────────────
+ * 5. Hero Section
+ * ───────────────────────────────────────── */
 /* HERO */
 #hero{height:100vh;display:flex;border-bottom:1px solid var(--border);overflow:hidden;position:relative;}
 .h-avatar-col{flex:0 0 52%;position:relative;overflow:hidden;border-right:1px solid var(--border);}
@@ -89,6 +140,10 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .h-scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,var(--red),transparent);animation:scrollA 2s ease-in-out infinite;}
 @keyframes scrollA{0%,100%{opacity:.2;}50%{opacity:1;}}
 
+
+/* ─────────────────────────────────────────
+ * 6. Marquee
+ * ───────────────────────────────────────── */
 /* MARQUEE */
 .mq{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0;overflow:hidden;}
 .mq-t{display:inline-flex;gap:56px;animation:mqx 20s linear infinite;white-space:nowrap;}
@@ -96,6 +151,10 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .mq-t s::after{content:'⬡';color:var(--red);font-size:8px;}
 @keyframes mqx{to{transform:translateX(-50%);}}
 
+
+/* ─────────────────────────────────────────
+ * 7. Stats
+ * ───────────────────────────────────────── */
 /* STATS */
 #stats{border-bottom:1px solid var(--border);}
 .sg{display:grid;grid-template-columns:repeat(4,1fr);}
@@ -106,6 +165,10 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .si:hover .sn{color:var(--red);}
 .sl{font-family:var(--fh);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:16px;}
 
+
+/* ─────────────────────────────────────────
+ * 8. Sections (shared layout)
+ * ───────────────────────────────────────── */
 /* SECTIONS */
 .sec{border-bottom:1px solid var(--border);}
 .sec-in{padding:120px 48px;}
@@ -114,11 +177,19 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .snum{font-family:var(--fh);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
 .stitle{font-family:var(--fh);font-size:clamp(36px,5.5vw,72px);font-weight:700;letter-spacing:-.035em;line-height:.96;margin-top:20px;}
 
+
+/* ─────────────────────────────────────────
+ * 8b. Char Split Animation
+ * ───────────────────────────────────────── */
 /* CHAR SPLIT */
 .split-chars .char{display:inline-block;overflow:hidden;}
 .split-chars .char-inner{display:inline-block;transform:translateY(110%);transition:transform .7s var(--ease);}
 .split-chars.v .char-inner{transform:none;}
 
+
+/* ─────────────────────────────────────────
+ * 9. Services
+ * ───────────────────────────────────────── */
 /* SERVICES */
 .srv-list{display:flex;flex-direction:column;}
 .srv{display:flex;align-items:center;gap:32px;padding:36px 0;border-top:1px solid var(--border);transition:all .4s var(--ease2);}
@@ -133,6 +204,10 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .srv-arr{font-size:22px;color:var(--muted);transition:all .3s;}
 .srv:hover .srv-arr{color:var(--red);transform:translate(5px,-5px);}
 
+
+/* ─────────────────────────────────────────
+ * 10. Portfolio Grid
+ * ───────────────────────────────────────── */
 /* PORTFOLIO */
 .pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
 .pf-item{background:var(--bg);padding:64px 48px;display:flex;flex-direction:column;justify-content:space-between;min-height:460px;position:relative;overflow:hidden;transition:background .4s;}
@@ -152,6 +227,10 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .pf-link::after{content:'↗';transition:transform .25s;}
 .pf-item:hover .pf-link::after{transform:translate(4px,-4px);}
 
+
+/* ─────────────────────────────────────────
+ * 11. Avatar Section
+ * ───────────────────────────────────────── */
 /* AVATAR FULL SECTION */
 #avatar-sec{height:100vh;display:flex;overflow:hidden;border-bottom:1px solid var(--border);}
 .av-left{flex:1;display:flex;flex-direction:column;justify-content:center;padding:80px 48px;border-right:1px solid var(--border);}
@@ -164,6 +243,10 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .av-attr-l{font-family:var(--fh);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
 .av-attr-v{font-family:var(--fh);font-size:18px;font-weight:600;letter-spacing:-.01em;}
 
+
+/* ─────────────────────────────────────────
+ * 12. Philosophy Section
+ * ───────────────────────────────────────── */
 /* PHILO */
 #philo{border-bottom:1px solid var(--border);}
 .ph-in{padding:160px 48px;text-align:center;}
@@ -171,6 +254,10 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .ph-h{font-family:var(--fh);font-size:clamp(28px,5.5vw,80px);font-weight:700;letter-spacing:-.03em;line-height:1.04;max-width:1100px;margin:0 auto;}
 .ph-h span{color:var(--red);}
 
+
+/* ─────────────────────────────────────────
+ * 13. Contact & Form
+ * ───────────────────────────────────────── */
 /* CONTACT */
 #contact{border-bottom:1px solid var(--border);}
 .ct{display:grid;grid-template-columns:1fr 1fr;}
@@ -191,6 +278,10 @@ nav.scrolled{border-bottom:1px solid var(--border);background:rgba(6,4,4,0.9);ba
 .ci-v{font-size:14px;}
 .ci-v a:hover{color:var(--red);}
 
+
+/* ─────────────────────────────────────────
+ * 14. Footer
+ * ───────────────────────────────────────── */
 /* FOOTER */
 footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);}
 .fl{font-family:var(--fh);font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;}
@@ -200,10 +291,18 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .flinks a{font-family:var(--fh);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);transition:color .25s;}
 .flinks a:hover{color:var(--fg);}
 
+
+/* ─────────────────────────────────────────
+ * 15. Reveal Animations
+ * ───────────────────────────────────────── */
 /* REVEAL */
 .rev{opacity:0;transform:translateY(28px);transition:opacity .95s var(--ease2),transform .95s var(--ease2);}
 .rev.v{opacity:1;transform:none;}
 
+
+/* ─────────────────────────────────────────
+ * 22. Responsive
+ * ───────────────────────────────────────── */
 /* RESPONSIVE */
 @media(max-width:900px){
   nav{padding:0 20px;}.n-links,.n-cta{display:none;}.burger{display:flex;}
@@ -224,6 +323,10 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.rev,.h-meta,.h-sub,.h-btns,.h-scroll,.h1 .lin,.l-avatar{opacity:1;transform:none !important;}}
 
+
+/* ─────────────────────────────────────────
+ * 16. Orbit SVG Sphere
+ * ───────────────────────────────────────── */
 /* ── ORBIT SVG SPHERE ── */
 #orbit-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:2;}
 .o-core{fill:none;stroke:var(--red);stroke-width:1.5;opacity:.18;}
@@ -254,6 +357,10 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 .o-iu-text{animation:iuPulse 2.5s ease-in-out infinite;}
 .o-core{animation:coreGlow 4s ease-in-out infinite;}
 
+
+/* ─────────────────────────────────────────
+ * 17. Portfolio Globe (cobe)
+ * ───────────────────────────────────────── */
 /* ── PORTFOLIO GLOBE ── */
 .globe-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border);align-items:stretch;}
 #pf-globe{width:100%;aspect-ratio:1/1;display:block;cursor:grab;opacity:0;transition:opacity 1.2s ease;border-radius:50%;}
@@ -280,6 +387,10 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
 }
 
 
+
+/* ─────────────────────────────────────────
+ * 18. Globe Scroll Section
+ * ───────────────────────────────────────── */
 /* ── GLOBE SCROLL SECTION ── */
 #portfolio{position:relative;padding:0 !important;margin:0;}#portfolio.sec{padding:0 !important;}
 #portfolio .sec-in{padding-bottom:0;position:absolute;top:0;left:0;right:0;z-index:10;pointer-events:none;}
@@ -404,6 +515,10 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   .gs-card.active{transform:translateY(0);}
 }
 
+
+/* ─────────────────────────────────────────
+ * 19. Snake Intro
+ * ───────────────────────────────────────── */
 /* ── SNAKE INTRO ── */
 #snake-intro{height:600vh;position:relative;}
 .si-sticky{position:sticky;top:0;height:100vh;overflow:hidden;background:#060404;display:flex;align-items:center;justify-content:center;}
@@ -427,6 +542,10 @@ select{width:100%;background:transparent;border:none;border-bottom:1px solid var
 select option{background:#0e0b0b;color:#fff;}
 input[type="date"]{color-scheme:dark;}
 
+
+/* ─────────────────────────────────────────
+ * 20. Manager Button
+ * ───────────────────────────────────────── */
 /* Manager button */
 .mgr-btn{display:inline-flex;position:relative;margin-top:20px;text-decoration:none;overflow:hidden;}
 .mgr-btn__bg{position:absolute;inset:0;background:#fff;transform:translateX(-100%);transition:transform .4s cubic-bezier(.76,0,.24,1);}
@@ -435,3 +554,57 @@ input[type="date"]{color-scheme:dark;}
 .mgr-btn:hover .mgr-btn__content{color:#060404;}
 .mgr-arr{transition:transform .3s ease;}
 .mgr-btn:hover .mgr-arr{transform:translateX(4px);}
+
+/* ─────────────────────────────────────────
+ * 21. AI Constructor Section
+ * ───────────────────────────────────────── */
+#ai-constructor { padding: 100px 40px; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.ai-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 60px; flex-wrap: wrap; }
+.ai-text { flex: 1; min-width: 280px; }
+.ai-text .slabel { margin-bottom: 16px; }
+.ai-title { font-family: var(--fh); font-size: clamp(32px,4vw,56px); font-weight: 700; line-height: 1; letter-spacing: -.02em; margin-bottom: 20px; }
+.ai-desc { font-size: 15px; color: var(--muted2); line-height: 1.8; max-width: 440px; margin-bottom: 32px; }
+.ai-cta { display: inline-flex; align-items: center; gap: 12px; padding: 18px 36px; background: var(--red); color: #fff; font-family: var(--fh); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; transition: opacity .2s; }
+.ai-cta:hover { opacity: .85; }
+.ai-preview { flex: 0 0 420px; background: var(--bg); border: 1px solid var(--border); overflow: hidden; }
+.ai-preview-bar { padding: 10px 16px; border-bottom: 1px solid var(--border); display: flex; gap: 6px; align-items: center; }
+.ai-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.ai-dot--red { background: #ff5f57; }
+.ai-dot--yellow { background: #ffbd2e; }
+.ai-dot--green { background: #28c840; }
+.ai-preview-url { flex: 1; background: rgba(255,255,255,.05); margin-left: 8px; padding: 4px 12px; font-size: 10px; font-family: var(--fh); color: var(--muted); letter-spacing: .05em; }
+.ai-preview-body { padding: 32px; font-family: var(--fh); }
+.ai-preview-label { font-size: 10px; letter-spacing: .15em; color: var(--red); margin-bottom: 12px; }
+.ai-preview-heading { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+.ai-progress-wrap { height: 4px; background: var(--border); margin-bottom: 8px; border-radius: 2px; overflow: hidden; }
+.ai-progress-bar { height: 4px; background: var(--red); width: 75%; border-radius: 2px; }
+.ai-progress-label { font-size: 11px; color: var(--muted); letter-spacing: .08em; }
+.ai-code-preview { margin-top: 20px; background: rgba(255,255,255,.03); border: 1px solid var(--border); padding: 16px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* ─────────────────────────────────────────
+ * Utility overrides (extracted from inline styles)
+ * ───────────────────────────────────────── */
+.stitle--sm { font-size: clamp(28px,3vw,48px); line-height: 1; }
+.btn-p--form { align-self: flex-start; margin-top: 8px; }
+.srv { cursor: pointer; }
+#gs-connector { display: none; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; }
+
+/* ─────────────────────────────────────────
+ * Portfolio section header override
+ * ───────────────────────────────────────── */
+.sec-in--portfolio { position: absolute; top: 0; left: 0; right: 0; z-index: 10; pointer-events: none; padding: 48px 48px 16px 48px; }
+
+/* ─────────────────────────────────────────
+ * Manager note block
+ * ───────────────────────────────────────── */
+.mgr-note { margin-top: 20px; display: flex; align-items: flex-start; gap: 16px; max-width: 380px; }
+.mgr-note__icon { flex-shrink: 0; margin-top: 3px; }
+.mgr-note__text { font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.75; margin: 0; }
+.mgr-note__accent { color: #fff; font-weight: 500; }
+
+/* ─────────────────────────────────────────
+ * Footer privacy bar
+ * ───────────────────────────────────────── */
+.footer-privacy { border-top: 1px solid rgba(255,255,255,0.05); padding: 16px 40px; text-align: center; }
+.footer-privacy__link { font-size: 11px; letter-spacing: .1em; color: rgba(255,255,255,.3); text-decoration: none; font-family: var(--fh); transition: color .2s; }
+.footer-privacy__link:hover { color: rgba(255,255,255,.6); }
