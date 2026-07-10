@@ -881,27 +881,3 @@ input[type="date"]{color-scheme:dark;}
 @media(max-width: 768px) {
   .stack-node__spider { display: none; }
 }
-
-/* ── Stack detail panel ── */
-.stack-flow-wrap { display: grid; grid-template-columns: 1fr 320px; gap: 40px; align-items: center; margin-bottom: 40px; }
-.stack-detail { border: 1px solid var(--border); background: var(--bg2); min-height: 180px; position: relative; overflow: visible; opacity: 0; transition: opacity .3s var(--ease2); }
-.stack-detail.visible { opacity: 1; }
-.stack-detail__inner { padding: 28px 28px 28px 48px; position: relative; }
-.stack-detail__connector { position: absolute; left: -200px; top: 50%; transform: translateY(-50%); width: 200px; height: 60px; overflow: visible; pointer-events: none; }
-.stack-detail__connector line { stroke: var(--red); stroke-width: 1; stroke-dasharray: 200; stroke-dashoffset: 200; transition: stroke-dashoffset .5s var(--ease2); filter: drop-shadow(0 0 4px rgba(212,0,0,0.5)); }
-.stack-detail.visible .stack-detail__connector line { stroke-dashoffset: 0; }
-.stack-detail__label { font-family: var(--fh); font-size: 10px; letter-spacing: .2em; color: var(--red); margin-bottom: 16px; text-transform: uppercase; }
-.stack-detail__items { display: flex; flex-direction: column; gap: 10px; }
-.stack-detail__item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted2); opacity: 0; transform: translateX(-8px); transition: opacity .3s var(--ease2), transform .3s var(--ease2); }
-.stack-detail.visible .stack-detail__item:nth-child(1) { opacity:1; transform:none; transition-delay:.2s; }
-.stack-detail.visible .stack-detail__item:nth-child(2) { opacity:1; transform:none; transition-delay:.3s; }
-.stack-detail.visible .stack-detail__item:nth-child(3) { opacity:1; transform:none; transition-delay:.4s; }
-.stack-detail__item::before { content:''; width:4px; height:4px; border-radius:50%; background:var(--red); flex-shrink:0; }
-
-/* Прибираємо старий spider */
-.stack-node__spider { display: none; }
-
-@media(max-width: 900px) {
-  .stack-flow-wrap { grid-template-columns: 1fr; }
-  .stack-detail { display: none; }
-}

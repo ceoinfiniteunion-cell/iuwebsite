@@ -80,56 +80,44 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   items.forEach(el => io.observe(el));
 })();
 
-/* ── STACK NODE DETAIL PANEL ── */
+/* ── STACK NODE SPIDER ── */
 (function(){
   const nodes = document.querySelectorAll('.stack-node[data-node]');
-  const detail = document.getElementById('stackDetail');
-  const labelEl = document.getElementById('stackLabel');
-  const itemsEl = document.getElementById('stackItems');
-  if(!nodes.length || !detail) return;
-
-  const DATA = {
-    form:  { label: 'Форма', items: ['Honeypot захист від ботів', 'Rate-limit 10 req/IP/добу', 'HTTPS шифрування'] },
-    valid: { label: 'Валідація', items: ['Pydantic типи даних', 'Ліміт довжини полів', 'XSS санітизація html.escape()'] },
-    db:    { label: 'База даних', items: ['PostgreSQL параметризовані запити', 'Пул з'єднань ×10', 'Audit log кожної дії'] },
-    queue: { label: 'Черга', items: ['Redis Dead Letter Queue', 'Авто-ретрай при збої', 'Zero data loss гарантія'] },
-    tg:    { label: 'Telegram', items: ['Exponential backoff 1→2→4с', '3 спроби доставки', 'Реакція 15 хвилин'] },
-  };
-
-  let current = null;
-
-  function show(node){
-    const key = node.getAttribute('data-node');
-    const d = DATA[key];
-    if(!d) return;
-
-    labelEl.textContent = d.label;
-    itemsEl.innerHTML = d.items.map(i =>
-      `<div class="stack-detail__item">${i}</div>`
-    ).join('');
-
-    detail.classList.remove('visible');
-    void detail.offsetWidth; // reflow
-    detail.classList.add('visible');
-    current = node;
-  }
-
-  function hide(){
-    detail.classList.remove('visible');
-    current = null;
-  }
+  if(!nodes.length) return;
 
   nodes.forEach(node => {
-    node.addEventListener('mouseenter', () => show(node));
-    node.addEventListener('mouseleave', () => {
-      setTimeout(() => {
-        if(current === node) hide();
-      }, 100);
+    const svg = node.querySelector('.stack-node__spider');
+    if(!svg) return;
+    const lines = svg.querySelectorAll('.spl');
+
+    lines.forEach(line => {
+      const label = line.getAttribute('data-label');
+      const x2 = parseFloat(line.getAttribute('x2'));
+      const y2 = parseFloat(line.getAttribute('y2'));
+
+      /* Dot at end of line */
+      const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      dot.setAttribute('cx', x2);
+      dot.setAttribute('cy', y2);
+      dot.setAttribute('r', '3');
+      dot.setAttribute('class', 'spl-dot');
+      svg.appendChild(dot);
+
+      /* Label */
+      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      text.setAttribute('class', 'spl-label');
+
+      /* Position label beyond the dot */
+      const len = Math.sqrt(x2*x2 + y2*y2);
+      const nx = x2/len, ny = y2/len;
+      const lx = x2 + nx*14;
+      const ly = y2 + ny*14;
+      text.setAttribute('x', lx);
+      text.setAttribute('y', ly);
+      text.setAttribute('dominant-baseline', 'middle');
+      text.setAttribute('text-anchor', x2 > 0 ? 'start' : x2 < 0 ? 'end' : 'middle');
+      text.textContent = label;
+      svg.appendChild(text);
     });
   });
-
-  detail.addEventListener('mouseenter', () => {
-    detail.classList.add('visible');
-  });
-  detail.addEventListener('mouseleave', hide);
 })();
