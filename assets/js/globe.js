@@ -198,3 +198,114 @@
     if(idx>=0 && idx<PROJECTS.length && idx!==currentCard){ targetPhi = PROJECTS[idx].phi; currentCard = idx; }
   },{passive:true});
 })();
+
+/* ── PROCESS WAVES + SEQUENTIAL REVEAL ── */
+(function(){
+  const section = document.getElementById('process');
+  const canvas  = document.getElementById('proc-waves');
+  if(!section || !canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let W = 0, H = 0, progress = 0, started = false, raf = null;
+
+  function resize(){
+    const r = section.getBoundingClientRect();
+    W = canvas.width  = r.width  || section.scrollWidth;
+    H = canvas.height = r.height || section.scrollHeight;
+  }
+
+  const steps   = Array.from(section.querySelectorAll('.proc-step'));
+  const total   = steps.length;
+  let lastLit   = -1;
+  const reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  function drawWaves(prog){
+    ctx.clearRect(0, 0, W, H);
+    const cy   = H * 0.5;
+    const amp  = H * 0.22;
+    const freq = (2 * Math.PI) / W * 3;
+
+    /* Сімейство синусів */
+    for(let i = -5; i <= 5; i++){
+      const visX = W * Math.min(prog, 1);
+      ctx.beginPath();
+      for(let x = 0; x <= visX; x += 2){
+        const y = cy + amp * Math.sin(x * freq + i * 0.6) + i * (H * 0.022);
+        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      const a = 0.18 - Math.abs(i) * 0.013;
+      ctx.strokeStyle = `rgba(212,0,0,${Math.max(a,0.03)})`;
+      ctx.lineWidth   = 1;
+      ctx.shadowColor = '#D40000';
+      ctx.shadowBlur  = i === 0 ? 10 : 0;
+      ctx.stroke();
+      ctx.shadowBlur  = 0;
+    }
+
+    /* Сімейство косинусів */
+    for(let i = -4; i <= 4; i++){
+      const visX = W * Math.min(prog, 1);
+      ctx.beginPath();
+      for(let x = 0; x <= visX; x += 2){
+        const y = cy + amp * Math.cos(x * freq + i * 0.6) + i * (H * 0.022);
+        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      const a = 0.09 - Math.abs(i) * 0.008;
+      ctx.strokeStyle = `rgba(80,100,220,${Math.max(a,0.02)})`;
+      ctx.lineWidth   = 0.8;
+      ctx.stroke();
+    }
+
+    /* Вогник на кінці хвилі */
+    if(prog < 1){
+      const cx2 = W * prog;
+      const cy2 = cy + amp * Math.sin(cx2 * freq);
+      ctx.beginPath();
+      ctx.arc(cx2, cy2, 5, 0, Math.PI * 2);
+      ctx.fillStyle   = '#D40000';
+      ctx.shadowColor = '#D40000';
+      ctx.shadowBlur  = 20;
+      ctx.fill();
+      ctx.shadowBlur  = 0;
+    }
+  }
+
+  function animate(){
+    progress = Math.min(progress + 0.005, 1);
+    drawWaves(progress);
+
+    const lit = Math.floor(progress * total);
+    for(let i = lastLit + 1; i <= Math.min(lit, total - 1); i++){
+      steps[i].classList.add('lit');
+    }
+    lastLit = Math.max(lastLit, Math.min(lit, total - 1));
+
+    if(progress < 1){
+      raf = requestAnimationFrame(animate);
+    } else {
+      steps.forEach(s => s.classList.add('lit'));
+    }
+  }
+
+  function start(){
+    if(started) return;
+    started = true;
+    resize();
+    if(reduced){
+      drawWaves(1);
+      steps.forEach(s => s.classList.add('lit'));
+      return;
+    }
+    animate();
+  }
+
+  window.addEventListener('load', () => {
+    resize();
+    const io = new IntersectionObserver(entries => {
+      if(entries[0].isIntersecting) { start(); io.disconnect(); }
+    }, { threshold: 0.1 });
+    io.observe(section);
+  });
+
+  window.addEventListener('resize', () => { if(started) resize(); }, {passive:true});
+})();
