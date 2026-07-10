@@ -80,44 +80,55 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   items.forEach(el => io.observe(el));
 })();
 
-/* ── STACK NODE SPIDER ── */
+/* ── STACK HOVER PANEL ── */
 (function(){
   const nodes = document.querySelectorAll('.stack-node[data-node]');
   if(!nodes.length) return;
 
-  nodes.forEach(node => {
-    const svg = node.querySelector('.stack-node__spider');
-    if(!svg) return;
-    const lines = svg.querySelectorAll('.spl');
+  const DATA = {
+    form:  {label:'Форма',        items:['Honeypot захист від ботів','Rate-limit 10 req/IP/добу','HTTPS шифрування']},
+    valid: {label:'Валідація',    items:['Pydantic типи даних','Ліміт довжини полів','XSS санітизація']},
+    db:    {label:'База даних',   items:['PostgreSQL параметризовані запити','Пул зʼєднань ×10','Audit log кожної дії']},
+    queue: {label:'Черга',        items:['Redis Dead Letter Queue','Авто-ретрай при збої','Zero data loss']},
+    tg:    {label:'Telegram',     items:['Exponential backoff 1→2→4с','3 спроби доставки','Реакція 15 хвилин']},
+  };
 
-    lines.forEach(line => {
-      const label = line.getAttribute('data-label');
-      const x2 = parseFloat(line.getAttribute('x2'));
-      const y2 = parseFloat(line.getAttribute('y2'));
+  /* Створюємо панель через JS */
+  const panel = document.createElement('div');
+  panel.className = 'stkp';
+  const lbl = document.createElement('div');
+  lbl.className = 'stkp__lbl';
+  panel.appendChild(lbl);
+  document.body.appendChild(panel);
 
-      /* Dot at end of line */
-      const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      dot.setAttribute('cx', x2);
-      dot.setAttribute('cy', y2);
-      dot.setAttribute('r', '3');
-      dot.setAttribute('class', 'spl-dot');
-      svg.appendChild(dot);
+  let timer = null;
 
-      /* Label */
-      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-      text.setAttribute('class', 'spl-label');
-
-      /* Position label beyond the dot */
-      const len = Math.sqrt(x2*x2 + y2*y2);
-      const nx = x2/len, ny = y2/len;
-      const lx = x2 + nx*14;
-      const ly = y2 + ny*14;
-      text.setAttribute('x', lx);
-      text.setAttribute('y', ly);
-      text.setAttribute('dominant-baseline', 'middle');
-      text.setAttribute('text-anchor', x2 > 0 ? 'start' : x2 < 0 ? 'end' : 'middle');
-      text.textContent = label;
-      svg.appendChild(text);
+  function show(node){
+    const d = DATA[node.getAttribute('data-node')];
+    if(!d) return;
+    clearTimeout(timer);
+    lbl.textContent = d.label;
+    /* Видаляємо старі items */
+    Array.from(panel.querySelectorAll('.stkp__item')).forEach(el => el.remove());
+    d.items.forEach(txt => {
+      const el = document.createElement('div');
+      el.className = 'stkp__item';
+      el.textContent = txt;
+      panel.appendChild(el);
     });
+    panel.classList.remove('on');
+    void panel.offsetWidth;
+    panel.classList.add('on');
+  }
+
+  function hide(){
+    timer = setTimeout(() => panel.classList.remove('on'), 150);
+  }
+
+  nodes.forEach(n => {
+    n.addEventListener('mouseenter', () => show(n));
+    n.addEventListener('mouseleave', hide);
   });
+  panel.addEventListener('mouseenter', () => clearTimeout(timer));
+  panel.addEventListener('mouseleave', hide);
 })();
