@@ -801,3 +801,18 @@ input[type="date"]{color-scheme:dark;}
   border-color: var(--red);
   box-shadow: 0 0 14px var(--red-glow);
 }
+
+/* ── Process sticky scroll (like globe) ── */
+.proc-sticky-wrap {
+  position: relative;
+  height: 400vh;
+}
+.proc-sticky-wrap .sec-in {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}

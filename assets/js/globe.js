@@ -199,127 +199,115 @@
   },{passive:true});
 })();
 
-/* ── PROCESS WAVES + SEQUENTIAL REVEAL ── */
+/* ── PROCESS WAVES + STICKY SCROLL ── */
 (function(){
   const section = document.getElementById('process');
   const canvas  = document.getElementById('proc-waves');
   if(!section || !canvas) return;
 
-  const ctx = canvas.getContext('2d');
-  let W = 0, H = 0, progress = 0, started = false, raf = null;
+  const ctx   = canvas.getContext('2d');
+  const steps = Array.from(section.querySelectorAll('.proc-step'));
+  const total = steps.length;
+  const reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  let W = 0, H = 0;
 
   function resize(){
-    const r = section.getBoundingClientRect();
-    W = canvas.width  = r.width  || section.scrollWidth;
-    H = canvas.height = r.height || section.scrollHeight;
+    const inner = section.querySelector('.sec-in');
+    W = canvas.width  = inner ? inner.offsetWidth : section.offsetWidth;
+    H = canvas.height = inner ? inner.offsetHeight : section.offsetHeight;
   }
 
-  const steps   = Array.from(section.querySelectorAll('.proc-step'));
-  const total   = steps.length;
-  let lastLit   = -1;
-  const reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function getProgress(){
+    const r   = section.getBoundingClientRect();
+    const total_h = section.offsetHeight - window.innerHeight;
+    const scrolled = -r.top;
+    return Math.max(0, Math.min(1, scrolled / total_h));
+  }
 
-  function drawWaves(prog){
-    ctx.clearRect(0, 0, W, H);
-
-    /* Точки кроків — горизонтальні позиції */
-    const dotXs = steps.map((_, i) => {
-      const el = steps[i].querySelector('.proc-dot');
-      if(!el) return W * (i + 0.5) / total;
-      const r = el.getBoundingClientRect();
-      const sr = section.getBoundingClientRect();
-      return r.left - sr.left + r.width / 2;
+  function getDotPositions(){
+    const inner = section.querySelector('.sec-in');
+    const ir = inner ? inner.getBoundingClientRect() : section.getBoundingClientRect();
+    return steps.map(s => {
+      const dot = s.querySelector('.proc-dot');
+      if(!dot) return { x: 0, y: H * 0.55 };
+      const dr = dot.getBoundingClientRect();
+      return {
+        x: dr.left - ir.left + dr.width / 2,
+        y: dr.top  - ir.top  + dr.height / 2
+      };
     });
+  }
 
-    /* Лінія йде від першої до останньої точки */
-    const startX = dotXs[0] || 0;
-    const endX   = dotXs[dotXs.length - 1] || W;
+  function draw(prog){
+    ctx.clearRect(0, 0, W, H);
+    const dots = getDotPositions();
+    if(!dots.length) return;
+
+    const startX = dots[0].x;
+    const endX   = dots[dots.length - 1].x;
     const lineW  = endX - startX;
-    const visX   = startX + lineW * Math.min(prog, 1);
+    const visX   = startX + lineW * prog;
+    const cy     = dots[0].y;
+    const amp    = 22;
+    const freq   = (2 * Math.PI) / lineW * 2.5;
 
-    /* Висота — посередині між заголовком і точками */
-    const dotEl  = steps[0].querySelector('.proc-dot');
-    const dotR   = dotEl ? dotEl.getBoundingClientRect() : null;
-    const secR   = section.getBoundingClientRect();
-    const dotY   = dotR ? dotR.top - secR.top + dotR.height / 2 : H * 0.55;
-    const cy     = dotY;
-    const amp    = 28;
-    const freq   = (2 * Math.PI) / lineW * 3;
-
-    /* Сімейство синусів */
-    for(let i = -3; i <= 3; i++){
+    /* 5 синус-ліній — менше ніж раніше */
+    const offsets = [-2, -1, 0, 1, 2];
+    offsets.forEach(i => {
       ctx.beginPath();
-      for(let x = startX; x <= visX; x += 1){
-        const t = (x - startX) * freq + i * 0.5;
-        const y = cy + amp * Math.sin(t) + i * 7;
+      for(let x = startX; x <= Math.min(visX, endX); x += 1){
+        const t = (x - startX) * freq;
+        const y = cy + amp * Math.sin(t + i * 0.4) + i * 6;
         x === startX ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
       }
-      const a = 0.7 - Math.abs(i) * 0.1;
-      ctx.strokeStyle = `rgba(212,0,0,${Math.max(a, 0.15)})`;
-      ctx.lineWidth   = i === 0 ? 2 : 1;
+      const alpha = i === 0 ? 0.9 : 0.35 - Math.abs(i) * 0.08;
+      ctx.strokeStyle = `rgba(212,0,0,${alpha})`;
+      ctx.lineWidth   = i === 0 ? 2 : 0.8;
       ctx.shadowColor = '#D40000';
-      ctx.shadowBlur  = i === 0 ? 16 : 2;
+      ctx.shadowBlur  = i === 0 ? 14 : 0;
       ctx.stroke();
       ctx.shadowBlur  = 0;
-    }
+    });
 
-
-
-    /* Підсвічуємо пройдені точки */
-    dotXs.forEach((dx, i) => {
-      if(dx > visX) return;
+    /* Точки — підсвічуємо по мірі проходження */
+    dots.forEach((d, i) => {
+      const passed = d.x <= visX + 2;
       ctx.beginPath();
-      ctx.arc(dx, cy, 6, 0, Math.PI * 2);
-      ctx.fillStyle   = '#D40000';
+      ctx.arc(d.x, cy, passed ? 6 : 4, 0, Math.PI * 2);
+      ctx.fillStyle   = passed ? '#D40000' : 'rgba(212,0,0,0.3)';
+      ctx.shadowColor = '#D40000';
+      ctx.shadowBlur  = passed ? 18 : 0;
+      ctx.fill();
+      ctx.shadowBlur  = 0;
+
+      /* Підсвічуємо картку */
+      if(passed) steps[i].classList.add('lit');
+    });
+
+    /* Вогник */
+    if(prog < 1 && prog > 0){
+      const t  = (visX - startX) * freq;
+      const vy = cy + amp * Math.sin(t);
+      ctx.beginPath();
+      ctx.arc(visX, vy, 4, 0, Math.PI * 2);
+      ctx.fillStyle   = '#ffffff';
       ctx.shadowColor = '#D40000';
       ctx.shadowBlur  = 20;
       ctx.fill();
       ctx.shadowBlur  = 0;
-    });
-
-    /* Вогник на кінці */
-    if(prog < 1){
-      const t  = (visX - startX) * freq;
-      const vy = cy + amp * Math.sin(t);
-      ctx.beginPath();
-      ctx.arc(visX, vy, 5, 0, Math.PI * 2);
-      ctx.fillStyle   = '#fff';
-      ctx.shadowColor = '#D40000';
-      ctx.shadowBlur  = 24;
-      ctx.fill();
-      ctx.shadowBlur  = 0;
     }
   }
 
-  function getScrollProgress(){
-    const secR = section.getBoundingClientRect();
-    const winH = window.innerHeight;
-    /* 0 = секція тільки з'явилась знизу, 1 = секція повністю пройдена */
-    const start = winH;
-    const end   = -secR.height + winH * 0.3;
-    const raw   = (start - secR.top) / (start - end);
-    return Math.max(0, Math.min(1, raw));
-  }
-
   function onScroll(){
-    if(!started) return;
-    const prog = getScrollProgress();
-    drawWaves(prog);
-
-    /* Підсвічуємо картки по прогресу */
-    const lit = Math.floor(prog * total);
-    steps.forEach((s, i) => {
-      if(i < lit) s.classList.add('lit');
-    });
+    const prog = getProgress();
+    draw(prog);
     if(prog >= 1) steps.forEach(s => s.classList.add('lit'));
   }
 
-  function start(){
-    if(started) return;
-    started = true;
+  function init(){
     resize();
     if(reduced){
-      drawWaves(1);
+      draw(1);
       steps.forEach(s => s.classList.add('lit'));
       return;
     }
@@ -327,16 +315,10 @@
     onScroll();
   }
 
-  window.addEventListener('resize', () => {
-    if(started){ resize(); onScroll(); }
-  }, {passive:true});
+  window.addEventListener('resize', () => { resize(); onScroll(); }, {passive:true});
 
   const io = new IntersectionObserver(entries => {
-    if(entries[0].isIntersecting && !started){
-      resize();
-      start();
-      io.disconnect();
-    }
+    if(entries[0].isIntersecting){ init(); io.disconnect(); }
   }, { threshold: 0.05 });
   io.observe(section);
 })();
