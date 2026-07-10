@@ -80,62 +80,138 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   items.forEach(el => io.observe(el));
 })();
 
-/* ── STACK HOVER PANEL ── */
+/* ── STACK NODE RADIAL POPUP ── */
 (function(){
   const nodes = document.querySelectorAll('.stack-node[data-node]');
   if(!nodes.length) return;
 
-  const DATA = {
-    form:  {label:'Форма',        items:['Honeypot захист від ботів','Rate-limit 10 req/IP/добу','HTTPS шифрування']},
-    valid: {label:'Валідація',    items:['Pydantic типи даних','Ліміт довжини полів','XSS санітизація']},
-    db:    {label:'База даних',   items:['PostgreSQL параметризовані запити','Пул зʼєднань ×10','Audit log кожної дії']},
-    queue: {label:'Черга',        items:['Redis Dead Letter Queue','Авто-ретрай при збої','Zero data loss']},
-    tg:    {label:'Telegram',     items:['Exponential backoff 1→2→4с','3 спроби доставки','Реакція 15 хвилин']},
+  const COLORS = {
+    form:  { color: '#FFFFFF', glow: 'rgba(255,255,255,0.25)', name: 'Форма',      items: ['Honeypot захист від ботів', 'Rate-limit 10 req/IP/добу', 'HTTPS шифрування'] },
+    valid: { color: '#22C55E', glow: 'rgba(34,197,94,0.25)',   name: 'Валідація',  items: ['Pydantic типи даних', 'Ліміт довжини полів', 'XSS санітизація'] },
+    db:    { color: '#EAB308', glow: 'rgba(234,179,8,0.25)',   name: 'База даних', items: ['PostgreSQL параметризовані запити', 'Пул зʼєднань ×10', 'Audit log кожної дії'] },
+    queue: { color: '#D40000', glow: 'rgba(212,0,0,0.25)',     name: 'Черга',      items: ['Redis Dead Letter Queue', 'Авто-ретрай при збої', 'Zero data loss'] },
+    tg:    { color: '#29B6F6', glow: 'rgba(41,182,246,0.25)',  name: 'Telegram',   items: ['Exponential backoff 1→2→4с', '3 спроби доставки', 'Реакція 15 хвилин'] },
   };
 
-  /* Створюємо панель через JS */
-  const panel = document.createElement('div');
-  panel.className = 'stkp';
-  const lbl = document.createElement('div');
-  lbl.className = 'stkp__lbl';
-  panel.appendChild(lbl);
-  /* Вставляємо в секцію stack щоб position:absolute працював відносно неї */
-  const stackSection = document.getElementById('stack');
-  if(stackSection){
-    stackSection.style.position = 'relative';
-    stackSection.appendChild(panel);
-  } else {
-    document.body.appendChild(panel);
-  }
+  /* Overlay */
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0;transition:opacity .3s;background:rgba(6,4,4,0.7);backdrop-filter:blur(2px);';
+  document.body.appendChild(overlay);
 
-  let timer = null;
+  /* Popup container */
+  const popup = document.createElement('div');
+  popup.style.cssText = 'position:fixed;z-index:9999;pointer-events:none;opacity:0;transition:opacity .25s,transform .35s cubic-bezier(0.34,1.56,0.64,1);transform:scale(0.6);left:50%;top:50%;translate:-50% -50%;';
+  document.body.appendChild(popup);
+
+  let hideTimer = null;
+  let currentKey = null;
 
   function show(node){
-    const d = DATA[node.getAttribute('data-node')];
+    const key = node.getAttribute('data-node');
+    if(key === currentKey) return;
+    currentKey = key;
+    clearTimeout(hideTimer);
+    const d = COLORS[key];
     if(!d) return;
-    clearTimeout(timer);
-    lbl.textContent = d.label;
-    /* Видаляємо старі items */
-    Array.from(panel.querySelectorAll('.stkp__item')).forEach(el => el.remove());
-    d.items.forEach(txt => {
-      const el = document.createElement('div');
-      el.className = 'stkp__item';
-      el.textContent = txt;
-      panel.appendChild(el);
-    });
-    panel.classList.remove('on');
-    void panel.offsetWidth;
-    panel.classList.add('on');
+
+    /* Get node icon HTML */
+    const iconEl = node.querySelector('.stack-node__icon');
+    const iconHTML = iconEl ? iconEl.innerHTML : '';
+
+    /* Кути променів по годинниковій стрілці: вгору, вгору-право, право, низ-право, низ */
+    const angles = [-90, -30, 30, 90, 150, 210];
+    const labels = d.items.length === 3
+      ? [d.items[0], '', d.items[1], '', d.items[2], '']
+      : d.items.map((it, i) => i < angles.length ? it : '');
+
+    const rayLen = 130;
+    const rays = angles.map((a, i) => {
+      const rad = a * Math.PI / 180;
+      const x2 = Math.cos(rad) * rayLen;
+      const y2 = Math.sin(rad) * rayLen;
+      const lx = Math.cos(rad) * (rayLen + 16);
+      const ly = Math.sin(rad) * (rayLen + 16);
+      const anchor = Math.abs(a) > 120 ? 'end' : Math.abs(a) < 60 ? 'start' : 'middle';
+      const label = labels[i] || '';
+      return `
+        <line class="ray" x1="0" y1="0" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}"
+          stroke="${d.color}" stroke-width="1" stroke-dasharray="130" stroke-dashoffset="130"
+          style="transition:stroke-dashoffset .5s cubic-bezier(.4,0,.2,1) ${i*0.06}s;filter:drop-shadow(0 0 4px ${d.color})"/>
+        <circle cx="${x2.toFixed(1)}" cy="${y2.toFixed(1)}" r="3" fill="${d.color}"
+          style="opacity:0;transition:opacity .3s .4s;filter:drop-shadow(0 0 6px ${d.color})"/>
+        ${label ? `<text x="${lx.toFixed(1)}" y="${(ly+4).toFixed(1)}"
+          text-anchor="${anchor}"
+          style="font-family:var(--fh,Arial);font-size:10px;letter-spacing:.08em;fill:${d.color};opacity:0;transition:opacity .4s ${0.3+i*0.06}s;filter:drop-shadow(0 0 8px ${d.color})"
+        >${label}</text>` : ''}
+      `;
+    }).join('');
+
+    popup.innerHTML = `
+      <svg viewBox="-280 -240 560 480" width="560" height="480" style="overflow:visible;">
+        <defs>
+          <filter id="nodeglow">
+            <feGaussianBlur stdDeviation="8" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        ${rays}
+
+        <!-- Клон вузла -->
+        <rect x="-44" y="-44" width="88" height="88" rx="2"
+          fill="rgba(6,4,4,0.95)" stroke="${d.color}" stroke-width="1.5"
+          style="filter:drop-shadow(0 0 20px ${d.color}) drop-shadow(0 0 40px ${d.glow})"/>
+
+        <!-- Іконка -->
+        <foreignObject x="-14" y="-22" width="28" height="28">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="color:${d.color};display:flex;align-items:center;justify-content:center;width:28px;height:28px;">
+            ${iconHTML}
+          </div>
+        </foreignObject>
+
+        <!-- Назва -->
+        <text x="0" y="28" text-anchor="middle"
+          style="font-family:var(--fh,Arial);font-size:11px;letter-spacing:.12em;fill:${d.color};text-transform:uppercase;">
+          ${d.name}
+        </text>
+
+        <!-- Пульс -->
+        <circle cx="0" cy="0" r="60" fill="none" stroke="${d.color}" stroke-width="0.5" opacity="0.2"
+          style="animation:popupPulse 2s ease-in-out infinite;"/>
+        <circle cx="0" cy="0" r="80" fill="none" stroke="${d.color}" stroke-width="0.3" opacity="0.1"
+          style="animation:popupPulse 2s ease-in-out infinite .5s;"/>
+      </svg>
+    `;
+
+    overlay.style.opacity = '1';
+    popup.style.opacity = '1';
+    popup.style.transform = 'scale(1)';
+
+    /* Анімуємо промені */
+    setTimeout(() => {
+      popup.querySelectorAll('.ray').forEach(r => r.setAttribute('stroke-dashoffset','0'));
+      popup.querySelectorAll('circle[r="3"]').forEach(c => c.style.opacity = '1');
+      popup.querySelectorAll('text').forEach(t => t.style.opacity = '1');
+    }, 50);
   }
 
   function hide(){
-    timer = setTimeout(() => panel.classList.remove('on'), 150);
+    hideTimer = setTimeout(() => {
+      overlay.style.opacity = '0';
+      popup.style.opacity = '0';
+      popup.style.transform = 'scale(0.6)';
+      currentKey = null;
+    }, 150);
   }
+
+  /* CSS анімація пульсу */
+  const style = document.createElement('style');
+  style.textContent = '@keyframes popupPulse{0%,100%{r:60;opacity:.2}50%{r:75;opacity:.05}}';
+  document.head.appendChild(style);
 
   nodes.forEach(n => {
     n.addEventListener('mouseenter', () => show(n));
     n.addEventListener('mouseleave', hide);
   });
-  panel.addEventListener('mouseenter', () => clearTimeout(timer));
-  panel.addEventListener('mouseleave', hide);
+  overlay.addEventListener('click', hide);
 })();
