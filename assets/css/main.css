@@ -806,3 +806,78 @@ input[type="date"]{color-scheme:dark;}
 .proc-sticky-wrap {
   position: relative;
 }
+
+/* ── Stack node spider animation ── */
+.stack-node { position: relative; }
+
+.stack-node__spider {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 20;
+  overflow: visible;
+}
+
+.stack-node__spider .spl {
+  stroke: var(--red);
+  stroke-width: 1;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  transition: stroke-dashoffset 0s;
+  filter: drop-shadow(0 0 4px rgba(212,0,0,0.6));
+}
+
+/* Labels on lines */
+.stack-node__spider .spl-label {
+  font-family: var(--fh);
+  font-size: 9px;
+  letter-spacing: .1em;
+  fill: var(--fg);
+  opacity: 0;
+  transition: opacity 0s;
+}
+
+/* Dot at line end */
+.stack-node__spider .spl-dot {
+  fill: var(--red);
+  r: 3;
+  opacity: 0;
+  transition: opacity 0s;
+  filter: drop-shadow(0 0 6px rgba(212,0,0,0.8));
+}
+
+/* Active state */
+.stack-node:hover .stack-node__spider .spl,
+.stack-node.active .stack-node__spider .spl {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.5s var(--ease2);
+}
+
+.stack-node:hover .stack-node__spider .spl:nth-child(1),
+.stack-node.active .stack-node__spider .spl:nth-child(1) { transition-delay: 0s; }
+.stack-node:hover .stack-node__spider .spl:nth-child(2),
+.stack-node.active .stack-node__spider .spl:nth-child(2) { transition-delay: 0.12s; }
+.stack-node:hover .stack-node__spider .spl:nth-child(3),
+.stack-node.active .stack-node__spider .spl:nth-child(3) { transition-delay: 0.24s; }
+
+.stack-node:hover .stack-node__spider .spl-label,
+.stack-node:hover .stack-node__spider .spl-dot,
+.stack-node.active .stack-node__spider .spl-label,
+.stack-node.active .stack-node__spider .spl-dot {
+  opacity: 1;
+  transition: opacity 0.3s var(--ease2) 0.4s;
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .stack-node__spider .spl { stroke-dashoffset: 0; }
+  .stack-node__spider .spl-label,
+  .stack-node__spider .spl-dot { opacity: 1; }
+}
+
+@media(max-width: 768px) {
+  .stack-node__spider { display: none; }
+}

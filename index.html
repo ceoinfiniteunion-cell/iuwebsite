@@ -310,45 +310,75 @@
     <p class="stack-sub rev">Ми будуємо не «сайти», а системи, які не втрачають ваших клієнтів навіть коли щось ламається.</p>
 
     <div class="stack-flow rev">
-      <div class="stack-node" data-tip="Захищена від ботів. Honeypot + rate-limit.">
+
+      <div class="stack-node" data-node="form">
         <div class="stack-node__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M6 8h8M6 11h5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
         <div class="stack-node__name">Форма</div>
-        <div class="stack-node__tip">Захищена від ботів. Honeypot + rate-limit.</div>
+        <svg class="stack-node__spider" viewBox="-120 -120 240 240" xmlns="http://www.w3.org/2000/svg">
+          <line class="spl" x1="0" y1="0" x2="0" y2="-100" data-label="Honeypot захист" data-angle="-90"/>
+          <line class="spl" x1="0" y1="0" x2="85" y2="-55" data-label="Rate-limit по IP" data-angle="-33"/>
+          <line class="spl" x1="0" y1="0" x2="85" y2="55" data-label="HTTPS шифрування" data-angle="33"/>
+        </svg>
       </div>
+
       <div class="stack-arrow">→</div>
-      <div class="stack-node" data-tip="Перевіряємо кожне поле. Жодного «сміття» в базі.">
+
+      <div class="stack-node" data-node="valid">
         <div class="stack-node__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 7v6l7 5 7-5V7l-7-5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="stack-node__name">Валідація</div>
-        <div class="stack-node__tip">Перевіряємо кожне поле. Жодного «сміття» в базі.</div>
+        <svg class="stack-node__spider" viewBox="-120 -120 240 240" xmlns="http://www.w3.org/2000/svg">
+          <line class="spl" x1="0" y1="0" x2="0" y2="-100" data-label="Pydantic типи" data-angle="-90"/>
+          <line class="spl" x1="0" y1="0" x2="85" y2="-55" data-label="Ліміт довжини" data-angle="-33"/>
+          <line class="spl" x1="0" y1="0" x2="85" y2="55" data-label="XSS санітизація" data-angle="33"/>
+        </svg>
       </div>
+
       <div class="stack-arrow">→</div>
-      <div class="stack-node" data-tip="PostgreSQL. Параметризовані запити — SQL-ін'єкції неможливі.">
+
+      <div class="stack-node" data-node="db">
         <div class="stack-node__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><ellipse cx="10" cy="6" rx="7" ry="3" stroke="currentColor" stroke-width="1.2"/><path d="M3 6v4c0 1.657 3.134 3 7 3s7-1.343 7-3V6" stroke="currentColor" stroke-width="1.2"/><path d="M3 10v4c0 1.657 3.134 3 7 3s7-1.343 7-3v-4" stroke="currentColor" stroke-width="1.2"/></svg>
         </div>
         <div class="stack-node__name">База даних</div>
-        <div class="stack-node__tip">PostgreSQL. Параметризовані запити — SQL-ін'єкції неможливі.</div>
+        <svg class="stack-node__spider" viewBox="-120 -120 240 240" xmlns="http://www.w3.org/2000/svg">
+          <line class="spl" x1="0" y1="0" x2="0" y2="-100" data-label="PostgreSQL" data-angle="-90"/>
+          <line class="spl" x1="0" y1="0" x2="85" y2="-55" data-label="Параметризовані запити" data-angle="-33"/>
+          <line class="spl" x1="0" y1="0" x2="85" y2="55" data-label="Пул з'єднань ×10" data-angle="33"/>
+        </svg>
       </div>
+
       <div class="stack-arrow">→</div>
-      <div class="stack-node" data-tip="Якщо база впала — заявка не втрачається, а чекає у черзі.">
+
+      <div class="stack-node" data-node="queue">
         <div class="stack-node__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 5h12M4 10h12M4 15h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
         <div class="stack-node__name">Черга</div>
-        <div class="stack-node__tip">Якщо база впала — заявка не втрачається, а чекає у черзі.</div>
+        <svg class="stack-node__spider" viewBox="-120 -120 240 240" xmlns="http://www.w3.org/2000/svg">
+          <line class="spl" x1="0" y1="0" x2="0" y2="-100" data-label="Redis DLQ" data-angle="-90"/>
+          <line class="spl" x1="0" y1="0" x2="85" y2="-55" data-label="Авто-ретрай" data-angle="-33"/>
+          <line class="spl" x1="0" y1="0" x2="85" y2="55" data-label="Zero data loss" data-angle="33"/>
+        </svg>
       </div>
+
       <div class="stack-arrow">→</div>
-      <div class="stack-node" data-tip="Миттєве сповіщення. Не доставилось — повторюємо автоматично.">
+
+      <div class="stack-node" data-node="tg">
         <div class="stack-node__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17 3L3 9l6 2 2 6 6-14z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
         </div>
         <div class="stack-node__name">Telegram</div>
-        <div class="stack-node__tip">Миттєве сповіщення. Не доставилось — повторюємо автоматично.</div>
+        <svg class="stack-node__spider" viewBox="-120 -120 240 240" xmlns="http://www.w3.org/2000/svg">
+          <line class="spl" x1="0" y1="0" x2="0" y2="-100" data-label="Exponential backoff" data-angle="-90"/>
+          <line class="spl" x1="0" y1="0" x2="85" y2="-55" data-label="3 спроби доставки" data-angle="-33"/>
+          <line class="spl" x1="0" y1="0" x2="85" y2="55" data-label="15 хв реакція" data-angle="33"/>
+        </svg>
       </div>
+
     </div>
 
     <div class="stack-highlight rev">

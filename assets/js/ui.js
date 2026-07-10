@@ -79,3 +79,45 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   }, { threshold: 0.1 });
   items.forEach(el => io.observe(el));
 })();
+
+/* ── STACK NODE SPIDER ── */
+(function(){
+  const nodes = document.querySelectorAll('.stack-node[data-node]');
+  if(!nodes.length) return;
+
+  nodes.forEach(node => {
+    const svg = node.querySelector('.stack-node__spider');
+    if(!svg) return;
+    const lines = svg.querySelectorAll('.spl');
+
+    lines.forEach(line => {
+      const label = line.getAttribute('data-label');
+      const x2 = parseFloat(line.getAttribute('x2'));
+      const y2 = parseFloat(line.getAttribute('y2'));
+
+      /* Dot at end of line */
+      const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      dot.setAttribute('cx', x2);
+      dot.setAttribute('cy', y2);
+      dot.setAttribute('r', '3');
+      dot.setAttribute('class', 'spl-dot');
+      svg.appendChild(dot);
+
+      /* Label */
+      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      text.setAttribute('class', 'spl-label');
+
+      /* Position label beyond the dot */
+      const len = Math.sqrt(x2*x2 + y2*y2);
+      const nx = x2/len, ny = y2/len;
+      const lx = x2 + nx*14;
+      const ly = y2 + ny*14;
+      text.setAttribute('x', lx);
+      text.setAttribute('y', ly);
+      text.setAttribute('dominant-baseline', 'middle');
+      text.setAttribute('text-anchor', x2 > 0 ? 'start' : x2 < 0 ? 'end' : 'middle');
+      text.textContent = label;
+      svg.appendChild(text);
+    });
+  });
+})();
