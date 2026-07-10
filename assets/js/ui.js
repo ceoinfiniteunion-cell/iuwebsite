@@ -100,7 +100,20 @@ document.getElementById('cForm').addEventListener('submit',function(e){
 
   /* Popup container */
   const popup = document.createElement('div');
-  popup.style.cssText = 'position:fixed;z-index:9999;pointer-events:none;opacity:0;transition:opacity .25s,transform .35s cubic-bezier(0.34,1.56,0.64,1);transform:scale(0.6);left:50%;top:50%;translate:-50% -50%;';
+  popup.style.cssText = 'position:fixed;z-index:9999;pointer-events:none;opacity:0;transition:opacity .25s,transform .35s cubic-bezier(0.34,1.56,0.64,1);transform:scale(0.6);';
+
+  function positionPopup(node){
+    const stackSection = document.getElementById('stack');
+    if(!stackSection) return;
+    const sr = stackSection.getBoundingClientRect();
+    const nr = node.getBoundingClientRect();
+    /* Центр по вертикалі відносно секції, праворуч від вузлів */
+    const rightZoneX = sr.left + sr.width * 0.72;
+    const centerY = nr.top + nr.height / 2;
+    popup.style.left = rightZoneX + 'px';
+    popup.style.top = centerY + 'px';
+    popup.style.translate = '-50% -50%';
+  }
   document.body.appendChild(popup);
 
   let hideTimer = null;
@@ -183,6 +196,7 @@ document.getElementById('cForm').addEventListener('submit',function(e){
       </svg>
     `;
 
+    positionPopup(node);
     overlay.style.opacity = '1';
     popup.style.opacity = '1';
     popup.style.transform = 'scale(1)';
