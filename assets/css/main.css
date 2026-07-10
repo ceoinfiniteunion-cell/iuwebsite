@@ -805,7 +805,8 @@ input[type="date"]{color-scheme:dark;}
 /* ── Process sticky scroll (like globe) ── */
 .proc-sticky-wrap {
   position: relative;
-  height: 400vh;
+  height: 350vh;
+  margin-top: 0;
 }
 .proc-sticky-wrap .sec-in {
   position: sticky;
@@ -814,5 +815,15 @@ input[type="date"]{color-scheme:dark;}
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 80px;
   overflow: hidden;
+}
+.proc-waves-canvas {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
