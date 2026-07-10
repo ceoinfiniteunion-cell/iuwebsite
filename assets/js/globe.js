@@ -34,6 +34,7 @@
 
   function drawLines(){
     if(!ctx2d || !overlay || !canvas) return;
+    // Розмір overlay canvas = розмір екрана в фізичних пікселях
     const dpr = window.devicePixelRatio || 1;
     const W = window.innerWidth;
     const H = window.innerHeight;
@@ -41,58 +42,35 @@
     ctx2d.clearRect(0, 0, overlay.width, overlay.height);
     const cards = document.querySelectorAll('.gs-card.active');
     if(cards.length === 0) return;
-
+    // Центр глобуса в screen coords
     const gr = canvas.getBoundingClientRect();
-    const globeX = gr.left + gr.width  * 0.5;
-    const globeY = gr.top  + gr.height * 0.5;
-    const globeR = gr.width * 0.46;
+    const globeX = gr.left + gr.width  * 0.24;
+    const globeY = gr.top  + gr.height * 0.55;
+    // Малюємо в фізичних пікселях
     const sx = globeX * dpr;
     const sy = globeY * dpr;
-    const sr = globeR * dpr;
-
     document.querySelectorAll('.gs-card').forEach((card) => {
       if(!card.classList.contains('active')) return;
       const cr = card.getBoundingClientRect();
       const ex = (cr.left + cr.width  * 0.5) * dpr;
       const ey = (cr.top  + cr.height * 0.5) * dpr;
-
-      const angle = Math.atan2(ey - sy, ex - sx);
-      /* Лінія стартує з краю глобуса */
-      const startX = sx + Math.cos(angle) * sr;
-      const startY = sy + Math.sin(angle) * sr;
-
-      const grad = ctx2d.createLinearGradient(startX, startY, ex, ey);
-      grad.addColorStop(0, 'rgba(212,0,0,0.6)');
-      grad.addColorStop(0.5, 'rgba(212,0,0,0.2)');
-      grad.addColorStop(1, 'rgba(212,0,0,0.05)');
-
+      const grad = ctx2d.createLinearGradient(sx, sy, ex, ey);
+      grad.addColorStop(0, 'rgba(212,0,0,0.9)');
+      grad.addColorStop(1, 'rgba(212,0,0,0.2)');
       ctx2d.beginPath();
-      ctx2d.moveTo(startX, startY);
+      ctx2d.moveTo(sx, sy);
       ctx2d.lineTo(ex, ey);
       ctx2d.strokeStyle = grad;
-      ctx2d.lineWidth = 0.8 * dpr;
-      ctx2d.shadowBlur = 6 * dpr;
-      ctx2d.shadowColor = 'rgba(212,0,0,0.4)';
+      ctx2d.lineWidth = 1.5 * dpr;
+      ctx2d.shadowBlur = 8 * dpr;
+      ctx2d.shadowColor = '#d40000';
       ctx2d.stroke();
-      ctx2d.shadowBlur = 0;
-
       ctx2d.beginPath();
-      ctx2d.arc(ex, ey, 2.5 * dpr, 0, Math.PI * 2);
-      ctx2d.fillStyle = 'rgba(212,0,0,0.4)';
+      ctx2d.arc(ex, ey, 4 * dpr, 0, Math.PI*2);
+      ctx2d.fillStyle = '#d40000';
+      ctx2d.shadowBlur = 12 * dpr;
       ctx2d.fill();
     });
-
-    /* Маска — стираємо лінії всередині глобуса, глобус поверх */
-    ctx2d.save();
-    ctx2d.globalCompositeOperation = 'destination-out';
-    const mask = ctx2d.createRadialGradient(sx, sy, sr * 0.65, sx, sy, sr * 0.95);
-    mask.addColorStop(0, 'rgba(0,0,0,1)');
-    mask.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx2d.beginPath();
-    ctx2d.arc(sx, sy, sr * 0.95, 0, Math.PI * 2);
-    ctx2d.fillStyle = mask;
-    ctx2d.fill();
-    ctx2d.restore();
   }
 
     function initGlobe(){
