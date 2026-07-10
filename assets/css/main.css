@@ -704,4 +704,5 @@ input[type="date"]{color-scheme:dark;}
 }
 
 /* Services header — compact when list is removed */
-.sec-in--services-header { padding-bottom: 48px; }
+.sec-in--services-header { padding-bottom: 0; }
+#services.sec { border-bottom: none; }
