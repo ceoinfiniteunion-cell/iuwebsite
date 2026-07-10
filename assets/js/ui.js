@@ -102,18 +102,17 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   const popup = document.createElement('div');
   popup.style.cssText = 'position:fixed;z-index:9999;pointer-events:none;opacity:0;transition:opacity .25s,transform .35s cubic-bezier(0.34,1.56,0.64,1);transform:scale(0.6);';
 
-  function positionPopup(node){
+  function positionPopup(){
     const stackSection = document.getElementById('stack');
     if(!stackSection) return;
     const sr = stackSection.getBoundingClientRect();
-    const nr = node.getBoundingClientRect();
-    /* Центр по вертикалі відносно секції, праворуч від вузлів */
-    const rightZoneX = sr.left + sr.width * 0.72;
-    const centerY = nr.top + nr.height / 2;
-    popup.style.left = rightZoneX + 'px';
-    popup.style.top = centerY + 'px';
+    /* Фіксована точка — завжди права зона секції по центру */
+    popup.style.left = (sr.left + sr.width * 0.76) + 'px';
+    popup.style.top  = (sr.top  + sr.height * 0.5) + 'px';
     popup.style.translate = '-50% -50%';
   }
+  /* Оновлюємо позицію при скролі */
+  window.addEventListener('scroll', () => { if(currentKey) positionPopup(); }, {passive:true});
   document.body.appendChild(popup);
 
   let hideTimer = null;
@@ -196,7 +195,7 @@ document.getElementById('cForm').addEventListener('submit',function(e){
       </svg>
     `;
 
-    positionPopup(node);
+    positionPopup();
     overlay.style.opacity = '1';
     popup.style.opacity = '1';
     popup.style.transform = 'scale(1)';
