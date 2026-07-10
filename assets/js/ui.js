@@ -65,9 +65,9 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   io.observe(section);
 })();
 
-/* ── PROCESS + STACK REVEAL ── */
+/* ── STACK REVEAL ONLY (proc-step handled by snake.js waves) ── */
 (function(){
-  const items = document.querySelectorAll('.proc-step, .stack-sub, .stack-flow, .stack-highlight, .stack-tags');
+  const items = document.querySelectorAll('.stack-sub, .stack-flow, .stack-highlight, .stack-tags');
   if(!items.length) return;
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
