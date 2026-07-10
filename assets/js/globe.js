@@ -263,22 +263,7 @@
       ctx.shadowBlur  = 0;
     }
 
-    /* Сімейство косинусів */
-    for(let i = -2; i <= 2; i++){
-      ctx.beginPath();
-      for(let x = startX; x <= visX; x += 1){
-        const t = (x - startX) * freq + i * 0.5;
-        const y = cy + amp * Math.cos(t) + i * 7;
-        x === startX ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-      }
-      const a = 0.35 - Math.abs(i) * 0.06;
-      ctx.strokeStyle = `rgba(100,140,255,${Math.max(a, 0.08)})`;
-      ctx.lineWidth   = i === 0 ? 1.5 : 0.8;
-      ctx.shadowColor = 'rgba(100,140,255,0.5)';
-      ctx.shadowBlur  = i === 0 ? 10 : 0;
-      ctx.stroke();
-      ctx.shadowBlur  = 0;
-    }
+
 
     /* Підсвічуємо пройдені точки */
     dotXs.forEach((dx, i) => {
@@ -306,21 +291,27 @@
     }
   }
 
-  function animate(){
-    progress = Math.min(progress + 0.005, 1);
-    drawWaves(progress);
+  function getScrollProgress(){
+    const secR = section.getBoundingClientRect();
+    const winH = window.innerHeight;
+    /* 0 = секція тільки з'явилась знизу, 1 = секція повністю пройдена */
+    const start = winH;
+    const end   = -secR.height + winH * 0.3;
+    const raw   = (start - secR.top) / (start - end);
+    return Math.max(0, Math.min(1, raw));
+  }
 
-    const lit = Math.floor(progress * total);
-    for(let i = lastLit + 1; i <= Math.min(lit, total - 1); i++){
-      steps[i].classList.add('lit');
-    }
-    lastLit = Math.max(lastLit, Math.min(lit, total - 1));
+  function onScroll(){
+    if(!started) return;
+    const prog = getScrollProgress();
+    drawWaves(prog);
 
-    if(progress < 1){
-      raf = requestAnimationFrame(animate);
-    } else {
-      steps.forEach(s => s.classList.add('lit'));
-    }
+    /* Підсвічуємо картки по прогресу */
+    const lit = Math.floor(prog * total);
+    steps.forEach((s, i) => {
+      if(i < lit) s.classList.add('lit');
+    });
+    if(prog >= 1) steps.forEach(s => s.classList.add('lit'));
   }
 
   function start(){
@@ -332,19 +323,20 @@
       steps.forEach(s => s.classList.add('lit'));
       return;
     }
-    animate();
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
   }
 
-  window.addEventListener('resize', () => { if(started) resize(); }, {passive:true});
+  window.addEventListener('resize', () => {
+    if(started){ resize(); onScroll(); }
+  }, {passive:true});
 
-  /* Запуск тільки коли секція реально видима на 30% */
   const io = new IntersectionObserver(entries => {
-    const e = entries[0];
-    if(e.isIntersecting && !started) {
+    if(entries[0].isIntersecting && !started){
       resize();
       start();
       io.disconnect();
     }
-  }, { threshold: 0.3, rootMargin: '0px 0px -100px 0px' });
+  }, { threshold: 0.05 });
   io.observe(section);
 })();
