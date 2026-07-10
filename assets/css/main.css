@@ -702,3 +702,6 @@ input[type="date"]{color-scheme:dark;}
   .dir-panel--dark { border-right: none; border-bottom: 1px solid var(--border); }
   .dir-panel__inner { padding: 60px 20px; }
 }
+
+/* Services header — compact when list is removed */
+.sec-in--services-header { padding-bottom: 48px; }
