@@ -218,10 +218,13 @@
   }
 
   function getProgress(){
-    const r   = section.getBoundingClientRect();
-    const total_h = section.offsetHeight - window.innerHeight;
-    const scrolled = -r.top;
-    return Math.max(0, Math.min(1, scrolled / total_h));
+    const r    = section.getBoundingClientRect();
+    const winH = window.innerHeight;
+    /* 0 = секція тільки з'явилась знизу, 1 = секція повністю пройшла */
+    const start = winH;
+    const end   = winH * 0.1;
+    const raw   = (start - r.top) / (start - end);
+    return Math.max(0, Math.min(1, raw));
   }
 
   function getDotPositions(){
