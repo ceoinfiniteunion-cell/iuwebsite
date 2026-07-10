@@ -138,3 +138,113 @@
     renderer.render(scene, cam);
   })();
 })();
+
+/* ── PROCESS WAVES + SEQUENTIAL REVEAL ── */
+(function(){
+  const section = document.getElementById('process');
+  const canvas  = document.getElementById('proc-waves');
+  if(!section || !canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let W, H, raf, progress = 0, started = false;
+
+  function resize(){
+    W = canvas.width  = section.offsetWidth;
+    H = canvas.height = section.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize, {passive:true});
+
+  /* Сімейство хвиль: sin(x+offset) та cos(x+offset) */
+  const WAVES = [];
+  const RED = [212, 0, 0];
+  const BLUE = [60, 80, 180];
+
+  for(let i = -4; i <= 4; i++){
+    WAVES.push({ fn: 'sin', offset: i, color: RED,  alpha: 0.18 - Math.abs(i)*0.015 });
+    WAVES.push({ fn: 'cos', offset: i, color: BLUE, alpha: 0.12 - Math.abs(i)*0.01  });
+  }
+
+  function drawWaves(prog){
+    ctx.clearRect(0, 0, W, H);
+    const cy = H * 0.52;
+    const amp = H * 0.18;
+    const freq = (2 * Math.PI) / W * 3.5;
+
+    WAVES.forEach(w => {
+      const visibleX = W * Math.min(prog, 1);
+      ctx.beginPath();
+      for(let x = 0; x <= visibleX; x += 2){
+        const t = x * freq + w.offset * 0.7;
+        const y = cy + amp * (w.fn === 'sin' ? Math.sin(t) : Math.cos(t))
+                     + w.offset * (H * 0.025);
+        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      /* Glow effect */
+      ctx.shadowColor = `rgb(${w.color.join(',')})`;
+      ctx.shadowBlur  = 8;
+      ctx.strokeStyle = `rgba(${w.color.join(',')},${w.alpha})`;
+      ctx.lineWidth   = 1.2;
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+    });
+
+    /* Провідна точка — вогник на кінці */
+    if(prog < 1){
+      const cx2 = W * prog;
+      const mainT = cx2 * freq;
+      const cy2 = cy + amp * Math.sin(mainT);
+      ctx.beginPath();
+      ctx.arc(cx2, cy2, 4, 0, Math.PI*2);
+      ctx.fillStyle = `rgba(212,0,0,0.9)`;
+      ctx.shadowColor = '#D40000';
+      ctx.shadowBlur = 16;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+  }
+
+  /* Послідовна поява карток синхронно з хвилею */
+  const steps = section.querySelectorAll('.proc-step');
+  const total  = steps.length;
+  let lastLit  = -1;
+
+  function animate(){
+    if(!started) return;
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+    if(prefersReduced){
+      steps.forEach(s => s.classList.add('lit'));
+      drawWaves(1);
+      return;
+    }
+
+    progress = Math.min(progress + 0.006, 1);
+    drawWaves(progress);
+
+    /* Підсвічуємо картку коли хвиля доходить до її позиції */
+    const lit = Math.floor(progress * total);
+    if(lit > lastLit){
+      for(let i = lastLit + 1; i <= Math.min(lit, total - 1); i++){
+        steps[i].classList.add('lit');
+      }
+      lastLit = lit;
+    }
+
+    if(progress < 1) raf = requestAnimationFrame(animate);
+    else steps.forEach(s => s.classList.add('lit'));
+  }
+
+  /* Запускаємо коли секція видима */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting && !started){
+        started = true;
+        animate();
+        io.unobserve(section);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  io.observe(section);
+})();
