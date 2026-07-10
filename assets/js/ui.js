@@ -64,3 +64,18 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   }, { threshold: 0.15 });
   io.observe(section);
 })();
+
+/* ── PROCESS + STACK REVEAL ── */
+(function(){
+  const items = document.querySelectorAll('.proc-step, .stack-sub, .stack-flow, .stack-highlight, .stack-tags');
+  if(!items.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        e.target.classList.add('v');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  items.forEach(el => io.observe(el));
+})();
