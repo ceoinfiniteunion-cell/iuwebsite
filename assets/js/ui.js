@@ -95,7 +95,7 @@ document.getElementById('cForm').addEventListener('submit',function(e){
 
   /* Overlay */
   const overlay = document.createElement('div');
-  overlay.style.cssText = 'position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0;transition:opacity .3s;background:rgba(6,4,4,0.7);backdrop-filter:blur(2px);';
+  overlay.style.cssText = 'position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0;transition:opacity .3s;';
   document.body.appendChild(overlay);
 
   /* Popup container */
