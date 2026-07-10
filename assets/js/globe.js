@@ -221,53 +221,86 @@
 
   function drawWaves(prog){
     ctx.clearRect(0, 0, W, H);
-    const cy   = H * 0.5;
-    const amp  = H * 0.22;
-    const freq = (2 * Math.PI) / W * 3;
+
+    /* Точки кроків — горизонтальні позиції */
+    const dotXs = steps.map((_, i) => {
+      const el = steps[i].querySelector('.proc-dot');
+      if(!el) return W * (i + 0.5) / total;
+      const r = el.getBoundingClientRect();
+      const sr = section.getBoundingClientRect();
+      return r.left - sr.left + r.width / 2;
+    });
+
+    /* Лінія йде від першої до останньої точки */
+    const startX = dotXs[0] || 0;
+    const endX   = dotXs[dotXs.length - 1] || W;
+    const lineW  = endX - startX;
+    const visX   = startX + lineW * Math.min(prog, 1);
+
+    /* Висота — посередині між заголовком і точками */
+    const dotEl  = steps[0].querySelector('.proc-dot');
+    const dotR   = dotEl ? dotEl.getBoundingClientRect() : null;
+    const secR   = section.getBoundingClientRect();
+    const dotY   = dotR ? dotR.top - secR.top + dotR.height / 2 : H * 0.55;
+    const cy     = dotY;
+    const amp    = 28;
+    const freq   = (2 * Math.PI) / lineW * 3;
 
     /* Сімейство синусів */
-    for(let i = -5; i <= 5; i++){
-      const visX = W * Math.min(prog, 1);
+    for(let i = -3; i <= 3; i++){
       ctx.beginPath();
-      for(let x = 0; x <= visX; x += 2){
-        const y = cy + amp * Math.sin(x * freq + i * 0.6) + i * (H * 0.022);
-        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      for(let x = startX; x <= visX; x += 1){
+        const t = (x - startX) * freq + i * 0.5;
+        const y = cy + amp * Math.sin(t) + i * 7;
+        x === startX ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
       }
-      const a = 0.55 - Math.abs(i) * 0.04;
-      ctx.strokeStyle = `rgba(212,0,0,${Math.max(a,0.08)})`;
-      ctx.lineWidth   = i === 0 ? 2.5 : 1.2;
+      const a = 0.7 - Math.abs(i) * 0.1;
+      ctx.strokeStyle = `rgba(212,0,0,${Math.max(a, 0.15)})`;
+      ctx.lineWidth   = i === 0 ? 2 : 1;
       ctx.shadowColor = '#D40000';
-      ctx.shadowBlur  = i === 0 ? 20 : 4;
+      ctx.shadowBlur  = i === 0 ? 16 : 2;
       ctx.stroke();
       ctx.shadowBlur  = 0;
     }
 
     /* Сімейство косинусів */
-    for(let i = -4; i <= 4; i++){
-      const visX = W * Math.min(prog, 1);
+    for(let i = -2; i <= 2; i++){
       ctx.beginPath();
-      for(let x = 0; x <= visX; x += 2){
-        const y = cy + amp * Math.cos(x * freq + i * 0.6) + i * (H * 0.022);
-        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      for(let x = startX; x <= visX; x += 1){
+        const t = (x - startX) * freq + i * 0.5;
+        const y = cy + amp * Math.cos(t) + i * 7;
+        x === startX ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
       }
-      const a = 0.3 - Math.abs(i) * 0.025;
-      ctx.strokeStyle = `rgba(100,120,255,${Math.max(a,0.05)})`;
-      ctx.lineWidth   = i === 0 ? 1.8 : 0.9;
-      ctx.shadowColor = 'rgba(100,120,255,0.6)';
-      ctx.shadowBlur  = i === 0 ? 12 : 2;
+      const a = 0.35 - Math.abs(i) * 0.06;
+      ctx.strokeStyle = `rgba(100,140,255,${Math.max(a, 0.08)})`;
+      ctx.lineWidth   = i === 0 ? 1.5 : 0.8;
+      ctx.shadowColor = 'rgba(100,140,255,0.5)';
+      ctx.shadowBlur  = i === 0 ? 10 : 0;
       ctx.stroke();
       ctx.shadowBlur  = 0;
     }
 
-    /* Вогник на кінці хвилі */
-    if(prog < 1){
-      const cx2 = W * prog;
-      const cy2 = cy + amp * Math.sin(cx2 * freq);
+    /* Підсвічуємо пройдені точки */
+    dotXs.forEach((dx, i) => {
+      if(dx > visX) return;
       ctx.beginPath();
-      ctx.arc(cx2, cy2, 5, 0, Math.PI * 2);
+      ctx.arc(dx, cy, 6, 0, Math.PI * 2);
       ctx.fillStyle   = '#D40000';
       ctx.shadowColor = '#D40000';
       ctx.shadowBlur  = 20;
+      ctx.fill();
+      ctx.shadowBlur  = 0;
+    });
+
+    /* Вогник на кінці */
+    if(prog < 1){
+      const t  = (visX - startX) * freq;
+      const vy = cy + amp * Math.sin(t);
+      ctx.beginPath();
+      ctx.arc(visX, vy, 5, 0, Math.PI * 2);
+      ctx.fillStyle   = '#fff';
+      ctx.shadowColor = '#D40000';
+      ctx.shadowBlur  = 24;
       ctx.fill();
       ctx.shadowBlur  = 0;
     }
