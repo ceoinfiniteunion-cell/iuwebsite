@@ -99,7 +99,14 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   const lbl = document.createElement('div');
   lbl.className = 'stkp__lbl';
   panel.appendChild(lbl);
-  document.body.appendChild(panel);
+  /* Вставляємо в секцію stack щоб position:absolute працював відносно неї */
+  const stackSection = document.getElementById('stack');
+  if(stackSection){
+    stackSection.style.position = 'relative';
+    stackSection.appendChild(panel);
+  } else {
+    document.body.appendChild(panel);
+  }
 
   let timer = null;
 
