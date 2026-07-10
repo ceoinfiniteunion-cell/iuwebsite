@@ -152,7 +152,11 @@
     const progress = Math.max(0, Math.min(1, scrolled / total));
     // Кожна картка має свій поріг появи — незалежно один від одного
     const cards = document.querySelectorAll('.gs-card');
-    const thresholds = [0.08, 0.18, 0.28, 0.38, 0.48, 0.58, 0.68, 0.78, 0.88];
+    /* Scroll progress thresholds for each portfolio card (0–1 range).
+     * Each value = the point at which card N becomes active.
+     * Evenly spaced across 9 cards: card 0 at 8%, card 8 at 88%. */
+    const CARD_COUNT = 9;
+    const thresholds = Array.from({ length: CARD_COUNT }, (_, i) => 0.08 + i * 0.10);
     cards.forEach((c,i)=>{
       const wasActive = c.classList.contains('active');
       const isActive = progress >= thresholds[i];

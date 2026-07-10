@@ -84,6 +84,12 @@
   ]
 }
 </script>
+  <noscript>
+    <style>
+      #loader { display: none !important; }
+      body { background: #060404; color: #EDE8E5; font-family: 'Inter', sans-serif; }
+    </style>
+  </noscript>
 </head>
 <body>
 
@@ -93,7 +99,7 @@
 <!-- PRELOADER -->
 <div id="loader">
   <div class="l-left">
-    <img class="l-avatar" id="lavatar" src="avatar.jpeg" alt="Infinite Union mascot">
+    <img class="l-avatar" id="lavatar" src="avatar.jpeg" loading="lazy" alt="Infinite Union mascot">
   </div>
   <div class="l-right">
     <div class="l-logo">INFINITE <span>UNION</span></div>
@@ -119,9 +125,9 @@
 </nav>
 <div class="mob" id="mob">
   <button type="button" class="mob-x" id="mobX">&times;</button>
-  <a href="#services" onclick="closeMob()">Послуги</a>
-  <a href="#portfolio" onclick="closeMob()">Роботи</a>
-  <a href="#contact" onclick="closeMob()">Контакт</a>
+  <a href="#services">Послуги</a>
+  <a href="#portfolio">Роботи</a>
+  <a href="#contact">Контакт</a>
 </div>
 
 <!-- HERO -->
@@ -167,10 +173,10 @@
   <div class="sec-in">
     <div class="sh rev"><div><div class="slabel">Послуги</div><h2 class="stitle split-chars" id="srv-title">Що ми робимо</h2></div><div class="snum">01 / 05</div></div>
     <div class="srv-list">
-      <div class="srv rev" onclick="location.href='services/websites.html'" role="button" tabindex="0"><span class="srv-n">01</span><span class="srv-name">Конверсійні сайти</span><div class="srv-tags"><span class="stg">+40% конверсія</span><span class="stg">SEO-трафік</span><span class="stg">Google Ads ready</span></div><span class="srv-arr">↗</span></div>
-      <div class="srv rev"><span class="srv-n">02</span><span class="srv-name">Telegram боти та автоматизація</span><div class="srv-tags"><span class="stg">CRM інтеграція</span><span class="stg">Платежі 24/7</span><span class="stg">0 менеджерів</span></div><span class="srv-arr">↗</span></div>
-      <div class="srv rev"><span class="srv-n">03</span><span class="srv-name">Платформи та вебдодатки</span><div class="srv-tags"><span class="stg">SPA / PWA</span><span class="stg">API інтеграції</span><span class="stg">Масштабування</span></div><span class="srv-arr">↗</span></div>
-      <div class="srv rev"><span class="srv-n">04</span><span class="srv-name">Цифрові екосистеми під бізнес</span><div class="srv-tags"><span class="stg">Від ідеї до продакшну</span><span class="stg">ROI x3+</span><span class="stg">Під ключ</span></div><span class="srv-arr">↗</span></div>
+      <a class="srv rev" href="services/websites.html"><span class="srv-n">01</span><span class="srv-name">Конверсійні сайти</span><div class="srv-tags"><span class="stg">+40% конверсія</span><span class="stg">SEO-трафік</span><span class="stg">Google Ads ready</span></div><span class="srv-arr">↗</span></a>
+      <a class="srv rev" href="#contact"><span class="srv-n">02</span><span class="srv-name">Telegram боти та автоматизація</span><div class="srv-tags"><span class="stg">CRM інтеграція</span><span class="stg">Платежі 24/7</span><span class="stg">0 менеджерів</span></div><span class="srv-arr">↗</span></a>
+      <a class="srv rev" href="#contact"><span class="srv-n">03</span><span class="srv-name">Платформи та вебдодатки</span><div class="srv-tags"><span class="stg">SPA / PWA</span><span class="stg">API інтеграції</span><span class="stg">Масштабування</span></div><span class="srv-arr">↗</span></a>
+      <a class="srv rev" href="#contact"><span class="srv-n">04</span><span class="srv-name">Цифрові екосистеми під бізнес</span><div class="srv-tags"><span class="stg">Від ідеї до продакшну</span><span class="stg">ROI x3+</span><span class="stg">Під ключ</span></div><span class="srv-arr">↗</span></a>
       <div class="srv srv--cta"><span class="srv-n">05</span><span class="srv-name">Інший запит?</span><div class="srv-tags"><span class="stg">Розкажіть нам — знайдемо рішення</span></div><a href="#contact" class="srv-arr srv-arr--red">→</a></div>
     </div>
   </div>
@@ -254,7 +260,7 @@
     </div>
   </div>
   <div class="av-right" id="orbit-cont">
-    <img src="avatar.jpeg" alt="Infinite Union Eagle mascot">
+    <img src="avatar.jpeg" loading="lazy" alt="Infinite Union Eagle mascot">
   </div>
 </section>
 

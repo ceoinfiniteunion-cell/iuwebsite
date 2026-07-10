@@ -52,7 +52,15 @@
     },
     undefined,
     e => {
-      console.warn('GLB err', e);
+      /* GLB failed to load — fallback already handled by DOM insertion */
+      const _fb = document.createElement('div');
+      _fb.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;';
+      _fb.innerHTML = '<div style="font-family:var(--fh);font-size:clamp(48px,10vw,140px);font-weight:700;letter-spacing:-.04em;color:rgba(237,232,229,0.04);">INFINITE</div>';
+      const _sticky = document.querySelector('.si-sticky');
+      if (_sticky && !_sticky.querySelector('.si-fallback')) {
+        _fb.className = 'si-fallback';
+        _sticky.appendChild(_fb);
+      }
       const fb = document.createElement('div');
       fb.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;';
       fb.innerHTML = '<div style="font-family:var(--fh);font-size:clamp(48px,10vw,140px);font-weight:700;letter-spacing:-.04em;color:rgba(237,232,229,0.06);">INFINITE</div>';

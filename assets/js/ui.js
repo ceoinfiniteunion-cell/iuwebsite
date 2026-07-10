@@ -20,9 +20,14 @@ window.addEventListener('scroll',()=>{
 },{passive:true});
 
 /* MOBILE */
-document.getElementById('burger').addEventListener('click',()=>document.getElementById('mob').classList.add('open'));
-document.getElementById('mobX').addEventListener('click',closeMob);
-function closeMob(){document.getElementById('mob').classList.remove('open');}
+document.getElementById('burger').addEventListener('click', () => document.getElementById('mob').classList.add('open'));
+document.getElementById('mobX').addEventListener('click', closeMob);
+function closeMob() { document.getElementById('mob').classList.remove('open'); }
+
+/* Close mobile nav on link click — replaces inline onclick="closeMob()" */
+document.querySelectorAll('.mob a').forEach(link => {
+  link.addEventListener('click', closeMob);
+});
 
 /* REVEAL */
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:0.08});
