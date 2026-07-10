@@ -233,11 +233,11 @@
         const y = cy + amp * Math.sin(x * freq + i * 0.6) + i * (H * 0.022);
         x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
       }
-      const a = 0.18 - Math.abs(i) * 0.013;
-      ctx.strokeStyle = `rgba(212,0,0,${Math.max(a,0.03)})`;
-      ctx.lineWidth   = 1;
+      const a = 0.55 - Math.abs(i) * 0.04;
+      ctx.strokeStyle = `rgba(212,0,0,${Math.max(a,0.08)})`;
+      ctx.lineWidth   = i === 0 ? 2.5 : 1.2;
       ctx.shadowColor = '#D40000';
-      ctx.shadowBlur  = i === 0 ? 10 : 0;
+      ctx.shadowBlur  = i === 0 ? 20 : 4;
       ctx.stroke();
       ctx.shadowBlur  = 0;
     }
@@ -250,10 +250,13 @@
         const y = cy + amp * Math.cos(x * freq + i * 0.6) + i * (H * 0.022);
         x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
       }
-      const a = 0.09 - Math.abs(i) * 0.008;
-      ctx.strokeStyle = `rgba(80,100,220,${Math.max(a,0.02)})`;
-      ctx.lineWidth   = 0.8;
+      const a = 0.3 - Math.abs(i) * 0.025;
+      ctx.strokeStyle = `rgba(100,120,255,${Math.max(a,0.05)})`;
+      ctx.lineWidth   = i === 0 ? 1.8 : 0.9;
+      ctx.shadowColor = 'rgba(100,120,255,0.6)';
+      ctx.shadowBlur  = i === 0 ? 12 : 2;
       ctx.stroke();
+      ctx.shadowBlur  = 0;
     }
 
     /* Вогник на кінці хвилі */
