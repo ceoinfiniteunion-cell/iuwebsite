@@ -226,3 +226,71 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   });
   overlay.addEventListener('click', hide);
 })();
+
+/* ── STACK TAGS TYPEWRITER HOVER ── */
+(function(){
+  const TAGS_DATA = {
+    'FastAPI':     { arrow: '↓', text: 'Асинхронний Python фреймворк. Обробляє тисячі запитів одночасно без блокування.' },
+    'PostgreSQL':  { arrow: '↓', text: 'Реляційна БД з ACID гарантіями. Параметризовані запити — SQL injection неможливий.' },
+    'Redis':       { arrow: '↓', text: 'In-memory сховище. Rate-limit, черги DLQ та FSM стани бота за мілісекунди.' },
+    'aiogram':     { arrow: '↓', text: 'Асинхронний Telegram фреймворк. Квізи, FSM, інлайн-кнопки та webhook підтримка.' },
+    'Railway':     { arrow: '↓', text: 'Хмарний PaaS деплой. Автоматичний restart, env vars та моніторинг 24/7.' },
+  };
+
+  const tags = document.querySelectorAll('.stack-tag');
+  if(!tags.length) return;
+
+  tags.forEach(tag => {
+    const nameEl = tag.querySelector('.stack-tag__name');
+    if(!nameEl) return;
+    const name = nameEl.textContent.trim();
+    const data = TAGS_DATA[name];
+    if(!data) return;
+
+    /* Створюємо dropdown */
+    const drop = document.createElement('div');
+    drop.style.cssText = 'position:absolute;left:0;top:100%;width:240px;padding:14px 16px;background:var(--bg2);border:1px solid var(--border);border-top:1px solid var(--red);z-index:50;opacity:0;pointer-events:none;transition:opacity .2s;';
+
+    const arrow = document.createElement('div');
+    arrow.style.cssText = 'font-size:10px;color:var(--red);margin-bottom:8px;letter-spacing:.1em;';
+    arrow.textContent = data.arrow;
+
+    const txt = document.createElement('div');
+    txt.style.cssText = 'font-size:11px;color:var(--muted2);line-height:1.7;font-family:var(--fh);letter-spacing:.04em;min-height:2.4em;';
+
+    drop.appendChild(arrow);
+    drop.appendChild(txt);
+    tag.style.position = 'relative';
+    tag.appendChild(drop);
+
+    let typeTimer = null;
+    let hideTimer = null;
+
+    function typewrite(text, el, speed=28){
+      el.textContent = '';
+      let i = 0;
+      clearInterval(typeTimer);
+      typeTimer = setInterval(() => {
+        el.textContent += text[i];
+        i++;
+        if(i >= text.length) clearInterval(typeTimer);
+      }, speed);
+    }
+
+    tag.addEventListener('mouseenter', () => {
+      clearTimeout(hideTimer);
+      drop.style.opacity = '1';
+      drop.style.pointerEvents = 'auto';
+      typewrite(data.text, txt);
+    });
+
+    tag.addEventListener('mouseleave', () => {
+      hideTimer = setTimeout(() => {
+        drop.style.opacity = '0';
+        drop.style.pointerEvents = 'none';
+        clearInterval(typeTimer);
+        txt.textContent = '';
+      }, 200);
+    });
+  });
+})();
