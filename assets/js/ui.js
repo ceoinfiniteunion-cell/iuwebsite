@@ -86,11 +86,11 @@ document.getElementById('cForm').addEventListener('submit',function(e){
   if(!nodes.length) return;
 
   const COLORS = {
-    form:  { color: '#FFFFFF', glow: 'rgba(255,255,255,0.25)', name: 'Форма',      items: ['Honeypot захист від ботів', 'Rate-limit 10 req/IP/добу', 'HTTPS шифрування'] },
-    valid: { color: '#22C55E', glow: 'rgba(34,197,94,0.25)',   name: 'Валідація',  items: ['Pydantic типи даних', 'Ліміт довжини полів', 'XSS санітизація'] },
-    db:    { color: '#EAB308', glow: 'rgba(234,179,8,0.25)',   name: 'База даних', items: ['PostgreSQL параметризовані запити', 'Пул зʼєднань ×10', 'Audit log кожної дії'] },
-    queue: { color: '#D40000', glow: 'rgba(212,0,0,0.25)',     name: 'Черга',      items: ['Redis Dead Letter Queue', 'Авто-ретрай при збої', 'Zero data loss'] },
-    tg:    { color: '#29B6F6', glow: 'rgba(41,182,246,0.25)',  name: 'Telegram',   items: ['Exponential backoff 1→2→4с', '3 спроби доставки', 'Реакція 15 хвилин'] },
+    form:  { color: '#FFFFFF', glow: 'rgba(255,255,255,0.25)', name: 'Форма',      items: ['Honeypot захист', 'Rate-limit по IP', 'HTTPS шифрування', 'Валідація полів', 'Захист від спаму', 'Логування подій'] },
+    valid: { color: '#22C55E', glow: 'rgba(34,197,94,0.25)',   name: 'Валідація',  items: ['Pydantic типи', 'Ліміт довжини', 'XSS санітизація', 'Обовʼязкові поля', 'Формат email', 'Тип проєкту'] },
+    db:    { color: '#EAB308', glow: 'rgba(234,179,8,0.25)',   name: 'База даних', items: ['PostgreSQL', 'Параметризовані запити', 'Пул ×10 зʼєднань', 'Audit log дій', 'SQL injection захист', 'Автоміграції'] },
+    queue: { color: '#D40000', glow: 'rgba(212,0,0,0.25)',     name: 'Черга',      items: ['Redis DLQ', 'Авто-ретрай', 'Zero data loss', 'Моніторинг черги', 'Пріоритети задач', 'Fallback логіка'] },
+    tg:    { color: '#29B6F6', glow: 'rgba(41,182,246,0.25)',  name: 'Telegram',   items: ['Exponential backoff', '3 спроби доставки', 'Реакція 15 хв', 'Форматований HTML', 'Мультиадмін', 'Статус доставки'] },
   };
 
   /* Overlay */
@@ -130,11 +130,9 @@ document.getElementById('cForm').addEventListener('submit',function(e){
     const iconEl = node.querySelector('.stack-node__icon');
     const iconHTML = iconEl ? iconEl.innerHTML : '';
 
-    /* Кути променів по годинниковій стрілці: вгору, вгору-право, право, низ-право, низ */
+    /* Кути променів по годинниковій стрілці — всі 6 з підписами */
     const angles = [-90, -30, 30, 90, 150, 210];
-    const labels = d.items.length === 3
-      ? [d.items[0], '', d.items[1], '', d.items[2], '']
-      : d.items.map((it, i) => i < angles.length ? it : '');
+    const labels = angles.map((_, i) => d.items[i] || '');
 
     const rayLen = 130;
     const rays = angles.map((a, i) => {
