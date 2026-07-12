@@ -11,7 +11,7 @@
   r.setSize(c.width,c.height);r.setPixelRatio(Math.min(window.devicePixelRatio,2));
 
   const shapes=[];
-  [[new THREE.IcosahedronGeometry(2.8,1),0xD40000,.1,0,0,-2],
+  [[new THREE.IcosahedronGeometry(2.8,1),0xD40000,.28,0,0,-2],
    [new THREE.TorusGeometry(1.8,.3,10,32),0xD40000,.07,3,2,-3],
    [new THREE.OctahedronGeometry(1.4,0),0xEDE8E5,.06,-3.5,-1,-2],
    [new THREE.IcosahedronGeometry(.5,0),0xD40000,.12,2.5,-2.5,0],
