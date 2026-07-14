@@ -2626,7 +2626,7 @@ THREE.GLTFLoader = ( function () {
 				if ( useFlatShading ) cachedMaterial.flatShading = true;
 				if ( useMorphTargets ) cachedMaterial.morphTargets = true;
 				if ( useMorphNormals ) cachedMaterial.morphNormals = true;
-				
+
 				if ( useVertexTangents ) {
 
 					cachedMaterial.vertexTangents = true;
