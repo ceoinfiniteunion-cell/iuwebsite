@@ -191,6 +191,24 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 .cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(212,0,0,.07) 0%,transparent 70%);pointer-events:none;}
 /* PROCESS DOT UPGRADE */
 .process-step.lit .process-dot{border-color:var(--red);color:#fff;background:rgba(212,0,0,.15);box-shadow:0 0 20px rgba(212,0,0,.3);}
+
+/* ANIMATED SVG ICONS */
+.uc-svg{display:block;transition:transform .4s var(--ease2);}
+.uc:hover .uc-svg{transform:scale(1.1) rotate(-3deg);}
+.uc-svg .draw{transition:stroke-dashoffset .6s var(--ease2);}
+.uc-svg .draw2{transition:stroke-dashoffset .8s var(--ease2) .1s;}
+.uc-svg .dot{transition:opacity .4s var(--ease2) .3s;}
+.uc:hover .draw{stroke-dashoffset:0 !important;}
+.uc:hover .draw2{stroke-dashoffset:0 !important;}
+.uc:hover .dot{opacity:1 !important;}
+/* UC CARD UPGRADE */
+.uc{background:linear-gradient(135deg,var(--bg2) 0%,rgba(212,0,0,.02) 100%);border:1px solid var(--border);padding:40px;transition:border-color .4s,transform .3s var(--ease2),box-shadow .4s;position:relative;overflow:hidden;}
+.uc:hover{border-color:rgba(212,0,0,.6);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 0 1px rgba(212,0,0,.1);}
+.uc-corner{position:absolute;bottom:0;right:0;width:60px;height:60px;background:linear-gradient(135deg,transparent 50%,rgba(212,0,0,.08) 50%);transition:opacity .3s;}
+.uc:hover .uc-corner{opacity:0;}
+.uc-name{font-family:var(--font);font-size:20px;font-weight:700;margin-bottom:8px;transition:color .3s;}
+.uc:hover .uc-name{color:var(--red);}
+.uc-icon{margin-bottom:20px;display:block;}
 </style>
 </head>
 <body>
@@ -281,7 +299,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <div class="use-cases">
     <div class="uc">
       <div class="uc-icon">🍕</div>
-      <div class="uc-name">Ресторан / Кафе</div>
+      <div class="uc-corner"></div><div class="uc-name">Ресторан / Кафе</div>
       <div class="uc-desc">Замовлення їжі, бронювання столиків, програма лояльності, меню з фото і цінами.</div>
       <ul class="uc-features">
         <li>Онлайн замовлення і доставка</li>
@@ -292,7 +310,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     </div>
     <div class="uc">
       <div class="uc-icon">🛍️</div>
-      <div class="uc-name">Інтернет-магазин</div>
+      <div class="uc-corner"></div><div class="uc-name">Інтернет-магазин</div>
       <div class="uc-desc">Каталог товарів, кошик, оплата, відстеження замовлень — повноцінний магазин в Telegram.</div>
       <ul class="uc-features">
         <li>Каталог з категоріями і фільтрами</li>
@@ -303,7 +321,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     </div>
     <div class="uc">
       <div class="uc-icon">💆</div>
-      <div class="uc-name">Сервіс / Краса</div>
+      <div class="uc-corner"></div><div class="uc-name">Сервіс / Краса</div>
       <div class="uc-desc">Онлайн запис до майстра, нагадування, відгуки, управління розкладом.</div>
       <ul class="uc-features">
         <li>Запис на прийом з вибором майстра</li>
@@ -314,7 +332,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     </div>
     <div class="uc">
       <div class="uc-icon">📚</div>
-      <div class="uc-name">Освіта / Курси</div>
+      <div class="uc-corner"></div><div class="uc-name">Освіта / Курси</div>
       <div class="uc-desc">Видача матеріалів, домашні завдання, тести, прогрес учня, оплата курсу.</div>
       <ul class="uc-features">
         <li>Видача уроків по розкладу</li>
@@ -325,7 +343,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     </div>
     <div class="uc">
       <div class="uc-icon">🏢</div>
-      <div class="uc-name">B2B / Корпоративний</div>
+      <div class="uc-corner"></div><div class="uc-name">B2B / Корпоративний</div>
       <div class="uc-desc">Внутрішні процеси: заявки, задачі, звіти, опитування співробітників.</div>
       <ul class="uc-features">
         <li>Система заявок і тікетів</li>
@@ -336,7 +354,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     </div>
     <div class="uc">
       <div class="uc-icon">🏠</div>
-      <div class="uc-name">Нерухомість / Авто</div>
+      <div class="uc-corner"></div><div class="uc-name">Нерухомість / Авто</div>
       <div class="uc-desc">Підбір об'єктів по параметрах, розсилка нових пропозицій, запис на огляд.</div>
       <ul class="uc-features">
         <li>Фільтр по бюджету і параметрах</li>
