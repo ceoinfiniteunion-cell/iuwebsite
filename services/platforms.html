@@ -18,7 +18,7 @@
 ::selection{background:#E8341C;color:#fff;}::-moz-selection{background:#E8341C;color:#fff;}
 :root{--red:#D40000;--red-glow:rgba(212,0,0,0.15);--bg:#060404;--bg2:#0e0b0b;--border:rgba(255,255,255,0.08);--text:#fff;--muted:rgba(255,255,255,0.45);--muted2:rgba(255,255,255,0.25);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--ease:cubic-bezier(0.76,0,0.24,1);--ease2:cubic-bezier(0.23,1,0.32,1);}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;cursor:none;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;cursor:auto;}
 #cur{position:fixed;width:8px;height:8px;background:var(--red);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;}
 #curO{position:fixed;width:36px;height:36px;border:1px solid rgba(212,0,0,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .18s var(--ease2);}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:border-color .3s,background .3s;}
@@ -111,7 +111,7 @@ section{padding:120px 40px;}
 .faq{background:var(--bg2);}
 .faq-list{max-width:800px;}
 .faq-item{border-bottom:1px solid var(--border);}
-.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:18px;font-weight:600;padding:28px 0;cursor:none;display:flex;justify-content:space-between;align-items:center;transition:color .2s;}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:18px;font-weight:600;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:color .2s;}
 .faq-q:hover{color:var(--red);}
 .faq-q span{font-size:20px;color:var(--red);transition:transform .4s var(--ease2);}
 .faq-item.open .faq-q span{transform:rotate(45deg);}
@@ -137,7 +137,6 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 </style>
 </head>
 <body>
-<div id="cur"></div><div id="curO"></div>
 <nav id="nav">
   <a href="../index.html" class="nav-back">← Назад</a>
   <a href="../index.html" class="nav-logo">INFINITE <span>UNION</span></a>
