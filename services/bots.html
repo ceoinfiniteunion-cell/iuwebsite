@@ -94,12 +94,13 @@ nav.scrolled{background:rgba(6,4,4,.95);backdrop-filter:blur(20px);border-color:
 .marquee-item em{color:var(--red);font-style:normal;margin-left:8px;}
 
 /* REVEAL */
-.rev{opacity:0;transform:translateY(36px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
 .rev.v{opacity:1;transform:none;}
-.rev-l{opacity:0;transform:translateX(-36px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev-l{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease;}
 .rev-l.v{opacity:1;transform:none;}
-.rev-r{opacity:0;transform:translateX(36px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev-r{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease;}
 .rev-r.v{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.rev,.rev-l,.rev-r{opacity:1;transform:none;}}
 
 section{padding:120px 40px;}
 .sec-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
