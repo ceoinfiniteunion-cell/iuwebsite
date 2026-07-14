@@ -175,6 +175,22 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 /* CTA FINAL UPGRADE */
 .cta-final{text-align:center;padding:160px 40px;position:relative;overflow:hidden;}
 .cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(212,0,0,.08) 0%,transparent 70%);pointer-events:none;}
+
+/* UC CARDS UPGRADE */
+.uc-accent{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent);transform:scaleX(0);transform-origin:center;transition:transform .5s var(--ease2);}
+.uc:hover .uc-accent{transform:scaleX(1);}
+.uc:hover .uc-name{color:var(--red);}
+.uc::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(212,0,0,.06) 0%,transparent 70%);opacity:0;transition:opacity .4s;pointer-events:none;}
+.uc:hover::after{opacity:1;}
+/* CTA BUTTONS UPGRADE */
+.cta-btn{transition:transform .2s var(--ease2),box-shadow .2s,opacity .2s !important;}
+.cta-btn:hover{transform:translateY(-3px) !important;box-shadow:0 12px 40px rgba(212,0,0,.45) !important;}
+.cta-btn-ghost:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.6);}
+/* CTA FINAL GLOW */
+.cta-final{position:relative;overflow:hidden;}
+.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(212,0,0,.07) 0%,transparent 70%);pointer-events:none;}
+/* PROCESS DOT UPGRADE */
+.process-step.lit .process-dot{border-color:var(--red);color:#fff;background:rgba(212,0,0,.15);box-shadow:0 0 20px rgba(212,0,0,.3);}
 </style>
 </head>
 <body>
@@ -498,6 +514,12 @@ document.querySelectorAll('.what-item,.level,.uc,.process-step,.cred').forEach(e
 /* MAGNETIC BUTTONS */
 document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{
   btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.12;const y=(e.clientY-r.top-r.height/2)*.12;btn.style.transform=`translate(${x}px,${y}px)`;});
+  btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
+});
+
+/* MAGNETIC BUTTONS */
+document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.1;const y=(e.clientY-r.top-r.height/2)*.1;btn.style.transform=`translate(${x}px,${y}px)`;});
   btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
 });
 </script>
