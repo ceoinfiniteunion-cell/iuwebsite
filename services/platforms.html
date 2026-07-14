@@ -20,8 +20,6 @@
 :root{--red:#D40000;--red-glow:rgba(212,0,0,0.15);--bg:#060404;--bg2:#0e0b0b;--border:rgba(255,255,255,0.08);--text:#fff;--muted:rgba(255,255,255,0.45);--muted2:rgba(255,255,255,0.25);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--ease:cubic-bezier(0.76,0,0.24,1);--ease2:cubic-bezier(0.23,1,0.32,1);}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;cursor:auto;}
-#cur{position:fixed;width:8px;height:8px;background:var(--red);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;}
-#curO{position:fixed;width:36px;height:36px;border:1px solid rgba(212,0,0,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .18s var(--ease2);}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:border-color .3s,background .3s;}
 nav.scrolled{background:rgba(6,4,4,.92);backdrop-filter:blur(12px);border-color:var(--border);}
 .nav-logo{font-family:var(--font);font-weight:700;font-size:15px;letter-spacing:.12em;text-decoration:none;color:#fff;}
@@ -132,7 +130,6 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 .footer-logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.1em;}
 .footer-logo span{color:var(--red);}
 .footer-copy{font-size:12px;color:var(--muted);}
-@media(hover:none){body{cursor:auto;}#cur,#curO{display:none;}}
 @media(max-width:768px){nav{padding:16px 20px;}.hero{padding:0 20px 60px;}.hero-showcase{display:none;}.hero-stats{gap:32px;flex-wrap:wrap;}section{padding:80px 20px;}.what-grid,.levels-grid,.stack-grid{grid-template-columns:1fr;}footer{flex-direction:column;gap:16px;text-align:center;}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.rev,.rev-l,.rev-r{opacity:1;transform:none;}}
 </style>
@@ -230,11 +227,6 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="../services/privacy.html" style="font-size:11px;color:var(--muted);text-decoration:none;">Політика конфіденційності</a>
 </footer>
 <script>
-const cur=document.getElementById('cur'),curO=document.getElementById('curO');
-let mx=0,my=0,ox=0,oy=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function loop(){ox+=(mx-ox)*.12;oy+=(my-oy)*.12;curO.style.left=ox+'px';curO.style.top=oy+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{curO.style.transform='translate(-50%,-50%) scale(2)';curO.style.borderColor='var(--red)';});el.addEventListener('mouseleave',()=>{curO.style.transform='translate(-50%,-50%) scale(1)';curO.style.borderColor='rgba(212,0,0,.5)';});});
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60),{passive:true});
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>ro.observe(el));
