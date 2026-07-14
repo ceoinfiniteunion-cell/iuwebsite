@@ -76,12 +76,12 @@ nav.scrolled{background:rgba(6,4,4,.95);backdrop-filter:blur(20px);border-color:
 .marquee-item::after{content:'·';color:var(--red);margin-left:20px;}
 
 /* REVEAL */
-.rev{opacity:1;transform:translateY(20px);transition:transform .7s var(--ease2);}
-.rev.v{transform:none;}
-.rev-l{opacity:1;transform:translateX(-20px);transition:transform .7s var(--ease2);}
-.rev-l.v{transform:none;}
-.rev-r{opacity:1;transform:translateX(20px);transition:transform .7s var(--ease2);}
-.rev-r.v{transform:none;}
+.rev{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease2),transform .7s var(--ease2);}
+.rev.v{opacity:1;transform:none;}
+.rev-l{opacity:0;transform:translateX(-24px);transition:opacity .7s var(--ease2),transform .7s var(--ease2);}
+.rev-l.v{opacity:1;transform:none;}
+.rev-r{opacity:0;transform:translateX(24px);transition:opacity .7s var(--ease2),transform .7s var(--ease2);}
+.rev-r.v{opacity:1;transform:none;}
 
 section{padding:120px 40px;}
 .sec-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
@@ -597,13 +597,6 @@ document.querySelectorAll('.faq-item').forEach(item=>{
 /* MAGNETIC BUTTONS */
 document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{
   btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.12;const y=(e.clientY-r.top-r.height/2)*.12;btn.style.transform=`translate(${x}px,${y}px)`;});
-  btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
-});
-});
-
-/* MAGNETIC BUTTONS */
-document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{
-  btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.1;const y=(e.clientY-r.top-r.height/2)*.1;btn.style.transform=`translate(${x}px,${y}px)`;});
   btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
 });
 </script>
