@@ -176,6 +176,29 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   .promo-num{font-size:36px;min-width:50px;}
   footer{flex-direction:column;gap:16px;text-align:center;}
 }
+
+/* HERO CANVAS */
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+/* MARQUEE */
+.marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;}
+.marquee-track{display:flex;gap:60px;width:max-content;animation:marquee 22s linear infinite;}
+.marquee-track span{font-family:var(--font);font-size:12px;letter-spacing:.2em;color:var(--muted);white-space:nowrap;}
+.marquee-track span em{color:var(--red);font-style:normal;}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* REVEAL */
+.rev{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease;}
+.rev.v{opacity:1;transform:none;}
+.rev-l{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease;}
+.rev-l.v{opacity:1;transform:none;}
+.rev-r{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease;}
+.rev-r.v{opacity:1;transform:none;}
+/* HERO STATS */
+.hero-stats{opacity:0;animation:fadeUp .8s ease .6s forwards;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+/* MAGNETIC */
+.cta-btn,.cta-btn-ghost,.nav-cta{transition:transform .2s ease,opacity .2s;}
+/* TICKER NUMBER */
+@keyframes countUp{from{opacity:0}to{opacity:1}}
 </style>
 </head>
 <body>
@@ -189,12 +212,13 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 <!-- HERO -->
 <section class="hero" style="padding-top:120px;">
   <div class="hero-bg"></div>
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
   <div class="hero-label">ПОСЛУГА 01 · КОНВЕРСІЙНІ САЙТИ</div>
   <h1 class="hero-title">Сайти що<br><em>продають.</em></h1>
   <p class="hero-sub">Розробляємо конверсійні сайти будь-якої складності — від лендінгів до складних вебплатформ. Senior-команда, унікальний дизайн, результат у цифрах.</p>
   <div class="hero-stats">
     <div>
-      <div class="hero-stat-num">7<span>+</span></div>
+      <div class="hero-stat-num" data-count="7">0<span>+</span></div>
       <div class="hero-stat-label">ПРОЄКТІВ В ПРОДАКШНІ</div>
     </div>
     <div>
@@ -202,7 +226,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
       <div class="hero-stat-label">ТЕХНІЧНОГО БОРГУ</div>
     </div>
     <div>
-      <div class="hero-stat-num">+40<span>%</span></div>
+      <div class="hero-stat-num" data-count="40">0<span>%</span></div>
       <div class="hero-stat-label">КОНВЕРСІЯ В СЕРЕДНЬОМУ</div>
     </div>
     <div>
@@ -228,25 +252,25 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <div class="sec-label">ЩО ВХОДИТЬ</div>
   <h2 class="sec-title">Повний цикл<br>розробки</h2>
   <div class="what-grid">
-    <div class="what-item">
+    <div class="what-item rev">
       <div class="what-num">01</div>
       <div class="what-name">Стратегія та аналіз</div>
       <div class="what-desc">Аналізуємо конкурентів, ЦА та бізнес-цілі. Формуємо структуру сайту на основі даних, а не інтуїції.</div>
       <div class="what-tags"><span class="wtag">CJM</span><span class="wtag">Competitor audit</span><span class="wtag">User research</span></div>
     </div>
-    <div class="what-item">
+    <div class="what-item rev">
       <div class="what-num">02</div>
       <div class="what-name">UI/UX дизайн Senior рівня</div>
       <div class="what-desc">Унікальний дизайн під вашу нішу. Жодних шаблонів — кожен пікселів проходить дизайн-рев'ю.</div>
       <div class="what-tags"><span class="wtag">Figma</span><span class="wtag">Motion design</span><span class="wtag">Mobile-first</span></div>
     </div>
-    <div class="what-item">
+    <div class="what-item rev">
       <div class="what-num">03</div>
       <div class="what-name">Frontend розробка</div>
       <div class="what-desc">Чистий семантичний код, швидке завантаження, анімації що не гальмують. Core Web Vitals — green.</div>
       <div class="what-tags"><span class="wtag">React / Vanilla JS</span><span class="wtag">GSAP</span><span class="wtag">Three.js</span></div>
     </div>
-    <div class="what-item">
+    <div class="what-item rev">
       <div class="what-num">04</div>
       <div class="what-name">Технічна SEO-оптимізація</div>
       <div class="what-desc">Schema markup, sitemap, robots.txt, meta-теги, швидкість — все налаштовано до запуску.</div>
@@ -323,25 +347,25 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
       <div class="process-step-desc">Збираємо вимоги, аналізуємо нішу і конкурентів</div>
       <div class="process-time">День 1–2</div>
     </div>
-    <div class="process-step">
+    <div class="process-step rev">
       <div class="process-dot">02</div>
       <div class="process-step-name">Дизайн</div>
       <div class="process-step-desc">Wireframe → UI концепт → фінальний дизайн</div>
       <div class="process-time">День 3–10</div>
     </div>
-    <div class="process-step">
+    <div class="process-step rev">
       <div class="process-dot">03</div>
       <div class="process-step-name">Розробка</div>
       <div class="process-step-desc">Верстка, анімації, інтеграції, тести</div>
       <div class="process-time">День 10–25</div>
     </div>
-    <div class="process-step">
+    <div class="process-step rev">
       <div class="process-dot">04</div>
       <div class="process-step-name">Запуск</div>
       <div class="process-step-desc">Деплой, SEO-налаштування, аналітика</div>
       <div class="process-time">День 25–28</div>
     </div>
-    <div class="process-step">
+    <div class="process-step rev">
       <div class="process-dot">05</div>
       <div class="process-step-name">Підтримка</div>
       <div class="process-step-desc">Моніторинг, правки, просування</div>
@@ -381,13 +405,13 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
       <div class="extra-price">від $150 / місяць</div>
     </div>
     <div class="extra-card">
-      <div class="extra-icon">🎯</div>
+      <div class="extra-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="13" stroke="#fff" stroke-width="1.5"/><circle cx="16" cy="16" r="7" stroke="#E8341C" stroke-width="1.5"/><circle cx="16" cy="16" r="2" fill="#E8341C"/></svg></div>
       <div class="extra-name">Контекстна реклама</div>
       <div class="extra-desc">Google Ads, Meta Ads — налаштування кампаній, А/Б тести оголошень, оптимізація ставок і конверсій.</div>
       <div class="extra-price">від $200 / місяць + бюджет</div>
     </div>
     <div class="extra-card">
-      <div class="extra-icon">🔍</div>
+      <div class="extra-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="14" cy="14" r="8" stroke="#fff" stroke-width="1.5"/><path d="M20 20l6 6" stroke="#E8341C" stroke-width="1.5" stroke-linecap="round"/><path d="M11 14h6M14 11v6" stroke="#fff" stroke-width="1" stroke-opacity=".5" stroke-linecap="round"/></svg></div>
       <div class="extra-name">Аудит сайту</div>
       <div class="extra-desc">Технічний, SEO та UX аудит. Отримуєте детальний звіт з пріоритизованим планом виправлень.</div>
       <div class="extra-price">від $100 / разово</div>
@@ -433,27 +457,27 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
   <h2 class="sec-title">Відповіді на<br>ваші питання</h2>
   <div class="faq-list">
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Скільки часу займає розробка? <span>+</span></button>
       <div class="faq-a">Лендінг — від 2 тижнів. Повноцінний сайт — від 3 до 5 тижнів. Enterprise проєкти — індивідуально. Дедлайни фіксуємо в договорі і не порушуємо.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Чи можете зробити сайт на WordPress або іншій CMS? <span>+</span></button>
       <div class="faq-a">Так, працюємо з WordPress, Webflow, Next.js, та кастомними рішеннями. Рекомендуємо технологію виходячи з ваших задач — не нав'язуємо.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Чи є у вас договір? <span>+</span></button>
       <div class="faq-a">Так, укладаємо договір на кожен проєкт. Фіксуємо обсяг робіт, терміни, вартість та умови оплати. Ніяких сюрпризів після підписання.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Що якщо мені не сподобається дизайн? <span>+</span></button>
       <div class="faq-a">До затвердження фінального дизайну надаємо 2 раунди правок безкоштовно. Спочатку узгоджуємо концепт, потім деталі — щоб не переробляти все з нуля.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Як відбувається оплата? <span>+</span></button>
       <div class="faq-a">50% передоплата при старті, 50% після здачі проєкту. Для великих проєктів — поетапна оплата по майлстоунах.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Чи надаєте підтримку після запуску? <span>+</span></button>
       <div class="faq-a">Так, базовий план включає місяць підтримки після запуску. Далі — абонентське обслуговування від $150/міс або погодинна оплата.</div>
     </div>
@@ -523,6 +547,49 @@ document.querySelectorAll('.what-item,.level,.extra-card,.process-step,.cred').f
   el.style.transform='translateY(30px)';
   el.style.transition='opacity .6s ease, transform .6s ease';
   obs.observe(el);
+});
+/* HERO PARTICLES */
+(function(){
+  const c=document.getElementById('heroCanvas');
+  if(!c)return;
+  const ctx=c.getContext('2d');
+  c.width=window.innerWidth;c.height=window.innerHeight;
+  const pts=Array.from({length:60},()=>({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.5}));
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(212,0,0,.25)';ctx.fill();});
+    pts.forEach((p,i)=>pts.slice(i+1).forEach(q=>{const d=Math.hypot(p.x-q.x,p.y-q.y);if(d<120){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(212,0,0,${.08*(1-d/120)})`;ctx.lineWidth=.5;ctx.stroke();}}));
+    requestAnimationFrame(draw);
+  }
+  draw();
+  window.addEventListener('resize',()=>{c.width=window.innerWidth;c.height=window.innerHeight;},{passive:true});
+})();
+
+/* REVEAL */
+const revObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');revObs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>revObs.observe(el));
+
+/* COUNT UP */
+(function(){
+  const nums=document.querySelectorAll('.hero-stat-num[data-count]');
+  if(!nums.length)return;
+  const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;
+  const animate=el=>{
+    const target=parseInt(el.dataset.count,10);
+    if(target===0)return;
+    const suffix=el.querySelector('span');
+    const suffixHTML=suffix?suffix.outerHTML:'';
+    const dur=1800;const start=performance.now();
+    const tick=now=>{const p=Math.min((now-start)/dur,1);el.innerHTML=Math.round(ease(p)*target)+suffixHTML;if(p<1)requestAnimationFrame(tick);};
+    requestAnimationFrame(tick);
+  };
+  nums.forEach(el=>animate(el));
+})();
+
+/* MAGNETIC BUTTONS */
+document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.15;const y=(e.clientY-r.top-r.height/2)*.15;btn.style.transform=`translate(${x}px,${y}px)`;});
+  btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
 });
 </script>
 </body>
