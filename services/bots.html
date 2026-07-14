@@ -27,111 +27,177 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{--red:#D40000;--bg:#060404;--bg2:#0e0b0b;--border:rgba(255,255,255,0.08);--text:#fff;--muted:rgba(255,255,255,0.45);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;}
+::selection{background:#E8341C;color:#fff;}::-moz-selection{background:#E8341C;color:#fff;}
+:root{--red:#D40000;--red-glow:rgba(212,0,0,0.15);--bg:#060404;--bg2:#0e0b0b;--bg3:#111;--border:rgba(255,255,255,0.08);--text:#fff;--muted:rgba(255,255,255,0.45);--muted2:rgba(255,255,255,0.25);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--ease:cubic-bezier(0.76,0,0.24,1);--ease2:cubic-bezier(0.23,1,0.32,1);}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:border-color .3s,background .3s;}
-nav.scrolled{background:rgba(6,4,4,.92);backdrop-filter:blur(12px);border-color:var(--border);}
+nav.scrolled{background:rgba(6,4,4,.95);backdrop-filter:blur(20px);border-color:var(--border);}
 .nav-logo{font-family:var(--font);font-weight:700;font-size:15px;letter-spacing:.12em;text-decoration:none;color:#fff;}
 .nav-logo span{color:var(--red);}
 .nav-back{font-size:12px;letter-spacing:.1em;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s;}
 .nav-back:hover{color:#fff;}
-.nav-cta{background:var(--red);color:#fff;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.1em;padding:10px 24px;text-decoration:none;transition:opacity .2s;}
+.nav-cta{background:var(--red);color:#fff;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.1em;padding:10px 24px;text-decoration:none;transition:opacity .2s,transform .2s;}
 .nav-cta:hover{opacity:.85;}
+
+/* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 40px 80px;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 70% 40%, rgba(212,0,0,.12) 0%, transparent 70%);}
-.hero-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:24px;}
-.hero-title{font-family:var(--font);font-size:clamp(52px,8vw,120px);font-weight:700;line-height:.92;letter-spacing:-.03em;max-width:900px;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 30%,rgba(212,0,0,.15) 0%,transparent 70%);}
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.hero-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:24px;opacity:0;animation:fadeUp .6s var(--ease2) .3s forwards;}
+.hero-title{font-family:var(--font);font-size:clamp(52px,8vw,120px);font-weight:700;line-height:.92;letter-spacing:-.03em;max-width:900px;opacity:0;animation:fadeUp .8s var(--ease2) .5s forwards;}
 .hero-title em{font-style:normal;color:var(--red);}
-.hero-sub{margin-top:40px;font-size:18px;color:var(--muted);max-width:520px;line-height:1.6;font-weight:300;}
-.hero-stats{margin-top:60px;display:flex;gap:60px;border-top:1px solid var(--border);padding-top:40px;}
+.hero-sub{margin-top:40px;font-size:18px;color:var(--muted);max-width:520px;line-height:1.6;font-weight:300;opacity:0;animation:fadeUp .8s var(--ease2) .7s forwards;}
+.hero-stats{margin-top:60px;display:flex;gap:60px;border-top:1px solid var(--border);padding-top:40px;opacity:0;animation:fadeUp .8s var(--ease2) .9s forwards;}
 .hero-stat-num{font-family:var(--font);font-size:48px;font-weight:700;line-height:1;}
 .hero-stat-num span{color:var(--red);}
 .hero-stat-label{font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:.05em;}
-.hero-flagship{position:absolute;right:40px;top:50%;transform:translateY(-50%);width:420px;background:var(--bg2);border:1px solid var(--border);padding:32px;}
+.hero-flagship{position:absolute;right:40px;top:50%;transform:translateY(-50%) translateX(60px);width:420px;background:rgba(14,11,11,.9);border:1px solid var(--border);padding:32px;opacity:0;animation:slideIn .9s var(--ease2) 1.1s forwards;backdrop-filter:blur(10px);}
 .flagship-tag{font-size:10px;letter-spacing:.15em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
 .flagship-name{font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:8px;}
 .flagship-url{font-size:12px;color:var(--muted);margin-bottom:24px;}
-.flagship-metrics{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.fm{background:rgba(255,255,255,.03);padding:16px;}
+.flagship-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.fm{background:rgba(255,255,255,.03);padding:16px;border:1px solid var(--border);transition:border-color .3s;}
+.fm:hover{border-color:rgba(212,0,0,.3);}
 .fm-val{font-family:var(--font);font-size:28px;font-weight:700;}
 .fm-val span{color:var(--red);}
 .fm-key{font-size:11px;color:var(--muted);margin-top:4px;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes slideIn{to{opacity:1;transform:translateY(-50%) translateX(0)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(212,0,0,.4)}50%{box-shadow:0 0 0 12px transparent}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes drawLine{from{width:0}to{width:80%}}
+
+/* MARQUEE */
+.marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0;background:var(--bg2);}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marquee 22s linear infinite;}
+.marquee-item{white-space:nowrap;padding:0 40px;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.18em;color:var(--muted);display:flex;align-items:center;gap:20px;transition:color .3s;}
+.marquee-item::after{content:'·';color:var(--red);margin-left:20px;}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(36px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev.v{opacity:1;transform:none;}
+.rev-l{opacity:0;transform:translateX(-36px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev-l.v{opacity:1;transform:none;}
+.rev-r{opacity:0;transform:translateX(36px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev-r.v{opacity:1;transform:none;}
+
 section{padding:120px 40px;}
 .sec-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
 .sec-title{font-family:var(--font);font-size:clamp(36px,5vw,72px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:60px;}
+
+/* WHAT */
 .what{background:var(--bg2);}
 .what-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
-.what-item{background:var(--bg2);padding:48px;position:relative;overflow:hidden;}
-.what-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.what-item{background:var(--bg2);padding:48px;position:relative;overflow:hidden;transition:background .3s;}
+.what-item:hover{background:#111;}
+.what-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease2);}
 .what-item:hover::before{transform:scaleX(1);}
+.what-item-glow{position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(212,0,0,.08) 0%,transparent 70%);pointer-events:none;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;border-radius:50%;}
+.what-item:hover .what-item-glow{opacity:1;}
 .what-num{font-family:var(--font);font-size:11px;letter-spacing:.15em;color:var(--muted);margin-bottom:20px;}
-.what-name{font-family:var(--font);font-size:24px;font-weight:700;margin-bottom:12px;}
+.what-name{font-family:var(--font);font-size:24px;font-weight:700;margin-bottom:12px;transition:color .3s;}
+.what-item:hover .what-name{color:var(--red);}
 .what-desc{font-size:14px;color:var(--muted);line-height:1.7;}
 .what-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
-.wtag{font-size:11px;padding:4px 12px;border:1px solid var(--border);color:var(--muted);font-family:var(--font);}
-.use-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.uc{border:1px solid var(--border);padding:40px;transition:border-color .3s;}
-.uc:hover{border-color:rgba(212,0,0,.4);}
-.uc-icon{font-size:32px;margin-bottom:20px;}
-.uc-name{font-family:var(--font);font-size:20px;font-weight:700;margin-bottom:12px;}
-.uc-desc{font-size:14px;color:var(--muted);line-height:1.7;}
-.uc-features{list-style:none;margin-top:16px;}
-.uc-features li{font-size:13px;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.wtag{font-size:11px;padding:4px 12px;border:1px solid var(--border);color:var(--muted);font-family:var(--font);transition:border-color .2s,color .2s;}
+.what-item:hover .wtag{border-color:rgba(212,0,0,.3);color:rgba(255,255,255,.7);}
+
+/* USE CASES */
+.use-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.uc{border:1px solid var(--border);padding:40px;transition:border-color .4s,transform .3s var(--ease2),box-shadow .4s;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--bg2) 0%,rgba(212,0,0,.02) 100%);}
+.uc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent);transform:scaleX(0);transform-origin:center;transition:transform .5s var(--ease2);}
+.uc:hover::before{transform:scaleX(1);}
+.uc::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(212,0,0,.07) 0%,transparent 70%);opacity:0;transition:opacity .4s;pointer-events:none;}
+.uc:hover::after{opacity:1;}
+.uc:hover{border-color:rgba(212,0,0,.5);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 1px rgba(212,0,0,.1);}
+.uc-icon{width:52px;height:52px;margin-bottom:24px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:12px;background:rgba(212,0,0,.05);transition:border-color .3s,background .3s,transform .4s var(--ease2);}
+.uc:hover .uc-icon{border-color:rgba(212,0,0,.4);background:rgba(212,0,0,.1);transform:scale(1.1) rotate(-5deg);}
+.uc-name{font-family:var(--font);font-size:20px;font-weight:700;margin-bottom:10px;transition:color .3s;}
+.uc:hover .uc-name{color:var(--red);}
+.uc-desc{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.uc-features{list-style:none;}
+.uc-features li{font-size:13px;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;transition:color .2s;}
+.uc:hover .uc-features li{color:rgba(255,255,255,.6);}
 .uc-features li::before{content:'';width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0;}
-.levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.level{border:1px solid var(--border);padding:40px;position:relative;transition:border-color .3s;}
-.level:hover{border-color:rgba(212,0,0,.4);}
-.level--pro{border-color:var(--red);}
+
+/* LEVELS */
+.levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.level{border:1px solid var(--border);padding:40px;position:relative;transition:border-color .3s,transform .3s var(--ease2),box-shadow .3s;background:var(--bg2);overflow:hidden;}
+.level::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,0,0,.3),transparent);opacity:0;transition:opacity .3s;}
+.level:hover{border-color:rgba(212,0,0,.3);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.4);}
+.level:hover::after{opacity:1;}
+.level--pro{border-color:var(--red);box-shadow:0 0 40px rgba(212,0,0,.1);}
 .level-badge{position:absolute;top:-1px;left:40px;background:var(--red);font-family:var(--font);font-size:10px;font-weight:700;letter-spacing:.1em;padding:4px 12px;color:#fff;}
 .level-name{font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:8px;margin-top:8px;}
 .level-price{font-family:var(--font);font-size:36px;font-weight:700;color:var(--red);margin-bottom:4px;}
 .level-price-note{font-size:12px;color:var(--muted);margin-bottom:32px;}
 .level-features{list-style:none;}
 .level-features li{font-size:14px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;line-height:1.4;}
-.level-features li::before{content:'';width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0;}
+.level-features li::before{content:'';width:4px;height:4px;background:rgba(255,255,255,.2);border-radius:50%;flex-shrink:0;}
 .level-features li.active{color:#fff;}
-.level-cta{display:block;margin-top:32px;text-align:center;padding:14px;border:1px solid var(--border);font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.08em;color:#fff;text-decoration:none;transition:all .2s;}
+.level-features li.active::before{background:var(--red);}
+.level-cta{display:block;margin-top:32px;text-align:center;padding:14px;border:1px solid var(--border);font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.08em;color:#fff;text-decoration:none;transition:all .3s var(--ease2);position:relative;overflow:hidden;}
+.level-cta::before{content:'';position:absolute;inset:0;background:var(--red);transform:translateX(-100%);transition:transform .4s var(--ease);}
+.level-cta:hover::before{transform:translateX(0);}
+.level-cta span{position:relative;z-index:1;}
 .level--pro .level-cta{background:var(--red);border-color:var(--red);}
-.level-cta:hover{background:var(--red);border-color:var(--red);}
-.process{background:var(--bg2);}
+
+/* PROCESS */
+.process{background:var(--bg2);position:relative;}
 .process-list{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;}
-.process-list::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--border);}
-.process-step{text-align:center;padding:0 20px;}
-.process-dot{width:56px;height:56px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:var(--font);font-size:14px;font-weight:700;background:var(--bg2);position:relative;z-index:1;}
-.process-step.active .process-dot{background:var(--red);border-color:var(--red);}
-.process-step-name{font-family:var(--font);font-size:14px;font-weight:600;margin-bottom:8px;}
+.process-list::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--border);z-index:0;}
+.process-line{position:absolute;top:28px;left:10%;height:1px;background:linear-gradient(90deg,var(--red),rgba(212,0,0,.3));width:0;transition:width 2s var(--ease2);z-index:1;}
+.process-list.animated .process-line{width:80%;}
+.process-step{text-align:center;padding:0 16px;position:relative;z-index:2;}
+.process-dot{width:56px;height:56px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:var(--font);font-size:14px;font-weight:700;background:var(--bg2);position:relative;z-index:2;transition:all .4s var(--ease2);color:var(--muted);}
+.process-step.lit .process-dot{background:var(--red);border-color:var(--red);color:#fff;box-shadow:0 0 30px rgba(212,0,0,.5);animation:pulse 2s infinite;}
+.process-step-name{font-family:var(--font);font-size:14px;font-weight:600;margin-bottom:8px;transition:color .3s;}
+.process-step.lit .process-step-name{color:#fff;}
 .process-step-desc{font-size:12px;color:var(--muted);line-height:1.6;}
 .process-time{font-size:11px;color:var(--red);font-family:var(--font);margin-top:8px;font-weight:600;}
+
+/* TEAM */
 .team-row{display:flex;gap:60px;align-items:flex-start;}
 .team-text{flex:1;}
 .team-text p{font-size:18px;color:var(--muted);line-height:1.8;margin-bottom:24px;font-weight:300;}
 .team-text strong{color:#fff;font-weight:500;}
 .team-creds{flex:0 0 380px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.cred{background:var(--bg2);border:1px solid var(--border);padding:24px;}
+.cred{background:var(--bg2);border:1px solid var(--border);padding:24px;transition:border-color .3s,transform .3s var(--ease2),box-shadow .3s;}
+.cred:hover{border-color:rgba(212,0,0,.4);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3);}
 .cred-val{font-family:var(--font);font-size:32px;font-weight:700;}
 .cred-val span{color:var(--red);}
 .cred-label{font-size:12px;color:var(--muted);margin-top:4px;}
+
+/* FAQ */
 .faq{background:var(--bg2);}
 .faq-list{max-width:800px;}
 .faq-item{border-bottom:1px solid var(--border);}
-.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:18px;font-weight:600;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-.faq-q span{font-size:20px;color:var(--red);transition:transform .3s;}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:18px;font-weight:600;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:color .2s;}
+.faq-q:hover{color:var(--red);}
+.faq-q span{font-size:20px;color:var(--red);transition:transform .4s var(--ease2);}
 .faq-item.open .faq-q span{transform:rotate(45deg);}
-.faq-a{font-size:15px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;}
+.faq-a{font-size:15px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .5s var(--ease2),padding .4s;}
 .faq-item.open .faq-a{max-height:300px;padding-bottom:28px;}
-.cta-final{text-align:center;padding:160px 40px;}
+
+/* CTA */
+.cta-final{text-align:center;padding:160px 40px;position:relative;overflow:hidden;}
+.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(212,0,0,.08) 0%,transparent 70%);pointer-events:none;}
 .cta-final-title{font-family:var(--font);font-size:clamp(40px,6vw,90px);font-weight:700;line-height:.95;letter-spacing:-.03em;margin-bottom:32px;}
 .cta-final-title em{font-style:normal;color:var(--red);}
 .cta-final-sub{font-size:18px;color:var(--muted);margin-bottom:48px;}
-.cta-btn{display:inline-block;background:var(--red);color:#fff;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:.1em;padding:20px 60px;text-decoration:none;transition:opacity .2s;margin-right:16px;}
-.cta-btn:hover{opacity:.85;}
-.cta-btn-ghost{display:inline-block;border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;letter-spacing:.1em;padding:20px 48px;text-decoration:none;transition:border-color .2s;}
-.cta-btn-ghost:hover{border-color:rgba(255,255,255,.4);}
+.cta-btn{display:inline-flex;align-items:center;background:var(--red);color:#fff;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:.1em;padding:20px 60px;text-decoration:none;margin-right:16px;position:relative;overflow:hidden;vertical-align:middle;transition:transform .2s var(--ease2),box-shadow .2s;}
+.cta-btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.12);transform:translateX(-100%);transition:transform .4s var(--ease);}
+.cta-btn:hover::after{transform:translateX(0);}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(212,0,0,.5);}
+.cta-btn-ghost{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.2);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;letter-spacing:.1em;padding:20px 48px;text-decoration:none;vertical-align:middle;transition:border-color .2s,transform .2s var(--ease2);}
+.cta-btn-ghost:hover{border-color:rgba(255,255,255,.5);transform:translateY(-3px);}
 footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-content:space-between;align-items:center;}
 .footer-logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.1em;}
 .footer-logo span{color:var(--red);}
 .footer-copy{font-size:12px;color:var(--muted);}
+
 @media(max-width:768px){
   nav{padding:16px 20px;}
   .hero{padding:0 20px 60px;}
@@ -140,75 +206,12 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   section{padding:80px 20px;}
   .what-grid,.levels-grid,.use-cases{grid-template-columns:1fr;}
   .process-list{grid-template-columns:1fr;gap:32px;}
-  .process-list::before{display:none;}
+  .process-list::before,.process-line{display:none;}
   .team-row{flex-direction:column;}
   .team-creds{flex:none;width:100%;}
   footer{flex-direction:column;gap:16px;text-align:center;}
 }
-
-/* MARQUEE */
-.marquee-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;overflow:hidden;}
-.marquee-track{display:flex;gap:60px;width:max-content;animation:marqueeX 22s linear infinite;}
-.marquee-track span{font-family:var(--font);font-size:12px;letter-spacing:.2em;color:var(--muted);white-space:nowrap;}
-.marquee-track span em{color:var(--red);font-style:normal;}
-@keyframes marqueeX{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* UC CARDS UPGRADE */
-.uc{border:1px solid var(--border);padding:40px;transition:border-color .4s,transform .3s var(--ease2),background .3s;position:relative;overflow:hidden;background:var(--bg2);}
-.uc::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(212,0,0,.08) 0%,transparent 70%);opacity:0;transition:opacity .4s;}
-.uc:hover{border-color:rgba(212,0,0,.5);transform:translateY(-4px);background:#0f0c0c;}
-.uc:hover::after{opacity:1;}
-.uc-accent{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent);transform:scaleX(0);transform-origin:center;transition:transform .5s var(--ease2);}
-.uc:hover .uc-accent{transform:scaleX(1);}
-.uc-name{font-family:var(--font);font-size:20px;font-weight:700;margin-bottom:8px;transition:color .3s;}
-.uc:hover .uc-name{color:var(--red);}
-/* PROCESS UPGRADE */
-.process-dot{width:48px;height:48px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:12px;font-weight:700;color:var(--muted);margin:0 auto 16px;transition:border-color .3s,color .3s,background .3s;}
-.process-step.lit .process-dot{border-color:var(--red);color:#fff;background:var(--red);}
-.process-step.lit .process-step-name{color:#fff;}
-/* WHAT ITEMS UPGRADE */
-.what-item-num{font-family:var(--font);font-size:64px;font-weight:700;color:rgba(212,0,0,.08);line-height:1;margin-bottom:8px;}
-/* CTA BUTTONS */
-.cta-btn{display:inline-block;background:var(--red);color:#fff;font-family:var(--font);font-size:13px;font-weight:700;letter-spacing:.12em;padding:18px 48px;text-decoration:none;transition:transform .2s var(--ease2),box-shadow .2s;}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(212,0,0,.4);}
-.cta-btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,.2);color:#fff;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.12em;padding:18px 40px;text-decoration:none;transition:border-color .2s,transform .2s var(--ease2);}
-.cta-btn-ghost:hover{border-color:rgba(255,255,255,.6);transform:translateY(-2px);}
-/* CTA FINAL UPGRADE */
-.cta-final{text-align:center;padding:160px 40px;position:relative;overflow:hidden;}
-.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(212,0,0,.08) 0%,transparent 70%);pointer-events:none;}
-
-/* UC CARDS UPGRADE */
-.uc-accent{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent);transform:scaleX(0);transform-origin:center;transition:transform .5s var(--ease2);}
-.uc:hover .uc-accent{transform:scaleX(1);}
-.uc:hover .uc-name{color:var(--red);}
-.uc::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(212,0,0,.06) 0%,transparent 70%);opacity:0;transition:opacity .4s;pointer-events:none;}
-.uc:hover::after{opacity:1;}
-/* CTA BUTTONS UPGRADE */
-.cta-btn{transition:transform .2s var(--ease2),box-shadow .2s,opacity .2s !important;}
-.cta-btn:hover{transform:translateY(-3px) !important;box-shadow:0 12px 40px rgba(212,0,0,.45) !important;}
-.cta-btn-ghost:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.6);}
-/* CTA FINAL GLOW */
-.cta-final{position:relative;overflow:hidden;}
-.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(212,0,0,.07) 0%,transparent 70%);pointer-events:none;}
-/* PROCESS DOT UPGRADE */
-.process-step.lit .process-dot{border-color:var(--red);color:#fff;background:rgba(212,0,0,.15);box-shadow:0 0 20px rgba(212,0,0,.3);}
-
-/* ANIMATED SVG ICONS */
-.uc-svg{display:block;transition:transform .4s var(--ease2);}
-.uc:hover .uc-svg{transform:scale(1.1) rotate(-3deg);}
-.uc-svg .draw{transition:stroke-dashoffset .6s var(--ease2);}
-.uc-svg .draw2{transition:stroke-dashoffset .8s var(--ease2) .1s;}
-.uc-svg .dot{transition:opacity .4s var(--ease2) .3s;}
-.uc:hover .draw{stroke-dashoffset:0 !important;}
-.uc:hover .draw2{stroke-dashoffset:0 !important;}
-.uc:hover .dot{opacity:1 !important;}
-/* UC CARD UPGRADE */
-.uc{background:linear-gradient(135deg,var(--bg2) 0%,rgba(212,0,0,.02) 100%);border:1px solid var(--border);padding:40px;transition:border-color .4s,transform .3s var(--ease2),box-shadow .4s;position:relative;overflow:hidden;}
-.uc:hover{border-color:rgba(212,0,0,.6);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 0 1px rgba(212,0,0,.1);}
-.uc-corner{position:absolute;bottom:0;right:0;width:60px;height:60px;background:linear-gradient(135deg,transparent 50%,rgba(212,0,0,.08) 50%);transition:opacity .3s;}
-.uc:hover .uc-corner{opacity:0;}
-.uc-name{font-family:var(--font);font-size:20px;font-weight:700;margin-bottom:8px;transition:color .3s;}
-.uc:hover .uc-name{color:var(--red);}
-.uc-icon{margin-bottom:20px;display:block;}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.rev,.rev-l,.rev-r{opacity:1;transform:none;}}
 </style>
 </head>
 <body>
@@ -221,12 +224,13 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 
 <section class="hero" style="padding-top:120px;">
   <div class="hero-bg"></div>
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
   <div class="hero-label">ПОСЛУГА 02 · TELEGRAM БОТИ ТА АВТОМАТИЗАЦІЯ</div>
   <h1 class="hero-title">Боти що<br><em>продають</em><br>поки ви спите.</h1>
   <p class="hero-sub">Розробляємо Telegram боти для автоматизації продажів, підтримки клієнтів та внутрішніх процесів бізнесу. Aiogram 3, FastAPI, PostgreSQL — production-ready з першого дня.</p>
   <div class="hero-stats">
     <div>
-      <div class="hero-stat-num">3<span>000+</span></div>
+      <div class="hero-stat-num" data-count="3000">0<span>+</span></div>
       <div class="hero-stat-label">КОРИСТУВАЧІВ В НАШИХ БОТАХ</div>
     </div>
     <div>
@@ -266,25 +270,25 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <div class="sec-label">ЩО ВХОДИТЬ</div>
   <h2 class="sec-title">Повний цикл<br>розробки бота</h2>
   <div class="what-grid">
-    <div class="what-item">
+    <div class="what-item rev"><div class="what-item-glow"></div>
       <div class="what-num">01</div>
       <div class="what-name">Архітектура та FSM</div>
       <div class="what-desc">Проєктуємо стани бота, сценарії розмов і бізнес-логіку. Finite State Machine на Redis — жодних зависань і втрачених діалогів.</div>
       <div class="what-tags"><span class="wtag">FSM</span><span class="wtag">Redis</span><span class="wtag">aiogram 3</span></div>
     </div>
-    <div class="what-item">
+    <div class="what-item rev"><div class="what-item-glow"></div>
       <div class="what-num">02</div>
       <div class="what-name">Інтеграція з CRM та базою</div>
       <div class="what-desc">Кожна заявка з бота потрапляє в PostgreSQL і сповіщає адміністратора. Інтеграція з Notion, Google Sheets, AmoCRM, власними API.</div>
       <div class="what-tags"><span class="wtag">PostgreSQL</span><span class="wtag">Google Sheets</span><span class="wtag">REST API</span></div>
     </div>
-    <div class="what-item">
+    <div class="what-item rev"><div class="what-item-glow"></div>
       <div class="what-num">03</div>
       <div class="what-name">Оплати всередині бота</div>
       <div class="what-desc">LiqPay, Stripe, Telegram Payments — клієнт оплачує не виходячи з Telegram. Автоматичне підтвердження, чек, видача доступу.</div>
       <div class="what-tags"><span class="wtag">LiqPay</span><span class="wtag">Stripe</span><span class="wtag">Telegram Pay</span></div>
     </div>
-    <div class="what-item">
+    <div class="what-item rev"><div class="what-item-glow"></div>
       <div class="what-num">04</div>
       <div class="what-name">Деплой та моніторинг</div>
       <div class="what-desc">Railway або власний VPS. Автоматичний рестарт при збоях, логування, алерти. Uptime 99.9% гарантовано архітектурою.</div>
@@ -297,8 +301,8 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <div class="sec-label">ДЛЯ ЯКИХ НІШІ</div>
   <h2 class="sec-title">Бот під<br>будь-який бізнес</h2>
   <div class="use-cases">
-    <div class="uc">
-      <div class="uc-icon">🍕</div>
+    <div class="uc rev">
+      <div class="uc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L25 23H3L14 3Z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 3L25 23" stroke="#D40000" stroke-width="1.5"/><circle cx="14" cy="16" r="2" fill="#D40000"/><circle cx="10" cy="19" r="1.5" fill="#D40000"/><circle cx="18" cy="19" r="1.5" fill="#D40000"/></svg></div>
       <div class="uc-corner"></div><div class="uc-name">Ресторан / Кафе</div>
       <div class="uc-desc">Замовлення їжі, бронювання столиків, програма лояльності, меню з фото і цінами.</div>
       <ul class="uc-features">
@@ -308,8 +312,8 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
         <li>Push-розсилки по акціях</li>
       </ul>
     </div>
-    <div class="uc">
-      <div class="uc-icon">🛍️</div>
+    <div class="uc rev">
+      <div class="uc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="10" width="20" height="15" rx="2" stroke="#fff" stroke-width="1.5"/><path d="M10 10V8a4 4 0 018 0v2" stroke="#D40000" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       <div class="uc-corner"></div><div class="uc-name">Інтернет-магазин</div>
       <div class="uc-desc">Каталог товарів, кошик, оплата, відстеження замовлень — повноцінний магазин в Telegram.</div>
       <ul class="uc-features">
@@ -319,8 +323,8 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
         <li>Повідомлення про нові товари</li>
       </ul>
     </div>
-    <div class="uc">
-      <div class="uc-icon">💆</div>
+    <div class="uc rev">
+      <div class="uc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="5" stroke="#fff" stroke-width="1.5"/><path d="M6 25c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><path d="M19 7c1.5-1 3-.5 3.5 1" stroke="#D40000" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       <div class="uc-corner"></div><div class="uc-name">Сервіс / Краса</div>
       <div class="uc-desc">Онлайн запис до майстра, нагадування, відгуки, управління розкладом.</div>
       <ul class="uc-features">
@@ -330,8 +334,8 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
         <li>Збір відгуків після послуги</li>
       </ul>
     </div>
-    <div class="uc">
-      <div class="uc-icon">📚</div>
+    <div class="uc rev">
+      <div class="uc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="13" height="20" rx="2" stroke="#fff" stroke-width="1.5"/><path d="M17 7h5a2 2 0 012 2v13a2 2 0 01-2 2h-5" stroke="#fff" stroke-width="1.5"/><path d="M7 9h7M7 13h7M7 17h4" stroke="#D40000" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       <div class="uc-corner"></div><div class="uc-name">Освіта / Курси</div>
       <div class="uc-desc">Видача матеріалів, домашні завдання, тести, прогрес учня, оплата курсу.</div>
       <ul class="uc-features">
@@ -341,8 +345,8 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
         <li>Оплата і доступ до курсу</li>
       </ul>
     </div>
-    <div class="uc">
-      <div class="uc-icon">🏢</div>
+    <div class="uc rev">
+      <div class="uc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="3" width="20" height="22" rx="2" stroke="#fff" stroke-width="1.5"/><rect x="11" y="19" width="6" height="6" rx="1" stroke="#D40000" stroke-width="1.5"/><rect x="7" y="7" width="4" height="4" rx=".5" fill="#D40000" fill-opacity=".8"/><rect x="17" y="7" width="4" height="4" rx=".5" fill="#D40000" fill-opacity=".8"/><rect x="7" y="13" width="4" height="4" rx=".5" fill="#fff" fill-opacity=".3"/><rect x="17" y="13" width="4" height="4" rx=".5" fill="#fff" fill-opacity=".3"/></svg></div>
       <div class="uc-corner"></div><div class="uc-name">B2B / Корпоративний</div>
       <div class="uc-desc">Внутрішні процеси: заявки, задачі, звіти, опитування співробітників.</div>
       <ul class="uc-features">
@@ -352,8 +356,8 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
         <li>Інтеграція з Jira / Notion</li>
       </ul>
     </div>
-    <div class="uc">
-      <div class="uc-icon">🏠</div>
+    <div class="uc rev">
+      <div class="uc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M3 15L14 5l11 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v12h16V12" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><rect x="11" y="18" width="6" height="6" rx="1" stroke="#D40000" stroke-width="1.5"/></svg></div>
       <div class="uc-corner"></div><div class="uc-name">Нерухомість / Авто</div>
       <div class="uc-desc">Підбір об'єктів по параметрах, розсилка нових пропозицій, запис на огляд.</div>
       <ul class="uc-features">
@@ -370,7 +374,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <div class="sec-label">РІВНІ СКЛАДНОСТІ</div>
   <h2 class="sec-title">Оберіть рівень<br>під задачу</h2>
   <div class="levels-grid">
-    <div class="level">
+    <div class="level rev">
       <div class="level-name">Starter</div>
       <div class="level-price">від $300</div>
       <div class="level-price-note">Простий бот · до 2 тижнів</div>
@@ -384,9 +388,9 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
         <li>CRM інтеграція</li>
         <li>Мультиадмін</li>
       </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
+      <a href="#contact" class="level-cta"><span>ОБГОВОРИТИ ПРОЄКТ</span></a>
     </div>
-    <div class="level level--pro">
+    <div class="level level--pro rev">
       <div class="level-badge">ПОПУЛЯРНИЙ</div>
       <div class="level-name">Business</div>
       <div class="level-price">від $700</div>
@@ -401,9 +405,9 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
         <li class="active">Місяць підтримки</li>
         <li>Telegram Mini App</li>
       </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
+      <a href="#contact" class="level-cta"><span>ОБГОВОРИТИ ПРОЄКТ</span></a>
     </div>
-    <div class="level">
+    <div class="level rev">
       <div class="level-name">Enterprise</div>
       <div class="level-price">від $1 500</div>
       <div class="level-price-note">Екосистема · індивідуально</div>
@@ -417,7 +421,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
         <li class="active">3 місяці підтримки</li>
         <li class="active">SLA моніторинг</li>
       </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
+      <a href="#contact" class="level-cta"><span>ОБГОВОРИТИ ПРОЄКТ</span></a>
     </div>
   </div>
 </section>
@@ -425,8 +429,8 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 <section class="process">
   <div class="sec-label">ЯК МИ ПРАЦЮЄМО</div>
   <h2 class="sec-title">Від ідеї<br>до продакшну</h2>
-  <div class="process-list">
-    <div class="process-step active">
+  <div class="process-list" id="processList"><div class="process-line" id="processLine"></div>
+    <div class="process-step">
       <div class="process-dot">01</div>
       <div class="process-step-name">Аналіз</div>
       <div class="process-step-desc">Розбираємо бізнес-процеси і проєктуємо сценарії бота</div>
@@ -469,10 +473,10 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
       <p>Передаємо повний вихідний код і всі доступи. <strong>Ваш бот — це ваш актив</strong>, а не підписка на наші послуги.</p>
     </div>
     <div class="team-creds">
-      <div class="cred"><div class="cred-val">5<span>+</span></div><div class="cred-label">Ботів в продакшні</div></div>
-      <div class="cred"><div class="cred-val">99<span>.9%</span></div><div class="cred-label">Uptime гарантія</div></div>
-      <div class="cred"><div class="cred-val">0</div><div class="cred-label">Втрачених заявок</div></div>
-      <div class="cred"><div class="cred-val">24<span>/7</span></div><div class="cred-label">Робота без зупинок</div></div>
+      <div class="cred rev"><div class="cred-val">5<span>+</span></div><div class="cred-label">Ботів в продакшні</div></div>
+      <div class="cred rev"><div class="cred-val">99<span>.9%</span></div><div class="cred-label">Uptime гарантія</div></div>
+      <div class="cred rev"><div class="cred-val">0</div><div class="cred-label">Втрачених заявок</div></div>
+      <div class="cred rev"><div class="cred-val">24<span>/7</span></div><div class="cred-label">Робота без зупинок</div></div>
     </div>
   </div>
 </section>
@@ -481,23 +485,23 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
   <h2 class="sec-title">Відповіді на<br>ваші питання</h2>
   <div class="faq-list">
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Чи можна зробити бота без програмування з мого боку? <span>+</span></button>
       <div class="faq-a">Так, ми беремо на себе всю технічну частину. Від вас потрібен тільки опис бізнес-процесів і доступ до акаунту в Telegram для реєстрації бота через @BotFather. Все інше — наша робота.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Чи буде бот працювати на мобільному? <span>+</span></button>
       <div class="faq-a">Так, Telegram боти нативно працюють на всіх платформах — iOS, Android, десктоп, вебверсія. Додатково можемо зробити Telegram Mini App — це повноцінний вебдодаток всередині Telegram.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Чи можна інтегрувати бота з моїм сайтом? <span>+</span></button>
       <div class="faq-a">Так. Бот може отримувати заявки з сайту через webhook, відправляти сповіщення при замовленні, синхронізувати базу клієнтів. Якщо у вас наш сайт — інтеграція займає кілька годин.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Що буде якщо Telegram заблокують? <span>+</span></button>
       <div class="faq-a">Весь код залишається у вас. При необхідності ми можемо портувати бота на Viber, WhatsApp Business API або зробити окремий вебчат на сайті — основна логіка залишається.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Як я буду керувати ботом після запуску? <span>+</span></button>
       <div class="faq-a">Розробляємо адмін-панель прямо в Telegram — ви керуєте ботом через команди або кнопки без технічних знань. Додатково — веб-дашборд з аналітикою та управлінням контентом.</div>
     </div>
@@ -518,7 +522,83 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 </footer>
 
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);},{passive:true});
+/* NAV */
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60),{passive:true});
+
+/* HERO PARTICLES */
+(function(){
+  const c=document.getElementById('heroCanvas');
+  if(!c)return;
+  const ctx=c.getContext('2d');
+  c.width=window.innerWidth;c.height=window.innerHeight;
+  const pts=Array.from({length:70},()=>({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.5}));
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(212,0,0,.3)';ctx.fill();});
+    pts.forEach((p,i)=>pts.slice(i+1).forEach(q=>{const d=Math.hypot(p.x-q.x,p.y-q.y);if(d<130){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(212,0,0,${.1*(1-d/130)})`;ctx.lineWidth=.5;ctx.stroke();}}));
+    requestAnimationFrame(draw);
+  }
+  draw();
+  window.addEventListener('resize',()=>{c.width=window.innerWidth;c.height=window.innerHeight;},{passive:true});
+})();
+
+/* WHAT ITEM GLOW */
+document.querySelectorAll('.what-item').forEach(item=>{
+  const glow=item.querySelector('.what-item-glow');
+  if(!glow)return;
+  item.addEventListener('mousemove',e=>{const r=item.getBoundingClientRect();glow.style.left=(e.clientX-r.left)+'px';glow.style.top=(e.clientY-r.top)+'px';});
+});
+
+/* REVEAL */
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>ro.observe(el));
+
+/* PROCESS SEQUENTIAL */
+const pl=document.getElementById('processList');
+if(pl){
+  const line=document.getElementById('processLine');
+  const po=new IntersectionObserver(es=>{
+    if(es[0].isIntersecting){
+      pl.classList.add('animated');
+      const steps=pl.querySelectorAll('.process-step');
+      steps.forEach((s,i)=>setTimeout(()=>s.classList.add('lit'),i*400));
+      po.disconnect();
+    }
+  },{threshold:.3});
+  po.observe(pl);
+}
+
+/* FAQ */
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!open)item.classList.add('open');
+  });
+});
+
+/* COUNT UP */
+(function(){
+  const nums=document.querySelectorAll('.hero-stat-num[data-count]');
+  if(!nums.length)return;
+  const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;
+  const animate=el=>{
+    const target=parseInt(el.dataset.count,10);
+    if(!target)return;
+    const suffix=el.querySelector('span');
+    const html=suffix?suffix.outerHTML:'';
+    const dur=1800;const start=performance.now();
+    const tick=now=>{const p=Math.min((now-start)/dur,1);el.innerHTML=Math.round(ease(p)*target)+html;if(p<1)requestAnimationFrame(tick);};
+    requestAnimationFrame(tick);
+  };
+  nums.forEach(el=>animate(el));
+})();
+
+/* MAGNETIC BUTTONS */
+document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.12;const y=(e.clientY-r.top-r.height/2)*.12;btn.style.transform=`translate(${x}px,${y}px)`;});
+  btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
+});
 document.querySelectorAll('.faq-item').forEach(item=>{
   item.querySelector('.faq-q').addEventListener('click',()=>{
     const isOpen=item.classList.contains('open');
