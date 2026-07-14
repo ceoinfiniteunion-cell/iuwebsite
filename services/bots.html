@@ -22,6 +22,16 @@
   "offers": {"@type": "Offer", "price": "300", "priceCurrency": "USD"},
   "areaServed": "Ukraine"
 }
+
+/* FAQ */
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=this.parentElement;
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+    if(!isOpen){item.classList.add('open');}
+  });
+});
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -576,13 +586,7 @@ if(pl){
   po.observe(pl);
 }
 
-/* FAQ */
-document.querySelectorAll('.faq-item').forEach(item=>{
-  item.querySelector('.faq-q').addEventListener('click',()=>{
-    const open=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-    if(!open)item.classList.add('open');
-  });
+
 });
 
 /* COUNT UP */
