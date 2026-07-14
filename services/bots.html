@@ -70,10 +70,14 @@ nav.scrolled{background:rgba(6,4,4,.95);backdrop-filter:blur(20px);border-color:
 @keyframes drawLine{from{width:0}to{width:80%}}
 
 /* MARQUEE */
-.marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0;background:var(--bg2);}
-.marquee-track{display:flex;gap:0;width:max-content;animation:marquee 22s linear infinite;}
-.marquee-item{white-space:nowrap;padding:0 40px;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.18em;color:var(--muted);display:flex;align-items:center;gap:20px;transition:color .3s;}
-.marquee-item::after{content:'·';color:var(--red);margin-left:20px;}
+.marquee-wrap{overflow:hidden;position:relative;background:var(--bg2);}
+.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;}
+.marquee-wrap::before{left:0;background:linear-gradient(90deg,var(--bg2) 0%,transparent 100%);}
+.marquee-wrap::after{right:0;background:linear-gradient(-90deg,var(--bg2) 0%,transparent 100%);}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marquee 25s linear infinite;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.marquee-item{white-space:nowrap;padding:16px 40px;font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--muted);border-right:1px solid var(--border);transition:color .3s,background .3s;cursor:default;}
+.marquee-item:hover{color:#fff;background:rgba(212,0,0,.06);}
+.marquee-item em{color:var(--red);font-style:normal;margin-left:12px;}
 
 /* REVEAL */
 .rev{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease2),transform .7s var(--ease2);}
@@ -261,8 +265,22 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 
 <div class="marquee-wrap">
   <div class="marquee-track">
-    <span>AIOGRAM 3 <em>·</em></span><span>FASTAPI <em>·</em></span><span>POSTGRESQL <em>·</em></span><span>REDIS <em>·</em></span><span>LIQPAY <em>·</em></span><span>RAILWAY <em>·</em></span><span>WEBHOOK <em>·</em></span><span>FSM СЦЕНАРІЇ <em>·</em></span>
-    <span>AIOGRAM 3 <em>·</em></span><span>FASTAPI <em>·</em></span><span>POSTGRESQL <em>·</em></span><span>REDIS <em>·</em></span><span>LIQPAY <em>·</em></span><span>RAILWAY <em>·</em></span><span>WEBHOOK <em>·</em></span><span>FSM СЦЕНАРІЇ <em>·</em></span>
+    <span class="marquee-item">AIOGRAM 3 <em>→</em></span>
+    <span class="marquee-item">FASTAPI <em>→</em></span>
+    <span class="marquee-item">POSTGRESQL <em>→</em></span>
+    <span class="marquee-item">REDIS FSM <em>→</em></span>
+    <span class="marquee-item">LIQPAY <em>→</em></span>
+    <span class="marquee-item">RAILWAY <em>→</em></span>
+    <span class="marquee-item">WEBHOOK <em>→</em></span>
+    <span class="marquee-item">CRM ІНТЕГРАЦІЯ <em>→</em></span>
+    <span class="marquee-item">AIOGRAM 3 <em>→</em></span>
+    <span class="marquee-item">FASTAPI <em>→</em></span>
+    <span class="marquee-item">POSTGRESQL <em>→</em></span>
+    <span class="marquee-item">REDIS FSM <em>→</em></span>
+    <span class="marquee-item">LIQPAY <em>→</em></span>
+    <span class="marquee-item">RAILWAY <em>→</em></span>
+    <span class="marquee-item">WEBHOOK <em>→</em></span>
+    <span class="marquee-item">CRM ІНТЕГРАЦІЯ <em>→</em></span>
   </div>
 </div>
 
