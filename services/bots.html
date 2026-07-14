@@ -5,30 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Telegram боти для бізнесу — розробка ботів під ключ | Infinite Union Харків</title>
 <meta name="description" content="Розробка Telegram ботів для бізнесу під ключ. Боти для автоматизації продажів, CRM інтеграція, квізи, оплати, боти для ресторанів, магазинів, сервісних компаній. Харків, Україна.">
-<meta name="keywords" content="розробка telegram бота, telegram бот для бізнесу, замовити telegram бот, бот для автоматизації, бот для продажів, crm бот telegram, бот для ресторану, бот для магазину, aiogram розробка, python telegram бот, бот харків, замовити бота україна, telegram автоматизація бізнесу, чат-бот для сайту, бот для збору заявок, бот з оплатою, liqpay бот, бот квіз, бот розклад, бот для сервісу, telegram mini app">
+<meta name="keywords" content="розробка telegram бота, telegram бот для бізнесу, замовити telegram бот, бот для автоматизації, бот для продажів, crm бот telegram, бот для ресторану, aiogram розробка, python telegram бот, бот харків, замовити бота україна, telegram автоматизація бізнесу, чат-бот, бот для збору заявок, бот з оплатою, liqpay бот, бот квіз, telegram mini app">
 <link rel="canonical" href="https://infiniteunion.com.ua/services/bots.html">
 <meta property="og:title" content="Telegram боти для бізнесу — Infinite Union">
 <meta property="og:description" content="Розробка Telegram ботів під ключ. Автоматизація продажів, CRM, оплати, квізи. Senior команда, Харків.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://infiniteunion.com.ua/og-image.svg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Розробка Telegram ботів для бізнесу",
-  "provider": {"@type": "Organization", "name": "Infinite Union", "url": "https://infiniteunion.com.ua"},
-  "description": "Розробка Telegram ботів під ключ: автоматизація продажів, CRM інтеграція, оплати, квізи, розсилки.",
-  "offers": {"@type": "Offer", "price": "300", "priceCurrency": "USD"},
-  "areaServed": "Ukraine"
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Розробка Telegram ботів для бізнесу","provider":{"@type":"Organization","name":"Infinite Union","url":"https://infiniteunion.com.ua"},"description":"Розробка Telegram ботів під ключ: автоматизація продажів, CRM інтеграція, оплати, квізи, розсилки.","offers":{"@type":"Offer","price":"300","priceCurrency":"USD"},"areaServed":"Ukraine"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{--red:#D40000;--bg:#060404;--bg2:#0e0b0b;--border:rgba(255,255,255,0.08);--text:#fff;--muted:rgba(255,255,255,0.45);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;}
+::selection{background:#E8341C;color:#fff;}::-moz-selection{background:#E8341C;color:#fff;}
+:root{--red:#D40000;--red-glow:rgba(212,0,0,0.15);--bg:#060404;--bg2:#0e0b0b;--bg3:#111;--border:rgba(255,255,255,0.08);--text:#fff;--muted:rgba(255,255,255,0.45);--muted2:rgba(255,255,255,0.25);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--ease:cubic-bezier(0.76,0,0.24,1);--ease2:cubic-bezier(0.23,1,0.32,1);}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;cursor:none;}
+
+/* CURSOR */
+#cur{position:fixed;width:8px;height:8px;background:var(--red);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s;mix-blend-mode:difference;}
+#curO{position:fixed;width:36px;height:36px;border:1px solid rgba(212,0,0,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .18s var(--ease2);}
+body:hover #cur{opacity:1;}
+a:hover~#curO,button:hover~#curO{transform:translate(-50%,-50%) scale(1.8);}
+
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:border-color .3s,background .3s;}
 nav.scrolled{background:rgba(6,4,4,.92);backdrop-filter:blur(12px);border-color:var(--border);}
 .nav-logo{font-family:var(--font);font-weight:700;font-size:15px;letter-spacing:.12em;text-decoration:none;color:#fff;}
@@ -37,17 +36,22 @@ nav.scrolled{background:rgba(6,4,4,.92);backdrop-filter:blur(12px);border-color:
 .nav-back:hover{color:#fff;}
 .nav-cta{background:var(--red);color:#fff;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.1em;padding:10px 24px;text-decoration:none;transition:opacity .2s;}
 .nav-cta:hover{opacity:.85;}
+
+/* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 40px 80px;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 70% 40%, rgba(212,0,0,.12) 0%, transparent 70%);}
-.hero-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:24px;}
+.hero-noise{position:absolute;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 75% 45%, rgba(212,0,0,.1) 0%, transparent 70%);}
+.hero-particles{position:absolute;inset:0;pointer-events:none;}
+.hero-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:24px;opacity:0;transform:translateY(12px);animation:fadeUp .8s var(--ease2) .2s forwards;}
 .hero-title{font-family:var(--font);font-size:clamp(52px,8vw,120px);font-weight:700;line-height:.92;letter-spacing:-.03em;max-width:900px;}
-.hero-title em{font-style:normal;color:var(--red);}
-.hero-sub{margin-top:40px;font-size:18px;color:var(--muted);max-width:520px;line-height:1.6;font-weight:300;}
-.hero-stats{margin-top:60px;display:flex;gap:60px;border-top:1px solid var(--border);padding-top:40px;}
+.hero-title em{font-style:normal;color:var(--red);}.hero-title{opacity:0;transform:translateY(40px);animation:fadeUp 1s var(--ease2) .3s forwards;}
+.char{display:inline-block;opacity:0;transform:translateY(40px);animation:charIn .7s var(--ease2) forwards;}
+.hero-sub{margin-top:40px;font-size:18px;color:var(--muted);max-width:520px;line-height:1.6;font-weight:300;opacity:0;transform:translateY(16px);animation:fadeUp .9s var(--ease2) .6s forwards;}
+.hero-stats{margin-top:60px;display:flex;gap:60px;border-top:1px solid var(--border);padding-top:40px;opacity:0;animation:fadeUp .8s var(--ease2) .8s forwards;}
 .hero-stat-num{font-family:var(--font);font-size:48px;font-weight:700;line-height:1;}
 .hero-stat-num span{color:var(--red);}
 .hero-stat-label{font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:.05em;}
-.hero-flagship{position:absolute;right:40px;top:50%;transform:translateY(-50%);width:420px;background:var(--bg2);border:1px solid var(--border);padding:32px;}
+.hero-flagship{position:absolute;right:40px;top:50%;transform:translateY(-50%) translateX(60px);width:420px;background:var(--bg2);border:1px solid var(--border);padding:32px;opacity:0;animation:slideIn .9s var(--ease2) 1s forwards;}
 .flagship-tag{font-size:10px;letter-spacing:.15em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
 .flagship-name{font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:8px;}
 .flagship-url{font-size:12px;color:var(--muted);margin-bottom:24px;}
@@ -56,81 +60,142 @@ nav.scrolled{background:rgba(6,4,4,.92);backdrop-filter:blur(12px);border-color:
 .fm-val{font-family:var(--font);font-size:28px;font-weight:700;}
 .fm-val span{color:var(--red);}
 .fm-key{font-size:11px;color:var(--muted);margin-top:4px;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
+@keyframes charIn{to{opacity:1;transform:translateY(0);}}
+@keyframes slideIn{to{opacity:1;transform:translateY(-50%) translateX(0);}}
+@keyframes countUp{from{opacity:0;}to{opacity:1;}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 var(--red-glow);}50%{box-shadow:0 0 0 12px transparent;}}
+@keyframes scanLine{0%{transform:translateY(-100%);}100%{transform:translateY(100vh);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+
+/* SECTION BASE */
 section{padding:120px 40px;}
 .sec-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
 .sec-title{font-family:var(--font);font-size:clamp(36px,5vw,72px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:60px;}
-.what{background:var(--bg2);}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev.v{opacity:1;transform:none;}
+.rev-l{opacity:0;transform:translateX(-32px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev-l.v{opacity:1;transform:none;}
+.rev-r{opacity:0;transform:translateX(32px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev-r.v{opacity:1;transform:none;}
+
+/* WHAT */
+.what{background:var(--bg2);position:relative;overflow:hidden;}
+.what::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);}
 .what-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
-.what-item{background:var(--bg2);padding:48px;position:relative;overflow:hidden;}
-.what-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.what-item{background:var(--bg2);padding:48px;position:relative;overflow:hidden;transition:background .3s;}
+.what-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease2);}
 .what-item:hover::before{transform:scaleX(1);}
+.what-item:hover{background:#111;}
+.what-item-glow{position:absolute;width:200px;height:200px;background:var(--red-glow);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;filter:blur(60px);}
+.what-item:hover .what-item-glow{opacity:1;}
 .what-num{font-family:var(--font);font-size:11px;letter-spacing:.15em;color:var(--muted);margin-bottom:20px;}
 .what-name{font-family:var(--font);font-size:24px;font-weight:700;margin-bottom:12px;}
 .what-desc{font-size:14px;color:var(--muted);line-height:1.7;}
 .what-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
-.wtag{font-size:11px;padding:4px 12px;border:1px solid var(--border);color:var(--muted);font-family:var(--font);}
+.wtag{font-size:11px;padding:4px 12px;border:1px solid var(--border);color:var(--muted);font-family:var(--font);transition:border-color .2s,color .2s;}
+.what-item:hover .wtag{border-color:rgba(212,0,0,.3);color:rgba(255,255,255,.7);}
+
+/* USE CASES */
 .use-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.uc{border:1px solid var(--border);padding:40px;transition:border-color .3s;}
-.uc:hover{border-color:rgba(212,0,0,.4);}
-.uc-icon{font-size:32px;margin-bottom:20px;}
+.uc{border:1px solid var(--border);padding:40px;transition:border-color .4s,transform .4s var(--ease2),background .3s;position:relative;overflow:hidden;}
+.uc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease2);}
+.uc:hover{border-color:rgba(212,0,0,.3);transform:translateY(-4px);background:rgba(212,0,0,.02);}
+.uc:hover::after{transform:scaleX(1);}
+.uc-icon{width:36px;height:36px;margin-bottom:20px;display:block;transition:transform .3s var(--ease2);}.uc-icon svg{width:36px;height:36px;}
+.uc:hover .uc-icon{transform:scale(1.15);}
 .uc-name{font-family:var(--font);font-size:20px;font-weight:700;margin-bottom:12px;}
 .uc-desc{font-size:14px;color:var(--muted);line-height:1.7;}
 .uc-features{list-style:none;margin-top:16px;}
-.uc-features li{font-size:13px;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.uc-features li{font-size:13px;color:var(--muted);padding:7px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
 .uc-features li::before{content:'';width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0;}
+
+/* LEVELS */
 .levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.level{border:1px solid var(--border);padding:40px;position:relative;transition:border-color .3s;}
-.level:hover{border-color:rgba(212,0,0,.4);}
-.level--pro{border-color:var(--red);}
+.level{border:1px solid var(--border);padding:40px;position:relative;transition:border-color .3s,transform .4s var(--ease2);}
+.level:hover{border-color:rgba(212,0,0,.4);transform:translateY(-4px);}
+.level--pro{border-color:var(--red);background:rgba(212,0,0,.02);}
+.level--pro:hover{transform:translateY(-6px);}
 .level-badge{position:absolute;top:-1px;left:40px;background:var(--red);font-family:var(--font);font-size:10px;font-weight:700;letter-spacing:.1em;padding:4px 12px;color:#fff;}
 .level-name{font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:8px;margin-top:8px;}
 .level-price{font-family:var(--font);font-size:36px;font-weight:700;color:var(--red);margin-bottom:4px;}
 .level-price-note{font-size:12px;color:var(--muted);margin-bottom:32px;}
 .level-features{list-style:none;}
 .level-features li{font-size:14px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;line-height:1.4;}
-.level-features li::before{content:'';width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0;}
+.level-features li::before{content:'';width:4px;height:4px;background:var(--muted2);border-radius:50%;flex-shrink:0;}
 .level-features li.active{color:#fff;}
-.level-cta{display:block;margin-top:32px;text-align:center;padding:14px;border:1px solid var(--border);font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.08em;color:#fff;text-decoration:none;transition:all .2s;}
+.level-features li.active::before{background:var(--red);}
+.level-cta{display:block;margin-top:32px;text-align:center;padding:14px;border:1px solid var(--border);font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.08em;color:#fff;text-decoration:none;transition:all .3s var(--ease2);position:relative;overflow:hidden;}
+.level-cta::before{content:'';position:absolute;inset:0;background:var(--red);transform:translateX(-100%);transition:transform .4s var(--ease);}
+.level-cta:hover::before{transform:translateX(0);}
+.level-cta span{position:relative;z-index:1;}
 .level--pro .level-cta{background:var(--red);border-color:var(--red);}
-.level-cta:hover{background:var(--red);border-color:var(--red);}
-.process{background:var(--bg2);}
+
+/* PROCESS */
+.process{background:var(--bg2);position:relative;}
 .process-list{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;}
 .process-list::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--border);}
+.process-line{position:absolute;top:28px;left:10%;height:1px;background:var(--red);width:0;transition:width 1.5s var(--ease2);z-index:1;}
+.process-list.animated .process-line{width:80%;}
 .process-step{text-align:center;padding:0 20px;}
-.process-dot{width:56px;height:56px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:var(--font);font-size:14px;font-weight:700;background:var(--bg2);position:relative;z-index:1;}
-.process-step.active .process-dot{background:var(--red);border-color:var(--red);}
+.process-dot{width:56px;height:56px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:var(--font);font-size:14px;font-weight:700;background:var(--bg2);position:relative;z-index:2;transition:all .4s var(--ease2);}
+.process-step.lit .process-dot{background:var(--red);border-color:var(--red);box-shadow:0 0 20px var(--red-glow);animation:pulse 2s infinite;}
 .process-step-name{font-family:var(--font);font-size:14px;font-weight:600;margin-bottom:8px;}
 .process-step-desc{font-size:12px;color:var(--muted);line-height:1.6;}
 .process-time{font-size:11px;color:var(--red);font-family:var(--font);margin-top:8px;font-weight:600;}
+
+/* TEAM */
 .team-row{display:flex;gap:60px;align-items:flex-start;}
 .team-text{flex:1;}
 .team-text p{font-size:18px;color:var(--muted);line-height:1.8;margin-bottom:24px;font-weight:300;}
 .team-text strong{color:#fff;font-weight:500;}
 .team-creds{flex:0 0 380px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.cred{background:var(--bg2);border:1px solid var(--border);padding:24px;}
+.cred{background:var(--bg2);border:1px solid var(--border);padding:24px;transition:border-color .3s,transform .3s var(--ease2);}
+.cred:hover{border-color:rgba(212,0,0,.4);transform:translateY(-4px);}
 .cred-val{font-family:var(--font);font-size:32px;font-weight:700;}
 .cred-val span{color:var(--red);}
 .cred-label{font-size:12px;color:var(--muted);margin-top:4px;}
+
+/* MARQUEE */
+.marquee-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0;overflow:hidden;background:var(--bg2);}
+.marquee-track{display:flex;gap:0;animation:marquee 20s linear infinite;}
+.marquee-item{white-space:nowrap;padding:0 40px;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.15em;color:var(--muted);display:flex;align-items:center;gap:20px;}
+.marquee-item::after{content:'·';color:var(--red);}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* FAQ */
 .faq{background:var(--bg2);}
 .faq-list{max-width:800px;}
 .faq-item{border-bottom:1px solid var(--border);}
-.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:18px;font-weight:600;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-.faq-q span{font-size:20px;color:var(--red);transition:transform .3s;}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:18px;font-weight:600;padding:28px 0;cursor:none;display:flex;justify-content:space-between;align-items:center;transition:color .2s;}
+.faq-q:hover{color:var(--red);}
+.faq-q span{font-size:20px;color:var(--red);transition:transform .4s var(--ease2);}
 .faq-item.open .faq-q span{transform:rotate(45deg);}
-.faq-a{font-size:15px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;}
+.faq-a{font-size:15px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .5s var(--ease2),padding .4s;}
 .faq-item.open .faq-a{max-height:300px;padding-bottom:28px;}
-.cta-final{text-align:center;padding:160px 40px;}
+
+/* CTA */
+.cta-final{text-align:center;padding:160px 40px;position:relative;overflow:hidden;}
+.cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%, rgba(212,0,0,.06) 0%, transparent 70%);pointer-events:none;}
 .cta-final-title{font-family:var(--font);font-size:clamp(40px,6vw,90px);font-weight:700;line-height:.95;letter-spacing:-.03em;margin-bottom:32px;}
 .cta-final-title em{font-style:normal;color:var(--red);}
 .cta-final-sub{font-size:18px;color:var(--muted);margin-bottom:48px;}
-.cta-btn{display:inline-block;background:var(--red);color:#fff;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:.1em;padding:20px 60px;text-decoration:none;transition:opacity .2s;margin-right:16px;}
-.cta-btn:hover{opacity:.85;}
-.cta-btn-ghost{display:inline-block;border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;letter-spacing:.1em;padding:20px 48px;text-decoration:none;transition:border-color .2s;}
+.cta-btn{display:inline-flex;align-items:center;background:var(--red);color:#fff;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:.1em;padding:20px 60px;text-decoration:none;transition:opacity .2s;margin-right:16px;position:relative;overflow:hidden;vertical-align:middle;}
+.cta-btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.1);transform:translateX(-100%);transition:transform .3s var(--ease);}
+.cta-btn:hover::after{transform:translateX(0);}
+.cta-btn-ghost{display:inline-flex;align-items:center;border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;letter-spacing:.1em;padding:20px 48px;text-decoration:none;transition:border-color .2s,color .2s;vertical-align:middle;}
 .cta-btn-ghost:hover{border-color:rgba(255,255,255,.4);}
+
 footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-content:space-between;align-items:center;}
 .footer-logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.1em;}
 .footer-logo span{color:var(--red);}
 .footer-copy{font-size:12px;color:var(--muted);}
+
+@media(hover:none){body{cursor:auto;}#cur,#curO{display:none;}}
 @media(max-width:768px){
   nav{padding:16px 20px;}
   .hero{padding:0 20px 60px;}
@@ -139,14 +204,18 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   section{padding:80px 20px;}
   .what-grid,.levels-grid,.use-cases{grid-template-columns:1fr;}
   .process-list{grid-template-columns:1fr;gap:32px;}
-  .process-list::before{display:none;}
+  .process-list::before,.process-line{display:none;}
   .team-row{flex-direction:column;}
   .team-creds{flex:none;width:100%;}
   footer{flex-direction:column;gap:16px;text-align:center;}
 }
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.rev,.rev-l,.rev-r{opacity:1;transform:none;}}
 </style>
 </head>
 <body>
+
+<div id="cur"></div>
+<div id="curO"></div>
 
 <nav id="nav">
   <a href="../index.html" class="nav-back">← Назад</a>
@@ -155,32 +224,22 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 </nav>
 
 <section class="hero" style="padding-top:120px;">
+  <div class="hero-noise"></div>
   <div class="hero-bg"></div>
+  <canvas class="hero-particles" id="heroCanvas"></canvas>
   <div class="hero-label">ПОСЛУГА 02 · TELEGRAM БОТИ ТА АВТОМАТИЗАЦІЯ</div>
-  <h1 class="hero-title">Боти що<br><em>продають</em><br>поки ви спите.</h1>
-  <p class="hero-sub">Розробляємо Telegram боти для автоматизації продажів, підтримки клієнтів та внутрішніх процесів бізнесу. Aiogram 3, FastAPI, PostgreSQL — production-ready з першого дня.</p>
+  <h1 class="hero-title" id="heroTitle">Боти що<br><em>продають</em><br>поки ви спите.</h1>
+  <p class="hero-sub">Розробляємо Telegram боти для автоматизації продажів, підтримки клієнтів та внутрішніх процесів. Aiogram 3, FastAPI, PostgreSQL — production-ready з першого дня.</p>
   <div class="hero-stats">
-    <div>
-      <div class="hero-stat-num">3<span>000+</span></div>
-      <div class="hero-stat-label">КОРИСТУВАЧІВ В НАШИХ БОТАХ</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">24<span>/7</span></div>
-      <div class="hero-stat-label">АВТОМАТИЧНА РОБОТА</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">0</div>
-      <div class="hero-stat-label">МЕНЕДЖЕРІВ НА РУТИНУ</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">15<span>хв</span></div>
-      <div class="hero-stat-label">ЧАС ВІДПОВІДІ</div>
-    </div>
+    <div><div class="hero-stat-num" data-count="3000">0<span>+</span></div><div class="hero-stat-label">КОРИСТУВАЧІВ В НАШИХ БОТАХ</div></div>
+    <div><div class="hero-stat-num">24<span>/7</span></div><div class="hero-stat-label">АВТОМАТИЧНА РОБОТА</div></div>
+    <div><div class="hero-stat-num" data-count="0">0</div><div class="hero-stat-label">МЕНЕДЖЕРІВ НА РУТИНУ</div></div>
+    <div><div class="hero-stat-num">15<span>хв</span></div><div class="hero-stat-label">ЧАС ВІДПОВІДІ</div></div>
   </div>
   <div class="hero-flagship">
     <div class="flagship-tag">ФЛАГМАНСЬКИЙ ПРОЄКТ</div>
     <div class="flagship-name">KNEU Bot</div>
-    <div class="flagship-url">Офіційний бот університету</div>
+    <div class="flagship-url">Офіційний бот університету · @kneu_bot</div>
     <div class="flagship-metrics">
       <div class="fm"><div class="fm-val">3<span>000+</span></div><div class="fm-key">Активних студентів</div></div>
       <div class="fm"><div class="fm-val"><span>∞</span></div><div class="fm-key">Запитів оброблено</div></div>
@@ -190,213 +249,69 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   </div>
 </section>
 
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item">TELEGRAM BOT</div><div class="marquee-item">AIOGRAM 3</div><div class="marquee-item">FASTAPI</div><div class="marquee-item">POSTGRESQL</div><div class="marquee-item">REDIS FSM</div><div class="marquee-item">LIQPAY</div><div class="marquee-item">АВТОМАТИЗАЦІЯ</div><div class="marquee-item">CRM ІНТЕГРАЦІЯ</div><div class="marquee-item">TELEGRAM BOT</div><div class="marquee-item">AIOGRAM 3</div><div class="marquee-item">FASTAPI</div><div class="marquee-item">POSTGRESQL</div><div class="marquee-item">REDIS FSM</div><div class="marquee-item">LIQPAY</div><div class="marquee-item">АВТОМАТИЗАЦІЯ</div><div class="marquee-item">CRM ІНТЕГРАЦІЯ</div>
+  </div>
+</div>
+
 <section class="what">
-  <div class="sec-label">ЩО ВХОДИТЬ</div>
-  <h2 class="sec-title">Повний цикл<br>розробки бота</h2>
+  <div class="sec-label rev">ЩО ВХОДИТЬ</div>
+  <h2 class="sec-title rev">Повний цикл<br>розробки бота</h2>
   <div class="what-grid">
-    <div class="what-item">
-      <div class="what-num">01</div>
-      <div class="what-name">Архітектура та FSM</div>
-      <div class="what-desc">Проєктуємо стани бота, сценарії розмов і бізнес-логіку. Finite State Machine на Redis — жодних зависань і втрачених діалогів.</div>
-      <div class="what-tags"><span class="wtag">FSM</span><span class="wtag">Redis</span><span class="wtag">aiogram 3</span></div>
-    </div>
-    <div class="what-item">
-      <div class="what-num">02</div>
-      <div class="what-name">Інтеграція з CRM та базою</div>
-      <div class="what-desc">Кожна заявка з бота потрапляє в PostgreSQL і сповіщає адміністратора. Інтеграція з Notion, Google Sheets, AmoCRM, власними API.</div>
-      <div class="what-tags"><span class="wtag">PostgreSQL</span><span class="wtag">Google Sheets</span><span class="wtag">REST API</span></div>
-    </div>
-    <div class="what-item">
-      <div class="what-num">03</div>
-      <div class="what-name">Оплати всередині бота</div>
-      <div class="what-desc">LiqPay, Stripe, Telegram Payments — клієнт оплачує не виходячи з Telegram. Автоматичне підтвердження, чек, видача доступу.</div>
-      <div class="what-tags"><span class="wtag">LiqPay</span><span class="wtag">Stripe</span><span class="wtag">Telegram Pay</span></div>
-    </div>
-    <div class="what-item">
-      <div class="what-num">04</div>
-      <div class="what-name">Деплой та моніторинг</div>
-      <div class="what-desc">Railway або власний VPS. Автоматичний рестарт при збоях, логування, алерти. Uptime 99.9% гарантовано архітектурою.</div>
-      <div class="what-tags"><span class="wtag">Railway</span><span class="wtag">Docker</span><span class="wtag">Monitoring</span></div>
-    </div>
+    <div class="what-item rev"><div class="what-item-glow"></div><div class="what-num">01</div><div class="what-name">Архітектура та FSM</div><div class="what-desc">Проєктуємо стани бота, сценарії розмов і бізнес-логіку. Finite State Machine на Redis — жодних зависань і втрачених діалогів навіть при тисячах одночасних користувачів.</div><div class="what-tags"><span class="wtag">FSM</span><span class="wtag">Redis</span><span class="wtag">aiogram 3</span><span class="wtag">asyncio</span></div></div>
+    <div class="what-item rev" style="transition-delay:.1s"><div class="what-item-glow"></div><div class="what-num">02</div><div class="what-name">CRM та база даних</div><div class="what-desc">Кожна заявка в PostgreSQL і одразу до адміністратора. Інтеграція з Notion, Google Sheets, AmoCRM, власними API. Audit log кожної дії.</div><div class="what-tags"><span class="wtag">PostgreSQL</span><span class="wtag">Google Sheets</span><span class="wtag">REST API</span><span class="wtag">Webhooks</span></div></div>
+    <div class="what-item rev" style="transition-delay:.2s"><div class="what-item-glow"></div><div class="what-num">03</div><div class="what-name">Оплати всередині бота</div><div class="what-desc">LiqPay, Stripe, Telegram Payments — клієнт платить не виходячи з месенджера. Автоматичне підтвердження, чек, видача доступу миттєво.</div><div class="what-tags"><span class="wtag">LiqPay</span><span class="wtag">Stripe</span><span class="wtag">Telegram Pay</span><span class="wtag">Invoice</span></div></div>
+    <div class="what-item rev" style="transition-delay:.3s"><div class="what-item-glow"></div><div class="what-num">04</div><div class="what-name">Деплой та моніторинг 24/7</div><div class="what-desc">Railway або VPS. Автоматичний рестарт, Dead Letter Queue щоб жодна заявка не загубилась, exponential backoff — система що не падає.</div><div class="what-tags"><span class="wtag">Railway</span><span class="wtag">Docker</span><span class="wtag">DLQ</span><span class="wtag">99.9% uptime</span></div></div>
   </div>
 </section>
 
 <section>
-  <div class="sec-label">ДЛЯ ЯКИХ НІШІ</div>
-  <h2 class="sec-title">Бот під<br>будь-який бізнес</h2>
+  <div class="sec-label rev">ДЛЯ ЯКИХ НІШІ</div>
+  <h2 class="sec-title rev">Бот під<br>будь-який бізнес</h2>
   <div class="use-cases">
-    <div class="uc">
-      <div class="uc-icon">🍕</div>
-      <div class="uc-name">Ресторан / Кафе</div>
-      <div class="uc-desc">Замовлення їжі, бронювання столиків, програма лояльності, меню з фото і цінами.</div>
-      <ul class="uc-features">
-        <li>Онлайн замовлення і доставка</li>
-        <li>Бронювання з підтвердженням</li>
-        <li>Програма накопичувальних бонусів</li>
-        <li>Push-розсилки по акціях</li>
-      </ul>
-    </div>
-    <div class="uc">
-      <div class="uc-icon">🛍️</div>
-      <div class="uc-name">Інтернет-магазин</div>
-      <div class="uc-desc">Каталог товарів, кошик, оплата, відстеження замовлень — повноцінний магазин в Telegram.</div>
-      <ul class="uc-features">
-        <li>Каталог з категоріями і фільтрами</li>
-        <li>Кошик та оплата LiqPay / Stripe</li>
-        <li>Відстеження статусу замовлення</li>
-        <li>Повідомлення про нові товари</li>
-      </ul>
-    </div>
-    <div class="uc">
-      <div class="uc-icon">💆</div>
-      <div class="uc-name">Сервіс / Краса</div>
-      <div class="uc-desc">Онлайн запис до майстра, нагадування, відгуки, управління розкладом.</div>
-      <ul class="uc-features">
-        <li>Запис на прийом з вибором майстра</li>
-        <li>Нагадування за 24 і 2 години</li>
-        <li>Відміна і перенос запису</li>
-        <li>Збір відгуків після послуги</li>
-      </ul>
-    </div>
-    <div class="uc">
-      <div class="uc-icon">📚</div>
-      <div class="uc-name">Освіта / Курси</div>
-      <div class="uc-desc">Видача матеріалів, домашні завдання, тести, прогрес учня, оплата курсу.</div>
-      <ul class="uc-features">
-        <li>Видача уроків по розкладу</li>
-        <li>Тести і домашні завдання</li>
-        <li>Трекінг прогресу учня</li>
-        <li>Оплата і доступ до курсу</li>
-      </ul>
-    </div>
-    <div class="uc">
-      <div class="uc-icon">🏢</div>
-      <div class="uc-name">B2B / Корпоративний</div>
-      <div class="uc-desc">Внутрішні процеси: заявки, задачі, звіти, опитування співробітників.</div>
-      <ul class="uc-features">
-        <li>Система заявок і тікетів</li>
-        <li>Щоденні звіти команди</li>
-        <li>Опитування і NPS збір</li>
-        <li>Інтеграція з Jira / Notion</li>
-      </ul>
-    </div>
-    <div class="uc">
-      <div class="uc-icon">🏠</div>
-      <div class="uc-name">Нерухомість / Авто</div>
-      <div class="uc-desc">Підбір об'єктів по параметрах, розсилка нових пропозицій, запис на огляд.</div>
-      <ul class="uc-features">
-        <li>Фільтр по бюджету і параметрах</li>
-        <li>Авторозсилка нових об'єктів</li>
-        <li>Запис на перегляд</li>
-        <li>Збір контактів і заявок</li>
-      </ul>
-    </div>
+    <div class="uc rev"><span class="uc-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 3L33 30H3L18 3Z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><path d="M18 3L33 30" stroke="#E8341C" stroke-width="1.5"/><circle cx="18" cy="20" r="2" fill="#E8341C"/><circle cx="13" cy="24" r="1.5" fill="#E8341C"/><circle cx="23" cy="24" r="1.5" fill="#E8341C"/></svg></span><div class="uc-name">Ресторан / Кафе</div><div class="uc-desc">Замовлення, бронювання, програма лояльності, меню з фото.</div><ul class="uc-features"><li>Онлайн замовлення і доставка</li><li>Бронювання з підтвердженням</li><li>Накопичувальні бонуси</li><li>Push-розсилки по акціях</li></ul></div>
+    <div class="uc rev" style="transition-delay:.1s"><span class="uc-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="13" width="24" height="18" rx="2" stroke="#fff" stroke-width="1.5"/><path d="M13 13V10a5 5 0 0110 0v3" stroke="#E8341C" stroke-width="1.5" stroke-linecap="round"/><path d="M6 20h24" stroke="#fff" stroke-width="1" stroke-opacity=".3"/></svg></span><div class="uc-name">Інтернет-магазин</div><div class="uc-desc">Каталог, кошик, оплата, відстеження — повний магазин в Telegram.</div><ul class="uc-features"><li>Каталог з категоріями і фільтрами</li><li>Кошик та оплата LiqPay / Stripe</li><li>Відстеження замовлення</li><li>Повідомлення про нові товари</li></ul></div>
+    <div class="uc rev" style="transition-delay:.2s"><span class="uc-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="12" r="6" stroke="#fff" stroke-width="1.5"/><path d="M8 31c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><path d="M24 8c1.5-1 3.5-.5 4 1.5" stroke="#E8341C" stroke-width="1.5" stroke-linecap="round"/><path d="M26 11c1-.5 2.5 0 2.5 1.5" stroke="#E8341C" stroke-width="1.5" stroke-linecap="round"/></svg></span><div class="uc-name">Сервіс / Краса</div><div class="uc-desc">Запис до майстра, нагадування, відгуки, розклад.</div><ul class="uc-features"><li>Запис з вибором майстра</li><li>Нагадування за 24 і 2 години</li><li>Відміна і перенос запису</li><li>Збір відгуків після послуги</li></ul></div>
+    <div class="uc rev" style="transition-delay:.3s"><span class="uc-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="6" width="16" height="24" rx="2" stroke="#fff" stroke-width="1.5"/><path d="M21 9h6a2 2 0 012 2v16a2 2 0 01-2 2h-6" stroke="#fff" stroke-width="1.5"/><path d="M9 12h8M9 17h8M9 22h5" stroke="#E8341C" stroke-width="1.5" stroke-linecap="round"/></svg></span><div class="uc-name">Освіта / Курси</div><div class="uc-desc">Видача матеріалів, тести, прогрес учня, оплата курсу.</div><ul class="uc-features"><li>Видача уроків по розкладу</li><li>Тести і домашні завдання</li><li>Трекінг прогресу учня</li><li>Оплата і видача доступу</li></ul></div>
+    <div class="uc rev" style="transition-delay:.4s"><span class="uc-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="24" height="28" rx="2" stroke="#fff" stroke-width="1.5"/><path d="M6 14h24" stroke="#fff" stroke-width="1" stroke-opacity=".3"/><path d="M6 22h24" stroke="#fff" stroke-width="1" stroke-opacity=".3"/><rect x="14" y="26" width="8" height="6" rx="1" stroke="#E8341C" stroke-width="1.5"/><rect x="10" y="8" width="4" height="4" rx=".5" fill="#E8341C" fill-opacity=".7"/><rect x="22" y="8" width="4" height="4" rx=".5" fill="#E8341C" fill-opacity=".7"/><rect x="10" y="17" width="4" height="4" rx=".5" fill="#fff" fill-opacity=".3"/><rect x="22" y="17" width="4" height="4" rx=".5" fill="#fff" fill-opacity=".3"/></svg></span><div class="uc-name">B2B / Корпоративний</div><div class="uc-desc">Внутрішні процеси: заявки, задачі, звіти, опитування.</div><ul class="uc-features"><li>Система заявок і тікетів</li><li>Щоденні звіти команди</li><li>Опитування і NPS збір</li><li>Інтеграція з Jira / Notion</li></ul></div>
+    <div class="uc rev" style="transition-delay:.5s"><span class="uc-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 18L18 6l14 12" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 15v15h20V15" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><rect x="14" y="22" width="8" height="8" rx="1" stroke="#E8341C" stroke-width="1.5"/><path d="M18 22v8" stroke="#E8341C" stroke-width="1" stroke-opacity=".5"/></svg></span><div class="uc-name">Нерухомість / Авто</div><div class="uc-desc">Підбір об'єктів, розсилка пропозицій, запис на огляд.</div><ul class="uc-features"><li>Фільтр по параметрах</li><li>Авторозсилка нових об'єктів</li><li>Запис на перегляд</li><li>Збір контактів і заявок</li></ul></div>
   </div>
 </section>
 
 <section style="background:var(--bg2);">
-  <div class="sec-label">РІВНІ СКЛАДНОСТІ</div>
-  <h2 class="sec-title">Оберіть рівень<br>під задачу</h2>
+  <div class="sec-label rev">РІВНІ СКЛАДНОСТІ</div>
+  <h2 class="sec-title rev">Оберіть рівень<br>під задачу</h2>
   <div class="levels-grid">
-    <div class="level">
-      <div class="level-name">Starter</div>
-      <div class="level-price">від $300</div>
-      <div class="level-price-note">Простий бот · до 2 тижнів</div>
-      <ul class="level-features">
-        <li class="active">Збір заявок / квіз</li>
-        <li class="active">Адмін-панель в Telegram</li>
-        <li class="active">База даних SQLite/PostgreSQL</li>
-        <li class="active">Сповіщення адміністратору</li>
-        <li class="active">Деплой на Railway</li>
-        <li>Оплати</li>
-        <li>CRM інтеграція</li>
-        <li>Мультиадмін</li>
-      </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
-    </div>
-    <div class="level level--pro">
-      <div class="level-badge">ПОПУЛЯРНИЙ</div>
-      <div class="level-name">Business</div>
-      <div class="level-price">від $700</div>
-      <div class="level-price-note">Повний бот · до 4 тижнів</div>
-      <ul class="level-features">
-        <li class="active">FSM сценарії будь-якої складності</li>
-        <li class="active">Оплати LiqPay / Stripe</li>
-        <li class="active">CRM / Google Sheets інтеграція</li>
-        <li class="active">Мультиадмін + ролі</li>
-        <li class="active">Розсилки по сегментах</li>
-        <li class="active">Статистика і аналітика</li>
-        <li class="active">Місяць підтримки</li>
-        <li>Telegram Mini App</li>
-      </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
-    </div>
-    <div class="level">
-      <div class="level-name">Enterprise</div>
-      <div class="level-price">від $1 500</div>
-      <div class="level-price-note">Екосистема · індивідуально</div>
-      <ul class="level-features">
-        <li class="active">Telegram Mini App (WebApp)</li>
-        <li class="active">Мікросервісна архітектура</li>
-        <li class="active">AI / GPT інтеграція</li>
-        <li class="active">Custom адмін-дашборд</li>
-        <li class="active">High load: 100k+ користувачів</li>
-        <li class="active">A/B тестування сценаріїв</li>
-        <li class="active">3 місяці підтримки</li>
-        <li class="active">SLA моніторинг</li>
-      </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
-    </div>
+    <div class="level rev"><div class="level-name">Starter</div><div class="level-price">від $300</div><div class="level-price-note">Простий бот · до 2 тижнів</div><ul class="level-features"><li class="active">Збір заявок / квіз</li><li class="active">Адмін-панель в Telegram</li><li class="active">PostgreSQL база даних</li><li class="active">Сповіщення адміністратору</li><li class="active">Деплой на Railway</li><li>Оплати</li><li>CRM інтеграція</li><li>Мультиадмін</li></ul><a href="#contact" class="level-cta"><span>ОБГОВОРИТИ ПРОЄКТ</span></a></div>
+    <div class="level level--pro rev" style="transition-delay:.15s"><div class="level-badge">ПОПУЛЯРНИЙ</div><div class="level-name">Business</div><div class="level-price">від $700</div><div class="level-price-note">Повний бот · до 4 тижнів</div><ul class="level-features"><li class="active">FSM сценарії будь-якої складності</li><li class="active">Оплати LiqPay / Stripe</li><li class="active">CRM / Google Sheets</li><li class="active">Мультиадмін + ролі</li><li class="active">Розсилки по сегментах</li><li class="active">Статистика і аналітика</li><li class="active">Місяць підтримки</li><li>Telegram Mini App</li></ul><a href="#contact" class="level-cta"><span>ОБГОВОРИТИ ПРОЄКТ</span></a></div>
+    <div class="level rev" style="transition-delay:.3s"><div class="level-name">Enterprise</div><div class="level-price">від $1 500</div><div class="level-price-note">Екосистема · індивідуально</div><ul class="level-features"><li class="active">Telegram Mini App (WebApp)</li><li class="active">Мікросервісна архітектура</li><li class="active">AI / GPT інтеграція</li><li class="active">Custom адмін-дашборд</li><li class="active">High load: 100k+ користувачів</li><li class="active">A/B тестування сценаріїв</li><li class="active">3 місяці підтримки</li><li class="active">SLA моніторинг</li></ul><a href="#contact" class="level-cta"><span>ОБГОВОРИТИ ПРОЄКТ</span></a></div>
   </div>
 </section>
 
 <section class="process">
-  <div class="sec-label">ЯК МИ ПРАЦЮЄМО</div>
-  <h2 class="sec-title">Від ідеї<br>до продакшну</h2>
-  <div class="process-list">
-    <div class="process-step active">
-      <div class="process-dot">01</div>
-      <div class="process-step-name">Аналіз</div>
-      <div class="process-step-desc">Розбираємо бізнес-процеси і проєктуємо сценарії бота</div>
-      <div class="process-time">День 1–2</div>
-    </div>
-    <div class="process-step">
-      <div class="process-dot">02</div>
-      <div class="process-step-name">Архітектура</div>
-      <div class="process-step-desc">Проєктуємо БД, FSM стани, API ендпоінти</div>
-      <div class="process-time">День 2–4</div>
-    </div>
-    <div class="process-step">
-      <div class="process-dot">03</div>
-      <div class="process-step-name">Розробка</div>
-      <div class="process-step-desc">Код, інтеграції, тести, адмін-панель</div>
-      <div class="process-time">День 4–20</div>
-    </div>
-    <div class="process-step">
-      <div class="process-dot">04</div>
-      <div class="process-step-name">Тестування</div>
-      <div class="process-step-desc">QA, навантажувальні тести, виправлення</div>
-      <div class="process-time">День 20–25</div>
-    </div>
-    <div class="process-step">
-      <div class="process-dot">05</div>
-      <div class="process-step-name">Запуск</div>
-      <div class="process-step-desc">Деплой, моніторинг, передача доступів</div>
-      <div class="process-time">День 25–28</div>
-    </div>
+  <div class="sec-label rev">ЯК МИ ПРАЦЮЄМО</div>
+  <h2 class="sec-title rev">Від ідеї<br>до продакшну</h2>
+  <div class="process-list" id="processList">
+    <div class="process-line" id="processLine"></div>
+    <div class="process-step rev"><div class="process-dot">01</div><div class="process-step-name">Аналіз</div><div class="process-step-desc">Розбираємо бізнес-процеси, проєктуємо сценарії бота</div><div class="process-time">День 1–2</div></div>
+    <div class="process-step rev" style="transition-delay:.1s"><div class="process-dot">02</div><div class="process-step-name">Архітектура</div><div class="process-step-desc">Проєктуємо БД, FSM стани, API ендпоінти</div><div class="process-time">День 2–4</div></div>
+    <div class="process-step rev" style="transition-delay:.2s"><div class="process-dot">03</div><div class="process-step-name">Розробка</div><div class="process-step-desc">Код, інтеграції, тести, адмін-панель</div><div class="process-time">День 4–20</div></div>
+    <div class="process-step rev" style="transition-delay:.3s"><div class="process-dot">04</div><div class="process-step-name">Тестування</div><div class="process-step-desc">QA, навантажувальні тести, виправлення</div><div class="process-time">День 20–25</div></div>
+    <div class="process-step rev" style="transition-delay:.4s"><div class="process-dot">05</div><div class="process-step-name">Запуск</div><div class="process-step-desc">Деплой, моніторинг, передача доступів</div><div class="process-time">День 25–28</div></div>
   </div>
 </section>
 
 <section>
   <div class="sec-label">НАША КОМАНДА</div>
-  <h2 class="sec-title">Python Senior<br>на кожному етапі</h2>
+  <h2 class="sec-title rev">Python Senior<br>на кожному етапі</h2>
   <div class="team-row">
-    <div class="team-text">
-      <p>Розробляємо на <strong>aiogram 3</strong> — найсучаснішому асинхронному фреймворку для Telegram ботів. Кожен бот — це не просто скрипт, а повноцінний production-застосунок з базою даних, чергами, моніторингом і захистом від падінь.</p>
-      <p>Наші боти <strong>не падають при навантаженні</strong>. Redis черги, Dead Letter Queue, exponential backoff при відправці — кожна заявка або дія збережеться навіть якщо щось пішло не так.</p>
-      <p>Передаємо повний вихідний код і всі доступи. <strong>Ваш бот — це ваш актив</strong>, а не підписка на наші послуги.</p>
+    <div class="team-text rev-l">
+      <p>Розробляємо на <strong>aiogram 3</strong> — найсучаснішому асинхронному фреймворку. Кожен бот — production-застосунок з БД, чергами, моніторингом і захистом від падінь.</p>
+      <p>Наші боти <strong>не падають при навантаженні</strong>. Redis черги, Dead Letter Queue, exponential backoff — кожна заявка збережеться навіть якщо щось пішло не так.</p>
+      <p>Передаємо повний вихідний код і всі доступи. <strong>Ваш бот — це ваш актив</strong>, а не підписка.</p>
     </div>
-    <div class="team-creds">
+    <div class="team-creds rev-r">
       <div class="cred"><div class="cred-val">5<span>+</span></div><div class="cred-label">Ботів в продакшні</div></div>
       <div class="cred"><div class="cred-val">99<span>.9%</span></div><div class="cred-label">Uptime гарантія</div></div>
       <div class="cred"><div class="cred-val">0</div><div class="cred-label">Втрачених заявок</div></div>
@@ -406,56 +321,130 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 </section>
 
 <section class="faq">
-  <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
-  <h2 class="sec-title">Відповіді на<br>ваші питання</h2>
+  <div class="sec-label rev">ЧАСТІ ПИТАННЯ</div>
+  <h2 class="sec-title rev">Відповіді на<br>ваші питання</h2>
   <div class="faq-list">
-    <div class="faq-item">
-      <button type="button" class="faq-q">Чи можна зробити бота без програмування з мого боку? <span>+</span></button>
-      <div class="faq-a">Так, ми беремо на себе всю технічну частину. Від вас потрібен тільки опис бізнес-процесів і доступ до акаунту в Telegram для реєстрації бота через @BotFather. Все інше — наша робота.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Чи буде бот працювати на мобільному? <span>+</span></button>
-      <div class="faq-a">Так, Telegram боти нативно працюють на всіх платформах — iOS, Android, десктоп, вебверсія. Додатково можемо зробити Telegram Mini App — це повноцінний вебдодаток всередині Telegram.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Чи можна інтегрувати бота з моїм сайтом? <span>+</span></button>
-      <div class="faq-a">Так. Бот може отримувати заявки з сайту через webhook, відправляти сповіщення при замовленні, синхронізувати базу клієнтів. Якщо у вас наш сайт — інтеграція займає кілька годин.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Що буде якщо Telegram заблокують? <span>+</span></button>
-      <div class="faq-a">Весь код залишається у вас. При необхідності ми можемо портувати бота на Viber, WhatsApp Business API або зробити окремий вебчат на сайті — основна логіка залишається.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Як я буду керувати ботом після запуску? <span>+</span></button>
-      <div class="faq-a">Розробляємо адмін-панель прямо в Telegram — ви керуєте ботом через команди або кнопки без технічних знань. Додатково — веб-дашборд з аналітикою та управлінням контентом.</div>
-    </div>
+    <div class="faq-item rev"><button type="button" class="faq-q">Чи можна зробити бота без програмування з мого боку? <span>+</span></button><div class="faq-a">Так, беремо всю технічну частину. Від вас — опис процесів і доступ до акаунту для реєстрації через @BotFather. Решта — наша робота.</div></div>
+    <div class="faq-item rev"><button type="button" class="faq-q">Чи буде бот працювати на мобільному? <span>+</span></button><div class="faq-a">Так, Telegram боти нативно працюють на iOS, Android, десктоп і вебверсії. Можемо також зробити Telegram Mini App — повноцінний вебдодаток всередині Telegram.</div></div>
+    <div class="faq-item rev"><button type="button" class="faq-q">Чи можна інтегрувати бота з моїм сайтом? <span>+</span></button><div class="faq-a">Так. Бот отримує заявки з сайту через webhook, відправляє сповіщення при замовленні, синхронізує базу клієнтів. Якщо у вас наш сайт — інтеграція за кілька годин.</div></div>
+    <div class="faq-item rev"><button type="button" class="faq-q">Що буде якщо Telegram заблокують? <span>+</span></button><div class="faq-a">Весь код залишається у вас. Можемо портувати бота на Viber, WhatsApp Business API або зробити вебчат на сайті — основна логіка залишається незмінною.</div></div>
+    <div class="faq-item rev"><button type="button" class="faq-q">Як я буду керувати ботом після запуску? <span>+</span></button><div class="faq-a">Адмін-панель прямо в Telegram — керуєте через команди або кнопки без технічних знань. Плюс веб-дашборд з аналітикою і управлінням контентом.</div></div>
   </div>
 </section>
 
 <section class="cta-final" id="contact">
-  <div class="sec-label" style="justify-content:center;display:flex;">ГОТОВІ АВТОМАТИЗУВАТИ?</div>
-  <div class="cta-final-title">Обговоримо<br>вашого <em>бота</em></div>
-  <div class="cta-final-sub">Опишіть задачу — відповімо протягом 15 хвилин і запропонуємо рішення</div>
-  <a href="https://t.me/infiniteunion_bot" class="cta-btn">НАПИСАТИ В TELEGRAM</a>
-  <a href="../index.html#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
+  <div class="sec-label rev" style="justify-content:center;display:flex;">ГОТОВІ АВТОМАТИЗУВАТИ?</div>
+  <div class="cta-final-title rev">Обговоримо<br>вашого <em>бота</em></div>
+  <div class="cta-final-sub rev">Опишіть задачу — відповімо протягом 15 хвилин</div>
+  <div class="rev">
+    <a href="https://t.me/infiniteunion_bot" class="cta-btn">НАПИСАТИ В TELEGRAM</a>
+    <a href="../index.html#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
+  </div>
 </section>
 
 <footer>
   <div class="footer-logo">INFINITE <span>UNION</span></div>
-  <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
+  <div class="footer-copy">© 2026 Infinite Union · Харків, Україна</div>
+  <a href="../services/privacy.html" style="font-size:11px;color:var(--muted);text-decoration:none;">Політика конфіденційності</a>
 </footer>
 
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);},{passive:true});
+/* CURSOR */
+const cur=document.getElementById('cur'),curO=document.getElementById('curO');
+let mx=0,my=0,ox=0,oy=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function loop(){ox+=(mx-ox)*.12;oy+=(my-oy)*.12;curO.style.left=ox+'px';curO.style.top=oy+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{curO.style.transform='translate(-50%,-50%) scale(2)';curO.style.borderColor='var(--red)';});el.addEventListener('mouseleave',()=>{curO.style.transform='translate(-50%,-50%) scale(1)';curO.style.borderColor='rgba(212,0,0,.5)';});});
+
+/* NAV */
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60),{passive:true});
+
+/* HERO PARTICLES */
+(function(){
+  const c=document.getElementById('heroCanvas');
+  if(!c)return;
+  const ctx=c.getContext('2d');
+  c.width=window.innerWidth;c.height=window.innerHeight;
+  const pts=Array.from({length:60},()=>({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.5}));
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(212,0,0,.25)';ctx.fill();});
+    pts.forEach((p,i)=>pts.slice(i+1).forEach(q=>{const d=Math.hypot(p.x-q.x,p.y-q.y);if(d<120){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(212,0,0,${.08*(1-d/120)})`;ctx.lineWidth=.5;ctx.stroke();}}));
+    requestAnimationFrame(draw);
+  }
+  draw();
+  window.addEventListener('resize',()=>{c.width=window.innerWidth;c.height=window.innerHeight;},{passive:true});
+})();
+
+/* WHAT ITEM GLOW */
+document.querySelectorAll('.what-item').forEach(item=>{
+  const glow=item.querySelector('.what-item-glow');
+  if(!glow)return;
+  item.addEventListener('mousemove',e=>{const r=item.getBoundingClientRect();glow.style.left=(e.clientX-r.left)+'px';glow.style.top=(e.clientY-r.top)+'px';});
+});
+
+/* REVEAL */
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>ro.observe(el));
+
+/* PROCESS SEQUENTIAL */
+const pl=document.getElementById('processList');
+if(pl){
+  const po=new IntersectionObserver(es=>{
+    if(es[0].isIntersecting){
+      pl.classList.add('animated');
+      const steps=pl.querySelectorAll('.process-step');
+      steps.forEach((s,i)=>setTimeout(()=>s.classList.add('lit'),i*300));
+      po.disconnect();
+    }
+  },{threshold:.3});
+  po.observe(pl);
+}
+
+/* FAQ */
 document.querySelectorAll('.faq-item').forEach(item=>{
   item.querySelector('.faq-q').addEventListener('click',()=>{
-    const isOpen=item.classList.contains('open');
+    const open=item.classList.contains('open');
     document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-    if(!isOpen)item.classList.add('open');
+    if(!open)item.classList.add('open');
   });
 });
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:0.1});
-document.querySelectorAll('.what-item,.level,.uc,.process-step,.cred').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity .6s ease, transform .6s ease';obs.observe(el);});
+
+/* CHAR SPLIT HERO */
+(function(){
+  /* char split removed — title animated via CSS */
+})();
+
+/* COUNT UP STATS */
+(function(){
+  const nums = document.querySelectorAll('.hero-stat-num[data-count]');
+  if(!nums.length) return;
+  const ease = t => t<.5 ? 2*t*t : -1+(4-2*t)*t;
+  const animateCount = (el) => {
+    const target = parseInt(el.dataset.count, 10);
+    if(target === 0) return;
+    const suffix = el.querySelector('span');
+    const suffixText = suffix ? suffix.outerHTML : '';
+    const duration = 1800;
+    const start = performance.now();
+    const tick = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      const val = Math.round(ease(p) * target);
+      el.innerHTML = val.toLocaleString('uk-UA') + suffixText;
+      if(p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        animateCount(e.target);
+        obs.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.5});
+  nums.forEach(el => obs.observe(el));
+})();
 </script>
 </body>
 </html>

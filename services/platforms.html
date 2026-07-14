@@ -5,305 +5,241 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Розробка вебплатформ та SaaS — Infinite Union Харків</title>
 <meta name="description" content="Розробка вебплатформ, SaaS продуктів, маркетплейсів та вебдодатків під ключ. React, Next.js, FastAPI, PostgreSQL. Senior команда, Харків, Україна.">
-<meta name="keywords" content="розробка вебплатформи, saas розробка, розробка маркетплейсу, веб додаток на замовлення, розробка crm системи, erp розробка, react розробка харків, next.js розробка, spa розробка, pwa розробка, замовити вебдодаток, розробка особистого кабінету, платіжна система інтеграція, b2b платформа розробка, розробка адмін панелі, api розробка, fullstack розробка харків, вебсервіс розробка, онлайн платформа замовити, програмування під ключ україна">
+<meta name="keywords" content="розробка вебплатформи, saas розробка, розробка маркетплейсу, веб додаток на замовлення, розробка crm системи, react розробка харків, next.js розробка, spa розробка, pwa розробка, замовити вебдодаток, розробка особистого кабінету, api розробка, fullstack розробка харків, вебсервіс розробка, онлайн платформа замовити, програмування під ключ україна">
 <link rel="canonical" href="https://infiniteunion.com.ua/services/platforms.html">
 <meta property="og:title" content="Розробка вебплатформ та SaaS — Infinite Union">
-<meta property="og:description" content="Розробка вебплатформ, SaaS, маркетплейсів під ключ. React, Next.js, FastAPI. Senior команда, Харків.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://infiniteunion.com.ua/og-image.svg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Розробка вебплатформ та SaaS",
-  "provider": {"@type": "Organization", "name": "Infinite Union", "url": "https://infiniteunion.com.ua"},
-  "description": "Розробка вебплатформ, SaaS продуктів, маркетплейсів та корпоративних вебдодатків під ключ.",
-  "offers": {"@type": "Offer", "price": "2500", "priceCurrency": "USD"},
-  "areaServed": "Ukraine"
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Розробка вебплатформ та SaaS","provider":{"@type":"Organization","name":"Infinite Union","url":"https://infiniteunion.com.ua"},"description":"Розробка вебплатформ, SaaS продуктів, маркетплейсів та корпоративних вебдодатків під ключ.","offers":{"@type":"Offer","price":"2500","priceCurrency":"USD"},"areaServed":"Ukraine"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{--red:#D40000;--bg:#060404;--bg2:#0e0b0b;--border:rgba(255,255,255,0.08);--text:#fff;--muted:rgba(255,255,255,0.45);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;}
+::selection{background:#E8341C;color:#fff;}::-moz-selection{background:#E8341C;color:#fff;}
+:root{--red:#D40000;--red-glow:rgba(212,0,0,0.15);--bg:#060404;--bg2:#0e0b0b;--border:rgba(255,255,255,0.08);--text:#fff;--muted:rgba(255,255,255,0.45);--muted2:rgba(255,255,255,0.25);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--ease:cubic-bezier(0.76,0,0.24,1);--ease2:cubic-bezier(0.23,1,0.32,1);}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;cursor:none;}
+#cur{position:fixed;width:8px;height:8px;background:var(--red);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;}
+#curO{position:fixed;width:36px;height:36px;border:1px solid rgba(212,0,0,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .18s var(--ease2);}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:border-color .3s,background .3s;}
 nav.scrolled{background:rgba(6,4,4,.92);backdrop-filter:blur(12px);border-color:var(--border);}
 .nav-logo{font-family:var(--font);font-weight:700;font-size:15px;letter-spacing:.12em;text-decoration:none;color:#fff;}
 .nav-logo span{color:var(--red);}
-.nav-back{font-size:12px;letter-spacing:.1em;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s;}
+.nav-back{font-size:12px;letter-spacing:.1em;color:var(--muted);text-decoration:none;transition:color .2s;}
 .nav-back:hover{color:#fff;}
 .nav-cta{background:var(--red);color:#fff;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.1em;padding:10px 24px;text-decoration:none;transition:opacity .2s;}
 .nav-cta:hover{opacity:.85;}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 40px 80px;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 70% 40%, rgba(212,0,0,.12) 0%, transparent 70%);}
-.hero-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:24px;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 75% 45%, rgba(212,0,0,.1) 0%, transparent 70%);}
+.hero-grid-lines{position:absolute;inset:0;pointer-events:none;}
+.hero-grid-lines::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:80px 80px;}
+.hero-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:24px;opacity:0;animation:fadeUp .8s var(--ease2) .2s forwards;}
 .hero-title{font-family:var(--font);font-size:clamp(52px,8vw,120px);font-weight:700;line-height:.92;letter-spacing:-.03em;max-width:900px;}
-.hero-title em{font-style:normal;color:var(--red);}
-.hero-sub{margin-top:40px;font-size:18px;color:var(--muted);max-width:520px;line-height:1.6;font-weight:300;}
-.hero-stats{margin-top:60px;display:flex;gap:60px;border-top:1px solid var(--border);padding-top:40px;}
+.hero-title em{font-style:normal;color:var(--red);}.hero-title{opacity:0;transform:translateY(40px);animation:fadeUp 1s var(--ease2) .3s forwards;}
+.char{display:inline-block;opacity:0;transform:translateY(40px);animation:charIn .7s var(--ease2) forwards;}
+.hero-sub{margin-top:40px;font-size:18px;color:var(--muted);max-width:520px;line-height:1.6;font-weight:300;opacity:0;animation:fadeUp .9s var(--ease2) .6s forwards;}
+.hero-stats{margin-top:60px;display:flex;gap:60px;border-top:1px solid var(--border);padding-top:40px;opacity:0;animation:fadeUp .8s var(--ease2) .8s forwards;}
 .hero-stat-num{font-family:var(--font);font-size:48px;font-weight:700;line-height:1;}
 .hero-stat-num span{color:var(--red);}
 .hero-stat-label{font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:.05em;}
+.hero-showcase{position:absolute;right:40px;top:50%;transform:translateY(-50%) translateX(60px);width:440px;opacity:0;animation:slideIn .9s var(--ease2) 1s forwards;}
+.showcase-window{background:var(--bg2);border:1px solid var(--border);overflow:hidden;}
+.showcase-bar{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.showcase-dot{width:10px;height:10px;border-radius:50%;}
+.showcase-url{flex:1;background:rgba(255,255,255,.04);margin-left:8px;padding:4px 12px;font-size:10px;font-family:var(--font);color:var(--muted);}
+.showcase-body{padding:24px;}
+.showcase-metric{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);}
+.showcase-metric:last-child{border-bottom:none;}
+.sm-label{font-size:12px;color:var(--muted);}
+.sm-val{font-family:var(--font);font-size:18px;font-weight:700;}
+.sm-val.up{color:#22c55e;}
+.sm-val.red{color:var(--red);}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
+@keyframes charIn{to{opacity:1;transform:translateY(0);}}
+@keyframes slideIn{to{opacity:1;transform:translateY(-50%) translateX(0);}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 var(--red-glow);}50%{box-shadow:0 0 0 12px transparent;}}
 section{padding:120px 40px;}
 .sec-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
 .sec-title{font-family:var(--font);font-size:clamp(36px,5vw,72px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:60px;}
-.what{background:var(--bg2);}
+.rev{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev.v{opacity:1;transform:none;}
+.rev-l{opacity:0;transform:translateX(-32px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev-l.v{opacity:1;transform:none;}
+.rev-r{opacity:0;transform:translateX(32px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
+.rev-r.v{opacity:1;transform:none;}
+.marquee-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0;overflow:hidden;background:var(--bg2);}
+.marquee-track{display:flex;animation:marquee 25s linear infinite;}
+.marquee-item{white-space:nowrap;padding:0 40px;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.15em;color:var(--muted);display:flex;align-items:center;gap:20px;}
+.marquee-item::after{content:'·';color:var(--red);}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.what{background:var(--bg2);position:relative;}
+.what::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);}
 .what-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
-.what-item{background:var(--bg2);padding:48px;position:relative;overflow:hidden;}
-.what-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.what-item{background:var(--bg2);padding:48px;position:relative;overflow:hidden;transition:background .3s;}
+.what-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease2);}
 .what-item:hover::before{transform:scaleX(1);}
+.what-item:hover{background:#111;}
 .what-num{font-family:var(--font);font-size:11px;letter-spacing:.15em;color:var(--muted);margin-bottom:20px;}
 .what-name{font-family:var(--font);font-size:24px;font-weight:700;margin-bottom:12px;}
 .what-desc{font-size:14px;color:var(--muted);line-height:1.7;}
 .what-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
 .wtag{font-size:11px;padding:4px 12px;border:1px solid var(--border);color:var(--muted);font-family:var(--font);}
 .stack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.stack-card{border:1px solid var(--border);padding:32px 24px;text-align:center;transition:border-color .3s;}
-.stack-card:hover{border-color:rgba(212,0,0,.4);}
+.stack-card{border:1px solid var(--border);padding:32px 24px;text-align:center;transition:border-color .3s,transform .4s var(--ease2);}
+.stack-card:hover{border-color:rgba(212,0,0,.4);transform:translateY(-6px);}
 .stack-cat{font-size:10px;letter-spacing:.15em;color:var(--red);font-family:var(--font);margin-bottom:16px;}
-.stack-items{display:flex;flex-direction:column;gap:8px;}
-.stack-item{font-family:var(--font);font-size:14px;font-weight:600;}
-.stack-sub{font-size:12px;color:var(--muted);}
+.stack-item{font-family:var(--font);font-size:14px;font-weight:600;margin-bottom:4px;}
+.stack-sub{font-size:12px;color:var(--muted);margin-bottom:12px;}
 .levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.level{border:1px solid var(--border);padding:40px;position:relative;transition:border-color .3s;}
-.level:hover{border-color:rgba(212,0,0,.4);}
-.level--pro{border-color:var(--red);}
+.level{border:1px solid var(--border);padding:40px;position:relative;transition:border-color .3s,transform .4s var(--ease2);}
+.level:hover{border-color:rgba(212,0,0,.4);transform:translateY(-4px);}
+.level--pro{border-color:var(--red);background:rgba(212,0,0,.02);}
 .level-badge{position:absolute;top:-1px;left:40px;background:var(--red);font-family:var(--font);font-size:10px;font-weight:700;letter-spacing:.1em;padding:4px 12px;color:#fff;}
 .level-name{font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:8px;margin-top:8px;}
 .level-price{font-family:var(--font);font-size:36px;font-weight:700;color:var(--red);margin-bottom:4px;}
 .level-price-note{font-size:12px;color:var(--muted);margin-bottom:32px;}
 .level-features{list-style:none;}
 .level-features li{font-size:14px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;line-height:1.4;}
-.level-features li::before{content:'';width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0;}
+.level-features li::before{content:'';width:4px;height:4px;background:var(--muted2);border-radius:50%;flex-shrink:0;}
 .level-features li.active{color:#fff;}
-.level-cta{display:block;margin-top:32px;text-align:center;padding:14px;border:1px solid var(--border);font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.08em;color:#fff;text-decoration:none;transition:all .2s;}
+.level-features li.active::before{background:var(--red);}
+.level-cta{display:block;margin-top:32px;text-align:center;padding:14px;border:1px solid var(--border);font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.08em;color:#fff;text-decoration:none;transition:all .3s var(--ease2);position:relative;overflow:hidden;}
+.level-cta::before{content:'';position:absolute;inset:0;background:var(--red);transform:translateX(-100%);transition:transform .4s var(--ease);}
+.level-cta:hover::before{transform:translateX(0);}
+.level-cta span{position:relative;z-index:1;}
 .level--pro .level-cta{background:var(--red);border-color:var(--red);}
-.level-cta:hover{background:var(--red);border-color:var(--red);}
 .faq{background:var(--bg2);}
 .faq-list{max-width:800px;}
 .faq-item{border-bottom:1px solid var(--border);}
-.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:18px;font-weight:600;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-.faq-q span{font-size:20px;color:var(--red);transition:transform .3s;}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:18px;font-weight:600;padding:28px 0;cursor:none;display:flex;justify-content:space-between;align-items:center;transition:color .2s;}
+.faq-q:hover{color:var(--red);}
+.faq-q span{font-size:20px;color:var(--red);transition:transform .4s var(--ease2);}
 .faq-item.open .faq-q span{transform:rotate(45deg);}
-.faq-a{font-size:15px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;}
+.faq-a{font-size:15px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .5s var(--ease2),padding .4s;}
 .faq-item.open .faq-a{max-height:300px;padding-bottom:28px;}
-.cta-final{text-align:center;padding:160px 40px;}
+.cta-final{text-align:center;padding:160px 40px;position:relative;overflow:hidden;}
+.cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%, rgba(212,0,0,.06) 0%, transparent 70%);pointer-events:none;}
 .cta-final-title{font-family:var(--font);font-size:clamp(40px,6vw,90px);font-weight:700;line-height:.95;letter-spacing:-.03em;margin-bottom:32px;}
 .cta-final-title em{font-style:normal;color:var(--red);}
 .cta-final-sub{font-size:18px;color:var(--muted);margin-bottom:48px;}
-.cta-btn{display:inline-block;background:var(--red);color:#fff;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:.1em;padding:20px 60px;text-decoration:none;transition:opacity .2s;margin-right:16px;}
-.cta-btn:hover{opacity:.85;}
+.cta-btn{display:inline-flex;align-items:center;background:var(--red);color:#fff;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:.1em;padding:20px 60px;text-decoration:none;transition:opacity .2s;margin-right:16px;position:relative;overflow:hidden;vertical-align:middle;}
+.cta-btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.1);transform:translateX(-100%);transition:transform .3s var(--ease);}
+.cta-btn:hover::after{transform:translateX(0);}
 .cta-btn-ghost{display:inline-block;border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;letter-spacing:.1em;padding:20px 48px;text-decoration:none;transition:border-color .2s;}
 .cta-btn-ghost:hover{border-color:rgba(255,255,255,.4);}
 footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-content:space-between;align-items:center;}
 .footer-logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.1em;}
 .footer-logo span{color:var(--red);}
 .footer-copy{font-size:12px;color:var(--muted);}
-@media(max-width:768px){nav{padding:16px 20px;}.hero{padding:0 20px 60px;}.hero-stats{gap:32px;flex-wrap:wrap;}section{padding:80px 20px;}.what-grid,.levels-grid,.stack-grid{grid-template-columns:1fr;}footer{flex-direction:column;gap:16px;text-align:center;}}
+@media(hover:none){body{cursor:auto;}#cur,#curO{display:none;}}
+@media(max-width:768px){nav{padding:16px 20px;}.hero{padding:0 20px 60px;}.hero-showcase{display:none;}.hero-stats{gap:32px;flex-wrap:wrap;}section{padding:80px 20px;}.what-grid,.levels-grid,.stack-grid{grid-template-columns:1fr;}footer{flex-direction:column;gap:16px;text-align:center;}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.rev,.rev-l,.rev-r{opacity:1;transform:none;}}
 </style>
 </head>
 <body>
+<div id="cur"></div><div id="curO"></div>
 <nav id="nav">
   <a href="../index.html" class="nav-back">← Назад</a>
   <a href="../index.html" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАМОВИТИ ПЛАТФОРМУ</a>
 </nav>
-
 <section class="hero" style="padding-top:120px;">
   <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
   <div class="hero-label">ПОСЛУГА 03 · ПЛАТФОРМИ ТА ВЕБДОДАТКИ</div>
-  <h1 class="hero-title">Платформи що<br><em>масштабуються</em><br>разом з вами.</h1>
-  <p class="hero-sub">Розробляємо SaaS продукти, маркетплейси, корпоративні платформи та складні вебдодатки. Від MVP до enterprise — повний цикл розробки під ключ.</p>
+  <h1 class="hero-title" id="heroTitle">Платформи що<br><em>масштабуються</em><br>разом з вами.</h1>
+  <p class="hero-sub">Розробляємо SaaS продукти, маркетплейси, корпоративні платформи та складні вебдодатки. Від MVP до enterprise — повний цикл під ключ.</p>
   <div class="hero-stats">
-    <div>
-      <div class="hero-stat-num">3<span>x</span></div>
-      <div class="hero-stat-label">ROI КЛІЄНТІВ В СЕРЕДНЬОМУ</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">99<span>.9%</span></div>
-      <div class="hero-stat-label">UPTIME ГАРАНТІЯ</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">0</div>
-      <div class="hero-stat-label">ПРОВАЛЕНИХ ДЕДЛАЙНІВ</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">15<span>хв</span></div>
-      <div class="hero-stat-label">ЧАС ВІДПОВІДІ</div>
+    <div><div class="hero-stat-num">3<span>x</span></div><div class="hero-stat-label">ROI КЛІЄНТІВ В СЕРЕДНЬОМУ</div></div>
+    <div><div class="hero-stat-num">99<span>.9%</span></div><div class="hero-stat-label">UPTIME ГАРАНТІЯ</div></div>
+    <div><div class="hero-stat-num">0</div><div class="hero-stat-label">ПРОВАЛЕНИХ ДЕДЛАЙНІВ</div></div>
+    <div><div class="hero-stat-num">15<span>хв</span></div><div class="hero-stat-label">ЧАС ВІДПОВІДІ</div></div>
+  </div>
+  <div class="hero-showcase">
+    <div class="showcase-window">
+      <div class="showcase-bar">
+        <div class="showcase-dot" style="background:#ff5f57"></div>
+        <div class="showcase-dot" style="background:#ffbd2e"></div>
+        <div class="showcase-dot" style="background:#28c840"></div>
+        <div class="showcase-url">platform.infiniteunion.com.ua/dashboard</div>
+      </div>
+      <div class="showcase-body">
+        <div style="font-family:var(--font);font-size:11px;letter-spacing:.15em;color:var(--red);margin-bottom:16px;">ANALYTICS DASHBOARD</div>
+        <div class="showcase-metric"><span class="sm-label">Нових користувачів</span><span class="sm-val up">+2,847</span></div>
+        <div class="showcase-metric"><span class="sm-label">Конверсія</span><span class="sm-val up">8.4%</span></div>
+        <div class="showcase-metric"><span class="sm-label">Середній чек</span><span class="sm-val">₴4,200</span></div>
+        <div class="showcase-metric"><span class="sm-label">Uptime</span><span class="sm-val up">99.97%</span></div>
+        <div class="showcase-metric"><span class="sm-label">Відкриті тікети</span><span class="sm-val red">0</span></div>
+      </div>
     </div>
   </div>
 </section>
-
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item">REACT</div><div class="marquee-item">NEXT.JS</div><div class="marquee-item">FASTAPI</div><div class="marquee-item">POSTGRESQL</div><div class="marquee-item">DOCKER</div><div class="marquee-item">SaaS</div><div class="marquee-item">PWA</div><div class="marquee-item">REST API</div><div class="marquee-item">REACT</div><div class="marquee-item">NEXT.JS</div><div class="marquee-item">FASTAPI</div><div class="marquee-item">POSTGRESQL</div><div class="marquee-item">DOCKER</div><div class="marquee-item">SaaS</div><div class="marquee-item">PWA</div><div class="marquee-item">REST API</div>
+  </div>
+</div>
 <section class="what">
-  <div class="sec-label">ЩО МИ БУДУЄМО</div>
-  <h2 class="sec-title">Від MVP<br>до enterprise</h2>
+  <div class="sec-label rev">ЩО МИ БУДУЄМО</div>
+  <h2 class="sec-title rev">Від MVP<br>до enterprise</h2>
   <div class="what-grid">
-    <div class="what-item">
-      <div class="what-num">01</div>
-      <div class="what-name">SaaS платформи</div>
-      <div class="what-desc">Підписочні сервіси з особистим кабінетом, білінгом, ролями користувачів і аналітичними дашбордами. Stripe Billing, Paddle, LiqPay.</div>
-      <div class="what-tags"><span class="wtag">Multi-tenant</span><span class="wtag">Stripe Billing</span><span class="wtag">Role management</span></div>
-    </div>
-    <div class="what-item">
-      <div class="what-num">02</div>
-      <div class="what-name">Маркетплейси</div>
-      <div class="what-desc">Платформи де продавці і покупці зустрічаються. Верифікація, рейтинги, ескроу-оплати, комісійна модель, захист угод.</div>
-      <div class="what-tags"><span class="wtag">Двостороння платформа</span><span class="wtag">Ескроу</span><span class="wtag">Верифікація</span></div>
-    </div>
-    <div class="what-item">
-      <div class="what-num">03</div>
-      <div class="what-name">Корпоративні системи</div>
-      <div class="what-desc">CRM, ERP, HRM, автоматизація внутрішніх процесів. Інтеграція з 1С, SAP, Bitrix, власними API. Міграція з legacy систем.</div>
-      <div class="what-tags"><span class="wtag">CRM/ERP</span><span class="wtag">API інтеграції</span><span class="wtag">Legacy міграція</span></div>
-    </div>
-    <div class="what-item">
-      <div class="what-num">04</div>
-      <div class="what-name">Клієнтські портали</div>
-      <div class="what-desc">Особисті кабінети клієнтів, партнерів або співробітників. Документообіг, звіти, завдання, нотифікації в реальному часі.</div>
-      <div class="what-tags"><span class="wtag">Real-time</span><span class="wtag">WebSocket</span><span class="wtag">Документообіг</span></div>
-    </div>
+    <div class="what-item rev"><div class="what-num">01</div><div class="what-name">SaaS платформи</div><div class="what-desc">Підписочні сервіси з особистим кабінетом, білінгом, ролями і аналітичними дашбордами. Stripe Billing, Paddle, LiqPay інтеграція.</div><div class="what-tags"><span class="wtag">Multi-tenant</span><span class="wtag">Stripe Billing</span><span class="wtag">Role management</span></div></div>
+    <div class="what-item rev" style="transition-delay:.1s"><div class="what-num">02</div><div class="what-name">Маркетплейси</div><div class="what-desc">Платформи де продавці і покупці зустрічаються. Верифікація, рейтинги, ескроу-оплати, комісійна модель, захист угод.</div><div class="what-tags"><span class="wtag">Двостороння платформа</span><span class="wtag">Ескроу</span><span class="wtag">Верифікація</span></div></div>
+    <div class="what-item rev" style="transition-delay:.2s"><div class="what-num">03</div><div class="what-name">Корпоративні системи</div><div class="what-desc">CRM, ERP, HRM, автоматизація внутрішніх процесів. Інтеграція з 1С, SAP, Bitrix, власними API. Міграція з legacy систем.</div><div class="what-tags"><span class="wtag">CRM/ERP</span><span class="wtag">API інтеграції</span><span class="wtag">Legacy міграція</span></div></div>
+    <div class="what-item rev" style="transition-delay:.3s"><div class="what-num">04</div><div class="what-name">Клієнтські портали</div><div class="what-desc">Особисті кабінети клієнтів, партнерів або співробітників. Документообіг, звіти, завдання, нотифікації в реальному часі.</div><div class="what-tags"><span class="wtag">Real-time</span><span class="wtag">WebSocket</span><span class="wtag">Документообіг</span></div></div>
   </div>
 </section>
-
 <section style="background:var(--bg2);">
-  <div class="sec-label">ТЕХНОЛОГІЧНИЙ СТЕК</div>
-  <h2 class="sec-title">Сучасні технології<br>для надійних рішень</h2>
+  <div class="sec-label rev">ТЕХНОЛОГІЧНИЙ СТЕК</div>
+  <h2 class="sec-title rev">Сучасні технології<br>для надійних рішень</h2>
   <div class="stack-grid">
-    <div class="stack-card">
-      <div class="stack-cat">FRONTEND</div>
-      <div class="stack-items">
-        <div><div class="stack-item">React / Next.js</div><div class="stack-sub">SPA та SSR додатки</div></div>
-        <div><div class="stack-item">TypeScript</div><div class="stack-sub">Типобезпечний код</div></div>
-        <div><div class="stack-item">Tailwind CSS</div><div class="stack-sub">Швидкий UI розробки</div></div>
-      </div>
-    </div>
-    <div class="stack-card">
-      <div class="stack-cat">BACKEND</div>
-      <div class="stack-items">
-        <div><div class="stack-item">FastAPI / Node.js</div><div class="stack-sub">Асинхронні API</div></div>
-        <div><div class="stack-item">PostgreSQL</div><div class="stack-sub">Надійна RDBMS</div></div>
-        <div><div class="stack-item">Redis</div><div class="stack-sub">Кеш та черги</div></div>
-      </div>
-    </div>
-    <div class="stack-card">
-      <div class="stack-cat">ІНФРАСТРУКТУРА</div>
-      <div class="stack-items">
-        <div><div class="stack-item">Docker / K8s</div><div class="stack-sub">Контейнеризація</div></div>
-        <div><div class="stack-item">AWS / GCP</div><div class="stack-sub">Хмарний деплой</div></div>
-        <div><div class="stack-item">CI/CD GitHub</div><div class="stack-sub">Автодеплой</div></div>
-      </div>
-    </div>
-    <div class="stack-card">
-      <div class="stack-cat">БЕЗПЕКА</div>
-      <div class="stack-items">
-        <div><div class="stack-item">OAuth 2.0 / JWT</div><div class="stack-sub">Аутентифікація</div></div>
-        <div><div class="stack-item">RBAC</div><div class="stack-sub">Управління ролями</div></div>
-        <div><div class="stack-item">SSL / HTTPS</div><div class="stack-sub">Шифрування даних</div></div>
-      </div>
-    </div>
+    <div class="stack-card rev"><div class="stack-cat">FRONTEND</div><div class="stack-item">React / Next.js</div><div class="stack-sub">SPA та SSR додатки</div><div class="stack-item">TypeScript</div><div class="stack-sub">Типобезпечний код</div><div class="stack-item">Tailwind CSS</div><div class="stack-sub">Швидкий UI</div></div>
+    <div class="stack-card rev" style="transition-delay:.1s"><div class="stack-cat">BACKEND</div><div class="stack-item">FastAPI / Node.js</div><div class="stack-sub">Асинхронні API</div><div class="stack-item">PostgreSQL</div><div class="stack-sub">Надійна RDBMS</div><div class="stack-item">Redis</div><div class="stack-sub">Кеш та черги</div></div>
+    <div class="stack-card rev" style="transition-delay:.2s"><div class="stack-cat">ІНФРАСТРУКТУРА</div><div class="stack-item">Docker / K8s</div><div class="stack-sub">Контейнеризація</div><div class="stack-item">AWS / GCP</div><div class="stack-sub">Хмарний деплой</div><div class="stack-item">CI/CD GitHub</div><div class="stack-sub">Автодеплой</div></div>
+    <div class="stack-card rev" style="transition-delay:.3s"><div class="stack-cat">БЕЗПЕКА</div><div class="stack-item">OAuth 2.0 / JWT</div><div class="stack-sub">Аутентифікація</div><div class="stack-item">RBAC</div><div class="stack-sub">Управління ролями</div><div class="stack-item">SSL / HTTPS</div><div class="stack-sub">Шифрування</div></div>
   </div>
 </section>
-
 <section>
-  <div class="sec-label">РІВНІ СКЛАДНОСТІ</div>
-  <h2 class="sec-title">Оберіть формат<br>співпраці</h2>
+  <div class="sec-label rev">РІВНІ СКЛАДНОСТІ</div>
+  <h2 class="sec-title rev">Оберіть формат<br>співпраці</h2>
   <div class="levels-grid">
-    <div class="level">
-      <div class="level-name">MVP</div>
-      <div class="level-price">від $2 500</div>
-      <div class="level-price-note">Мінімальний продукт · 4–8 тижнів</div>
-      <ul class="level-features">
-        <li class="active">Ключові функції продукту</li>
-        <li class="active">Авторизація та ролі</li>
-        <li class="active">Базовий дашборд</li>
-        <li class="active">REST API</li>
-        <li class="active">Деплой на хмару</li>
-        <li>Мобільна версія</li>
-        <li>Інтеграції з зовнішніми сервісами</li>
-        <li>Аналітика</li>
-      </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
-    </div>
-    <div class="level level--pro">
-      <div class="level-badge">НАЙЧАСТІШИЙ</div>
-      <div class="level-name">Platform</div>
-      <div class="level-price">від $6 000</div>
-      <div class="level-price-note">Повна платформа · 2–4 місяці</div>
-      <ul class="level-features">
-        <li class="active">Повний функціонал продукту</li>
-        <li class="active">Мобільна адаптація / PWA</li>
-        <li class="active">Платіжна інтеграція</li>
-        <li class="active">Аналітика та звіти</li>
-        <li class="active">Адмін-панель</li>
-        <li class="active">Зовнішні API інтеграції</li>
-        <li class="active">CI/CD пайплайн</li>
-        <li class="active">3 місяці підтримки</li>
-      </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
-    </div>
-    <div class="level">
-      <div class="level-name">Enterprise</div>
-      <div class="level-price">від $15 000</div>
-      <div class="level-price-note">Масштабна система · індивідуально</div>
-      <ul class="level-features">
-        <li class="active">Мікросервісна архітектура</li>
-        <li class="active">High load: 100k+ користувачів</li>
-        <li class="active">Multi-tenant архітектура</li>
-        <li class="active">Кастомна аналітика / BI</li>
-        <li class="active">Безпека корпоративного рівня</li>
-        <li class="active">Команда: PM + Design + Dev</li>
-        <li class="active">SLA та підтримка 24/7</li>
-        <li class="active">Документація та навчання</li>
-      </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ ПРОЄКТ</a>
-    </div>
+    <div class="level rev"><div class="level-name">MVP</div><div class="level-price">від $2 500</div><div class="level-price-note">Мінімальний продукт · 4–8 тижнів</div><ul class="level-features"><li class="active">Ключові функції продукту</li><li class="active">Авторизація та ролі</li><li class="active">Базовий дашборд</li><li class="active">REST API</li><li class="active">Деплой на хмару</li><li>Мобільна версія</li><li>Інтеграції</li><li>Аналітика</li></ul><a href="#contact" class="level-cta"><span>ОБГОВОРИТИ ПРОЄКТ</span></a></div>
+    <div class="level level--pro rev" style="transition-delay:.15s"><div class="level-badge">НАЙЧАСТІШИЙ</div><div class="level-name">Platform</div><div class="level-price">від $6 000</div><div class="level-price-note">Повна платформа · 2–4 місяці</div><ul class="level-features"><li class="active">Повний функціонал</li><li class="active">Мобільна адаптація / PWA</li><li class="active">Платіжна інтеграція</li><li class="active">Аналітика та звіти</li><li class="active">Адмін-панель</li><li class="active">API інтеграції</li><li class="active">CI/CD пайплайн</li><li class="active">3 місяці підтримки</li></ul><a href="#contact" class="level-cta"><span>ОБГОВОРИТИ ПРОЄКТ</span></a></div>
+    <div class="level rev" style="transition-delay:.3s"><div class="level-name">Enterprise</div><div class="level-price">від $15 000</div><div class="level-price-note">Масштабна система · індивідуально</div><ul class="level-features"><li class="active">Мікросервісна архітектура</li><li class="active">High load: 100k+ юзерів</li><li class="active">Multi-tenant</li><li class="active">Кастомна аналітика / BI</li><li class="active">Корпоративна безпека</li><li class="active">PM + Design + Dev</li><li class="active">SLA та підтримка 24/7</li><li class="active">Документація і навчання</li></ul><a href="#contact" class="level-cta"><span>ОБГОВОРИТИ ПРОЄКТ</span></a></div>
   </div>
 </section>
-
 <section class="faq">
-  <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
-  <h2 class="sec-title">Відповіді на<br>ваші питання</h2>
+  <div class="sec-label rev">ЧАСТІ ПИТАННЯ</div>
+  <h2 class="sec-title rev">Відповіді на<br>ваші питання</h2>
   <div class="faq-list">
-    <div class="faq-item">
-      <button type="button" class="faq-q">Чим відрізняється платформа від звичайного сайту? <span>+</span></button>
-      <div class="faq-a">Платформа — це повноцінний вебдодаток з базою даних, авторизацією, бізнес-логікою і API. Сайт — це переважно інформаційний або маркетинговий ресурс. Платформа дозволяє автоматизувати бізнес-процеси, зберігати і обробляти дані в реальному часі.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Як ви оцінюєте вартість розробки? <span>+</span></button>
-      <div class="faq-a">Після бриф-сесії ми декомпозуємо проєкт на задачі і оцінюємо кожну в годинах. Фіксована ціна для чітких вимог або Time & Material для гнучких проєктів — обираємо разом залежно від вашої ситуації.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Чи можете взяти проєкт що вже почали інші? <span>+</span></button>
-      <div class="faq-a">Так, але спочатку проводимо технічний аудит існуючого коду. Якщо якість прийнятна — продовжуємо розробку. Якщо є критичні проблеми — чесно говоримо про це і пропонуємо план рефакторингу або переписування.</div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Як відбувається передача проєкту після завершення? <span>+</span></button>
-      <div class="faq-a">Передаємо вихідний код у приватний репозиторій, всі доступи до сервісів, технічну документацію і інструкцію з деплою. Проводимо сесію передачі знань для вашої команди або системного адміністратора.</div>
-    </div>
+    <div class="faq-item rev"><button type="button" class="faq-q">Чим відрізняється платформа від звичайного сайту? <span>+</span></button><div class="faq-a">Платформа — це повноцінний вебдодаток з базою даних, авторизацією, бізнес-логікою і API. Сайт — переважно інформаційний ресурс. Платформа дозволяє автоматизувати бізнес-процеси і обробляти дані в реальному часі.</div></div>
+    <div class="faq-item rev"><button type="button" class="faq-q">Як ви оцінюєте вартість розробки? <span>+</span></button><div class="faq-a">Після бриф-сесії декомпозуємо проєкт на задачі і оцінюємо кожну в годинах. Фіксована ціна для чітких вимог або Time & Material для гнучких — обираємо разом.</div></div>
+    <div class="faq-item rev"><button type="button" class="faq-q">Чи можете взяти проєкт що вже почали інші? <span>+</span></button><div class="faq-a">Так, але спочатку технічний аудит. Якщо якість прийнятна — продовжуємо. Якщо є критичні проблеми — чесно говоримо і пропонуємо план рефакторингу.</div></div>
+    <div class="faq-item rev"><button type="button" class="faq-q">Як відбувається передача проєкту після завершення? <span>+</span></button><div class="faq-a">Передаємо вихідний код у приватний репозиторій, всі доступи, технічну документацію і інструкцію з деплою. Проводимо сесію передачі знань для вашої команди.</div></div>
   </div>
 </section>
-
 <section class="cta-final" id="contact">
-  <div class="sec-label" style="justify-content:center;display:flex;">МАЄТЕ ІДЕЮ?</div>
-  <div class="cta-final-title">Перетворимо ідею<br>на <em>продукт</em></div>
-  <div class="cta-final-sub">Розкажіть про задачу — проведемо безкоштовну технічну консультацію</div>
-  <a href="https://t.me/infiniteunion_bot" class="cta-btn">НАПИСАТИ В TELEGRAM</a>
-  <a href="../index.html#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
+  <div class="sec-label rev" style="justify-content:center;display:flex;">МАЄТЕ ІДЕЮ?</div>
+  <div class="cta-final-title rev">Перетворимо ідею<br>на <em>продукт</em></div>
+  <div class="cta-final-sub rev">Безкоштовна технічна консультація — відповімо протягом 15 хвилин</div>
+  <div class="rev"><a href="https://t.me/infiniteunion_bot" class="cta-btn">НАПИСАТИ В TELEGRAM</a><a href="../index.html#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a></div>
 </section>
-
 <footer>
   <div class="footer-logo">INFINITE <span>UNION</span></div>
-  <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
+  <div class="footer-copy">© 2026 Infinite Union · Харків, Україна</div>
+  <a href="../services/privacy.html" style="font-size:11px;color:var(--muted);text-decoration:none;">Політика конфіденційності</a>
 </footer>
-
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);},{passive:true});
-document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q').addEventListener('click',()=>{const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');});});
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:0.1});
-document.querySelectorAll('.what-item,.level,.stack-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity .6s ease, transform .6s ease';obs.observe(el);});
+const cur=document.getElementById('cur'),curO=document.getElementById('curO');
+let mx=0,my=0,ox=0,oy=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function loop(){ox+=(mx-ox)*.12;oy+=(my-oy)*.12;curO.style.left=ox+'px';curO.style.top=oy+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{curO.style.transform='translate(-50%,-50%) scale(2)';curO.style.borderColor='var(--red)';});el.addEventListener('mouseleave',()=>{curO.style.transform='translate(-50%,-50%) scale(1)';curO.style.borderColor='rgba(212,0,0,.5)';});});
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60),{passive:true});
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>ro.observe(el));
+document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q').addEventListener('click',()=>{const open=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!open)item.classList.add('open');});});
+
 </script>
 </body>
 </html>
