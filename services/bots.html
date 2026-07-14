@@ -23,9 +23,6 @@ html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;cursor:auto;}
 
 
-(function loop(){ox+=(mx-ox)*.12;oy+=(my-oy)*.12;curO.style.left=ox+'px';curO.style.top=oy+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{curO.style.transform='translate(-50%,-50%) scale(2)';curO.style.borderColor='var(--red)';});el.addEventListener('mouseleave',()=>{curO.style.transform='translate(-50%,-50%) scale(1)';curO.style.borderColor='rgba(212,0,0,.5)';});});
-
 /* NAV */
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60),{passive:true});
 
