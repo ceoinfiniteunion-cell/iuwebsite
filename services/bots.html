@@ -22,16 +22,6 @@
   "offers": {"@type": "Offer", "price": "300", "priceCurrency": "USD"},
   "areaServed": "Ukraine"
 }
-
-/* FAQ */
-document.querySelectorAll('.faq-q').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    var item=this.parentElement;
-    var isOpen=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
-    if(!isOpen){item.classList.add('open');}
-  });
-});
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -80,27 +70,18 @@ nav.scrolled{background:rgba(6,4,4,.95);backdrop-filter:blur(20px);border-color:
 @keyframes drawLine{from{width:0}to{width:80%}}
 
 /* MARQUEE */
-.marquee-wrap{overflow:hidden;position:relative;padding:0;background:var(--bg2);}
-.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none;}
-.marquee-wrap::before{left:0;background:linear-gradient(90deg,var(--bg2),transparent);}
-.marquee-wrap::after{right:0;background:linear-gradient(-90deg,var(--bg2),transparent);}
-.marquee-inner{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0;}
-.marquee-row{display:flex;overflow:hidden;}
-.marquee-track{display:flex;gap:0;width:max-content;align-items:stretch;}
-.marquee-track--reverse{animation:marquee-rev 35s linear infinite;}
-@keyframes marquee-rev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-.marquee-item{white-space:nowrap;font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:.25em;color:var(--muted);display:flex;align-items:center;padding:16px 32px;border-right:1px solid var(--border);transition:color .3s,background .3s;}
-.marquee-item:hover{color:#fff;background:rgba(212,0,0,.05);}
-.marquee-item em{color:var(--red);font-style:normal;margin-left:8px;}
+.marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0;background:var(--bg2);}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marquee 22s linear infinite;}
+.marquee-item{white-space:nowrap;padding:0 40px;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.18em;color:var(--muted);display:flex;align-items:center;gap:20px;transition:color .3s;}
+.marquee-item::after{content:'·';color:var(--red);margin-left:20px;}
 
 /* REVEAL */
-.rev{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.rev{opacity:0;transform:translateY(36px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
 .rev.v{opacity:1;transform:none;}
-.rev-l{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease;}
+.rev-l{opacity:0;transform:translateX(-36px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
 .rev-l.v{opacity:1;transform:none;}
-.rev-r{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease;}
+.rev-r{opacity:0;transform:translateX(36px);transition:opacity .8s var(--ease2),transform .8s var(--ease2);}
 .rev-r.v{opacity:1;transform:none;}
-@media(prefers-reduced-motion:reduce){.rev,.rev-l,.rev-r{opacity:1;transform:none;}}
 
 section{padding:120px 40px;}
 .sec-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
@@ -504,23 +485,23 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
   <h2 class="sec-title">Відповіді на<br>ваші питання</h2>
   <div class="faq-list">
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Чи можна зробити бота без програмування з мого боку? <span>+</span></button>
       <div class="faq-a">Так, ми беремо на себе всю технічну частину. Від вас потрібен тільки опис бізнес-процесів і доступ до акаунту в Telegram для реєстрації бота через @BotFather. Все інше — наша робота.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Чи буде бот працювати на мобільному? <span>+</span></button>
       <div class="faq-a">Так, Telegram боти нативно працюють на всіх платформах — iOS, Android, десктоп, вебверсія. Додатково можемо зробити Telegram Mini App — це повноцінний вебдодаток всередині Telegram.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Чи можна інтегрувати бота з моїм сайтом? <span>+</span></button>
       <div class="faq-a">Так. Бот може отримувати заявки з сайту через webhook, відправляти сповіщення при замовленні, синхронізувати базу клієнтів. Якщо у вас наш сайт — інтеграція займає кілька годин.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Що буде якщо Telegram заблокують? <span>+</span></button>
       <div class="faq-a">Весь код залишається у вас. При необхідності ми можемо портувати бота на Viber, WhatsApp Business API або зробити окремий вебчат на сайті — основна логіка залишається.</div>
     </div>
-    <div class="faq-item">
+    <div class="faq-item rev">
       <button type="button" class="faq-q">Як я буду керувати ботом після запуску? <span>+</span></button>
       <div class="faq-a">Розробляємо адмін-панель прямо в Telegram — ви керуєте ботом через команди або кнопки без технічних знань. Додатково — веб-дашборд з аналітикою та управлінням контентом.</div>
     </div>
@@ -587,7 +568,13 @@ if(pl){
   po.observe(pl);
 }
 
-
+/* FAQ */
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!open)item.classList.add('open');
+  });
 });
 
 /* COUNT UP */
@@ -619,7 +606,8 @@ document.querySelectorAll('.faq-item').forEach(item=>{
     if(!isOpen)item.classList.add('open');
   });
 });
-
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:0.1});
+document.querySelectorAll('.what-item,.level,.uc,.process-step,.cred').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity .6s ease, transform .6s ease';obs.observe(el);});
 
 /* MAGNETIC BUTTONS */
 document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{
