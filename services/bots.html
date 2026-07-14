@@ -550,7 +550,7 @@ document.querySelectorAll('.what-item').forEach(item=>{
 });
 
 /* REVEAL */
-const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:.1});
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:0,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>ro.observe(el));
 
 /* PROCESS SEQUENTIAL */
