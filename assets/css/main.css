@@ -901,7 +901,7 @@ body::after {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: url('../pattern-bg.jpg') center/cover no-repeat;
+  background: url('/iuwebsite/assets/pattern-bg.jpg') center/cover no-repeat;
   opacity: 0.03;
   mix-blend-mode: luminosity;
   -webkit-mask-image: linear-gradient(
