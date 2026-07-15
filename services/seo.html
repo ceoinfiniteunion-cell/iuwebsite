@@ -314,7 +314,7 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
 <div class="results-strip">
   <div class="result-item"><div class="result-val" data-final="+210<span>%</span>" data-count="210">+210<span>%</span></div><div class="result-label">Трафік за рік</div></div>
   <div class="result-item"><div class="result-val" data-final="Top 10<span></span>" data-count="10">Top 10<span></span></div><div class="result-label">Ключових запитів</div></div>
-  <div class="result-item"><div class="result-val" data-final="$0<span></span>" data-count="0">$0<span></span></div><div class="result-label">За клік назавжди</div></div>
+  <div class="result-item"><div class="result-val" data-final="$0<span></span>" data-count="0" data-static="true">$0<span></span></div><div class="result-label">За клік назавжди</div></div>
 </div>
 
 <section class="faq">
@@ -371,6 +371,7 @@ if(pg){
 document.querySelectorAll('.result-val[data-count]').forEach(el=>{
   const obs=new IntersectionObserver(es=>{
     if(es[0].isIntersecting){
+      if(el.dataset.static)return;
       const raw=el.dataset.count;
       const target=parseFloat(raw);
       const inner=el.innerHTML;
