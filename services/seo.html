@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO просування сайту — органічний трафік | Infinite Union</title>
+  <meta name="description" content="Комплексне SEO просування: технічний аудит, семантичне ядро, контент, посилання. Стабільний органічний трафік.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23D40000'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold' font-size='14' fill='white'>IU</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+::selection{background:#D40000;color:#fff;}
+:root{--red:#D40000;--bg:#F5F0E8;--bg2:#EDE8E0;--dark:#0A0A0A;--text:#1A1A1A;--muted:#666;--border:rgba(0,0,0,0.08);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--ease:cubic-bezier(0.76,0,0.24,1);--ease2:cubic-bezier(0.23,1,0.32,1);}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:border-color .3s,background .3s;}
+nav.scrolled{background:rgba(245,240,232,.95);backdrop-filter:blur(20px);border-color:var(--border);}
+.nav-back{font-size:12px;letter-spacing:.1em;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;font-family:var(--font);transition:color .2s;}
+.nav-back:hover{color:var(--dark);}
+.nav-logo{font-family:var(--font);font-weight:700;font-size:15px;letter-spacing:.12em;text-decoration:none;color:var(--dark);}
+.nav-logo span{color:var(--red);}
+.nav-cta{background:var(--red);color:#fff;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.1em;padding:10px 24px;text-decoration:none;transition:opacity .2s;}
+.nav-cta:hover{opacity:.85;}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 40px 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+.hero-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;}
+.hero-number{position:absolute;right:40px;top:50%;transform:translateY(-50%);font-family:var(--font);font-size:240px;font-weight:800;color:rgba(0,0,0,.04);line-height:1;letter-spacing:-.05em;pointer-events:none;user-select:none;}
+.hero-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:24px;opacity:0;animation:fadeUp .6s var(--ease2) .2s forwards;}
+.hero-title{font-family:var(--font);font-size:clamp(56px,9vw,130px);font-weight:800;line-height:.9;letter-spacing:-.04em;max-width:900px;opacity:0;animation:fadeUp .8s var(--ease2) .4s forwards;color:var(--dark);}
+.hero-title em{font-style:normal;color:var(--red);}
+.hero-sub{margin-top:40px;font-size:18px;color:var(--muted);max-width:560px;line-height:1.7;font-weight:300;opacity:0;animation:fadeUp .8s var(--ease2) .6s forwards;}
+.hero-stats{margin-top:60px;display:flex;gap:60px;border-top:1px solid var(--border);padding-top:40px;opacity:0;animation:fadeUp .8s var(--ease2) .8s forwards;}
+.hero-stat-num{font-family:var(--font);font-size:48px;font-weight:700;line-height:1;color:var(--dark);}
+.hero-stat-num span{color:var(--red);}
+.hero-stat-label{font-size:11px;color:var(--muted);margin-top:6px;letter-spacing:.08em;text-transform:uppercase;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.marquee-wrap{overflow:hidden;position:relative;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);}
+.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;}
+.marquee-wrap::before{left:0;background:linear-gradient(90deg,var(--bg2),transparent);}
+.marquee-wrap::after{right:0;background:linear-gradient(-90deg,var(--bg2),transparent);}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marquee 28s linear infinite;}
+.marquee-item{white-space:nowrap;padding:16px 40px;font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--muted);border-right:1px solid var(--border);transition:color .3s,background .3s;}
+.marquee-item:hover{color:var(--dark);background:rgba(0,0,0,.03);}
+.marquee-item em{color:var(--red);font-style:normal;margin-left:12px;}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+section{padding:120px 40px;}
+.sec-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
+.sec-title{font-family:var(--font);font-size:clamp(36px,5vw,72px);font-weight:800;line-height:1;letter-spacing:-.03em;margin-bottom:60px;color:var(--dark);}
+.rev{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease2),transform .7s var(--ease2);}
+.rev.v{opacity:1;transform:none;}
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
+.service-item{background:var(--bg);padding:56px;position:relative;overflow:hidden;transition:background .3s;}
+.service-item:hover{background:var(--bg2);}
+.service-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease2);}
+.service-item:hover::before{transform:scaleX(1);}
+.service-num{font-family:var(--font);font-size:11px;letter-spacing:.15em;color:var(--muted);margin-bottom:24px;}
+.service-name{font-family:var(--font);font-size:28px;font-weight:700;color:var(--dark);margin-bottom:16px;transition:color .3s;}
+.service-item:hover .service-name{color:var(--red);}
+.service-desc{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:24px;}
+.service-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.stag{font-size:11px;padding:5px 14px;border:1px solid var(--border);color:var(--muted);font-family:var(--font);letter-spacing:.08em;}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;counter-reset:step;}
+.process-item{counter-increment:step;position:relative;padding-top:60px;}
+.process-item::before{content:counter(step,decimal-leading-zero);position:absolute;top:0;left:0;font-family:var(--font);font-size:48px;font-weight:800;color:rgba(0,0,0,.06);line-height:1;}
+.process-item-name{font-family:var(--font);font-size:18px;font-weight:700;color:var(--dark);margin-bottom:12px;}
+.process-item-desc{font-size:14px;color:var(--muted);line-height:1.8;}
+.process-item-time{font-size:12px;color:var(--red);font-family:var(--font);font-weight:600;margin-top:12px;letter-spacing:.05em;}
+.faq{background:var(--bg2);}
+.faq-list{max-width:800px;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--dark);font-family:var(--font);font-size:18px;font-weight:600;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:color .2s;}
+.faq-q:hover{color:var(--red);}
+.faq-q span{font-size:20px;color:var(--red);transition:transform .4s var(--ease2);}
+.faq-item.open .faq-q span{transform:rotate(45deg);}
+.faq-a{font-size:15px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .5s var(--ease2),padding .4s;}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:28px;}
+.cta-final{text-align:center;padding:160px 40px;position:relative;border-top:1px solid var(--border);}
+.cta-title{font-family:var(--font);font-size:clamp(40px,6vw,90px);font-weight:800;line-height:.95;letter-spacing:-.04em;color:var(--dark);margin-bottom:32px;}
+.cta-title em{font-style:normal;color:var(--red);}
+.cta-sub{font-size:18px;color:var(--muted);margin-bottom:48px;}
+.cta-btn{display:inline-flex;align-items:center;background:var(--dark);color:#fff;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:.1em;padding:20px 60px;text-decoration:none;margin-right:16px;transition:background .2s,transform .2s var(--ease2);}
+.cta-btn:hover{background:var(--red);transform:translateY(-3px);}
+.cta-btn-ghost{display:inline-flex;align-items:center;border:1px solid rgba(0,0,0,.2);color:var(--dark);font-family:var(--font);font-size:14px;font-weight:600;letter-spacing:.1em;padding:20px 48px;text-decoration:none;transition:border-color .2s,transform .2s var(--ease2);}
+.cta-btn-ghost:hover{border-color:var(--dark);transform:translateY(-3px);}
+footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);}
+.footer-logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.1em;color:var(--dark);}
+.footer-logo span{color:var(--red);}
+.footer-copy{font-size:12px;color:var(--muted);}
+.footer-link{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s;}
+.footer-link:hover{color:var(--dark);}
+@media(max-width:768px){nav{padding:16px 20px;}.hero{padding:0 20px 60px;}.hero-number{display:none;}section{padding:80px 20px;}.service-grid,.process-grid{grid-template-columns:1fr;}footer{flex-direction:column;gap:16px;text-align:center;}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="../index.html" class="nav-back">← Назад</a>
+  <a href="../index.html" class="nav-logo">INFINITE <span>UNION</span></a>
+  <a href="#contact" class="nav-cta">ЗАМОВИТИ SEO</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-number">03</div>
+  <div class="hero-label">MARKETING · 02.03</div>
+  <h1 class="hero-title">SEO<br><em>Просування</em></h1>
+  <p class="hero-sub">Органічний трафік що росте щомісяця. Технічна оптимізація, контент стратегія, посилальний профіль — все під ключ.</p>
+  <div class="hero-stats">
+    <div><div class="hero-stat-num">Top 10<span></span></div><div class="hero-stat-label">ключових запитів</div></div><div><div class="hero-stat-num">+200%<span></span></div><div class="hero-stat-label">трафік за рік</div></div><div><div class="hero-stat-num">0₴<span></span></div><div class="hero-stat-label">за клік назавжди</div></div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track"><span class="marquee-item">ТЕХНІЧНЕ SEO <em>→</em></span><span class="marquee-item">СЕМАНТИЧНЕ ЯДРО <em>→</em></span><span class="marquee-item">КОНТЕНТ <em>→</em></span><span class="marquee-item">ПОСИЛАННЯ <em>→</em></span><span class="marquee-item">CORE WEB VITALS <em>→</em></span><span class="marquee-item">SCHEMA.ORG <em>→</em></span><span class="marquee-item">LOCAL SEO <em>→</em></span><span class="marquee-item">E-E-A-T <em>→</em></span><span class="marquee-item">ТЕХНІЧНЕ SEO <em>→</em></span><span class="marquee-item">СЕМАНТИЧНЕ ЯДРО <em>→</em></span><span class="marquee-item">КОНТЕНТ <em>→</em></span><span class="marquee-item">ПОСИЛАННЯ <em>→</em></span><span class="marquee-item">CORE WEB VITALS <em>→</em></span><span class="marquee-item">SCHEMA.ORG <em>→</em></span><span class="marquee-item">LOCAL SEO <em>→</em></span><span class="marquee-item">E-E-A-T <em>→</em></span></div>
+</div>
+
+<section>
+  <div class="sec-label">ЩО ВХОДИТЬ</div>
+  <h2 class="sec-title rev">Повний комплекс<br>послуг</h2>
+  <div class="service-grid"><div class="service-item rev">
+      <div class="service-num">01</div>
+      <div class="service-name">Технічний аудит</div>
+      <div class="service-desc">Перевірка швидкості, індексації, структури URL, мікророзмітки, мобільної версії. Виправлення помилок.</div>
+      <div class="service-tags"><span class="stag">Core Web Vitals</span><span class="stag">Schema markup</span><span class="stag">Crawl fixes</span></div>
+    </div><div class="service-item rev">
+      <div class="service-num">02</div>
+      <div class="service-name">Семантичне ядро</div>
+      <div class="service-desc">Збір і кластеризація ключових слів. Карта релевантності — кожна сторінка під свій кластер.</div>
+      <div class="service-tags"><span class="stag">Keyword research</span><span class="stag">Кластеризація</span><span class="stag">Конкурентний аналіз</span></div>
+    </div><div class="service-item rev">
+      <div class="service-num">03</div>
+      <div class="service-name">Контент стратегія</div>
+      <div class="service-desc">Оптимізація існуючих сторінок і написання нових. SEO-тексти що читають люди, а не тільки боти.</div>
+      <div class="service-tags"><span class="stag">On-page SEO</span><span class="stag">Блог стратегія</span><span class="stag">E-E-A-T контент</span></div>
+    </div><div class="service-item rev">
+      <div class="service-num">04</div>
+      <div class="service-name">Посилальний профіль</div>
+      <div class="service-desc">Крауд-маркетинг, гостьові публікації, digital PR. Тільки якісні посилання без ризику санкцій.</div>
+      <div class="service-tags"><span class="stag">Link building</span><span class="stag">Digital PR</span><span class="stag">Крауд-маркетинг</span></div>
+    </div></div>
+</section>
+
+<section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="sec-label">ЯК МИ ПРАЦЮЄМО</div>
+  <h2 class="sec-title rev">Процес<br>від А до Я</h2>
+  <div class="process-grid"><div class="process-item rev">
+      <div class="process-item-name">Аудит</div>
+      <div class="process-item-desc">Технічний аудит сайту і аналіз конкурентів у ніші.</div>
+      <div class="process-item-time">1 тиждень</div>
+    </div><div class="process-item rev">
+      <div class="process-item-name">Стратегія</div>
+      <div class="process-item-desc">Семантичне ядро, пріоритети, контент план на 6 місяців.</div>
+      <div class="process-item-time">1 тиждень</div>
+    </div><div class="process-item rev">
+      <div class="process-item-name">Оптимізація</div>
+      <div class="process-item-desc">Технічні правки, оптимізація сторінок, перші публікації.</div>
+      <div class="process-item-time">1-2 місяці</div>
+    </div><div class="process-item rev">
+      <div class="process-item-name">Зростання</div>
+      <div class="process-item-desc">Нарощування посилань, розширення семантики, нові сторінки.</div>
+      <div class="process-item-time">Постійно</div>
+    </div></div>
+</section>
+
+<section class="faq">
+  <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
+  <h2 class="sec-title">Відповіді на<br>ваші питання</h2>
+  <div class="faq-list"><div class="faq-item">
+      <button class="faq-q">Коли будуть результати від SEO?<span>+</span></button>
+      <div class="faq-a">Перші зміни видно через 2-3 місяці. Стабільний трафік — від 4-6 місяців.</div>
+    </div><div class="faq-item">
+      <button class="faq-q">SEO дорого чи ні?<span>+</span></button>
+      <div class="faq-a">Від $300/міс. Але на відміну від реклами — ефект залишається навіть після зупинки.</div>
+    </div><div class="faq-item">
+      <button class="faq-q">Чи гарантуєте позиції?<span>+</span></button>
+      <div class="faq-a">Ніхто не може гарантувати позиції — алгоритми змінюються. Гарантуємо роботу і зростання трафіку.</div>
+    </div><div class="faq-item">
+      <button class="faq-q">Що потрібно від нас?<span>+</span></button>
+      <div class="faq-a">Доступ до сайту, Google Search Console, Analytics. Решту беремо на себе.</div>
+    </div></div>
+</section>
+
+<section class="cta-final" id="contact">
+  <h2 class="cta-title">Почніть рости<br>в <em>органіці</em></h2>
+  <p class="cta-sub">Опишіть задачу — відповімо протягом 15 хвилин</p>
+  <a href="https://t.me/infiniteunion_bot" class="cta-btn" target="_blank">НАПИСАТИ В TELEGRAM</a>
+  <a href="../index.html#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
+</section>
+
+<footer>
+  <div class="footer-logo">INFINITE <span>UNION</span></div>
+  <div class="footer-copy">© 2026 Infinite Union · Харків, Україна</div>
+  <a href="../services/privacy.html" class="footer-link">Політика конфіденційності</a>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60),{passive:true});
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:0,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){var item=this.parentElement;var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});if(!isOpen){item.classList.add('open');}});});
+document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.1;const y=(e.clientY-r.top-r.height/2)*.1;btn.style.transform=`translate(${x}px,${y}px) translateY(-3px)`;});btn.addEventListener('mouseleave',()=>{btn.style.transform='';});});
+</script>
+</body>
+</html>
