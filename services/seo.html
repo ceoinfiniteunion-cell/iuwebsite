@@ -312,9 +312,9 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
 </section>
 
 <div class="results-strip">
-  <div class="result-item"><div class="result-val" data-count="210">+210<span>%</span></div><div class="result-label">Трафік за рік</div></div>
-  <div class="result-item"><div class="result-val" data-count="10">Top 10<span></span></div><div class="result-label">Ключових запитів</div></div>
-  <div class="result-item"><div class="result-val" data-count="0">$0<span></span></div><div class="result-label">За клік назавжди</div></div>
+  <div class="result-item"><div class="result-val" data-final="+210<span>%</span>" data-count="210">+210<span>%</span></div><div class="result-label">Трафік за рік</div></div>
+  <div class="result-item"><div class="result-val" data-final="Top 10<span></span>" data-count="10">Top 10<span></span></div><div class="result-label">Ключових запитів</div></div>
+  <div class="result-item"><div class="result-val" data-final="$0<span></span>" data-count="0">$0<span></span></div><div class="result-label">За клік назавжди</div></div>
 </div>
 
 <section class="faq">
@@ -371,13 +371,25 @@ if(pg){
 document.querySelectorAll('.result-val[data-count]').forEach(el=>{
   const obs=new IntersectionObserver(es=>{
     if(es[0].isIntersecting){
-      const target=parseFloat(el.dataset.count);
+      const raw=el.dataset.count;
+      const target=parseFloat(raw);
+      const inner=el.innerHTML;
       const suffix=el.querySelector('span')?el.querySelector('span').outerHTML:'';
-      const prefix=el.dataset.prefix||'';
+      // Зберігаємо оригінальний текст і анімуємо тільки число
+      const origText=el.textContent.replace(/[0-9.]/g,'').trim();
       const dur=2000;const start=performance.now();
       const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;
-      const tick=now=>{const p=Math.min((now-start)/dur,1);const val=Math.round(ease(p)*target);el.innerHTML=prefix+val+suffix;if(p<1)requestAnimationFrame(tick);};
-      requestAnimationFrame(tick);obs.disconnect();
+      const isFloat=raw.includes('.');
+      const tick=now=>{
+        const p=Math.min((now-start)/dur,1);
+        const val=ease(p)*target;
+        const display=isFloat?(Math.round(val*10)/10).toFixed(1):Math.round(val);
+        el.innerHTML=display+suffix;
+        if(p<1)requestAnimationFrame(tick);
+        else el.innerHTML=el.dataset.final||el.innerHTML;
+      };
+      requestAnimationFrame(tick);
+      obs.disconnect();
     }
   },{threshold:.5});
   obs.observe(el);
