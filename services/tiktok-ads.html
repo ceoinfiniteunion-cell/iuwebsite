@@ -120,6 +120,50 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 .cta-btn-ghost{border-color:rgba(255,255,255,.2) !important;color:#fff !important;}
 .cta-btn-ghost:hover{border-color:rgba(255,255,255,.6) !important;}
 
+
+/* HERO CANVAS */
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.6;}
+.hero-grid{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.hero-grid::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);background-size:60px 60px;animation:gridMove 20s linear infinite;}
+@keyframes gridMove{from{background-position:0 0}to{background-position:60px 60px}}
+.hero-orb{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(212,0,0,.05) 0%,transparent 65%);pointer-events:none;animation:heroOrbPulse 6s ease-in-out infinite;}
+.hero-orb-ring{position:absolute;right:20px;top:50%;transform:translateY(-50%);width:520px;height:520px;border-radius:50%;border:1px solid rgba(212,0,0,.1);animation:heroSpin 30s linear infinite;}
+.hero-orb-ring2{position:absolute;right:80px;top:50%;transform:translateY(-50%);width:360px;height:360px;border-radius:50%;border:1px solid rgba(212,0,0,.06);animation:heroSpin 20s linear infinite reverse;}
+@keyframes heroSpin{from{transform:translateY(-50%) rotate(0deg)}to{transform:translateY(-50%) rotate(360deg)}}
+@keyframes heroOrbPulse{0%,100%{opacity:.6;transform:translateY(-50%) scale(1)}50%{opacity:1;transform:translateY(-50%) scale(1.08)}}
+.service-item{cursor:default;transition:background .3s,transform .4s var(--ease2),box-shadow .4s;}
+.service-item:hover{box-shadow:0 30px 80px rgba(0,0,0,.12),0 0 0 1px rgba(212,0,0,.1);}
+.service-arrow{position:absolute;top:32px;right:32px;width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(0,0,0,.2);transition:all .3s var(--ease2);}
+.service-item:hover .service-arrow{border-color:var(--red);color:var(--red);transform:translate(4px,-4px);background:rgba(212,0,0,.05);}
+.service-item:hover .service-name{color:var(--red);}
+.service-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(212,0,0,.06) 0%,transparent 70%);pointer-events:none;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;}
+.service-item:hover .service-glow{opacity:1;}
+.process-grid{position:relative;}
+.process-grid::before{content:'';position:absolute;top:28px;left:0;right:0;height:1px;background:var(--border);}
+.process-progress{position:absolute;top:28px;left:0;height:1px;background:linear-gradient(90deg,var(--red),rgba(212,0,0,.3));width:0;transition:width 2.5s var(--ease2);}
+.process-grid.animated .process-progress{width:100%;}
+.process-item{padding-top:72px;position:relative;}
+.process-dot{width:56px;height:56px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;position:absolute;top:0;left:50%;transform:translateX(-50%);background:var(--bg);font-family:var(--font);font-size:13px;font-weight:700;color:var(--muted);transition:all .5s var(--ease2);z-index:2;}
+.process-item.lit .process-dot{border-color:var(--red);color:#fff;background:var(--red);box-shadow:0 0 0 6px rgba(212,0,0,.1),0 0 20px rgba(212,0,0,.3);}
+.process-item.lit .process-item-name{color:var(--dark);}
+.process-item-time{display:inline-block;background:rgba(212,0,0,.08);color:var(--red);padding:3px 10px;font-size:11px;font-family:var(--font);font-weight:700;letter-spacing:.08em;margin-top:10px;}
+.cta-final{background:var(--dark);position:relative;overflow:hidden;}
+.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:500px;background:radial-gradient(ellipse,rgba(212,0,0,.1) 0%,transparent 70%);pointer-events:none;}
+.cta-final .cta-title{color:#fff;}
+.cta-final .cta-sub{color:rgba(255,255,255,.45);}
+.cta-btn{position:relative;overflow:hidden;background:var(--red)!important;color:#fff!important;}
+.cta-btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.15);transform:translateX(-100%) skewX(-15deg);transition:transform .5s var(--ease2);}
+.cta-btn:hover::after{transform:translateX(100%) skewX(-15deg);}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(212,0,0,.4);}
+.cta-btn-ghost{border:1px solid rgba(255,255,255,.2)!important;color:#fff!important;background:transparent;}
+.cta-btn-ghost:hover{border-color:rgba(255,255,255,.6)!important;transform:translateY(-3px);}
+.faq-item.open{padding-left:16px;border-left:2px solid var(--red);}
+.faq-item.open .faq-q{color:var(--red);}
+footer{background:var(--dark)!important;border-color:rgba(255,255,255,.08)!important;}
+.footer-logo{color:#fff!important;}
+.footer-copy,.footer-link{color:rgba(255,255,255,.4)!important;}
+.footer-link:hover{color:#fff!important;}
+
 </style>
 </head>
 <body>
@@ -132,6 +176,11 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 
 <section class="hero">
   <div class="hero-noise"></div>
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <div class="hero-grid"></div>
+  <div class="hero-orb"></div>
+  <div class="hero-orb-ring"></div>
+  <div class="hero-orb-ring2"></div>
   <div class="hero-dots"></div>
   <div class="hero-orb"></div>
   <div class="hero-orb-ring"></div>
@@ -152,22 +201,22 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 <section>
   <div class="sec-label">ЩО ВХОДИТЬ</div>
   <h2 class="sec-title rev">Повний комплекс<br>послуг</h2>
-  <div class="service-grid"><div class="service-item rev"><span class="service-arrow">↗</span>
+  <div class="service-grid"><div class="service-item rev"><span class="service-arrow">↗</span><div class="service-glow"></div><span class="service-arrow">↗</span>
       <div class="service-num">01</div>
       <div class="service-name">In-Feed Ads</div>
       <div class="service-desc">Нативні оголошення в стрічці TikTok. Виглядають як звичайний контент — вищий CTR і менша вартість.</div>
       <div class="service-tags"><span class="stag">In-Feed</span><span class="stag">Spark Ads</span><span class="stag">Video shopping</span></div>
-    </div><div class="service-item rev"><span class="service-arrow">↗</span>
+    </div><div class="service-item rev"><span class="service-arrow">↗</span><div class="service-glow"></div><span class="service-arrow">↗</span>
       <div class="service-num">02</div>
       <div class="service-name">UGC відео</div>
       <div class="service-desc">Створення UGC-контенту що виглядає органічно. Сценарії, зйомка або підбір креаторів.</div>
       <div class="service-tags"><span class="stag">UGC production</span><span class="stag">Creator brief</span><span class="stag">A/B тести</span></div>
-    </div><div class="service-item rev"><span class="service-arrow">↗</span>
+    </div><div class="service-item rev"><span class="service-arrow">↗</span><div class="service-glow"></div><span class="service-arrow">↗</span>
       <div class="service-num">03</div>
       <div class="service-name">TopView та Brand Takeover</div>
       <div class="service-desc">Максимальне охоплення при відкритті додатку. Підходить для launch кампаній і awareness.</div>
       <div class="service-tags"><span class="stag">TopView</span><span class="stag">Brand Takeover</span><span class="stag">Branded effects</span></div>
-    </div><div class="service-item rev"><span class="service-arrow">↗</span>
+    </div><div class="service-item rev"><span class="service-arrow">↗</span><div class="service-glow"></div><span class="service-arrow">↗</span>
       <div class="service-num">04</div>
       <div class="service-name">TikTok Shop</div>
       <div class="service-desc">Налаштування магазину в TikTok, синхронізація каталогу, реклама з прямими покупками.</div>
@@ -178,7 +227,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 <section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div class="sec-label">ЯК МИ ПРАЦЮЄМО</div>
   <h2 class="sec-title rev">Процес<br>від А до Я</h2>
-  <div class="process-grid"><div class="process-line"></div><div class="process-item rev">
+  <div class="process-grid"><div class="process-progress"></div><div class="process-line"></div><div class="process-item rev">
       <div class="process-item-name">Стратегія</div>
       <div class="process-item-desc">Аналіз ніші в TikTok, конкурентів, визначення форматів і аудиторій.</div>
       <div class="process-item-time">2-3 дні</div>
@@ -266,6 +315,25 @@ if(pg){
   };
   nums.forEach(el=>animate(el));
 })();
+
+
+(function(){
+  const c=document.getElementById('heroCanvas');
+  if(!c)return;
+  const ctx=c.getContext('2d');
+  c.width=window.innerWidth;c.height=window.innerHeight;
+  const pts=Array.from({length:50},()=>({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,r:Math.random()*1.2+.3}));
+  function draw(){ctx.clearRect(0,0,c.width,c.height);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(212,0,0,.18)';ctx.fill();});pts.forEach((p,i)=>pts.slice(i+1).forEach(q=>{const d=Math.hypot(p.x-q.x,p.y-q.y);if(d<100){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(212,0,0,${.05*(1-d/100)})`;ctx.lineWidth=.5;ctx.stroke();}}));requestAnimationFrame(draw);}
+  draw();window.addEventListener('resize',()=>{c.width=window.innerWidth;c.height=window.innerHeight;},{passive:true});
+})();
+document.querySelectorAll('.service-item').forEach(card=>{
+  const glow=card.querySelector('.service-glow');
+  card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(600px) rotateY(${x*5}deg) rotateX(${-y*5}deg) translateY(-4px)`;if(glow){glow.style.left=(e.clientX-r.left)+'px';glow.style.top=(e.clientY-r.top)+'px';}});
+  card.addEventListener('mouseleave',()=>{card.style.transform='';});
+});
+const pg=document.querySelector('.process-grid');
+if(pg){const items=pg.querySelectorAll('.process-item');const pobs=new IntersectionObserver(es=>{if(es[0].isIntersecting){pg.classList.add('animated');items.forEach((item,i)=>setTimeout(()=>item.classList.add('lit'),i*450));pobs.disconnect();}},{threshold:.2});pobs.observe(pg);}
+document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.12;const y=(e.clientY-r.top-r.height/2)*.12;btn.style.transform=`translate(${x}px,${y}px)`;});btn.addEventListener('mouseleave',()=>{btn.style.transform='';});});
 
 </script>
 </body>
