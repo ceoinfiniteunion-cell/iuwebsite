@@ -337,9 +337,7 @@ document.querySelectorAll('.service-item').forEach(card=>{
   card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(600px) rotateY(${x*5}deg) rotateX(${-y*5}deg) translateY(-4px)`;if(glow){glow.style.left=(e.clientX-r.left)+'px';glow.style.top=(e.clientY-r.top)+'px';}});
   card.addEventListener('mouseleave',()=>{card.style.transform='';});
 });
-const pg=document.querySelector('.process-grid');
-if(pg){const items=pg.querySelectorAll('.process-item');const pobs=new IntersectionObserver(es=>{if(es[0].isIntersecting){pg.classList.add('animated');items.forEach((item,i)=>setTimeout(()=>item.classList.add('lit'),i*450));pobs.disconnect();}},{threshold:.2});pobs.observe(pg);}
-document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.12;const y=(e.clientY-r.top-r.height/2)*.12;btn.style.transform=`translate(${x}px,${y}px)`;});btn.addEventListener('mouseleave',()=>{btn.style.transform='';});});
+
 
 document.addEventListener('DOMContentLoaded',()=>{setTimeout(()=>{document.querySelectorAll('.rev').forEach(el=>el.classList.add('v'));},100)});
 </script>
