@@ -921,58 +921,92 @@ body::after {
 }
 body > * { position: relative; z-index: 1; }
 
-/* ═══════════════════════════════════════════
-   MOBILE OVERRIDES — max-width:768px  (v2)
-   ═══════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   MOBILE ADAPTATION — final (max-width:768px)
+   Зберігає всі анімації, прибирає absolute-елементи що
+   вилазять, спрощує важкі секції для телефона
+   ═══════════════════════════════════════════════════════ */
 @media(max-width:768px){
 
   html,body{overflow-x:hidden;max-width:100vw;}
-  section{padding-left:20px;padding-right:20px;}
 
-  /* ── SNAKE INTRO ── */
-  .si-bg-text{font-size:clamp(48px,18vw,96px);opacity:.45;}
+  /* ══ SNAKE INTRO ══ */
+  /* Зменшуємо висоту скрол-секції (3D змія важка на мобільному) */
+  #snake-intro{height:300vh;}
+  .si-bg-text{font-size:clamp(44px,16vw,90px);opacity:.4;top:14%;}
+  #hero-snake-c{opacity:.85;}
+  /* Теги — компактний вертикальний список знизу, з фоном щоб читались поверх змії */
   .si-tag{
     position:absolute !important;
     left:16px !important; right:16px !important;
     width:auto !important;
     top:auto !important;
     text-align:left;
-    background:rgba(6,4,4,.6);
+    background:rgba(6,4,4,.62);
     backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
     padding:9px 14px;
     border-left:2px solid var(--red);
+    border-radius:2px;
   }
   .si-tag p{font-size:12px;line-height:1.25;margin-top:3px;}
   .si-num{font-size:9px;}
-  .si-tag--1{bottom:250px !important;}
-  .si-tag--2{bottom:184px !important;}
-  .si-tag--3{bottom:118px !important;}
+  .si-tag--1{bottom:238px !important;}
+  .si-tag--2{bottom:176px !important;}
+  .si-tag--3{bottom:114px !important;}
   .si-tag--4{bottom:52px !important;}
-  .si-coords{left:16px;bottom:14px;font-size:9px;}
-  .si-crosshair{width:180px !important;height:180px !important;}
+  .si-coords{left:16px;bottom:18px;font-size:9px;}
+  .si-crosshair{width:170px !important;height:170px !important;}
 
-  /* ── STATS ── */
+  /* ══ STATS ══ */
+  #stats{padding:60px 20px;}
   #stats .sg{grid-template-columns:1fr 1fr !important;gap:0 !important;}
-  #stats .si{padding:28px 16px !important;}
-  #stats .sn{font-size:44px !important;}
+  #stats .si{padding:26px 14px !important;border-bottom:1px solid var(--border);}
+  #stats .sn{font-size:42px !important;}
   #stats .sl{font-size:11px !important;}
 
-  /* ── PORTFOLIO / GLOBE ──
-     На мобільному прибираємо складну scroll-globe механіку,
-     показуємо картки простим списком */
+  /* ══ STACK / "Що під капотом" ══ */
+  /* Ховаємо spider-павутину (absolute 240px що вилазить) */
+  .stack-node__spider{display:none !important;}
+  .stack-flow{flex-direction:column !important;gap:0 !important;align-items:stretch !important;}
+  .stack-node{
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:16px !important;
+    width:100% !important;
+    min-width:0 !important;
+    padding:18px 20px !important;
+  }
+  .stack-node__tip{
+    position:static !important;
+    transform:none !important;
+    opacity:1 !important;
+    background:none !important;
+    border:none !important;
+    padding:2px 0 0 !important;
+    white-space:normal !important;
+    pointer-events:auto !important;
+    text-align:left !important;
+  }
+  .stack-arrow{transform:rotate(90deg);margin:2px auto;color:var(--red);opacity:.5;}
+  .stack-node__inner{display:flex;flex-direction:column;align-items:flex-start;}
+
+  /* ══ PORTFOLIO / GLOBE ══ */
+  /* Прибираємо scroll-globe механіку, показуємо картки списком */
   #portfolio .globe-scroll-outer{height:auto !important;}
   #portfolio .globe-scroll-sticky{
     position:relative !important;
     height:auto !important;
     top:auto !important;
     overflow:visible !important;
-    padding:80px 20px 60px !important;
+    padding:70px 20px 50px !important;
     display:block !important;
   }
   #gs-globe,#gs-overlay,#gs-connector,.gs-progress,.gs-scroll-hint,.globe-scroll-right{
     display:none !important;
   }
-  #portfolio .sec-in--portfolio{position:relative !important;padding:0 0 32px !important;}
+  #portfolio .sec-in--portfolio{position:relative !important;padding:0 0 28px !important;}
   .gs-cards-row{
     position:relative !important;
     inset:auto !important;
@@ -991,17 +1025,31 @@ body > * { position: relative; z-index: 1; }
     opacity:1 !important;
     pointer-events:auto !important;
     padding:22px 20px !important;
+    display:block !important;
   }
   .gs-card.active{transform:none !important;}
-  .gs-title{font-size:20px !important;}
+  .gs-title{font-size:19px !important;}
   .gs-desc{font-size:12px !important;max-width:none !important;}
-  /* Ховаємо порожні картки-заглушки (Проект 5-9 без опису) */
+  /* Ховаємо порожні картки-заглушки */
   #gs-card-4,#gs-card-5,#gs-card-6,#gs-card-7,#gs-card-8{display:none !important;}
 
+  /* ══ PROCESS (таймлайн) ══ */
+  #process .proc-item{padding-left:44px !important;}
+
+  /* ══ AI CONSTRUCTOR preview ══ */
+  .ai-preview{max-width:100% !important;overflow:hidden;}
+
+  /* ══ Загальні відступи секцій ══ */
+  section, .sec{padding-left:20px !important;padding-right:20px !important;}
 }
 
+/* Вузькі екрани (iPhone SE, mini) */
 @media(max-width:400px){
   .si-tag p{font-size:11px;}
+  .si-tag--1{bottom:230px !important;}
+  .si-tag--2{bottom:170px !important;}
+  .si-tag--3{bottom:110px !important;}
+  .si-tag--4{bottom:50px !important;}
   .gs-title{font-size:18px !important;}
-  #stats .sn{font-size:38px !important;}
+  #stats .sn{font-size:36px !important;}
 }
