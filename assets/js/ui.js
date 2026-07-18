@@ -143,7 +143,7 @@ document.querySelectorAll('[data-target]').forEach(el=>co.observe(el));
 
     /* Get node icon HTML */
     const iconEl = node.querySelector('.stack-node__icon');
-    const iconHTML = iconEl ? iconEl.innerHTML : '';
+    const iconHTML = iconEl ? iconEl.cloneNode(true) : null;
 
     /* Кути променів по годинниковій стрілці — всі 6 з підписами */
     const angles = [-90, -30, 30, 90, 150, 210];
@@ -171,42 +171,14 @@ document.querySelectorAll('[data-target]').forEach(el=>co.observe(el));
       `;
     }).join('');
 
-    popup.innerHTML = `
-      <svg viewBox="-280 -240 560 480" width="560" height="480" style="overflow:visible;">
-        <defs>
-          <filter id="nodeglow">
-            <feGaussianBlur stdDeviation="8" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
-
-        ${rays}
-
-        <!-- Клон вузла -->
-        <rect x="-44" y="-44" width="88" height="88" rx="2"
-          fill="rgba(6,4,4,0.95)" stroke="${d.color}" stroke-width="1.5"
-          style="filter:drop-shadow(0 0 20px ${d.color}) drop-shadow(0 0 40px ${d.glow})"/>
-
-        <!-- Іконка -->
-        <foreignObject x="-14" y="-22" width="28" height="28">
-          <div xmlns="http://www.w3.org/1999/xhtml" style="color:${d.color};display:flex;align-items:center;justify-content:center;width:28px;height:28px;">
-            ${iconHTML}
-          </div>
-        </foreignObject>
-
-        <!-- Назва -->
-        <text x="0" y="28" text-anchor="middle"
-          style="font-family:var(--fh,Arial);font-size:11px;letter-spacing:.12em;fill:${d.color};text-transform:uppercase;">
-          ${d.name}
-        </text>
-
-        <!-- Пульс -->
-        <circle cx="0" cy="0" r="60" fill="none" stroke="${d.color}" stroke-width="0.5" opacity="0.2"
-          style="animation:popupPulse 2s ease-in-out infinite;"/>
-        <circle cx="0" cy="0" r="80" fill="none" stroke="${d.color}" stroke-width="0.3" opacity="0.1"
-          style="animation:popupPulse 2s ease-in-out infinite .5s;"/>
-      </svg>
-    `;
+    popup.textContent = '';
+    const pw = document.createElement('div'); pw.className = 'popup-wrap';
+    if(iconHTML){ const pi = document.createElement('div'); pi.className = 'popup-icon'; pi.appendChild(iconHTML); pw.appendChild(pi); }
+    const pn = document.createElement('div'); pn.className = 'popup-name'; pn.textContent = name; pw.appendChild(pn);
+    const pd = document.createElement('div'); pd.className = 'popup-desc'; pd.textContent = desc; pw.appendChild(pd);
+    const pl = document.createElement('ul'); pl.className = 'popup-list';
+    items.forEach(item => { const li = document.createElement('li'); li.textContent = item; pl.appendChild(li); });
+    pw.appendChild(pl); popup.appendChild(pw);
 
     positionPopup();
     overlay.style.opacity = '1';
