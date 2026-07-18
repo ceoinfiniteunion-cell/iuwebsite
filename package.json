@@ -8,7 +8,7 @@
     "lint:js": "eslint index.html services/*.html",
     "lint": "npm run lint:html && npm run lint:js",
     "lhci": "lhci autorun",
-    "start": "npx serve . --listen 0.0.0.0:$PORT"
+    "start": "npx serve . -p $PORT"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.63.0",
