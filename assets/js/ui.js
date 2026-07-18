@@ -175,7 +175,7 @@ document.querySelectorAll('[data-target]').forEach(el=>co.observe(el));
     const pw = document.createElement('div'); pw.className = 'popup-wrap';
     if(iconHTML){ const pi = document.createElement('div'); pi.className = 'popup-icon'; pi.appendChild(iconHTML); pw.appendChild(pi); }
     const pn = document.createElement('div'); pn.className = 'popup-name'; pn.textContent = name; pw.appendChild(pn);
-    const pd = document.createElement('div'); pd.className = 'popup-desc'; pd.textContent = desc; pw.appendChild(pd);
+    const pd = document.createElement('div'); pd.className = 'popup-desc'; pd.textContent = d.name || ''; pw.appendChild(pd);
     const pl = document.createElement('ul'); pl.className = 'popup-list';
     items.forEach(item => { const li = document.createElement('li'); li.textContent = item; pl.appendChild(li); });
     pw.appendChild(pl); popup.appendChild(pw);
