@@ -172,16 +172,19 @@ document.querySelectorAll('[data-target]').forEach(el=>co.observe(el));
     }).join('');
 
     const name = d.name || '';
-    const desc = d.desc || '';
     const items = d.items || [];
-    popup.textContent = '';
-    const pw = document.createElement('div'); pw.className = 'popup-wrap';
-    if(iconHTML){ const pi = document.createElement('div'); pi.className = 'popup-icon'; pi.appendChild(iconHTML); pw.appendChild(pi); }
-    const pn = document.createElement('div'); pn.className = 'popup-name'; pn.textContent = name; pw.appendChild(pn);
-    const pd = document.createElement('div'); pd.className = 'popup-desc'; pd.textContent = desc; pw.appendChild(pd);
-    const pl = document.createElement('ul'); pl.className = 'popup-list';
-    items.forEach(item => { const li = document.createElement('li'); li.textContent = item; pl.appendChild(li); });
-    pw.appendChild(pl); popup.appendChild(pw);
+    popup.innerHTML = `
+      <div class="popup-wrap">
+        <div class="popup-icon">${iconHTML ? iconEl.outerHTML : ''}</div>
+        <div class="popup-name">${name}</div>
+        <ul class="popup-list">${items.map(i=>`<li>${i}</li>`).join('')}</ul>
+      </div>
+      <svg class="popup-rays" viewBox="-160 -160 320 320" width="320" height="320"
+        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;overflow:visible">
+        ${rays}
+        <circle r="60" fill="none" stroke="${d.color}" stroke-width="0.5" opacity="0.15"
+          style="animation:popupPulse 2s ease-in-out infinite"/>
+      </svg>`;
 
     positionPopup();
     overlay.style.opacity = '1';
