@@ -171,13 +171,12 @@ document.querySelectorAll('[data-target]').forEach(el=>co.observe(el));
       `;
     }).join('');
 
-    const name = d.name || '';
-    const items = d.items || [];
+    const iconSVG = iconEl ? iconEl.outerHTML : '';
     popup.innerHTML = `
       <div class="popup-wrap">
-        <div class="popup-icon">${iconHTML ? iconEl.outerHTML : ''}</div>
-        <div class="popup-name">${name}</div>
-        <ul class="popup-list">${items.map(i=>`<li>${i}</li>`).join('')}</ul>
+        <div class="popup-icon">${iconSVG}</div>
+        <div class="popup-name">${d.name||''}</div>
+        <ul class="popup-list">${(d.items||[]).map(i=>`<li>${i}</li>`).join('')}</ul>
       </div>
       <svg class="popup-rays" viewBox="-160 -160 320 320" width="320" height="320"
         style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;overflow:visible">
