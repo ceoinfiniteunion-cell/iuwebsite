@@ -4,6 +4,9 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23D40000'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold' font-size='14' fill='white'>IU</text></svg>">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://infiniteunion.com.ua/services/constructor.html">
+<meta property="og:url" content="https://infiniteunion.com.ua/services/constructor.html">
+<meta property="og:image" content="https://infiniteunion.com.ua/og-image.png">
 <title>AI Конструктор сайтів — Infinite Union</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -362,7 +365,7 @@ async function generate() {
 - Додай в footer дрібний підпис: "Концепт створено Infinite Union AI"`;
 
   try {
-    const response = await fetch('https://iu-lead-bot-production.up.railway.app/generate', {
+    const response = await fetch('https://api.infiniteunion.com.ua/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -423,7 +426,7 @@ function orderSite() {
   const type = document.getElementById('type').options[document.getElementById('type').selectedIndex].text;
 
   // Відправляємо в бот
-  fetch('https://iu-lead-bot-production.up.railway.app/lead', {
+  fetch('https://api.infiniteunion.com.ua/lead', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

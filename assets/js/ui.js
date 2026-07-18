@@ -40,15 +40,30 @@ document.querySelectorAll('[data-target]').forEach(el=>co.observe(el));
 /* AVATAR PARALLAX — moved into NAV scroll listener above */
 
 /* FORM */
-document.getElementById('cForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  if(document.getElementById('website').value){return;}
-  const _btn=this.querySelector('button[type=submit]');
-  _btn.disabled=true;_btn.textContent='Надсилаємо...';
-  fetch('https://iu-lead-bot-production.up.railway.app/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('cn').value,contact:document.getElementById('cc').value,phone:document.getElementById('cphone').value,project_type:document.getElementById('ctype').value,budget:document.getElementById('cbudget').value,deadline:document.getElementById('cdeadline').value,project:document.getElementById('cp').value})})
-  .then(r=>{if(!r.ok)throw new Error('server');_btn.style.display='none';document.getElementById('cOk').style.display='block';})
-  .catch(()=>{_btn.disabled=false;_btn.textContent='Надіслати →';alert('Помилка відправки. Перевірте зʼєднання або напишіть нам напряму в Telegram.');});
-});
+(function(){
+  const _ikey=(typeof crypto!=='undefined'&&crypto.randomUUID)?crypto.randomUUID():Math.random().toString(36).slice(2)+Date.now();
+  function showToast(msg,type){
+    let t=document.getElementById('_iu_toast');
+    if(!t){t=document.createElement('div');t.id='_iu_toast';t.style.cssText='position:fixed;bottom:28px;left:50%;transform:translateX(-50%);padding:14px 24px;border-radius:12px;font-size:14px;font-weight:500;z-index:9999;pointer-events:none;transition:opacity .4s;opacity:0;max-width:340px;text-align:center;';document.body.appendChild(t);}
+    t.textContent=msg;
+    t.style.background=type==='ok'?'rgba(74,222,128,.15)':'rgba(255,90,90,.15)';
+    t.style.border=type==='ok'?'1px solid rgba(74,222,128,.4)':'1px solid rgba(255,90,90,.4)';
+    t.style.color=type==='ok'?'#4ade80':'#ff5a5a';
+    t.style.opacity='1';
+    setTimeout(()=>{t.style.opacity='0';},4000);
+  }
+  document.getElementById('cForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    if(document.getElementById('website').value){return;}
+    const _btn=this.querySelector('button[type=submit]');
+    _btn.disabled=true;_btn.textContent='Надсилаємо...';
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),10000);
+    fetch('https://api.infiniteunion.com.ua/lead',{method:'POST',headers:{'Content-Type':'application/json'},signal:controller.signal,body:JSON.stringify({name:document.getElementById('cn').value,contact:document.getElementById('cc').value,phone:document.getElementById('cphone').value,project_type:document.getElementById('ctype').value,budget:document.getElementById('cbudget').value,deadline:document.getElementById('cdeadline').value,project:document.getElementById('cp').value,idempotency_key:_ikey})})
+    .then(r=>{clearTimeout(timer);if(!r.ok)throw new Error('server');_btn.style.display='none';document.getElementById('cOk').style.display='block';})
+    .catch(err=>{clearTimeout(timer);_btn.disabled=false;_btn.textContent='Надіслати →';showToast(err.name==='AbortError'?'Час очікування вийшов. Напишіть нам у Telegram.':'Помилка відправки. Перевірте зʼєднання або напишіть нам у Telegram.','err');});
+  });
+})();
 
 /* ── DIRECTIONS SECTION REVEAL ── */
 (function(){
