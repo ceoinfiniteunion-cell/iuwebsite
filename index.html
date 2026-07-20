@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23D40000'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold' font-size='14' fill='white'>IU</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://res.cloudinary.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.infiniteunion.com.ua https://res.cloudinary.com blob:; worker-src blob:; frame-src 'self'; object-src 'none'; base-uri 'self';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://res.cloudinary.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.infiniteunion.com.ua https://res.cloudinary.com blob:; worker-src blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
@@ -102,12 +102,7 @@
   ]
 }
 </script>
-  <noscript>
-    <style>
-      #loader { display: none !important; }
-      body { background: #060404; color: #EDE8E5; font-family: 'Inter', sans-serif; }
-    </style>
-  </noscript>
+  <noscript></noscript>
 </head>
 <body>
 
@@ -257,7 +252,7 @@
     <div class="proc-timeline">
       <div class="proc-line"></div>
       <div class="proc-steps">
-        <div class="proc-step" style="--d:.0s">
+        <div class="proc-step" class="proc-step--d0">
           <div class="proc-dot"><span></span></div>
           <div class="proc-card">
             <div class="proc-n">01</div>
@@ -266,7 +261,7 @@
             <div class="proc-term">· 1–2 дні</div>
           </div>
         </div>
-        <div class="proc-step" style="--d:.08s">
+        <div class="proc-step" class="proc-step--d1">
           <div class="proc-dot"><span></span></div>
           <div class="proc-card">
             <div class="proc-n">02</div>
@@ -275,7 +270,7 @@
             <div class="proc-term">· 3–5 днів</div>
           </div>
         </div>
-        <div class="proc-step" style="--d:.16s">
+        <div class="proc-step" class="proc-step--d2">
           <div class="proc-dot"><span></span></div>
           <div class="proc-card">
             <div class="proc-n">03</div>
@@ -284,7 +279,7 @@
             <div class="proc-term">· залежно від проєкту</div>
           </div>
         </div>
-        <div class="proc-step" style="--d:.24s">
+        <div class="proc-step" class="proc-step--d3">
           <div class="proc-dot"><span></span></div>
           <div class="proc-card">
             <div class="proc-n">04</div>
@@ -293,7 +288,7 @@
             <div class="proc-term">· 2–4 дні</div>
           </div>
         </div>
-        <div class="proc-step" style="--d:.32s">
+        <div class="proc-step" class="proc-step--d4">
           <div class="proc-dot"><span></span></div>
           <div class="proc-card">
             <div class="proc-n">05</div>
@@ -302,7 +297,7 @@
             <div class="proc-term">· 1 день</div>
           </div>
         </div>
-        <div class="proc-step" style="--d:.40s">
+        <div class="proc-step" class="proc-step--d5">
           <div class="proc-dot proc-dot--active"><span></span></div>
           <div class="proc-card">
             <div class="proc-n">06</div>
@@ -514,7 +509,7 @@
         <div class="fg"><label>Про проект</label><textarea id="cp" rows="3" placeholder="Що хочеш зробити?"></textarea></div>
         <div class="form-ok" id="cOk">✓ ЗАЯВКУ НАДІСЛАНО — ВІДПОВІМО ПРОТЯГОМ 15 ХВ</div>
         <button type="submit" class="btn-p btn-p--form">Надіслати →</button>
-      <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none;" aria-hidden="true">
+      <div class="visually-off" aria-hidden="true">
         <label for="website">Website</label>
         <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
       </div>

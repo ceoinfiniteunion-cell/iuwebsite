@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js');
 /**
  * Infinite Union — Main Entry Point
  *
