@@ -1053,3 +1053,138 @@ body > * { position: relative; z-index: 1; }
   .gs-title{font-size:18px !important;}
   #stats .sn{font-size:36px !important;}
 }
+
+/* ═══════════════════════════════════════
+ * MOBILE ADDITIONS — додано для адаптиву
+ * ═══════════════════════════════════════ */
+
+@media(max-width:768px){
+
+  /* ══ DIRECTIONS (2 панелі) ══ */
+  .dir-grid{
+    grid-template-columns:1fr !important;
+    min-height:auto !important;
+  }
+  .dir-panel--dark{
+    border-right:none !important;
+    border-bottom:1px solid var(--border);
+  }
+  .dir-panel__inner{
+    padding:48px 20px !important;
+  }
+  .dir-title{
+    font-size:clamp(44px,14vw,72px) !important;
+    margin-bottom:16px !important;
+  }
+  .dir-desc{
+    font-size:14px !important;
+    max-width:100% !important;
+    margin-bottom:24px !important;
+  }
+  .dir-link{
+    padding:14px 0 !important;
+    font-size:13px !important;
+  }
+  .dir-link__tags{
+    display:none !important;
+  }
+  .dir-cta{
+    margin-top:24px !important;
+    padding:16px 24px !important;
+    font-size:13px !important;
+  }
+
+  /* ══ STACK POPUP — ховаємо на мобільному ══ */
+  .popup-rays{display:none !important;}
+  .stack-popup{
+    position:fixed !important;
+    left:16px !important;
+    right:16px !important;
+    top:auto !important;
+    bottom:80px !important;
+    transform:none !important;
+    width:auto !important;
+    max-width:none !important;
+    pointer-events:none;
+  }
+  .stack-overlay{display:none !important;}
+
+  /* ══ AVATAR SECTION ══ */
+  #avatar-sec{
+    flex-direction:column !important;
+    height:auto !important;
+    min-height:auto !important;
+  }
+  .h-avatar-col{
+    flex:0 0 auto !important;
+    height:60vw !important;
+    width:100% !important;
+    border-right:none !important;
+    border-bottom:1px solid var(--border) !important;
+  }
+  .h-avatar{
+    height:95% !important;
+  }
+  .h-content-col{
+    padding:40px 20px !important;
+  }
+  .h-orbit{
+    display:none !important;
+  }
+
+  /* ══ CONTACT FORM ══ */
+  .fg--row{
+    flex-direction:column !important;
+    gap:0 !important;
+  }
+  .fg--row .fg{
+    flex:none !important;
+    width:100% !important;
+  }
+
+  /* ══ HERO (головна) ══ */
+  .h-content{
+    padding:40px 20px 32px !important;
+  }
+  .h-title{
+    font-size:clamp(36px,12vw,56px) !important;
+  }
+  .h-btns{
+    flex-direction:column !important;
+    gap:12px !important;
+  }
+  .h-btns a{
+    width:100% !important;
+    text-align:center !important;
+  }
+
+  /* ══ FOOTER ══ */
+  footer{
+    flex-direction:column !important;
+    gap:16px !important;
+    text-align:center !important;
+    padding:32px 20px !important;
+  }
+  .footer-links{
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    gap:12px !important;
+  }
+
+  /* ══ NAV ══ */
+  nav{
+    padding:16px 20px !important;
+  }
+  .nav-links{
+    display:none !important;
+  }
+
+  /* ══ SEC заголовки ══ */
+  .sec-label{font-size:9px !important;}
+  .sec-num{font-size:10px !important;}
+}
+
+@media(max-width:400px){
+  .dir-title{font-size:clamp(38px,13vw,52px) !important;}
+  .dir-panel__inner{padding:36px 16px !important;}
+}
