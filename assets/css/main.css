@@ -701,9 +701,7 @@ input[type="date"]{color-scheme:dark;}
 
 /* ── Responsive ── */
 @media(max-width: 900px) {
-  .dir-grid { grid-template-columns: 1fr; }
-  .dir-panel--dark { border-right: none; border-bottom: 1px solid var(--border); }
-  .dir-panel__inner { padding: 60px 20px; }
+  /* dir-grid переносится в 768px блок ниже */
 }
 
 /* Services header — compact when list is removed */
@@ -1064,26 +1062,35 @@ body > * { position: relative; z-index: 1; }
 
 @media(max-width:768px){
 
-  /* ══ DIRECTIONS (2 панелі) ══ */
+  /* ══ DIRECTIONS ══ */
   .dir-grid{
     grid-template-columns:1fr !important;
     min-height:auto !important;
   }
+  .dir-panel{
+    min-height:auto !important;
+    height:auto !important;
+  }
   .dir-panel--dark{
     border-right:none !important;
-    border-bottom:1px solid var(--border);
+    border-bottom:1px solid var(--border) !important;
   }
   .dir-panel__inner{
     padding:48px 20px !important;
+    height:auto !important;
   }
   .dir-title{
-    font-size:clamp(44px,14vw,72px) !important;
+    font-size:clamp(40px,12vw,64px) !important;
     margin-bottom:16px !important;
   }
   .dir-desc{
     font-size:14px !important;
     max-width:100% !important;
-    margin-bottom:24px !important;
+  }
+  .dir-panel__glow,
+  .dir-panel__grid-lines,
+  .dir-panel__corner{
+    display:none !important;
   }
   .dir-link{
     padding:14px 0 !important;
