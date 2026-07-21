@@ -10,7 +10,9 @@
     "attribute-boolean-style": "off",
     "allowed-links": "off",
     "no-unknown-elements": "off",
-    "attribute-allowed-values": "off"
+    "attribute-allowed-values": "off",
+    "no-experimental-attributes": "off",
+    "meta-refresh": "off"
   },
   "elements": [
     "html5"
