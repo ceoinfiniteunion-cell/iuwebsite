@@ -1,0 +1,17 @@
+{
+  "name": "Infinite Union — веб-студія",
+  "short_name": "Infinite Union",
+  "description": "Розробка сайтів, Telegram-ботів та цифрових екосистем під ключ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060404",
+  "theme_color": "#D40000",
+  "lang": "uk",
+  "icons": [
+    {
+      "src": "og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png"
+    }
+  ]
+}
