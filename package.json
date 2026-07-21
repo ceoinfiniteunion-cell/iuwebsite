@@ -13,19 +13,23 @@
     "minify:js": "terser assets/js/ui.js -o assets/js/ui.js --compress --mangle && terser assets/js/globe.js -o assets/js/globe.js --compress --mangle && terser assets/js/snake.js -o assets/js/snake.js --compress --mangle && terser assets/js/orbit.js -o assets/js/orbit.js --compress --mangle && terser assets/js/hero.js -o assets/js/hero.js --compress --mangle && terser assets/js/preloader.js -o assets/js/preloader.js --compress --mangle && terser assets/js/main.js -o assets/js/main.js --compress --mangle",
     "minify:html": "html-minifier-terser --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --use-short-doctype --minify-css true --minify-js true",
     "minify": "npm run minify:css && npm run minify:js",
-    "build": "npm run minify"
+    "build": "npm run minify",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.63.0",
     "@html-eslint/parser": "^0.63.0",
     "@lhci/cli": "^0.14.0",
+    "@playwright/test": "^1.61.1",
     "csso-cli": "^4.0.2",
     "eslint": "^10.6.0",
     "html-minifier-terser": "^7.2.0",
     "html-validate": "8.7.4",
     "stylelint": "^17.14.0",
     "stylelint-config-standard": "^40.0.0",
-    "terser": "^5.49.0"
+    "terser": "^5.49.0",
+    "three": "^0.185.1"
   },
   "type": "module",
   "dependencies": {
