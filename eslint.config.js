@@ -15,7 +15,8 @@ export default [
       "@html-eslint/require-lang": "off",
       "@html-eslint/no-target-blank": "warn",
       "@html-eslint/require-closing-tags": "warn",
-      "@html-eslint/no-extra-spacing-tags": "warn"
+      "@html-eslint/no-extra-spacing-tags": "warn",
+      "@html-eslint/use-baseline": "off"
     }
   }
 ];
