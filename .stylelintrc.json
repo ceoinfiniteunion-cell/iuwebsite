@@ -8,6 +8,14 @@
     "custom-property-pattern": null,
     "alpha-value-notation": null,
     "color-function-notation": null,
-    "import-notation": null
+    "color-function-alias-notation": null,
+    "import-notation": null,
+    "media-feature-range-notation": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "property-no-vendor-prefix": null,
+    "function-url-quotes": null,
+    "no-duplicate-selectors": null,
+    "rule-empty-line-before": null,
+    "declaration-property-value-no-unknown": null
   }
 }
