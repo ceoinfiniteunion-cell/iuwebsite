@@ -125,7 +125,11 @@
       model.rotation.x += 0.06 * (0 - model.rotation.x);
       const targetY = isMobile() ? 0 : 5 * Math.min(1, scrollProgress / 0.4) - 5;
       model.position.y += 0.05 * (targetY - model.position.y);
-      // масштаб задан при загрузке, в loop не трогаем
+      // десктоп: scale растёт при скролле (как в оригинале), мобильный — статично
+      if (model.userData.initialScale && !isMobile()) {
+        const targetSc = model.userData.initialScale * (1 + 0.15 * scrollProgress);
+        model.scale.setScalar(model.scale.x + 0.05 * (targetSc - model.scale.x));
+      }
     }
 
     pointRed1.intensity = 3 + 1.5 * Math.sin(2.5 * t);
