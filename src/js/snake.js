@@ -1,5 +1,4 @@
 !function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const section = document.getElementById('snake-intro');
   if (!section) return;
   const canvas = document.getElementById('hero-snake-c');
@@ -82,6 +81,7 @@
   window.addEventListener('scroll', () => {
     const rect = section.getBoundingClientRect();
     const scrollable = section.offsetHeight - H();
+    if (scrollable <= 0) return;
     scrollProgress = Math.max(0, Math.min(1, -rect.top / scrollable));
 
     tags.forEach((tag, i) => {
