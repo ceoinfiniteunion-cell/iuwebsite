@@ -60,8 +60,18 @@ const co = new IntersectionObserver(e => {
 document.querySelectorAll("[data-target]").forEach(e => co.observe(e)),
     function() {
         const e = "undefined" != typeof crypto && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now();
+        let _lastSubmit = 0;
         document.getElementById("cForm").addEventListener("submit", function(t) {
-            if (t.preventDefault(), document.getElementById("website").value) return;
+            t.preventDefault();
+            // honeypot — тихо игнорируем, кнопка остаётся активной
+            if (document.getElementById("website").value) { _lastSubmit = 0; return; }
+            // rate limit: не чаще 1 раза в 30 секунд
+            const now = Date.now();
+            if (now - _lastSubmit < 30000) {
+                showToast("Зачекайте 30 секунд перед повторною відправкою.", "err");
+                return;
+            }
+            _lastSubmit = now;
             const n = this.querySelector("button[type=submit]");
             n.disabled = !0, n.textContent = "Надсилаємо...";
             const o = new AbortController,

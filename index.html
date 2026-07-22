@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23D40000'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold' font-size='14' fill='white'>IU</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://res.cloudinary.com https://js-de.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.infiniteunion.com.ua https://res.cloudinary.com https://o4511772270002176.ingest.de.sentry.io https://browser.sentry-cdn.com blob:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://res.cloudinary.com https://js-de.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.infiniteunion.com.ua https://res.cloudinary.com https://o4511772270002176.ingest.de.sentry.io https://browser.sentry-cdn.com blob:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests; report-uri https://o4511772270002176.ingest.de.sentry.io/api/4511772279177296/security/?sentry_key=bb98cf6e98bd2742343eeff2758f291b; report-to csp-endpoint">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
@@ -109,15 +109,7 @@
     src="https://js-de.sentry-cdn.com/bb98cf6e98bd2742343eeff2758f291b.min.js"
     crossorigin="anonymous"
   ></script>
-  <script>
-    Sentry.onLoad(function(){
-      Sentry.init({
-        dsn:"https://bb98cf6e98bd2742343eeff2758f291b@o4511772270002176.ingest.de.sentry.io/4511772279177296",
-        tracesSampleRate:0.1,
-        environment:"production"
-      });
-    });
-  </script>
+  <script defer src="assets/js/sentry-init.js"></script>
 </head>
 <body>
 
@@ -450,7 +442,7 @@
         <circle id="gs-dot-pulse" cx="500" cy="500" r="4" fill="none" stroke="#d40000" stroke-width="1" opacity="0"/>
       </svg>
       <div class="gs-cards-row">
-        <div class="gs-card" id="gs-card-0"><div class="gs-num">01</div><div class="gs-badge">⭐ Флагман</div><div class="gs-title">Transfer Kharkiv</div><div class="gs-desc">Лендінг з конверсією 8.4%, боти, SEO під ключ.</div><div class="gs-stats"><span><b>119</b> SEO</span><span><b>24/7</b></span></div><a href="https://transferkharkiv.com.ua" target="_blank" rel="noreferrer" class="gs-link">Переглянути ↗</a></div>
+        <div class="gs-card" id="gs-card-0"><div class="gs-num">01</div><div class="gs-badge">⭐ Флагман</div><div class="gs-title">Transfer Kharkiv</div><div class="gs-desc">Лендінг з конверсією 8.4%, боти, SEO під ключ.</div><div class="gs-stats"><span><b>119</b> SEO</span><span><b>24/7</b></span></div><a href="https://transferkharkiv.com.ua" target="_blank" rel="noreferrer noopener" class="gs-link">Переглянути ↗</a></div>
         <div class="gs-card" id="gs-card-1"><div class="gs-num">02</div><div class="gs-badge">SaaS</div><div class="gs-title">Realty Monitor</div><div class="gs-desc">Моніторинг нерухомості з LiqPay та FSM.</div><div class="gs-stats"><span><b>LiqPay</b></span><span><b>FSM</b></span></div></div>
         <div class="gs-card" id="gs-card-2"><div class="gs-num">03</div><div class="gs-badge">Університет</div><div class="gs-title">KNEU Bot</div><div class="gs-desc">Офіційний бот з 3 000+ користувачів.</div><div class="gs-stats"><span><b>3 000+</b></span><span><b>aiogram</b></span></div></div>
         <div class="gs-card" id="gs-card-3"><div class="gs-num">04</div><div class="gs-badge">Автоматизація</div><div class="gs-title">IU Bot</div><div class="gs-desc">Lead-бот з квізом, PostgreSQL, Railway.</div><div class="gs-stats"><span><b>FastAPI</b></span><span><b>Redis</b></span></div></div>
@@ -499,7 +491,7 @@
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="mgr-note__icon"><circle cx="16" cy="16" r="15" stroke="#D40000" stroke-width="1"/><path d="M8 16.5L13.5 22L24 11" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <p class="mgr-note__text">Хочете безкоштовну консультацію? Пишіть нашому менеджеру — відповідаємо в будь-який день і час доби протягом <strong class="mgr-note__accent">5–10 хвилин.</strong> Без вихідних.</p>
       </div>
-      <a href="https://t.me/infiniteunion_manager" target="_blank" rel="noreferrer" class="mgr-btn">
+      <a href="https://t.me/infiniteunion_manager" target="_blank" rel="noreferrer noopener" class="mgr-btn">
         <span class="mgr-btn__bg"></span>
         <span class="mgr-btn__content">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 13.981l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.958.578z"/></svg>
@@ -530,7 +522,7 @@
       </div>
       </form>
       <div class="ct-info">
-        <div><div class="ci-l">Telegram</div><div class="ci-v"><a href="https://t.me/infiniteunion_manager" target="_blank" rel="noreferrer">@infiniteunion_manager</a></div></div>
+        <div><div class="ci-l">Telegram</div><div class="ci-v"><a href="https://t.me/infiniteunion_manager" target="_blank" rel="noreferrer noopener">@infiniteunion_manager</a></div></div>
         <div><div class="ci-l">Email</div><div class="ci-v"><a href="mailto:ceoinfiniteunion@gmail.com">ceoinfiniteunion@gmail.com</a></div></div>
         <div><div class="ci-l">Час відповіді</div><div class="ci-v">15 хвилин</div></div>
       </div>
@@ -542,7 +534,7 @@
 <footer>
   <div class="fl">INFINITE <span>UNION</span></div>
   <div class="fc">© 2026 · Kharkiv, Ukraine · 49° 59′ N / 36° 14′ E</div>
-  <div class="flinks"><a href="https://github.com/ceoinfiniteunion-cell" target="_blank" rel="noreferrer">GitHub</a><a href="https://t.me/infiniteunion_manager" target="_blank" rel="noreferrer">Telegram</a></div>
+  <div class="flinks"><a href="https://github.com/ceoinfiniteunion-cell" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://t.me/infiniteunion_manager" target="_blank" rel="noreferrer noopener">Telegram</a></div>
   <div class="footer-privacy">
     <a href="services/privacy.html" class="footer-privacy__link">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</a>
   </div>

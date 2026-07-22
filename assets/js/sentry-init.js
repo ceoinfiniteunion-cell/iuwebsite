@@ -1,0 +1,1 @@
+Sentry.onLoad(function(){Sentry.init({dsn:"https://bb98cf6e98bd2742343eeff2758f291b@o4511772270002176.ingest.de.sentry.io/4511772279177296",tracesSampleRate:.1,environment:"production",allowUrls:[/https:\/\/infiniteunion\.com\.ua/]})});
