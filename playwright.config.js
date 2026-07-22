@@ -5,11 +5,17 @@ export default defineConfig({
   timeout: 30000,
   retries: 1,
   use: {
-    baseURL: 'https://infiniteunion.com.ua',
+    baseURL: process.env.BASE_URL || 'http://localhost:3000',
     headless: true,
   },
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-    // mobile runs locally only — WebKit not available in CI
+    { name: 'mobile-chrome', use: { ...devices['Pixel 5'] } },
   ],
+  webServer: {
+    command: 'npx serve . -p 3000',
+    url: 'http://localhost:3000',
+    reuseExistingServer: !process.env.CI,
+    timeout: 15000,
+  },
 });
