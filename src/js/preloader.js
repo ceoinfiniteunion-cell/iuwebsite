@@ -1,4 +1,5 @@
 function startHero() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     ["havatar", "hm", "hl1", "hl2", "hl3", "hsub", "hbtns", "hscroll"].forEach((t, e) => {
         const n = document.getElementById(t);
         n && setTimeout(() => n.classList.add("v"), 120 * e)

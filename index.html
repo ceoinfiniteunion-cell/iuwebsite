@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23D40000'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold' font-size='14' fill='white'>IU</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://res.cloudinary.com https://js-de.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.infiniteunion.com.ua https://res.cloudinary.com https://o4511772270002176.ingest.de.sentry.io https://browser.sentry-cdn.com blob:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests; report-uri https://o4511772270002176.ingest.de.sentry.io/api/4511772279177296/security/?sentry_key=bb98cf6e98bd2742343eeff2758f291b; report-to csp-endpoint">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'unsafe-eval' https://res.cloudinary.com https://js-de.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.infiniteunion.com.ua https://res.cloudinary.com https://o4511772270002176.ingest.de.sentry.io https://browser.sentry-cdn.com blob:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests; report-uri https://o4511772270002176.ingest.de.sentry.io/api/4511772279177296/security/?sentry_key=bb98cf6e98bd2742343eeff2758f291b; report-to csp-endpoint">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
@@ -133,7 +133,7 @@
 </div>
 
 <!-- NAV -->
-<nav id="nav">
+<nav id="nav" aria-label="Головна навігація">
   <a href="#hero" class="n-logo">INFINITE <span>UNION</span></a>
   <ul class="n-links">
     <li><a href="#services">Послуги</a></li>
@@ -151,6 +151,7 @@
 </div>
 
 <!-- HERO -->
+<main id="main-content">
 <section id="snake-intro">
   <div class="si-sticky">
     <h1 class="si-bg-text">INFINITE</h1>
@@ -503,17 +504,17 @@
     </div>
     <div class="ct-r rev">
       <form class="form" id="cForm">
-        <div class="fg"><label>Ім'я</label><input id="cn" type="text" placeholder="Як тебе звати?" required></div>
+        <div class="fg"><label for="cn">Ім'я</label><input id="cn" type="text" placeholder="Як тебе звати?" required></div>
         <div class="fg fg--row">
-          <div class="fg"><label>Telegram</label><input id="cc" type="text" placeholder="@username" required></div>
-          <div class="fg"><label>Телефон</label><input id="cphone" type="text" placeholder="+380..."></div>
+          <div class="fg"><label for="cc">Telegram</label><input id="cc" type="text" placeholder="@username" required></div>
+          <div class="fg"><label for="cphone">Телефон</label><input id="cphone" type="text" placeholder="+380..."></div>
         </div>
-        <div class="fg"><label>Тип проєкту</label><select id="ctype"><option value="">Оберіть...</option><option value="Конверсійний сайт">🌐 Конверсійний сайт</option><option value="Telegram-бот">🤖 Telegram-бот</option><option value="Платформа / вебдодаток">⚡ Платформа / вебдодаток</option><option value="Цифрова екосистема">🔗 Цифрова екосистема</option><option value="Інше">💬 Інше</option></select></div>
+        <div class="fg"><label for="ctype">Тип проєкту</label><select id="ctype"><option value="">Оберіть...</option><option value="Конверсійний сайт">🌐 Конверсійний сайт</option><option value="Telegram-бот">🤖 Telegram-бот</option><option value="Платформа / вебдодаток">⚡ Платформа / вебдодаток</option><option value="Цифрова екосистема">🔗 Цифрова екосистема</option><option value="Інше">💬 Інше</option></select></div>
         <div class="fg fg--row">
-          <div class="fg"><label>Бюджет</label><select id="cbudget"><option value="">Оберіть...</option><option value="до $500">до $500</option><option value="$500–$1 000">$500–$1 000</option><option value="$1 000–$3 000">$1 000–$3 000</option><option value="$3 000+">$3 000+</option></select></div>
-          <div class="fg"><label>Дедлайн</label><input id="cdeadline" type="date"></div>
+          <div class="fg"><label for="cbudget">Бюджет</label><select id="cbudget"><option value="">Оберіть...</option><option value="до $500">до $500</option><option value="$500–$1 000">$500–$1 000</option><option value="$1 000–$3 000">$1 000–$3 000</option><option value="$3 000+">$3 000+</option></select></div>
+          <div class="fg"><label for="cdeadline">Дедлайн</label><input id="cdeadline" type="date"></div>
         </div>
-        <div class="fg"><label>Про проект</label><textarea id="cp" rows="3" placeholder="Що хочеш зробити?"></textarea></div>
+        <div class="fg"><label for="cp">Про проект</label><textarea id="cp" rows="3" placeholder="Що хочеш зробити?"></textarea></div>
         <div class="form-ok" id="cOk">✓ ЗАЯВКУ НАДІСЛАНО — ВІДПОВІМО ПРОТЯГОМ 15 ХВ</div>
         <button type="submit" class="btn-p btn-p--form">Надіслати →</button>
       <div class="visually-off" aria-hidden="true">
@@ -531,6 +532,7 @@
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <div class="fl">INFINITE <span>UNION</span></div>
   <div class="fc">© 2026 · Kharkiv, Ukraine · 49° 59′ N / 36° 14′ E</div>

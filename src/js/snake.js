@@ -1,4 +1,5 @@
 !function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const section = document.getElementById('snake-intro');
   if (!section) return;
   const canvas = document.getElementById('hero-snake-c');
@@ -49,6 +50,7 @@
       const size = box.getSize(new THREE.Vector3());
       // FIX: делим на реальный размер модели, не на Math.max(1)
       const targetScale = (isMobile() ? 2.4 : 2.6) / Math.max(size.x, size.y, size.z);
+      model.userData.initialScale = targetScale;
       model.scale.setScalar(targetScale);
       model.position.sub(center.multiplyScalar(targetScale));
       model.position.y = isMobile() ? 0 : model.position.y - 0.2;

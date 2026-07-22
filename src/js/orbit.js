@@ -1,4 +1,5 @@
 ! function() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const t = document.querySelector(".av-right");
     if (!t) return;
     const e = [{

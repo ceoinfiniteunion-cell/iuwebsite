@@ -3909,3 +3909,37 @@ body::after {
 html:not(.js) #loader {
     display: none !important
 }
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: 1rem;
+  transform: translateY(-200%);
+  background: var(--red);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  z-index: 10000;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid #fff;
+}
+.skip-link:not(:focus) {
+  transform: translateY(-200%);
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
