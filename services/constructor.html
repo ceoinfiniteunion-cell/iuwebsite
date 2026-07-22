@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://infiniteunion.com.ua/og-image.png">
 <title>AI Конструктор сайтів — Infinite Union</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 ::selection{background:#E8341C;color:#fff;}::-moz-selection{background:#E8341C;color:#fff;}
@@ -381,7 +381,7 @@ async function generate() {
     const data = await response.json();
     clearInterval(stepInterval);
 
-    if (data.content && data.content[0]) {
+    if (data.content &amp;&amp; data.content[0]) {
       lb.style.width = '100%';
       lt.textContent = 'ГОТОВО!';
 
@@ -456,7 +456,7 @@ document.getElementById('prompt').addEventListener('input', function() {
 
 // Enter to generate
 document.getElementById('prompt').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) generate();
+  if (e.key === 'Enter' &amp;&amp; (e.ctrlKey || e.metaKey)) generate();
 });
 
 updateDots();
