@@ -55,8 +55,16 @@
       model.position.y = isMobile() ? 0 : model.position.y - 0.2;
       model.rotation.y = 0;
       scene.add(model);
+      window.__IU_GLB_DONE = true;
+      window.dispatchEvent(new CustomEvent('iu:glb-loaded'));
     },
-    undefined,
+    (xhr) => {
+      if (xhr && xhr.lengthComputable && xhr.total > 0) {
+        const pct = Math.min(100, (xhr.loaded / xhr.total) * 100);
+        window.__IU_GLB_PROGRESS = pct;
+        window.dispatchEvent(new CustomEvent('iu:glb-progress', { detail: pct }));
+      }
+    },
     () => {
       const makeText = (opacity) => {
         const el = document.createElement('div');
@@ -64,6 +72,8 @@
         el.innerHTML = `<div style="font-family:var(--fh);font-size:clamp(48px,10vw,140px);font-weight:700;letter-spacing:-.04em;color:rgba(237,232,229,${opacity});">INFINITE</div>`;
         return el;
       };
+      window.__IU_GLB_DONE = true;
+      window.dispatchEvent(new CustomEvent('iu:glb-loaded'));
       const sticky = document.querySelector('.si-sticky');
       if (sticky && !sticky.querySelector('.si-fallback')) {
         const fb = makeText(0.04);
@@ -84,12 +94,22 @@
     if (scrollable <= 0) return;
     scrollProgress = Math.max(0, Math.min(1, -rect.top / scrollable));
 
+    const mob = isMobile();
     tags.forEach((tag, i) => {
-      const delay = 0.05 * i;
-      const opacity = Math.max(0, Math.min(1, (scrollProgress - 0.42 - delay) / 0.12));
+      // на мобильном вылет начинается раньше и идёт поочерёдно снизу вверх
+      const delay = mob ? 0.07 * i : 0.05 * i;
+      const start = mob ? 0.18 : 0.42;
+      const span = mob ? 0.14 : 0.12;
+      const opacity = Math.max(0, Math.min(1, (scrollProgress - start - delay) / span));
       tag.style.opacity = opacity;
-      const offsets = [[-60, -30], [60, -30], [-60, 30], [60, 30]];
-      tag.style.transform = `translate(${offsets[i][0] * (1 - opacity)}px, ${offsets[i][1] * (1 - opacity)}px)`;
+      if (mob) {
+        // горизонтальный вылет слева — теги идут вертикальным стеком
+        const dx = -48 * (1 - opacity);
+        tag.style.transform = `translateX(${dx}px)`;
+      } else {
+        const offsets = [[-60, -30], [60, -30], [-60, 30], [60, 30]];
+        tag.style.transform = `translate(${offsets[i][0] * (1 - opacity)}px, ${offsets[i][1] * (1 - opacity)}px)`;
+      }
     });
 
     if (crosshair) {

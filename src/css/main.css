@@ -3453,15 +3453,16 @@ body::after {
 }
 
 @media (max-width:768px) {
-
-    body,
     html {
-        overflow-x: hidden;
+        max-width: 100vw
+    }
+    body {
+        overflow-x: clip;
         max-width: 100vw
     }
 
     #snake-intro {
-        height: 100vh
+        height: 400vh
     }
 
     .si-bg-text {
@@ -3481,6 +3482,9 @@ body::after {
         width: auto !important;
         top: auto !important;
         text-align: left;
+        opacity: 0;
+        transition: transform .45s cubic-bezier(.22,1,.36,1), opacity .35s ease;
+        will-change: transform, opacity;
         background: rgba(6, 4, 4, .62);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
@@ -3707,28 +3711,10 @@ body::after {
     .si-tag--4 {
         bottom: 50px !important
     }
-
     .si-tag {
-        animation: tagSlideIn .5s ease forwards !important;
-        transition: none !important
+        animation: none !important;
+        transition: transform .45s cubic-bezier(.22,1,.36,1), opacity .35s ease !important
     }
-
-    .si-tag--1 {
-        animation-delay: .6s !important
-    }
-
-    .si-tag--2 {
-        animation-delay: .8s !important
-    }
-
-    .si-tag--3 {
-        animation-delay: 1s !important
-    }
-
-    .si-tag--4 {
-        animation-delay: 1.2s !important
-    }
-
     .gs-title {
         font-size: 18px !important
     }
