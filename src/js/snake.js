@@ -17,7 +17,7 @@
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(isMobile() ? 65 : 45, W() / H(), 0.1, 100);
-  camera.position.set(0, 0.3, isMobile() ? 9 : 4.5);
+  camera.position.set(isMobile() ? 0.45 : 0, 0.3, isMobile() ? 8.2 : 4.5);
 
   scene.add(new THREE.AmbientLight(0xffffff, 0.5));
   const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
@@ -48,7 +48,7 @@
       const center = box.getCenter(new THREE.Vector3());
       const size = box.getSize(new THREE.Vector3());
       // FIX: делим на реальный размер модели, не на Math.max(1)
-      const targetScale = (isMobile() ? 2.4 : 2.6) / Math.max(size.x, size.y, size.z);
+      const targetScale = (isMobile() ? 3.1 : 2.6) / Math.max(size.x, size.y, size.z);
       model.userData.initialScale = targetScale;
       model.scale.setScalar(targetScale);
       model.position.sub(center.multiplyScalar(targetScale));
@@ -153,7 +153,8 @@
     }
 
     pointRed1.intensity = 3 + 1.5 * Math.sin(2.5 * t);
-    camera.position.x += 0.04 * (0.3 * mouseX * (1 - 0.5 * scrollProgress) - camera.position.x);
+    const baseX = isMobile() ? 0.45 : 0;
+    camera.position.x += 0.04 * (baseX + 0.3 * mouseX * (1 - 0.5 * scrollProgress) - camera.position.x);
     camera.position.y += 0.04 * (0.2 * -mouseY + 0.3 - camera.position.y);
     camera.lookAt(0, 0, 0);
 
