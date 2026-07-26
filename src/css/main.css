@@ -1744,7 +1744,7 @@ footer {
     width: 100% !important;
     height: 100% !important;
     pointer-events: none;
-    z-index: 999
+    z-index: 4
 }
 
 #gs-globe {
@@ -2498,7 +2498,7 @@ input[type=date] {
     inset: 0;
     width: 100%;
     height: 100%;
-    z-index: 5
+    z-index: 4
 }
 
 .sec-in--portfolio {
