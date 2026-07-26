@@ -3958,8 +3958,7 @@ html:not(.js) #loader {
 .gs-card {
     overflow: hidden;
     cursor: pointer;
-    animation: borderPulse 4s ease-in-out infinite;
-    will-change: transform, box-shadow;
+    will-change: transform;
 }
 .gs-card::before {
     content: '';
@@ -3967,13 +3966,16 @@ html:not(.js) #loader {
     inset: 0;
     background: linear-gradient(105deg,
         transparent 20%,
-        rgba(212,0,0,.06) 50%,
+        rgba(212,0,0,.04) 50%,
         transparent 80%
     );
-    background-size: 200% 100%;
-    animation: cardShimmer 6s linear infinite;
     pointer-events: none;
     border-radius: inherit;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+.gs-card:hover::before {
+    opacity: 1;
 }
 .gs-card::after {
     content: '';
