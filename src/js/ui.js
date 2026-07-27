@@ -59,8 +59,8 @@ const co = new IntersectionObserver(e => {
 });
 document.querySelectorAll("[data-target]").forEach(e => co.observe(e)),
     function() {
-        const e = "undefined" != typeof crypto && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now();
-        let _lastSubmit = 0;
+
+        let _lastSubmit = parseInt(sessionStorage.getItem('_iu_ls') || '0');
         document.getElementById("cForm").addEventListener("submit", function(t) {
             t.preventDefault();
             // honeypot — тихо игнорируем, кнопка остаётся активной
@@ -71,7 +71,7 @@ document.querySelectorAll("[data-target]").forEach(e => co.observe(e)),
                 showToast("Зачекайте 30 секунд перед повторною відправкою.", "err");
                 return;
             }
-            _lastSubmit = now;
+            _lastSubmit = now; sessionStorage.setItem('_iu_ls', String(now));
             const n = this.querySelector("button[type=submit]");
             n.disabled = !0, n.textContent = "Надсилаємо...";
             const o = new AbortController,
@@ -90,7 +90,7 @@ document.querySelectorAll("[data-target]").forEach(e => co.observe(e)),
                     budget: document.getElementById("cbudget").value,
                     deadline: document.getElementById("cdeadline").value,
                     project: document.getElementById("cp").value,
-                    idempotency_key: e
+                    idempotency_key: (typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now())
                 })
             }).then(e => {
                 if (clearTimeout(r), !e.ok) throw new Error("server");
