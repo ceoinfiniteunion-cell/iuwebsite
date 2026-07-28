@@ -2,3 +2,5 @@ globe-app/
 .DS_Store
 *.DS_Store
 node_modules/
+vendor/three/draco-r185/draco_decoder.js
+vendor/three/draco-r185/gltf/draco_decoder.js

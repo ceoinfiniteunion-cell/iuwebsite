@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23D40000'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold' font-size='14' fill='white'>IU</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'unsafe-eval' https://res.cloudinary.com https://js-de.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.infiniteunion.com.ua https://res.cloudinary.com https://o4511772270002176.ingest.de.sentry.io https://browser.sentry-cdn.com blob:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests; report-uri https://o4511772270002176.ingest.de.sentry.io/api/4511772279177296/security/?sentry_key=bb98cf6e98bd2742343eeff2758f291b; report-to csp-endpoint">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'unsafe-eval' 'sha256-XYubUeytELJtVjoeG8EJEdj9UEFrYipqJYwrpBtue0s=' 'sha256-Dfnj5rhh3M7L9Vkr0J/5CAEfTVfcNkN0YrpHLWxyO40=' https://res.cloudinary.com https://js-de.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.infiniteunion.com.ua https://res.cloudinary.com https://o4511772270002176.ingest.de.sentry.io https://browser.sentry-cdn.com blob:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests; report-uri https://o4511772270002176.ingest.de.sentry.io/api/4511772279177296/security/?sentry_key=bb98cf6e98bd2742343eeff2758f291b; report-to csp-endpoint">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
@@ -110,6 +110,17 @@
     src="https://js-de.sentry-cdn.com/bb98cf6e98bd2742343eeff2758f291b.min.js"
     crossorigin="anonymous"
   ></script>
+  <script type="importmap">
+{
+  "imports": {
+    "three": "/vendor/three/three.module.min.js",
+    "three/addons/loaders/GLTFLoader.js": "/vendor/three/GLTFLoader.r185.js",
+    "three/addons/loaders/DRACOLoader.js": "/vendor/three/DRACOLoader.r185.js",
+    "three/addons/utils/BufferGeometryUtils.js": "/vendor/three/utils/BufferGeometryUtils.js",
+    "three/addons/utils/SkeletonUtils.js": "/vendor/three/utils/SkeletonUtils.js"
+  }
+}
+</script>
   <script defer src="assets/js/sentry-init.js"></script>
 </head>
 <body>
@@ -544,15 +555,12 @@
 </footer>
 
 <script defer src="cobe.umd.js"></script>
-<script defer src="vendor/three/three.min.js"></script>
-<script defer src="vendor/three/GLTFLoader.js"></script>
-<script defer src="vendor/three/DRACOLoader.js"></script>
 
   <script defer src="assets/js/main.js"></script>
   <script defer src="assets/js/preloader.js"></script>
-  <script defer src="assets/js/hero.js"></script>
+  <script type="module" src="assets/js/hero.js"></script>
   <script defer src="assets/js/ui.js"></script>
-  <script defer src="assets/js/snake.js"></script>
+  <script type="module" src="assets/js/snake.js"></script>
   <script defer src="assets/js/orbit.js"></script>
   <script defer src="assets/js/globe.js"></script>
 </body>

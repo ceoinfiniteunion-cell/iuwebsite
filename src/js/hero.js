@@ -1,4 +1,6 @@
-! function() {
+import * as THREE from 'three';
+
+!function() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const e = document.getElementById("hero-3d");
     if (!e) return;
@@ -52,7 +54,7 @@
         [.01, .008],
         [.009, .011]
     ];
-    ! function e() {
+    !function e() {
         requestAnimationFrame(e), a.forEach((e, t) => {
             e.rotation.x += h[t][0], e.rotation.y += h[t][1], h[t][2] && (e.rotation.z += h[t][2])
         }), o.position.x += .035 * (w - o.position.x), o.position.y += .035 * (-E - o.position.y), o.lookAt(i.position), r.render(i, o)

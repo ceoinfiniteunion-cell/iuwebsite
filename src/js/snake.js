@@ -1,3 +1,7 @@
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+
 !function () {
   const section = document.getElementById('snake-intro');
   if (!section) return;
@@ -11,16 +15,16 @@
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
   renderer.setSize(W(), H());
-  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.4;
+  renderer.toneMappingExposure = 2.2;
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(isMobile() ? 65 : 45, W() / H(), 0.1, 100);
   camera.position.set(isMobile() ? 0.45 : 0, 0.3, isMobile() ? 8.2 : 4.5);
 
-  scene.add(new THREE.AmbientLight(0xffffff, 0.5));
-  const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
+  scene.add(new THREE.AmbientLight(0xffffff, 1.5));
+  const dirLight = new THREE.DirectionalLight(0xffffff, 2.5);
   dirLight.position.set(2, 4, 3);
   scene.add(dirLight);
   const pointRed1 = new THREE.PointLight(0xd40000, 4, 8);
@@ -35,9 +39,9 @@
   let mouseX = 0;
   let mouseY = 0;
 
-  const dracoLoader = new THREE.DRACOLoader();
-  dracoLoader.setDecoderPath('vendor/three/draco/');
-  const gltfLoader = new THREE.GLTFLoader();
+  const dracoLoader = new DRACOLoader();
+  dracoLoader.setDecoderPath('/vendor/three/draco-r185/gltf/');
+  const gltfLoader = new GLTFLoader();
   gltfLoader.setDRACOLoader(dracoLoader);
 
   gltfLoader.load(
@@ -47,13 +51,17 @@
       const box = new THREE.Box3().setFromObject(model);
       const center = box.getCenter(new THREE.Vector3());
       const size = box.getSize(new THREE.Vector3());
-      // FIX: делим на реальный размер модели, не на Math.max(1)
       const targetScale = (isMobile() ? 3.1 : 2.6) / Math.max(size.x, size.y, size.z);
       model.userData.initialScale = targetScale;
       model.scale.setScalar(targetScale);
       model.position.sub(center.multiplyScalar(targetScale));
       model.position.y = isMobile() ? 0 : model.position.y - 0.2;
       model.rotation.y = 0;
+      model.traverse((child) => {
+        if (child.isMesh && child.material) {
+          child.material.needsUpdate = true;
+        }
+      });
       scene.add(model);
       window.__IU_GLB_DONE = true;
       window.dispatchEvent(new CustomEvent('iu:glb-loaded'));
@@ -87,7 +95,6 @@
   const tags = document.querySelectorAll('.si-tag');
   const crosshair = document.querySelector('.si-crosshair');
 
-  // FIX: passive: true — не блокирует тач-скролл
   window.addEventListener('scroll', () => {
     const rect = section.getBoundingClientRect();
     const scrollable = section.offsetHeight - H();
@@ -96,14 +103,12 @@
 
     const mob = isMobile();
     tags.forEach((tag, i) => {
-      // на мобильном вылет начинается раньше и идёт поочерёдно снизу вверх
       const delay = mob ? 0.07 * i : 0.05 * i;
       const start = mob ? 0.18 : 0.42;
       const span = mob ? 0.14 : 0.12;
       const opacity = Math.max(0, Math.min(1, (scrollProgress - start - delay) / span));
       tag.style.opacity = opacity;
       if (mob) {
-        // горизонтальный вылет слева — теги идут вертикальным стеком
         const dx = -48 * (1 - opacity);
         tag.style.transform = `translateX(${dx}px)`;
       } else {
@@ -120,7 +125,6 @@
     }
   }, { passive: true });
 
-  // FIX: resize только по событию с debounce, не на каждом кадре
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
@@ -145,7 +149,6 @@
       model.rotation.x += 0.06 * (0 - model.rotation.x);
       const targetY = isMobile() ? 0 : 5 * Math.min(1, scrollProgress / 0.4) - 5;
       model.position.y += 0.05 * (targetY - model.position.y);
-      // десктоп: scale растёт при скролле (как в оригинале), мобильный — статично
       if (model.userData.initialScale && !isMobile()) {
         const targetSc = model.userData.initialScale * (1 + 0.15 * scrollProgress);
         model.scale.setScalar(model.scale.x + 0.05 * (targetSc - model.scale.x));
