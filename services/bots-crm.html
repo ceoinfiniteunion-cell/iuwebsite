@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23D40000'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold' font-size='14' fill='white'>IU</text></svg>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.infiniteunion.com.ua; object-src 'none'; base-uri 'self';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<link rel="alternate" hreflang="uk" href="https://infiniteunion.com.ua/services/bots-crm.html">
+<link rel="alternate" hreflang="x-default" href="https://infiniteunion.com.ua/services/bots-crm.html">
+<link rel="canonical" href="https://infiniteunion.com.ua/services/bots-crm.html">
+<meta name="keywords" content="telegram бот CRM інтеграція, бот Bitrix24, бот amoCRM, автоматизація CRM telegram, CRM бот для бізнесу, інтеграція CRM Telegram Ukraine, Bitrix24 telegram bot, amoCRM автоматизація, CRM integration bot">
+<meta name="description" content="Інтеграція Telegram бота з CRM: Bitrix24, amoCRM, Pipedrive. Ліди автоматично в CRM, менеджери — в Telegram. Харків, Україна, Європа.">
+<title>Telegram бот з CRM інтеграцією — Bitrix24, amoCRM, Pipedrive | Infinite Union</title>
+<meta property="og:title" content="Telegram бот з CRM інтеграцією — Bitrix24, amoCRM | Infinite Union">
+<meta property="og:description" content="Інтеграція Telegram бота з CRM. Ліди автоматично в CRM, менеджери в Telegram.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://infiniteunion.com.ua/services/bots-crm.html">
+<meta property="og:image" content="https://infiniteunion.com.ua/og-image.png">
+<meta property="og:locale" content="uk_UA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://infiniteunion.com.ua/services/bots-crm.html#service",
+      "name": "Telegram бот з CRM інтеграцією",
+      "provider": {"@id": "https://infiniteunion.com.ua/#organization"},
+      "description": "Інтеграція Telegram ботів з CRM системами: Bitrix24, amoCRM, Pipedrive.",
+      "areaServed": ["UA","PL","DE","NL","CZ","GB"],
+      "offers": {"@type": "Offer","price": "800","priceCurrency": "USD"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Головна","item": "https://infiniteunion.com.ua/"},
+        {"@type": "ListItem","position": 2,"name": "Telegram боти","item": "https://infiniteunion.com.ua/services/bots.html"},
+        {"@type": "ListItem","position": 3,"name": "CRM інтеграція","item": "https://infiniteunion.com.ua/services/bots-crm.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "З якими CRM ви працюєте?","acceptedAnswer": {"@type": "Answer","text": "Bitrix24, amoCRM, Pipedrive, HubSpot, Salesforce та будь-яка CRM з API або webhook підтримкою."}},
+        {"@type": "Question","name": "Скільки коштує CRM інтеграція?","acceptedAnswer": {"@type": "Answer","text": "CRM інтеграція від $800. Ціна залежить від складності воронки та кількості автоматизацій."}},
+        {"@type": "Question","name": "Чи можна підключити власну CRM?","acceptedAnswer": {"@type": "Answer","text": "Так, якщо ваша CRM має REST API або webhook — підключимо. Також можемо розробити власну легку CRM."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+::selection{background:#D40000;color:#fff;}
+:root{
+  --red:#D40000;
+  --bg:#060404;
+  --bg2:#0e0b0b;
+  --border:rgba(255,255,255,0.08);
+  --text:#fff;
+  --muted:rgba(255,255,255,0.45);
+  --font:'Space Grotesk',sans-serif;
+  --body:'Inter',sans-serif;
+  --blue:#3B82F6;
+  --green:#22C55E;
+  --purple:#A855F7;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:border-color .3s,background .3s;}
+nav.scrolled{background:rgba(6,4,4,.95);backdrop-filter:blur(16px);border-color:var(--border);}
+.nav-logo{font-family:var(--font);font-weight:700;font-size:15px;letter-spacing:.12em;text-decoration:none;color:#fff;}
+.nav-logo span{color:var(--red);}
+.nav-back{font-size:12px;letter-spacing:.1em;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s;}
+.nav-back:hover{color:#fff;}
+.nav-cta{background:var(--red);color:#fff;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.1em;padding:10px 24px;text-decoration:none;transition:opacity .2s;}
+.nav-cta:hover{opacity:.85;}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 40px 80px;}
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:flex-end;}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(59,130,246,.3);padding:6px 16px;margin-bottom:32px;background:rgba(59,130,246,.05);}
+.hero-tag-line{width:20px;height:1px;background:var(--blue);}
+.hero-tag-text{font-size:11px;letter-spacing:.18em;color:rgba(59,130,246,.9);font-family:var(--font);font-weight:600;}
+h1.hero-title{font-family:var(--font);font-size:clamp(44px,5.5vw,80px);font-weight:700;line-height:.9;letter-spacing:-.03em;margin-bottom:32px;}
+h1.hero-title em{font-style:normal;color:var(--red);}
+.hero-sub{font-size:16px;color:var(--muted);line-height:1.75;margin-bottom:40px;max-width:460px;}
+.hero-integrations{display:flex;flex-direction:column;gap:12px;}
+.int-row{display:flex;align-items:center;gap:16px;padding:14px 20px;border:1px solid var(--border);background:rgba(255,255,255,.02);transition:border-color .3s;}
+.int-row:hover{border-color:rgba(59,130,246,.3);}
+.int-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.int-dot--blue{background:var(--blue);}
+.int-dot--green{background:var(--green);}
+.int-dot--purple{background:var(--purple);}
+.int-dot--red{background:var(--red);}
+.int-name{font-family:var(--font);font-size:14px;font-weight:600;flex:1;}
+.int-status{font-size:11px;color:var(--green);font-family:var(--font);}
+.int-arrow{font-size:12px;color:var(--muted);}
+
+/* PIPELINE SECTION */
+.pipeline{padding:120px 40px;background:var(--bg2);}
+.sec-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
+.sec-title{font-family:var(--font);font-size:clamp(36px,5vw,68px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:64px;}
+.pipeline-canvas-wrap{position:relative;width:100%;height:360px;margin-bottom:64px;}
+.pipeline-canvas{width:100%;height:100%;display:block;}
+
+/* HOW IT WORKS */
+.how{padding:120px 40px;}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.how-visual{position:relative;height:440px;}
+.how-canvas{width:100%;height:100%;display:block;}
+.how-steps{list-style:none;}
+.hstep{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border);align-items:flex-start;}
+.hstep:first-child{border-top:1px solid var(--border);}
+.hstep-icon{width:44px;height:44px;flex-shrink:0;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;}
+.hstep-name{font-family:var(--font);font-size:15px;font-weight:700;margin-bottom:4px;}
+.hstep-desc{font-size:13px;color:var(--muted);line-height:1.6;}
+
+/* FEATURES */
+.features{padding:120px 40px;background:var(--bg2);}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.feat{border:1px solid var(--border);padding:40px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;}
+.feat:hover{border-color:rgba(59,130,246,.3);transform:translateY(-3px);}
+.feat-icon{width:48px;height:48px;margin-bottom:24px;}
+.feat-name{font-family:var(--font);font-size:18px;font-weight:700;margin-bottom:12px;}
+.feat-desc{font-size:13px;color:var(--muted);line-height:1.7;}
+.feat-badge{display:inline-block;margin-top:16px;font-size:10px;letter-spacing:.1em;color:var(--blue);border:1px solid rgba(59,130,246,.2);padding:3px 10px;font-family:var(--font);}
+
+/* LEVELS */
+.levels{padding:120px 40px;}
+.levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.level{border:1px solid var(--border);padding:40px;position:relative;transition:border-color .3s,transform .3s;}
+.level:hover{border-color:rgba(212,0,0,.3);transform:translateY(-4px);}
+.level--pro{border-color:var(--red);}
+.level-badge{position:absolute;top:-1px;left:40px;background:var(--red);font-family:var(--font);font-size:10px;font-weight:700;letter-spacing:.1em;padding:4px 12px;color:#fff;}
+.level-name{font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:8px;margin-top:8px;}
+.level-price{font-family:var(--font);font-size:40px;font-weight:700;color:var(--red);line-height:1;}
+.level-note{font-size:12px;color:var(--muted);margin-top:4px;margin-bottom:32px;}
+.level-list{list-style:none;}
+.level-list li{font-size:14px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;line-height:1.4;}
+.level-list li.on{color:#fff;}
+.level-list li::before{content:'';width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0;opacity:.4;}
+.level-list li.on::before{opacity:1;}
+.level-cta{display:block;margin-top:32px;text-align:center;padding:14px;border:1px solid var(--border);font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.08em;color:#fff;text-decoration:none;transition:all .25s;}
+.level--pro .level-cta{background:var(--red);border-color:var(--red);}
+.level-cta:hover{background:var(--red);border-color:var(--red);}
+
+/* STATS */
+.stats{padding:80px 40px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+.stat-cell{padding:40px;border-right:1px solid var(--border);text-align:center;}
+.stat-cell:last-child{border-right:none;}
+.stat-val{font-family:var(--font);font-size:48px;font-weight:700;line-height:1;}
+.stat-val em{color:var(--red);font-style:normal;}
+.stat-key{font-size:12px;color:var(--muted);margin-top:8px;letter-spacing:.05em;}
+
+/* MARQUEE */
+.marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;}
+.marquee-track{display:flex;gap:60px;width:max-content;animation:marquee 26s linear infinite;}
+.marquee-track span{font-family:var(--font);font-size:12px;letter-spacing:.2em;color:var(--muted);white-space:nowrap;}
+.marquee-track span em{color:var(--blue);font-style:normal;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* FAQ */
+.faq{padding:120px 40px;background:var(--bg2);}
+.faq-list{max-width:800px;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:17px;font-weight:600;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;}
+.faq-q span{font-size:20px;color:var(--red);transition:transform .3s;flex-shrink:0;}
+.faq-item.open .faq-q span{transform:rotate(45deg);}
+.faq-a{font-size:15px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:28px;}
+
+/* CTA */
+.cta-final{text-align:center;padding:160px 40px;position:relative;overflow:hidden;}
+.cta-bg-canvas{position:absolute;inset:0;width:100%;height:100%;}
+.cta-label{font-size:11px;letter-spacing:.2em;color:var(--blue);font-family:var(--font);font-weight:600;margin-bottom:24px;position:relative;z-index:1;}
+.cta-title{font-family:var(--font);font-size:clamp(40px,6vw,88px);font-weight:700;line-height:.93;letter-spacing:-.03em;margin-bottom:32px;position:relative;z-index:1;}
+.cta-title em{font-style:normal;color:var(--red);}
+.cta-sub{font-size:17px;color:var(--muted);margin-bottom:48px;position:relative;z-index:1;}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.btn-primary{display:inline-block;background:var(--red);color:#fff;font-family:var(--font);font-size:13px;font-weight:700;letter-spacing:.1em;padding:18px 52px;text-decoration:none;transition:opacity .2s,transform .2s;}
+.btn-primary:hover{opacity:.85;}
+.btn-ghost{display:inline-block;border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.1em;padding:18px 40px;text-decoration:none;transition:border-color .2s;}
+.btn-ghost:hover{border-color:rgba(255,255,255,.3);}
+
+footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.1em;text-decoration:none;color:#fff;}
+.footer-logo span{color:var(--red);}
+.footer-copy{font-size:12px;color:var(--muted);}
+
+.rev{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease;}
+.rev.v{opacity:1;transform:none;}
+.rev-l{opacity:0;transform:translateX(-36px);transition:opacity .7s ease,transform .7s ease;}
+.rev-l.v{opacity:1;transform:none;}
+.rev-r{opacity:0;transform:translateX(36px);transition:opacity .7s ease,transform .7s ease;}
+.rev-r.v{opacity:1;transform:none;}
+
+@media(max-width:768px){
+  nav{padding:16px 20px;}
+  .hero{padding:120px 20px 60px;}
+  .hero-inner{grid-template-columns:1fr;gap:48px;}
+  .pipeline-canvas-wrap{height:220px;}
+  .how-grid{grid-template-columns:1fr;gap:48px;}
+  .how-visual{height:280px;}
+  .features-grid,.levels-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .stat-cell{padding:24px;}
+  .pipeline,.how,.features,.levels,.stats,.faq,.cta-final{padding:80px 20px;}
+  footer{flex-direction:column;gap:16px;text-align:center;}
+  .cta-btns{flex-direction:column;align-items:center;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="bots.html" class="nav-back">← Telegram боти</a>
+  <a href="../index.html" class="nav-logo">INFINITE <span>UNION</span></a>
+  <a href="#contact" class="nav-cta">ЗАМОВИТИ ІНТЕГРАЦІЮ</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:120px;">
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <div class="hero-tag-line"></div>
+        <span class="hero-tag-text">CRM · TELEGRAM · АВТОМАТИЗАЦІЯ</span>
+      </div>
+      <h1 class="hero-title">CRM що<br>живе у<br><em>Telegram.</em></h1>
+      <p class="hero-sub">Кожен лід з бота — автоматично в CRM. Менеджери отримують задачі в Telegram. Угоди рухаються по воронці без ручного введення.</p>
+    </div>
+    <div class="hero-integrations rev-r">
+      <div class="int-row">
+        <div class="int-dot int-dot--blue"></div>
+        <div class="int-name">Bitrix24</div>
+        <div class="int-status">● підключено</div>
+        <div class="int-arrow">→</div>
+      </div>
+      <div class="int-row">
+        <div class="int-dot int-dot--green"></div>
+        <div class="int-name">amoCRM</div>
+        <div class="int-status">● підключено</div>
+        <div class="int-arrow">→</div>
+      </div>
+      <div class="int-row">
+        <div class="int-dot int-dot--purple"></div>
+        <div class="int-name">Pipedrive</div>
+        <div class="int-status">● підключено</div>
+        <div class="int-arrow">→</div>
+      </div>
+      <div class="int-row">
+        <div class="int-dot int-dot--red"></div>
+        <div class="int-name">HubSpot</div>
+        <div class="int-status">● підключено</div>
+        <div class="int-arrow">→</div>
+      </div>
+      <div class="int-row" style="border-color:rgba(255,255,255,.04);opacity:.5;">
+        <div class="int-dot" style="background:var(--muted);"></div>
+        <div class="int-name">Ваша CRM</div>
+        <div class="int-status" style="color:var(--muted);">via API / webhook</div>
+        <div class="int-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span>BITRIX24 <em>ІНТЕГРАЦІЯ</em></span><span>·</span>
+    <span>AMOCRM АВТОМАТИЗАЦІЯ</span><span>·</span>
+    <span>ЛІДИ <em>АВТОМАТИЧНО</em></span><span>·</span>
+    <span>ЗАДАЧІ В TELEGRAM</span><span>·</span>
+    <span>WEBHOOK <em>СИНХРОНІЗАЦІЯ</em></span><span>·</span>
+    <span>PIPEDRIVE ІНТЕГРАЦІЯ</span><span>·</span>
+    <span>BITRIX24 <em>ІНТЕГРАЦІЯ</em></span><span>·</span>
+    <span>AMOCRM АВТОМАТИЗАЦІЯ</span><span>·</span>
+    <span>ЛІДИ <em>АВТОМАТИЧНО</em></span><span>·</span>
+    <span>ЗАДАЧІ В TELEGRAM</span><span>·</span>
+    <span>WEBHOOK <em>СИНХРОНІЗАЦІЯ</em></span><span>·</span>
+    <span>PIPEDRIVE ІНТЕГРАЦІЯ</span><span>·</span>
+  </div>
+</div>
+
+<!-- PIPELINE -->
+<section class="pipeline">
+  <div class="sec-label">ВОРОНКА ПРОДАЖІВ</div>
+  <h2 class="sec-title rev">Ліди рухаються<br>самі</h2>
+  <div class="pipeline-canvas-wrap rev">
+    <canvas id="pipelineCanvas" class="pipeline-canvas"></canvas>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:24px;">
+    <div class="rev" style="text-align:center;">
+      <div style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Новий лід</div>
+      <div style="font-size:12px;color:var(--muted);">Бот збирає контакт та потребу</div>
+    </div>
+    <div class="rev" style="text-align:center;">
+      <div style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Кваліфікація</div>
+      <div style="font-size:12px;color:var(--muted);">CRM отримує дані, менеджер — задачу</div>
+    </div>
+    <div class="rev" style="text-align:center;">
+      <div style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Пропозиція</div>
+      <div style="font-size:12px;color:var(--muted);">Бот надсилає оффер, фіксує реакцію</div>
+    </div>
+    <div class="rev" style="text-align:center;">
+      <div style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Переговори</div>
+      <div style="font-size:12px;color:var(--muted);">Менеджер підключається в потрібний момент</div>
+    </div>
+    <div class="rev" style="text-align:center;">
+      <div style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;color:var(--green);">Закрито</div>
+      <div style="font-size:12px;color:var(--muted);">Угода в CRM, клієнт — в базі</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="how-grid">
+    <div>
+      <div class="sec-label">ЯК ЦЕ ПРАЦЮЄ</div>
+      <h2 class="sec-title rev-l">Telegram +<br>CRM = одна<br><em style="font-style:normal;color:var(--red);">система</em></h2>
+      <ul class="how-steps">
+        <li class="hstep rev">
+          <div class="hstep-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M20 2L3 9l7 3 3 7 7-17z" stroke="#3B82F6" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M10 12l4-4" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="hstep-name">Ліди з бота → CRM</div>
+            <div class="hstep-desc">Клієнт написав боту — через секунду угода в Bitrix24 або amoCRM з усіма даними: ім'я, контакт, потреба, джерело.</div>
+          </div>
+        </li>
+        <li class="hstep rev">
+          <div class="hstep-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="3" stroke="#22C55E" stroke-width="1.5"/>
+              <path d="M8 12l3 3 5-5" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="hstep-name">Задачі менеджерам в Telegram</div>
+            <div class="hstep-desc">Новий лід в CRM — менеджер миттєво отримує Telegram-сповіщення з кнопками: взяти в роботу, передзвонити, відкласти.</div>
+          </div>
+        </li>
+        <li class="hstep rev">
+          <div class="hstep-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="#A855F7" stroke-width="1.5"/>
+              <path d="M12 7v5l3 3" stroke="#A855F7" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="hstep-name">Статуси синхронізуються</div>
+            <div class="hstep-desc">Менеджер змінив статус угоди в Telegram — CRM оновлюється автоматично. Клієнт отримує сповіщення в боті.</div>
+          </div>
+        </li>
+        <li class="hstep rev">
+          <div class="hstep-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="#D40000" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M9 22V12h6v10" stroke="#D40000" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="hstep-name">Аналітика в реальному часі</div>
+            <div class="hstep-desc">Конверсія по воронці, навантаження менеджерів, джерела лідів — все в одному дашборді без зайвих інструментів.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="how-visual rev-r">
+      <canvas id="howCanvas" class="how-canvas"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="sec-label">МОЖЛИВОСТІ</div>
+  <h2 class="sec-title rev">Що автоматизуємо</h2>
+  <div class="features-grid">
+    <div class="feat rev">
+      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+        <rect x="4" y="8" width="40" height="32" rx="4" stroke="#3B82F6" stroke-width="1.5" stroke-opacity=".6"/>
+        <rect x="4" y="8" width="40" height="12" rx="4" fill="rgba(59,130,246,.08)"/>
+        <circle cx="12" cy="14" r="3" fill="#3B82F6" fill-opacity=".6"/>
+        <rect x="18" y="11" width="16" height="3" rx="1.5" fill="rgba(255,255,255,.15)"/>
+        <rect x="10" y="26" width="28" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+        <rect x="10" y="32" width="20" height="3" rx="1.5" fill="rgba(255,255,255,.05)"/>
+      </svg>
+      <div class="feat-name">Автоматичне створення лідів</div>
+      <div class="feat-desc">Кожне звернення в бот — нова угода в CRM. Дублі виявляються автоматично, існуючі контакти оновлюються.</div>
+      <div class="feat-badge">WEBHOOK</div>
+    </div>
+    <div class="feat rev">
+      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+        <path d="M24 8L4 20v20h40V20L24 8z" stroke="rgba(255,255,255,.1)" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M24 8L38 20" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".6" stroke-linecap="round"/>
+        <rect x="16" y="28" width="16" height="12" rx="2" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".6"/>
+        <path d="M20 34h8M24 30v8" stroke="#22C55E" stroke-width="1" stroke-opacity=".4" stroke-linecap="round"/>
+      </svg>
+      <div class="feat-name">Сповіщення менеджерів</div>
+      <div class="feat-desc">Новий лід, прострочена задача, зміна статусу — менеджер дізнається в Telegram з інтерактивними кнопками дій.</div>
+      <div class="feat-badge">TELEGRAM BOT API</div>
+    </div>
+    <div class="feat rev">
+      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="16" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/>
+        <path d="M24 8C15.163 8 8 15.163 8 24c0 4.418 1.791 8.418 4.686 11.314" stroke="#A855F7" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".7"/>
+        <path d="M24 8C32.837 8 40 15.163 40 24c0 4.418-1.791 8.418-4.686 11.314" stroke="rgba(168,85,247,.3)" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="24" cy="24" r="4" fill="rgba(168,85,247,.3)" stroke="#A855F7" stroke-width="1"/>
+        <path d="M14 24h20" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="3 2"/>
+      </svg>
+      <div class="feat-name">Двостороння синхронізація</div>
+      <div class="feat-desc">CRM → Telegram і назад. Зміни в CRM оновлюють бота, дії в Telegram відображаються в CRM миттєво.</div>
+      <div class="feat-badge">BIDIRECTIONAL SYNC</div>
+    </div>
+    <div class="feat rev">
+      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+        <rect x="4" y="12" width="18" height="24" rx="3" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/>
+        <rect x="26" y="16" width="18" height="16" rx="3" stroke="#D40000" stroke-width="1.5" stroke-opacity=".7"/>
+        <path d="M22 24h4" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".8"/>
+        <circle cx="24" cy="24" r="2" fill="#D40000" fill-opacity=".6"/>
+        <rect x="8" y="18" width="10" height="2" rx="1" fill="rgba(255,255,255,.06)"/>
+        <rect x="8" y="23" width="8" height="2" rx="1" fill="rgba(255,255,255,.04)"/>
+      </svg>
+      <div class="feat-name">Розподіл лідів</div>
+      <div class="feat-desc">Round-robin, за навантаженням або за спеціалізацією — бот автоматично призначає ліди потрібному менеджеру.</div>
+      <div class="feat-badge">LEAD ROUTING</div>
+    </div>
+    <div class="feat rev">
+      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+        <path d="M8 32L16 18L24 24L32 12L40 20" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="6" y="36" width="36" height="1" rx=".5" fill="rgba(255,255,255,.06)"/>
+        <circle cx="16" cy="18" r="2.5" fill="#3B82F6" fill-opacity=".5"/>
+        <circle cx="24" cy="24" r="2.5" fill="#3B82F6" fill-opacity=".5"/>
+        <circle cx="32" cy="12" r="2.5" fill="#3B82F6"/>
+      </svg>
+      <div class="feat-name">Аналітика воронки</div>
+      <div class="feat-desc">Конверсія по кроках, час в стадії, KPI менеджерів — дашборд прямо в Telegram або в вашій CRM.</div>
+      <div class="feat-badge">ANALYTICS</div>
+    </div>
+    <div class="feat rev">
+      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="16" r="8" stroke="rgba(255,255,255,.12)" stroke-width="1.5"/>
+        <circle cx="10" cy="36" r="6" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".6"/>
+        <circle cx="38" cy="36" r="6" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".6"/>
+        <path d="M18 36c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="rgba(255,255,255,.1)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M4 36c0-3.314 2.686-6 6-6" stroke="rgba(34,197,94,.3)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M44 36c0-3.314-2.686-6-6-6" stroke="rgba(34,197,94,.3)" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <div class="feat-name">Мультиагентність</div>
+      <div class="feat-desc">Команда менеджерів в одному боті. Кожен бачить тільки свої угоди, супервайзер — всі. Ролі та права доступу.</div>
+      <div class="feat-badge">MULTI-AGENT</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat-cell rev"><div class="stat-val">0</div><div class="stat-key">ВТРАЧЕНИХ ЛІДІВ</div></div>
+    <div class="stat-cell rev"><div class="stat-val" data-count="3">0<em>x</em></div><div class="stat-key">ШВИДШЕ ОБРОБКА</div></div>
+    <div class="stat-cell rev"><div class="stat-val" data-count="40">0<em>%</em></div><div class="stat-key">ЕКОНОМІЯ ЧАСУ МЕНЕДЖЕРА</div></div>
+    <div class="stat-cell rev"><div class="stat-val" data-count="7">0<em>дн</em></div><div class="stat-key">ВПРОВАДЖЕННЯ</div></div>
+  </div>
+</div>
+
+<!-- LEVELS -->
+<section class="levels">
+  <div class="sec-label">ВАРТІСТЬ</div>
+  <h2 class="sec-title rev">Оберіть рівень<br>інтеграції</h2>
+  <div class="levels-grid">
+    <div class="level rev">
+      <div class="level-name">Старт</div>
+      <div class="level-price">від $800</div>
+      <div class="level-note">1 CRM · 7 днів</div>
+      <ul class="level-list">
+        <li class="on">Інтеграція з 1 CRM</li>
+        <li class="on">Автоматичне створення лідів</li>
+        <li class="on">Сповіщення менеджерів</li>
+        <li class="on">Базові статуси угод</li>
+        <li>Двостороння синхронізація</li>
+        <li>Розподіл лідів</li>
+        <li>Аналітика воронки</li>
+        <li>Мультиагентність</li>
+      </ul>
+      <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
+    </div>
+    <div class="level level--pro rev">
+      <div class="level-badge">ПОПУЛЯРНИЙ</div>
+      <div class="level-name">Pro</div>
+      <div class="level-price">від $1 500</div>
+      <div class="level-note">повна інтеграція · 14 днів</div>
+      <ul class="level-list">
+        <li class="on">Інтеграція з 1–2 CRM</li>
+        <li class="on">Двостороння синхронізація</li>
+        <li class="on">Розподіл лідів (роутинг)</li>
+        <li class="on">Мультиагентність</li>
+        <li class="on">Аналітика воронки</li>
+        <li class="on">Тригерні повідомлення</li>
+        <li class="on">Адмін-панель</li>
+        <li class="on">3 місяці підтримки</li>
+      </ul>
+      <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
+    </div>
+    <div class="level rev">
+      <div class="level-name">Enterprise</div>
+      <div class="level-price">від $3 000</div>
+      <div class="level-note">екосистема · індивідуально</div>
+      <ul class="level-list">
+        <li class="on">Необмежена кількість CRM</li>
+        <li class="on">ERP / 1C інтеграція</li>
+        <li class="on">AI скоринг лідів</li>
+        <li class="on">Custom аналітика</li>
+        <li class="on">White-label рішення</li>
+        <li class="on">SLA гарантії</li>
+        <li class="on">Dedicated підтримка</li>
+        <li class="on">6 місяців підтримки</li>
+      </ul>
+      <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
+  <h2 class="sec-title rev">Питання про<br>CRM інтеграцію</h2>
+  <div class="faq-list">
+    <div class="faq-item rev">
+      <button type="button" class="faq-q">З якими CRM ви працюєте? <span>+</span></button>
+      <div class="faq-a">Bitrix24, amoCRM, Pipedrive, HubSpot, Salesforce — і будь-яка інша CRM з REST API або webhook. Якщо у вас власна система — підключимо через API або напряму до бази даних.</div>
+    </div>
+    <div class="faq-item rev">
+      <button type="button" class="faq-q">Скільки часу займе впровадження? <span>+</span></button>
+      <div class="faq-a">Базова інтеграція — 7 днів. Повна двостороння синхронізація з мультиагентністю — 14 днів. Enterprise рішення — від 3 тижнів залежно від складності.</div>
+    </div>
+    <div class="faq-item rev">
+      <button type="button" class="faq-q">Чи буде бот мати доступ до всіх даних CRM? <span>+</span></button>
+      <div class="faq-a">Ні. Інтеграція працює через API з мінімально необхідними правами. Кожен менеджер бачить тільки свої угоди. Всі дані передаються по HTTPS, логи зберігаються.</div>
+    </div>
+    <div class="faq-item rev">
+      <button type="button" class="faq-q">Що якщо CRM недоступна? <span>+</span></button>
+      <div class="faq-a">Реалізуємо circuit breaker та чергу повторних спроб. Якщо CRM недоступна — ліди накопичуються в черзі та синхронізуються коли система відновиться. Жоден лід не загубиться.</div>
+    </div>
+    <div class="faq-item rev">
+      <button type="button" class="faq-q">Чи можна підключити власну CRM? <span>+</span></button>
+      <div class="faq-a">Так. Якщо ваша CRM має REST API — підключимо за 3–5 днів. Якщо немає API — можемо розробити легку власну CRM або підключитись напряму до бази даних.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final" id="contact">
+  <canvas id="ctaBgCanvas" class="cta-bg-canvas"></canvas>
+  <div class="cta-label">ГОТОВІ АВТОМАТИЗУВАТИ?</div>
+  <h2 class="cta-title">Ліди в CRM<br>без <em>ручної роботи</em></h2>
+  <p class="cta-sub">Розкажіть про вашу CRM — відповімо за 15 хвилин</p>
+  <div class="cta-btns">
+    <a href="https://t.me/infiniteunion_bot" class="btn-primary" rel="noopener noreferrer">НАПИСАТИ В TELEGRAM</a>
+    <a href="../index.html#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
+  </div>
+</section>
+
+<footer>
+  <a href="../index.html" class="footer-logo">INFINITE <span>UNION</span></a>
+  <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+},{passive:true});
+
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+  });
+});
+
+const revObs=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');revObs.unobserve(e.target);}});
+},{threshold:.08});
+document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>revObs.observe(el));
+
+(function(){
+  const nums=document.querySelectorAll('[data-count]');
+  const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;
+  nums.forEach(el=>{
+    const target=parseInt(el.dataset.count,10);
+    const suffix=el.querySelector('em');
+    const suffixHTML=suffix?suffix.outerHTML:'';
+    const dur=1400;let started=false;
+    const obs=new IntersectionObserver(([e])=>{
+      if(e.isIntersecting&&!started){
+        started=true;
+        const start=performance.now();
+        const tick=now=>{const p=Math.min((now-start)/dur,1);el.innerHTML=Math.round(ease(p)*target)+suffixHTML;if(p<1)requestAnimationFrame(tick);};
+        requestAnimationFrame(tick);obs.disconnect();
+      }
+    },{threshold:.3});
+    obs.observe(el);
+  });
+})();
+
+document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{
+    const r=btn.getBoundingClientRect();
+    btn.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.12}px)`;
+  });
+  btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
+});
+
+// HERO CANVAS — data flow network
+(function(){
+  const c=document.getElementById('heroCanvas');
+  if(!c)return;
+  const ctx=c.getContext('2d');
+  let W,H;
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;}
+  resize();
+  window.addEventListener('resize',resize,{passive:true});
+
+  const nodes=Array.from({length:20},()=>({
+    x:Math.random()*1000,y:Math.random()*800,
+    vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,
+    r:Math.random()*2+1,
+    color:['#3B82F6','#22C55E','#A855F7','#D40000'][Math.floor(Math.random()*4)],
+    alpha:Math.random()*.15+.05
+  }));
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+
+    // Background grid
+    ctx.strokeStyle='rgba(255,255,255,.015)';
+    ctx.lineWidth=.5;
+    for(let x=0;x<W;x+=80){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+    for(let y=0;y<H;y+=80){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+
+    // Nodes and connections
+    nodes.forEach(n=>{
+      n.x+=n.vx;n.y+=n.vy;
+      if(n.x<0||n.x>W)n.vx*=-1;
+      if(n.y<0||n.y>H)n.vy*=-1;
+    });
+
+    for(let i=0;i<nodes.length;i++){
+      for(let j=i+1;j<nodes.length;j++){
+        const d=Math.hypot(nodes[i].x-nodes[j].x,nodes[i].y-nodes[j].y);
+        if(d<150){
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x,nodes[i].y);
+          ctx.lineTo(nodes[j].x,nodes[j].y);
+          ctx.strokeStyle=`rgba(59,130,246,${.04*(1-d/150)})`;
+          ctx.lineWidth=.5;ctx.stroke();
+        }
+      }
+    }
+
+    nodes.forEach(n=>{
+      ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+      ctx.fillStyle=n.color;ctx.globalAlpha=n.alpha;ctx.fill();ctx.globalAlpha=1;
+    });
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// PIPELINE CANVAS — animated kanban pipeline
+(function(){
+  const c=document.getElementById('pipelineCanvas');
+  if(!c)return;
+  const ctx=c.getContext('2d');
+  c.width=c.offsetWidth;c.height=c.offsetHeight;
+  const W=c.width,H=c.height;
+
+  const stages=[
+    {label:'НОВИЙ',color:'#3B82F6',cards:[]},
+    {label:'КВАЛІФІКАЦІЯ',color:'#A855F7',cards:[]},
+    {label:'ПРОПОЗИЦІЯ',color:'#F59E0B',cards:[]},
+    {label:'ПЕРЕГОВОРИ',color:'#F97316',cards:[]},
+    {label:'ЗАКРИТО',color:'#22C55E',cards:[]},
+  ];
+
+  // Generate cards
+  const cardNames=['Пивоваров О.','Іваненко К.','Коваль М.','Петренко Р.','Сидоренко В.','Ткаченко І.','Мельник А.'];
+  const cardValues=['$1,200','$800','$3,500','$560','$2,100','$750','$4,200'];
+
+  let cards=cardNames.map((name,i)=>({
+    name,
+    value:cardValues[i],
+    stage:Math.floor(Math.random()*5),
+    x:0,y:0,targetX:0,targetY:0,
+    color:['rgba(59,130,246,.15)','rgba(168,85,247,.15)','rgba(245,158,11,.15)','rgba(249,115,22,.15)','rgba(34,197,94,.15)'][Math.floor(Math.random()*5)]
+  }));
+
+  let t=0;
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    t+=.008;
+
+    const colW=W/stages.length;
+    const pad=8;
+
+    // Move a random card every 3 seconds
+    const moveIdx=Math.floor(t/3)%cards.length;
+    if(Math.floor(t*60)%180===0){
+      const card=cards[moveIdx];
+      if(card.stage<4)card.stage++;
+      else card.stage=0;
+    }
+
+    // Draw columns
+    stages.forEach((stage,si)=>{
+      const x=si*colW;
+
+      // Column header
+      ctx.fillStyle=`${stage.color}22`;
+      ctx.fillRect(x+pad,0,colW-pad*2,32);
+      ctx.strokeStyle=`${stage.color}44`;
+      ctx.lineWidth=.8;
+      ctx.strokeRect(x+pad,0,colW-pad*2,32);
+
+      ctx.fillStyle=stage.color;
+      ctx.font='bold 9px Space Grotesk,sans-serif';
+      ctx.textAlign='center';
+      ctx.fillText(stage.label,x+colW/2,20);
+
+      // Count
+      const count=cards.filter(c=>c.stage===si).length;
+      ctx.fillStyle='rgba(255,255,255,.3)';
+      ctx.font='9px Inter,sans-serif';
+      ctx.fillText(`${count} угод`,x+colW/2,32+12);
+    });
+
+    // Draw cards
+    const stageYOffset={};
+    cards.forEach(card=>{
+      const si=card.stage;
+      if(!stageYOffset[si])stageYOffset[si]=0;
+      const x=si*colW+pad+4;
+      const y=48+stageYOffset[si]*52;
+      stageYOffset[si]++;
+
+      if(y>H-20)return;
+
+      // Card bg
+      ctx.fillStyle=card.color;
+      ctx.strokeStyle=stages[si].color+'44';
+      ctx.lineWidth=.8;
+      ctx.beginPath();ctx.roundRect(x,y,colW-pad*2-8,44,4);
+      ctx.fill();ctx.stroke();
+
+      // Name
+      ctx.fillStyle='rgba(255,255,255,.8)';
+      ctx.font='bold 10px Space Grotesk,sans-serif';
+      ctx.textAlign='left';
+      ctx.fillText(card.name,x+8,y+16);
+
+      // Value
+      ctx.fillStyle=stages[si].color;
+      ctx.font='bold 11px Space Grotesk,sans-serif';
+      ctx.fillText(card.value,x+8,y+32);
+
+      // Active indicator
+      if(cards[moveIdx]===card){
+        ctx.strokeStyle=stages[si].color;
+        ctx.lineWidth=1.5;
+        ctx.beginPath();ctx.roundRect(x,y,colW-pad*2-8,44,4);ctx.stroke();
+      }
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  const obs=new IntersectionObserver(([e])=>{if(e.isIntersecting){draw();obs.disconnect();}});
+  obs.observe(c);
+})();
+
+// HOW CANVAS — data flow between Telegram and CRM
+(function(){
+  const c=document.getElementById('howCanvas');
+  if(!c)return;
+  const ctx=c.getContext('2d');
+  c.width=c.offsetWidth;c.height=c.offsetHeight;
+  const W=c.width,H=c.height;
+
+  let t=0;
+  const packets=[];
+  let lastPacket=0;
+
+  const tgBox={x:20,y:H/2-60,w:120,h:120,label:'TELEGRAM\nBOT',color:'#229ED9'};
+  const crmBox={x:W-140,y:H/2-60,w:120,h:120,label:'CRM\nBITRIX24',color:'#3B82F6'};
+  const midY=H/2;
+
+  function drawBox(box){
+    ctx.fillStyle=`${box.color}11`;
+    ctx.strokeStyle=`${box.color}44`;
+    ctx.lineWidth=1;
+    ctx.beginPath();ctx.roundRect(box.x,box.y,box.w,box.h,8);
+    ctx.fill();ctx.stroke();
+
+    ctx.fillStyle=box.color;
+    ctx.font='bold 10px Space Grotesk,sans-serif';
+    ctx.textAlign='center';
+    const lines=box.label.split('\n');
+    lines.forEach((l,i)=>ctx.fillText(l,box.x+box.w/2,box.y+box.h/2-4+i*16));
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    t+=.016;
+
+    // Connection line
+    ctx.beginPath();
+    ctx.moveTo(tgBox.x+tgBox.w,midY);
+    ctx.lineTo(crmBox.x,midY);
+    ctx.strokeStyle='rgba(59,130,246,.15)';
+    ctx.lineWidth=1;
+    ctx.setLineDash([4,4]);ctx.stroke();ctx.setLineDash([]);
+
+    // Spawn packets
+    if(t-lastPacket>1.5){
+      lastPacket=t;
+      packets.push({
+        x:tgBox.x+tgBox.w,y:midY,
+        dir:Math.random()>.5?1:-1,
+        label:['Новий лід','Статус →','← Задача','Угода!'][Math.floor(Math.random()*4)],
+        color:['#3B82F6','#22C55E','#A855F7','#D40000'][Math.floor(Math.random()*4)],
+        progress:0,speed:.008+Math.random()*.004
+      });
+    }
+
+    // Update and draw packets
+    for(let i=packets.length-1;i>=0;i--){
+      const p=packets[i];
+      p.progress+=p.speed;
+
+      const startX=p.dir===1?tgBox.x+tgBox.w:crmBox.x;
+      const endX=p.dir===1?crmBox.x:tgBox.x+tgBox.w;
+      const px=startX+(endX-startX)*p.progress;
+
+      // Packet dot
+      ctx.beginPath();ctx.arc(px,midY,5,0,Math.PI*2);
+      ctx.fillStyle=p.color;ctx.fill();
+
+      // Glow
+      ctx.beginPath();ctx.arc(px,midY,10,0,Math.PI*2);
+      ctx.fillStyle=p.color+'33';ctx.fill();
+
+      // Label
+      ctx.fillStyle='rgba(255,255,255,.7)';
+      ctx.font='9px Inter,sans-serif';
+      ctx.textAlign='center';
+      ctx.fillText(p.label,px,midY-14);
+
+      if(p.progress>=1)packets.splice(i,1);
+    }
+
+    drawBox(tgBox);
+    drawBox(crmBox);
+
+    // Pulse on boxes
+    [tgBox,crmBox].forEach(box=>{
+      const pulse=.5+.5*Math.sin(t*2);
+      ctx.strokeStyle=`${box.color}${Math.round(pulse*40+10).toString(16)}`;
+      ctx.lineWidth=2;
+      ctx.beginPath();ctx.roundRect(box.x-3,box.y-3,box.w+6,box.h+6,10);ctx.stroke();
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  const obs=new IntersectionObserver(([e])=>{if(e.isIntersecting){draw();obs.disconnect();}});
+  obs.observe(c);
+})();
+
+// CTA BG CANVAS
+(function(){
+  const c=document.getElementById('ctaBgCanvas');
+  if(!c)return;
+  const ctx=c.getContext('2d');
+  let W,H;
+  function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
+  resize();
+
+  const lines=Array.from({length:8},(_,i)=>({
+    y:H*.1+i*(H*.8/7),speed:.3+Math.random()*.3,offset:Math.random()*W
+  }));
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    lines.forEach(l=>{
+      l.offset=(l.offset+l.speed)%W;
+      const grad=ctx.createLinearGradient(0,l.y,W,l.y);
+      grad.addColorStop(0,'transparent');
+      grad.addColorStop((l.offset/W),'rgba(59,130,246,.06)');
+      grad.addColorStop(Math.min(1,(l.offset+100)/W),'rgba(59,130,246,.12)');
+      grad.addColorStop(Math.min(1,(l.offset+200)/W),'rgba(59,130,246,.06)');
+      grad.addColorStop(1,'transparent');
+      ctx.fillStyle=grad;
+      ctx.fillRect(0,l.y-1,W,2);
+    });
+    requestAnimationFrame(draw);
+  }
+
+  const obs=new IntersectionObserver(([e])=>{if(e.isIntersecting){draw();obs.disconnect();}});
+  obs.observe(c);
+})();
+</script>
+</body>
+</html>
