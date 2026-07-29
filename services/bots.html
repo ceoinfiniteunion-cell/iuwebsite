@@ -25,12 +25,33 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Розробка Telegram ботів для бізнесу",
-  "provider": {"@type": "Organization", "name": "Infinite Union", "url": "https://infiniteunion.com.ua"},
-  "description": "Розробка Telegram ботів під ключ: автоматизація продажів, CRM інтеграція, оплати, квізи, розсилки.",
-  "offers": {"@type": "Offer", "price": "300", "priceCurrency": "USD"},
-  "areaServed": "Ukraine"
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://infiniteunion.com.ua/services/bots.html#service",
+      "name": "Розробка Telegram ботів для бізнесу",
+      "provider": {"@id": "https://infiniteunion.com.ua/#organization"},
+      "description": "Розробка Telegram ботів під ключ: воронки продажів, CRM інтеграція, оплати, автоматизація.",
+      "areaServed": ["UA","PL","DE","NL","CZ","SK","GB"],
+      "url": "https://infiniteunion.com.ua/services/bots.html",
+      "offers": {"@type": "Offer","price": "500","priceCurrency": "USD"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Головна","item":"https://infiniteunion.com.ua/"},
+{"@type":"ListItem","position":2,"name":"Telegram боти","item":"https://infiniteunion.com.ua/services/bots.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Скільки коштує розробка Telegram бота?","acceptedAnswer":{"@type":"Answer","text":"Від $500 за базовий бот. Ціна залежить від складності воронки та інтеграцій."}},
+{"@type":"Question","name":"За скільки часу розробляєте бота?","acceptedAnswer":{"@type":"Answer","text":"Базовий бот — 7 днів. Повна воронка з CRM та оплатами — 14 днів."}},
+{"@type":"Question","name":"Чи можна підключити оплату в боті?","acceptedAnswer":{"@type":"Answer","text":"Так, інтегруємо Wayforpay, LiqPay, Monobank — оплата прямо в Telegram."}}
+      ]
+    }
+  ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">

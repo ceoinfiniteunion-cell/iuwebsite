@@ -223,16 +223,26 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
     {
       "@type": "Service",
       "@id": "https://infiniteunion.com.ua/services/seo.html#service",
-      "name": "SEO просування",
+      "name": "SEO просування сайту",
       "provider": {"@id": "https://infiniteunion.com.ua/#organization"},
-      "description": "Комплексне SEO просування сайтів. Аудит, оптимізація, контент, посилання.",
-      "offers": {"@type": "Offer", "price": "400", "priceCurrency": "USD"}
+      "description": "Комплексне SEO просування: технічний аудит, семантичне ядро, контент, посилання. Органічний трафік.",
+      "areaServed": ["UA","PL","DE","NL","CZ","SK","GB"],
+      "url": "https://infiniteunion.com.ua/services/seo.html",
+      "offers": {"@type": "Offer","price": "150","priceCurrency": "USD"}
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://infiniteunion.com.ua/"},
-        {"@type": "ListItem", "position": 2, "name": "SEO просування", "item": "https://infiniteunion.com.ua/services/seo.html"}
+        {"@type":"ListItem","position":1,"name":"Головна","item":"https://infiniteunion.com.ua/"},
+{"@type":"ListItem","position":2,"name":"SEO просування","item":"https://infiniteunion.com.ua/services/seo.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Скільки коштує SEO просування?","acceptedAnswer":{"@type":"Answer","text":"Від $150/місяць за базове ведення. Комплексне просування від $300/місяць."}},
+{"@type":"Question","name":"Коли будуть результати від SEO?","acceptedAnswer":{"@type":"Answer","text":"Перші зміни — через 1-2 місяці. Стабільний ріст позицій — через 3-6 місяців."}},
+{"@type":"Question","name":"Що входить в SEO аудит?","acceptedAnswer":{"@type":"Answer","text":"Технічний аналіз, Core Web Vitals, індексація, семантика, конкурентний аналіз та план виправлень."}}
       ]
     }
   ]

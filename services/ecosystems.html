@@ -25,11 +25,33 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Цифрові екосистеми для бізнесу",
-  "provider": {"@type": "Organization", "name": "Infinite Union", "url": "https://infiniteunion.com.ua"},
-  "description": "Комплексна розробка цифрових екосистем: сайт, Telegram бот, CRM, реклама та аналітика під ключ.",
-  "areaServed": "Ukraine"
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://infiniteunion.com.ua/services/ecosystems.html#service",
+      "name": "Цифрові екосистеми для бізнесу",
+      "provider": {"@id": "https://infiniteunion.com.ua/#organization"},
+      "description": "Розробка цифрових екосистем: сайт + Telegram бот + CRM + реклама + аналітика під ключ.",
+      "areaServed": ["UA","PL","DE","NL","CZ","SK","GB"],
+      "url": "https://infiniteunion.com.ua/services/ecosystems.html",
+      "offers": {"@type": "Offer","price": "2000","priceCurrency": "USD"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Головна","item":"https://infiniteunion.com.ua/"},
+{"@type":"ListItem","position":2,"name":"Цифрові екосистеми","item":"https://infiniteunion.com.ua/services/ecosystems.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Скільки коштує цифрова екосистема?","acceptedAnswer":{"@type":"Answer","text":"Від $2000 залежно від складності. Включає всі компоненти: сайт, бот, CRM, рекламу."}},
+{"@type":"Question","name":"Скільки часу займає розробка екосистеми?","acceptedAnswer":{"@type":"Answer","text":"Від 6 до 12 тижнів залежно від складності та кількості інтеграцій."}},
+{"@type":"Question","name":"Чи можна замовити тільки частину екосистеми?","acceptedAnswer":{"@type":"Answer","text":"Так, кожен компонент можна замовити окремо і поступово розширювати."}}
+      ]
+    }
+  ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">

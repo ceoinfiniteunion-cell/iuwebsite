@@ -223,16 +223,26 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
     {
       "@type": "Service",
       "@id": "https://infiniteunion.com.ua/services/google-ads.html#service",
-      "name": "Google Ads",
+      "name": "Google Реклама — Search, YouTube, Display",
       "provider": {"@id": "https://infiniteunion.com.ua/#organization"},
-      "description": "Налаштування та ведення реклами в Google Ads. Лідогенерація та збільшення продажів.",
-      "offers": {"@type": "Offer", "price": "300", "priceCurrency": "USD"}
+      "description": "Налаштування та ведення Google Ads: пошукова реклама, YouTube, Display. Максимальний ROI.",
+      "areaServed": ["UA","PL","DE","NL","CZ","SK","GB"],
+      "url": "https://infiniteunion.com.ua/services/google-ads.html",
+      "offers": {"@type": "Offer","price": "300","priceCurrency": "USD"}
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://infiniteunion.com.ua/"},
-        {"@type": "ListItem", "position": 2, "name": "Google Ads", "item": "https://infiniteunion.com.ua/services/google-ads.html"}
+        {"@type":"ListItem","position":1,"name":"Головна","item":"https://infiniteunion.com.ua/"},
+{"@type":"ListItem","position":2,"name":"Google Реклама","item":"https://infiniteunion.com.ua/services/google-ads.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Скільки коштує налаштування Google Ads?","acceptedAnswer":{"@type":"Answer","text":"Налаштування від $300. Щомісячне ведення від $200 + рекламний бюджет."}},
+{"@type":"Question","name":"Який мінімальний бюджет для Google реклами?","acceptedAnswer":{"@type":"Answer","text":"Від $200-300 на місяць на рекламний бюджет для отримання перших результатів."}},
+{"@type":"Question","name":"Коли запустите рекламу?","acceptedAnswer":{"@type":"Answer","text":"Запуск кампанії — 48 годин після надання доступу та бриф-сесії."}}
       ]
     }
   ]
