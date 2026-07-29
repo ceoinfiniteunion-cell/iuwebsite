@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Infinite Union website",
   "scripts": {
-    "lint:html": "html-validate index.html services/*.html",
+    "lint:html": "html-validate index.html services/*.html services/**/*.html",
     "lint:css": "stylelint \"src/css/**/*.css\"",
-    "lint:js": "eslint index.html services/*.html",
+    "lint:js": "eslint index.html services/**/*.html",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lhci": "lhci autorun",
     "start": "npx serve . -p $PORT",
