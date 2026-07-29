@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23D40000'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold' font-size='14' fill='white'>IU</text></svg>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Сторінку не знайдено | Infinite Union</title>
+<meta name="robots" content="noindex,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--red:#D40000;--bg:#060404;--border:rgba(255,255,255,.08);--muted:rgba(255,255,255,.4);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;}
+html,body{height:100%;background:var(--bg);color:#fff;font-family:var(--body);overflow:hidden;}
+canvas{position:fixed;inset:0;pointer-events:none;}
+
+.page{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:32px 40px;}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;}
+.logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.14em;text-decoration:none;color:#fff;}
+.logo span{color:var(--red);}
+.status{font-size:11px;letter-spacing:.18em;color:var(--muted);display:flex;align-items:center;gap:8px;}
+.status-dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:blink 1.8s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.2;}}
+
+/* center */
+.center{display:flex;flex-direction:column;align-items:flex-start;}
+.big-num{font-family:var(--font);font-size:clamp(120px,22vw,240px);font-weight:700;line-height:1;letter-spacing:-.05em;color:#fff;position:relative;user-select:none;}
+.big-num::after{content:'404';position:absolute;inset:0;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06);pointer-events:none;}
+
+.msg{margin-top:24px;max-width:480px;}
+.msg-title{font-family:var(--font);font-size:clamp(22px,3vw,36px);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:12px;}
+.msg-title em{font-style:normal;color:var(--red);}
+.msg-sub{font-size:15px;color:var(--muted);line-height:1.7;}
+
+.actions{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;}
+.btn-primary{display:inline-block;background:var(--red);color:#fff;font-family:var(--font);font-size:12px;font-weight:700;letter-spacing:.1em;padding:14px 36px;text-decoration:none;transition:opacity .2s,transform .2s;}
+.btn-primary:hover{opacity:.85;transform:translateY(-2px);}
+.btn-ghost{display:inline-block;border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.1em;padding:14px 28px;text-decoration:none;transition:border-color .2s,transform .2s;}
+.btn-ghost:hover{border-color:rgba(255,255,255,.3);transform:translateY(-2px);}
+
+/* bottom */
+.bottom{display:flex;justify-content:space-between;align-items:flex-end;}
+.bottom-links{display:flex;gap:32px;}
+.bottom-link{font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:.06em;transition:color .2s;}
+.bottom-link:hover{color:#fff;}
+.geo{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.1em;}
+
+@media(max-width:600px){
+  .page{padding:24px 20px;}
+  .actions{flex-direction:column;}
+  .bottom{flex-direction:column;gap:24px;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="page">
+  <div class="top">
+    <a href="/" class="logo">INFINITE <span>UNION</span></a>
+    <div class="status"><span class="status-dot"></span><span>СТОРІНКУ НЕ ЗНАЙДЕНО</span></div>
+  </div>
+
+  <div class="center">
+    <div class="big-num">404</div>
+    <div class="msg">
+      <div class="msg-title">Схоже, ця сторінка<br><em>кудись пішла.</em></div>
+      <p class="msg-sub">Можливо посилання застаріло або сторінку було переміщено. Поверніться на головну або оберіть послугу.</p>
+      <div class="actions">
+        <a href="/" class="btn-primary">← НА ГОЛОВНУ</a>
+        <a href="/#contact" class="btn-ghost">ЗВ'ЯЗАТИСЬ З НАМИ</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="bottom-links">
+      <a href="/services/websites.html" class="bottom-link">Сайти</a>
+      <a href="/services/bots.html" class="bottom-link">Боти</a>
+      <a href="/services/seo.html" class="bottom-link">SEO</a>
+      <a href="/services/google-ads.html" class="bottom-link">Реклама</a>
+    </div>
+    <div class="geo">ХАРКІВ · УКРАЇНА · ЄВРОПА</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const c=document.getElementById('c');
+  const ctx=c.getContext('2d');
+  let W,H;
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;}
+  resize();
+  window.addEventListener('resize',resize,{passive:true});
+
+  // Floating geometric shapes — same as hero.js style
+  const shapes=[];
+  for(let i=0;i<6;i++){
+    shapes.push({
+      x:Math.random()*1000,y:Math.random()*800,
+      vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,
+      sides:Math.floor(Math.random()*3)+3,
+      r:Math.random()*80+20,
+      rot:Math.random()*Math.PI*2,
+      rotV:(Math.random()-.5)*.004,
+      alpha:Math.random()*.05+.02
+    });
+  }
+
+  // Particles
+  const pts=[];
+  for(let i=0;i<60;i++){
+    pts.push({
+      x:Math.random()*1000,y:Math.random()*800,
+      vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,
+      r:Math.random()*1.2+.3
+    });
+  }
+
+  // Mouse parallax
+  let mx=0,my=0;
+  window.addEventListener('mousemove',e=>{mx=(e.clientX/W-.5)*.3;my=(e.clientY/H-.5)*.3;},{passive:true});
+
+  function polygon(x,y,r,sides,rot){
+    ctx.beginPath();
+    for(let i=0;i<sides;i++){
+      const a=rot+(i/sides)*Math.PI*2;
+      i===0?ctx.moveTo(x+Math.cos(a)*r,y+Math.sin(a)*r):ctx.lineTo(x+Math.cos(a)*r,y+Math.sin(a)*r);
+    }
+    ctx.closePath();
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+
+    shapes.forEach(s=>{
+      s.x+=s.vx;s.y+=s.vy;s.rot+=s.rotV;
+      if(s.x<-120)s.x=W+120;if(s.x>W+120)s.x=-120;
+      if(s.y<-120)s.y=H+120;if(s.y>H+120)s.y=-120;
+      polygon(s.x,s.y,s.r,s.sides,s.rot);
+      ctx.strokeStyle=`rgba(212,0,0,${s.alpha})`;
+      ctx.lineWidth=.8;ctx.stroke();
+    });
+
+    pts.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;
+      if(p.y<0||p.y>H)p.vy*=-1;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(212,0,0,.18)';ctx.fill();
+    });
+
+    // Connections
+    for(let i=0;i<pts.length;i++){
+      for(let j=i+1;j<pts.length;j++){
+        const d=Math.hypot(pts[i].x-pts[j].x,pts[i].y-pts[j].y);
+        if(d<90){
+          ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.strokeStyle=`rgba(212,0,0,${.05*(1-d/90)})`;ctx.lineWidth=.4;ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
