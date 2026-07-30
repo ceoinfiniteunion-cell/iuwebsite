@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23D40000'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='bold' font-size='14' fill='white'>IU</text></svg>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Блог Infinite Union: корисні статті про розробку сайтів, Telegram ботів, SEO просування та digital маркетинг для українського бізнесу.">
+<meta name="keywords" content="блог розробка сайтів, статті seo, digital маркетинг україна, веб розробка блог, telegram боти статті">
+<title>Блог Infinite Union — статті про розробку сайтів, SEO та digital маркетинг</title>
+<link rel="canonical" href="https://infiniteunion.com.ua/blog/">
+<link rel="alternate" hreflang="uk" href="https://infiniteunion.com.ua/blog/">
+<link rel="alternate" hreflang="x-default" href="https://infiniteunion.com.ua/blog/">
+<meta property="og:title" content="Блог Infinite Union — розробка сайтів, SEO, digital маркетинг">
+<meta property="og:description" content="Корисні статті для підприємців: як замовити сайт, скільки коштує Telegram бот, Google Ads чи SEO — та інші реальні питання бізнесу.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://infiniteunion.com.ua/blog/">
+<meta property="og:locale" content="uk_UA">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "name": "Блог Infinite Union",
+      "url": "https://infiniteunion.com.ua/blog/",
+      "description": "Корисні статті про розробку сайтів, Telegram ботів, SEO та digital маркетинг для українського бізнесу.",
+      "publisher": {"@id": "https://infiniteunion.com.ua/#organization"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://infiniteunion.com.ua/"},
+        {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://infiniteunion.com.ua/blog/"}
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--red:#D40000;--bg:#060404;--bg2:#0e0b0b;--border:rgba(255,255,255,.08);--muted:rgba(255,255,255,.45);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:#fff;font-family:var(--body);}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(6,4,4,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.12em;color:#fff;}
+.nav-logo span{color:var(--red);}
+.nav-links{display:flex;gap:32px;align-items:center;}
+.nav-link{font-size:13px;color:var(--muted);transition:color .2s;}
+.nav-link:hover{color:#fff;}
+.nav-link.active{color:#fff;}
+.nav-cta{background:var(--red);color:#fff;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.1em;padding:9px 22px;}
+
+.hero{padding:80px 40px 60px;max-width:1100px;margin:0 auto;}
+.hero-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
+.hero-title{font-family:var(--font);font-size:clamp(40px,6vw,80px);font-weight:700;line-height:.95;letter-spacing:-.03em;margin-bottom:20px;}
+.hero-title em{font-style:normal;color:var(--red);}
+.hero-sub{font-size:17px;color:var(--muted);line-height:1.6;max-width:500px;}
+
+.filters{padding:0 40px 32px;max-width:1100px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;}
+.filter{padding:7px 18px;border:1px solid var(--border);font-size:12px;font-family:var(--font);font-weight:600;letter-spacing:.08em;cursor:pointer;transition:all .2s;background:none;color:var(--muted);}
+.filter:hover,.filter.active{background:var(--red);border-color:var(--red);color:#fff;}
+
+.posts{padding:0 40px 80px;max-width:1100px;margin:0 auto;}
+.featured{display:grid;grid-template-columns:1.5fr 1fr;gap:24px;margin-bottom:24px;}
+.post-card{border:1px solid var(--border);padding:36px;display:block;transition:border-color .3s,transform .3s;}
+.post-card:hover{border-color:rgba(212,0,0,.4);transform:translateY(-3px);}
+.post-card.featured-card{padding:48px;}
+.post-tag{font-size:10px;letter-spacing:.18em;color:var(--red);font-family:var(--font);font-weight:700;margin-bottom:14px;}
+.post-title{font-family:var(--font);font-size:clamp(18px,2.5vw,26px);font-weight:700;line-height:1.2;letter-spacing:-.01em;margin-bottom:12px;color:#fff;}
+.featured-card .post-title{font-size:clamp(22px,3vw,34px);}
+.post-excerpt{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;}
+.post-meta{display:flex;gap:16px;align-items:center;font-size:12px;color:rgba(255,255,255,.3);}
+.post-meta span{display:flex;align-items:center;gap:4px;}
+.read-link{font-size:12px;color:var(--red);font-family:var(--font);font-weight:600;letter-spacing:.08em;margin-top:16px;display:inline-block;}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+
+.divider{border:none;border-top:1px solid var(--border);margin:48px 0;}
+
+.section-label{font-size:11px;letter-spacing:.2em;color:var(--muted);font-family:var(--font);font-weight:600;margin-bottom:24px;}
+
+.cta-section{background:var(--bg2);border-top:1px solid var(--border);padding:80px 40px;text-align:center;}
+.cta-section h2{font-family:var(--font);font-size:clamp(32px,5vw,60px);font-weight:700;line-height:1;letter-spacing:-.03em;margin-bottom:20px;}
+.cta-section h2 em{font-style:normal;color:var(--red);}
+.cta-section p{font-size:16px;color:var(--muted);margin-bottom:36px;}
+.cta-btn{display:inline-block;background:var(--red);color:#fff;font-family:var(--font);font-size:13px;font-weight:700;letter-spacing:.1em;padding:16px 44px;transition:opacity .2s;}
+.cta-btn:hover{opacity:.85;}
+
+footer{border-top:1px solid var(--border);padding:32px 40px;display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.1em;color:#fff;}
+.footer-logo span{color:var(--red);}
+.footer-copy{font-size:12px;color:var(--muted);}
+
+@media(max-width:900px){.featured{grid-template-columns:1fr;}.grid-3{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){nav{padding:14px 20px;}.nav-links{display:none;}.hero,.filters,.posts{padding-left:20px;padding-right:20px;}.grid-3{grid-template-columns:1fr;}.cta-section{padding:60px 20px;}footer{flex-direction:column;gap:12px;text-align:center;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/index.html" class="nav-logo">INFINITE <span>UNION</span></a>
+  <div class="nav-links">
+    <a href="/services/websites/" class="nav-link">Сайти</a>
+    <a href="/services/bots/" class="nav-link">Боти</a>
+    <a href="/services/seo/" class="nav-link">SEO</a>
+    <a href="/blog/" class="nav-link active">Блог</a>
+  </div>
+  <a href="/index.html#contact" class="nav-cta">ЗВ'ЯЗАТИСЬ</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">БЛОГ · ЗНАННЯ · КЕЙСИ</div>
+  <h1 class="hero-title">Digital для<br>бізнесу що<br><em>заробляє.</em></h1>
+  <p class="hero-sub">Корисні статті про розробку сайтів, Telegram боти, SEO та маркетинг. Без води — тільки те що реально працює.</p>
+</div>
+
+<div class="filters">
+  <button class="filter active">Всі статті</button>
+  <button class="filter">Розробка сайтів</button>
+  <button class="filter">Telegram боти</button>
+  <button class="filter">SEO</button>
+  <button class="filter">Реклама</button>
+</div>
+
+<div class="posts">
+
+  <!-- Featured posts -->
+  <div class="featured">
+    <a href="/blog/skilky-koshtuye-sayt-2026/" class="post-card featured-card">
+      <div class="post-tag">РОЗРОБКА САЙТІВ</div>
+      <div class="post-title">Скільки коштує розробка сайту в 2026 році: реальні ціни та що впливає на вартість</div>
+      <div class="post-excerpt">Лендінг від $300, корпоративний від $800, магазин від $1200. Пояснюємо від чого залежить ціна і як не переплатити — з реальними таблицями цін.</div>
+      <div class="post-meta">
+        <span>30 липня 2026</span>
+        <span>9 хв читання</span>
+      </div>
+      <div class="read-link">Читати статтю →</div>
+    </a>
+    <a href="/blog/zamovyty-sayt-kharkiv/" class="post-card featured-card">
+      <div class="post-tag">ХАРКІВ</div>
+      <div class="post-title">Замовити сайт у Харкові: як вибрати студію і не помилитись</div>
+      <div class="post-excerpt">Що запитати у студії перед підписанням договору, на що звернути увагу в портфоліо та які червоні прапори вказують на проблемного виконавця.</div>
+      <div class="post-meta">
+        <span>30 липня 2026</span>
+        <span>7 хв читання</span>
+      </div>
+      <div class="read-link">Читати статтю →</div>
+    </a>
+  </div>
+
+  <hr class="divider">
+  <div class="section-label">НОВІ СТАТТІ</div>
+
+  <div class="grid-3">
+    <a href="/blog/telegram-bot-dlya-biznesu/" class="post-card">
+      <div class="post-tag">TELEGRAM БОТИ</div>
+      <div class="post-title">Telegram бот для бізнесу: що це, скільки коштує і кому потрібен</div>
+      <div class="post-excerpt">Повний гід: від вибору функцій до реальних цін. Коли бот окупається і для яких ніш підходить найкраще.</div>
+      <div class="post-meta">
+        <span>30 липня 2026</span>
+        <span>8 хв</span>
+      </div>
+      <div class="read-link">Читати →</div>
+    </a>
+    <a href="/blog/google-ads-chy-seo/" class="post-card">
+      <div class="post-tag">МАРКЕТИНГ</div>
+      <div class="post-title">Google Ads чи SEO: що краще для бізнесу і коли що використовувати</div>
+      <div class="post-excerpt">Детальне порівняння з таблицями та реальним прикладом. Спойлер: правильна відповідь — "і те і інше, але по-різному".</div>
+      <div class="post-meta">
+        <span>30 липня 2026</span>
+        <span>8 хв</span>
+      </div>
+      <div class="read-link">Читати →</div>
+    </a>
+    <a href="/blog/seo-audit-shcho-tse/" class="post-card">
+      <div class="post-tag">SEO</div>
+      <div class="post-title">SEO аудит сайту: що це, що перевіряється і навіщо він потрібен</div>
+      <div class="post-excerpt">Чому 70% українських сайтів не виходять в топ через технічні помилки і як SEO аудит допомагає їх знайти.</div>
+      <div class="post-meta">
+        <span>30 липня 2026</span>
+        <span>7 хв</span>
+      </div>
+      <div class="read-link">Читати →</div>
+    </a>
+  </div>
+
+</div>
+
+<div class="cta-section">
+  <h2>Є питання про<br>ваш <em>проєкт?</em></h2>
+  <p>Напишіть нам — відповімо за 15 хвилин і дамо чесну оцінку вашої ситуації.</p>
+  <a href="https://t.me/infiniteunion_manager" class="cta-btn" rel="noopener noreferrer">НАПИСАТИ В TELEGRAM</a>
+</div>
+
+<footer>
+  <a href="/index.html" class="footer-logo">INFINITE <span>UNION</span></a>
+  <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
+</footer>
+
+</body>
+</html>
