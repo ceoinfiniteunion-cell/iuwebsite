@@ -2,6 +2,7 @@ import * as THREE from 'three';
 
 !function() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.innerWidth < 768) return;
     const e = document.getElementById("hero-3d");
     if (!e) return;
     const t = () => e.width = window.innerWidth,

@@ -3,6 +3,7 @@
         e = document.getElementById("gs-globe");
     document.getElementById("gs-line"), document.getElementById("gs-dot-marker"), document.getElementById("gs-connector");
     if (!t || !e) return;
+    if (window.innerWidth < 768) { if(t) t.style.display="none"; return; }
     const i = [{
         phi: -4.974,
         lat: 49.99,
@@ -169,6 +170,7 @@ function() {
     const t = document.getElementById("process"),
         e = document.getElementById("proc-waves");
     if (!t || !e) return;
+    if (window.innerWidth < 768) { if(t) t.style.display="none"; return; }
     const i = e.getContext("2d"),
         n = Array.from(t.querySelectorAll(".proc-step")),
         o = (n.length, window.matchMedia("(prefers-reduced-motion:reduce)").matches);
