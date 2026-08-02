@@ -94,7 +94,7 @@ document.querySelectorAll("[data-target]").forEach(e => co.observe(e)),
                 })
             }).then(e => {
                 if (clearTimeout(r), !e.ok) throw new Error("server");
-                n.style.display = "none", document.getElementById("cOk").style.display = "block"
+                n.style.display = "none", document.getElementById("cOk").style.display = "block"; if(typeof gtag !== "undefined"){ gtag("event", "conversion", {"send_to": "AW-18360841103/YwDACNqs1tocEI_nkLNE", "value": 1.0, "currency": "UAH"}); }
             }).catch(e => {
                 clearTimeout(r), n.disabled = !1, n.textContent = "Надіслати →",
                     function(e, t) {
