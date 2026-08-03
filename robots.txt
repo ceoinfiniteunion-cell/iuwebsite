@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Disallow: /services/privacy.html
+Disallow: /services/privacy/
 
 Sitemap: https://infiniteunion.com.ua/sitemap.xml
 
