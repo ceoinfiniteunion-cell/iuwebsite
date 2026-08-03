@@ -1,4 +1,4 @@
-const CACHE = 'iu-1785673507325';
+const CACHE = 'iu-1785770514647';
 const STATIC = [
   '/',
   '/assets/css/main.css',
@@ -35,6 +35,10 @@ self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   if (e.request.url.includes('api.infiniteunion')) return;
   if (e.request.url.includes('cloudinary')) return;
+  if (e.request.url.includes('googletagmanager')) return;
+  if (e.request.url.includes('google-analytics')) return;
+  if (e.request.url.includes('googleads')) return;
+  if (e.request.url.includes('doubleclick')) return;
 
   e.respondWith(
     caches.match(e.request).then(cached => {
