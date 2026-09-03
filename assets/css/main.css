@@ -132,3 +132,19 @@ body { overflow-x:hidden!important; overscroll-behavior:none!important; }
   text-transform:uppercase;color:rgba(237,232,229,0.2);
 }
 }
+
+@media(max-width:768px){
+/* Прибираємо пустий блок після stats */
+#services .sec-in--services-header{padding-top:48px!important;padding-bottom:0!important}
+
+/* Ховаємо діаграму черги на мобілці */
+.proc-sticky-wrap, .stack-flow, .stack-highlight, .stack-tags{display:none!important}
+
+/* Прибираємо стрибки при кліку на посилання в mobile hero */
+#mobile-hero .mh-srv{scroll-behavior:auto}
+html{scroll-behavior:auto}
+
+/* Пустий простір між секціями */
+#stats + section{margin-top:0!important}
+.sec-in--services-header{padding-top:60px!important}
+}
