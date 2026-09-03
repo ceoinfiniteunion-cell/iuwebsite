@@ -58,3 +58,77 @@ body { overflow-x:hidden!important; overscroll-behavior:none!important; }
 @media (min-width:769px){
 #mobile-hero{display:none!important}
 }
+
+/* ===== MOBILE HERO ===== */
+#mobile-hero{display:none}
+@media(max-width:768px){
+#snake-intro{display:none!important}
+#mobile-hero{
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  background:#0a0706;
+  position:relative;
+  overflow:hidden;
+}
+#mobile-hero::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#D40000 40%,#D40000 60%,transparent);
+}
+.mh-inner{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:100vh;
+  padding:100px 24px 48px;
+}
+.mh-label{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:10px;font-weight:600;
+  letter-spacing:.3em;text-transform:uppercase;
+  color:#D40000;margin-bottom:24px;
+}
+.mh-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(52px,14vw,80px);
+  font-weight:700;letter-spacing:-.04em;
+  line-height:.92;color:#EDE8E5;margin-bottom:20px;
+}
+.mh-title span{color:#D40000;display:block}
+.mh-sub{font-size:15px;color:#8A8080;line-height:1.7;margin-bottom:40px}
+.mh-cta{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:18px 32px;background:#D40000;color:#fff;
+  font-family:'Space Grotesk',sans-serif;font-size:11px;
+  font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;
+}
+.mh-services{
+  display:flex;flex-direction:column;
+  border-top:1px solid rgba(237,232,229,0.07);
+  margin-bottom:24px;
+}
+.mh-srv{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 0;
+  border-bottom:1px solid rgba(237,232,229,0.07);
+  text-decoration:none;
+}
+.mh-srv-n{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:10px;color:#8A8080;letter-spacing:.16em;width:28px;
+}
+.mh-srv-name{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:16px;font-weight:600;color:#EDE8E5;flex:1;
+}
+.mh-srv svg{color:#D40000;flex-shrink:0}
+.mh-coords{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:9px;letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(237,232,229,0.2);
+}
+}
