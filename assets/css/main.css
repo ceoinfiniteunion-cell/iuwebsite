@@ -18,3 +18,43 @@ html,body{width:100vw!important;max-width:100vw!important;overflow-x:hidden!impo
 body::after{display:none!important}
 #snake-intro,.si-sticky,#hero-snake-c,section,.ct-new,.ct-new-l,.ct-new-r,.sec,.sec-in{max-width:100vw!important;width:100%!important;box-sizing:border-box!important}
 }
+
+@media (max-width:768px){
+/* Вимикаємо важкі 3D елементи */
+#gs-globe, #pf-globe, #hero-3d, .globe-scroll-outer,
+.proc-waves-canvas, .stack-node__spider,
+.o-tip, #orbit-svg { display:none!important }
+
+/* Вимикаємо всі анімації і transitions */
+*, *::before, *::after {
+  animation-duration:0.001ms!important;
+  animation-iteration-count:1!important;
+  transition-duration:0.001ms!important;
+  scroll-behavior:auto!important;
+}
+
+/* Фіксуємо scroll jumping */
+html { overflow-x:hidden!important; }
+body { overflow-x:hidden!important; overscroll-behavior:none!important; }
+
+/* Вимикаємо sticky елементи що викликають стрибки */
+.globe-scroll-sticky { position:relative!important; height:auto!important; }
+#snake-intro { height:auto!important; }
+.si-sticky { position:relative!important; height:90vh!important; }
+}
+
+@media (max-width:768px){
+#snake-intro{display:none!important}
+}
+
+@media (max-width:768px){
+/* Ховаємо змію повністю */
+#snake-intro{display:none!important}
+
+/* Мобільний hero */
+#mobile-hero{display:flex!important}
+}
+
+@media (min-width:769px){
+#mobile-hero{display:none!important}
+}

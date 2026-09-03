@@ -164,6 +164,11 @@
 .ct-new-btn--call{border-color:rgba(212,0,0,0.3);color:#D40000}
 .ct-new-btn--call:hover{border-color:#D40000;background:rgba(212,0,0,0.05)}
 @media(max-width:600px){.ct-new-contacts{grid-template-columns:1fr}}
+</style><style>
+.ct-new-online{display:flex;align-items:center;gap:12px;padding:20px 24px;border:1px solid rgba(212,0,0,0.25);font-family:'Space Grotesk',sans-serif;font-size:14px;color:#8A8080}
+.ct-new-online strong{color:#EDE8E5}
+.ct-new-dot{width:8px;height:8px;border-radius:50%;background:#D40000;flex-shrink:0;box-shadow:0 0 8px rgba(212,0,0,0.8);animation:dotPulse 2s ease-in-out infinite}
+@keyframes dotPulse{0%,100%{opacity:1}50%{opacity:.3}}
 </style></head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -210,6 +215,40 @@
 
 <!-- HERO -->
 <main id="main-content">
+<!-- MOBILE HERO -->
+<section id="mobile-hero" style="display:none;min-height:100vh;background:#0a0706;flex-direction:column;justify-content:space-between;padding:100px 24px 48px;position:relative;overflow:hidden">
+  <style>
+  #mobile-hero::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#D40000 40%,#D40000 60%,transparent)}
+  #mobile-hero::after{content:"";position:absolute;bottom:0;left:-40%;width:180%;height:60%;background:radial-gradient(ellipse at 50% 100%,rgba(212,0,0,0.12),transparent 60%);pointer-events:none}
+  .mh-label{font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#D40000;margin-bottom:32px}
+  .mh-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(52px,14vw,80px);font-weight:700;letter-spacing:-.04em;line-height:.92;color:#EDE8E5;margin-bottom:24px}
+  .mh-title span{color:#D40000;display:block}
+  .mh-sub{font-size:15px;color:#8A8080;line-height:1.7;max-width:300px;margin-bottom:48px}
+  .mh-cta{display:inline-flex;align-items:center;gap:12px;padding:18px 32px;background:#D40000;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;margin-bottom:48px}
+  .mh-services{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(237,232,229,0.07)}
+  .mh-srv{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(237,232,229,0.07);text-decoration:none}
+  .mh-srv-n{font-family:'Space Grotesk',sans-serif;font-size:10px;color:#8A8080;letter-spacing:.16em;width:32px}
+  .mh-srv-name{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;color:#EDE8E5;flex:1}
+  .mh-srv-arr{color:#D40000}
+  .mh-coords{font-family:'Space Grotesk',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(237,232,229,0.2);margin-top:32px}
+  </style>
+  <div>
+    <div class="mh-label">Digital Agency · Kharkiv</div>
+    <h1 class="mh-title">Infinite<span>Union</span></h1>
+    <p class="mh-sub">Цифрові продукти що генерують прибуток. Від ідеї до продакшну.</p>
+    <a href="#contact" class="mh-cta">Замовити проект <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+  <div>
+    <div class="mh-services">
+      <a href="/services/websites/" class="mh-srv"><span class="mh-srv-n">01</span><span class="mh-srv-name">Конверсійні сайти</span><span class="mh-srv-arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span></a>
+      <a href="/services/bots/" class="mh-srv"><span class="mh-srv-n">02</span><span class="mh-srv-name">Telegram боти</span><span class="mh-srv-arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span></a>
+      <a href="/services/google-ads/" class="mh-srv"><span class="mh-srv-n">03</span><span class="mh-srv-name">Google · Meta Ads</span><span class="mh-srv-arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span></a>
+      <a href="/services/seo/" class="mh-srv"><span class="mh-srv-n">04</span><span class="mh-srv-name">SEO просування</span><span class="mh-srv-arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span></a>
+    </div>
+    <div class="mh-coords">49° 59′ N · 36° 14′ E · Kharkiv, Ukraine</div>
+  </div>
+</section>
+
 <section id="snake-intro">
   <div class="si-sticky">
     <h1 class="si-bg-text">INFINITE</h1>
@@ -600,11 +639,9 @@ input[type=date].fg-new-date{color:#0a0a0a;color-scheme:light}
         <h2 class="ct-new-title">Готові<br><span>до росту?</span></h2>
       </div>
       <p class="ct-new-desc">Відповідаємо в будь-який час доби протягом <strong style="color:#EDE8E5">5–10 хвилин.</strong> Без вихідних. Перша консультація — безкоштовно.</p>
-      <div class="ct-new-stats">
-        <div class="ct-new-stat"><div class="ct-new-stat-n">50+</div><div class="ct-new-stat-l">Проєктів</div></div>
-        <div class="ct-new-stat"><div class="ct-new-stat-n">7 днів</div><div class="ct-new-stat-l">До запуску</div></div>
-        <div class="ct-new-stat"><div class="ct-new-stat-n">+340%</div><div class="ct-new-stat-l">Конверсія</div></div>
-        <div class="ct-new-stat"><div class="ct-new-stat-n">24/7</div><div class="ct-new-stat-l">Підтримка</div></div>
+      <div class="ct-new-online">
+        <span class="ct-new-dot"></span>
+        <span>На зв'язку <strong>24/7</strong> — відповімо протягом 5–10 хвилин</span>
       </div>
       <div class="ct-new-contacts">
         <a href="https://t.me/infiniteunion_manager" target="_blank" class="ct-new-btn ct-new-btn--tg">
