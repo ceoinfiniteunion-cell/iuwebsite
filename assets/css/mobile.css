@@ -1,0 +1,38 @@
+/* BURGER MENU */
+.mob{position:fixed!important;top:0!important;left:0!important;width:100%!important;height:100%!important;z-index:9999!important;display:none!important;background:#060303!important}
+.mob::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#D40000 40%,#D40000 60%,transparent);z-index:10}
+.mob.open{display:flex!important;flex-direction:column!important}
+.mob-inner{display:flex!important;flex-direction:column!important;width:100%!important;height:100%!important}
+.mob-header{display:flex!important;align-items:center!important;justify-content:space-between!important;padding:20px 24px!important;border-bottom:1px solid rgba(237,232,229,0.06)!important;flex-shrink:0!important}
+.mob-logo{font-family:'Space Grotesk',sans-serif!important;font-size:11px!important;font-weight:600!important;letter-spacing:.36em!important;text-transform:uppercase!important;color:#EDE8E5!important}
+.mob-logo span{color:#D40000!important}
+.mob-x{background:none!important;border:1px solid rgba(237,232,229,0.15)!important;color:#EDE8E5!important;cursor:pointer!important;width:32px!important;height:32px!important;display:flex!important;align-items:center!important;justify-content:center!important;flex-shrink:0!important}
+.mob-nav{flex:none!important;display:flex!important;flex-direction:column!important;padding:8px 0!important;position:relative!important}
+.mob-link{display:flex!important;align-items:center!important;gap:14px!important;padding:11px 24px!important;border-bottom:1px solid rgba(237,232,229,0.04)!important;text-decoration:none!important;position:relative!important;opacity:0!important;transform:translateX(-16px)!important;transition:opacity .3s ease,transform .3s ease,background .2s!important}
+.mob.open .mob-link{opacity:1!important;transform:none!important}
+.mob.open .mob-link:nth-child(1){transition-delay:.04s!important}
+.mob.open .mob-link:nth-child(2){transition-delay:.08s!important}
+.mob.open .mob-link:nth-child(3){transition-delay:.12s!important}
+.mob.open .mob-link:nth-child(4){transition-delay:.16s!important}
+.mob-link::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:#D40000;transform:scaleY(0);transition:transform .25s cubic-bezier(0.76,0,0.24,1);transform-origin:bottom}
+.mob-link:hover{background:rgba(237,232,229,0.02)!important}
+.mob-link:hover::before{transform:scaleY(1)}
+.mob-link-num{font-family:'Space Grotesk',sans-serif!important;font-size:9px!important;letter-spacing:.16em!important;color:rgba(237,232,229,0.18)!important;width:22px!important;flex-shrink:0!important}
+.mob-link-name{font-family:'Space Grotesk',sans-serif!important;font-size:22px!important;font-weight:700!important;letter-spacing:-.03em!important;color:#EDE8E5!important;flex:1!important;transition:color .2s!important}
+.mob-link:hover .mob-link-name{color:#D40000!important}
+.mob-link svg{color:rgba(237,232,229,0.12)!important;flex-shrink:0!important;transition:color .2s,transform .2s!important}
+.mob-link:hover svg{color:#D40000!important;transform:translate(3px,-3px)!important}
+
+/* CTA SECTION */
+.mob-cta-section{padding:16px 24px!important;border-top:1px solid rgba(237,232,229,0.06)!important;flex:1!important;display:flex!important;flex-direction:column!important;gap:12px!important;justify-content:flex-end!important}
+.mob-cta-btn{display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;padding:16px!important;background:#D40000!important;color:#fff!important;font-family:'Space Grotesk',sans-serif!important;font-size:11px!important;font-weight:700!important;letter-spacing:.14em!important;text-transform:uppercase!important;text-decoration:none!important;transition:opacity .2s!important}
+.mob-cta-btn:hover{opacity:.85!important}
+.mob-contacts{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+.mob-contact-btn{display:flex!important;align-items:center!important;gap:8px!important;padding:11px 14px!important;border:1px solid rgba(237,232,229,0.1)!important;color:#8A8080!important;font-family:'Space Grotesk',sans-serif!important;font-size:11px!important;font-weight:600!important;letter-spacing:.06em!important;text-transform:uppercase!important;text-decoration:none!important;transition:border-color .2s,color .2s!important}
+.mob-contact-btn:hover{border-color:#D40000!important;color:#D40000!important}
+.mob-contact-btn:last-child{border-color:rgba(212,0,0,0.25)!important;color:#D40000!important}
+.mob-contact-btn svg{flex-shrink:0!important}
+
+@media(max-width:900px){
+.ct-new-title{margin-bottom:28px!important}
+}

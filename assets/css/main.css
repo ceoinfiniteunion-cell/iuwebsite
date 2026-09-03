@@ -161,24 +161,3 @@ html{scroll-behavior:auto!important}
 
 .ct-new-btn{border-color:rgba(237,232,229,0.3)!important}
 .ct-new-btn--call{border-color:rgba(212,0,0,0.5)!important}
-
-/* ===== BURGER MENU ===== */
-.mob{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;display:none;background:#0a0706}
-.mob.open{display:flex;flex-direction:column}
-.mob-inner{display:flex;flex-direction:column;width:100%;height:100%;padding:0}
-.mob-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid rgba(237,232,229,0.07);flex-shrink:0}
-.mob-logo{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#EDE8E5}
-.mob-logo span{color:#D40000}
-.mob-x{background:none;border:1px solid rgba(237,232,229,0.2);color:#EDE8E5;cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.mob-nav{flex:1;display:flex;flex-direction:column;padding:8px 0;overflow-y:auto}
-.mob-link{display:flex;align-items:center;gap:16px;padding:20px 24px;border-bottom:1px solid rgba(237,232,229,0.07);text-decoration:none;color:#EDE8E5;opacity:1;transform:none}
-.mob-link:hover,.mob-link--cta{color:#D40000}
-.mob-link-num{font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:.16em;width:24px;flex-shrink:0}
-.mob-link-name{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;letter-spacing:-.02em;flex:1;color:#EDE8E5}
-.mob-link--cta .mob-link-name{color:#D40000}
-.mob-footer{padding:20px 24px;border-top:1px solid rgba(237,232,229,0.07);display:flex;align-items:center;gap:16px;flex-shrink:0}
-.mob-social{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(237,232,229,0.15);color:#8A8080;text-decoration:none}
-.mob-footer-text{font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(237,232,229,0.2);margin-left:auto}
-
-.mob-link{opacity:1!important;transform:none!important;display:flex!important}
-.mob-nav{position:relative!important;flex:1!important;display:flex!important;flex-direction:column!important;overflow-y:auto!important}
