@@ -118,7 +118,7 @@
   ]
 }
 </script>
-  <noscript></noscript>
+  <noscript><style>@media(max-width:768px){.rev,.rev.v,.dir-item,#portfolio .gs-cards-row .gs-card{opacity:1!important;transform:none!important}}</style></noscript>
   <meta name="theme-color" content="#D40000">
   <script
     src="https://js-de.sentry-cdn.com/bb98cf6e98bd2742343eeff2758f291b.min.js"
@@ -170,20 +170,6 @@
 .ct-new-online strong{color:#EDE8E5}
 .ct-new-dot{width:8px;height:8px;border-radius:50%;background:#D40000;flex-shrink:0;box-shadow:0 0 8px rgba(212,0,0,0.8);animation:dotPulse 2s ease-in-out infinite}
 @keyframes dotPulse{0%,100%{opacity:1}50%{opacity:.3}}
-</style><style>
-  #mobile-hero::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#D40000 40%,#D40000 60%,transparent)}
-  #mobile-hero::after{content:"";position:absolute;bottom:0;left:-40%;width:180%;height:60%;background:radial-gradient(ellipse at 50% 100%,rgba(212,0,0,0.12),transparent 60%);pointer-events:none}
-  .mh-label{font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#D40000;margin-bottom:32px}
-  .mh-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(52px,14vw,80px);font-weight:700;letter-spacing:-.04em;line-height:.92;color:#EDE8E5;margin-bottom:24px}
-  .mh-title span{color:#D40000;display:block}
-  .mh-sub{font-size:15px;color:#8A8080;line-height:1.7;max-width:300px;margin-bottom:48px}
-  .mh-cta{display:inline-flex;align-items:center;gap:12px;padding:18px 32px;background:#D40000;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;margin-bottom:48px}
-  .mh-services{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(237,232,229,0.07)}
-  .mh-srv{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(237,232,229,0.07);text-decoration:none}
-  .mh-srv-n{font-family:'Space Grotesk',sans-serif;font-size:10px;color:#8A8080;letter-spacing:.16em;width:32px}
-  .mh-srv-name{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;color:#EDE8E5;flex:1}
-  .mh-srv-arr{color:#D40000}
-  .mh-coords{font-family:'Space Grotesk',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(237,232,229,0.2);margin-top:32px}
 </style>
 </head>
 <body>
@@ -223,6 +209,7 @@
   <div class="burger" id="burger"><span></span><span></span><span></span></div>
 </nav>
 <div class="mob" id="mob">
+  <div class="mob-backdrop" aria-hidden="true"></div>
   <div class="mob-inner">
     <div class="mob-header">
       <div class="mob-logo">INFINITE <span>UNION</span></div>
@@ -314,10 +301,11 @@
 </section>
 <!-- MOBILE HERO -->
 <section id="mobile-hero">
+  <div class="mh-noise" aria-hidden="true"></div>
   <div class="mh-inner">
     <div class="mh-top">
       <div class="mh-label">Digital Agency · Kharkiv</div>
-      <h1 class="mh-title">Infinite<br><span>Union</span></h1>
+      <h1 class="mh-title"><span class="mh-tw"><span class="mh-tw-i">Infinite</span></span><span class="mh-title-2">Union</span></h1>
       <p class="mh-sub">Цифрові продукти що генерують прибуток. Від ідеї до продакшну.</p>
       <a href="#contact" class="mh-cta">Замовити проект
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -975,5 +963,13 @@ input[type=date].fg-new-date{color:#0a0a0a;color-scheme:light}
   <script type="module" src="assets/js/snake.js"></script>
   <script defer src="assets/js/orbit.js"></script>
   <script defer src="assets/js/globe.js"></script>
+  <!-- GSAP (+ ScrollTrigger, TextPlugin) is vendored locally (not loaded
+       from cdnjs) because the CSP script-src allowlist does not include
+       cdnjs.cloudflare.com — same pattern already used for three.js in
+       /vendor. mobile-animations.js only fetches those vendor files at all
+       on <=768px viewports (same one-time innerWidth gate hero.js/snake.js/
+       globe.js already use for their own desktop/mobile-only code), so
+       desktop visitors never pay for GSAP's ~126KB. -->
+  <script defer src="assets/js/mobile-animations.js"></script>
 </body>
 </html>

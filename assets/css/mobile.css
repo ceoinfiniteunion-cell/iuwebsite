@@ -1,38 +1,535 @@
-/* BURGER MENU */
-.mob{position:fixed!important;top:0!important;left:0!important;width:100%!important;height:100%!important;z-index:9999!important;display:none!important;background:#060303!important}
-.mob::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#D40000 40%,#D40000 60%,transparent);z-index:10}
-.mob.open{display:flex!important;flex-direction:column!important}
-.mob-inner{display:flex!important;flex-direction:column!important;width:100%!important;height:100%!important}
-.mob-header{display:flex!important;align-items:center!important;justify-content:space-between!important;padding:20px 24px!important;border-bottom:1px solid rgba(237,232,229,0.06)!important;flex-shrink:0!important}
-.mob-logo{font-family:'Space Grotesk',sans-serif!important;font-size:11px!important;font-weight:600!important;letter-spacing:.36em!important;text-transform:uppercase!important;color:#EDE8E5!important}
-.mob-logo span{color:#D40000!important}
-.mob-x{background:none!important;border:1px solid rgba(237,232,229,0.15)!important;color:#EDE8E5!important;cursor:pointer!important;width:32px!important;height:32px!important;display:flex!important;align-items:center!important;justify-content:center!important;flex-shrink:0!important}
-.mob-nav{flex:none!important;display:flex!important;flex-direction:column!important;padding:8px 0!important;position:relative!important}
-.mob-link{display:flex!important;align-items:center!important;gap:14px!important;padding:11px 24px!important;border-bottom:1px solid rgba(237,232,229,0.04)!important;text-decoration:none!important;position:relative!important;opacity:0!important;transform:translateX(-16px)!important;transition:opacity .3s ease,transform .3s ease,background .2s!important}
-.mob.open .mob-link{opacity:1!important;transform:none!important}
-.mob.open .mob-link:nth-child(1){transition-delay:.04s!important}
-.mob.open .mob-link:nth-child(2){transition-delay:.08s!important}
-.mob.open .mob-link:nth-child(3){transition-delay:.12s!important}
-.mob.open .mob-link:nth-child(4){transition-delay:.16s!important}
-.mob-link::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:#D40000;transform:scaleY(0);transition:transform .25s cubic-bezier(0.76,0,0.24,1);transform-origin:bottom}
-.mob-link:hover{background:rgba(237,232,229,0.02)!important}
-.mob-link:hover::before{transform:scaleY(1)}
-.mob-link-num{font-family:'Space Grotesk',sans-serif!important;font-size:9px!important;letter-spacing:.16em!important;color:rgba(237,232,229,0.18)!important;width:22px!important;flex-shrink:0!important}
-.mob-link-name{font-family:'Space Grotesk',sans-serif!important;font-size:22px!important;font-weight:700!important;letter-spacing:-.03em!important;color:#EDE8E5!important;flex:1!important;transition:color .2s!important}
-.mob-link:hover .mob-link-name{color:#D40000!important}
-.mob-link svg{color:rgba(237,232,229,0.12)!important;flex-shrink:0!important;transition:color .2s,transform .2s!important}
-.mob-link:hover svg{color:#D40000!important;transform:translate(3px,-3px)!important}
+/* ============================================================
+   INFINITE UNION — MOBILE STYLESHEET
+   Loaded AFTER main.css, BEFORE assets/js/mobile-animations.js runs.
+   Scope: <=900px for the nav/menu, <=768px for layout, hero & scroll reveals.
 
-/* CTA SECTION */
-.mob-cta-section{padding:16px 24px!important;border-top:1px solid rgba(237,232,229,0.06)!important;flex:1!important;display:flex!important;flex-direction:column!important;gap:12px!important;justify-content:flex-end!important}
-.mob-cta-btn{display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;padding:16px!important;background:#D40000!important;color:#fff!important;font-family:'Space Grotesk',sans-serif!important;font-size:11px!important;font-weight:700!important;letter-spacing:.14em!important;text-transform:uppercase!important;text-decoration:none!important;transition:opacity .2s!important}
-.mob-cta-btn:hover{opacity:.85!important}
-.mob-contacts{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
-.mob-contact-btn{display:flex!important;align-items:center!important;gap:8px!important;padding:11px 14px!important;border:1px solid rgba(237,232,229,0.1)!important;color:#8A8080!important;font-family:'Space Grotesk',sans-serif!important;font-size:11px!important;font-weight:600!important;letter-spacing:.06em!important;text-transform:uppercase!important;text-decoration:none!important;transition:border-color .2s,color .2s!important}
-.mob-contact-btn:hover{border-color:#D40000!important;color:#D40000!important}
-.mob-contact-btn:last-child{border-color:rgba(212,0,0,0.25)!important;color:#D40000!important}
-.mob-contact-btn svg{flex-shrink:0!important}
+   ---------------------------------------------------------------
+   TWO MOTION ENGINES SHARE THIS FILE
+   ---------------------------------------------------------------
+   1) A pure-CSS fallback (keyframes/transitions) — plays when GSAP
+      isn't available (blocked, slow 3G, JS disabled) or the visitor
+      has prefers-reduced-motion.
+   2) GSAP (assets/js/mobile-animations.js) — plays when it loads.
+      As soon as it initialises on a <=768px viewport it adds `ga`
+      to <html>. Every fallback rule that would otherwise fight a
+      GSAP tween (same element, same property, both trying to drive
+      motion every frame) is namespaced under `html:not(.ga)` so it
+      simply doesn't exist once GSAP is in charge — GSAP then owns
+      that element's inline opacity/transform outright.
 
-@media(max-width:900px){
-.ct-new-title{margin-bottom:28px!important}
+      The one exception is anywhere main.css forces opacity/transform
+      with `!important` on mobile (`.rev` killer, `.gs-card`) — plain
+      inline styles from GSAP cannot win against `!important` no
+      matter the selector. For exactly those elements we redirect
+      through CSS custom properties instead (`opacity:var(--ga-o,1)
+      !important`) and have GSAP tween the *variable* — var() always
+      resolves live regardless of who set it or how "important" the
+      declaration referencing it is.
+
+   Base "hidden" values (plain opacity:0 / transform:translateY(..),
+   no !important) are left UNGATED on purpose: they're exactly the
+   resting state both engines want pre-reveal, and GSAP's inline
+   styles beat any non-important stylesheet rule automatically.
+
+   main.css is intentionally left untouched (project rule) — see the
+   mobile-css-gotchas note for the killer rules this works around.
+   ============================================================ */
+
+/* Keep the overlay fully hidden on desktop (main.css has no .mob rule) */
+.mob{display:none}
+
+/* ============================================================
+   1 · BURGER MENU  —  slide-in panel from the right + blurred backdrop
+   ============================================================ */
+@media (max-width:900px){
+  /* ---- container: always fixed full-screen, right-aligned panel ---- */
+  .mob{
+    position:fixed!important;
+    inset:0!important;
+    z-index:10000!important;
+    display:flex!important;
+    justify-content:flex-end!important;
+    pointer-events:none;
+  }
+  .mob.open{pointer-events:auto;}
+
+  /* top hairline — cheap, identical in both engines, left ungated */
+  .mob::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,transparent,#D40000 40%,#D40000 60%,transparent);
+    z-index:2;opacity:0;transition:opacity .3s ease .12s;
+  }
+  .mob.open::before{opacity:1;}
+
+  /* backdrop layer — separate element so GSAP can fade it independently
+     of the sliding panel (main.css cannot target this: new class) */
+  .mob-backdrop{
+    position:absolute;inset:0;
+    background:rgba(6,3,3,0.55);
+    -webkit-backdrop-filter:blur(14px) saturate(118%);
+    backdrop-filter:blur(14px) saturate(118%);
+    pointer-events:none;
+    opacity:0;
+  }
+
+  /* ---- sliding panel: off-screen by default so it can never flash ---- */
+  .mob-inner{
+    position:relative!important;
+    width:min(420px,86vw)!important;
+    height:100%!important;
+    display:flex!important;flex-direction:column!important;
+    background:#060303!important;
+    border-left:1px solid rgba(212,0,0,0.28)!important;
+    overflow-y:auto!important;overscroll-behavior:contain!important;
+    -webkit-overflow-scrolling:touch;
+    transform:translateX(100%);
+  }
+
+  /* ---- header ---- */
+  .mob-header{
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    padding:22px 26px!important;
+    border-bottom:1px solid rgba(237,232,229,0.07)!important;
+    flex-shrink:0!important;
+    opacity:0;
+  }
+  .mob-logo{
+    font-family:'Space Grotesk',sans-serif!important;font-size:11px!important;font-weight:600!important;
+    letter-spacing:.36em!important;text-transform:uppercase!important;color:#EDE8E5!important;
+  }
+  .mob-logo span{color:#D40000!important;}
+  .mob-x{
+    background:none!important;border:1px solid rgba(237,232,229,0.15)!important;color:#EDE8E5!important;
+    cursor:pointer!important;width:36px!important;height:36px!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;flex-shrink:0!important;
+    transition:border-color .2s ease,transform .3s cubic-bezier(.7,0,.16,1)!important;
+    transition-duration:.3s!important;
+  }
+  .mob-x:hover,.mob-x:active{border-color:#D40000!important;color:#D40000!important;transform:rotate(90deg)!important;}
+
+  /* ---- nav links ----
+     NOTE: <nav class="mob-nav"> is also matched by main.css's bare `nav`
+     selector (position:fixed, height:68px, justify-content:space-between,
+     align-items:center, opaque bg …) — every one of those must be reset here. */
+  .mob-nav{
+    display:flex!important;flex-direction:column!important;
+    align-items:stretch!important;justify-content:flex-start!important;
+    position:relative!important;top:auto!important;left:auto!important;right:auto!important;
+    height:auto!important;padding:12px 0!important;
+    background:transparent!important;z-index:auto!important;transition:none!important;
+    -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+  }
+  .mob-link{
+    display:flex!important;align-items:center!important;gap:16px!important;
+    padding:15px 26px!important;
+    border-bottom:1px solid rgba(237,232,229,0.045)!important;
+    text-decoration:none!important;position:relative!important;
+    opacity:0;
+  }
+  .mob-link::before{
+    content:""!important;position:absolute!important;left:0;top:0;bottom:0;width:2px!important;
+    background:#D40000!important;transform:scaleY(0)!important;transform-origin:bottom!important;
+    transition:transform .28s cubic-bezier(.76,0,.24,1)!important;transition-duration:.28s!important;
+  }
+  .mob-link:hover::before,.mob-link:active::before{transform:scaleY(1)!important;}
+  .mob-link:hover,.mob-link:active{background:rgba(212,0,0,0.045)!important;}
+  .mob-link-num{
+    font-family:'Space Grotesk',sans-serif!important;font-size:9px!important;letter-spacing:.16em!important;
+    color:rgba(237,232,229,0.22)!important;width:24px!important;flex-shrink:0!important;
+  }
+  .mob-link-name{
+    font-family:'Space Grotesk',sans-serif!important;font-size:23px!important;font-weight:700!important;
+    letter-spacing:-.03em!important;color:#EDE8E5!important;flex:1!important;
+    transition:color .2s ease,transform .28s ease!important;transition-duration:.28s!important;
+  }
+  .mob-link:hover .mob-link-name,.mob-link:active .mob-link-name{color:#D40000!important;transform:translateX(4px)!important;}
+  .mob-link svg{
+    color:rgba(237,232,229,0.14)!important;flex-shrink:0!important;
+    transition:color .2s ease,transform .2s ease!important;transition-duration:.2s!important;
+  }
+  .mob-link:hover svg,.mob-link:active svg{color:#D40000!important;transform:translate(3px,-3px)!important;}
+
+  /* ---- CTA + contacts (2×2) ---- */
+  .mob-cta-section{
+    padding:20px 26px 28px!important;
+    border-top:1px solid rgba(237,232,229,0.06)!important;
+    margin-top:auto!important;
+    display:flex!important;flex-direction:column!important;gap:12px!important;
+    opacity:0;
+  }
+  .mob-cta-btn{
+    display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;
+    padding:17px!important;background:#D40000!important;color:#fff!important;
+    font-family:'Space Grotesk',sans-serif!important;font-size:11px!important;font-weight:700!important;
+    letter-spacing:.14em!important;text-transform:uppercase!important;text-decoration:none!important;
+    position:relative!important;overflow:hidden!important;
+  }
+  .mob-cta-btn svg{transition:transform .25s ease!important;transition-duration:.25s!important;}
+  .mob-cta-btn:hover svg,.mob-cta-btn:active svg{transform:translateX(4px)!important;}
+  .mob-contacts{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important;}
+  .mob-contact-btn{
+    display:flex!important;align-items:center!important;gap:8px!important;
+    padding:13px 14px!important;border:1px solid rgba(237,232,229,0.1)!important;
+    color:#8A8080!important;font-family:'Space Grotesk',sans-serif!important;
+    font-size:11px!important;font-weight:600!important;letter-spacing:.05em!important;
+    text-transform:uppercase!important;text-decoration:none!important;
+    transition:border-color .2s ease,color .2s ease,background .2s ease!important;
+    transition-duration:.2s!important;
+  }
+  .mob-contact-btn:hover,.mob-contact-btn:active{
+    border-color:#D40000!important;color:#D40000!important;background:rgba(212,0,0,0.04)!important;
+  }
+  .mob-contact-btn:last-child{border-color:rgba(212,0,0,0.25)!important;color:#D40000!important;}
+  .mob-contact-btn svg{flex-shrink:0!important;}
+
+  /* lock the page while the menu is open — independent of which engine drives it */
+  body:has(.mob.open){overflow:hidden!important;}
+
+  /* ============ CSS FALLBACK — only when GSAP isn't running ============ */
+  html:not(.ga) .mob-backdrop{transition:opacity .45s ease;}
+  html:not(.ga) .mob.open .mob-backdrop{opacity:1;}
+  html:not(.ga) .mob-inner{transition:transform .5s cubic-bezier(.7,0,.16,1);}
+  html:not(.ga) .mob.open .mob-inner{transform:translateX(0);}
+  html:not(.ga) .mob-header{
+    transform:translateY(-8px);
+    transition:opacity .4s ease,transform .4s ease;
+  }
+  html:not(.ga) .mob.open .mob-header{opacity:1;transform:none;transition-delay:.16s;}
+  html:not(.ga) .mob-link{
+    transform:translateX(28px);
+    transition:opacity .45s cubic-bezier(.2,.7,.2,1),transform .45s cubic-bezier(.2,.7,.2,1),background .2s ease;
+  }
+  html:not(.ga) .mob.open .mob-link{opacity:1;transform:none;}
+  html:not(.ga) .mob.open .mob-link:nth-child(1){transition-delay:.20s;}
+  html:not(.ga) .mob.open .mob-link:nth-child(2){transition-delay:.27s;}
+  html:not(.ga) .mob.open .mob-link:nth-child(3){transition-delay:.34s;}
+  html:not(.ga) .mob.open .mob-link:nth-child(4){transition-delay:.41s;}
+  html:not(.ga) .mob.open .mob-link:nth-child(5){transition-delay:.48s;}
+  html:not(.ga) .mob-cta-section{
+    transform:translateY(16px);
+    transition:opacity .5s ease,transform .5s ease;
+  }
+  html:not(.ga) .mob.open .mob-cta-section{opacity:1;transform:none;transition-delay:.5s;}
+  html:not(.ga) .mob-cta-btn{transition:transform .2s ease;}
+  html:not(.ga) .mob-cta-btn:active{transform:scale(.985);}
+}
+
+/* ============================================================
+   2 · MOBILE HERO  —  cinematic entrance
+   ============================================================ */
+@media (max-width:768px){
+
+  #mobile-hero{
+    display:flex!important;
+    flex-direction:column!important;
+    min-height:100vh;
+    min-height:100svh;
+    background:#060303!important;
+    position:relative!important;
+    overflow:hidden!important;
+  }
+
+  /* vignette + red floor glow */
+  #mobile-hero::after{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    pointer-events:none!important;
+    z-index:1!important;
+    background:
+      radial-gradient(125% 62% at 50% 100%,rgba(212,0,0,0.16),transparent 60%),
+      radial-gradient(80% 46% at 100% 0%,rgba(212,0,0,0.06),transparent 55%),
+      linear-gradient(180deg,rgba(0,0,0,0.35),transparent 22%);
+  }
+
+  /* --- animated red grain (ambient loop, identical in both engines) --- */
+  .mh-noise{
+    position:absolute!important;
+    inset:-24%!important;
+    z-index:1!important;
+    pointer-events:none!important;
+    opacity:.14;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size:120px 120px;
+    mix-blend-mode:soft-light;
+    animation:mhGrain .5s steps(2) infinite!important;
+    animation-duration:.5s!important;
+    animation-iteration-count:infinite!important;
+    will-change:transform;
+  }
+  @keyframes mhGrain{
+    0%{transform:translate(0,0)}
+    50%{transform:translate(-2.5%,1.8%)}
+    100%{transform:translate(2%,-2%)}
+  }
+
+  .mh-inner{
+    position:relative!important;
+    z-index:2!important;
+    display:flex!important;flex-direction:column!important;
+    justify-content:space-between!important;
+    min-height:100vh;min-height:100svh;
+    padding:120px 24px 44px!important;
+  }
+
+  /* fallback-only keyframes */
+  @keyframes mhUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+  @keyframes mhFade{from{opacity:0}to{opacity:1}}
+
+  /* --- kicker --- */
+  .mh-label{
+    font-family:'Space Grotesk',sans-serif!important;
+    font-size:10px!important;font-weight:600!important;
+    letter-spacing:.32em!important;text-transform:uppercase!important;
+    color:#D40000!important;margin-bottom:26px!important;
+    display:flex!important;align-items:center!important;gap:10px!important;
+    opacity:0;
+  }
+  .mh-label::before{content:"";width:24px;height:1px;background:#D40000;display:inline-block;flex-shrink:0;}
+  html:not(.ga) .mh-label{animation:mhUp .7s cubic-bezier(.2,.7,.2,1) .3s both!important;animation-duration:.7s!important;}
+
+  /* --- headline --- */
+  .mh-title{
+    font-family:'Space Grotesk',sans-serif!important;
+    font-size:clamp(56px,15vw,84px)!important;
+    font-weight:700!important;letter-spacing:-.045em!important;
+    line-height:.9!important;color:#EDE8E5!important;
+    margin-bottom:26px!important;
+  }
+  .mh-title .mh-tw{
+    display:block!important;position:relative!important;
+    width:fit-content!important;max-width:100%!important;color:#EDE8E5!important;
+  }
+  .mh-title .mh-tw-i{display:inline-block!important;color:#EDE8E5!important;}
+  .mh-title .mh-title-2{display:block!important;color:#D40000!important;opacity:0;}
+
+  /* letters split by mobile-animations.js for the GSAP path */
+  .mh-ch{display:inline-block;}
+
+  /* main.css's `.mh-title span{color:#D40000;display:block}` also matches
+     these freshly-split letter spans (they're literal <span>s inside
+     .mh-title) — win it back explicitly, per word. */
+  .mh-title .mh-tw-i .mh-ch{display:inline-block!important;color:#EDE8E5!important;}
+  .mh-title .mh-title-2 .mh-ch{display:inline-block!important;color:#D40000!important;}
+
+  html:not(.ga) .mh-title .mh-tw-i{
+    clip-path:inset(0 100% 0 -0.06em);
+    animation:mhType .8s steps(8) .6s forwards!important;
+    animation-duration:.8s!important;
+  }
+  @keyframes mhType{to{clip-path:inset(0 -0.06em 0 -0.06em)}}
+  html:not(.ga) .mh-title .mh-tw::after{
+    content:"";position:absolute;top:.14em;left:0;
+    width:.055em;height:.78em;background:#D40000;
+    animation:mhCaret .8s steps(8) .6s forwards, mhBlink .5s steps(1) infinite!important;
+    animation-duration:.8s,.5s!important;
+    animation-iteration-count:1,infinite!important;
+  }
+  @keyframes mhCaret{from{left:0}to{left:100%}}
+  @keyframes mhBlink{50%{opacity:0}}
+  html:not(.ga) .mh-title .mh-title-2{
+    animation:mhUp .6s cubic-bezier(.2,.7,.2,1) 1.4s both!important;
+    animation-duration:.6s!important;
+  }
+
+  /* red rule that draws under the headline — GSAP path only (created by JS) */
+  .mh-rule{height:1px;background:#D40000;transform-origin:0 50%;transform:scaleX(0);margin:-6px 0 20px;}
+
+  /* --- subtitle --- */
+  .mh-sub{
+    font-size:15px!important;color:#8A8080!important;line-height:1.7!important;
+    max-width:300px!important;margin-bottom:40px!important;
+    opacity:0;
+  }
+  html:not(.ga) .mh-sub{animation:mhUp .65s cubic-bezier(.2,.7,.2,1) 1.6s both!important;animation-duration:.65s!important;}
+
+  /* --- CTA --- */
+  .mh-cta{
+    display:inline-flex!important;align-items:center!important;gap:12px!important;
+    padding:19px 34px!important;background:#D40000!important;color:#fff!important;
+    font-family:'Space Grotesk',sans-serif!important;font-size:11px!important;font-weight:700!important;
+    letter-spacing:.14em!important;text-transform:uppercase!important;text-decoration:none!important;
+    margin-bottom:44px!important;position:relative!important;align-self:flex-start!important;
+    opacity:0;
+  }
+  html:not(.ga) .mh-cta{animation:mhUp .6s cubic-bezier(.2,.7,.2,1) 1.75s both!important;animation-duration:.6s!important;}
+  html:not(.ga) .mh-cta::after{
+    content:"";position:absolute;inset:0;
+    border:1px solid #D40000;pointer-events:none;opacity:0;
+    animation:mhRing 2.8s ease-out 3s infinite!important;
+    animation-duration:2.8s!important;animation-iteration-count:infinite!important;
+  }
+  @keyframes mhRing{0%{opacity:.55;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.14)}}
+
+  /* GSAP path: a real glow layer instead of a box-shadow (main.css forces
+     box-shadow:none!important on mobile) — created by JS, pulsed on opacity+scale */
+  .mh-cta-glow{
+    position:absolute;inset:-18px;z-index:-1;pointer-events:none;
+    background:radial-gradient(ellipse at center,rgba(212,0,0,.55),transparent 70%);
+    filter:blur(10px);opacity:0;
+  }
+  .mh-cta svg{position:relative;z-index:1;transition:transform .25s ease!important;transition-duration:.25s!important;}
+  .mh-cta:hover svg,.mh-cta:active svg{transform:translateX(4px)!important;}
+
+  /* --- services list --- */
+  .mh-services{
+    display:flex!important;flex-direction:column!important;
+    border-top:1px solid rgba(237,232,229,0.08)!important;
+    margin-bottom:26px!important;
+  }
+  .mh-srv{
+    display:flex!important;align-items:center!important;gap:16px!important;
+    padding:17px 0!important;
+    border-bottom:1px solid rgba(237,232,229,0.08)!important;
+    text-decoration:none!important;position:relative!important;
+    opacity:0;
+  }
+  html:not(.ga) .mh-srv{animation:mhUp .55s cubic-bezier(.2,.7,.2,1) both!important;animation-duration:.55s!important;}
+  html:not(.ga) .mh-srv:nth-child(1){animation-delay:1.95s!important;}
+  html:not(.ga) .mh-srv:nth-child(2){animation-delay:2.04s!important;}
+  html:not(.ga) .mh-srv:nth-child(3){animation-delay:2.13s!important;}
+  html:not(.ga) .mh-srv:nth-child(4){animation-delay:2.22s!important;}
+  .mh-srv::before{
+    content:""!important;position:absolute!important;left:-24px;top:0;bottom:0;width:2px!important;
+    background:#D40000!important;transform:scaleY(0)!important;transform-origin:center!important;
+    transition:transform .3s cubic-bezier(.76,0,.24,1)!important;transition-duration:.3s!important;
+  }
+  .mh-srv:hover::before,.mh-srv:active::before{transform:scaleY(1)!important;}
+  .mh-srv-n{
+    font-family:'Space Grotesk',sans-serif!important;font-size:10px!important;color:#8A8080!important;
+    letter-spacing:.16em!important;width:28px!important;flex-shrink:0!important;
+  }
+  .mh-srv-name{
+    font-family:'Space Grotesk',sans-serif!important;font-size:16px!important;font-weight:600!important;
+    color:#EDE8E5!important;flex:1!important;
+    transition:transform .25s ease,color .2s ease!important;transition-duration:.25s!important;
+  }
+  .mh-srv:hover .mh-srv-name,.mh-srv:active .mh-srv-name{transform:translateX(5px)!important;color:#D40000!important;}
+  .mh-srv svg,.mh-srv-arr{color:#D40000!important;flex-shrink:0!important;}
+  .mh-srv svg{transition:transform .25s ease!important;transition-duration:.25s!important;}
+  .mh-srv:hover svg,.mh-srv:active svg{transform:translate(3px,-3px)!important;}
+
+  .mh-coords{
+    font-family:'Space Grotesk',sans-serif!important;font-size:9px!important;letter-spacing:.18em!important;
+    text-transform:uppercase!important;color:rgba(237,232,229,0.22)!important;
+    opacity:0;
+  }
+  html:not(.ga) .mh-coords{animation:mhFade .8s ease 2.4s both!important;animation-duration:.8s!important;}
+}
+
+/* ============================================================
+   3 · SECTION SCROLL REVEALS
+   ============================================================ */
+@media (max-width:768px){
+  /* generic scroll-reveal target used across the page (IntersectionObserver
+     in the fallback path, ScrollTrigger in the GSAP path) */
+  html:not(.ga) .rev{
+    opacity:0!important;
+    transform:translateY(26px)!important;
+    transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)!important;
+    transition-duration:.8s!important;
+  }
+  html:not(.ga) .rev.v{opacity:1!important;transform:none!important;}
+  html:not(.ga) .rv-grid .rv-card:nth-child(2){transition-delay:.09s!important;}
+  html:not(.ga) .rv-grid .rv-card:nth-child(3){transition-delay:.18s!important;}
+
+  /* GSAP path: main.css forces `.rev{opacity:1!important}` on mobile, so a
+     plain inline style from GSAP can never win here — animate a variable
+     instead and let it flow through an !important declaration that always
+     resolves live. Elements GSAP doesn't specifically target just sit at
+     their (var-less) defaults, i.e. fully visible, no motion. */
+  html.ga .rev{opacity:1!important;transform:none!important;}
+  html.ga #stats .si.rev,
+  html.ga .rv-grid .rv-card.rev{
+    opacity:var(--ga-o,1)!important;
+    transform:translateY(var(--ga-ty,0)) scale(var(--ga-s,1))!important;
+  }
+
+  /* services (#directions) list — slide in from the left.
+     Base offset lives here for both engines; only the "revealed" snap-back
+     (tied to the old #directions IntersectionObserver) is fallback-only. */
+  .dir-item{transform:translateX(-30px);}
+  html:not(.ga) .dir-item{
+    transition-property:opacity,transform;
+    transition-duration:.6s!important;
+    transition-timing-function:cubic-bezier(.2,.7,.2,1);
+  }
+  html:not(.ga) .dir-section.v .dir-item{transform:none!important;}
+
+  /* portfolio cards — subtle staggered entrance. main.css also forces
+     `.gs-card{opacity:1!important}` on mobile → same var trick as .rev. */
+  html:not(.ga) #portfolio .gs-cards-row .gs-card{
+    opacity:0!important;transform:translateY(22px)!important;
+    transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1)!important;
+    transition-duration:.55s!important;
+  }
+  html:not(.ga) #portfolio .globe-scroll-sticky:has(.sh.rev.v) .gs-cards-row .gs-card{opacity:1!important;transform:none!important;}
+  html:not(.ga) #portfolio .gs-cards-row .gs-card:nth-child(2){transition-delay:.06s!important;}
+  html:not(.ga) #portfolio .gs-cards-row .gs-card:nth-child(3){transition-delay:.12s!important;}
+  html:not(.ga) #portfolio .gs-cards-row .gs-card:nth-child(4){transition-delay:.18s!important;}
+  html:not(.ga) #portfolio .gs-cards-row .gs-card:nth-child(5){transition-delay:.24s!important;}
+  html.ga #portfolio .gs-cards-row .gs-card{
+    opacity:var(--ga-o,1)!important;
+    transform:translateY(var(--ga-ty,0)) scale(var(--ga-s,1))!important;
+  }
+
+  /* split-text helpers (mobile-animations.js) */
+  .ga-ch{display:inline-block;}
+  .ga-line{display:block;overflow:hidden;}
+  .ga-line-i{display:block;}
+
+  /* .ct-new-title span{color:#D40000} (inline \3c style> in index.html) also
+     matches .ga-line AND .ga-line-i (both are <span>s too, at any nesting
+     depth) — without resetting both, `color:inherit` on the inner one would
+     just inherit the outer wrapper's now-red color instead of the title's
+     white, and both split lines would turn red instead of just the
+     original "до росту?" one. */
+  #contact .ct-new-title .ga-line,
+  #contact .ct-new-title .ga-line-i{color:inherit!important;}
+
+  /* ---- CONTACT: premium polish on mobile (layout — always) ---- */
+  #contact .ct-new-l{padding:72px 22px 56px!important;}
+  #contact .ct-new-r{padding:52px 22px 64px!important;}
+  #contact .ct-new-title{font-size:clamp(46px,13vw,68px)!important;}
+  #contact .ct-new-desc{font-size:14px!important;margin:28px 0!important;line-height:1.75!important;}
+  #contact .ct-new-contacts{gap:8px!important;margin-bottom:22px!important;}
+  #contact .ct-new-btn{padding:15px 16px!important;}
+  #contact .form-new-title{margin-bottom:32px!important;}
+  #contact .fg-new label{padding-top:26px!important;}
+
+  /* 16px font-size keeps iOS from zooming the viewport on focus */
+  #contact .fg-new input,
+  #contact .fg-new select,
+  #contact .fg-new textarea{font-size:16px!important;padding-bottom:16px!important;}
+  #contact .form-new-submit{flex-direction:column!important;align-items:stretch!important;gap:16px!important;margin-top:36px!important;}
+  #contact .btn-form-new{width:100%!important;justify-content:center!important;padding:19px 32px!important;}
+  #contact .form-new-note{text-align:center!important;}
+}
+
+/* keep: tighten the contact heading spacing on small screens */
+@media (max-width:900px){
+  .ct-new-title{margin-bottom:28px!important;}
+}
+
+/* ============================================================
+   4 · REDUCED MOTION  —  GSAP never initialises in this case (see JS),
+   so only the html:not(.ga) fallback path is ever active here. These
+   overrides match its specificity (html:not(.ga) …) so they win the
+   cascade instead of losing to the entrance rules above.
+   ============================================================ */
+@media (max-width:900px) and (prefers-reduced-motion:reduce){
+  html:not(.ga) .mob,html:not(.ga) .mob *{transition:none!important;animation:none!important;}
+}
+@media (max-width:768px) and (prefers-reduced-motion:reduce){
+  html:not(.ga) .mh-noise{display:none!important;}
+  html:not(.ga) .mh-title .mh-tw-i{clip-path:none!important;}
+  html:not(.ga) .mh-title .mh-tw::after{display:none!important;}
+  html:not(.ga) .mh-cta::after{display:none!important;}
+  html:not(.ga) .mh-label,html:not(.ga) .mh-title,html:not(.ga) .mh-title .mh-title-2,
+  html:not(.ga) .mh-sub,html:not(.ga) .mh-cta,html:not(.ga) .mh-srv,html:not(.ga) .mh-coords{
+    opacity:1!important;transform:none!important;animation:none!important;
+  }
+  html:not(.ga) .rev,html:not(.ga) .rev.v,
+  html:not(.ga) .dir-item,html:not(.ga) .dir-section.v .dir-item,
+  html:not(.ga) #portfolio .gs-cards-row .gs-card{opacity:1!important;transform:none!important;transition:none!important;}
 }
