@@ -14,7 +14,8 @@ const STATIC = [
   '/vendor/three/DRACOLoader.js',
   '/cobe.umd.js',
   '/avatar.jpeg',
-  '/og-image.png'
+  '/favicon.png',
+  '/favicon.ico'
 ];
 
 self.addEventListener('install', e => {
