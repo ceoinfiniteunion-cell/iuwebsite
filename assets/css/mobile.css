@@ -533,3 +533,9 @@
   html:not(.ga) .dir-item,html:not(.ga) .dir-section.v .dir-item,
   html:not(.ga) #portfolio .gs-cards-row .gs-card{opacity:1!important;transform:none!important;transition:none!important;}
 }
+
+@media(max-width:768px){
+.mh-srv{will-change:auto!important}
+.mh-services{overflow:hidden}
+#mobile-hero{overflow:hidden!important}
+}

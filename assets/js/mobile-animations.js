@@ -389,3 +389,7 @@
   });
   } // end boot()
 })();
+
+// Fix scroll jumps
+ScrollTrigger.config({ ignoreMobileResize: true });
+document.addEventListener('scroll', () => {}, { passive: true });
