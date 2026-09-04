@@ -996,5 +996,45 @@ document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach
   obs.observe(c);
 })();
 </script>
+
+<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Що таке CRM-бот?<span class="faq-arr">+</span></button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">CRM-бот — це Telegram бот який замінює або доповнює CRM систему: веде клієнтів, нагадує про дзвінки, фіксує угоди прямо в месенджері.</p>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує CRM-бот?<span class="faq-arr">+</span></button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">CRM-бот від $500. Включає базу клієнтів, воронку продажів, нагадування та звіти.</p>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи можна перенести дані з існуючої CRM?<span class="faq-arr">+</span></button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Так, мігруємо дані з будь-якої CRM — Bitrix24, amoCRM, Pipedrive, Google Таблиць.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.faq-section{background:#0a0706;padding:100px 48px;border-top:1px solid rgba(237,232,229,0.07)}
+.faq-inner{max-width:860px;margin:0 auto}
+.faq-label{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#D40000;margin-bottom:16px}
+.faq-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(32px,4vw,52px);font-weight:700;letter-spacing:-.03em;color:#EDE8E5;margin-bottom:60px}
+.faq-item{border-bottom:1px solid rgba(237,232,229,0.08);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:28px 0;font-family:"Space Grotesk",sans-serif;font-size:16px;font-weight:500;color:#EDE8E5;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;letter-spacing:-.01em}
+.faq-arr{font-size:24px;color:#D40000;flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-arr{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{padding:0 0 28px;font-size:15px;color:#8A8080;line-height:1.8}
+@media(max-width:768px){.faq-section{padding:60px 20px}.faq-q{font-size:14px}}
+</style>
 </body>
 </html>
