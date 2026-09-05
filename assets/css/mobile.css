@@ -675,3 +675,11 @@
   #contact{padding-left:0!important;padding-right:0!important}
   .dir-section{padding-left:0!important;padding-right:0!important}
 }
+
+@media(max-width:768px){
+  .mob-grid-3{grid-template-columns:1fr!important}
+  .levels-grid{grid-template-columns:1fr!important}
+  .extra-grid{grid-template-columns:1fr!important}
+  .process-list{grid-template-columns:1fr!important;gap:32px!important}
+  .flagship-metrics{grid-template-columns:1fr 1fr!important}
+}
