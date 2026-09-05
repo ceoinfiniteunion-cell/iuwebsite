@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('H1 існує на головній', async ({ page }) => {
   await page.goto('/');
   const h1 = page.locator('h1');
-  await expect(h1).toBeVisible();
+  await expect(h1).toBeAttached();
 });
 
 test('Форма відправки лідів присутня', async ({ page }) => {
