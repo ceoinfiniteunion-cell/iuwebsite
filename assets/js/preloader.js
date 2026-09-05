@@ -1,12 +1,4 @@
-!function(){
-var _l=document.getElementById('loader');
-window.addEventListener('pageshow',function(e){
-  if(e.persisted||performance.getEntriesByType('navigation')[0]?.type==='back_forward'){
-    if(_l){_l.style.transition='none';_l.style.opacity='0';_l.style.pointerEvents='none';_l.classList.add('done');}
-  }
-});
-}();
-!function(){if(sessionStorage.getItem("iu_visited")){const _l=document.getElementById("loader");if(_l)_l.classList.add("done");return;}sessionStorage.setItem("iu_visited","1");if(window.innerWidth<=768){
+!function(){if(window.innerWidth<=768){
   const _l=document.getElementById("loader");
   const _b=document.getElementById("lbar");
   const _n=document.getElementById("lnum");
@@ -17,4 +9,3 @@ window.addEventListener('pageshow',function(e){
 }
 }();
 function startHero(){window.matchMedia("(prefers-reduced-motion: reduce)").matches||["havatar","hm","hl1","hl2","hl3","hsub","hbtns","hscroll"].forEach((t,e)=>{const n=document.getElementById(t);n&&setTimeout(()=>n.classList.add("v"),120*e)})}!function(){const t=document.getElementById("lbar"),e=document.getElementById("lnum"),n=document.getElementById("loader"),o=document.getElementById("lstatus"),d=["• Ініціалізація","• Завантаження 3D","• Майже готово"];let a=0,s=0,l=!1;const i=document.getElementById("lavatar");i&&setTimeout(()=>i.classList.add("v"),200);let m=0;function r(){l||(l=!0,a=100,t.style.width="100%",e.textContent="100",clearInterval(u),setTimeout(()=>{n.classList.add("done"),startHero()},400))}window.addEventListener("iu:glb-progress",t=>{m=t.detail||0}),window.addEventListener("iu:glb-loaded",r);const c=setTimeout(r,8e3),u=setInterval(()=>{if(l)return;const n=Math.max(Math.min(90,a+2.2*Math.random()+.5),.9*m);a=Math.min(90,n),a>30&&0===s&&(s=1,o.textContent=d[1]),a>70&&1===s&&(s=2,o.textContent=d[2]),t.style.width=a+"%",e.textContent=Math.floor(a),window.__IU_GLB_DONE&&(clearTimeout(c),r())},40)}();
-
