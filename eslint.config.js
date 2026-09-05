@@ -3,6 +3,9 @@ import parser from "@html-eslint/parser";
 
 export default [
   {
+    ignores: ["services/constructor/index.html"]
+  },
+  {
     files: ["**/*.html"],
     plugins: { "@html-eslint": html },
     languageOptions: { parser },
