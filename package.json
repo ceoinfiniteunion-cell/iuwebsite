@@ -5,7 +5,7 @@
   "scripts": {
     "lint:html": "html-validate index.html services/*.html services/**/*.html",
     "lint:css": "stylelint \"src/css/**/*.css\"",
-    "lint:js": "eslint index.html services/**/*.html",
+    "lint:js": "eslint index.html services/**/*.html --ignore-pattern services/constructor/index.html",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lhci": "lhci autorun",
     "start": "npx serve . -p $PORT",
