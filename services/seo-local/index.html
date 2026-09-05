@@ -144,6 +144,20 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 .cbtn-tel{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.2);}
 @media(max-width:600px){.cbtn{padding:11px 16px;font-size:11px;}.contact-btns-group{gap:8px;}}
 </style>
+<style>
+.faq-section{background:#0a0706;padding:100px 48px;border-top:1px solid rgba(237,232,229,0.07)}
+.faq-inner{max-width:860px;margin:0 auto}
+.faq-label{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#D40000;margin-bottom:16px}
+.faq-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(32px,4vw,52px);font-weight:700;letter-spacing:-.03em;color:#EDE8E5;margin-bottom:60px}
+.faq-item{border-bottom:1px solid rgba(237,232,229,0.08);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:28px 0;font-family:"Space Grotesk",sans-serif;font-size:16px;font-weight:500;color:#EDE8E5;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;letter-spacing:-.01em}
+.faq-arr{font-size:24px;color:#D40000;flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-arr{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{padding:0 0 28px;font-size:15px;color:#8A8080;line-height:1.8}
+@media(max-width:768px){.faq-section{padding:60px 20px}.faq-q{font-size:14px}}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -511,38 +525,24 @@ document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach
     <h2 class="faq-title">Часті запитання</h2>
 
     <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Що таке локальне SEO?<span class="faq-arr">+</span></button>
+      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Що таке локальне SEO?<span class="faq-arr">+</span></button>
       <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <p itemprop="text">Локальне SEO — просування в пошуку по географічним запитам: "розробка сайтів Харків", "Telegram бот Харків". Клієнти з вашого міста знаходять вас першими.</p>
       </div>
     </div>
     <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує локальне SEO?<span class="faq-arr">+</span></button>
+      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує локальне SEO?<span class="faq-arr">+</span></button>
       <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <p itemprop="text">Локальне SEO від $150/місяць. Включає оптимізацію Google Business Profile, локальні ключові слова та роботу з відгуками.</p>
       </div>
     </div>
     <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Наскільки важливий Google Business Profile?<span class="faq-arr">+</span></button>
+      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Наскільки важливий Google Business Profile?<span class="faq-arr">+</span></button>
       <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <p itemprop="text">Критично важливий. Компанії з заповненим GBP отримують в 3 рази більше переходів ніж без нього.</p>
       </div>
     </div>
   </div>
 </section>
-<style>
-.faq-section{background:#0a0706;padding:100px 48px;border-top:1px solid rgba(237,232,229,0.07)}
-.faq-inner{max-width:860px;margin:0 auto}
-.faq-label{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#D40000;margin-bottom:16px}
-.faq-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(32px,4vw,52px);font-weight:700;letter-spacing:-.03em;color:#EDE8E5;margin-bottom:60px}
-.faq-item{border-bottom:1px solid rgba(237,232,229,0.08);overflow:hidden}
-.faq-q{width:100%;background:none;border:none;text-align:left;padding:28px 0;font-family:"Space Grotesk",sans-serif;font-size:16px;font-weight:500;color:#EDE8E5;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;letter-spacing:-.01em}
-.faq-arr{font-size:24px;color:#D40000;flex-shrink:0;transition:transform .3s}
-.faq-item.open .faq-arr{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.faq-item.open .faq-a{max-height:300px}
-.faq-a p{padding:0 0 28px;font-size:15px;color:#8A8080;line-height:1.8}
-@media(max-width:768px){.faq-section{padding:60px 20px}.faq-q{font-size:14px}}
-</style>
 </body>
 </html>
