@@ -5,7 +5,7 @@
   "scripts": {
     "lint:html": "html-validate index.html services/*.html services/**/*.html",
     "lint:css": "stylelint \"src/css/**/*.css\"",
-    "lint:js": "eslint index.html services/**/*.html --ignore-pattern services/constructor/index.html",
+    "lint:js": "eslint index.html services/bots/index.html services/bots-crm/index.html services/bots-restaurant/index.html services/bots-sales/index.html services/ecosystems/index.html services/google-ads/index.html services/google-ads-search/index.html services/meta-ads/index.html services/meta-ads-instagram/index.html services/platforms/index.html services/seo/index.html services/seo-audit/index.html services/seo-local/index.html services/tiktok-ads/index.html services/websites/index.html services/websites-corporate/index.html services/websites-landing/index.html services/websites-shop/index.html",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lhci": "lhci autorun",
     "start": "npx serve . -p $PORT",
