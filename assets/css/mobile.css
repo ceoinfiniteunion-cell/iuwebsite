@@ -689,70 +689,96 @@
 }
 
 @media(min-width:769px){
-  .pf-all-btn-wrap{display:flex!important;justify-content:center;padding:0 48px 80px}
+  .pf-all-btn-wrap{display:block!important;padding:0}
 
   .pf-cta-block{
     position:relative;
-    background:#ffffff;
-    padding:64px 80px;
+    background:#f5f0eb;
+    padding:120px 80px;
     width:100%;
-    max-width:900px;
     display:flex;
     flex-direction:column;
     align-items:center;
     text-align:center;
     overflow:hidden;
   }
+  .pf-cta-block::before{
+    content:"INFINITE UNION";
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(80px,12vw,180px);
+    font-weight:700;letter-spacing:-.04em;
+    color:rgba(10,7,6,0.04);
+    white-space:nowrap;pointer-events:none;
+    user-select:none;
+  }
+  .pf-cta-block::after{
+    content:"";
+    position:absolute;
+    top:0;left:0;right:0;
+    height:2px;
+    background:linear-gradient(90deg,transparent,#D40000 30%,#D40000 70%,transparent);
+  }
 
   .pf-cta-corner{
     position:absolute;
-    width:20px;height:20px;
+    width:32px;height:32px;
   }
-  .pf-cta-corner--tl{top:0;left:0;border-top:2px solid #D40000;border-left:2px solid #D40000}
-  .pf-cta-corner--tr{top:0;right:0;border-top:2px solid #D40000;border-right:2px solid #D40000}
-  .pf-cta-corner--bl{bottom:0;left:0;border-bottom:2px solid #D40000;border-left:2px solid #D40000}
-  .pf-cta-corner--br{bottom:0;right:0;border-bottom:2px solid #D40000;border-right:2px solid #D40000}
+  .pf-cta-corner--tl{top:32px;left:48px;border-top:1px solid rgba(212,0,0,.4);border-left:1px solid rgba(212,0,0,.4)}
+  .pf-cta-corner--tr{top:32px;right:48px;border-top:1px solid rgba(212,0,0,.4);border-right:1px solid rgba(212,0,0,.4)}
+  .pf-cta-corner--bl{bottom:32px;left:48px;border-bottom:1px solid rgba(212,0,0,.4);border-left:1px solid rgba(212,0,0,.4)}
+  .pf-cta-corner--br{bottom:32px;right:48px;border-bottom:1px solid rgba(212,0,0,.4);border-right:1px solid rgba(212,0,0,.4)}
 
   .pf-cta-label{
     font-family:'Space Grotesk',sans-serif;
     font-size:10px;font-weight:700;
     letter-spacing:.32em;text-transform:uppercase;
-    color:#D40000;margin-bottom:20px;
+    color:#D40000;margin-bottom:24px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .pf-cta-label::before,.pf-cta-label::after{
+    content:"";width:32px;height:1px;background:#D40000;
   }
   .pf-cta-title{
     font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(28px,3vw,44px);
-    font-weight:700;letter-spacing:-.03em;
-    line-height:1.05;color:#0a0706;
-    margin-bottom:16px;
+    font-size:clamp(40px,5vw,72px);
+    font-weight:700;letter-spacing:-.045em;
+    line-height:.96;color:#0a0706;
+    margin-bottom:24px;
+    position:relative;z-index:1;
   }
+  .pf-cta-title span{color:#D40000}
   .pf-cta-sub{
-    font-size:15px;color:#8A8080;
-    line-height:1.7;margin-bottom:40px;
-    max-width:500px;
+    font-size:16px;color:#8A8080;
+    line-height:1.8;margin-bottom:48px;
+    max-width:560px;position:relative;z-index:1;
   }
   .pf-cta-btn{
-    display:inline-flex;align-items:center;gap:12px;
+    display:inline-flex;align-items:center;gap:14px;
     font-family:'Space Grotesk',sans-serif;
-    font-size:11px;font-weight:700;letter-spacing:.16em;
+    font-size:11px;font-weight:700;letter-spacing:.18em;
     text-transform:uppercase;
-    background:#D40000;color:#fff;
-    padding:18px 48px;text-decoration:none;
+    background:#0a0706;color:#EDE8E5;
+    padding:20px 56px;text-decoration:none;
     transition:all .3s;position:relative;overflow:hidden;
+    z-index:1;
   }
   .pf-cta-btn::before{
     content:"";position:absolute;inset:0;
-    background:rgba(255,255,255,0.1);
+    background:#D40000;
     transform:translateX(-100%);
-    transition:transform .3s;
+    transition:transform .35s cubic-bezier(.76,0,.24,1);
   }
   .pf-cta-btn:hover::before{transform:translateX(0)}
+  .pf-cta-btn span,.pf-cta-btn svg{position:relative;z-index:1}
   .pf-cta-btn svg{transition:transform .3s}
-  .pf-cta-btn:hover svg{transform:translateX(4px)}
+  .pf-cta-btn:hover svg{transform:translateX(5px)}
 
   .pf-cta-num{
-    position:absolute;bottom:20px;right:28px;
+    position:absolute;bottom:28px;right:56px;
     font-family:'Space Grotesk',sans-serif;
-    font-size:10px;letter-spacing:.2em;color:rgba(10,7,6,0.2);
+    font-size:10px;letter-spacing:.2em;color:rgba(10,7,6,0.18);
   }
 }
