@@ -803,3 +803,11 @@
 @media(max-width:768px){
   .pf-all-btn-wrap{display:none!important}
 }
+
+@media(max-width:768px){
+  div.pf-all-btn-wrap,
+  div.pf-all-btn-wrap *{
+    display:none!important;
+    visibility:hidden!important;
+  }
+}
