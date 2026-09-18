@@ -683,3 +683,7 @@
   .process-list{grid-template-columns:1fr!important;gap:32px!important}
   .flagship-metrics{grid-template-columns:1fr 1fr!important}
 }
+
+@media(min-width:769px){
+  .pf-all-btn-wrap{display:flex!important;justify-content:center;padding:60px 48px 0}
+}
