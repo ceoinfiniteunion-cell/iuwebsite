@@ -1,4 +1,4 @@
-const CACHE = 'iu-1785949766017';
+const CACHE = 'iu-1789735401087';
 const STATIC = [
   '/',
   '/assets/css/main.css',
