@@ -799,3 +799,7 @@
   #tracker-showcase .ts-actions{flex-direction:column!important}
   #tracker-showcase .ts-btn{justify-content:center!important;width:100%!important}
 }
+
+@media(max-width:768px){
+  .pf-all-btn-wrap{display:none!important}
+}
