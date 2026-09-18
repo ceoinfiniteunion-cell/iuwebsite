@@ -782,3 +782,20 @@
     font-size:10px;letter-spacing:.2em;color:rgba(10,7,6,0.18);
   }
 }
+
+/* ============================================================
+   TRACKER SHOWCASE — mobile (<=768px)
+   Mockup fully hidden; text + stats + features stack, dashboard
+   preview dropped for performance and layout simplicity.
+   ============================================================ */
+@media (max-width:768px){
+  #tracker-showcase .ts-mockup-wrap{display:none!important}
+  #tracker-showcase .ts-grid-layout{grid-template-columns:1fr!important;gap:0!important;max-width:100%!important}
+  #tracker-showcase .sec-in{padding:60px 20px!important}
+  #tracker-showcase .ts-text{max-width:100%!important}
+  #tracker-showcase .ts-title{font-size:clamp(32px,9vw,48px)!important}
+  #tracker-showcase .ts-desc{max-width:100%!important;font-size:15px!important}
+  #tracker-showcase .ts-stats{grid-template-columns:repeat(2,1fr)!important;gap:20px 16px!important}
+  #tracker-showcase .ts-actions{flex-direction:column!important}
+  #tracker-showcase .ts-btn{justify-content:center!important;width:100%!important}
+}
