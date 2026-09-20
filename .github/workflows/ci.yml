@@ -18,7 +18,7 @@ jobs:
       - name: Install deps
         run: npm ci
       - name: npm audit
-        run: npm audit --audit-level=moderate || true
+        run: npm audit --audit-level=high
       - name: HTML validate (all pages)
         run: npm run lint:html
       - name: CSS lint
