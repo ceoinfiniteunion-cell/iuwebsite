@@ -44,6 +44,7 @@
   }
 
   gsap.registerPlugin(ScrollTrigger, TextPlugin);
+  ScrollTrigger.config({ ignoreMobileResize: true });
 
   var root = document.documentElement;
 
@@ -391,5 +392,5 @@
 })();
 
 // Fix scroll jumps
-ScrollTrigger.config({ ignoreMobileResize: true });
+
 document.addEventListener('scroll', () => {}, { passive: true });
