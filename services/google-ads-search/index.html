@@ -169,16 +169,17 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 </nav>
 <!-- iu:content -->
 <section class="hero">
-  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
   <div class="hero-content">
-    <div class="hero-tag"><span class="hero-tag-text">GOOGLE SEARCH ADS · PPC · ROI FOCUS</span></div>
-    <h1 class="hero-title">Ваш бізнес<br>на <em>першому</em><br>місці Google.</h1>
-    <p class="hero-sub">Налаштовуємо пошукову рекламу так щоб кожна гривня бюджету приводила цільового клієнта. Не трафік — покупці.</p>
+    <div class="hero-tag"><span class="hero-tag-text">GOOGLE SEARCH · КОНТЕКСТНА РЕКЛАМА · ХАРКІВ</span></div>
+    <h1 class="hero-title">Контекстна реклама<br><em>Google</em><br>у пошуку</h1>
+    <p class="hero-sub">Infinite Union налаштовує контекстну рекламу Google для бізнесу, який уже шукають: послуги, ремонт, доставка, B2B. Збираємо семантику, пишемо оголошення, налаштовуємо відстеження дзвінків і заявок. Запуск від $300, ведення від $200/міс, бюджет на кліки — окремо.</p>
     <div class="hero-stats">
-      <div class="hs"><div class="hs-val" data-count="300">0<em>%</em></div><div class="hs-key">СЕРЕДНІЙ ROI</div></div>
-      <div class="hs"><div class="hs-val">#1</div><div class="hs-key">ПОЗИЦІЯ В ПОШУКУ</div></div>
-      <div class="hs"><div class="hs-val" data-count="48">0<em>год</em></div><div class="hs-key">ЗАПУСК КАМПАНІЇ</div></div>
+      <div class="hs"><div class="hs-val">$300</div><div class="hs-key">ЗАПУСК, ВІД</div></div>
+      <div class="hs"><div class="hs-val">$200</div><div class="hs-key">ВЕДЕННЯ / МІС</div></div>
+      <div class="hs"><div class="hs-val">$300</div><div class="hs-key">БЮДЖЕТ / МІС, ВІД</div></div>
     </div>
+    <a href="#contact" class="btn-primary" style="margin-top:32px;">ОБГОВОРИТИ ЗАПУСК</a>
   </div>
   <div class="serp-wrap rev-r">
     <canvas id="serpCanvas" class="serp-canvas"></canvas>
@@ -190,159 +191,157 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   </div>
 </div>
 <section>
+  <div class="sec-label">ЗАДАЧА</div>
+  <h2 class="sec-title rev">Коли контекстна<br>реклама працює</h2>
+  <p class="hero-sub" style="max-width:820px;">Контекстна реклама Google показує оголошення людям, які прямо зараз вводять запит: «ремонт пральної машини Харків», «доставка квітів», «бухгалтерський супровід ТОВ». Це найкоротший шлях від потреби до заявки — але лише якщо ви платите за правильні запити.</p>
+  <p class="hero-sub" style="max-width:820px;">Типові втрати бюджету: кліки за «безкоштовно», «своїми руками», «вакансії» та назвами конкурентів; одне оголошення на всі послуги, яке веде на головну; відсутність відстеження дзвінків, через що незрозуміло, яке ключове слово дало клієнта. А якщо ваш продукт поки ніхто не шукає, пошук не допоможе — краще почати з <a href="/services/meta-ads/" style="color:var(--red)">таргетованої реклами</a>.</p>
+</section>
+<section>
   <div class="sec-label">ЩО ВХОДИТЬ</div>
-  <h2 class="sec-title rev">Пошукова реклама<br>що конвертує</h2>
+  <h2 class="sec-title rev">Що робимо<br>в пошукових кампаніях</h2>
   <div class="features-grid">
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none"><circle cx="20" cy="20" r="12" stroke="#4285F4" stroke-width="1.5" stroke-opacity=".7"/><path d="M30 30l10 10" stroke="#D40000" stroke-width="1.5" stroke-linecap="round"/><path d="M16 20h8M20 16v8" stroke="#4285F4" stroke-width="1" stroke-linecap="round" stroke-opacity=".5"/></svg>
-      <div class="feat-name">Семантичне ядро</div>
-      <div class="feat-desc">Збираємо всі релевантні запити, чистимо мінус-слова, групуємо за наміром. Тільки цільовий трафік.</div>
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none"><circle cx="20" cy="20" r="12" stroke="#4285F4" stroke-width="1.5" stroke-opacity=".7"/><path d="M30 30l10 10" stroke="#D40000" stroke-width="1.5" stroke-linecap="round"/><path d="M16 20h8M20 16v8" stroke="#4285F4" stroke-width="1" stroke-linecap="round" stroke-opacity=".5"/></svg>
+      <h3 class="feat-name">Семантика за наміром</h3>
+      <div class="feat-desc">Збираємо запити з Keyword Planner і підказок Google, відділяємо «гарячі» (купити, ціна, замовити) від інформаційних. Платимо лише за ті, де є намір звернутися.</div>
     </div>
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="#4285F4" stroke-width="1.5" stroke-opacity=".7"/><rect x="4" y="10" width="40" height="8" rx="3" fill="rgba(66,133,244,.08)"/><rect x="10" y="22" width="28" height="2" rx="1" fill="rgba(255,255,255,.1)"/><rect x="10" y="27" width="20" height="2" rx="1" fill="rgba(255,255,255,.06)"/><rect x="10" y="32" width="14" height="2" rx="1" fill="rgba(212,0,0,.4)"/></svg>
-      <div class="feat-name">Оголошення що клікають</div>
-      <div class="feat-desc">RSA оголошення з 15+ заголовками та описами. A/B тести. CTR вищий за середній по ніші на 30-50%.</div>
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="#4285F4" stroke-width="1.5" stroke-opacity=".7"/><rect x="4" y="10" width="40" height="8" rx="3" fill="rgba(66,133,244,.08)"/><rect x="10" y="22" width="28" height="2" rx="1" fill="rgba(255,255,255,.1)"/><rect x="10" y="27" width="20" height="2" rx="1" fill="rgba(255,255,255,.06)"/><rect x="10" y="32" width="14" height="2" rx="1" fill="rgba(212,0,0,.4)"/></svg>
+      <h3 class="feat-name">Оголошення під кожну послугу</h3>
+      <div class="feat-desc">Адаптивні оголошення з кількома заголовками та описами: ціна, терміни, географія. Тексти погоджуємо з вами до запуску.</div>
     </div>
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none"><path d="M8 32L16 20L24 26L32 14L40 22" stroke="#4285F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".8"/><circle cx="16" cy="20" r="3" fill="#4285F4" fill-opacity=".4"/><circle cx="32" cy="14" r="3" fill="#D40000"/><rect x="6" y="36" width="36" height="1" rx=".5" fill="rgba(255,255,255,.06)"/></svg>
-      <div class="feat-name">Smart Bidding</div>
-      <div class="feat-desc">Target CPA або Target ROAS — автоматичне управління ставками для максимальної конверсії при вашому бюджеті.</div>
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none"><path d="M8 32L16 20L24 26L32 14L40 22" stroke="#4285F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".8"/><circle cx="16" cy="20" r="3" fill="#4285F4" fill-opacity=".4"/><circle cx="32" cy="14" r="3" fill="#D40000"/><rect x="6" y="36" width="36" height="1" rx=".5" fill="rgba(255,255,255,.06)"/></svg>
+      <h3 class="feat-name">Стратегія ставок</h3>
+      <div class="feat-desc">Стартуємо з контрольованих ставок, на автоматичні стратегії (цільова ціна конверсії) переходимо, коли накопичено конверсії.</div>
     </div>
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="4" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/><path d="M14 34V20M22 34V14M30 34V24M38 34V18" stroke="#4285F4" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".7"/><rect x="4" y="36" width="40" height="2" rx="1" fill="rgba(66,133,244,.1)"/></svg>
-      <div class="feat-name">Трекінг конверсій</div>
-      <div class="feat-desc">Відстежуємо кожну конверсію: дзвінки, форми, покупки, мікроконверсії. Знаємо що саме приносить гроші.</div>
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="4" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/><path d="M14 34V20M22 34V14M30 34V24M38 34V18" stroke="#4285F4" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".7"/><rect x="4" y="36" width="40" height="2" rx="1" fill="rgba(66,133,244,.1)"/></svg>
+      <h3 class="feat-name">Відстеження дзвінків і заявок</h3>
+      <div class="feat-desc">Форми, кліки по телефону, переходи в Telegram і Viber через GA4 і Tag Manager. Видно, який запит дав заявку.</div>
     </div>
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="rgba(255,255,255,.06)" stroke-width="1.5"/><path d="M24 6C14.059 6 6 14.059 6 24" stroke="#4285F4" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".8"/><path d="M24 6C33.941 6 42 14.059 42 24" stroke="rgba(66,133,244,.3)" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="24" r="5" fill="rgba(66,133,244,.15)" stroke="#4285F4" stroke-width="1"/></svg>
-      <div class="feat-name">Геотаргетинг</div>
-      <div class="feat-desc">Показуємо рекламу тільки в потрібних містах та регіонах. Ставки вищі де більше конверсій.</div>
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="rgba(255,255,255,.06)" stroke-width="1.5"/><path d="M24 6C14.059 6 6 14.059 6 24" stroke="#4285F4" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".8"/><path d="M24 6C33.941 6 42 14.059 42 24" stroke="rgba(66,133,244,.3)" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="24" r="5" fill="rgba(66,133,244,.15)" stroke="#4285F4" stroke-width="1"/></svg>
+      <h3 class="feat-name">Гео і розклад</h3>
+      <div class="feat-desc">Показ лише у ваших містах чи районах і в години, коли ви можете відповісти на дзвінок.</div>
     </div>
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="28" width="40" height="16" rx="3" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/><rect x="4" y="28" width="40" height="16" rx="3" fill="rgba(66,133,244,.04)"/><path d="M4 4h40v20H4z" stroke="#4285F4" stroke-width="1.5" stroke-opacity=".5" fill="rgba(66,133,244,.05)"/><rect x="10" y="10" width="20" height="2" rx="1" fill="rgba(255,255,255,.15)"/><rect x="10" y="14" width="14" height="2" rx="1" fill="rgba(255,255,255,.08)"/><rect x="10" y="32" width="28" height="2" rx="1" fill="rgba(255,255,255,.06)"/></svg>
-      <div class="feat-name">Розширення оголошень</div>
-      <div class="feat-desc">Посилання на розділи, уточнення, заклики, ціни, промоакції — оголошення займає більше місця та клікабельніше.</div>
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="28" width="40" height="16" rx="3" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/><rect x="4" y="28" width="40" height="16" rx="3" fill="rgba(66,133,244,.04)"/><path d="M4 4h40v20H4z" stroke="#4285F4" stroke-width="1.5" stroke-opacity=".5" fill="rgba(66,133,244,.05)"/><rect x="10" y="10" width="20" height="2" rx="1" fill="rgba(255,255,255,.15)"/><rect x="10" y="14" width="14" height="2" rx="1" fill="rgba(255,255,255,.08)"/><rect x="10" y="32" width="28" height="2" rx="1" fill="rgba(255,255,255,.06)"/></svg>
+      <h3 class="feat-name">Мінус-слова і розширення</h3>
+      <div class="feat-desc">Стартовий список мінус-слів до запуску, далі — щотижнева чистка запитів. Додаткові посилання, телефон, ціни, адреса в оголошенні.</div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="sec-label">ЕТАПИ</div>
+  <h2 class="sec-title rev">Як запускаємо<br>пошукову рекламу</h2>
+  <div class="features-grid">
+    <div class="feat rev">
+      <div class="level-note">01 · 2–4 дні</div>
+      <h3 class="feat-name">Бриф і семантика</h3>
+      <div class="feat-desc">Послуги, регіони, середній чек, конкуренти. Збираємо і чистимо семантику, оцінюємо попит у ніші.</div>
+    </div>
+    <div class="feat rev">
+      <div class="level-note">02 · 1–2 дні</div>
+      <h3 class="feat-name">Оголошення і трекінг</h3>
+      <div class="feat-desc">Структура кампаній за послугами, тексти, розширення, налаштування конверсій у GA4.</div>
+    </div>
+    <div class="feat rev">
+      <div class="level-note">03 · далі щотижня</div>
+      <h3 class="feat-name">Запуск і перший місяць</h3>
+      <div class="feat-desc">Модерація, запуск з денним лімітом, щотижнева чистка запитів. Стабільну картину видно через 2–4 тижні.</div>
     </div>
   </div>
 </section>
 <section style="background:var(--bg2);">
   <div class="sec-label">ВАРТІСТЬ</div>
-  <h2 class="sec-title rev">Оберіть формат<br>співпраці</h2>
+  <h2 class="sec-title rev">Ціна контекстної<br>реклами Google</h2>
   <div class="levels-grid">
     <div class="level rev">
-      <div class="level-name">Старт</div>
+      <h3 class="level-name">Запуск</h3>
       <div class="level-price">від $300</div>
       <div class="level-note">налаштування · разово</div>
       <ul class="level-list">
-        <li class="on">Семантичне ядро до 200 слів</li>
-        <li class="on">1 кампанія + 3 групи</li>
-        <li class="on">RSA оголошення</li>
-        <li class="on">Базові розширення</li>
-        <li class="on">Трекінг конверсій</li>
-        <li>Ремаркетинг</li>
-        <li>A/B тести</li>
+        <li class="on">Семантика і мінус-слова</li>
+        <li class="on">Кампанії за напрямами послуг</li>
+        <li class="on">Адаптивні оголошення і розширення</li>
+        <li class="on">Конверсії в GA4 і Tag Manager</li>
+        <li class="on">Передача акаунта та інструкція</li>
+        <li>Щотижнева оптимізація</li>
         <li>Щомісячні звіти</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
     <div class="level level--pro rev">
-      <div class="level-badge">ПОПУЛЯРНИЙ</div>
-      <div class="level-name">Ведення Pro</div>
+      <div class="level-badge">НАЙЧАСТІШЕ</div>
+      <h3 class="level-name">Ведення</h3>
       <div class="level-price">від $200<span style="font-size:16px;color:var(--muted)">/міс</span></div>
-      <div class="level-note">ведення + оптимізація</div>
+      <div class="level-note">оптимізація + звіти</div>
       <ul class="level-list">
-        <li class="on">Необмежена семантика</li>
-        <li class="on">Всі типи кампаній</li>
-        <li class="on">Smart Bidding</li>
-        <li class="on">A/B тести оголошень</li>
-        <li class="on">Ремаркетинг</li>
-        <li class="on">Щотижневі звіти</li>
-        <li class="on">Оптимізація бюджету</li>
-        <li class="on">Прямий зв'язок з фахівцем</li>
+        <li class="on">Щотижнева чистка пошукових запитів</li>
+        <li class="on">Тести оголошень</li>
+        <li class="on">Коригування ставок і бюджету</li>
+        <li class="on">Зведення в Telegram щотижня</li>
+        <li class="on">Звіт щомісяця</li>
+        <li class="on">Відкритий доступ до акаунта</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
     <div class="level rev">
-      <div class="level-name">Enterprise</div>
+      <h3 class="level-name">Великі бюджети</h3>
       <div class="level-price">від $500<span style="font-size:16px;color:var(--muted)">/міс</span></div>
-      <div class="level-note">великі бюджети · e-commerce</div>
+      <div class="level-note">кілька напрямів · регіонів · мов</div>
       <ul class="level-list">
-        <li class="on">Performance Max кампанії</li>
-        <li class="on">Shopping реклама</li>
-        <li class="on">Динамічний ремаркетинг</li>
-        <li class="on">Custom conversion modeling</li>
-        <li class="on">Attribution аналіз</li>
-        <li class="on">CRM інтеграція</li>
-        <li class="on">Dedicated фахівець</li>
-        <li class="on">SLA гарантії</li>
+        <li class="on">Кілька регіонів і мов</li>
+        <li class="on">Окремі кампанії під кожну послугу</li>
+        <li class="on">Ремаркетинг у пошуку</li>
+        <li class="on">Передача заявок у CRM</li>
+        <li class="on">Звіти в Ad Tracker (у розробці)</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
   </div>
+  <p class="hero-sub" style="max-width:820px;margin-top:40px;margin-bottom:0;">Рекламний бюджет оплачується окремо, напряму в Google Ads; рекомендований старт — від $300/міс. Ціну кліку чи заявки до збору семантики не називаємо: вона залежить від ніші та конкуренції. Performance Max, YouTube і ремаркетинг — на сторінці <a href="/services/google-ads/" style="color:var(--red)">налаштування Google Ads</a>, усі тарифи — на сторінці <a href="/pricing/" style="color:var(--red)">цін</a>.</p>
 </section>
 <section>
-  <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
-  <h2 class="sec-title rev">Питання про<br>пошукову рекламу</h2>
-  <div class="faq-list">
-    <div class="faq-item rev"><button type="button" class="faq-q">Який мінімальний бюджет? <span>+</span></button><div class="faq-a">Від $200-300 на місяць на рекламний бюджет. Оптимально від $500 для статистично значущих результатів. Наша комісія за ведення — окремо від рекламного бюджету.</div></div>
-    <div class="faq-item rev"><button type="button" class="faq-q">Коли побачу перші результати? <span>+</span></button><div class="faq-a">Перші кліки та конверсії — в перший день після запуску. Оптимізація та стабільні результати — через 2-4 тижні після накопичення даних для Smart Bidding.</div></div>
-    <div class="faq-item rev"><button type="button" class="faq-q">Чи можу я сам керувати рекламою після налаштування? <span>+</span></button><div class="faq-a">Так, аккаунт залишається вашим. Після налаштування проводимо навчання та передаємо документацію. Або продовжуємо вести рекламу — вирішуєте ви.</div></div>
-    <div class="faq-item rev"><button type="button" class="faq-q">Як ви звітуєте про результати? <span>+</span></button><div class="faq-a">Щотижневі зведення в Telegram, щомісячний детальний звіт з показниками: витрати, кліки, конверсії, CPA, ROI. Завжди відкритий доступ до аккаунту Google Ads.</div></div>
+  <div class="sec-label">ПОРТФОЛІО</div>
+  <h2 class="sec-title rev">Приклади<br>з портфоліо</h2>
+  <div class="features-grid">
+    <div class="feat rev">
+      <h3 class="feat-name">Transfer Kharkiv</h3>
+      <div class="feat-desc">Лендінг трансферної компанії з Харкова: конверсія 8.4%, 119+ SEO-позицій у топі Google, заявки 24/7 приймає Telegram-бот. Такий лендінг — хороша посадкова для пошукової реклами: одна послуга, одна дія.</div>
+    </div>
+    <div class="feat rev">
+      <h3 class="feat-name">Ad Tracker by IU</h3>
+      <div class="feat-desc">Власний дашборд IU: Meta, Google і TikTok Ads в одному вікні, автооновлення кожні 2 години, 90 днів історії. Економить 5+ годин на тиждень на звітах. Зараз у розробці.</div>
+    </div>
   </div>
+  <p class="hero-sub" style="max-width:820px;margin-top:40px;margin-bottom:0;">Усі проєкти — у <a href="/portfolio/" style="color:var(--red)">портфоліо</a>.</p>
 </section>
-
-<!-- ПЕРЕЛІНКОВКА -->
 <section style="padding:80px 40px;border-top:1px solid rgba(255,255,255,.08);">
   <div style="font-size:11px;letter-spacing:.2em;color:#D40000;font-family:'Space Grotesk',sans-serif;font-weight:600;margin-bottom:16px;">ПОВ'ЯЗАНІ ПОСЛУГИ</div>
   <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:40px;">Може зацікавити</h2>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
-    <a href="/services/meta-ads-instagram/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Реклама в Instagram</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Meta Ads Instagram</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-    <a href="/services/seo/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Органічний трафік</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">SEO просування</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-    <a href="/services/websites-landing/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Конверсійні сторінки</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Лендінги</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-    <a href="/services/seo-audit/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Аналіз сайту</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">SEO аудит</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-  </div>
-</section>
-<section class="cta-final" id="contact">
-  <canvas id="ctaCanvas" class="cta-canvas"></canvas>
-  <div class="cta-label">ГОТОВІ ЗАПУСТИТИ РЕКЛАМУ?</div>
-  <h2 class="cta-title">Ваші клієнти<br>шукають <em>вас</em> вже зараз</h2>
-  <p class="cta-sub">Розкажіть про бізнес — відповімо за 15 хвилин</p>
-  <div class="cta-btns">
-    <div class="contact-btns-group">
-  <a href="https://t.me/infiniteunion_manager" class="cbtn cbtn-tg" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
-    Telegram
-  </a>
-  <a href="https://wa.me/380688286969" class="cbtn cbtn-wa" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </a>
-  <a href="viber://chat?number=%2B380688286969" class="cbtn cbtn-viber" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C8.55-.05 2.9.64 1.05 6.39.41 8.37.19 10.14.17 11.3c-.03 1.16-.05 3.35.65 5.21h.01c1.1 3.03 3.66 5.01 6.88 5.35v2.33s-.02.55.34.66c.44.13.69-.28 1.11-.73.23-.25.55-.62.79-.9 2.16.18 3.83-.28 4.01-.34.44-.14 2.9-.46 3.31-3.74 0 0 .42-2.65-.17-4.74-.17-.6-.33-.87-.46-1.04l.17-.08c0-.01-.04-.05-.08-.09l-.07-.07v-.01c-.44-.44-1.17-.88-1.17-.88s-.15-.08-.18-.05c-.02.03-.01.12.01.23.05.15.1.32.1.48.01.17 0 .36 0 .54-.01.17-.04.33-.09.45-.05.13-.13.22-.23.26-.11.04-.23.05-.33.02-.1-.03-.2-.11-.28-.2a2.4 2.4 0 01-.2-.29c-.04-.08-.07-.16-.06-.23.01-.07.08-.15.16-.21.08-.05.19-.07.29-.05.1.03.19.1.26.2.07.1.11.22.11.34 0 .12-.05.24-.12.34a.58.58 0 01-.27.19c-.1.03-.22.03-.32-.01a.59.59 0 01-.24-.19.59.59 0 01-.1-.33c0-.12.04-.24.1-.33.06-.1.15-.17.25-.21.1-.03.21-.03.31.02zm1.19 2.15c.09 0 .18 0 .26.01 3.14.22 5.62 2.74 5.62 5.78 0 .06 0 .13-.01.19-.13 3.11-2.63 5.59-5.62 5.59-.09 0-.18 0-.27-.01-3.13-.22-5.61-2.74-5.61-5.77 0-.07 0-.13 0-.2.14-3.1 2.63-5.59 5.62-5.59z"/></svg>
-    Viber
-  </a>
-  <a href="tel:+380688286969" class="cbtn cbtn-tel">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-    +380688286969
-  </a>
-</div>
-    <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
+  <div class="related-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+    <a href="/services/google-ads/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;">
+      <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Усі формати</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Налаштування Google Ads</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
+    </a>
+    <a href="/services/websites-landing/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;">
+      <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Посадкова під рекламу</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Лендінг від $600</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
+    </a>
+    <a href="/services/seo/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;">
+      <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Органічний трафік</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">SEO просування</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
+    </a>
+    <a href="/blog/google-ads-chy-seo/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;">
+      <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Блог</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Google Ads чи SEO</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
+    </a>
   </div>
 </section>
 <section class="faq-section">
@@ -351,23 +350,68 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     <h2 class="faq-title">Часті запитання</h2>
 
     <div class="faq-item">
-      <button type="button" class="faq-q">Що таке пошукова реклама Google?<span class="faq-arr">+</span></button>
+      <button type="button" class="faq-q">Скільки коштує контекстна реклама Google?<span class="faq-arr">+</span></button>
       <div class="faq-a">
-        <p>Пошукова реклама — оголошення які з'являються в Google коли користувач шукає ваш товар або послугу. Платите тільки за кліки.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Яка мінімальна ціна кліку?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>Ціна кліку залежить від ніші та конкуренції. В Україні середня ціна кліку $0.1-0.5, в конкурентних нішах до $2-3.</p>
+        <p>Наша робота: запуск від $300, ведення від $200/міс. Кліки ви оплачуєте Google окремо, рекомендований бюджет — від $300/міс. Точнішу оцінку даємо після збору семантики.</p>
       </div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q">Чи можна обмежити витрати?<span class="faq-arr">+</span></button>
       <div class="faq-a">
-        <p>Так, встановлюємо денний та місячний ліміт бюджету. Виніколи не витратите більше ніж запланували.</p>
+        <p>Так: денний бюджет, географія і розклад показів. В окремий день Google може витратити більше денного ліміту, але за місяць не списує більше, ніж денний бюджет × 30,4.</p>
       </div>
     </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чим пошукова реклама відрізняється від Performance Max?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>У пошуку ви контролюєте ключові слова й тексти. Performance Max — автоматичні кампанії на всі мережі Google, найкраще підходять магазинам із фідом товарів. Для послуг зазвичай починаємо з пошуку.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи можу я вести рекламу сам після налаштування?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так. Акаунт ваш, після запуску передаємо доступи та коротку інструкцію. Або продовжуємо ведення — вирішуєте ви.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Коли з'являться перші заявки?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Оголошення починають показуватися після модерації, зазвичай протягом доби. Перші заявки можуть прийти одразу, стабільну ціну заявки видно через 2–4 тижні. Кількість заявок заздалегідь не гарантуємо.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Що, якщо в моїй ніші мало пошукових запитів?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Тоді обсяг пошукової реклами обмежений попитом, і більший бюджет не допоможе. Скажемо про це після збору семантики й запропонуємо <a href="/services/meta-ads/" style="color:var(--red)">таргетовану рекламу</a> або <a href="/services/seo/" style="color:var(--red)">SEO</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-final" id="contact">
+  <canvas id="ctaCanvas" class="cta-canvas" aria-hidden="true"></canvas>
+  <div class="cta-label">ГОТОВІ ЗАПУСТИТИ РЕКЛАМУ?</div>
+  <h2 class="cta-title">Покажіться тим,<br>хто <em>шукає</em> вас</h2>
+  <p class="cta-sub">Опишіть послуги та регіон — відповімо протягом 15 хвилин у робочий час</p>
+  <div class="cta-btns">
+    <div class="contact-btns-group">
+  <a href="https://t.me/infiniteunion_manager" class="cbtn cbtn-tg" rel="noopener noreferrer">
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+    Telegram
+  </a>
+  <a href="https://wa.me/380688286969" class="cbtn cbtn-wa" rel="noopener noreferrer">
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <a href="viber://chat?number=%2B380688286969" class="cbtn cbtn-viber" rel="noopener noreferrer">
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C8.55-.05 2.9.64 1.05 6.39.41 8.37.19 10.14.17 11.3c-.03 1.16-.05 3.35.65 5.21h.01c1.1 3.03 3.66 5.01 6.88 5.35v2.33s-.02.55.34.66c.44.13.69-.28 1.11-.73.23-.25.55-.62.79-.9 2.16.18 3.83-.28 4.01-.34.44-.14 2.9-.46 3.31-3.74 0 0 .42-2.65-.17-4.74-.17-.6-.33-.87-.46-1.04l.17-.08c0-.01-.04-.05-.08-.09l-.07-.07v-.01c-.44-.44-1.17-.88-1.17-.88s-.15-.08-.18-.05c-.02.03-.01.12.01.23.05.15.1.32.1.48.01.17 0 .36 0 .54-.01.17-.04.33-.09.45-.05.13-.13.22-.23.26-.11.04-.23.05-.33.02-.1-.03-.2-.11-.28-.2a2.4 2.4 0 01-.2-.29c-.04-.08-.07-.16-.06-.23.01-.07.08-.15.16-.21.08-.05.19-.07.29-.05.1.03.19.1.26.2.07.1.11.22.11.34 0 .12-.05.24-.12.34a.58.58 0 01-.27.19c-.1.03-.22.03-.32-.01a.59.59 0 01-.24-.19.59.59 0 01-.1-.33c0-.12.04-.24.1-.33.06-.1.15-.17.25-.21.1-.03.21-.03.31.02zm1.19 2.15c.09 0 .18 0 .26.01 3.14.22 5.62 2.74 5.62 5.78 0 .06 0 .13-.01.19-.13 3.11-2.63 5.59-5.62 5.59-.09 0-.18 0-.27-.01-3.13-.22-5.61-2.74-5.61-5.77 0-.07 0-.13 0-.2.14-3.1 2.63-5.59 5.62-5.59z"/></svg>
+    Viber
+  </a>
+  <a href="tel:+380688286969" class="cbtn cbtn-tel">
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    +380688286969
+  </a>
+</div>
+    <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
   </div>
 </section>
 
@@ -423,7 +467,7 @@ document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach
   c.width=c.offsetWidth;c.height=c.offsetHeight;
   const W=c.width,H=c.height;
   const results=[
-    {type:'ad',title:'Розробка сайтів під ключ — Infinite Union',url:'infiniteunion.com.ua',desc:'Senior команда. Від $600. Запуск за 14 днів.',rank:1},
+    {type:'ad',title:'Розробка сайтів під ключ — Infinite Union',url:'infiniteunion.com.ua',desc:'Лендінг від $600. Запуск від 10 днів. Харків.',rank:1},
     {type:'ad',title:'Створення сайтів | Швидко та якісно',url:'competitor1.ua',desc:'Сайти для бізнесу. 5+ років досвіду.',rank:2},
     {type:'organic',title:'Топ 10 веб-студій Харкова 2026',url:'article.com',desc:'Рейтинг компаній з розробки сайтів...',rank:3},
     {type:'organic',title:'Розробка сайту — що це і скільки коштує',url:'blog.ua',desc:'Повний гід по розробці сайту для бізнесу...',rank:4},

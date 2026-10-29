@@ -165,11 +165,12 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 </nav>
 <!-- iu:content -->
 <section class="hero">
-  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
   <div class="hero-content">
     <div class="hero-tag"><span class="hero-tag-text">SEO АУДИТ · ТЕХНІЧНИЙ АНАЛІЗ · ПЛАН ДІЙ</span></div>
-    <h1 class="hero-title">Знайдемо все<br>що заважає<br><em>Google</em> вас знайти.</h1>
-    <p class="hero-sub">Технічний SEO аудит що виявляє причини низьких позицій. Детальний звіт з пріоритизованим планом виправлень — не просто список проблем.</p>
+    <h1 class="hero-title">SEO аудит сайту<br>з <em>планом</em><br>виправлень</h1>
+    <p class="hero-sub">Infinite Union з Харкова перевіряє сайт так, як його бачить Google: індексація, швидкість і Core Web Vitals, структура, мета-теги, дублікати, розмітка. На виході — звіт із пріоритетами: що виправити першим і як. Базовий аудит від $100 за 3 дні, повний — від $300 за 5 днів.</p>
+    <a href="#contact" class="btn-primary" style="margin-top:32px;">ЗАМОВИТИ АУДИТ</a>
   </div>
   <div class="audit-preview rev-r">
     <canvas id="auditCanvas" class="audit-canvas"></canvas>
@@ -181,145 +182,144 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   </div>
 </div>
 <section>
+  <div class="sec-label">КОЛИ ПОТРІБЕН</div>
+  <h2 class="sec-title rev">Коли варто замовити<br>SEO аудит сайту</h2>
+  <p class="hero-sub" style="max-width:820px;">SEO аудит сайту потрібен, коли трафік із Google впав після редизайну чи переїзду на нову CMS; коли сайт новий, а в індексі лише кілька сторінок; перед стартом SEO просування або реклами, щоб не вкладати гроші в сайт із технічними помилками.</p>
+  <p class="hero-sub" style="max-width:820px;">Що таке аудит і з чого він складається, ми пояснили в статті <a href="/blog/seo-audit-shcho-tse/" style="color:var(--red)">«SEO аудит: що це»</a>. Тут — що конкретно перевіряємо, що ви отримаєте і скільки це коштує.</p>
+</section>
+<section>
   <div class="sec-label">ЩО ПЕРЕВІРЯЄМО</div>
-  <h2 class="sec-title rev">200+ параметрів<br>за 5 днів</h2>
+  <h2 class="sec-title rev">Що входить<br>в аудит</h2>
   <div class="checks-grid">
     <div class="check rev">
-      <svg class="check-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".5"/><path d="M16 24l6 6 10-12" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div><div class="check-name">Core Web Vitals</div><div class="check-desc">LCP, FID, CLS — показники що Google використовує для ранжування. Виявляємо що саме гальмує сайт і як виправити.</div><div class="check-count">12 параметрів швидкості</div></div>
+      <svg aria-hidden="true" class="check-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".5"/><path d="M16 24l6 6 10-12" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><h3 class="check-name">Індексація і сканування</h3><div class="check-desc">robots.txt, sitemap, коди відповіді, noindex, canonical. Порівнюємо, що є на сайті і що бачить Google у Search Console.</div><div class="check-count">Search Console · sitemap · robots.txt</div></div>
     </div>
     <div class="check rev">
-      <svg class="check-icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="4" width="36" height="40" rx="3" stroke="#F59E0B" stroke-width="1.5" stroke-opacity=".6"/><path d="M14 16h20M14 24h16M14 32h12" stroke="rgba(255,255,255,.2)" stroke-width="1.5" stroke-linecap="round"/><circle cx="36" cy="36" r="8" fill="var(--bg2)" stroke="#22C55E" stroke-width="1.5"/><path d="M33 36l2 2 4-4" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div><div class="check-name">Технічна SEO</div><div class="check-desc">Robots.txt, sitemap, canonical, hreflang, structured data, meta теги, заголовки — кожен елемент що впливає на індексацію.</div><div class="check-count">80+ технічних параметрів</div></div>
+      <svg aria-hidden="true" class="check-icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="4" width="36" height="40" rx="3" stroke="#F59E0B" stroke-width="1.5" stroke-opacity=".6"/><path d="M14 16h20M14 24h16M14 32h12" stroke="rgba(255,255,255,.2)" stroke-width="1.5" stroke-linecap="round"/><circle cx="36" cy="36" r="8" fill="var(--bg2)" stroke="#22C55E" stroke-width="1.5"/><path d="M33 36l2 2 4-4" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><h3 class="check-name">Швидкість і Core Web Vitals</h3><div class="check-desc">LCP, INP, CLS на мобільних і десктопі: що саме гальмує сторінки — зображення, скрипти, шрифти, сервер.</div><div class="check-count">PageSpeed · CrUX · Lighthouse</div></div>
     </div>
     <div class="check rev">
-      <svg class="check-icon" viewBox="0 0 48 48" fill="none"><circle cx="20" cy="20" r="12" stroke="#F97316" stroke-width="1.5" stroke-opacity=".6"/><path d="M30 30l10 10" stroke="#D40000" stroke-width="2" stroke-linecap="round"/><path d="M16 20h8M20 16v8" stroke="rgba(249,115,22,.4)" stroke-width="1" stroke-linecap="round"/></svg>
-      <div><div class="check-name">Семантика та контент</div><div class="check-desc">Чи відповідають сторінки пошуковим запитам? Каннібалізація ключових слів, thin content, дублі — знаходимо всі проблеми.</div><div class="check-count">40+ перевірок контенту</div></div>
+      <svg aria-hidden="true" class="check-icon" viewBox="0 0 48 48" fill="none"><circle cx="20" cy="20" r="12" stroke="#F97316" stroke-width="1.5" stroke-opacity=".6"/><path d="M30 30l10 10" stroke="#D40000" stroke-width="2" stroke-linecap="round"/><path d="M16 20h8M20 16v8" stroke="rgba(249,115,22,.4)" stroke-width="1" stroke-linecap="round"/></svg>
+      <div><h3 class="check-name">Структура і внутрішні посилання</h3><div class="check-desc">Глибина вкладеності, сторінки без вхідних посилань, биті посилання, ланцюжки редиректів.</div><div class="check-count">Структура · перелінковка</div></div>
     </div>
     <div class="check rev">
-      <svg class="check-icon" viewBox="0 0 48 48" fill="none"><path d="M8 24C8 15.163 15.163 8 24 8s16 7.163 16 16" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".6"/><path d="M24 8v16l8 8" stroke="rgba(34,197,94,.3)" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="24" r="4" fill="rgba(34,197,94,.2)" stroke="#22C55E" stroke-width="1"/></svg>
-      <div><div class="check-name">Посилальний профіль</div><div class="check-desc">Аналіз зворотних посилань: токсичні посилання, якість донорів, анкорний профіль, порівняння з конкурентами.</div><div class="check-count">Повний link audit</div></div>
+      <svg aria-hidden="true" class="check-icon" viewBox="0 0 48 48" fill="none"><path d="M8 24C8 15.163 15.163 8 24 8s16 7.163 16 16" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".6"/><path d="M24 8v16l8 8" stroke="rgba(34,197,94,.3)" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="24" r="4" fill="rgba(34,197,94,.2)" stroke="#22C55E" stroke-width="1"/></svg>
+      <div><h3 class="check-name">Мета-теги і заголовки</h3><div class="check-desc">Title, description, H1: порожні, задовгі, однакові на різних сторінках.</div><div class="check-count">Title · description · H1</div></div>
+    </div>
+    <div class="check rev">
+      <svg aria-hidden="true" class="check-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".5"/><path d="M16 24l6 6 10-12" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><h3 class="check-name">Дублікати і каннібалізація</h3><div class="check-desc">Версії з www і без, параметри в URL, кілька сторінок, що конкурують за один запит.</div><div class="check-count">Дублікати · канонічні URL</div></div>
+    </div>
+    <div class="check rev">
+      <svg aria-hidden="true" class="check-icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="4" width="36" height="40" rx="3" stroke="#F59E0B" stroke-width="1.5" stroke-opacity=".6"/><path d="M14 16h20M14 24h16M14 32h12" stroke="rgba(255,255,255,.2)" stroke-width="1.5" stroke-linecap="round"/><circle cx="36" cy="36" r="8" fill="var(--bg2)" stroke="#22C55E" stroke-width="1.5"/><path d="M33 36l2 2 4-4" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><h3 class="check-name">Мікророзмітка і мовні версії</h3><div class="check-desc">Schema.org (Organization, Service, FAQ, Product), її валідність, hreflang для мовних версій.</div><div class="check-count">Schema.org · hreflang</div></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="sec-label">ЕТАПИ</div>
+  <h2 class="sec-title rev">Як проходить<br>аудит</h2>
+  <div class="checks-grid">
+    <div class="check rev">
+      <div><h3 class="check-name">Бриф і доступи</h3><div class="check-desc">Цілі сайту, основні послуги, конкуренти. Для повного аудиту — доступ на читання до Search Console і GA4.</div><div class="check-count">День 1</div></div>
+    </div>
+    <div class="check rev">
+      <div><h3 class="check-name">Сканування і аналіз</h3><div class="check-desc">Скануємо сайт, перевіряємо швидкість, індексацію, структуру, контент.</div><div class="check-count">Дні 1–4</div></div>
+    </div>
+    <div class="check rev">
+      <div><h3 class="check-name">Звіт з пріоритетами</h3><div class="check-desc">Кожна проблема — з поясненням, впливом і конкретною рекомендацією: що виправити першим, що можна пізніше.</div><div class="check-count">3 дні — базовий · 5 днів — повний</div></div>
+    </div>
+    <div class="check rev">
+      <div><h3 class="check-name">Розбір звіту</h3><div class="check-desc">Проходимо звіт разом на дзвінку і відповідаємо на питання вашого розробника.</div><div class="check-count">Після здачі звіту</div></div>
     </div>
   </div>
 </section>
 <section style="background:var(--bg2);">
   <div class="sec-label">ВАРТІСТЬ</div>
-  <h2 class="sec-title rev">Оберіть глибину<br>аудиту</h2>
+  <h2 class="sec-title rev">Ціна SEO<br>аудиту сайту</h2>
   <div class="levels-grid">
     <div class="level rev">
-      <div class="level-name">Базовий</div>
+      <h3 class="level-name">Базовий</h3>
       <div class="level-price">від $100</div>
       <div class="level-note">до 50 сторінок · 3 дні</div>
       <ul class="level-list">
-        <li class="on">Core Web Vitals аналіз</li>
+        <li class="on">Індексація і сканування</li>
+        <li class="on">Швидкість і Core Web Vitals</li>
+        <li class="on">Мета-теги і заголовки</li>
         <li class="on">Технічні помилки</li>
-        <li class="on">Індексація</li>
-        <li class="on">Meta теги</li>
-        <li class="on">Базова семантика</li>
-        <li>Посилальний профіль</li>
-        <li>Конкурентний аналіз</li>
-        <li>Plan виправлень</li>
+        <li class="on">Список виправлень</li>
+        <li>Аналіз дублікатів і каннібалізації</li>
+        <li>Порівняння з конкурентами</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
     <div class="level level--pro rev">
-      <div class="level-badge">ПОПУЛЯРНИЙ</div>
-      <div class="level-name">Повний</div>
+      <div class="level-badge">НАЙЧАСТІШЕ</div>
+      <h3 class="level-name">Повний</h3>
       <div class="level-price">від $300</div>
-      <div class="level-note">необмежено сторінок · 5 днів</div>
+      <div class="level-note">сайти понад 50 сторінок · 5 днів</div>
       <ul class="level-list">
-        <li class="on">200+ параметрів</li>
-        <li class="on">Повний технічний аудит</li>
-        <li class="on">Семантичний аналіз</li>
-        <li class="on">Посилальний профіль</li>
-        <li class="on">Конкурентний аналіз (5 сайтів)</li>
-        <li class="on">Пріоритизований план виправлень</li>
-        <li class="on">Відеопрезентація результатів</li>
-        <li class="on">Консультація 1 год</li>
+        <li class="on">Усе з базового</li>
+        <li class="on">Дані Search Console і GA4</li>
+        <li class="on">Дублікати і каннібалізація</li>
+        <li class="on">Мікророзмітка і hreflang</li>
+        <li class="on">Порівняння з конкурентами у видачі</li>
+        <li class="on">План виправлень з пріоритетами</li>
+        <li class="on">Розбір звіту на дзвінку</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
     <div class="level rev">
-      <div class="level-name">Ongoing SEO</div>
+      <h3 class="level-name">Аудит + просування</h3>
       <div class="level-price">від $150<span style="font-size:16px;color:var(--muted)">/міс</span></div>
-      <div class="level-note">аудит + виправлення + просування</div>
+      <div class="level-note">виправлення + SEO щомісяця</div>
       <ul class="level-list">
-        <li class="on">Щомісячний моніторинг</li>
-        <li class="on">Виправлення помилок</li>
-        <li class="on">Контентна стратегія</li>
-        <li class="on">Нарощування посилань</li>
-        <li class="on">Позиції в Google</li>
-        <li class="on">Конкурентний моніторинг</li>
-        <li class="on">Щомісячний звіт</li>
-        <li class="on">Прямий зв'язок</li>
+        <li class="on">Виправлення за звітом</li>
+        <li class="on">Семантика і нові сторінки</li>
+        <li class="on">Тексти й мета-теги</li>
+        <li class="on">Робота з посиланнями</li>
+        <li class="on">Звіт щомісяця</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
   </div>
+  <p class="hero-sub" style="max-width:820px;margin-top:40px;margin-bottom:0;">Аудит — разова послуга. Виправлення можна доручити своєму розробнику за звітом або нам у межах <a href="/services/seo/" style="color:var(--red)">SEO просування сайту</a>. Усі тарифи — на сторінці <a href="/pricing/" style="color:var(--red)">цін</a>.</p>
 </section>
 <section>
-  <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
-  <h2 class="sec-title rev">Питання про<br>SEO аудит</h2>
-  <div class="faq-list">
-    <div class="faq-item rev"><button type="button" class="faq-q">Що я отримаю в результаті аудиту? <span>+</span></button><div class="faq-a">Детальний звіт у Google Docs або PDF з: списком всіх знайдених проблем, пріоритизацією по впливу на SEO, конкретними рекомендаціями для кожної проблеми та відеопрезентацією результатів для повного аудиту.</div></div>
-    <div class="faq-item rev"><button type="button" class="faq-q">Чи допоможете виправити знайдені проблеми? <span>+</span></button><div class="faq-a">Так, пропонуємо ongoing SEO пакет де виправляємо все самі щомісяця. Або можете передати звіт своїм розробникам — інструкції достатньо детальні.</div></div>
-    <div class="faq-item rev"><button type="button" class="faq-q">Чи потрібен доступ до мого сайту? <span>+</span></button><div class="faq-a">Для базового аудиту — ні, аналізуємо публічну частину. Для повного аудиту потрібен доступ до Google Search Console та Google Analytics для аналізу реальних даних.</div></div>
-    <div class="faq-item rev"><button type="button" class="faq-q">Коли побачу результати після виправлень? <span>+</span></button><div class="faq-a">Технічні виправлення (швидкість, індексація) — результат через 2-4 тижні. Зростання позицій — через 1-3 місяці залежно від конкурентності ніші та кількості виправлень.</div></div>
+  <div class="sec-label">ПОРТФОЛІО</div>
+  <h2 class="sec-title rev">Приклад<br>з портфоліо</h2>
+  <div class="checks-grid">
+    <div class="check rev">
+      <div><h3 class="check-name">Transfer Kharkiv</h3><div class="check-desc">Лендінг трансферної компанії з Харкова: конверсія 8.4%, 119+ SEO-позицій у топі Google, заявки 24/7 приймає Telegram-бот. Технічна SEO-база закладена ще на етапі розробки: статичний HTML/CSS/JS, швидке завантаження.</div><div class="check-count">SEO · HTML/CSS/JS · Python-бот</div></div>
+    </div>
   </div>
+  <p class="hero-sub" style="max-width:820px;margin-top:40px;margin-bottom:0;">Усі проєкти — у <a href="/portfolio/" style="color:var(--red)">портфоліо</a>.</p>
 </section>
-
-<!-- ПЕРЕЛІНКОВКА -->
 <section style="padding:80px 40px;border-top:1px solid rgba(255,255,255,.08);">
   <div style="font-size:11px;letter-spacing:.2em;color:#D40000;font-family:'Space Grotesk',sans-serif;font-weight:600;margin-bottom:16px;">ПОВ'ЯЗАНІ ПОСЛУГИ</div>
   <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:40px;">Може зацікавити</h2>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
-    <a href="/services/seo-local/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Google Maps</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">SEO локальне</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-    <a href="/services/seo/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Комплексне просування</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">SEO просування</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-    <a href="/services/websites-landing/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Оптимізований сайт</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Лендінги</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-    <a href="/services/google-ads/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Платний трафік</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Google Реклама</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-  </div>
-</section>
-<section class="cta-final" id="contact">
-  <canvas id="ctaCanvas" class="cta-canvas"></canvas>
-  <div class="cta-label">ГОТОВІ ДО АУДИТУ?</div>
-  <h2 class="cta-title">Дізнайтесь чому<br>Google не <em>бачить вас</em></h2>
-  <p class="cta-sub">Надішліть URL сайту — відповімо за 15 хвилин</p>
-  <div class="cta-btns">
-    <div class="contact-btns-group">
-  <a href="https://t.me/infiniteunion_manager" class="cbtn cbtn-tg" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
-    Telegram
-  </a>
-  <a href="https://wa.me/380688286969" class="cbtn cbtn-wa" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </a>
-  <a href="viber://chat?number=%2B380688286969" class="cbtn cbtn-viber" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C8.55-.05 2.9.64 1.05 6.39.41 8.37.19 10.14.17 11.3c-.03 1.16-.05 3.35.65 5.21h.01c1.1 3.03 3.66 5.01 6.88 5.35v2.33s-.02.55.34.66c.44.13.69-.28 1.11-.73.23-.25.55-.62.79-.9 2.16.18 3.83-.28 4.01-.34.44-.14 2.9-.46 3.31-3.74 0 0 .42-2.65-.17-4.74-.17-.6-.33-.87-.46-1.04l.17-.08c0-.01-.04-.05-.08-.09l-.07-.07v-.01c-.44-.44-1.17-.88-1.17-.88s-.15-.08-.18-.05c-.02.03-.01.12.01.23.05.15.1.32.1.48.01.17 0 .36 0 .54-.01.17-.04.33-.09.45-.05.13-.13.22-.23.26-.11.04-.23.05-.33.02-.1-.03-.2-.11-.28-.2a2.4 2.4 0 01-.2-.29c-.04-.08-.07-.16-.06-.23.01-.07.08-.15.16-.21.08-.05.19-.07.29-.05.1.03.19.1.26.2.07.1.11.22.11.34 0 .12-.05.24-.12.34a.58.58 0 01-.27.19c-.1.03-.22.03-.32-.01a.59.59 0 01-.24-.19.59.59 0 01-.1-.33c0-.12.04-.24.1-.33.06-.1.15-.17.25-.21.1-.03.21-.03.31.02zm1.19 2.15c.09 0 .18 0 .26.01 3.14.22 5.62 2.74 5.62 5.78 0 .06 0 .13-.01.19-.13 3.11-2.63 5.59-5.62 5.59-.09 0-.18 0-.27-.01-3.13-.22-5.61-2.74-5.61-5.77 0-.07 0-.13 0-.2.14-3.1 2.63-5.59 5.62-5.59z"/></svg>
-    Viber
-  </a>
-  <a href="tel:+380688286969" class="cbtn cbtn-tel">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-    +380688286969
-  </a>
-</div>
-    <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
+  <div class="related-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+    <a href="/services/seo/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;">
+      <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Щомісячна робота</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">SEO просування сайту</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
+    </a>
+    <a href="/services/seo-local/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;">
+      <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Google Maps</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Локальне SEO</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
+    </a>
+    <a href="/blog/seo-audit-shcho-tse/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;">
+      <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Блог</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">SEO аудит: що це</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
+    </a>
+    <a href="/services/websites/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;">
+      <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Якщо сайт застарів</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Розробка сайтів</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
+    </a>
   </div>
 </section>
 <section class="faq-section">
@@ -328,23 +328,68 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     <h2 class="faq-title">Часті запитання</h2>
 
     <div class="faq-item">
-      <button type="button" class="faq-q">Що таке SEO аудит?<span class="faq-arr">+</span></button>
+      <button type="button" class="faq-q">Скільки коштує SEO аудит сайту?<span class="faq-arr">+</span></button>
       <div class="faq-a">
-        <p>SEO аудит — це повна перевірка сайту: технічні помилки, швидкість, структура, контент, посилання. Результат — детальний звіт з пріоритетами.</p>
+        <p>Базовий — від $100 для сайтів до 50 сторінок, готовий за 3 дні. Повний — від $300, 5 днів. Точну ціну називаємо після того, як подивимось сайт.</p>
       </div>
     </div>
     <div class="faq-item">
-      <button type="button" class="faq-q">Скільки коштує SEO аудит?<span class="faq-arr">+</span></button>
+      <button type="button" class="faq-q">Що я отримаю в результаті?<span class="faq-arr">+</span></button>
       <div class="faq-a">
-        <p>Базовий аудит від $100, повний технічний аудит від $200. Для нових клієнтів — безкоштовна експрес-перевірка.</p>
+        <p>Звіт у Google Docs або PDF: список проблем, вплив кожної на SEO, конкретні рекомендації та порядок виправлень. До повного аудиту додаємо розбір звіту на дзвінку.</p>
       </div>
     </div>
     <div class="faq-item">
-      <button type="button" class="faq-q">Скільки часу займає аудит?<span class="faq-arr">+</span></button>
+      <button type="button" class="faq-q">Чим базовий аудит відрізняється від повного?<span class="faq-arr">+</span></button>
       <div class="faq-a">
-        <p>Базовий аудит — 2-3 дні, повний — 5-7 днів. Отримуєте детальний звіт у PDF.</p>
+        <p>Базовий охоплює технічну частину: індексацію, швидкість, мета-теги, помилки. Повний додає дані Search Console і GA4, дублікати й каннібалізацію, мікророзмітку і порівняння з конкурентами.</p>
       </div>
     </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи потрібен доступ до сайту?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Для базового аудиту — ні, аналізуємо публічну частину. Для повного потрібен доступ на читання до Google Search Console і GA4. Адмінка сайту не потрібна.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Ви виправите знайдені проблеми?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Можемо — у межах SEO просування від $150/міс або окремою задачею за оцінкою. Або передайте звіт своєму розробнику: рекомендації написані так, щоб їх можна було виконати без нас.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Коли буде ефект після виправлень?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Технічні виправлення Google враховує після повторного сканування — зазвичай за кілька тижнів. Зростання позицій залежить від конкуренції й контенту; гарантувати конкретні позиції не може ніхто.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-final" id="contact">
+  <canvas id="ctaCanvas" class="cta-canvas" aria-hidden="true"></canvas>
+  <div class="cta-label">ПОТРІБЕН АУДИТ?</div>
+  <h2 class="cta-title">Надішліть сайт —<br>скажемо, <em>що заважає</em></h2>
+  <p class="cta-sub">Відповімо протягом 15 хвилин у робочий час і назвемо ціну аудиту</p>
+  <div class="cta-btns">
+    <div class="contact-btns-group">
+  <a href="https://t.me/infiniteunion_manager" class="cbtn cbtn-tg" rel="noopener noreferrer">
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+    Telegram
+  </a>
+  <a href="https://wa.me/380688286969" class="cbtn cbtn-wa" rel="noopener noreferrer">
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <a href="viber://chat?number=%2B380688286969" class="cbtn cbtn-viber" rel="noopener noreferrer">
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C8.55-.05 2.9.64 1.05 6.39.41 8.37.19 10.14.17 11.3c-.03 1.16-.05 3.35.65 5.21h.01c1.1 3.03 3.66 5.01 6.88 5.35v2.33s-.02.55.34.66c.44.13.69-.28 1.11-.73.23-.25.55-.62.79-.9 2.16.18 3.83-.28 4.01-.34.44-.14 2.9-.46 3.31-3.74 0 0 .42-2.65-.17-4.74-.17-.6-.33-.87-.46-1.04l.17-.08c0-.01-.04-.05-.08-.09l-.07-.07v-.01c-.44-.44-1.17-.88-1.17-.88s-.15-.08-.18-.05c-.02.03-.01.12.01.23.05.15.1.32.1.48.01.17 0 .36 0 .54-.01.17-.04.33-.09.45-.05.13-.13.22-.23.26-.11.04-.23.05-.33.02-.1-.03-.2-.11-.28-.2a2.4 2.4 0 01-.2-.29c-.04-.08-.07-.16-.06-.23.01-.07.08-.15.16-.21.08-.05.19-.07.29-.05.1.03.19.1.26.2.07.1.11.22.11.34 0 .12-.05.24-.12.34a.58.58 0 01-.27.19c-.1.03-.22.03-.32-.01a.59.59 0 01-.24-.19.59.59 0 01-.1-.33c0-.12.04-.24.1-.33.06-.1.15-.17.25-.21.1-.03.21-.03.31.02zm1.19 2.15c.09 0 .18 0 .26.01 3.14.22 5.62 2.74 5.62 5.78 0 .06 0 .13-.01.19-.13 3.11-2.63 5.59-5.62 5.59-.09 0-.18 0-.27-.01-3.13-.22-5.61-2.74-5.61-5.77 0-.07 0-.13 0-.2.14-3.1 2.63-5.59 5.62-5.59z"/></svg>
+    Viber
+  </a>
+  <a href="tel:+380688286969" class="cbtn cbtn-tel">
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    +380688286969
+  </a>
+</div>
+    <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
   </div>
 </section>
 
