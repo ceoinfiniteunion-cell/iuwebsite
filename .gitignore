@@ -8,3 +8,8 @@ vendor/three/draco-r185/gltf/draco_decoder.js
 .env
 .env.local
 .env.*.local
+_site/
+audit-screens/tmp/
+test-results/
+audit-screens/
+playwright-report/

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Infinite Union website",
   "scripts": {
-    "lint:html": "html-validate index.html services/bots/index.html services/bots-crm/index.html services/bots-restaurant/index.html services/bots-sales/index.html services/ecosystems/index.html services/google-ads/index.html services/google-ads-search/index.html services/meta-ads/index.html services/meta-ads-instagram/index.html services/platforms/index.html services/seo/index.html services/seo-audit/index.html services/seo-local/index.html services/tiktok-ads/index.html services/websites/index.html services/websites-corporate/index.html services/websites-landing/index.html services/websites-shop/index.html",
+    "lint:html": "html-validate index.html \"en/**/index.html\" \"services/*/index.html\" \"blog/**/index.html\" \"portfolio/index.html\" \"pricing/index.html\" 404.html",
     "lint:css": "stylelint \"src/css/**/*.css\"",
-    "lint:js": "eslint index.html services/bots/index.html services/bots-crm/index.html services/bots-restaurant/index.html services/bots-sales/index.html services/ecosystems/index.html services/google-ads/index.html services/google-ads-search/index.html services/meta-ads/index.html services/meta-ads-instagram/index.html services/platforms/index.html services/seo/index.html services/seo-audit/index.html services/seo-local/index.html services/tiktok-ads/index.html services/websites/index.html services/websites-corporate/index.html services/websites-landing/index.html services/websites-shop/index.html",
+    "lint:js": "eslint index.html \"services/*/index.html\"",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lhci": "lhci autorun",
     "start": "npx serve . -p $PORT -c serve.json",
@@ -16,7 +16,13 @@
     "build": "npm run build:sw && npm run minify",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "build:sw": "node update-sw-cache.cjs"
+    "build:sw": "node update-sw-cache.cjs",
+    "build:seo": "node scripts/build-seo.mjs",
+    "build:sitemap": "node scripts/sitemap.mjs",
+    "build:pages": "npm run build:seo && npm run build:sitemap",
+    "check:static": "node scripts/check.mjs",
+    "check": "node scripts/check.mjs --lighthouse",
+    "build:site": "node scripts/build-site.mjs"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.63.0",

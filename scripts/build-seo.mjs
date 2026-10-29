@@ -262,6 +262,7 @@ footer.iu-foot{display:block!important;border-top:1px solid rgba(255,255,255,.08
 .iu-foot-bottom a{font-size:12px;}
 .iu-lang{font:600 12px/1 'Space Grotesk',sans-serif;letter-spacing:.12em;color:rgba(255,255,255,.75)!important;text-decoration:none;padding:8px 10px;border:1px solid rgba(255,255,255,.18);margin:0 12px 0 auto;display:inline-flex;align-items:center;min-height:32px;}
 .iu-lang:hover,.iu-lang:focus-visible{color:#fff!important;border-color:rgba(255,255,255,.5);}
+@media(max-width:768px){table:not(.iu-keep){display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}}
 @media(max-width:900px){.iu-foot-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:560px){.iu-foot-grid{grid-template-columns:1fr;gap:28px;}footer.iu-foot{padding:40px 20px 28px!important;}.iu-crumbs{padding:24px 20px 0;}.iu-lang{margin-right:8px;padding:6px 8px;}}
 </style>
