@@ -27,3 +27,11 @@ footer.iu-foot{display:block!important;border-top:1px solid rgba(255,255,255,.08
 @media(max-width:600px){.mob-grid-3,[style*="grid-template-columns:repeat("],[style*="grid-template-columns: repeat("]{grid-template-columns:1fr!important;}}
 @media(min-width:601px) and (max-width:900px){[style*="grid-template-columns:repeat(4"],[style*="grid-template-columns:repeat(3"]{grid-template-columns:repeat(2,1fr)!important;}}
 [style*="grid-template-columns:repeat("]>*{min-width:0;}
+/* LCP: hero headline + lead paint immediately (slide-in only, no fade from opacity:0) */
+@keyframes iuSlideUp{from{transform:translateY(24px)}to{transform:none}}
+.hero-title,.hero-sub{opacity:1!important;animation-name:iuSlideUp!important;animation-delay:0s!important;}
+/* a11y: links inside article text must be distinguishable without colour */
+.article-body p a,.article-body li a,.article-intro a{text-decoration:underline;text-underline-offset:3px;}
+.breadcrumb span{opacity:.75!important;}
+/* a11y: touch target for the mobile menu close button */
+#mobX{min-width:44px;min-height:44px;}

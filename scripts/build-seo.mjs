@@ -160,6 +160,7 @@ function seoBlock(p, html) {
   lines.push(`<link rel="manifest" href="/manifest.json">`);
   lines.push(`<meta name="theme-color" content="#060404">`);
   lines.push(`<link rel="stylesheet" href="/assets/css/site-shared.css">`);
+  lines.push(`<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`);
   lines.push(`<meta property="og:type" content="${p.type === 'post' ? 'article' : 'website'}">`);
   lines.push(`<meta property="og:site_name" content="Infinite Union">`);
   lines.push(`<meta property="og:locale" content="${t.locale}">`);
