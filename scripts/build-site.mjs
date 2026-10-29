@@ -30,4 +30,20 @@ for (const e of fs.readdirSync('.', { withFileTypes: true })) {
   }
 }
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
+// Legacy URLs (site used /services/x.html before 2026-07-29): GitHub Pages can't send 301,
+// so publish instant meta-refresh stubs — Google treats a 0-second refresh as a permanent redirect.
+for (const [from, to] of Object.entries(cfg.redirects || {})) {
+  const file = path.join(OUT, from);
+  if (fs.existsSync(file)) continue;
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  const url = cfg.site + to;
+  fs.writeFileSync(file, `<!DOCTYPE html>
+<html lang="uk"><head><meta charset="UTF-8">
+<title>Сторінку переміщено</title>
+<link rel="canonical" href="${url}">
+<meta http-equiv="refresh" content="0; url=${to}">
+</head><body><p>Сторінку переміщено: <a href="${to}">${url}</a></p></body></html>
+`);
+  n++;
+}
 console.log(`build-site: ${n} files → ${OUT}/`);

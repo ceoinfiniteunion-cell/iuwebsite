@@ -12,7 +12,8 @@
     "no-unknown-elements": "off",
     "attribute-allowed-values": "off",
     "no-experimental-attributes": "off",
-    "meta-refresh": "off"
+    "meta-refresh": "off",
+    "prefer-native-element": "off"
   },
   "elements": [
     "html5"

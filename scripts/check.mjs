@@ -217,7 +217,7 @@ for (const f of [...registered, '404.html']) {
 
 // ---------- html-validate ----------
 try {
-  execFileSync('npx', ['html-validate', ...registered, '404.html'].filter(f => fs.existsSync(f)), { stdio: 'pipe', encoding: 'utf8' });
+  execFileSync('npx', ['html-validate', ...[...registered, '404.html'].filter(f => fs.existsSync(f))], { stdio: 'pipe', encoding: 'utf8' });
 } catch (e) {
   err('html-validate', '\n' + (e.stdout || e.message).split('\n').slice(0, 60).join('\n'));
 }

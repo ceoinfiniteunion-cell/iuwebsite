@@ -159,6 +159,7 @@ function seoBlock(p, html) {
   lines.push(`<link rel="apple-touch-icon" href="/apple-touch-icon.png">`);
   lines.push(`<link rel="manifest" href="/manifest.json">`);
   lines.push(`<meta name="theme-color" content="#060404">`);
+  lines.push(`<link rel="stylesheet" href="/assets/css/site-shared.css">`);
   lines.push(`<meta property="og:type" content="${p.type === 'post' ? 'article' : 'website'}">`);
   lines.push(`<meta property="og:site_name" content="Infinite Union">`);
   lines.push(`<meta property="og:locale" content="${t.locale}">`);
@@ -190,6 +191,18 @@ const HEAD_STRIP = [
   // analytics goes through GTM only: drop the direct gtag.js loader (the inline gtag() shim stays)
   /<script\s+async\s+src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=[^"]*"><\/script>\s*/gi,
 ];
+
+// <style> is not allowed in <body>: move any body-level style blocks to the end of <head> (order preserved)
+function hoistStyles(html) {
+  const bs = html.indexOf('<body');
+  const body = html.slice(bs);
+  const styles = [];
+  const rest = body.replace(/<style>[\s\S]*?<\/style>\s*/g, m => { styles.push(m.trim()); return ''; });
+  if (!styles.length) return html;
+  const head = html.slice(0, bs);
+  const he = head.lastIndexOf('</head>');
+  return head.slice(0, he) + styles.join('\n') + '\n' + head.slice(he) + rest;
+}
 
 function rebuildHead(html, p) {
   const hs = html.indexOf('<head>');
@@ -242,30 +255,6 @@ function footerHtml(p) {
     ? `<a href="/services/privacy/">Політика конфіденційності</a>`
     : `<a href="/services/privacy/" hreflang="uk">Privacy policy (UA)</a>`;
   return `<!-- iu:footer -->
-<style>
-.iu-crumbs{padding:28px 40px 0;font:400 13px/1.6 'Inter',system-ui,sans-serif;color:rgba(255,255,255,.55);}
-.iu-crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;}
-.iu-crumbs li+li::before{content:'/';margin-right:6px;color:rgba(255,255,255,.3);}
-.iu-crumbs a{color:rgba(255,255,255,.75);text-decoration:none;}
-.iu-crumbs a:hover{color:#fff;}
-footer.iu-foot{display:block!important;border-top:1px solid rgba(255,255,255,.08);padding:56px 40px 32px!important;margin:0;background:#060404;color:#fff;text-align:left;position:relative;z-index:1;}
-.iu-foot-grid{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:40px;max-width:1400px;margin:0 auto;}
-.iu-foot-brand{font:700 15px/1 'Space Grotesk',sans-serif;letter-spacing:.12em;color:#fff;text-decoration:none;}
-.iu-foot-brand span{color:#D40000;}
-.iu-foot p{font:400 13px/1.7 'Inter',system-ui,sans-serif;color:rgba(255,255,255,.6);margin:16px 0 0;max-width:320px;}
-.iu-foot h2{font:600 11px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#D40000;margin:0 0 16px;}
-.iu-foot ul{list-style:none;margin:0;padding:0;}
-.iu-foot li{margin:0 0 10px;}
-.iu-foot a{font:400 14px/1.4 'Inter',system-ui,sans-serif;color:rgba(255,255,255,.72);text-decoration:none;}
-.iu-foot a:hover,.iu-foot a:focus-visible{color:#fff;text-decoration:underline;}
-.iu-foot-bottom{max-width:1400px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:400 12px/1.6 'Inter',system-ui,sans-serif;color:rgba(255,255,255,.55);}
-.iu-foot-bottom a{font-size:12px;}
-.iu-lang{font:600 12px/1 'Space Grotesk',sans-serif;letter-spacing:.12em;color:rgba(255,255,255,.75)!important;text-decoration:none;padding:8px 10px;border:1px solid rgba(255,255,255,.18);margin:0 12px 0 auto;display:inline-flex;align-items:center;min-height:32px;}
-.iu-lang:hover,.iu-lang:focus-visible{color:#fff!important;border-color:rgba(255,255,255,.5);}
-@media(max-width:768px){table:not(.iu-keep){display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}}
-@media(max-width:900px){.iu-foot-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){.iu-foot-grid{grid-template-columns:1fr;gap:28px;}footer.iu-foot{padding:40px 20px 28px!important;}.iu-crumbs{padding:24px 20px 0;}.iu-lang{margin-right:8px;padding:6px 8px;}}
-</style>
 ${crumbsHtml}
 <footer class="iu-foot">
   <div class="iu-foot-grid">
@@ -285,7 +274,7 @@ ${crumbsHtml}
   </div>
   <div class="iu-foot-bottom">
     <span>© 2026 Infinite Union · ${t.city}</span>
-    <span><a href="${CONTACTS.instagram}" rel="noopener noreferrer">Instagram</a> · <a href="${CONTACTS.channel}" rel="noopener noreferrer">Telegram-канал</a> · ${privacy}</span>
+    <span><a href="${CONTACTS.instagram}" rel="noopener noreferrer">Instagram</a> · <a href="${CONTACTS.channel}" rel="noopener noreferrer">${p.lang === 'uk' ? 'Telegram-канал' : 'Telegram channel'}</a> · ${privacy}</span>
   </div>
 </footer>
 <!-- /iu:footer -->`;
@@ -298,14 +287,16 @@ function injectFooter(html, p) {
   return html.slice(0, s) + footerHtml(p) + html.slice(e + '<!-- /iu:footer -->'.length);
 }
 
-export function build({ quiet = false } = {}) {
+export function build({ quiet = false, only = [] } = {}) {
   let n = 0;
   for (const p of pages) {
+    if (only.length && !only.includes(p.path)) continue;
     const f = fileOf(p);
     if (!fs.existsSync(f)) { console.warn(`! missing ${f}`); continue; }
     let html = fs.readFileSync(f, 'utf8');
     html = html.replace(/<html lang="[^"]*"/, `<html lang="${p.lang}"`);
     html = rebuildHead(html, p);
+    html = hoistStyles(html);
     html = injectLang(html, p);
     html = injectFooter(html, p);
     fs.writeFileSync(f, html);
@@ -314,4 +305,5 @@ export function build({ quiet = false } = {}) {
   if (!quiet) console.log(`build-seo: ${n} pages updated`);
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) build();
+// optional args: page paths to rebuild, e.g. node scripts/build-seo.mjs / /pricing/
+if (import.meta.url === pathToFileURL(process.argv[1]).href) build({ only: process.argv.slice(2) });
