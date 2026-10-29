@@ -278,7 +278,7 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
 
 <section class="hero">
   <div class="hero-noise"></div>
-  <div class="hero-float">
+  <div class="hero-float" aria-hidden="true">
     <div class="hero-float-el"></div>
     <div class="hero-float-el"></div>
     <div class="hero-float-el"></div>
@@ -286,14 +286,14 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
     <div class="hero-float-el"></div>
     <div class="hero-float-el"></div>
   </div>
-  <div class="hero-lines">
+  <div class="hero-lines" aria-hidden="true">
     <div class="hero-line"></div>
     <div class="hero-line"></div>
     <div class="hero-line"></div>
     <div class="hero-line"></div>
   </div>
   <div class="hero-corner">
-    <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" aria-hidden="true" focusable="false">
       <circle cx="60" cy="60" r="59" stroke="#D40000" stroke-width="1"/>
       <circle cx="60" cy="60" r="40" stroke="#D40000" stroke-width="1"/>
       <circle cx="60" cy="60" r="20" stroke="#D40000" stroke-width="1"/>
@@ -302,124 +302,196 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
       <line x1="1" y1="60" x2="119" y2="60" stroke="#D40000" stroke-width=".5" stroke-opacity=".3"/>
     </svg>
   </div>
-  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
   <div class="hero-grid"></div>
   <div class="hero-orb"></div>
   <div class="hero-orb-ring"></div>
   <div class="hero-orb-ring2"></div>
   <div class="hero-dots"></div>
-  <div class="hero-orb"></div>
-  <div class="hero-orb-ring"></div>
-  <div class="hero-orb-ring2"></div>
   <div class="hero-metrics">
-  <div class="hm-card"><div class="hm-val">3.8x</div><div class="hm-key">ROAS</div><div class="hm-sub">Return on Ad Spend</div></div>
-  <div class="hm-card"><div class="hm-val">$4.2</div><div class="hm-key">CPL</div><div class="hm-sub">Pricing ліда</div></div>
-  <div class="hm-card"><div class="hm-val">4.7%</div><div class="hm-key">CTR</div><div class="hm-sub">Click Through Rate</div></div>
+  <div class="hm-card"><div class="hm-val">$250</div><div class="hm-key">Setup</div><div class="hm-sub">one-off, from</div></div><div class="hm-card"><div class="hm-val">$200</div><div class="hm-key">Management</div><div class="hm-sub">per month, from</div></div><div class="hm-card"><div class="hm-val">$300</div><div class="hm-key">Ad budget</div><div class="hm-sub">per month, suggested start</div></div>
 </div>
-  <div class="hero-scroll"><div class="hero-scroll-line"></div><div class="hero-scroll-text">SCROLL</div></div>
-  <div class="hero-number">01</div>
-  <div class="hero-label">MARKETING · 02.01</div>
-  <h1 class="hero-title">Meta<br><em>Ads</em></h1>
-  <p class="hero-sub">Реклама on Facebook and Instagram що приносить клієнтів, а не лайки. Таргетинг по аудиторіях, ретаргетинг, автоматичні воронки.</p>
+  <div class="hero-scroll" aria-hidden="true"><div class="hero-scroll-line"></div><div class="hero-scroll-text">SCROLL</div></div>
+  <div class="hero-number" aria-hidden="true">01</div>
+  <div class="hero-label">FACEBOOK · INSTAGRAM · REELS</div>
+  <h1 class="hero-title">Facebook and<br>Instagram<br><em>ads agency</em></h1>
+  <p class="hero-sub">Infinite Union is a Facebook and Instagram ads agency from Kharkiv, Ukraine, working with small businesses across the EU. We set up Meta Pixel and Conversions API, build audiences, prepare creatives and run campaigns in Feed, Stories and Reels. Setup from $250, management from $200/month, ad budget paid separately.</p>
   <div class="hero-stats">
-    <div class="hero-stat"><div class="hero-stat-num">ROAS<span>x</span></div><div class="hero-stat-label">в середньому</div></div><div class="hero-stat"><div class="hero-stat-num">$0.8<span></span></div><div class="hero-stat-label">вартість кліку</div></div><div class="hero-stat"><div class="hero-stat-num">A/B<span></span></div><div class="hero-stat-label">тести постійно</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">$250</div><div class="hero-stat-label">setup, from</div></div><div class="hero-stat"><div class="hero-stat-num">$200<span>/mo</span></div><div class="hero-stat-label">management, from</div></div><div class="hero-stat"><div class="hero-stat-num">15<span>min</span></div><div class="hero-stat-label">reply time, working hours</div></div>
   </div>
 </section>
 
-<div class="marquee-wrap">
-  <div class="marquee-track"><span class="marquee-item">FACEBOOK ADS <em>→</em></span><span class="marquee-item">INSTAGRAM ADS <em>→</em></span><span class="marquee-item">REELS <em>→</em></span><span class="marquee-item">ТАРГЕТИНГ <em>→</em></span><span class="marquee-item">РЕТАРГЕТИНГ <em>→</em></span><span class="marquee-item">LOOKALIKE <em>→</em></span><span class="marquee-item">PIXEL <em>→</em></span><span class="marquee-item">CONVERSIONS API <em>→</em></span><span class="marquee-item">FACEBOOK ADS <em>→</em></span><span class="marquee-item">INSTAGRAM ADS <em>→</em></span><span class="marquee-item">REELS <em>→</em></span><span class="marquee-item">ТАРГЕТИНГ <em>→</em></span><span class="marquee-item">РЕТАРГЕТИНГ <em>→</em></span><span class="marquee-item">LOOKALIKE <em>→</em></span><span class="marquee-item">PIXEL <em>→</em></span><span class="marquee-item">CONVERSIONS API <em>→</em></span></div>
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track"><span class="marquee-item">FACEBOOK ADS <em>→</em></span><span class="marquee-item">INSTAGRAM ADS <em>→</em></span><span class="marquee-item">REELS <em>→</em></span><span class="marquee-item">STORIES <em>→</em></span><span class="marquee-item">RETARGETING <em>→</em></span><span class="marquee-item">LOOKALIKE <em>→</em></span><span class="marquee-item">META PIXEL <em>→</em></span><span class="marquee-item">CONVERSIONS API <em>→</em></span><span class="marquee-item">FACEBOOK ADS <em>→</em></span><span class="marquee-item">INSTAGRAM ADS <em>→</em></span><span class="marquee-item">REELS <em>→</em></span><span class="marquee-item">STORIES <em>→</em></span><span class="marquee-item">RETARGETING <em>→</em></span><span class="marquee-item">LOOKALIKE <em>→</em></span><span class="marquee-item">META PIXEL <em>→</em></span><span class="marquee-item">CONVERSIONS API <em>→</em></span></div>
 </div>
 
 <section>
+  <div class="sec-label">THE PROBLEM</div>
+  <h2 class="sec-title rev">Boosted posts<br>are not a strategy</h2>
+  <div class="faq-list">
+    <p class="service-desc" style="font-size:16px;">Many businesses start with the Boost button on Instagram. It brings likes and profile visits, but rarely enquiries, because the campaign is optimised for engagement, not for leads or sales. Meta never learns who actually contacted you or bought something.</p>
+    <p class="service-desc" style="font-size:16px;">Browser tracking alone also misses part of your conversions since the privacy changes on iOS and in browsers. If Pixel events are set up incorrectly, the algorithm learns from incomplete data and shows ads to the wrong people. So the fix starts with the technical part — correct events, Conversions API, a clear funnel — and only then comes the budget.</p>
+  </div>
+</section>
+
+<section>
   <div class="sec-label">WHAT'S INCLUDED</div>
-  <h2 class="sec-title rev">Повний комплекс<br>послуг</h2>
-  <div class="service-grid"><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr">↗</div>
+  <h2 class="sec-title rev">What a Facebook and<br>Instagram ads agency does</h2>
+  <div class="service-grid"><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
       <div class="service-num">01</div>
-      <div class="service-name">Налаштування кампаній</div>
-      <div class="service-desc">Структура рекламного акаунту, цілі, аудиторії, плейсменти. Все з нуля або аудит існуючого.</div>
-      <div class="service-tags"><span class="stag">Conversion campaigns</span><span class="stag">Advantage+</span><span class="stag">Catalog ads</span></div>
-    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr">↗</div>
+      <h3 class="service-name">Pixel and Conversions API</h3>
+      <div class="service-desc">We set up Meta Pixel and server-side Conversions API for the events that matter — lead, purchase, add to cart, message — and check event deduplication in Events Manager before any money is spent.</div>
+      <div class="service-tags"><span class="stag">Meta Pixel</span><span class="stag">Conversions API</span><span class="stag">Events Manager</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
       <div class="service-num">02</div>
-      <div class="service-name">Креативи та A/B тести</div>
-      <div class="service-desc">Розробка оголошень, що зупиняють скролінг. Постійне тестування гіпотез для зниження вартості лід.</div>
-      <div class="service-tags"><span class="stag">UGC відео</span><span class="stag">Статичні банери</span><span class="stag">Карусель</span></div>
-    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr">↗</div>
+      <h3 class="service-name">Instagram ads: Reels, Stories, Feed</h3>
+      <div class="service-desc">Instagram needs vertical, native-looking creatives. We plan formats per placement: short Reels videos, Stories with one clear call to action, and carousels for products or services.</div>
+      <div class="service-tags"><span class="stag">Reels</span><span class="stag">Stories</span><span class="stag">Carousel</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
       <div class="service-num">03</div>
-      <div class="service-name">Ретаргетинг воронки</div>
-      <div class="service-desc">Повертаємо тих хто вже бачив вас. Налаштування Custom Audiences, динамічний ретаргетинг.</div>
-      <div class="service-tags"><span class="stag">Custom Audiences</span><span class="stag">Dynamic ads</span><span class="stag">Video views</span></div>
-    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr">↗</div>
+      <h3 class="service-name">Audiences and retargeting</h3>
+      <div class="service-desc">Broad and interest audiences for cold traffic, lookalikes from your customer list, and retargeting for site visitors, video viewers and people who opened a lead form but did not send it.</div>
+      <div class="service-tags"><span class="stag">Custom Audiences</span><span class="stag">Lookalike</span><span class="stag">Advantage+</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
       <div class="service-num">04</div>
-      <div class="service-name">Аналітика та звіти</div>
-      <div class="service-desc">Щотижневі звіти з реальними цифрами. Pixel, Conversions API, Google Analytics інтеграція.</div>
-      <div class="service-tags"><span class="stag">Meta Pixel</span><span class="stag">Conversions API</span><span class="stag">GA4</span></div>
+      <h3 class="service-name">Creatives and testing</h3>
+      <div class="service-desc">We write ad copy, design static banners and prepare video scripts, or brief your designer. New creatives are tested in small batches, and only the ones that bring enquiries get more budget.</div>
+      <div class="service-tags"><span class="stag">Ad copy</span><span class="stag">Banners</span><span class="stag">Video scripts</span></div>
     </div></div>
 </section>
 
 <section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="sec-label">ЯК МИ ПРАЦЮЄМО</div>
-  <h2 class="sec-title rev">Процес<br>від А до Я</h2>
+  <div class="sec-label">HOW WE WORK</div>
+  <h2 class="sec-title rev">Four steps<br>to a working funnel</h2>
   <div class="process-grid"><div class="process-line"></div><div class="process-item rev">
-      <div class="process-item-name">Аудит</div>
-      <div class="process-item-desc">Аналізуємо нішу, конкурентів, ЦА. Формуємо стратегію і медіаплан.</div>
-      <div class="process-item-time">1-2 дні</div>
+      <div class="process-dot">01</div>
+      <h3 class="process-item-name">Brief and research</h3>
+      <div class="process-item-desc">Your offer and audience, competitors' ads in the Meta Ad Library, your current account if you have one.</div>
+      <div class="process-time">1–2 days</div>
     </div><div class="process-item rev">
-      <div class="process-item-name">Налаштування</div>
-      <div class="process-item-desc">Структура акаунту, пікселі, аудиторії, перші кампанії.</div>
-      <div class="process-item-time">2-3 дні</div>
+      <div class="process-dot">02</div>
+      <h3 class="process-item-name">Tracking and setup</h3>
+      <div class="process-item-desc">Business Manager, Pixel, Conversions API, audiences and the first campaigns.</div>
+      <div class="process-time">2–3 days</div>
     </div><div class="process-item rev">
-      <div class="process-item-name">Запуск A/B</div>
-      <div class="process-item-desc">Тестуємо гіпотези, знаходимо ефективні зв'язки.</div>
-      <div class="process-item-time">1-2 тижні</div>
+      <div class="process-dot">03</div>
+      <h3 class="process-item-name">Testing</h3>
+      <div class="process-item-desc">Several audiences and creatives run side by side to find what brings enquiries.</div>
+      <div class="process-time">1–2 weeks</div>
     </div><div class="process-item rev">
-      <div class="process-item-name">Масштабування</div>
-      <div class="process-item-desc">Збільшуємо бюджет на робочих зв'язках, розширюємо аудиторії.</div>
-      <div class="process-item-time">Постійно</div>
+      <div class="process-dot">04</div>
+      <h3 class="process-item-name">Scaling</h3>
+      <div class="process-item-desc">Budget moves to what works, weak ads are paused, new creatives are added.</div>
+      <div class="process-time">Ongoing</div>
     </div></div>
 </section>
 
-<div class="results-strip">
-  <div class="result-item"><div class="result-val" data-final="38<span>%</span>" data-count="38">38<span>%</span></div><div class="result-label">Зростання конверсій</div></div>
-  <div class="result-item"><div class="result-val" data-final="2x<span></span>" data-count="2">2x<span></span></div><div class="result-label">ROI кампаній</div></div>
-  <div class="result-item"><div class="result-val" data-final="$4<span></span>" data-count="4">$4<span></span></div><div class="result-label">Середній CPL</div></div>
-</div>
+<section>
+  <div class="sec-label">PRICING</div>
+  <h2 class="sec-title rev">Meta Ads<br>pricing</h2>
+  <div class="service-grid"><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">TIER 01</div>
+      <h3 class="service-name">Setup — from $250</h3>
+      <div class="service-desc">One-off. Business Manager and ad account check, Pixel and Conversions API, audiences, campaign structure and launch.</div>
+      <div class="service-tags"><span class="stag">One-off</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">TIER 02</div>
+      <h3 class="service-name">Management — from $200/month</h3>
+      <div class="service-desc">Ongoing optimisation, creative tests, audience updates and a monthly report with the same numbers you see in Ads Manager.</div>
+      <div class="service-tags"><span class="stag">Monthly</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">TIER 03</div>
+      <h3 class="service-name">E-commerce — from $400/month</h3>
+      <div class="service-desc">Product catalog, dynamic ads for people who viewed or added products to cart, Advantage+ shopping campaigns.</div>
+      <div class="service-tags"><span class="stag">Monthly</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">BUDGET</div>
+      <h3 class="service-name">Ad budget — paid to Meta</h3>
+      <div class="service-desc">Your ad budget is charged by Meta directly and is never mixed with our fee. We suggest starting from $300/month.</div>
+      <div class="service-tags"><span class="stag">Separate</span></div>
+    </div></div>
+  <p class="service-desc" style="font-size:16px;margin-top:40px;max-width:760px;">All our prices in one place: <a href="/en/pricing/" style="color:var(--red);">pricing for websites, bots, ads and SEO</a>.</p>
+</section>
+
+<section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="sec-label">FROM OUR PORTFOLIO</div>
+  <h2 class="sec-title rev">Tools we built<br>for advertising</h2>
+  <div class="service-grid"><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">01</div>
+      <h3 class="service-name">InfinityCreo</h3>
+      <div class="service-desc">Our AI tool for ad creatives, built on n8n and available as @infinitycreo_bot. It goes from a short brief to a finished banner in about 3 minutes and supports 10+ formats, which makes it faster to prepare variations for testing.</div>
+      <div class="service-tags"><span class="stag">n8n</span><span class="stag">AI</span><span class="stag">Telegram bot</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">02</div>
+      <h3 class="service-name">Ad Tracker by IU</h3>
+      <div class="service-desc">A dashboard in development that shows Meta, Google and TikTok campaigns in one window, with auto-refresh every 2 hours and 90 days of history.</div>
+      <div class="service-tags"><span class="stag">Reporting</span><span class="stag">Dashboard</span></div>
+    </div></div>
+  <p class="service-desc" style="font-size:16px;margin-top:40px;max-width:760px;">See the rest of our work in the <a href="/en/portfolio/" style="color:var(--red);">portfolio</a>.</p>
+</section>
 
 <section class="faq">
   <div class="sec-label">FAQ</div>
-  <h2 class="sec-title">Відповіді на<br>ваші питання</h2>
+  <h2 class="sec-title">Questions<br>we get asked</h2>
   <div class="faq-list"><div class="faq-item">
-      <button type="button" class="faq-q">Який мінімальний рекламний бюджет?<span class="faq-icon">+</span></button>
-      <div class="faq-a">Рекомендуємо from $300/міс на рекламний бюджет. Менше — важко зробити статистично значущі тести.</div>
+      <button type="button" class="faq-q">How much does a Facebook and Instagram ads agency cost?<span class="faq-icon">+</span></button>
+      <div class="faq-a">With us, setup starts from $250 one-off, and management from $200/month; e-commerce management starts from $400/month. The ad budget goes to Meta directly and is not part of our fee.</div>
     </div><div class="faq-item">
-      <button type="button" class="faq-q">Скільки часу до перших результатів?<span class="faq-icon">+</span></button>
-      <div class="faq-a">Перші ліди зазвичай з'являються в перші 3-7 днів. Оптимізація займає 2-4 тижні.</div>
+      <button type="button" class="faq-q">What is the minimum ad budget?<span class="faq-icon">+</span></button>
+      <div class="faq-a">We suggest from $300/month. A smaller budget makes it hard to test several audiences and creatives at the same time, so the learning phase takes longer.</div>
     </div><div class="faq-item">
-      <button type="button" class="faq-q">Ви робите креативи?<span class="faq-icon">+</span></button>
-      <div class="faq-a">Так, розробляємо банери та відео або даємо ТЗ вашій команді.</div>
+      <button type="button" class="faq-q">Can you run Instagram ads only?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes. In Ads Manager we can choose placements, so a campaign can run only in Instagram Feed, Stories and Reels. Whether Facebook placements are worth adding is a decision we make based on your data.</div>
     </div><div class="faq-item">
-      <button type="button" class="faq-q">Чи можна рекламувати будь-який бізнес?<span class="faq-icon">+</span></button>
-      <div class="faq-a">Є обмеження Meta — алкоголь, фінанси, медицина потребують додаткової верифікації.</div>
+      <button type="button" class="faq-q">Do you create the ads?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes: copy, static banners and video scripts. Filming with real people or products is usually done by you or a creator; we provide a script and a shot list.</div>
+    </div><div class="faq-item">
+      <button type="button" class="faq-q">Is my type of business allowed?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Meta has special rules for categories such as finance, employment, housing, health, alcohol and gambling. Some need extra verification or have limited targeting. We check this before setup.</div>
+    </div><div class="faq-item">
+      <button type="button" class="faq-q">Do you guarantee leads or ROAS?<span class="faq-icon">+</span></button>
+      <div class="faq-a">No. Results depend on your offer, prices, market and budget. We commit to correct tracking, regular testing and honest reporting.</div>
+    </div><div class="faq-item">
+      <button type="button" class="faq-q">Will the ad account be mine?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes. Everything stays in your Business Manager, and we work through partner access. If we stop working together, your account, audiences and data remain yours.</div>
     </div></div>
 </section>
 
 <section style="padding:80px 40px;background:var(--bg2);">
-  <div class="sec-label">MORE BY TYPE</div>
-  <h2 class="sec-title" style="margin-bottom:40px;">Оберіть платформу<br>Meta реклами</h2>
-  <div style="display:grid;grid-template-columns:1fr;gap:24px;max-width:480px;">
-    <a href="/services/meta-ads-instagram/" style="border:1px solid var(--border);padding:40px;text-decoration:none;color:#fff;transition:border-color .3s,transform .3s;display:block;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform=''">
+  <div class="sec-label">RELATED SERVICES</div>
+  <h2 class="sec-title" style="margin-bottom:40px;">Other channels<br>worth testing</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+    <a href="/en/services/google-ads/" style="border:1px solid var(--border);padding:40px;text-decoration:none;color:var(--dark);display:block;">
       <div style="font-size:11px;letter-spacing:.15em;color:var(--red);font-family:var(--font);margin-bottom:16px;">01</div>
-      <div style="font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:12px;">Instagram Advertising</div>
-      <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;">Stories, Reels, Feed — кожен формат під свою задачу. From $250 setup.</div>
+      <h3 style="font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:12px;">Google Ads management</h3>
+      <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;">Search and Performance Max for people already looking for you. Setup from $300.</div>
+      <div style="font-size:12px;color:var(--red);font-family:var(--font);font-weight:600;">Learn more →</div>
+    </a>
+    <a href="/en/services/tiktok-ads/" style="border:1px solid var(--border);padding:40px;text-decoration:none;color:var(--dark);display:block;">
+      <div style="font-size:11px;letter-spacing:.15em;color:var(--red);font-family:var(--font);margin-bottom:16px;">02</div>
+      <h3 style="font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:12px;">TikTok ads</h3>
+      <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;">In-Feed and Spark Ads with UGC-style video. Setup from $250.</div>
+      <div style="font-size:12px;color:var(--red);font-family:var(--font);font-weight:600;">Learn more →</div>
+    </a>
+    <a href="/en/services/websites/" style="border:1px solid var(--border);padding:40px;text-decoration:none;color:var(--dark);display:block;">
+      <div style="font-size:11px;letter-spacing:.15em;color:var(--red);font-family:var(--font);margin-bottom:16px;">03</div>
+      <h3 style="font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:12px;">Landing pages</h3>
+      <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;">A page built for ad traffic, from $600.</div>
       <div style="font-size:12px;color:var(--red);font-family:var(--font);font-weight:600;">Learn more →</div>
     </a>
   </div>
 </section>
 <section class="cta-final" id="contact">
-  <div class="cta-bg-text">ADS</div>
-  <h2 class="cta-title">Готові до<br><em>прибуткової</em><br>реклами?</h2>
-  <p class="cta-sub">Опишіть задачу — відповімо протягом 15 хвилин</p>
-  <a href="https://t.me/infiniteunion_bot" class="cta-btn" target="_blank" rel="noopener noreferrer"><span class="cta-btn-text">MESSAGE ON TELEGRAM</span></a>
-  <a href="/#contact" class="cta-btn-ghost">FILL THE FORM</a>
+  <div class="cta-bg-text" aria-hidden="true">ADS</div>
+  <h2 class="cta-title">Let's plan your<br><em>Meta Ads</em></h2>
+  <p class="cta-sub">Tell us about your business and target market. We reply within 15 minutes during working hours.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;position:relative;z-index:1;">
+    <a href="https://t.me/infiniteunion_manager" class="cta-btn" target="_blank" rel="noopener noreferrer"><span class="cta-btn-text">MESSAGE ON TELEGRAM</span></a>
+    <a href="https://wa.me/380688286969" class="cta-btn-ghost" target="_blank" rel="noopener noreferrer">WHATSAPP</a>
+    <a href="viber://chat?number=%2B380688286969" class="cta-btn-ghost">VIBER</a>
+    <a href="tel:+380688286969" class="cta-btn-ghost">+380 68 828 6969</a>
+    <a href="/en/#contact" class="cta-btn-ghost">FILL IN THE FORM</a>
+  </div>
 </section>
 
 <!-- /iu:content -->
@@ -427,7 +499,7 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
 <footer>
   <div class="footer-logo">INFINITE <span>UNION</span></div>
   <div class="footer-copy">© 2026 Infinite Union · Kharkiv, Ukraine</div>
-  <a href="/services/privacy/" class="footer-link">Політика конфіденційності</a>
+  <a href="/services/privacy/" class="footer-link">Privacy policy</a>
 </footer>
 <!-- /iu:footer -->
 
@@ -457,7 +529,7 @@ document.querySelectorAll('.result-val[data-count]').forEach(el=>{
       const target=parseFloat(raw);
       const inner=el.innerHTML;
       const suffix=el.querySelector('span')?el.querySelector('span').outerHTML:'';
-      // Зберігаємо оригінальний текст і анімуємо тільки число
+      // keep the original text and animate only the number
       const origText=el.textContent.replace(/[0-9.]/g,'').trim();
       const dur=2000;const start=performance.now();
       const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;

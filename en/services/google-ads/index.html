@@ -272,13 +272,13 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
 <nav id="nav">
   <a href="/en/" class="nav-back">← Back</a>
   <a href="/en/" class="nav-logo">INFINITE <span>UNION</span></a>
-  <a href="#contact" class="nav-cta">ЗАПУСТИТИ GOOGLE ADS</a>
+  <a href="#contact" class="nav-cta">LAUNCH GOOGLE ADS</a>
 </nav>
 <!-- iu:content -->
 
 <section class="hero">
   <div class="hero-noise"></div>
-  <div class="hero-float">
+  <div class="hero-float" aria-hidden="true">
     <div class="hero-float-el"></div>
     <div class="hero-float-el"></div>
     <div class="hero-float-el"></div>
@@ -286,14 +286,14 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
     <div class="hero-float-el"></div>
     <div class="hero-float-el"></div>
   </div>
-  <div class="hero-lines">
+  <div class="hero-lines" aria-hidden="true">
     <div class="hero-line"></div>
     <div class="hero-line"></div>
     <div class="hero-line"></div>
     <div class="hero-line"></div>
   </div>
   <div class="hero-corner">
-    <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" aria-hidden="true" focusable="false">
       <circle cx="60" cy="60" r="59" stroke="#D40000" stroke-width="1"/>
       <circle cx="60" cy="60" r="40" stroke="#D40000" stroke-width="1"/>
       <circle cx="60" cy="60" r="20" stroke="#D40000" stroke-width="1"/>
@@ -302,124 +302,196 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
       <line x1="1" y1="60" x2="119" y2="60" stroke="#D40000" stroke-width=".5" stroke-opacity=".3"/>
     </svg>
   </div>
-  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
   <div class="hero-grid"></div>
   <div class="hero-orb"></div>
   <div class="hero-orb-ring"></div>
   <div class="hero-orb-ring2"></div>
   <div class="hero-dots"></div>
-  <div class="hero-orb"></div>
-  <div class="hero-orb-ring"></div>
-  <div class="hero-orb-ring2"></div>
   <div class="hero-metrics">
-  <div class="hm-card"><div class="hm-val">$0.6</div><div class="hm-key">CPC</div><div class="hm-sub">Pricing кліку</div></div>
-  <div class="hm-card"><div class="hm-val">9/10</div><div class="hm-key">QS</div><div class="hm-sub">Quality Score</div></div>
-  <div class="hm-card"><div class="hm-val">+38%</div><div class="hm-key">Conv</div><div class="hm-sub">Конверсій більше</div></div>
+  <div class="hm-card"><div class="hm-val">$300</div><div class="hm-key">Setup</div><div class="hm-sub">one-off, from</div></div><div class="hm-card"><div class="hm-val">$200</div><div class="hm-key">Management</div><div class="hm-sub">per month, from</div></div><div class="hm-card"><div class="hm-val">$300</div><div class="hm-key">Ad budget</div><div class="hm-sub">per month, suggested start</div></div>
 </div>
-  <div class="hero-scroll"><div class="hero-scroll-line"></div><div class="hero-scroll-text">SCROLL</div></div>
-  <div class="hero-number">02</div>
-  <div class="hero-label">MARKETING · 02.02</div>
-  <h1 class="hero-title">Google<br><em>Реклама</em></h1>
-  <p class="hero-sub">Показуємось тим хто вже шукає ваш продукт. Search, Display, YouTube — повне покриття Google екосистеми.</p>
+  <div class="hero-scroll" aria-hidden="true"><div class="hero-scroll-line"></div><div class="hero-scroll-text">SCROLL</div></div>
+  <div class="hero-number" aria-hidden="true">02</div>
+  <div class="hero-label">GOOGLE ADS · SEARCH · PERFORMANCE MAX</div>
+  <h1 class="hero-title">Google Ads<br><em>management</em></h1>
+  <p class="hero-sub">Google Ads management for small and mid-sized businesses in the EU and Ukraine. Infinite Union is an agency in Kharkiv: we set up Search, Performance Max and YouTube campaigns with proper conversion tracking, then manage them every week. Setup from $300, management from $200/month, ad budget separate.</p>
   <div class="hero-stats">
-    <div class="hero-stat"><div class="hero-stat-num">Top 3<span></span></div><div class="hero-stat-label">позиції в пошуку</div></div><div class="hero-stat"><div class="hero-stat-num">-40%<span></span></div><div class="hero-stat-label">вартість кліку</div></div><div class="hero-stat"><div class="hero-stat-num">ROI<span>+</span></div><div class="hero-stat-label">від першого місяця</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">$300</div><div class="hero-stat-label">setup, from</div></div><div class="hero-stat"><div class="hero-stat-num">$200<span>/mo</span></div><div class="hero-stat-label">management, from</div></div><div class="hero-stat"><div class="hero-stat-num">15<span>min</span></div><div class="hero-stat-label">reply time, working hours</div></div>
   </div>
 </section>
 
-<div class="marquee-wrap">
-  <div class="marquee-track"><span class="marquee-item">GOOGLE SEARCH <em>→</em></span><span class="marquee-item">DISPLAY <em>→</em></span><span class="marquee-item">YOUTUBE ADS <em>→</em></span><span class="marquee-item">PERFORMANCE MAX <em>→</em></span><span class="marquee-item">SMART BIDDING <em>→</em></span><span class="marquee-item">REMARKETING <em>→</em></span><span class="marquee-item">GA4 <em>→</em></span><span class="marquee-item">GOOGLE MERCHANT <em>→</em></span><span class="marquee-item">GOOGLE SEARCH <em>→</em></span><span class="marquee-item">DISPLAY <em>→</em></span><span class="marquee-item">YOUTUBE ADS <em>→</em></span><span class="marquee-item">PERFORMANCE MAX <em>→</em></span><span class="marquee-item">SMART BIDDING <em>→</em></span><span class="marquee-item">REMARKETING <em>→</em></span><span class="marquee-item">GA4 <em>→</em></span><span class="marquee-item">GOOGLE MERCHANT <em>→</em></span></div>
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track"><span class="marquee-item">GOOGLE SEARCH <em>→</em></span><span class="marquee-item">PERFORMANCE MAX <em>→</em></span><span class="marquee-item">YOUTUBE ADS <em>→</em></span><span class="marquee-item">DISPLAY <em>→</em></span><span class="marquee-item">REMARKETING <em>→</em></span><span class="marquee-item">GA4 <em>→</em></span><span class="marquee-item">CONVERSION TRACKING <em>→</em></span><span class="marquee-item">MERCHANT CENTER <em>→</em></span><span class="marquee-item">GOOGLE SEARCH <em>→</em></span><span class="marquee-item">PERFORMANCE MAX <em>→</em></span><span class="marquee-item">YOUTUBE ADS <em>→</em></span><span class="marquee-item">DISPLAY <em>→</em></span><span class="marquee-item">REMARKETING <em>→</em></span><span class="marquee-item">GA4 <em>→</em></span><span class="marquee-item">CONVERSION TRACKING <em>→</em></span><span class="marquee-item">MERCHANT CENTER <em>→</em></span></div>
 </div>
 
 <section>
+  <div class="sec-label">WHY CAMPAIGNS LEAK MONEY</div>
+  <h2 class="sec-title rev">Clicks are easy.<br>Customers are not.</h2>
+  <div class="faq-list">
+    <p class="service-desc" style="font-size:16px;">A typical self-run Google Ads account has the same set of issues: broad keywords that match irrelevant searches, no negative keyword list, every ad sending people to the home page, and conversion tracking that counts page views as leads. The budget gets spent, the dashboard looks busy, and nobody can say which campaign brought a paying customer.</p>
+    <p class="service-desc" style="font-size:16px;">Another common case: Performance Max switched on with default settings, so Google decides where your money goes and you see very little of why. Good Google Ads management fixes this with a clear account structure, clean conversion data and regular search-term reviews — not with a bigger budget.</p>
+  </div>
+</section>
+
+<section>
   <div class="sec-label">WHAT'S INCLUDED</div>
-  <h2 class="sec-title rev">Повний комплекс<br>послуг</h2>
-  <div class="service-grid"><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr">↗</div>
+  <h2 class="sec-title rev">What our Google Ads<br>management covers</h2>
+  <div class="service-grid"><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
       <div class="service-num">01</div>
-      <div class="service-name">Search advertising</div>
-      <div class="service-desc">Оголошення на людей які вже шукають ваш продукт. Семантичне ядро, мінус-слова, розширення.</div>
-      <div class="service-tags"><span class="stag">Search campaigns</span><span class="stag">RSA оголошення</span><span class="stag">Розширення</span></div>
-    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr">↗</div>
+      <h3 class="service-name">Search campaigns</h3>
+      <div class="service-desc">Ads for people who are already typing your service or product into Google. We build the keyword list by intent, split it into tight ad groups, write responsive search ads, add sitelinks, callouts and call assets, and maintain negative keywords from day one.</div>
+      <div class="service-tags"><span class="stag">Keyword research</span><span class="stag">Responsive search ads</span><span class="stag">Negative keywords</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
       <div class="service-num">02</div>
-      <div class="service-name">Performance Max</div>
-      <div class="service-desc">Автоматизовані кампанії по всіх каналах Google одночасно — пошук, дисплей, YouTube, Gmail.</div>
-      <div class="service-tags"><span class="stag">Pmax</span><span class="stag">Asset groups</span><span class="stag">Audience signals</span></div>
-    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr">↗</div>
+      <h3 class="service-name">Conversion tracking</h3>
+      <div class="service-desc">Before launch we set up GA4 and Google Ads conversions for the actions that matter: form submissions, calls, Telegram or WhatsApp clicks, purchases. Without this, Smart Bidding optimises for the wrong thing.</div>
+      <div class="service-tags"><span class="stag">GA4</span><span class="stag">Google Tag Manager</span><span class="stag">Enhanced conversions</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
       <div class="service-num">03</div>
-      <div class="service-name">YouTube реклама</div>
-      <div class="service-desc">In-stream, Shorts, Discovery — охоплення аудиторій на відеоплатформі з найбільшим часом перегляду.</div>
-      <div class="service-tags"><span class="stag">In-stream</span><span class="stag">Bumper ads</span><span class="stag">YouTube Shorts</span></div>
-    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr">↗</div>
+      <h3 class="service-name">Performance Max and Shopping</h3>
+      <div class="service-desc">For online stores we connect Google Merchant Center, clean up the product feed and run Performance Max with separate asset groups and audience signals, so you can see which product groups earn money and which only spend it.</div>
+      <div class="service-tags"><span class="stag">Merchant Center</span><span class="stag">Product feed</span><span class="stag">Asset groups</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
       <div class="service-num">04</div>
-      <div class="service-name">Ремаркетинг</div>
-      <div class="service-desc">Повертаємо відвідувачів сайту, покупців, тих хто переглянув відео. Динамічний ремаркетинг.</div>
-      <div class="service-tags"><span class="stag">RLSA</span><span class="stag">Dynamic remarketing</span><span class="stag">Customer Match</span></div>
+      <h3 class="service-name">YouTube and remarketing</h3>
+      <div class="service-desc">Video and display remarketing for people who visited your site but did not get in touch. It works best for services with a longer decision cycle, such as education, renovation or B2B.</div>
+      <div class="service-tags"><span class="stag">Remarketing lists</span><span class="stag">YouTube in-stream</span><span class="stag">Customer Match</span></div>
     </div></div>
 </section>
 
 <section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="sec-label">ЯК МИ ПРАЦЮЄМО</div>
-  <h2 class="sec-title rev">Процес<br>від А до Я</h2>
+  <div class="sec-label">HOW WE WORK</div>
+  <h2 class="sec-title rev">From brief to<br>first optimisation</h2>
   <div class="process-grid"><div class="process-line"></div><div class="process-item rev">
-      <div class="process-item-name">Семантика</div>
-      <div class="process-item-desc">Збираємо ключові слова, мінус-слова, кластеризуємо під посадкові.</div>
-      <div class="process-item-time">2-3 дні</div>
+      <div class="process-dot">01</div>
+      <h3 class="process-item-name">Brief and audit</h3>
+      <div class="process-item-desc">We review your site, offer, competitors and your current account, if you have one.</div>
+      <div class="process-time">1–2 days</div>
     </div><div class="process-item rev">
-      <div class="process-item-name">Структура</div>
-      <div class="process-item-desc">Налаштовуємо акаунт, кампанії, групи оголошень, ставки.</div>
-      <div class="process-item-time">2-3 дні</div>
+      <div class="process-dot">02</div>
+      <h3 class="process-item-name">Keywords and structure</h3>
+      <div class="process-item-desc">Keyword research, negative lists, campaign and ad group structure, ad copy.</div>
+      <div class="process-time">2–3 days</div>
     </div><div class="process-item rev">
-      <div class="process-item-name">Запуск</div>
-      <div class="process-item-desc">Перші кампанії, збір даних конверсій, налаштування цілей.</div>
-      <div class="process-item-time">1 тиждень</div>
+      <div class="process-dot">03</div>
+      <h3 class="process-item-name">Tracking and launch</h3>
+      <div class="process-item-desc">Conversion tracking, billing check, launch and close monitoring in the first week.</div>
+      <div class="process-time">1 week</div>
     </div><div class="process-item rev">
-      <div class="process-item-name">Оптимізація</div>
-      <div class="process-item-desc">Коригуємо ставки, чистимо пошукові запити, тестуємо оголошення.</div>
-      <div class="process-item-time">Постійно</div>
+      <div class="process-dot">04</div>
+      <h3 class="process-item-name">Optimisation</h3>
+      <div class="process-item-desc">Search-term clean-up, bid and budget changes, ad tests, monthly report.</div>
+      <div class="process-time">Ongoing</div>
     </div></div>
 </section>
 
-<div class="results-strip">
-  <div class="result-item"><div class="result-val" data-final="Top 3<span></span>" data-count="3">Top 3<span></span></div><div class="result-label">Позиції в пошуку</div></div>
-  <div class="result-item"><div class="result-val" data-final="-40<span>%</span>" data-count="40">-40<span>%</span></div><div class="result-label">Pricing кліку</div></div>
-  <div class="result-item"><div class="result-val" data-final="3x<span></span>" data-count="3">3x<span></span></div><div class="result-label">Більше лідів</div></div>
-</div>
+<section>
+  <div class="sec-label">PRICING</div>
+  <h2 class="sec-title rev">Google Ads<br>pricing</h2>
+  <div class="service-grid"><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">TIER 01</div>
+      <h3 class="service-name">Setup — from $300</h3>
+      <div class="service-desc">One-off. Audit of the existing account or a new one, keyword research, campaign structure, ads, conversion tracking in GA4 and Google Ads, launch.</div>
+      <div class="service-tags"><span class="stag">One-off</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">TIER 02</div>
+      <h3 class="service-name">Management — from $200/month</h3>
+      <div class="service-desc">Weekly search-term reviews, negative keywords, bid and budget changes, ad copy tests and a monthly report in plain language.</div>
+      <div class="service-tags"><span class="stag">Monthly</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">TIER 03</div>
+      <h3 class="service-name">Large budgets and e-commerce — from $500/month</h3>
+      <div class="service-desc">Several campaign types at once: Search, Performance Max, Shopping and remarketing, product feed maintenance and more frequent reviews.</div>
+      <div class="service-tags"><span class="stag">Monthly</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">BUDGET</div>
+      <h3 class="service-name">Ad budget — paid to Google</h3>
+      <div class="service-desc">The ad budget is always separate from our fee and is charged by Google directly to your card. We suggest starting from $300/month so campaigns collect enough data to optimise.</div>
+      <div class="service-tags"><span class="stag">Separate</span></div>
+    </div></div>
+  <p class="service-desc" style="font-size:16px;margin-top:40px;max-width:760px;">Prices for every service we offer, from websites to SEO, are on one page: <a href="/en/pricing/" style="color:var(--red);">Infinite Union pricing</a>.</p>
+</section>
+
+<section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="sec-label">FROM OUR PORTFOLIO</div>
+  <h2 class="sec-title rev">What we build<br>around ads</h2>
+  <div class="service-grid"><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">01</div>
+      <h3 class="service-name">Ad Tracker by IU</h3>
+      <div class="service-desc">Our own dashboard that puts Google Ads, Meta Ads and TikTok Ads in one window, refreshes every 2 hours and keeps 90 days of history. It is still in development; on our side it already saves 5+ hours a week on reporting.</div>
+      <div class="service-tags"><span class="stag">Google Ads</span><span class="stag">Meta Ads</span><span class="stag">TikTok Ads</span></div>
+    </div><div class="service-item rev"><div class="service-border-anim"></div><div class="service-glow"></div><div class="service-arr" aria-hidden="true">↗</div>
+      <div class="service-num">02</div>
+      <h3 class="service-name">Transfer Kharkiv</h3>
+      <div class="service-desc">Landing page for a transfer company with an 8.4% conversion rate and a Telegram bot that accepts bookings 24/7. Paid clicks only pay off when the page they land on is fast and clear — this is the kind of page we build for that.</div>
+      <div class="service-tags"><span class="stag">Landing page</span><span class="stag">Telegram bot</span></div>
+    </div></div>
+  <p class="service-desc" style="font-size:16px;margin-top:40px;max-width:760px;">More projects in our <a href="/en/portfolio/" style="color:var(--red);">portfolio</a>.</p>
+</section>
 
 <section class="faq">
   <div class="sec-label">FAQ</div>
-  <h2 class="sec-title">Відповіді на<br>ваші питання</h2>
+  <h2 class="sec-title">Questions<br>we get asked</h2>
   <div class="faq-list"><div class="faq-item">
-      <button type="button" class="faq-q">Скільки коштує ведення Google Ads?<span class="faq-icon">+</span></button>
-      <div class="faq-a">Від $200/міс за ведення + рекламний бюджет from $300/міс.</div>
+      <button type="button" class="faq-q">How much does Google Ads management cost?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Setup starts from $300 as a one-off payment. Monthly management starts from $200, or from $500/month for large budgets and e-commerce. The ad budget is paid to Google separately and is not part of our fee.</div>
     </div><div class="faq-item">
-      <button type="button" class="faq-q">Як швидко з'являться результати?<span class="faq-icon">+</span></button>
-      <div class="faq-a">Search advertising дає перші кліки в день запуску. Ліди — в перші 3-5 днів.</div>
+      <button type="button" class="faq-q">What ad budget do I need?<span class="faq-icon">+</span></button>
+      <div class="faq-a">We suggest starting from $300/month. With less, campaigns collect data slowly and it takes longer to see which keywords bring enquiries. Before launch we estimate realistic click costs for your niche and country.</div>
     </div><div class="faq-item">
-      <button type="button" class="faq-q">Чи потрібен сайт?<span class="faq-icon">+</span></button>
-      <div class="faq-a">Так, для більшості кампаній потрібна посадкова сторінка. Можемо порекомендувати що покращити.</div>
+      <button type="button" class="faq-q">How soon will I see results?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Search ads can start showing as soon as Google approves them. The first weeks are about collecting data; we judge campaigns by enquiries and sales over several weeks, not by the first few days of clicks.</div>
     </div><div class="faq-item">
-      <button type="button" class="faq-q">Що таке Quality Score?<span class="faq-icon">+</span></button>
-      <div class="faq-a">Показник якості від Google. Вищий QS — нижча ціна кліку. Ми оптимізуємо акаунт для максимального QS.</div>
+      <button type="button" class="faq-q">Do you guarantee leads or the first position?<span class="faq-icon">+</span></button>
+      <div class="faq-a">No. Nobody can honestly guarantee positions or a number of leads: competition, click prices and your offer all play a part. What we do commit to is transparent work — you own the account, see every change and get a monthly report.</div>
+    </div><div class="faq-item">
+      <button type="button" class="faq-q">Will the Google Ads account be mine?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes. The Google Ads account, GA4 property and all data stay in your name. We work through manager access, and if we stop working together, everything stays with you.</div>
+    </div><div class="faq-item">
+      <button type="button" class="faq-q">Do I need a website first?<span class="faq-icon">+</span></button>
+      <div class="faq-a">You need a page that matches the ad: offer, price and an easy way to get in touch. If your current site is slow or unclear, we can build a landing page from $600 — see <a href="/en/services/websites/" style="color:var(--red);">website development</a>.</div>
+    </div><div class="faq-item">
+      <button type="button" class="faq-q">Do you work with businesses outside Ukraine?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes. We run campaigns for clients in Ukraine and the EU, including Poland, Germany, the Netherlands, Czechia, Slovakia and the UK. Communication is in English or Ukrainian, by Telegram, WhatsApp or call.</div>
     </div></div>
 </section>
 
 <section style="padding:80px 40px;background:var(--bg2);">
-  <div class="sec-label">MORE BY TYPE</div>
-  <h2 class="sec-title" style="margin-bottom:40px;">Оберіть формат<br>Google реклами</h2>
-  <div style="display:grid;grid-template-columns:1fr;gap:24px;max-width:480px;">
-    <a href="/services/google-ads-search/" style="border:1px solid var(--border);padding:40px;text-decoration:none;color:#fff;transition:border-color .3s,transform .3s;display:block;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform=''">
+  <div class="sec-label">RELATED SERVICES</div>
+  <h2 class="sec-title" style="margin-bottom:40px;">Other ways to<br>get customers</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+    <a href="/en/services/meta-ads/" style="border:1px solid var(--border);padding:40px;text-decoration:none;color:var(--dark);display:block;">
       <div style="font-size:11px;letter-spacing:.15em;color:var(--red);font-family:var(--font);margin-bottom:16px;">01</div>
-      <div style="font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:12px;">Search advertising Google</div>
-      <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;">Your business at the top of Google. ROI from 300%. From $300 setup.</div>
+      <h3 style="font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:12px;">Facebook and Instagram ads</h3>
+      <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;">Pixel, Conversions API, audiences and creatives. Setup from $250.</div>
+      <div style="font-size:12px;color:var(--red);font-family:var(--font);font-weight:600;">Learn more →</div>
+    </a>
+    <a href="/en/services/seo/" style="border:1px solid var(--border);padding:40px;text-decoration:none;color:var(--dark);display:block;">
+      <div style="font-size:11px;letter-spacing:.15em;color:var(--red);font-family:var(--font);margin-bottom:16px;">02</div>
+      <h3 style="font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:12px;">SEO services</h3>
+      <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;">Organic traffic that does not stop when the budget does. From $150/month.</div>
+      <div style="font-size:12px;color:var(--red);font-family:var(--font);font-weight:600;">Learn more →</div>
+    </a>
+    <a href="/en/services/websites/" style="border:1px solid var(--border);padding:40px;text-decoration:none;color:var(--dark);display:block;">
+      <div style="font-size:11px;letter-spacing:.15em;color:var(--red);font-family:var(--font);margin-bottom:16px;">03</div>
+      <h3 style="font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:12px;">Website development</h3>
+      <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;">Landing pages built for paid traffic. From $600.</div>
       <div style="font-size:12px;color:var(--red);font-family:var(--font);font-weight:600;">Learn more →</div>
     </a>
   </div>
 </section>
 <section class="cta-final" id="contact">
-  <div class="cta-bg-text">GOOGLE</div>
-  <h2 class="cta-title">Будьте першими<br>у <em>пошуку</em></h2>
-  <p class="cta-sub">Опишіть задачу — відповімо протягом 15 хвилин</p>
-  <a href="https://t.me/infiniteunion_bot" class="cta-btn" target="_blank" rel="noopener noreferrer"><span class="cta-btn-text">MESSAGE ON TELEGRAM</span></a>
-  <a href="/#contact" class="cta-btn-ghost">FILL THE FORM</a>
+  <div class="cta-bg-text" aria-hidden="true">GOOGLE</div>
+  <h2 class="cta-title">Ready to launch<br><em>Google Ads?</em></h2>
+  <p class="cta-sub">Tell us about your business and target market. We reply within 15 minutes during working hours.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;position:relative;z-index:1;">
+    <a href="https://t.me/infiniteunion_manager" class="cta-btn" target="_blank" rel="noopener noreferrer"><span class="cta-btn-text">MESSAGE ON TELEGRAM</span></a>
+    <a href="https://wa.me/380688286969" class="cta-btn-ghost" target="_blank" rel="noopener noreferrer">WHATSAPP</a>
+    <a href="viber://chat?number=%2B380688286969" class="cta-btn-ghost">VIBER</a>
+    <a href="tel:+380688286969" class="cta-btn-ghost">+380 68 828 6969</a>
+    <a href="/en/#contact" class="cta-btn-ghost">FILL IN THE FORM</a>
+  </div>
 </section>
 
 <!-- /iu:content -->
@@ -427,7 +499,7 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
 <footer>
   <div class="footer-logo">INFINITE <span>UNION</span></div>
   <div class="footer-copy">© 2026 Infinite Union · Kharkiv, Ukraine</div>
-  <a href="/services/privacy/" class="footer-link">Політика конфіденційності</a>
+  <a href="/services/privacy/" class="footer-link">Privacy policy</a>
 </footer>
 <!-- /iu:footer -->
 
@@ -457,7 +529,7 @@ document.querySelectorAll('.result-val[data-count]').forEach(el=>{
       const target=parseFloat(raw);
       const inner=el.innerHTML;
       const suffix=el.querySelector('span')?el.querySelector('span').outerHTML:'';
-      // Зберігаємо оригінальний текст і анімуємо тільки число
+      // keep the original text and animate only the number
       const origText=el.textContent.replace(/[0-9.]/g,'').trim();
       const dur=2000;const start=performance.now();
       const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;
