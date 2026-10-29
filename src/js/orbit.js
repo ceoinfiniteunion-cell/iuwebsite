@@ -3,7 +3,7 @@
     const t = document.querySelector(".av-right");
     if (!t) return;
     const e = [{
-            n: "Конверсія +40%",
+            n: "Заявки з сайту",
             d: "Сайти, що продають: лендінги, SPA, SEO-трафік",
             orbit: 0,
             speed: .0075,

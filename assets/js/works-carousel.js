@@ -1,5 +1,5 @@
 /* ============================================================
-   "НАШІ РОБОТИ" — mobile homepage carousel (#mobile-works)
+   (document.documentElement.lang==="en"?"OUR WORK":"НАШІ РОБОТИ") — mobile homepage carousel (#mobile-works)
    Native scroll-snap does the touch/swipe work; this just wires
    the two arrow buttons and the "01 / 08" counter to that native
    scroll position. No-op harmlessly if the section isn't present

@@ -11,7 +11,7 @@ function startHero() {
         num = document.getElementById("lnum"),
         loader = document.getElementById("loader"),
         status = document.getElementById("lstatus"),
-        labels = ["• Ініціалізація", "• Завантаження 3D", "• Майже готово"];
+        labels = [(document.documentElement.lang==="en"?"• Initializing":"• Ініціалізація"), (document.documentElement.lang==="en"?"• Loading":"• Завантаження 3D"), (document.documentElement.lang==="en"?"• Almost ready":"• Майже готово")];
 
     let shown = 0;      // что видит пользователь
     let stage = 0;
@@ -39,10 +39,9 @@ function startHero() {
         }, 400);
     }
 
-    window.addEventListener('iu:glb-loaded', finish);
-
-    // Страховка: не держим человека дольше 8 секунд ни при каких условиях
-    const failsafe = setTimeout(finish, 8000);
+    // Прелоадер не чекає 3D-модель: контент показуємо не пізніше ніж через 1 с від старту навігації.
+    // 3D (three.js + GLB) підвантажується окремо після load/idle — див. main.js.
+    const failsafe = setTimeout(finish, Math.max(200, 1000 - 400 - performance.now()));
 
     const timer = setInterval(() => {
         if (finished) return;
@@ -50,7 +49,7 @@ function startHero() {
         // Базовый прогресс до 90% — чтобы полоса не стояла мёртвой
         // Реальный GLB подтягивает её быстрее, если сеть хорошая
         const target = Math.max(
-            Math.min(90, shown + 2.2 * Math.random() + 0.5),
+            Math.min(90, shown + 6 * Math.random() + 3),
             glbPct * 0.9
         );
         shown = Math.min(90, target);
@@ -61,7 +60,5 @@ function startHero() {
         bar.style.width = shown + "%";
         num.textContent = Math.floor(shown);
 
-        // Если GLB уже загрузился до того как повесился слушатель
-        if (window.__IU_GLB_DONE) { clearTimeout(failsafe); finish(); }
     }, 40);
 }();
