@@ -182,152 +182,6 @@ iframe{width:100%;height:100%;border:none;}
   ]
 }
 </script>
-<style>
-- Підключай Google Fonts через @import або link
-- Стиль: ${styleMap[style]}
-- Тип: ${typeMap[type]}
-- Сайт має виглядати як РЕАЛЬНИЙ продакшн сайт, не заглушка
-- Додай реалістичний контент відповідно до ніші клієнта
-- Додай плавні CSS анімації при завантаженні
-- Mobile-responsive (використовуй flexbox/grid)
-- Додай hover ефекти на кнопки і посилання
-- НЕ використовуй зображення з інтернету (тільки CSS градієнти, SVG або placeholder)
-- Текст сайту пиши мовою клієнта (якщо українська — українською, якщо інша — відповідно)
-- Додай в footer дрібний підпис: "Концепт створено Infinite Union AI"`;
-
-  try {
-    const response = await fetch('https://api.infiniteunion.com.ua/generate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        system: systemPrompt,
-        prompt: `Створи сайт для: ${prompt}`
-      })
-    });
-
-    const data = await response.json();
-    clearInterval(stepInterval);
-
-    if (data.content && data.content[0]) {
-      lb.style.width = '100%';
-      lt.textContent = 'ГОТОВО!';
-
-      setTimeout(() => {
-        ls.classList.remove('show');
-        // Видаляємо markdown блок якщо є
-        let siteHtml = data.content[0].text;
-        // Видаляємо markdown блок
-        siteHtml = siteHtml.replace(/^```(?:html)?[\r\n]*/i, '').replace(/[\r\n]*```\s*$/i, '').trim();
-        const frame = document.getElementById('previewFrame');
-        frame.removeAttribute('style');
-        frame.style.cssText = 'width:100%;height:100%;border:none;display:block;';
-        document.getElementById('emptyState').style.display = 'none';
-        document.getElementById('loadingState').classList.remove('show');
-        frame.srcdoc = siteHtml;
-        window._lastHtml = siteHtml;
-        document.getElementById('toolbarUrl').textContent = prompt.substring(0, 50) + '...';
-        document.getElementById('orderPanel').classList.add('show');
-
-        // Update rate
-        rate.count++;
-        saveRateData(rate);
-        updateDots();
-
-        btn.disabled = false;
-        icon.style.animation = 'none';
-        showToast('Сайт згенеровано! ✓', 'success');
-      }, 600);
-    } else {
-      throw new Error('Empty response');
-    }
-  } catch (e) {
-    clearInterval(stepInterval);
-    ls.classList.remove('show');
-    document.getElementById('emptyState').style.display = 'flex';
-    btn.disabled = false;
-    icon.style.animation = 'none';
-    showToast('Помилка генерації. Спробуйте ще раз.', 'error');
-    console.error(e);
-  }
-}
-
-function orderSite() {
-  const prompt = lastPrompt;
-  const style = document.getElementById('style').options[document.getElementById('style').selectedIndex].text;
-  const type = document.getElementById('type').options[document.getElementById('type').selectedIndex].text;
-
-  // Відправляємо в бот
-  fetch('https://api.infiniteunion.com.ua/lead', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      name: 'AI Конструктор',
-      contact: '—',
-      project_type: 'Конверсійний сайт',
-      budget: '—',
-      deadline: '—',
-      project: `[AI КОНСТРУКТОР] ${prompt} | Стиль: ${style} | Тип: ${type}`
-    })
-  }).catch(() => {});
-
-  // Перекидаємо на контакт форму
-  window.location.href = '../index.html#contact';
-  showToast('Переходимо до оформлення замовлення...', 'success');
-}
-
-// Textarea auto-resize
-document.getElementById('prompt').addEventListener('input', function() {
-  this.style.height = 'auto';
-  this.style.height = Math.min(this.scrollHeight, 240) + 'px';
-});
-
-// Enter to generate
-document.getElementById('prompt').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) generate();
-});
-
-updateDots();
-</script>
-
-<section class="faq-section">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item">
-      <button type="button" class="faq-q">Як працює AI конструктор сайтів?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>Ви описуєте ваш бізнес — AI генерує живий прев'ю сайту за 15 секунд. Безкоштовно, без реєстрації.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Чи можна замовити повноцінний сайт після конструктора?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>Так, прев'ю конструктора стає основою для розробки реального сайту нашою командою.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Скільки коштує сайт після конструктора?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>Якщо замовляєте розробку після конструктора — знижка 10% на фінальну вартість.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<style>
-.faq-section{background:#0a0706;padding:100px 48px;border-top:1px solid rgba(237,232,229,0.07)}
-.faq-inner{max-width:860px;margin:0 auto}
-.faq-label{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#D40000;margin-bottom:16px}
-.faq-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(32px,4vw,52px);font-weight:700;letter-spacing:-.03em;color:#EDE8E5;margin-bottom:60px}
-.faq-item{border-bottom:1px solid rgba(237,232,229,0.08);overflow:hidden}
-.faq-q{width:100%;background:none;border:none;text-align:left;padding:28px 0;font-family:"Space Grotesk",sans-serif;font-size:16px;font-weight:500;color:#EDE8E5;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;letter-spacing:-.01em}
-.faq-arr{font-size:24px;color:#D40000;flex-shrink:0;transition:transform .3s}
-.faq-item.open .faq-arr{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.faq-item.open .faq-a{max-height:300px}
-.faq-a p{padding:0 0 28px;font-size:15px;color:#8A8080;line-height:1.8}
-@media(max-width:768px){.faq-section{padding:60px 20px}.faq-q{font-size:14px}}
-</style>
 <meta property="og:description" content="Безкоштовний AI конструктор сайтів. Опиши свій бізнес — отримай готовий сайт за 60 секунд. Powered by Claude AI. Спробуй безкоштовно прямо зараз.">
 </head>
 <body>
@@ -350,8 +204,8 @@ updateDots();
   <div class="panel">
     <div class="panel-header">
       <div class="panel-badge">AI · КОНСТРУКТОР</div>
-      <h1 class="panel-title">Візуалізуй свій<br>майбутній сайт</h1>
-      <p class="panel-sub">Опишіть ідею — AI згенерує живий прев'ю вашого сайту за 15 секунд. Безкоштовно.</p>
+      <h1 class="panel-title">AI конструктор сайтів:<br>прев'ю до замовлення</h1>
+      <p class="panel-sub">Опишіть бізнес — AI збере концепт головної сторінки. 3 безкоштовні генерації на день, без реєстрації. Це ескіз для обговорення, а не готовий сайт.</p>
     </div>
 
     <div class="examples">
@@ -394,7 +248,7 @@ updateDots();
       </div>
 
       <button type="button" class="gen-btn" id="genBtn" onclick="generate()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="genIcon"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="genIcon" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         Згенерувати сайт
       </button>
     </div>
@@ -411,9 +265,9 @@ updateDots();
     <div class="order-panel" id="orderPanel">
       <button type="button" class="order-btn" onclick="orderSite()">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        Замовити цей дизайн
+        Замовити сайт за цим концептом
       </button>
-      <p class="order-note">Ми реалізуємо цей концепт як повноцінний продакшн сайт. Відповімо протягом 15 хвилин.</p>
+      <p class="order-note">Відкриється форма заявки. Зробимо з концепту робочий сайт — лендінг від $600. Відповідаємо протягом 15 хвилин у робочий час.</p>
     </div>
   </div>
 
@@ -425,20 +279,20 @@ updateDots();
         <div class="toolbar-dot"></div>
         <div class="toolbar-dot"></div>
       </div>
-      <div class="toolbar-url" id="toolbarUrl">infiniteunion.ai/constructor</div>
+      <div class="toolbar-url" id="toolbarUrl">infiniteunion.com.ua/services/constructor/</div>
     </div>
 
     <div class="preview-frame">
       <div class="empty-state" id="emptyState">
         <div class="empty-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
         <div class="empty-title">Прев'ю з'явиться тут</div>
         <div class="empty-sub">Опишіть ваш проєкт зліва і натисніть "Згенерувати сайт"</div>
       </div>
 
       <div class="loading-state" id="loadingState">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5" style="animation:spin 2s linear infinite"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5" style="animation:spin 2s linear infinite" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         <div class="loading-bar-wrap"><div class="loading-bar" id="loadingBar"></div></div>
         <div class="loading-text" id="loadingText">АНАЛІЗУЄМО ЗАПИТ...</div>
         <div class="loading-step" id="loadingStep">Підбираємо стиль і структуру</div>
@@ -450,8 +304,69 @@ updateDots();
   </div>
 </div>
 
-<div class="toast" id="toast"></div>
 
+<style>
+.faq-section{background:#0a0706;padding:100px 48px;border-top:1px solid rgba(237,232,229,0.07)}
+.faq-inner{max-width:860px;margin:0 auto}
+.faq-label{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#D40000;margin-bottom:16px}
+.faq-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(32px,4vw,52px);font-weight:700;letter-spacing:-.03em;color:#EDE8E5;margin-bottom:60px}
+.faq-item{border-bottom:1px solid rgba(237,232,229,0.08);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:28px 0;font-family:"Space Grotesk",sans-serif;font-size:16px;font-weight:500;color:#EDE8E5;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;letter-spacing:-.01em}
+.faq-arr{font-size:24px;color:#D40000;flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-arr{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a p{padding:0 0 28px;font-size:15px;color:#8A8080;line-height:1.8}
+.cx-text h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(22px,2.4vw,30px);font-weight:700;letter-spacing:-.02em;color:#EDE8E5;margin:48px 0 16px}
+.cx-text .faq-title{margin-bottom:24px}
+.cx-text p,.cx-text li{font-size:15px;color:#8A8080;line-height:1.8}
+.cx-text p{margin-bottom:14px}
+.cx-text ul{margin:0 0 14px 20px}
+.cx-text a,.faq-a a{color:#EDE8E5;text-decoration:underline;text-underline-offset:3px}
+.cx-text a:hover,.faq-a a:hover{color:#D40000}
+@media(max-width:768px){.faq-section{padding:60px 20px}.faq-q{font-size:14px}}
+</style>
+
+<section class="faq-section cx-text">
+  <div class="faq-inner">
+    <div class="faq-label">Як це працює</div>
+    <h2 class="faq-title">AI конструктор сайтів від Infinite Union</h2>
+    <p>AI конструктор сайтів — безкоштовний інструмент веб-студії Infinite Union з Харкова. Ви описуєте бізнес кількома реченнями, обираєте стиль і тип сайту, а AI збирає одну сторінку: структуру, тексти-заготовки, кольори й типографіку. Прев'ю відкривається праворуч, у вікні браузера, і його можна показати партнеру чи команді.</p>
+    <p>Мета інструмента — щоб ви побачили напрям до того, як платити за розробку. Замість абстрактного «хочу сучасний сайт» у вас є картинка, від якої можна відштовхуватися: що подобається, що прибрати, яких блоків бракує.</p>
+
+    <h2>Концепт, а не готовий сайт</h2>
+    <p>Згенерована сторінка — це ескіз. У ній немає адмінки, справжньої форми з передачею заявок, підключеної аналітики, SEO-налаштувань, домену й хостингу. Тексти та цифри в прев'ю AI вигадує під вашу нішу — перед публікацією їх треба замінити на реальні. Тому код із конструктора не варто викладати в інтернет як є.</p>
+    <p>Безкоштовно доступно 3 генерації на день. Лічильник зберігається у вашому браузері й обнуляється наступного дня. Реєстрація не потрібна.</p>
+
+    <h2>Як отримати точніший результат</h2>
+    <ul>
+      <li>Назвіть нішу і місто: «кав'ярня на Салтівці», «автосервіс у Харкові».</li>
+      <li>Перелічіть блоки, які мають бути: меню, ціни, галерея, відгуки, форма запису.</li>
+      <li>Опишіть настрій і кольори: «світлий, теплі відтінки», «темний, червоні акценти».</li>
+      <li>Вкажіть, яку дію має зробити відвідувач: подзвонити, записатися, замовити доставку.</li>
+    </ul>
+
+    <h2>Від прев'ю до робочого сайту</h2>
+    <p>Якщо концепт сподобався, натисніть «Замовити сайт за цим концептом» — відкриється форма заявки на головній. Ми проведемо бриф, покажемо прототип і зробимо з ескізу повноцінний сайт: з унікальним дизайном, адаптивною версткою, базовою SEO-оптимізацією та передачею заявок у Telegram або CRM. Код і доступи після запуску належать вам.</p>
+    <p>Орієнтири за вартістю: <a href="/services/websites-landing/">лендінг</a> — від $600 і до 10 днів роботи, корпоративний сайт — від $1 000, інтернет-магазин — від $1 200. Усі типи сайтів описані на сторінці <a href="/services/websites/">розробка сайтів</a>, повний прайс — у розділі <a href="/pricing/">ціни</a>, а з чого складається бюджет, розбираємо в статті <a href="/blog/skilky-koshtuye-sayt-2026/">«Скільки коштує сайт у 2026»</a>. Приклади реальних проєктів — у <a href="/portfolio/">портфоліо</a>.</p>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
+
+    <div class="faq-item"><button type="button" class="faq-q">Як працює AI конструктор сайтів? <span class="faq-arr">+</span></button><div class="faq-a"><p>Ви описуєте бізнес і обираєте стиль та тип сайту. Запит іде на сервер Infinite Union, де модель Claude від Anthropic генерує HTML-сторінку. Щойно генерація завершиться, сторінка з'явиться у вікні прев'ю праворуч.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-q">Скільки генерацій можна зробити безкоштовно? <span class="faq-arr">+</span></button><div class="faq-a"><p>3 генерації на день, без реєстрації й оплати. Лічильник зберігається в браузері та обнуляється наступного дня.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-q">Чи можна опублікувати згенерований сайт одразу? <span class="faq-arr">+</span></button><div class="faq-a"><p>Ні. Це концепт: без адмінки, робочої форми заявок, аналітики, SEO, домену й хостингу, а тексти й цифри в ньому вигадані AI. Він потрібен, щоб узгодити напрям дизайну перед розробкою.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-q">Чи можна замовити повноцінний сайт після конструктора? <span class="faq-arr">+</span></button><div class="faq-a"><p>Так. Натисніть «Замовити сайт за цим концептом» і залиште заявку. Ми візьмемо концепт за основу, проведемо бриф і зробимо робочий сайт з вашими текстами, формою заявок і базовою SEO-оптимізацією.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-q">Скільки коштує сайт після конструктора? <span class="faq-arr">+</span></button><div class="faq-a"><p>Так само, як без нього: лендінг від $600, корпоративний сайт від $1 000, інтернет-магазин від $1 200. Хостинг і домен оплачуються окремо. Деталі — на сторінці <a href="/pricing/">ціни</a>.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-q">Скільки часу займає розробка? <span class="faq-arr">+</span></button><div class="faq-a"><p>Лендінг Start — до 10 днів, корпоративний сайт — близько 3 тижнів, інтернет-магазин — від 3 тижнів. Точний термін називаємо після брифу.</p></div></div>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
 <script>
 const RATE_KEY = 'iu_gen_rate';
 const MAX_GENS = 3;
@@ -559,7 +474,111 @@ async function generate() {
 
 ВИМОГИ:
 - Поверни ТІЛЬКИ валідний HTML код, без пояснень, без markdown, без коментарів поза кодом
-- Використовуй вбудований CSS в тегу <!-- /iu:content -->
+- Використовуй вбудований CSS у тезі style всередині head
+- Підключай Google Fonts через @import або link
+- Стиль: ${styleMap[style]}
+- Тип: ${typeMap[type]}
+- Сайт має виглядати як РЕАЛЬНИЙ продакшн сайт, не заглушка
+- Додай реалістичний контент відповідно до ніші клієнта
+- Додай плавні CSS анімації при завантаженні
+- Mobile-responsive (використовуй flexbox/grid)
+- Додай hover ефекти на кнопки і посилання
+- НЕ використовуй зображення з інтернету (тільки CSS градієнти, SVG або placeholder)
+- Текст сайту пиши мовою клієнта (якщо українська — українською, якщо інша — відповідно)
+- Додай в footer дрібний підпис: "Концепт створено Infinite Union AI"`;
+
+  try {
+    const response = await fetch('https://api.infiniteunion.com.ua/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        system: systemPrompt,
+        prompt: `Створи сайт для: ${prompt}`
+      })
+    });
+
+    const data = await response.json();
+    clearInterval(stepInterval);
+
+    if (data.content && data.content[0]) {
+      lb.style.width = '100%';
+      lt.textContent = 'ГОТОВО!';
+
+      setTimeout(() => {
+        ls.classList.remove('show');
+        // Видаляємо markdown блок якщо є
+        let siteHtml = data.content[0].text;
+        // Видаляємо markdown блок
+        siteHtml = siteHtml.replace(/^```(?:html)?[\r\n]*/i, '').replace(/[\r\n]*```\s*$/i, '').trim();
+        const frame = document.getElementById('previewFrame');
+        frame.removeAttribute('style');
+        frame.style.cssText = 'width:100%;height:100%;border:none;display:block;';
+        document.getElementById('emptyState').style.display = 'none';
+        document.getElementById('loadingState').classList.remove('show');
+        frame.srcdoc = siteHtml;
+        window._lastHtml = siteHtml;
+        document.getElementById('toolbarUrl').textContent = prompt.substring(0, 50) + '...';
+        document.getElementById('orderPanel').classList.add('show');
+
+        // Update rate
+        rate.count++;
+        saveRateData(rate);
+        updateDots();
+
+        btn.disabled = false;
+        icon.style.animation = 'none';
+        showToast('Сайт згенеровано! ✓', 'success');
+      }, 600);
+    } else {
+      throw new Error('Empty response');
+    }
+  } catch (e) {
+    clearInterval(stepInterval);
+    ls.classList.remove('show');
+    document.getElementById('emptyState').style.display = 'flex';
+    btn.disabled = false;
+    icon.style.animation = 'none';
+    showToast('Помилка генерації. Спробуйте ще раз.', 'error');
+    console.error(e);
+  }
+}
+
+function orderSite() {
+  // Лід тут НЕ надсилаємо (без контакту він марний) — лише зберігаємо опис
+  // концепту і ведемо на форму заявки головної сторінки.
+  try {
+    const styleSel = document.getElementById('style');
+    const typeSel = document.getElementById('type');
+    const style = styleSel.options[styleSel.selectedIndex].text;
+    const type = typeSel.options[typeSel.selectedIndex].text;
+    sessionStorage.setItem('iu_constructor_prompt', `[AI-конструктор] ${lastPrompt} | Стиль: ${style} | Тип: ${type}`);
+  } catch (e) {}
+  window.location.href = '/#contact';
+}
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(q) {
+  q.setAttribute('aria-expanded', 'false');
+  q.addEventListener('click', function() {
+    const open = q.closest('.faq-item').classList.toggle('open');
+    q.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});
+
+// Textarea auto-resize
+document.getElementById('prompt').addEventListener('input', function() {
+  this.style.height = 'auto';
+  this.style.height = Math.min(this.scrollHeight, 240) + 'px';
+});
+
+// Enter to generate
+document.getElementById('prompt').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) generate();
+});
+
+updateDots();
+</script>
+<!-- /iu:content -->
 <!-- iu:footer --><!-- /iu:footer -->
 </body>
 </html>
