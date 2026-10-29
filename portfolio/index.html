@@ -221,6 +221,13 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
 </nav>
 <!-- iu:content -->
 
+<style>
+.p-services{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 20px}
+.p-services a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(212,0,0,.3)}
+.p-services a:hover{border-bottom-color:var(--red)}
+.hero h1.h1-long{font-size:clamp(38px,6vw,84px);line-height:1}
+.hero-sub a{color:inherit;text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}
+</style>
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="hero-dots" aria-hidden="true"></div>
@@ -230,13 +237,13 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
   <div class="hero-coords">49° 59′ N · 36° 14′ E · Kharkiv, Ukraine</div>
   <div class="hero-in">
     <div class="hero-label">Портфоліо · Infinite Union</div>
-    <h1>Наші<br>роботи<span>.</span></h1>
-    <p class="hero-sub">8 проєктів, які вже працюють на своїх власників — <strong>без пауз, без вихідних і без виправдань.</strong> Від лендінгу з конверсією 8.4% до AI-автоматизації, що генерує креативи за 3 хвилини.</p>
+    <h1 class="h1-long">Портфоліо Infinite Union: <span>сайти, боти та SaaS</span></h1>
+    <p class="hero-sub">Портфоліо веб-студії Infinite Union з Харкова: <strong>8 проєктів, які працюють у продакшні.</strong> Лендінг Transfer Kharkiv з конверсією 8.4%, офіційний бот КНЕУ на 3 000+ користувачів, сайт автомайданчика Respect Car, екосистема школи Parrot School і власні інструменти. Скільки коштує схожий проєкт — на сторінці <a href="/pricing/">«Ціни»</a>.</p>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="hero-stat-n"><em data-count="8" data-suffix="">0</em></div><div class="hero-stat-l">проєктів у продакшні</div></div>
-      <div class="hero-stat"><div class="hero-stat-n"><em data-count="3000" data-suffix="+">0</em></div><div class="hero-stat-l">користувачів у ботах</div></div>
-      <div class="hero-stat"><div class="hero-stat-n"><em data-count="8.4" data-suffix="%" data-decimals="1">0</em></div><div class="hero-stat-l">конверсія Transfer Kharkiv</div></div>
-      <div class="hero-stat"><div class="hero-stat-n"><em data-count="119" data-suffix="+">0</em></div><div class="hero-stat-l">SEO-позицій в топі</div></div>
+      <div class="hero-stat"><div class="hero-stat-n"><em data-count="8" data-suffix="">8</em></div><div class="hero-stat-l">проєктів у продакшні</div></div>
+      <div class="hero-stat"><div class="hero-stat-n"><em data-count="3000" data-suffix="+">3 000+</em></div><div class="hero-stat-l">користувачів у ботах</div></div>
+      <div class="hero-stat"><div class="hero-stat-n"><em data-count="8.4" data-suffix="%" data-decimals="1">8.4%</em></div><div class="hero-stat-l">конверсія Transfer Kharkiv</div></div>
+      <div class="hero-stat"><div class="hero-stat-n"><em data-count="119" data-suffix="+">119+</em></div><div class="hero-stat-l">SEO-позицій в топі</div></div>
     </div>
   </div>
 </header>
@@ -262,16 +269,17 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
       <div class="p-top"><div class="p-badge">SaaS · Флагман IU</div></div>
       <h3 class="p-title">Ad Tracker by Infinite Union</h3>
       <div class="p-tagline">Один дашборд замість трьох вкладок</div>
-      <p class="p-desc">Клієнтський портал аналітики реклами, який ми будуємо для клієнтів і використовуємо самі. Meta Ads, Google Ads і TikTok Ads — в одному екрані, без ручного зведення звітів і без пізніх вечорів в Excel.</p>
+      <p class="p-desc">Власний дашборд аналітики реклами, який ми будуємо для клієнтів і використовуємо самі. Meta Ads, Google Ads і TikTok Ads — в одному вікні, дані оновлюються автоматично кожні 2 години, історія — 90 днів. Без ручного зведення звітів в Excel.</p>
       <div class="p-stack">
         <span class="p-chip">Next.js 14</span><span class="p-chip">PostgreSQL</span><span class="p-chip">Meta API</span><span class="p-chip">Google API</span><span class="p-chip">TikTok API</span><span class="p-chip">Railway</span>
       </div>
       <div class="p-stats">
         <div><div class="p-stat-n">3</div><div class="p-stat-l">платформи в одному дашборді</div></div>
-        <div><div class="p-stat-n">Live</div><div class="p-stat-l">дані в реальному часі</div></div>
+        <div><div class="p-stat-n">2 год</div><div class="p-stat-l">автооновлення даних</div></div>
         <div><div class="p-stat-n">5+ год</div><div class="p-stat-l">економії на звітах щотижня</div></div>
       </div>
-      <span class="p-link p-link--soon">🔧 В розробці · Приватний проєкт</span>
+            <div class="p-services">Послуги: <a href="/services/platforms/">Вебплатформи / SaaS</a> · <a href="/services/google-ads/">Google Ads</a> · <a href="/services/meta-ads/">Meta Ads</a> · <a href="/services/tiktok-ads/">TikTok Ads</a></div>
+      <span class="p-link p-link--soon">В розробці · Приватний проєкт</span>
     </div>
 
     <div class="p-card" id="p-respect-car" data-cat="sites">
@@ -288,10 +296,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
         <div><div class="p-stat-n">TG</div><div class="p-stat-l">адмінка в Telegram</div></div>
         <div><div class="p-stat-n">CDN</div><div class="p-stat-l">захист Cloudflare</div></div>
       </div>
-      <a href="https://respectcar.com.ua" target="_blank" rel="noopener noreferrer" class="p-link">respectcar.com.ua <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <div class="p-services">Послуги: <a href="/services/websites-corporate/">Корпоративний сайт</a> · <a href="/services/bots/">Telegram-бот (адмінка)</a> · <a href="/services/websites-kharkiv/">Сайти в Харкові</a></div>
+      <a href="https://respectcar.com.ua" target="_blank" rel="noopener noreferrer" class="p-link">respectcar.com.ua <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
     </div>
 
-    <a class="p-card" id="p-parrot-school" href="https://parrotschool.com.ua" data-cat="sites bots" target="_blank" rel="noopener noreferrer">
+    <div class="p-card" id="p-parrot-school" data-cat="sites bots">
       <div class="p-num">03 / 08</div>
       <div class="p-top"><div class="p-badge">Освіта · Екосистема</div></div>
       <h3 class="p-title">Parrot School</h3>
@@ -302,18 +311,19 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
       </div>
       <div class="p-stats">
         <div><div class="p-stat-n">3</div><div class="p-stat-l">ролі в одному боті</div></div>
-        <div><div class="p-stat-n">100%</div><div class="p-stat-l">розклад і оцінки онлайн</div></div>
+        <div><div class="p-stat-n">+1</div><div class="p-stat-l">адмін-бот для команди</div></div>
         <div><div class="p-stat-n">24/7</div><div class="p-stat-l">сповіщення без дзвінків</div></div>
       </div>
-      <span class="p-link">parrotschool.com.ua <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-    </a>
+            <div class="p-services">Послуги: <a href="/services/ecosystems/">Цифрова екосистема</a> · <a href="/services/bots/">Telegram-боти</a> · <a href="/services/websites/">Розробка сайтів</a></div>
+      <a href="https://parrotschool.com.ua" target="_blank" rel="noopener noreferrer" class="p-link">parrotschool.com.ua <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
 
-    <a class="p-card" id="p-transfer-kharkiv" href="https://transferkharkiv.com.ua" data-cat="sites" target="_blank" rel="noopener noreferrer">
+    <div class="p-card" id="p-transfer-kharkiv" data-cat="sites">
       <div class="p-num">04 / 08</div>
       <div class="p-top"><div class="p-badge">Флагман · SEO</div></div>
       <h3 class="p-title">Transfer Kharkiv</h3>
-      <div class="p-tagline">Лендінг, який продає сам</div>
-      <p class="p-desc">Лендінг трансферної компанії з конверсією 8.4% — це втричі вище середнього по ніші. SEO вивело сайт у топ за 119+ запитами, а Telegram-бот приймає заявки цілодобово, поки менеджери сплять.</p>
+      <div class="p-tagline">Лендінг + SEO + бот для заявок</div>
+      <p class="p-desc">Лендінг трансферної компанії з конверсією 8.4%. SEO вивело сайт у топ за 119+ запитами, а Telegram-бот приймає заявки 24/7 і одразу передає їх диспетчеру.</p>
       <div class="p-stack">
         <span class="p-chip">Static HTML/CSS/JS</span><span class="p-chip">Python-бот</span><span class="p-chip">SEO</span>
       </div>
@@ -322,8 +332,9 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
         <div><div class="p-stat-n">119+</div><div class="p-stat-l">SEO-позицій у топі</div></div>
         <div><div class="p-stat-n">24/7</div><div class="p-stat-l">заявки без менеджера</div></div>
       </div>
-      <span class="p-link">transferkharkiv.com.ua <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-    </a>
+            <div class="p-services">Послуги: <a href="/services/websites-landing/">Лендінг</a> · <a href="/services/seo/">SEO-просування</a> · <a href="/services/bots/">Telegram-бот</a></div>
+      <a href="https://transferkharkiv.com.ua" target="_blank" rel="noopener noreferrer" class="p-link">transferkharkiv.com.ua <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
 
     <div class="p-card" id="p-kneu-bot" data-cat="bots">
       <div class="p-num">05 / 08</div>
@@ -339,6 +350,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
         <div><div class="p-stat-n">Live</div><div class="p-stat-l">розклад і новини</div></div>
         <div><div class="p-stat-n">Push</div><div class="p-stat-l">миттєві сповіщення</div></div>
       </div>
+            <div class="p-services">Послуги: <a href="/services/bots/">Розробка Telegram-ботів</a></div>
       <span class="p-link p-link--soon">Офіційний бот КНЕУ</span>
     </div>
 
@@ -347,40 +359,42 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
       <div class="p-top"><div class="p-badge">Автоматизація · Бізнес</div></div>
       <h3 class="p-title">BizBot</h3>
       <div class="p-tagline">Бухгалтер, який не бере відпустку</div>
-      <p class="p-desc">Telegram-бот, що автоматизує бухгалтерію малого бізнесу: зарплати, задачі, автозаповнення Excel. Власник економить понад 4 години рутини щотижня і отримує звіт одним натисканням.</p>
+      <p class="p-desc">Telegram-бот, що автоматизує бухгалтерію малого бізнесу: зарплати, задачі, автозаповнення Excel. Власник економить понад 4 години рутини щотижня.</p>
       <div class="p-stack">
         <span class="p-chip">Python</span><span class="p-chip">aiogram</span><span class="p-chip">FastAPI</span><span class="p-chip">Excel API</span><span class="p-chip">Railway</span>
       </div>
       <div class="p-stats">
         <div><div class="p-stat-n">4+ год</div><div class="p-stat-l">економії щотижня</div></div>
-        <div><div class="p-stat-n">1 клік</div><div class="p-stat-l">звіт замість годин</div></div>
+        <div><div class="p-stat-n">Задачі</div><div class="p-stat-l">і зарплати в одному боті</div></div>
         <div><div class="p-stat-n">Auto</div><div class="p-stat-l">Excel автоматично</div></div>
       </div>
+            <div class="p-services">Послуги: <a href="/services/bots/">Telegram-боти</a> · <a href="/services/bots-crm/">Інтеграції та автоматизація</a></div>
       <span class="p-link p-link--soon">Приватний проєкт</span>
     </div>
 
-    <a class="p-card" id="p-infinitycreo" href="https://t.me/infinitycreo_bot" data-cat="ai" target="_blank" rel="noopener noreferrer">
+    <div class="p-card" id="p-infinitycreo" data-cat="ai">
       <div class="p-num">07 / 08</div>
       <div class="p-top"><div class="p-badge">AI · Автоматизація</div></div>
       <h3 class="p-title">InfinityCreo</h3>
-      <div class="p-tagline">Від брифу до банера за 3 хвилини</div>
-      <p class="p-desc">AI-генерація рекламних креативів для медіабаєрів через n8n. Опиши бриф — отримай готовий банер за лічені хвилини, без дизайнера і без нескінченних правок «зроби шрифт більшим».</p>
+      <div class="p-tagline">Від брифу до банера за ~3 хвилини</div>
+      <p class="p-desc">AI-генерація рекламних креативів через n8n. Ви описуєте бриф — бот за ~3 хвилини повертає готовий банер у потрібному форматі, без окремого замовлення дизайнеру.</p>
       <div class="p-stack">
         <span class="p-chip">n8n</span><span class="p-chip">Claude API</span><span class="p-chip">Midjourney API</span><span class="p-chip">Telegram Bot</span>
       </div>
       <div class="p-stats">
         <div><div class="p-stat-n">3 хв</div><div class="p-stat-l">від брифу до банера</div></div>
         <div><div class="p-stat-n">10+</div><div class="p-stat-l">форматів креативів</div></div>
-        <div><div class="p-stat-n">0</div><div class="p-stat-l">дизайнерів у процесі</div></div>
+        <div><div class="p-stat-n">n8n</div><div class="p-stat-l">автоматизація сценарію</div></div>
       </div>
-      <span class="p-link">@infinitycreo_bot <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-    </a>
+            <div class="p-services">Послуги: <a href="/services/bots/">Telegram-боти</a> · <a href="/services/meta-ads/">Meta Ads</a></div>
+      <a href="https://t.me/infinitycreo_bot" target="_blank" rel="noopener noreferrer" class="p-link">@infinitycreo_bot <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
 
     <div class="p-card" id="p-iu-bot" data-cat="bots">
       <div class="p-num">08 / 08</div>
       <div class="p-top"><div class="p-badge">Internal · Автоматизація</div></div>
       <h3 class="p-title">IU Bot</h3>
-      <div class="p-tagline">Відділ продажів, який не спить</div>
+      <div class="p-tagline">Квіз, кваліфікація ліда, передача в CRM</div>
       <p class="p-desc">Внутрішній lead-бот Infinite Union з квізом, що кваліфікує клієнта ще до першого дзвінка. FSM-сценарії ведуть діалог, а CRM отримує вже теплого ліда — повністю автоматично.</p>
       <div class="p-stack">
         <span class="p-chip">Python</span><span class="p-chip">aiogram</span><span class="p-chip">FastAPI</span><span class="p-chip">PostgreSQL</span><span class="p-chip">Redis</span><span class="p-chip">Railway</span>
@@ -390,6 +404,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
         <div><div class="p-stat-n">FSM</div><div class="p-stat-l">сценарії діалогу</div></div>
         <div><div class="p-stat-n">CRM</div><div class="p-stat-l">інтеграція без ручних дій</div></div>
       </div>
+            <div class="p-services">Послуги: <a href="/services/bots-sales/">Бот для продажів</a> · <a href="/services/bots-crm/">CRM-інтеграція</a></div>
       <span class="p-link p-link--soon">Внутрішній інструмент IU</span>
     </div>
 
@@ -400,8 +415,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
 <section class="cta-band">
   <div class="cta-in">
     <div class="cta-label">Ваш проєкт — наступний</div>
-    <h2>Хочете такий же<br><span>результат?</span></h2>
-    <p>Обговоримо ваш проєкт за 15 хвилин і скажемо чесно, що варто робити, а що — ні.</p>
+    <h2>Обговоримо<br><span>ваш проєкт?</span></h2>
+    <p>Відповідаємо протягом 15 хвилин у робочий час і чесно кажемо, що варто робити, а що — ні.</p>
     <a href="/#contact" class="cta-btn">Обговорити проєкт
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
