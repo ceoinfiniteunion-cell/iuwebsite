@@ -269,45 +269,45 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 
 <!-- HERO -->
 <section class="hero" style="padding-top:120px;">
-  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag">
         <div class="hero-tag-line"></div>
-        <span class="hero-tag-text">CRM · TELEGRAM · АВТОМАТИЗАЦІЯ</span>
+        <span class="hero-tag-text">TELEGRAM · CRM · СИНХРОНІЗАЦІЯ</span>
       </div>
-      <h1 class="hero-title">CRM що<br>живе у<br><em>Telegram.</em></h1>
-      <p class="hero-sub">Кожен лід з бота — автоматично в CRM. Менеджери отримують задачі в Telegram. Угоди рухаються по воронці без ручного введення.</p>
+      <h1 class="hero-title">Інтеграція<br>телеграм-бота<br>з <em>CRM</em></h1>
+      <p class="hero-sub">Інтеграція телеграм-бота з CRM від Infinite Union (Харків): кожне звернення з бота стає угодою в Bitrix24, amoCRM, Pipedrive чи Google Sheets, а менеджер отримує задачу в Telegram. Для відділів продажів і сервісних команд, які втомилися переносити ліди вручну. Від $800, одна CRM — від 7 днів.</p>
     </div>
-    <div class="hero-integrations rev-r">
+    <div class="hero-integrations rev-r" aria-hidden="true">
       <div class="int-row">
         <div class="int-dot int-dot--blue"></div>
         <div class="int-name">Bitrix24</div>
-        <div class="int-status">● підключено</div>
+        <div class="int-status">REST API</div>
         <div class="int-arrow">→</div>
       </div>
       <div class="int-row">
         <div class="int-dot int-dot--green"></div>
         <div class="int-name">amoCRM</div>
-        <div class="int-status">● підключено</div>
+        <div class="int-status">REST API</div>
         <div class="int-arrow">→</div>
       </div>
       <div class="int-row">
         <div class="int-dot int-dot--purple"></div>
         <div class="int-name">Pipedrive</div>
-        <div class="int-status">● підключено</div>
+        <div class="int-status">REST API</div>
         <div class="int-arrow">→</div>
       </div>
       <div class="int-row">
         <div class="int-dot int-dot--red"></div>
-        <div class="int-name">HubSpot</div>
-        <div class="int-status">● підключено</div>
+        <div class="int-name">Google Sheets</div>
+        <div class="int-status">API</div>
         <div class="int-arrow">→</div>
       </div>
       <div class="int-row" style="border-color:rgba(255,255,255,.04);opacity:.5;">
         <div class="int-dot" style="background:var(--muted);"></div>
-        <div class="int-name">Ваша CRM</div>
-        <div class="int-status" style="color:var(--muted);">via API / webhook</div>
+        <div class="int-name">Ваша система</div>
+        <div class="int-status" style="color:var(--muted);">API / webhook</div>
         <div class="int-arrow">→</div>
       </div>
     </div>
@@ -317,48 +317,71 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 <!-- MARQUEE -->
 <div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-track">
-    <span>BITRIX24 <em>ІНТЕГРАЦІЯ</em></span><span>·</span>
-    <span>AMOCRM АВТОМАТИЗАЦІЯ</span><span>·</span>
-    <span>ЛІДИ <em>АВТОМАТИЧНО</em></span><span>·</span>
+    <span>BITRIX24 <em>API</em></span><span>·</span>
+    <span>AMOCRM</span><span>·</span>
+    <span>ЛІДИ <em>З БОТА</em></span><span>·</span>
     <span>ЗАДАЧІ В TELEGRAM</span><span>·</span>
-    <span>WEBHOOK <em>СИНХРОНІЗАЦІЯ</em></span><span>·</span>
-    <span>PIPEDRIVE ІНТЕГРАЦІЯ</span><span>·</span>
-    <span>BITRIX24 <em>ІНТЕГРАЦІЯ</em></span><span>·</span>
-    <span>AMOCRM АВТОМАТИЗАЦІЯ</span><span>·</span>
-    <span>ЛІДИ <em>АВТОМАТИЧНО</em></span><span>·</span>
+    <span>WEBHOOK</span><span>·</span>
+    <span>PIPEDRIVE</span><span>·</span>
+    <span>BITRIX24 <em>API</em></span><span>·</span>
+    <span>AMOCRM</span><span>·</span>
+    <span>ЛІДИ <em>З БОТА</em></span><span>·</span>
     <span>ЗАДАЧІ В TELEGRAM</span><span>·</span>
-    <span>WEBHOOK <em>СИНХРОНІЗАЦІЯ</em></span><span>·</span>
-    <span>PIPEDRIVE ІНТЕГРАЦІЯ</span><span>·</span>
+    <span>WEBHOOK</span><span>·</span>
+    <span>PIPEDRIVE</span><span>·</span>
   </div>
 </div>
 
+<!-- PROBLEM -->
+<section class="features">
+  <div class="sec-label">ЗАДАЧА</div>
+  <h2 class="sec-title rev">Що ламається<br>без інтеграції</h2>
+  <div class="features-grid">
+    <div class="feat rev">
+      <h3 class="feat-name">Ручне перенесення</h3>
+      <div class="feat-desc">Менеджер копіює ім'я й телефон з Telegram у CRM. Частина заявок не доходить до системи, частина — з помилками в номері.</div>
+      <div class="feat-badge">ЧАС</div>
+    </div>
+    <div class="feat rev">
+      <h3 class="feat-name">Ліди без джерела</h3>
+      <div class="feat-desc">У CRM не видно, з якої реклами чи кнопки прийшов клієнт. Неможливо порівняти канали й зрозуміти, куди вкладати бюджет.</div>
+      <div class="feat-badge">АНАЛІТИКА</div>
+    </div>
+    <div class="feat rev">
+      <h3 class="feat-name">Тиша після заявки</h3>
+      <div class="feat-desc">Угода в CRM змінила статус, а клієнт про це не знає. Він пише ще раз або йде до конкурента.</div>
+      <div class="feat-badge">СЕРВІС</div>
+    </div>
+  </div>
+</section>
+
 <!-- PIPELINE -->
 <section class="pipeline">
-  <div class="sec-label">ВОРОНКА ПРОДАЖІВ</div>
-  <h2 class="sec-title rev">Ліди рухаються<br>самі</h2>
-  <div class="pipeline-canvas-wrap rev">
+  <div class="sec-label">ЯК РУХАЄТЬСЯ ЛІД</div>
+  <h2 class="sec-title rev">Від повідомлення<br>до угоди в CRM</h2>
+  <div class="pipeline-canvas-wrap rev" aria-hidden="true">
     <canvas id="pipelineCanvas" class="pipeline-canvas"></canvas>
   </div>
   <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:24px;">
     <div class="rev" style="text-align:center;">
-      <div style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Новий лід</div>
-      <div style="font-size:12px;color:var(--muted);">Бот збирає контакт та потребу</div>
+      <h3 style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Новий лід</h3>
+      <div style="font-size:12px;color:var(--muted);">Бот збирає контакт, потребу й джерело</div>
     </div>
     <div class="rev" style="text-align:center;">
-      <div style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Кваліфікація</div>
-      <div style="font-size:12px;color:var(--muted);">CRM отримує дані, менеджер — задачу</div>
+      <h3 style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Угода в CRM</h3>
+      <div style="font-size:12px;color:var(--muted);">Створюється картка з усіма відповідями</div>
     </div>
     <div class="rev" style="text-align:center;">
-      <div style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Пропозиція</div>
-      <div style="font-size:12px;color:var(--muted);">Бот надсилає оффер, фіксує реакцію</div>
+      <h3 style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Задача менеджеру</h3>
+      <div style="font-size:12px;color:var(--muted);">Сповіщення в Telegram з кнопками дій</div>
     </div>
     <div class="rev" style="text-align:center;">
-      <div style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Переговори</div>
-      <div style="font-size:12px;color:var(--muted);">Менеджер підключається в потрібний момент</div>
+      <h3 style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;">Робота з клієнтом</h3>
+      <div style="font-size:12px;color:var(--muted);">Зміна статусу — повідомлення клієнту в боті</div>
     </div>
     <div class="rev" style="text-align:center;">
-      <div style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;color:var(--green);">Закрито</div>
-      <div style="font-size:12px;color:var(--muted);">Угода в CRM, клієнт — в базі</div>
+      <h3 style="font-family:var(--font);font-size:13px;font-weight:700;margin-bottom:8px;color:var(--green);">Результат</h3>
+      <div style="font-size:12px;color:var(--muted);">Угода закрита, історія — в одній картці</div>
     </div>
   </div>
 </section>
@@ -367,143 +390,49 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 <section class="how">
   <div class="how-grid">
     <div>
-      <div class="sec-label">ЯК ЦЕ ПРАЦЮЄ</div>
-      <h2 class="sec-title rev-l">Telegram +<br>CRM = одна<br><em style="font-style:normal;color:var(--red);">система</em></h2>
+      <div class="sec-label">ЩО ВХОДИТЬ</div>
+      <h2 class="sec-title rev-l">Що дає інтеграція<br>бота з <em style="font-style:normal;color:var(--red);">CRM</em></h2>
       <ul class="how-steps">
         <li class="hstep rev">
           <div class="hstep-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M20 2L3 9l7 3 3 7 7-17z" stroke="#3B82F6" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M10 12l4-4" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 2L3 9l7 3 3 7 7-17z" stroke="#3B82F6" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 12l4-4" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
           <div>
-            <div class="hstep-name">Ліди з бота → CRM</div>
-            <div class="hstep-desc">Клієнт написав боту — через секунду угода в Bitrix24 або amoCRM з усіма даними: ім'я, контакт, потреба, джерело.</div>
+            <h3 class="hstep-name">Ліди з бота — у CRM</h3>
+            <div class="hstep-desc">Ім'я, телефон, відповіді на питання, UTM-мітка чи кнопка входу — у потрібних полях картки. Повторні звернення прив'язуються до наявного контакту.</div>
           </div>
         </li>
         <li class="hstep rev">
           <div class="hstep-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <rect x="3" y="3" width="18" height="18" rx="3" stroke="#22C55E" stroke-width="1.5"/>
-              <path d="M8 12l3 3 5-5" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#22C55E" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div>
-            <div class="hstep-name">Задачі менеджерам в Telegram</div>
-            <div class="hstep-desc">Новий лід в CRM — менеджер миттєво отримує Telegram-сповіщення з кнопками: взяти в роботу, передзвонити, відкласти.</div>
+            <h3 class="hstep-name">Задачі менеджерам у Telegram</h3>
+            <div class="hstep-desc">Новий лід — сповіщення з кнопками «взяти в роботу», «передзвонити», «відкласти». Ліди розподіляються по черзі або за напрямком.</div>
           </div>
         </li>
         <li class="hstep rev">
           <div class="hstep-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="9" stroke="#A855F7" stroke-width="1.5"/>
-              <path d="M12 7v5l3 3" stroke="#A855F7" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#A855F7" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="#A855F7" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
           <div>
-            <div class="hstep-name">Статуси синхронізуються</div>
-            <div class="hstep-desc">Менеджер змінив статус угоди в Telegram — CRM оновлюється автоматично. Клієнт отримує сповіщення в боті.</div>
+            <h3 class="hstep-name">Двостороння синхронізація</h3>
+            <div class="hstep-desc">Статус змінили в CRM — клієнт отримує повідомлення в боті. Менеджер натиснув кнопку в Telegram — картка в CRM оновилася.</div>
           </div>
         </li>
         <li class="hstep rev">
           <div class="hstep-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="#D40000" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M9 22V12h6v10" stroke="#D40000" stroke-width="1.5" stroke-linejoin="round"/>
-            </svg>
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="#D40000" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 22V12h6v10" stroke="#D40000" stroke-width="1.5" stroke-linejoin="round"/></svg>
           </div>
           <div>
-            <div class="hstep-name">Аналітика в реальному часі</div>
-            <div class="hstep-desc">Конверсія по воронці, навантаження менеджерів, джерела лідів — все в одному дашборді без зайвих інструментів.</div>
+            <h3 class="hstep-name">Черга й повторні спроби</h3>
+            <div class="hstep-desc">Якщо CRM тимчасово не відповідає, ліди зберігаються в PostgreSQL і чекають у черзі Redis, а потім відправляються повторно. Так працює й наша власна обробка заявок.</div>
           </div>
         </li>
       </ul>
     </div>
-    <div class="how-visual rev-r">
+    <div class="how-visual rev-r" aria-hidden="true">
       <canvas id="howCanvas" class="how-canvas"></canvas>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features">
-  <div class="sec-label">МОЖЛИВОСТІ</div>
-  <h2 class="sec-title rev">Що автоматизуємо</h2>
-  <div class="features-grid">
-    <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
-        <rect x="4" y="8" width="40" height="32" rx="4" stroke="#3B82F6" stroke-width="1.5" stroke-opacity=".6"/>
-        <rect x="4" y="8" width="40" height="12" rx="4" fill="rgba(59,130,246,.08)"/>
-        <circle cx="12" cy="14" r="3" fill="#3B82F6" fill-opacity=".6"/>
-        <rect x="18" y="11" width="16" height="3" rx="1.5" fill="rgba(255,255,255,.15)"/>
-        <rect x="10" y="26" width="28" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
-        <rect x="10" y="32" width="20" height="3" rx="1.5" fill="rgba(255,255,255,.05)"/>
-      </svg>
-      <div class="feat-name">Автоматичне створення лідів</div>
-      <div class="feat-desc">Кожне звернення в бот — нова угода в CRM. Дублі виявляються автоматично, існуючі контакти оновлюються.</div>
-      <div class="feat-badge">WEBHOOK</div>
-    </div>
-    <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
-        <path d="M24 8L4 20v20h40V20L24 8z" stroke="rgba(255,255,255,.1)" stroke-width="1.5" stroke-linejoin="round"/>
-        <path d="M24 8L38 20" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".6" stroke-linecap="round"/>
-        <rect x="16" y="28" width="16" height="12" rx="2" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".6"/>
-        <path d="M20 34h8M24 30v8" stroke="#22C55E" stroke-width="1" stroke-opacity=".4" stroke-linecap="round"/>
-      </svg>
-      <div class="feat-name">Сповіщення менеджерів</div>
-      <div class="feat-desc">Новий лід, прострочена задача, зміна статусу — менеджер дізнається в Telegram з інтерактивними кнопками дій.</div>
-      <div class="feat-badge">TELEGRAM BOT API</div>
-    </div>
-    <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="16" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/>
-        <path d="M24 8C15.163 8 8 15.163 8 24c0 4.418 1.791 8.418 4.686 11.314" stroke="#A855F7" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".7"/>
-        <path d="M24 8C32.837 8 40 15.163 40 24c0 4.418-1.791 8.418-4.686 11.314" stroke="rgba(168,85,247,.3)" stroke-width="1.5" stroke-linecap="round"/>
-        <circle cx="24" cy="24" r="4" fill="rgba(168,85,247,.3)" stroke="#A855F7" stroke-width="1"/>
-        <path d="M14 24h20" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="3 2"/>
-      </svg>
-      <div class="feat-name">Двостороння синхронізація</div>
-      <div class="feat-desc">CRM → Telegram і назад. Зміни в CRM оновлюють бота, дії в Telegram відображаються в CRM миттєво.</div>
-      <div class="feat-badge">BIDIRECTIONAL SYNC</div>
-    </div>
-    <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
-        <rect x="4" y="12" width="18" height="24" rx="3" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/>
-        <rect x="26" y="16" width="18" height="16" rx="3" stroke="#D40000" stroke-width="1.5" stroke-opacity=".7"/>
-        <path d="M22 24h4" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".8"/>
-        <circle cx="24" cy="24" r="2" fill="#D40000" fill-opacity=".6"/>
-        <rect x="8" y="18" width="10" height="2" rx="1" fill="rgba(255,255,255,.06)"/>
-        <rect x="8" y="23" width="8" height="2" rx="1" fill="rgba(255,255,255,.04)"/>
-      </svg>
-      <div class="feat-name">Розподіл лідів</div>
-      <div class="feat-desc">Round-robin, за навантаженням або за спеціалізацією — бот автоматично призначає ліди потрібному менеджеру.</div>
-      <div class="feat-badge">LEAD ROUTING</div>
-    </div>
-    <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
-        <path d="M8 32L16 18L24 24L32 12L40 20" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="6" y="36" width="36" height="1" rx=".5" fill="rgba(255,255,255,.06)"/>
-        <circle cx="16" cy="18" r="2.5" fill="#3B82F6" fill-opacity=".5"/>
-        <circle cx="24" cy="24" r="2.5" fill="#3B82F6" fill-opacity=".5"/>
-        <circle cx="32" cy="12" r="2.5" fill="#3B82F6"/>
-      </svg>
-      <div class="feat-name">Аналітика воронки</div>
-      <div class="feat-desc">Конверсія по кроках, час в стадії, KPI менеджерів — дашборд прямо в Telegram або в вашій CRM.</div>
-      <div class="feat-badge">ANALYTICS</div>
-    </div>
-    <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="16" r="8" stroke="rgba(255,255,255,.12)" stroke-width="1.5"/>
-        <circle cx="10" cy="36" r="6" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".6"/>
-        <circle cx="38" cy="36" r="6" stroke="#22C55E" stroke-width="1.5" stroke-opacity=".6"/>
-        <path d="M18 36c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="rgba(255,255,255,.1)" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M4 36c0-3.314 2.686-6 6-6" stroke="rgba(34,197,94,.3)" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M44 36c0-3.314-2.686-6-6-6" stroke="rgba(34,197,94,.3)" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-      <div class="feat-name">Мультиагентність</div>
-      <div class="feat-desc">Команда менеджерів в одному боті. Кожен бачить тільки свої угоди, супервайзер — всі. Ролі та права доступу.</div>
-      <div class="feat-badge">MULTI-AGENT</div>
     </div>
   </div>
 </section>
@@ -511,177 +440,173 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 <!-- STATS -->
 <div class="stats">
   <div class="stats-grid">
-    <div class="stat-cell rev"><div class="stat-val">0</div><div class="stat-key">ВТРАЧЕНИХ ЛІДІВ</div></div>
-    <div class="stat-cell rev"><div class="stat-val" data-count="3">0<em>x</em></div><div class="stat-key">ШВИДШЕ ОБРОБКА</div></div>
-    <div class="stat-cell rev"><div class="stat-val" data-count="40">0<em>%</em></div><div class="stat-key">ЕКОНОМІЯ ЧАСУ МЕНЕДЖЕРА</div></div>
-    <div class="stat-cell rev"><div class="stat-val" data-count="7">0<em>дн</em></div><div class="stat-key">ВПРОВАДЖЕННЯ</div></div>
+    <div class="stat-cell rev"><div class="stat-val">$800</div><div class="stat-key">ІНТЕГРАЦІЯ З 1 CRM, ВІД</div></div>
+    <div class="stat-cell rev"><div class="stat-val" data-count="7">7<em>дн</em></div><div class="stat-key">ТАРИФ «СТАРТ»</div></div>
+    <div class="stat-cell rev"><div class="stat-val" data-count="14">14<em>дн</em></div><div class="stat-key">ТАРИФ PRO</div></div>
+    <div class="stat-cell rev"><div class="stat-val" data-count="15">15<em>хв</em></div><div class="stat-key">ВІДПОВІДЬ У РОБОЧИЙ ЧАС</div></div>
   </div>
 </div>
 
 <!-- LEVELS -->
 <section class="levels">
   <div class="sec-label">ВАРТІСТЬ</div>
-  <h2 class="sec-title rev">Оберіть рівень<br>інтеграції</h2>
+  <h2 class="sec-title rev">Ціна інтеграції<br>телеграм-бота з CRM</h2>
   <div class="levels-grid">
     <div class="level rev">
-      <div class="level-name">Старт</div>
+      <h3 class="level-name">Старт</h3>
       <div class="level-price">від $800</div>
       <div class="level-note">1 CRM · 7 днів</div>
       <ul class="level-list">
-        <li class="on">Інтеграція з 1 CRM</li>
-        <li class="on">Автоматичне створення лідів</li>
-        <li class="on">Сповіщення менеджерів</li>
+        <li class="on">Інтеграція з однією CRM</li>
+        <li class="on">Ліди з бота — у картки CRM</li>
+        <li class="on">Сповіщення менеджерам</li>
         <li class="on">Базові статуси угод</li>
         <li>Двостороння синхронізація</li>
         <li>Розподіл лідів</li>
-        <li>Аналітика воронки</li>
-        <li>Мультиагентність</li>
+        <li>Ролі й доступи</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
     <div class="level level--pro rev">
-      <div class="level-badge">ПОПУЛЯРНИЙ</div>
-      <div class="level-name">Pro</div>
+      <div class="level-badge">ЧАСТО ОБИРАЮТЬ</div>
+      <h3 class="level-name">Pro</h3>
       <div class="level-price">від $1 500</div>
       <div class="level-note">повна інтеграція · 14 днів</div>
       <ul class="level-list">
-        <li class="on">Інтеграція з 1–2 CRM</li>
         <li class="on">Двостороння синхронізація</li>
-        <li class="on">Розподіл лідів (роутинг)</li>
-        <li class="on">Мультиагентність</li>
-        <li class="on">Аналітика воронки</li>
-        <li class="on">Тригерні повідомлення</li>
-        <li class="on">Адмін-панель</li>
-        <li class="on">3 місяці підтримки</li>
+        <li class="on">Розподіл лідів між менеджерами</li>
+        <li class="on">Ролі: менеджер, керівник</li>
+        <li class="on">Повідомлення клієнту про статус</li>
+        <li class="on">Черга й повторні спроби</li>
+        <li class="on">Звіт по джерелах лідів</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
     <div class="level rev">
-      <div class="level-name">Enterprise</div>
+      <h3 class="level-name">Enterprise</h3>
       <div class="level-price">від $3 000</div>
-      <div class="level-note">екосистема · індивідуально</div>
+      <div class="level-note">кілька систем · план робіт окремо</div>
       <ul class="level-list">
-        <li class="on">Необмежена кількість CRM</li>
-        <li class="on">ERP / 1C інтеграція</li>
-        <li class="on">AI скоринг лідів</li>
-        <li class="on">Custom аналітика</li>
-        <li class="on">White-label рішення</li>
-        <li class="on">SLA гарантії</li>
-        <li class="on">Dedicated підтримка</li>
-        <li class="on">6 місяців підтримки</li>
+        <li class="on">Кілька CRM і облікових систем</li>
+        <li class="on">Інтеграції з вашими API</li>
+        <li class="on">AI-оцінка лідів</li>
+        <li class="on">Веб-дашборд для керівника</li>
+        <li class="on">Міграція даних зі старої системи</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
   </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="features">
+  <div class="sec-label">ПРИКЛАДИ</div>
+  <h2 class="sec-title rev">Де ми вже<br>з'єднували бот і дані</h2>
+  <div class="features-grid">
+    <div class="feat rev">
+      <h3 class="feat-name">IU Bot</h3>
+      <div class="feat-desc">Наш lead-бот: квіз, покрокові сценарії й передача ліда в CRM. Заявки з форми сайту зберігаються в PostgreSQL, проходять чергу Redis і приходять сповіщенням у Telegram.</div>
+      <div class="feat-badge">FSM · CRM · REDIS</div>
+    </div>
+    <div class="feat rev">
+      <h3 class="feat-name">BizBot</h3>
+      <div class="feat-desc">Бот для бухгалтерії малого бізнесу: зарплати, задачі, автозаповнення Excel. Економить 4+ години на тиждень.</div>
+      <div class="feat-badge">AIOGRAM · FASTAPI</div>
+    </div>
+    <div class="feat rev">
+      <h3 class="feat-name">Respect Car</h3>
+      <div class="feat-desc">Сайт автомайданчика з живим каталогом на PostgreSQL і адмінкою в Telegram — дані сайту й бота синхронні.</div>
+      <div class="feat-badge">NEXT.JS · POSTGRESQL</div>
+    </div>
+  </div>
+  <p class="feat-desc" style="margin-top:40px;max-width:760px;">Інші проєкти — у <a href="/portfolio/" style="color:#fff;">портфоліо</a>. Самого бота з нуля робимо в межах <a href="/services/bots/" style="color:#fff;">розробки телеграм-ботів</a>, а якщо потрібні сайт, бот і CRM як одна система — дивіться <a href="/services/ecosystems/" style="color:#fff;">автоматизацію бізнесу</a>. Усі тарифи — на сторінці <a href="/pricing/" style="color:#fff;">ціни</a>, а про роль бота в продажах — у статті <a href="/blog/telegram-bot-dlya-biznesu/" style="color:#fff;">«Telegram-бот для бізнесу»</a>.</p>
 </section>
 
 <!-- FAQ -->
 <section class="faq">
   <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
-  <h2 class="sec-title rev">Питання про<br>CRM інтеграцію</h2>
+  <h2 class="sec-title rev">Питання про<br>інтеграцію з CRM</h2>
   <div class="faq-list">
     <div class="faq-item rev">
+      <button type="button" class="faq-q">Скільки коштує інтеграція телеграм-бота з CRM? <span>+</span></button>
+      <div class="faq-a">«Старт» з однією CRM — від $800 і 7 днів, Pro з двосторонньою синхронізацією — від $1 500 і 14 днів, Enterprise — від $3 000. Підписка на саму CRM оплачується окремо.</div>
+    </div>
+    <div class="faq-item rev">
       <button type="button" class="faq-q">З якими CRM ви працюєте? <span>+</span></button>
-      <div class="faq-a">Bitrix24, amoCRM, Pipedrive, HubSpot, Salesforce — і будь-яка інша CRM з REST API або webhook. Якщо у вас власна система — підключимо через API або напряму до бази даних.</div>
+      <div class="faq-a">Bitrix24, amoCRM, Pipedrive, Google Sheets, а також будь-яка система з REST API або webhook. Можливості конкретної CRM перевіряємо на брифі, до старту робіт.</div>
     </div>
     <div class="faq-item rev">
-      <button type="button" class="faq-q">Скільки часу займе впровадження? <span>+</span></button>
-      <div class="faq-a">Базова інтеграція — 7 днів. Повна двостороння синхронізація з мультиагентністю — 14 днів. Enterprise рішення — від 3 тижнів залежно від складності.</div>
+      <button type="button" class="faq-q">У мене вже є бот. Можна підключити CRM до нього? <span>+</span></button>
+      <div class="faq-a">Так, якщо є доступ до коду бота. Спочатку дивимося, як він зроблений, і пропонуємо: доробити наявний або переписати, якщо так буде дешевше в підтримці.</div>
     </div>
     <div class="faq-item rev">
-      <button type="button" class="faq-q">Чи буде бот мати доступ до всіх даних CRM? <span>+</span></button>
-      <div class="faq-a">Ні. Інтеграція працює через API з мінімально необхідними правами. Кожен менеджер бачить тільки свої угоди. Всі дані передаються по HTTPS, логи зберігаються.</div>
+      <button type="button" class="faq-q">Що буде, якщо CRM тимчасово недоступна? <span>+</span></button>
+      <div class="faq-a">Лід зберігається в базі бота й стоїть у черзі. Коли CRM знову відповідає, дані відправляються повторно, а адміністратор отримує сповіщення про збій.</div>
     </div>
     <div class="faq-item rev">
-      <button type="button" class="faq-q">Що якщо CRM недоступна? <span>+</span></button>
-      <div class="faq-a">Реалізуємо circuit breaker та чергу повторних спроб. Якщо CRM недоступна — ліди накопичуються в черзі та синхронізуються коли система відновиться. Жоден лід не загубиться.</div>
+      <button type="button" class="faq-q">Чи має бот доступ до всіх даних CRM? <span>+</span></button>
+      <div class="faq-a">Ні. Використовуємо окремий API-ключ з мінімальними правами. Менеджер у Telegram бачить лише свої угоди, керівник — усі. Ключі й доступи передаємо вам.</div>
     </div>
     <div class="faq-item rev">
-      <button type="button" class="faq-q">Чи можна підключити власну CRM? <span>+</span></button>
-      <div class="faq-a">Так. Якщо ваша CRM має REST API — підключимо за 3–5 днів. Якщо немає API — можемо розробити легку власну CRM або підключитись напряму до бази даних.</div>
+      <button type="button" class="faq-q">Чи можна перенести дані зі старої CRM? <span>+</span></button>
+      <div class="faq-a">Так, міграцію контактів і угод робимо в тарифі Enterprise або окремою задачею. Обсяг і формат даних оцінюємо після вивантаження.</div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-
-<!-- ПЕРЕЛІНКОВКА -->
+<!-- RELATED -->
 <section style="padding:80px 40px;border-top:1px solid rgba(255,255,255,.08);">
   <div style="font-size:11px;letter-spacing:.2em;color:#D40000;font-family:'Space Grotesk',sans-serif;font-weight:600;margin-bottom:16px;">ПОВ'ЯЗАНІ ПОСЛУГИ</div>
-  <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:40px;">Може зацікавити</h2>
+  <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:40px;">Може знадобитися</h2>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
     <a href="/services/bots-sales/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Воронка продажів</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Боти для продажів</div>
+  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Воронка й оплата</div>
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Бот для продажів</div>
   <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
 </a>
     <a href="/services/bots-restaurant/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
   <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Замовлення їжі</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Боти для ресторанів</div>
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Бот для ресторану</div>
   <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
 </a>
-    <a href="ecosystems.html" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Комплексна автоматизація</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Цифрові екосистеми</div>
+    <a href="/services/ecosystems/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
+  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Сайт + бот + CRM</div>
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Автоматизація бізнесу</div>
   <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
 </a>
-    <a href="/services/websites-landing/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Сайт + CRM</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Лендінги</div>
+    <a href="/services/platforms/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
+  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Власна система</div>
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Вебплатформа</div>
   <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
 </a>
   </div>
 </section>
+
 <section class="cta-final" id="contact">
-  <canvas id="ctaBgCanvas" class="cta-bg-canvas"></canvas>
-  <div class="cta-label">ГОТОВІ АВТОМАТИЗУВАТИ?</div>
+  <canvas id="ctaBgCanvas" class="cta-bg-canvas" aria-hidden="true"></canvas>
+  <div class="cta-label">ОБГОВОРИТИ ІНТЕГРАЦІЮ</div>
   <h2 class="cta-title">Ліди в CRM<br>без <em>ручної роботи</em></h2>
-  <p class="cta-sub">Розкажіть про вашу CRM — відповімо за 15 хвилин</p>
+  <p class="cta-sub">Напишіть, яка у вас CRM і звідки приходять заявки — у робочий час відповімо протягом 15 хвилин</p>
   <div class="cta-btns">
     <div class="contact-btns-group">
   <a href="https://t.me/infiniteunion_manager" class="cbtn cbtn-tg" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
     Telegram
   </a>
   <a href="https://wa.me/380688286969" class="cbtn cbtn-wa" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     WhatsApp
   </a>
   <a href="viber://chat?number=%2B380688286969" class="cbtn cbtn-viber" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C8.55-.05 2.9.64 1.05 6.39.41 8.37.19 10.14.17 11.3c-.03 1.16-.05 3.35.65 5.21h.01c1.1 3.03 3.66 5.01 6.88 5.35v2.33s-.02.55.34.66c.44.13.69-.28 1.11-.73.23-.25.55-.62.79-.9 2.16.18 3.83-.28 4.01-.34.44-.14 2.9-.46 3.31-3.74 0 0 .42-2.65-.17-4.74-.17-.6-.33-.87-.46-1.04l.17-.08c0-.01-.04-.05-.08-.09l-.07-.07v-.01c-.44-.44-1.17-.88-1.17-.88s-.15-.08-.18-.05c-.02.03-.01.12.01.23.05.15.1.32.1.48.01.17 0 .36 0 .54-.01.17-.04.33-.09.45-.05.13-.13.22-.23.26-.11.04-.23.05-.33.02-.1-.03-.2-.11-.28-.2a2.4 2.4 0 01-.2-.29c-.04-.08-.07-.16-.06-.23.01-.07.08-.15.16-.21.08-.05.19-.07.29-.05.1.03.19.1.26.2.07.1.11.22.11.34 0 .12-.05.24-.12.34a.58.58 0 01-.27.19c-.1.03-.22.03-.32-.01a.59.59 0 01-.24-.19.59.59 0 01-.1-.33c0-.12.04-.24.1-.33.06-.1.15-.17.25-.21.1-.03.21-.03.31.02zm1.19 2.15c.09 0 .18 0 .26.01 3.14.22 5.62 2.74 5.62 5.78 0 .06 0 .13-.01.19-.13 3.11-2.63 5.59-5.62 5.59-.09 0-.18 0-.27-.01-3.13-.22-5.61-2.74-5.61-5.77 0-.07 0-.13 0-.2.14-3.1 2.63-5.59 5.62-5.59z"/></svg>
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C8.55-.05 2.9.64 1.05 6.39.41 8.37.19 10.14.17 11.3c-.03 1.16-.05 3.35.65 5.21h.01c1.1 3.03 3.66 5.01 6.88 5.35v2.33s-.02.55.34.66c.44.13.69-.28 1.11-.73.23-.25.55-.62.79-.9 2.16.18 3.83-.28 4.01-.34.44-.14 2.9-.46 3.31-3.74 0 0 .42-2.65-.17-4.74-.17-.6-.33-.87-.46-1.04l.17-.08c0-.01-.04-.05-.08-.09l-.07-.07v-.01c-.44-.44-1.17-.88-1.17-.88s-.15-.08-.18-.05c-.02.03-.01.12.01.23.05.15.1.32.1.48.01.17 0 .36 0 .54-.01.17-.04.33-.09.45-.05.13-.13.22-.23.26-.11.04-.23.05-.33.02-.1-.03-.2-.11-.28-.2a2.4 2.4 0 01-.2-.29c-.04-.08-.07-.16-.06-.23.01-.07.08-.15.16-.21.08-.05.19-.07.29-.05.1.03.19.1.26.2.07.1.11.22.11.34 0 .12-.05.24-.12.34a.58.58 0 01-.27.19c-.1.03-.22.03-.32-.01a.59.59 0 01-.24-.19.59.59 0 01-.1-.33c0-.12.04-.24.1-.33.06-.1.15-.17.25-.21.1-.03.21-.03.31.02zm1.19 2.15c.09 0 .18 0 .26.01 3.14.22 5.62 2.74 5.62 5.78 0 .06 0 .13-.01.19-.13 3.11-2.63 5.59-5.62 5.59-.09 0-.18 0-.27-.01-3.13-.22-5.61-2.74-5.61-5.77 0-.07 0-.13 0-.2.14-3.1 2.63-5.59 5.62-5.59z"/></svg>
     Viber
   </a>
   <a href="tel:+380688286969" class="cbtn cbtn-tel">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
     +380688286969
   </a>
 </div>
     <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
-  </div>
-</section>
-<section class="faq-section">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item">
-      <button type="button" class="faq-q">Що таке CRM-бот?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>CRM-бот — це Telegram бот який замінює або доповнює CRM систему: веде клієнтів, нагадує про дзвінки, фіксує угоди прямо в месенджері.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Скільки коштує CRM-бот?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>CRM-бот від $500. Включає базу клієнтів, воронку продажів, нагадування та звіти.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Чи можна перенести дані з існуючої CRM?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>Так, мігруємо дані з будь-якої CRM — Bitrix24, amoCRM, Pipedrive, Google Таблиць.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -813,7 +738,7 @@ document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach
   ];
 
   // Generate cards
-  const cardNames=['Пивоваров О.','Іваненко К.','Коваль М.','Петренко Р.','Сидоренко В.','Ткаченко І.','Мельник А.'];
+  const cardNames=['Лід #1042','Лід #1043','Лід #1044','Лід #1045','Лід #1046','Лід #1047','Лід #1048'];
   const cardValues=['$1,200','$800','$3,500','$560','$2,100','$750','$4,200'];
 
   let cards=cardNames.map((name,i)=>({
