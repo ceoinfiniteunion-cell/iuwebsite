@@ -63,6 +63,11 @@ curl -sI https://infiniteunion.com.ua/services/bots.html | grep -iE '^HTTP|^loca
 - **Security → Events:** фільтр `User agent contains Googlebot` за 30 днів — переконатися, що немає Managed Challenge / Block. Якщо є — додати правило Skip для `cf.client.bot` (verified bots).
 - **Bot Fight Mode:** якщо увімкнено — переконатися, що «Verified bots» дозволені (за замовчуванням так).
 
+## 2b. JavaScript Detections (Best Practices у Lighthouse)
+Cloudflare вставляє в кожну сторінку inline-скрипт `/cdn-cgi/challenge-platform/scripts/jsd/main.js` (Bot Management → **JavaScript Detections**).
+- На головній його блокує CSP (це нормально, але в консолі помилка), на інших сторінках він дає попередження про застарілі API (FencedFrame, Fledge, StorageType.persistent) → Best Practices 75–82 замість 93–100.
+- Рекомендація: Security → Bots → **вимкнути JavaScript Detections**, якщо не використовуєте правила з `cf.bot_management.js_detection` (на Free/Pro їх зазвичай немає). На Googlebot це не впливає.
+
 ## 3. Кешування (P2)
 - Caching → Configuration → Browser Cache TTL: «Respect Existing Headers» (GitHub Pages віддає `max-age=600`).
 - Після деплою зробіть **Caching → Purge Everything**, щоб Cloudflare не віддавав старі HTML.
