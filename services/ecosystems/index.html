@@ -200,6 +200,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАМОВИТИ ЕКОСИСТЕМУ</a>
 </nav>
+<!-- iu:content -->
 
 <section class="hero" style="padding-top:120px;">
   <div class="hero-bg"></div>
@@ -403,11 +404,45 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 </div>
   <a href="/#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
 </section>
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
 
+    <div class="faq-item">
+      <button type="button" class="faq-q">Що таке цифрова екосистема?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Цифрова екосистема — це комплекс пов'язаних продуктів: сайт + бот + CRM + аналітика + реклама. Всі системи працюють разом і посилюють одна одну.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Для кого підходить цифрова екосистема?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Для бізнесу який хоче автоматизувати продажі, підтримку клієнтів та маркетинг в єдиній системі.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує побудова екосистеми?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Від $3000 залежно від кількості компонентів. Будуємо поетапно — ви бачите результат на кожному кроці.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Як довго будується екосистема?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Базова екосистема — від 4 тижнів. Будуємо ітераційно: спочатку MVP, потім масштабуємо.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <div class="footer-logo">INFINITE <span>UNION</span></div>
   <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
 </footer>
+<!-- /iu:footer -->
 
 <script>
 /* NAV */
@@ -452,36 +487,5 @@ document.querySelectorAll('.cta-btn,.cta-btn-ghost').forEach(btn=>{
 });
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Що таке цифрова екосистема?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Цифрова екосистема — це комплекс пов'язаних продуктів: сайт + бот + CRM + аналітика + реклама. Всі системи працюють разом і посилюють одна одну.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Для кого підходить цифрова екосистема?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Для бізнесу який хоче автоматизувати продажі, підтримку клієнтів та маркетинг в єдиній системі.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує побудова екосистеми?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Від $3000 залежно від кількості компонентів. Будуємо поетапно — ви бачите результат на кожному кроці.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Як довго будується екосистема?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Базова екосистема — від 4 тижнів. Будуємо ітераційно: спочатку MVP, потім масштабуємо.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>

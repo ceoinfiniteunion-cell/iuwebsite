@@ -294,6 +294,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАМОВИТИ БОТА</a>
 </nav>
+<!-- iu:content -->
 
 <section class="hero" style="padding-top:120px;">
   <div class="hero-bg"></div>
@@ -643,11 +644,51 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 </div>
   <a href="/#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
 </section>
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
 
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує Telegram бот?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Простий бот від $200, бот з CRM та платежами від $500, складна автоматизація від $1000. Точну ціну розраховуємо після брифінгу.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">За скільки днів розробляється бот?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Простий бот — 3-5 днів, бот з інтеграціями — 7-14 днів, складні системи — від 3 тижнів.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи можна підключити оплату до бота?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, інтегруємо LiqPay, Fondy, WayForPay, Stripe. Клієнти платять прямо в Telegram без переходу на сайт.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи буде бот працювати 24/7?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, деплоїмо на хмарний сервер з моніторингом 24/7 та автоматичним перезапуском при збоях.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи можна інтегрувати бота з CRM?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, підключаємо до Google Таблиць, Notion, Airtable, власних CRM та будь-яких API.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <div class="footer-logo">INFINITE <span>UNION</span></div>
   <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
 </footer>
+<!-- /iu:footer -->
 
 <script>
 /* NAV */
@@ -729,42 +770,5 @@ document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{
 });
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує Telegram бот?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Простий бот від $200, бот з CRM та платежами від $500, складна автоматизація від $1000. Точну ціну розраховуємо після брифінгу.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">За скільки днів розробляється бот?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Простий бот — 3-5 днів, бот з інтеграціями — 7-14 днів, складні системи — від 3 тижнів.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи можна підключити оплату до бота?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, інтегруємо LiqPay, Fondy, WayForPay, Stripe. Клієнти платять прямо в Telegram без переходу на сайт.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи буде бот працювати 24/7?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, деплоїмо на хмарний сервер з моніторингом 24/7 та автоматичним перезапуском при збоях.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи можна інтегрувати бота з CRM?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, підключаємо до Google Таблиць, Notion, Airtable, власних CRM та будь-яких API.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>

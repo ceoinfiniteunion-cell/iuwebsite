@@ -274,6 +274,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАМОВИТИ БОТА</a>
 </nav>
+<!-- iu:content -->
 
 <!-- HERO -->
 <section class="hero">
@@ -597,11 +598,39 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
   </div>
 </section>
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
 
+    <div class="faq-item">
+      <button type="button" class="faq-q">Як бот збільшує продажі?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Бот автоматично обробляє заявки, кваліфікує ліди, надсилає комерційні пропозиції та нагадування — без участі менеджера.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує sales-бот?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Sales-бот від $400. Включає квіз для кваліфікації, автовідповіді та передачу гарячих лідів менеджеру.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи замінить бот менеджера з продажів?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Бот бере на себе рутину — первинну обробку, відповіді на FAQ, збір контактів. Менеджер отримує вже прогрітого клієнта.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <a href="/" class="footer-logo">INFINITE <span>UNION</span></a>
   <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
 </footer>
+<!-- /iu:footer -->
 
 <script>
 window.addEventListener('scroll',()=>{
@@ -862,30 +891,5 @@ document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach
 })();
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Як бот збільшує продажі?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Бот автоматично обробляє заявки, кваліфікує ліди, надсилає комерційні пропозиції та нагадування — без участі менеджера.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує sales-бот?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Sales-бот від $400. Включає квіз для кваліфікації, автовідповіді та передачу гарячих лідів менеджеру.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи замінить бот менеджера з продажів?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Бот бере на себе рутину — первинну обробку, відповіді на FAQ, збір контактів. Менеджер отримує вже прогрітого клієнта.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>

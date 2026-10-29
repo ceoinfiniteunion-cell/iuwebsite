@@ -199,6 +199,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="/en/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ORDER PLATFORM</a>
 </nav>
+<!-- iu:content -->
 <section class="hero" style="padding-top:120px;">
   <div class="hero-bg"></div>
   <div class="hero-grid-lines"></div>
@@ -280,11 +281,15 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <div class="cta-final-sub rev">Безкоштовна технічна консультація — відповімо протягом 15 хвилин</div>
   <div class="rev"><a href="https://t.me/infiniteunion_bot" class="cta-btn">MESSAGE ON TELEGRAM</a><a href="/#contact" class="cta-btn-ghost">FILL THE FORM</a></div>
 </section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <div class="footer-logo">INFINITE <span>UNION</span></div>
   <div class="footer-copy">© 2026 Infinite Union · Kharkiv, Ukraine</div>
   <a href="/services/privacy/" style="font-size:11px;color:var(--muted);text-decoration:none;">Політика конфіденційності</a>
 </footer>
+<!-- /iu:footer -->
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60),{passive:true});
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:.12});

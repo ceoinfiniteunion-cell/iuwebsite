@@ -220,6 +220,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАМОВИТИ ПЛАТФОРМУ</a>
 </nav>
+<!-- iu:content -->
 <section class="hero" style="padding-top:120px;">
   <div class="hero-bg"></div>
   <div class="hero-grid-lines"></div>
@@ -318,11 +319,46 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   </a>
 </div><a href="/#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a></div>
 </section>
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
+
+    <div class="faq-item">
+      <button type="button" class="faq-q">Що таке веб-платформа?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Веб-платформа — це складний веб-додаток з авторизацією, базою даних, API та бізнес-логікою. Наприклад: SaaS, маркетплейс, кабінет клієнта.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує розробка платформи?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Від $2000 залежно від складності. Проводимо безкоштовну консультацію та надаємо детальну оцінку після брифінгу.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Які технології використовуєте?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Next.js, FastAPI, PostgreSQL, Redis, Railway. Сучасний стек який масштабується від 100 до 100 000 користувачів.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи зможу я розвивати платформу після запуску?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, передаємо повний вихідний код з документацією. Ви зможете розвивати продукт з будь-якою командою.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <div class="footer-logo">INFINITE <span>UNION</span></div>
   <div class="footer-copy">© 2026 Infinite Union · Харків, Україна</div>
   <a href="/services/privacy/" style="font-size:11px;color:var(--muted);text-decoration:none;">Політика конфіденційності</a>
 </footer>
+<!-- /iu:footer -->
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60),{passive:true});
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:.12});
@@ -331,36 +367,5 @@ document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q
 
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Що таке веб-платформа?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Веб-платформа — це складний веб-додаток з авторизацією, базою даних, API та бізнес-логікою. Наприклад: SaaS, маркетплейс, кабінет клієнта.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує розробка платформи?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Від $2000 залежно від складності. Проводимо безкоштовну консультацію та надаємо детальну оцінку після брифінгу.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Які технології використовуєте?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Next.js, FastAPI, PostgreSQL, Redis, Railway. Сучасний стек який масштабується від 100 до 100 000 користувачів.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи зможу я розвивати платформу після запуску?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, передаємо повний вихідний код з документацією. Ви зможете розвивати продукт з будь-якою командою.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>

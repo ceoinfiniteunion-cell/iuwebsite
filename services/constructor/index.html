@@ -289,27 +289,27 @@ document.getElementById('prompt').addEventListener('keydown', function(e) {
 updateDots();
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+<section class="faq-section">
   <div class="faq-inner">
     <div class="faq-label">FAQ</div>
     <h2 class="faq-title">Часті запитання</h2>
 
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Як працює AI конструктор сайтів?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Ви описуєте ваш бізнес — AI генерує живий прев'ю сайту за 15 секунд. Безкоштовно, без реєстрації.</p>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Як працює AI конструктор сайтів?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Ви описуєте ваш бізнес — AI генерує живий прев'ю сайту за 15 секунд. Безкоштовно, без реєстрації.</p>
       </div>
     </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи можна замовити повноцінний сайт після конструктора?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, прев'ю конструктора стає основою для розробки реального сайту нашою командою.</p>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи можна замовити повноцінний сайт після конструктора?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, прев'ю конструктора стає основою для розробки реального сайту нашою командою.</p>
       </div>
     </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує сайт після конструктора?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Якщо замовляєте розробку після конструктора — знижка 10% на фінальну вартість.</p>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує сайт після конструктора?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Якщо замовляєте розробку після конструктора — знижка 10% на фінальну вартість.</p>
       </div>
     </div>
   </div>
@@ -343,6 +343,7 @@ updateDots();
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <div style="width:80px;"></div>
 </nav>
+<!-- iu:content -->
 
 <div class="app">
   <!-- LEFT PANEL -->
@@ -558,5 +559,7 @@ async function generate() {
 
 ВИМОГИ:
 - Поверни ТІЛЬКИ валідний HTML код, без пояснень, без markdown, без коментарів поза кодом
-- Використовуй вбудований CSS в тегу </body>
+- Використовуй вбудований CSS в тегу <!-- /iu:content -->
+<!-- iu:footer --><!-- /iu:footer -->
+</body>
 </html>

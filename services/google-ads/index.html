@@ -295,6 +295,7 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАПУСТИТИ GOOGLE ADS</a>
 </nav>
+<!-- iu:content -->
 
 <section class="hero">
   <div class="hero-noise"></div>
@@ -446,12 +447,46 @@ footer{background:var(--dark)!important;border-top:1px solid rgba(255,255,255,.0
 </div>
   <a href="/#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
 </section>
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
 
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує ведення Google реклами?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Ведення від $150/місяць + рекламний бюджет. Мінімальний бюджет для старту — від $200/місяць.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Через скільки часу буде результат?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Перші ліди з Google Ads з'являються в перший день після запуску. Оптимізація та зниження ціни ліда — протягом 2-4 тижнів.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Що включає ведення Google Ads?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Налаштування кампаній, підбір ключових слів, написання оголошень, A/B тестування, оптимізація ставок та щотижнева звітність.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи можете ви налаштувати ремаркетинг?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, налаштовуємо ремаркетинг — показуємо рекламу тим хто вже був на вашому сайті але не залишив заявку.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <div class="footer-logo">INFINITE <span>UNION</span></div>
   <div class="footer-copy">© 2026 Infinite Union · Харків, Україна</div>
   <a href="/services/privacy/" class="footer-link">Політика конфіденційності</a>
 </footer>
+<!-- /iu:footer -->
 
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60),{passive:true});
@@ -520,36 +555,5 @@ document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{
 
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує ведення Google реклами?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Ведення від $150/місяць + рекламний бюджет. Мінімальний бюджет для старту — від $200/місяць.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Через скільки часу буде результат?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Перші ліди з Google Ads з'являються в перший день після запуску. Оптимізація та зниження ціни ліда — протягом 2-4 тижнів.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Що включає ведення Google Ads?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Налаштування кампаній, підбір ключових слів, написання оголошень, A/B тестування, оптимізація ставок та щотижнева звітність.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи можете ви налаштувати ремаркетинг?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, налаштовуємо ремаркетинг — показуємо рекламу тим хто вже був на вашому сайті але не залишив заявку.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>

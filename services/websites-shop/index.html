@@ -275,6 +275,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАМОВИТИ МАГАЗИН</a>
 </nav>
+<!-- iu:content -->
 
 <!-- HERO -->
 <section class="hero">
@@ -643,11 +644,45 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
   </div>
 </section>
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
 
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує інтернет-магазин?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Інтернет-магазин від $1500. Включає каталог товарів, кошик, оплату, адмін-панель та інтеграцію з доставкою.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Які платіжні системи підтримуєте?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Інтегруємо LiqPay, Fondy, WayForPay, Stripe, PayPal — будь-яку систему під ваш ринок.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи можна інтегрувати магазин з CRM?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, підключаємо до CRM, Telegram-боту, Google Таблиць або будь-якої системи обліку.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи є адмін-панель для управління товарами?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, ви зможете самостійно додавати товари, змінювати ціни та керувати замовленнями без знань програмування.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <a href="/" class="footer-logo">INFINITE <span>UNION</span></a>
   <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
 </footer>
+<!-- /iu:footer -->
 
 <script>
 window.addEventListener('scroll',()=>{
@@ -957,36 +992,5 @@ document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach
 })();
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує інтернет-магазин?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Інтернет-магазин від $1500. Включає каталог товарів, кошик, оплату, адмін-панель та інтеграцію з доставкою.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Які платіжні системи підтримуєте?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Інтегруємо LiqPay, Fondy, WayForPay, Stripe, PayPal — будь-яку систему під ваш ринок.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи можна інтегрувати магазин з CRM?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, підключаємо до CRM, Telegram-боту, Google Таблиць або будь-якої системи обліку.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи є адмін-панель для управління товарами?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, ви зможете самостійно додавати товари, змінювати ціни та керувати замовленнями без знань програмування.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>

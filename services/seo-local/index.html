@@ -168,6 +168,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАМОВИТИ LOCAL SEO</a>
 </nav>
+<!-- iu:content -->
 <section class="hero">
   <canvas id="heroCanvas" class="hero-canvas"></canvas>
   <div class="hero-content">
@@ -346,10 +347,39 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
   </div>
 </section>
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
+
+    <div class="faq-item">
+      <button type="button" class="faq-q">Що таке локальне SEO?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Локальне SEO — просування в пошуку по географічним запитам: "розробка сайтів Харків", "Telegram бот Харків". Клієнти з вашого міста знаходять вас першими.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує локальне SEO?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Локальне SEO від $150/місяць. Включає оптимізацію Google Business Profile, локальні ключові слова та роботу з відгуками.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Наскільки важливий Google Business Profile?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Критично важливий. Компанії з заповненим GBP отримують в 3 рази більше переходів ніж без нього.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <a href="/" class="footer-logo">INFINITE <span>UNION</span></a>
   <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
 </footer>
+<!-- /iu:footer -->
 <script>
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);},{passive:true});
 document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q').addEventListener('click',()=>{const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');});});
@@ -519,30 +549,5 @@ document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach
 })();
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Що таке локальне SEO?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Локальне SEO — просування в пошуку по географічним запитам: "розробка сайтів Харків", "Telegram бот Харків". Клієнти з вашого міста знаходять вас першими.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує локальне SEO?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Локальне SEO від $150/місяць. Включає оптимізацію Google Business Profile, локальні ключові слова та роботу з відгуками.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Наскільки важливий Google Business Profile?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Критично важливий. Компанії з заповненим GBP отримують в 3 рази більше переходів ніж без нього.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>

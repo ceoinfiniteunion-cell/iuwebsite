@@ -296,6 +296,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАМОВИТИ САЙТ</a>
 </nav>
+<!-- iu:content -->
 
 <!-- HERO -->
 <section class="hero" style="padding-top:120px;">
@@ -621,11 +622,51 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 </div>
   <a href="/#contact" class="cta-btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
 </section>
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
 
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує розробка сайту?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Вартість залежить від типу: лендінг від $300, корпоративний сайт від $800, інтернет-магазин від $1500. Точну ціну розраховуємо після брифінгу — це безкоштовно.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки часу займає розробка?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Лендінг — 5-7 днів, корпоративний сайт — 14-21 день, складні проекти — від місяця. Завжди називаємо точний дедлайн до старту.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи будете ви підтримувати сайт після запуску?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, ми залишаємось на зв'язку після запуску. Реакція на критичні питання — 15 хвилин. Пропонуємо щомісячну підтримку.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи отримаю я вихідний код та всі доступи?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, після запуску передаємо 100% вихідного коду, всі паролі та доступи. Продукт повністю ваш.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи робите ви SEO-оптимізацію сайту?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, базова SEO-оптимізація включена в кожен сайт: мета-теги, структура URL, швидкість, schema.org розмітка.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <div class="footer-logo">INFINITE <span>UNION</span></div>
   <div class="footer-copy">© 2025 Infinite Union. Харків, Україна.</div>
 </footer>
+<!-- /iu:footer -->
 
 <script>
 // Nav scroll
@@ -722,42 +763,5 @@ document.querySelectorAll('.cta-btn,.cta-btn-ghost,.nav-cta').forEach(btn=>{
 });
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує розробка сайту?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Вартість залежить від типу: лендінг від $300, корпоративний сайт від $800, інтернет-магазин від $1500. Точну ціну розраховуємо після брифінгу — це безкоштовно.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки часу займає розробка?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Лендінг — 5-7 днів, корпоративний сайт — 14-21 день, складні проекти — від місяця. Завжди називаємо точний дедлайн до старту.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи будете ви підтримувати сайт після запуску?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, ми залишаємось на зв'язку після запуску. Реакція на критичні питання — 15 хвилин. Пропонуємо щомісячну підтримку.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи отримаю я вихідний код та всі доступи?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, після запуску передаємо 100% вихідного коду, всі паролі та доступи. Продукт повністю ваш.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи робите ви SEO-оптимізацію сайту?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, базова SEO-оптимізація включена в кожен сайт: мета-теги, структура URL, швидкість, schema.org розмітка.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>

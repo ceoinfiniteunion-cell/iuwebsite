@@ -274,6 +274,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАМОВИТИ БОТА</a>
 </nav>
+<!-- iu:content -->
 
 <!-- HERO -->
 <section class="hero">
@@ -585,11 +586,39 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
   </div>
 </section>
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
 
+    <div class="faq-item">
+      <button type="button" class="faq-q">Що вміє бот для ресторану?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Приймає замовлення, бронює столики, надсилає меню, обробляє оплату, сповіщає кухню — все автоматично 24/7.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує бот для ресторану?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Бот для ресторану від $400. Включає меню, прийом замовлень, оплату та сповіщення персоналу.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи можна змінювати меню самостійно?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, адмін-панель дозволяє оновлювати меню, ціни та наявність страв без програміста.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <a href="/" class="footer-logo">INFINITE <span>UNION</span></a>
   <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
 </footer>
+<!-- /iu:footer -->
 
 <script>
 window.addEventListener('scroll',()=>{
@@ -832,30 +861,5 @@ document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach
 })();
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Що вміє бот для ресторану?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Приймає замовлення, бронює столики, надсилає меню, обробляє оплату, сповіщає кухню — все автоматично 24/7.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує бот для ресторану?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Бот для ресторану від $400. Включає меню, прийом замовлень, оплату та сповіщення персоналу.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи можна змінювати меню самостійно?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, адмін-панель дозволяє оновлювати меню, ціни та наявність страв без програміста.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>

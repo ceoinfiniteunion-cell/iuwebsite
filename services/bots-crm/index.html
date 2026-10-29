@@ -265,6 +265,7 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
   <a href="#contact" class="nav-cta">ЗАМОВИТИ ІНТЕГРАЦІЮ</a>
 </nav>
+<!-- iu:content -->
 
 <!-- HERO -->
 <section class="hero" style="padding-top:120px;">
@@ -658,11 +659,39 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
     <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
   </div>
 </section>
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-label">FAQ</div>
+    <h2 class="faq-title">Часті запитання</h2>
 
+    <div class="faq-item">
+      <button type="button" class="faq-q">Що таке CRM-бот?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>CRM-бот — це Telegram бот який замінює або доповнює CRM систему: веде клієнтів, нагадує про дзвінки, фіксує угоди прямо в месенджері.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Скільки коштує CRM-бот?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>CRM-бот від $500. Включає базу клієнтів, воронку продажів, нагадування та звіти.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q">Чи можна перенести дані з існуючої CRM?<span class="faq-arr">+</span></button>
+      <div class="faq-a">
+        <p>Так, мігруємо дані з будь-якої CRM — Bitrix24, amoCRM, Pipedrive, Google Таблиць.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /iu:content -->
+<!-- iu:footer -->
 <footer>
   <a href="/" class="footer-logo">INFINITE <span>UNION</span></a>
   <div class="footer-copy">© 2026 Infinite Union. Харків, Україна.</div>
 </footer>
+<!-- /iu:footer -->
 
 <script>
 window.addEventListener('scroll',()=>{
@@ -1011,30 +1040,5 @@ document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach
 })();
 </script>
 
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Що таке CRM-бот?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">CRM-бот — це Telegram бот який замінює або доповнює CRM систему: веде клієнтів, нагадує про дзвінки, фіксує угоди прямо в месенджері.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Скільки коштує CRM-бот?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">CRM-бот від $500. Включає базу клієнтів, воронку продажів, нагадування та звіти.</p>
-      </div>
-    </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <button type="button" class="faq-q" itemprop="name" onclick="this.parentElement.classList.toggle('open')">Чи можна перенести дані з існуючої CRM?<span class="faq-arr">+</span></button>
-      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Так, мігруємо дані з будь-якої CRM — Bitrix24, amoCRM, Pipedrive, Google Таблиць.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>
