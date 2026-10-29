@@ -151,7 +151,7 @@
       tl.fromTo(rule, { scaleX: 0 }, { scaleX: 1, duration: .4, ease: 'power2.out' }, 1.55);
     }
     if (sub) {
-      tl.fromTo(sub, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .5 }, 1.2);
+      gsap.set(sub, { opacity: 1, y: 0 }); // LCP element: never hidden behind the timeline
     }
     if (cta) {
       tl.fromTo(cta, { opacity: 0, scale: .85 }, { opacity: 1, scale: 1, duration: .5, ease: 'back.out(1.7)' }, 1.4);

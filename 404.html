@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WXZW3NHF');</script>
 <!-- End Google Tag Manager -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18360841103"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18360841103');
 </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 — Сторінку не знайдено | Infinite Union</title>
-<meta name="robots" content="noindex,follow">
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Сторінку не знайдено. Перейдіть на головну Infinite Union або оберіть послугу: сайти, Telegram-боти, реклама, SEO.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{--red:#D40000;--bg:#060404;--border:rgba(255,255,255,.08);--muted:rgba(255,255,255,.4);--font:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;}
-html,body{height:100%;background:var(--bg);color:#fff;font-family:var(--body);overflow:hidden;}
+html,body{min-height:100%;background:var(--bg);color:#fff;font-family:var(--body);overflow-x:hidden;}
 canvas{position:fixed;inset:0;pointer-events:none;}
 
-.page{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:32px 40px;}
+.page{position:relative;z-index:1;min-height:100vh;gap:32px;display:flex;flex-direction:column;justify-content:space-between;padding:32px 40px;}
 
 /* top bar */
 .top{display:flex;justify-content:space-between;align-items:center;}
@@ -53,7 +53,7 @@ canvas{position:fixed;inset:0;pointer-events:none;}
 
 /* bottom */
 .bottom{display:flex;justify-content:space-between;align-items:flex-end;}
-.bottom-links{display:flex;gap:32px;}
+.bottom-links{display:flex;gap:20px 32px;flex-wrap:wrap;}
 .bottom-link{font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:.06em;transition:color .2s;}
 .bottom-link:hover{color:#fff;}
 .geo{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.1em;}
@@ -69,7 +69,7 @@ canvas{position:fixed;inset:0;pointer-events:none;}
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXZW3NHF" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<canvas id="c"></canvas>
+<canvas id="c" aria-hidden="true"></canvas>
 <div class="page">
   <div class="top">
     <a href="/" class="logo">INFINITE <span>UNION</span></a>
@@ -77,9 +77,9 @@ canvas{position:fixed;inset:0;pointer-events:none;}
   </div>
 
   <div class="center">
-    <div class="big-num">404</div>
+    <div class="big-num" aria-hidden="true">404</div>
     <div class="msg">
-      <div class="msg-title">Схоже, ця сторінка<br><em>кудись пішла.</em></div>
+      <h1 class="msg-title">Схоже, ця сторінка<br><em>кудись пішла.</em></h1>
       <p class="msg-sub">Можливо посилання застаріло або сторінку було переміщено. Поверніться на головну або оберіть послугу.</p>
       <div class="actions">
         <a href="/" class="btn-primary">← НА ГОЛОВНУ</a>
@@ -90,10 +90,12 @@ canvas{position:fixed;inset:0;pointer-events:none;}
 
   <div class="bottom">
     <div class="bottom-links">
-      <a href="/services/websites.html" class="bottom-link">Сайти</a>
+      <a href="/services/websites/" class="bottom-link">Сайти</a>
       <a href="/services/bots/" class="bottom-link">Боти</a>
-      <a href="/services/seo.html" class="bottom-link">SEO</a>
-      <a href="/services/google-ads.html" class="bottom-link">Реклама</a>
+      <a href="/services/seo/" class="bottom-link">SEO</a>
+      <a href="/services/google-ads/" class="bottom-link">Реклама</a>
+      <a href="/pricing/" class="bottom-link">Ціни</a>
+      <a href="/en/" class="bottom-link" hreflang="en" lang="en">English</a>
     </div>
     <div class="geo">ХАРКІВ · УКРАЇНА · ЄВРОПА</div>
   </div>
