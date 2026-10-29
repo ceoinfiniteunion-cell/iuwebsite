@@ -276,20 +276,19 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <a href="#contact" class="nav-cta">ЗАМОВИТИ МАГАЗИН</a>
 </nav>
 <!-- iu:content -->
-
 <!-- HERO -->
 <section class="hero">
-  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
   <div class="hero-content">
-    <div class="hero-tag"><span class="hero-tag-dot"></span><span class="hero-tag-text">ECOMMERCE · ЗАПУСК ЗА 3 ТИЖНІ</span></div>
-    <h1 class="hero-title">Інтернет-магазин<br>що <em>продає</em><br>24/7</h1>
-    <p class="hero-sub">Розробляємо інтернет-магазини з повним циклом: від дизайну до інтеграції платежів і CRM. Ваш магазин працює поки ви спите.</p>
+    <div class="hero-tag"><span class="hero-tag-dot"></span><span class="hero-tag-text">E-COMMERCE · START ЗА ~3 ТИЖНІ</span></div>
+    <h1 class="hero-title">Інтернет-магазин<br><em>під ключ</em></h1>
+    <p class="hero-sub">Розробка інтернет-магазину під ключ від агенції Infinite Union з Харкова: каталог, фільтри, кошик, оплата через LiqPay, WayForPay чи Monobank, доставка Новою Поштою і зручна адмінка. Для брендів і магазинів, яким тісно на маркетплейсах і в Instagram. Від $1 200, запуск — від 3 тижнів.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">ЗАМОВИТИ МАГАЗИН</a>
-      <a href="#levels" class="btn-ghost">ПЕРЕГЛЯНУТИ ЦІНИ</a>
+      <a href="#contact" class="btn-primary">ОБГОВОРИТИ МАГАЗИН</a>
+      <a href="#levels" class="btn-ghost">ПОДИВИТИСЬ ЦІНИ</a>
     </div>
   </div>
-  <div class="flow-visual">
+  <div class="flow-visual" aria-hidden="true">
     <canvas id="flowCanvas" class="flow-canvas"></canvas>
   </div>
 </section>
@@ -298,20 +297,20 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 <div class="stats-bar">
   <div class="stats-grid">
     <div class="stat-cell rev">
-      <div class="stat-val" data-count="3">0<em>тж</em></div>
-      <div class="stat-key">ЗАПУСК МАГАЗИНУ</div>
+      <div class="stat-val">$1 200</div>
+      <div class="stat-key">ЦІНА ВІД</div>
     </div>
     <div class="stat-cell rev">
-      <div class="stat-val">24<em>/7</em></div>
-      <div class="stat-key">ПРОДАЖІ БЕЗ ВИХІДНИХ</div>
+      <div class="stat-val" data-count="3">3<em>тж</em></div>
+      <div class="stat-key">ЗАПУСК START</div>
     </div>
     <div class="stat-cell rev">
-      <div class="stat-val" data-count="5">0<em>+</em></div>
-      <div class="stat-key">ПЛАТІЖНИХ СИСТЕМ</div>
+      <div class="stat-val" data-count="4">4</div>
+      <div class="stat-key">ПЛАТІЖНІ СИСТЕМИ НА ВИБІР</div>
     </div>
     <div class="stat-cell rev">
-      <div class="stat-val">100<em>%</em></div>
-      <div class="stat-key">УНІКАЛЬНИЙ ДИЗАЙН</div>
+      <div class="stat-val">1<em>міс</em></div>
+      <div class="stat-key">ПІДТРИМКИ В ЦІНІ</div>
     </div>
   </div>
 </div>
@@ -319,67 +318,88 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 <!-- MARQUEE -->
 <div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-track">
-    <span>КАТАЛОГ ТОВАРІВ</span><span>·</span>
-    <span>WAYFORPAY <em>ІНТЕГРАЦІЯ</em></span><span>·</span>
-    <span>CRM СИНХРОНІЗАЦІЯ</span><span>·</span>
+    <span>КАТАЛОГ І ФІЛЬТРИ</span><span>·</span>
+    <span>LIQPAY · <em>WAYFORPAY</em></span><span>·</span>
+    <span>MONOBANK</span><span>·</span>
     <span>КОШИК І <em>CHECKOUT</em></span><span>·</span>
     <span>NOVA POSHTA API</span><span>·</span>
-    <span>SEO <em>З КОРОБКИ</em></span><span>·</span>
-    <span>MOBILE-FIRST</span><span>·</span>
-    <span>АДМІН-ПАНЕЛЬ</span><span>·</span>
-    <span>КАТАЛОГ ТОВАРІВ</span><span>·</span>
-    <span>WAYFORPAY <em>ІНТЕГРАЦІЯ</em></span><span>·</span>
-    <span>CRM СИНХРОНІЗАЦІЯ</span><span>·</span>
+    <span>SEO <em>ДЛЯ КАТАЛОГУ</em></span><span>·</span>
+    <span>АДМІНКА</span><span>·</span>
+    <span>КАТАЛОГ І ФІЛЬТРИ</span><span>·</span>
+    <span>LIQPAY · <em>WAYFORPAY</em></span><span>·</span>
+    <span>MONOBANK</span><span>·</span>
     <span>КОШИК І <em>CHECKOUT</em></span><span>·</span>
     <span>NOVA POSHTA API</span><span>·</span>
-    <span>SEO <em>З КОРОБКИ</em></span><span>·</span>
-    <span>MOBILE-FIRST</span><span>·</span>
-    <span>АДМІН-ПАНЕЛЬ</span><span>·</span>
+    <span>SEO <em>ДЛЯ КАТАЛОГУ</em></span><span>·</span>
+    <span>АДМІНКА</span><span>·</span>
   </div>
 </div>
+
+<!-- PROBLEM + STACK -->
+<section class="tech">
+  <div class="tech-grid">
+    <div>
+      <div class="sec-label">КОЛИ ПОТРІБЕН ВЛАСНИЙ МАГАЗИН</div>
+      <h2 class="sec-title rev-l">Замовлення в Direct<br>і таблиці — це стеля</h2>
+      <p class="rev-l" style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:16px;">Поки товарів двадцять, можна приймати замовлення в месенджерах і вести залишки в Excel. Далі починаються помилки: продали те, чого немає на складі, забули відправити, клієнт не дочекався відповіді й купив у конкурента. Маркетплейс бере комісію і не дає вам контактів покупця.</p>
+      <p class="rev-l" style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:8px;">Власний інтернет-магазин під ключ забирає рутину: покупець сам обирає товар, оплачує, отримує ТТН, а ви бачите замовлення в адмінці чи в Telegram. Технології підбираємо під обсяг каталогу:</p>
+      <div class="tech-list">
+        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">Next.js + React</div><div class="tech-role">Вітрина і каталог</div></div></div>
+        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">TypeScript</div><div class="tech-role">Надійний код</div></div></div>
+        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">PostgreSQL</div><div class="tech-role">Товари й замовлення</div></div></div>
+        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">Redis</div><div class="tech-role">Кеш і черги</div></div></div>
+        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">FastAPI</div><div class="tech-role">API та інтеграції</div></div></div>
+        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">Cloudflare</div><div class="tech-role">CDN і захист</div></div></div>
+      </div>
+    </div>
+    <div class="tech-visual rev-r" aria-hidden="true">
+      <canvas id="techCanvas" class="tech-canvas"></canvas>
+    </div>
+  </div>
+</section>
 
 <!-- FEATURES -->
 <section class="features">
   <div class="sec-label">ЩО ВХОДИТЬ</div>
-  <h2 class="sec-title rev">Повний ecommerce<br>під ключ</h2>
+  <h2 class="sec-title rev">Інтернет-магазин під ключ:<br>з чого він складається</h2>
   <div class="features-grid">
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none">
         <rect x="4" y="8" width="40" height="32" rx="3" stroke="#D40000" stroke-width="1.5"/>
         <rect x="4" y="8" width="40" height="10" rx="3" fill="rgba(212,0,0,.1)" stroke="#D40000" stroke-width="1.5"/>
         <rect x="10" y="24" width="12" height="12" rx="2" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
         <rect x="26" y="24" width="12" height="12" rx="2" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
         <circle cx="8" cy="13" r="2" fill="#D40000"/>
       </svg>
-      <div class="feat-name">Каталог і фільтрація</div>
-      <div class="feat-desc">Необмежена кількість товарів, категорій, варіацій. Розумна фільтрація що не перевантажує сторінку.</div>
+      <h3 class="feat-name">Каталог і фільтри</h3>
+      <div class="feat-desc">Категорії, варіанти товару (розмір, колір), фільтри й пошук. Картка товару з фото, характеристиками й наявністю.</div>
       <div class="feat-num">01</div>
     </div>
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none">
         <path d="M8 12h32M8 12l4 24h24l4-24" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <circle cx="20" cy="42" r="3" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
         <circle cx="32" cy="42" r="3" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
         <path d="M16 8a4 4 0 018 0" stroke="rgba(212,0,0,.5)" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
-      <div class="feat-name">Кошик і Checkout</div>
-      <div class="feat-desc">Мінімум кліків від вибору до оплати. Збереження кошика, промокоди, апселл — все що збільшує середній чек.</div>
+      <h3 class="feat-name">Кошик і оформлення</h3>
+      <div class="feat-desc">Короткий шлях від товару до оплати: мінімум полів, вибір відділення Нової Пошти, промокоди. Кошик зберігається, якщо покупець повернувся пізніше.</div>
       <div class="feat-num">02</div>
     </div>
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none">
         <rect x="6" y="14" width="36" height="22" rx="4" stroke="#D40000" stroke-width="1.5"/>
         <rect x="6" y="20" width="36" height="6" fill="rgba(212,0,0,.08)" stroke="none"/>
         <rect x="12" y="26" width="8" height="4" rx="1" fill="rgba(255,255,255,.1)"/>
         <rect x="24" y="26" width="14" height="4" rx="1" fill="rgba(212,0,0,.4)"/>
         <path d="M16 14V10a2 2 0 014 0" stroke="rgba(255,255,255,.2)" stroke-width="1" stroke-linecap="round"/>
       </svg>
-      <div class="feat-name">Платіжні системи</div>
-      <div class="feat-desc">Wayforpay, LiqPay, Stripe, Monobank, PayPal. Будь-яка валюта, будь-який ринок. Безпечні транзакції.</div>
+      <h3 class="feat-name">Онлайн-оплата</h3>
+      <div class="feat-desc">LiqPay, WayForPay, Monobank — для України, Stripe — для покупців з ЄС. Накладений платіж Новою Поштою — за потреби.</div>
       <div class="feat-num">03</div>
     </div>
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none">
         <rect x="4" y="10" width="22" height="28" rx="3" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
         <rect x="30" y="16" width="14" height="16" rx="3" stroke="#D40000" stroke-width="1.5"/>
         <path d="M26 24h4" stroke="#D40000" stroke-width="1.5" stroke-linecap="round"/>
@@ -388,24 +408,24 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
         <rect x="8" y="27" width="12" height="2" rx="1" fill="rgba(255,255,255,.05)"/>
         <circle cx="37" cy="24" r="4" fill="rgba(212,0,0,.2)" stroke="#D40000" stroke-width="1"/>
       </svg>
-      <div class="feat-name">CRM інтеграція</div>
-      <div class="feat-desc">Автоматична передача замовлень в CRM, сповіщення менеджерам, статуси замовлень в реальному часі.</div>
+      <h3 class="feat-name">Замовлення в CRM і Telegram</h3>
+      <div class="feat-desc">Нове замовлення одразу з'являється в адмінці, CRM або в Telegram-чаті менеджера. Статуси оновлюються, і нічого не губиться між месенджерами.</div>
       <div class="feat-num">04</div>
     </div>
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none">
         <rect x="6" y="8" width="20" height="32" rx="10" stroke="#D40000" stroke-width="1.5"/>
         <rect x="10" y="14" width="12" height="20" rx="2" fill="rgba(212,0,0,.06)"/>
         <rect x="10" y="14" width="12" height="6" rx="2" fill="rgba(212,0,0,.15)"/>
         <path d="M30 20h12M30 28h8" stroke="rgba(255,255,255,.2)" stroke-width="1.5" stroke-linecap="round"/>
         <circle cx="10" cy="38" r="2" fill="#D40000"/>
       </svg>
-      <div class="feat-name">Mobile-first дизайн</div>
-      <div class="feat-desc">Понад 70% покупок в Україні — з мобільного. Дизайн що продає на будь-якому пристрої.</div>
+      <h3 class="feat-name">Мобільна версія</h3>
+      <div class="feat-desc">Дизайн починаємо з телефона: великі кнопки, швидкі фото, зручний фільтр однією рукою. Десктоп — друга ітерація, а не навпаки.</div>
       <div class="feat-num">05</div>
     </div>
     <div class="feat rev">
-      <svg class="feat-icon" viewBox="0 0 48 48" fill="none">
+      <svg aria-hidden="true" class="feat-icon" viewBox="0 0 48 48" fill="none">
         <circle cx="24" cy="24" r="16" stroke="rgba(255,255,255,.1)" stroke-width="1.5"/>
         <path d="M24 8C15.163 8 8 15.163 8 24" stroke="#D40000" stroke-width="1.5" stroke-linecap="round"/>
         <path d="M24 8C32.837 8 40 15.163 40 24" stroke="rgba(212,0,0,.3)" stroke-width="1.5" stroke-linecap="round"/>
@@ -413,31 +433,9 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
         <circle cx="24" cy="24" r="4" fill="rgba(212,0,0,.3)" stroke="#D40000" stroke-width="1"/>
         <path d="M14 24h20" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="3 2"/>
       </svg>
-      <div class="feat-name">SEO для магазину</div>
-      <div class="feat-desc">Schema.org для товарів, мікророзмітка, sitemap для каталогу, швидке завантаження. Google знайде кожен товар.</div>
+      <h3 class="feat-name">SEO для каталогу</h3>
+      <div class="feat-desc">Розмітка Schema.org для товарів, окремі URL для категорій і фільтрів, sitemap каталогу, мета-теги, що генеруються з назви й ціни.</div>
       <div class="feat-num">06</div>
-    </div>
-  </div>
-</section>
-
-<!-- TECH STACK -->
-<section class="tech">
-  <div class="tech-grid">
-    <div>
-      <div class="sec-label">ТЕХНОЛОГІЙ</div>
-      <h2 class="sec-title rev-l">Стек що<br>масштабується</h2>
-      <p class="rev-l" style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:8px;">Обираємо технології під ваш масштаб: від простого Next.js магазину до повноцінної ecommerce платформи з тисячами SKU.</p>
-      <div class="tech-list">
-        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">Next.js</div><div class="tech-role">Frontend</div></div></div>
-        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">FastAPI</div><div class="tech-role">Backend API</div></div></div>
-        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">PostgreSQL</div><div class="tech-role">База даних</div></div></div>
-        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">Redis</div><div class="tech-role">Кешування</div></div></div>
-        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">Stripe / WFP</div><div class="tech-role">Платежі</div></div></div>
-        <div class="tech-item rev"><div class="tech-dot"></div><div><div class="tech-name">Cloudflare</div><div class="tech-role">CDN + Security</div></div></div>
-      </div>
-    </div>
-    <div class="tech-visual rev-r">
-      <canvas id="techCanvas" class="tech-canvas"></canvas>
     </div>
   </div>
 </section>
@@ -445,119 +443,125 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
 <!-- LEVELS -->
 <section class="levels" id="levels">
   <div class="sec-label">ВАРТІСТЬ</div>
-  <h2 class="sec-title rev">Оберіть формат<br>магазину</h2>
+  <h2 class="sec-title rev">Скільки коштує<br>інтернет-магазин</h2>
   <div class="levels-grid">
     <div class="level rev">
-      <div class="level-name">Start</div>
+      <h3 class="level-name">Start</h3>
       <div class="level-price">від $1 200</div>
-      <div class="level-note">до 100 товарів · 3 тижні</div>
+      <div class="level-note">до 100 товарів · ~3 тижні</div>
       <ul class="level-list">
         <li class="on">Унікальний дизайн</li>
-        <li class="on">Каталог + фільтри</li>
-        <li class="on">Кошик і checkout</li>
+        <li class="on">Каталог і фільтри</li>
+        <li class="on">Кошик і оформлення замовлення</li>
         <li class="on">1 платіжна система</li>
-        <li class="on">Адмін-панель</li>
-        <li class="on">Mobile-first</li>
-        <li>CRM інтеграція</li>
+        <li class="on">Адмінка для товарів</li>
+        <li class="on">Замовлення в Telegram</li>
+        <li class="on">1 місяць підтримки</li>
         <li>Nova Poshta API</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
     <div class="level level--pro rev">
-      <div class="level-badge">ПОПУЛЯРНИЙ</div>
-      <div class="level-name">Pro</div>
+      <div class="level-badge">ДЛЯ ЗРОСТАННЯ</div>
+      <h3 class="level-name">Pro</h3>
       <div class="level-price">від $2 500</div>
-      <div class="level-note">необмежено товарів · 5 тижнів</div>
+      <div class="level-note">без обмежень за товарами · ~5 тижнів</div>
       <ul class="level-list">
-        <li class="on">Преміум UI/UX дизайн</li>
-        <li class="on">Каталог + розумні фільтри</li>
-        <li class="on">3 платіжні системи</li>
-        <li class="on">CRM інтеграція</li>
-        <li class="on">Nova Poshta / Ukrposhta</li>
+        <li class="on">Усе з тарифу Start</li>
+        <li class="on">Необмежений каталог</li>
+        <li class="on">Nova Poshta API: відділення й ТТН</li>
+        <li class="on">Кілька платіжних систем</li>
+        <li class="on">Інтеграція з CRM</li>
         <li class="on">Промокоди та знижки</li>
-        <li class="on">Аналітика та події</li>
-        <li class="on">3 місяці підтримки</li>
+        <li class="on">Аналітика продажів і події для реклами</li>
+        <li class="on">1 місяць підтримки</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
     <div class="level rev">
-      <div class="level-name">Enterprise</div>
+      <h3 class="level-name">Маркетплейс</h3>
       <div class="level-price">від $5 000</div>
-      <div class="level-note">маркетплейс · індивідуально</div>
+      <div class="level-note">кілька продавців · термін після брифу</div>
       <ul class="level-list">
-        <li class="on">Маркетплейс архітектура</li>
-        <li class="on">Мультивендорність</li>
-        <li class="on">Всі платіжні системи</li>
-        <li class="on">ERP / 1C інтеграція</li>
-        <li class="on">Мультимова + мультивалюта</li>
-        <li class="on">Custom рекомендації</li>
-        <li class="on">6 місяців підтримки</li>
-        <li class="on">Growth стратегія</li>
+        <li class="on">Кабінети продавців</li>
+        <li class="on">Модерація товарів</li>
+        <li class="on">Розподіл оплат</li>
+        <li class="on">Кілька мов і валют</li>
+        <li class="on">Інтеграції за ТЗ</li>
+        <li class="on">1 місяць підтримки</li>
       </ul>
       <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
     </div>
   </div>
+  <p class="rev" style="font-size:14px;color:var(--muted);line-height:1.8;margin-top:40px;max-width:760px;">Хостинг, домен і комісії платіжних систем — окремо. Підтримка після першого місяця — від $150/міс. Порівняти з цінами на інші сайти можна на сторінці <a href="/pricing/" style="color:inherit;text-decoration:underline;">цін</a>, а ринкові вилки — у статті <a href="/blog/skilky-koshtuye-sayt-2026/" style="color:inherit;text-decoration:underline;">«Ціни на сайти у 2026»</a>.</p>
 </section>
 
 <!-- INTEGRATIONS -->
 <section class="integrations">
   <div class="sec-label">ІНТЕГРАЦІЇ</div>
-  <h2 class="sec-title rev">Підключаємо<br>будь-який сервіс</h2>
+  <h2 class="sec-title rev">Що підключаємо<br>до магазину</h2>
   <div class="int-grid">
     <div class="int-card rev">
-      <svg class="int-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="12" width="40" height="26" rx="4" stroke="#D40000" stroke-width="1.5"/><path d="M4 20h40" stroke="rgba(212,0,0,.3)" stroke-width="1"/><circle cx="12" cy="16" r="2" fill="#D40000" fill-opacity=".5"/></svg>
-      <div class="int-name">Wayforpay</div>
-      <div class="int-type">Платежі UA</div>
+      <svg aria-hidden="true" class="int-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="12" width="40" height="26" rx="4" stroke="#D40000" stroke-width="1.5"/><path d="M4 20h40" stroke="rgba(212,0,0,.3)" stroke-width="1"/><circle cx="12" cy="16" r="2" fill="#D40000" fill-opacity=".5"/></svg>
+      <div class="int-name">WayForPay</div>
+      <div class="int-type">Оплата карткою</div>
     </div>
     <div class="int-card rev">
-      <svg class="int-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="12" width="40" height="26" rx="4" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><path d="M4 20h40" stroke="rgba(255,255,255,.08)" stroke-width="1"/><rect x="10" y="26" width="12" height="6" rx="2" fill="rgba(255,255,255,.08)"/></svg>
+      <svg aria-hidden="true" class="int-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="12" width="40" height="26" rx="4" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><path d="M4 20h40" stroke="rgba(255,255,255,.08)" stroke-width="1"/><rect x="10" y="26" width="12" height="6" rx="2" fill="rgba(255,255,255,.08)"/></svg>
       <div class="int-name">LiqPay</div>
-      <div class="int-type">Платежі UA</div>
+      <div class="int-type">Оплата карткою</div>
     </div>
     <div class="int-card rev">
-      <svg class="int-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#D40000" stroke-width="1.5" stroke-opacity=".5"/><path d="M16 24l6 6 10-12" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg aria-hidden="true" class="int-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#D40000" stroke-width="1.5" stroke-opacity=".5"/><path d="M16 24l6 6 10-12" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div class="int-name">Stripe</div>
-      <div class="int-type">Платежі EU/US</div>
+      <div class="int-type">Оплата з ЄС</div>
     </div>
     <div class="int-card rev">
-      <svg class="int-icon" viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="28" rx="3" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><path d="M16 22h16M16 28h10" stroke="rgba(212,0,0,.6)" stroke-width="1.5" stroke-linecap="round"/></svg>
-      <div class="int-name">Nova Poshta</div>
-      <div class="int-type">Доставка</div>
+      <svg aria-hidden="true" class="int-icon" viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="28" rx="3" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><path d="M16 22h16M16 28h10" stroke="rgba(212,0,0,.6)" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <div class="int-name">Нова Пошта</div>
+      <div class="int-type">Відділення і ТТН</div>
     </div>
     <div class="int-card rev">
-      <svg class="int-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/><path d="M24 14v20M14 24h20" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".6"/></svg>
-      <div class="int-name">Binotel / CRM</div>
-      <div class="int-type">Продажі</div>
+      <svg aria-hidden="true" class="int-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/><path d="M24 14v20M14 24h20" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".6"/></svg>
+      <div class="int-name">CRM</div>
+      <div class="int-type">Замовлення і статуси</div>
     </div>
     <div class="int-card rev">
-      <svg class="int-icon" viewBox="0 0 48 48" fill="none"><path d="M24 8L40 36H8L24 8z" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-linejoin="round"/><path d="M24 8L36 36" stroke="#D40000" stroke-width="1" stroke-opacity=".4"/></svg>
+      <svg aria-hidden="true" class="int-icon" viewBox="0 0 48 48" fill="none"><path d="M24 8L40 36H8L24 8z" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-linejoin="round"/><path d="M24 8L36 36" stroke="#D40000" stroke-width="1" stroke-opacity=".4"/></svg>
       <div class="int-name">Google Analytics</div>
-      <div class="int-type">Аналітика</div>
+      <div class="int-type">Аналітика продажів</div>
     </div>
     <div class="int-card rev">
-      <svg class="int-icon" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="8" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/><circle cx="24" cy="24" r="8" stroke="#D40000" stroke-width="1.5" stroke-opacity=".6"/><circle cx="24" cy="24" r="3" fill="#D40000" fill-opacity=".4"/></svg>
+      <svg aria-hidden="true" class="int-icon" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="8" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/><circle cx="24" cy="24" r="8" stroke="#D40000" stroke-width="1.5" stroke-opacity=".6"/><circle cx="24" cy="24" r="3" fill="#D40000" fill-opacity=".4"/></svg>
       <div class="int-name">Meta Pixel</div>
-      <div class="int-type">Реклама</div>
+      <div class="int-type">Реклама і ретаргетинг</div>
     </div>
     <div class="int-card rev">
-      <svg class="int-icon" viewBox="0 0 48 48" fill="none"><path d="M8 36V20l16-12 16 12v16H8z" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-linejoin="round"/><path d="M18 36v-12h12v12" stroke="#D40000" stroke-width="1.5" stroke-opacity=".6" stroke-linejoin="round"/></svg>
-      <div class="int-name">Telegram Bot</div>
-      <div class="int-type">Сповіщення</div>
+      <svg aria-hidden="true" class="int-icon" viewBox="0 0 48 48" fill="none"><path d="M8 36V20l16-12 16 12v16H8z" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-linejoin="round"/><path d="M18 36v-12h12v12" stroke="#D40000" stroke-width="1.5" stroke-opacity=".6" stroke-linejoin="round"/></svg>
+      <div class="int-name">Telegram-бот</div>
+      <div class="int-type">Сповіщення про замовлення</div>
     </div>
   </div>
 </section>
 
 <!-- PROCESS -->
 <section class="process">
-  <div class="sec-label">ЯК МИ ПРАЦЮЄМО</div>
-  <h2 class="sec-title rev">Від каталогу<br>до першого продажу</h2>
+  <div class="sec-label">ЕТАПИ</div>
+  <h2 class="sec-title rev">Від каталогу<br>до першого замовлення</h2>
   <div class="process-steps">
-    <div class="pstep active rev"><div class="pstep-dot">01</div><div class="pstep-name">Аналіз</div><div class="pstep-desc">Ніша, конкуренти, ЦА, структура каталогу</div><div class="pstep-time">День 1–2</div></div>
-    <div class="pstep rev"><div class="pstep-dot">02</div><div class="pstep-name">Дизайн</div><div class="pstep-desc">UI/UX каталогу, картки товарів, checkout</div><div class="pstep-time">День 3–8</div></div>
-    <div class="pstep rev"><div class="pstep-dot">03</div><div class="pstep-name">Розробка</div><div class="pstep-desc">Frontend, backend, інтеграції, адмін</div><div class="pstep-time">День 8–18</div></div>
-    <div class="pstep rev"><div class="pstep-dot">04</div><div class="pstep-name">Наповнення</div><div class="pstep-desc">Завантаження товарів, налаштування доставки</div><div class="pstep-time">День 18–20</div></div>
-    <div class="pstep rev"><div class="pstep-dot">05</div><div class="pstep-name">Запуск</div><div class="pstep-desc">Тести, деплой, SEO, аналітика</div><div class="pstep-time">День 21</div></div>
+    <div class="pstep active rev"><div class="pstep-dot">01</div><div class="pstep-name">Брифінг</div><div class="pstep-desc">Асортимент, структура каталогу, оплата і доставка</div><div class="pstep-time">1–2 дні</div></div>
+    <div class="pstep rev"><div class="pstep-dot">02</div><div class="pstep-name">Прототип</div><div class="pstep-desc">Каталог, картка товару, кошик, оформлення</div><div class="pstep-time">3–5 днів</div></div>
+    <div class="pstep rev"><div class="pstep-dot">03</div><div class="pstep-name">Дизайн і розробка</div><div class="pstep-desc">Вітрина, адмінка, оплата, доставка, CRM</div><div class="pstep-time">від 2 тижнів</div></div>
+    <div class="pstep rev"><div class="pstep-dot">04</div><div class="pstep-name">Наповнення і тести</div><div class="pstep-desc">Імпорт товарів, тестові оплати й замовлення</div><div class="pstep-time">2–4 дні</div></div>
+    <div class="pstep rev"><div class="pstep-dot">05</div><div class="pstep-name">Запуск</div><div class="pstep-desc">Публікація, аналітика, передача доступів</div><div class="pstep-time">1 день</div></div>
   </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="tech">
+  <div class="sec-label">ПРИКЛАД З ПОРТФОЛІО</div>
+  <h2 class="sec-title rev">Каталог Respect Car</h2>
+  <p class="rev" style="font-size:15px;color:var(--muted);line-height:1.8;max-width:760px;">Сайт автомайданчика в Харкові: продаж, викуп та імпорт авто зі США. Живий каталог авто з фото, а оголошеннями менеджери керують через адмінку в Telegram — без входу в окрему панель. Стек: Next.js 16, React 19, TypeScript, PostgreSQL, Redis, Cloudinary, Cloudflare. На такому ж стеку ми будуємо інтернет-магазини. Інші роботи — у <a href="/portfolio/" style="color:inherit;text-decoration:underline;">портфоліо</a>.</p>
 </section>
 
 <!-- FAQ -->
@@ -566,113 +570,88 @@ footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-cont
   <h2 class="sec-title rev">Питання про<br>інтернет-магазини</h2>
   <div class="faq-list">
     <div class="faq-item rev">
-      <button type="button" class="faq-q">Скільки коштує інтернет-магазин? <span>+</span></button>
-      <div class="faq-a">Базовий магазин від $1200, Pro від $2500, маркетплейс від $5000. Ціна залежить від кількості товарів, функціоналу та інтеграцій. Точну вартість визначаємо після 15-хвилинного брифу.</div>
+      <button type="button" class="faq-q">Скільки коштує інтернет-магазин під ключ? <span>+</span></button>
+      <div class="faq-a">Start на каталог до 100 товарів — від $1 200, Pro без обмежень за товарами і з Nova Poshta API — від $2 500, маркетплейс — від $5 000. У ціну входять дизайн, верстка, базове SEO, інтеграція з Telegram або CRM і місяць підтримки. Хостинг і домен — окремо.</div>
     </div>
     <div class="faq-item rev">
-      <button type="button" class="faq-q">Чи буду я сам керувати магазином? <span>+</span></button>
-      <div class="faq-a">Так. Ви отримуєте зручну адмін-панель: додавати товари, змінювати ціни, бачити замовлення. Без технічних знань. Плюс відео-інструкція та 3 місяці підтримки.</div>
+      <button type="button" class="faq-q">Скільки часу займає розробка? <span>+</span></button>
+      <div class="faq-a">Start — близько 3 тижнів, Pro — близько 5 тижнів. Терміни маркетплейсу визначаємо після брифінгу. На швидкість сильно впливає, як швидко готові фото й описи товарів.</div>
     </div>
     <div class="faq-item rev">
-      <button type="button" class="faq-q">Які платіжні системи підтримуєте? <span>+</span></button>
-      <div class="faq-a">Wayforpay, LiqPay, Monobank — для українського ринку. Stripe, PayPal — для Європи та США. Підключаємо будь-яку платіжну систему під ваш ринок.</div>
+      <button type="button" class="faq-q">Чи зможу я сам додавати товари й змінювати ціни? <span>+</span></button>
+      <div class="faq-a">Так. Ви отримуєте адмінку, де додаєте товари, міняєте ціни й наявність, бачите замовлення. Технічні знання не потрібні. Покажемо, як нею користуватися, під час здачі проєкту.</div>
     </div>
     <div class="faq-item rev">
-      <button type="button" class="faq-q">Чи інтегруєте з Новою Поштою? <span>+</span></button>
-      <div class="faq-a">Так, інтегруємо Nova Poshta API, Ukrposhta та Meest. Автоматичне створення ТТН, трекінг доставки, SMS покупцю — все автоматично.</div>
+      <button type="button" class="faq-q">Які платіжні системи підключаєте? <span>+</span></button>
+      <div class="faq-a">LiqPay, WayForPay і Monobank — для покупців з України, Stripe — для продажу в ЄС. Договір з платіжною системою укладаєте ви, ми робимо технічне підключення.</div>
     </div>
     <div class="faq-item rev">
-      <button type="button" class="faq-q">Чи можна перенести існуючий магазин? <span>+</span></button>
-      <div class="faq-a">Так, мігруємо з Prom, Rozetka, WordPress/WooCommerce, Хорошоп. Переносимо товари, категорії, замовлення та клієнтів. SEO при цьому зберігається.</div>
+      <button type="button" class="faq-q">Чи інтегруєте Нову Пошту? <span>+</span></button>
+      <div class="faq-a">Так, у тарифі Pro: вибір міста й відділення при оформленні, створення ТТН з адмінки і номер відправлення для покупця.</div>
+    </div>
+    <div class="faq-item rev">
+      <button type="button" class="faq-q">Чи можна перенести товари з Prom, Хорошопа чи WooCommerce? <span>+</span></button>
+      <div class="faq-a">Так, переносимо товари, категорії й фото. Налаштовуємо переадресації зі старих адрес, щоб зберегти накопичений пошуковий трафік. Обсяг переносу оцінюємо на брифінгу.</div>
+    </div>
+    <div class="faq-item rev">
+      <button type="button" class="faq-q">Хто приведе покупців після запуску? <span>+</span></button>
+      <div class="faq-a">Можемо взяти й це: <a href="/services/seo/" style="color:inherit;text-decoration:underline;">SEO-просування</a> — від $150/міс, <a href="/services/meta-ads/" style="color:inherit;text-decoration:underline;">таргет у Facebook та Instagram</a> — налаштування від $250. Рекламний бюджет оплачуєте окремо.</div>
     </div>
   </div>
 </section>
-
-<!-- CTA -->
 
 <!-- ПЕРЕЛІНКОВКА -->
 <section style="padding:80px 40px;border-top:1px solid rgba(255,255,255,.08);">
   <div style="font-size:11px;letter-spacing:.2em;color:#D40000;font-family:'Space Grotesk',sans-serif;font-weight:600;margin-bottom:16px;">ПОВ'ЯЗАНІ ПОСЛУГИ</div>
   <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:40px;">Може зацікавити</h2>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
-    <a href="/services/websites-landing/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Конверсійні сторінки</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Лендінги</div>
+    <a href="/services/websites/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
+  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Усі види сайтів</div>
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Розробка сайтів</div>
   <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
 </a>
-    <a href="/services/bots/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Бот для магазину</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Telegram боти</div>
+    <a href="/services/websites-landing/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
+  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Сторінка під акцію</div>
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Лендинги</div>
+  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
+</a>
+    <a href="/services/bots-sales/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
+  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Продажі в чаті</div>
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Бот для продажів</div>
   <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
 </a>
     <a href="/services/seo/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Трафік в магазин</div>
+  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Трафік у магазин</div>
   <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">SEO просування</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-    <a href="/services/meta-ads/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Реклама товарів</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Meta Ads</div>
   <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
 </a>
   </div>
 </section>
 <section class="cta-final" id="contact">
-  <canvas id="ctaBg" class="cta-bg-canvas"></canvas>
+  <canvas id="ctaBg" class="cta-bg-canvas" aria-hidden="true"></canvas>
   <div class="cta-label">ГОТОВІ ПОЧАТИ?</div>
-  <h2 class="cta-title">Запустіть магазин<br>що продає <em>завтра</em></h2>
-  <p class="cta-sub">Розкажіть про проєкт — відповімо за 15 хвилин</p>
+  <h2 class="cta-title">Обговоримо<br>ваш <em>магазин</em></h2>
+  <p class="cta-sub">Розкажіть, що продаєте і скільки товарів у каталозі, — відповімо протягом 15 хвилин у робочий час</p>
   <div class="cta-btns">
     <div class="contact-btns-group">
   <a href="https://t.me/infiniteunion_manager" class="cbtn cbtn-tg" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
     Telegram
   </a>
   <a href="https://wa.me/380688286969" class="cbtn cbtn-wa" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     WhatsApp
   </a>
   <a href="viber://chat?number=%2B380688286969" class="cbtn cbtn-viber" rel="noopener noreferrer">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C8.55-.05 2.9.64 1.05 6.39.41 8.37.19 10.14.17 11.3c-.03 1.16-.05 3.35.65 5.21h.01c1.1 3.03 3.66 5.01 6.88 5.35v2.33s-.02.55.34.66c.44.13.69-.28 1.11-.73.23-.25.55-.62.79-.9 2.16.18 3.83-.28 4.01-.34.44-.14 2.9-.46 3.31-3.74 0 0 .42-2.65-.17-4.74-.17-.6-.33-.87-.46-1.04l.17-.08c0-.01-.04-.05-.08-.09l-.07-.07v-.01c-.44-.44-1.17-.88-1.17-.88s-.15-.08-.18-.05c-.02.03-.01.12.01.23.05.15.1.32.1.48.01.17 0 .36 0 .54-.01.17-.04.33-.09.45-.05.13-.13.22-.23.26-.11.04-.23.05-.33.02-.1-.03-.2-.11-.28-.2a2.4 2.4 0 01-.2-.29c-.04-.08-.07-.16-.06-.23.01-.07.08-.15.16-.21.08-.05.19-.07.29-.05.1.03.19.1.26.2.07.1.11.22.11.34 0 .12-.05.24-.12.34a.58.58 0 01-.27.19c-.1.03-.22.03-.32-.01a.59.59 0 01-.24-.19.59.59 0 01-.1-.33c0-.12.04-.24.1-.33.06-.1.15-.17.25-.21.1-.03.21-.03.31.02zm1.19 2.15c.09 0 .18 0 .26.01 3.14.22 5.62 2.74 5.62 5.78 0 .06 0 .13-.01.19-.13 3.11-2.63 5.59-5.62 5.59-.09 0-.18 0-.27-.01-3.13-.22-5.61-2.74-5.61-5.77 0-.07 0-.13 0-.2.14-3.1 2.63-5.59 5.62-5.59z"/></svg>
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C8.55-.05 2.9.64 1.05 6.39.41 8.37.19 10.14.17 11.3c-.03 1.16-.05 3.35.65 5.21h.01c1.1 3.03 3.66 5.01 6.88 5.35v2.33s-.02.55.34.66c.44.13.69-.28 1.11-.73.23-.25.55-.62.79-.9 2.16.18 3.83-.28 4.01-.34.44-.14 2.9-.46 3.31-3.74 0 0 .42-2.65-.17-4.74-.17-.6-.33-.87-.46-1.04l.17-.08c0-.01-.04-.05-.08-.09l-.07-.07v-.01c-.44-.44-1.17-.88-1.17-.88s-.15-.08-.18-.05c-.02.03-.01.12.01.23.05.15.1.32.1.48.01.17 0 .36 0 .54-.01.17-.04.33-.09.45-.05.13-.13.22-.23.26-.11.04-.23.05-.33.02-.1-.03-.2-.11-.28-.2a2.4 2.4 0 01-.2-.29c-.04-.08-.07-.16-.06-.23.01-.07.08-.15.16-.21.08-.05.19-.07.29-.05.1.03.19.1.26.2.07.1.11.22.11.34 0 .12-.05.24-.12.34a.58.58 0 01-.27.19c-.1.03-.22.03-.32-.01a.59.59 0 01-.24-.19.59.59 0 01-.1-.33c0-.12.04-.24.1-.33.06-.1.15-.17.25-.21.1-.03.21-.03.31.02zm1.19 2.15c.09 0 .18 0 .26.01 3.14.22 5.62 2.74 5.62 5.78 0 .06 0 .13-.01.19-.13 3.11-2.63 5.59-5.62 5.59-.09 0-.18 0-.27-.01-3.13-.22-5.61-2.74-5.61-5.77 0-.07 0-.13 0-.2.14-3.1 2.63-5.59 5.62-5.59z"/></svg>
     Viber
   </a>
   <a href="tel:+380688286969" class="cbtn cbtn-tel">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
     +380688286969
   </a>
 </div>
     <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
-  </div>
-</section>
-<section class="faq-section">
-  <div class="faq-inner">
-    <div class="faq-label">FAQ</div>
-    <h2 class="faq-title">Часті запитання</h2>
-
-    <div class="faq-item">
-      <button type="button" class="faq-q">Скільки коштує інтернет-магазин?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>Інтернет-магазин від $1500. Включає каталог товарів, кошик, оплату, адмін-панель та інтеграцію з доставкою.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Які платіжні системи підтримуєте?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>Інтегруємо LiqPay, Fondy, WayForPay, Stripe, PayPal — будь-яку систему під ваш ринок.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Чи можна інтегрувати магазин з CRM?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>Так, підключаємо до CRM, Telegram-боту, Google Таблиць або будь-якої системи обліку.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q">Чи є адмін-панель для управління товарами?<span class="faq-arr">+</span></button>
-      <div class="faq-a">
-        <p>Так, ви зможете самостійно додавати товари, змінювати ціни та керувати замовленнями без знань програмування.</p>
-      </div>
-    </div>
   </div>
 </section>
 
