@@ -114,6 +114,14 @@ for (const p of pages) {
   const faqLd = (html.match(/"@type": "Question"/g) || []).length;
   if (faqVisible !== faqLd) err(f, `FAQ JSON-LD (${faqLd}) != visible FAQ (${faqVisible}) — run npm run build:seo`);
 
+  // analytics must not be blocked by the page CSP (GTM loads GA4 + Ads gtag.js and sends to *.google-analytics.com)
+  const csp = root.querySelector('meta[http-equiv="Content-Security-Policy"]')?.getAttribute('content');
+  if (csp) {
+    const dir = n => (csp.match(new RegExp(`${n}[^;]*`)) || [''])[0];
+    if (!dir('script-src').includes('https://www.googletagmanager.com')) err(f, 'CSP script-src blocks GTM');
+    if (!dir('connect-src').includes('*.google-analytics.com')) err(f, 'CSP connect-src blocks GA4 collect');
+  }
+
   // body structure
   const h1 = root.querySelectorAll('h1');
   if (h1.length !== 1) err(f, `expected exactly 1 <h1>, got ${h1.length}`);
