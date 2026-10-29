@@ -23,3 +23,18 @@ document.documentElement.classList.add("js");
         else setTimeout(load3D, 200);
     });
 })();
+
+// Below-the-fold visuals (globe, orbit): real <script>s are created after load/idle, in document order.
+// Markup: <script type="text/x-iu-lazy" data-src="/path.js"></script>
+(function () {
+    const run = () => document.querySelectorAll('script[type="text/x-iu-lazy"][data-src]').forEach(ph => {
+        const s = document.createElement('script');
+        s.src = ph.dataset.src;
+        s.async = false;
+        document.body.appendChild(s);
+    });
+    window.addEventListener('load', () => {
+        if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 1500 });
+        else setTimeout(run, 200);
+    });
+})();

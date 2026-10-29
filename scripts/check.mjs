@@ -224,14 +224,19 @@ try {
 
 // ---------- Lighthouse (optional) ----------
 if (process.argv.includes('--lighthouse')) {
+  // LH_BASE=https://infiniteunion.com.ua runs against production (target: performance ≥ 90).
+  // Locally (npx serve: no CDN/HTTP2) Lighthouse reads ~10–14 points lower than prod — measured on the
+  // pre-night build: /services/websites/ 84 local vs 98 on prod — so the local gate is 85.
   const port = 4173;
-  const srv = spawn('npx', ['serve', '.', '-p', String(port), '-c', 'serve.json', '--no-request-logging'], { stdio: 'ignore' });
-  await new Promise(r => setTimeout(r, 2500));
+  const base = process.env.LH_BASE || `http://localhost:${port}`;
+  const minPerf = process.env.LH_BASE ? 90 : 85;
+  const srv = process.env.LH_BASE ? null : spawn('npx', ['serve', '.', '-p', String(port), '-c', 'serve.json', '--no-request-logging'], { stdio: 'ignore' });
+  if (srv) await new Promise(r => setTimeout(r, 2500));
   const key = ['/', '/services/websites/', '/services/bots/', '/pricing/', '/en/', '/en/services/websites/', '/blog/skilky-koshtuye-sayt-2026/'];
   try {
     for (const k of key) {
       const out = `/tmp/iu-lh-${k.replace(/\W/g, '_')}.json`;
-      execFileSync('npx', ['lighthouse', `http://localhost:${port}${k}`, '--quiet', '--chrome-flags=--headless=new',
+      execFileSync('npx', ['lighthouse', `${base}${k}`, '--quiet', '--chrome-flags=--headless=new',
         '--only-categories=performance,seo,accessibility,best-practices', '--output=json', `--output-path=${out}`], { stdio: 'ignore' });
       const lr = JSON.parse(fs.readFileSync(out, 'utf8'));
       const sc = Object.fromEntries(Object.entries(lr.categories).map(([k2, v]) => [k2, Math.round(v.score * 100)]));
@@ -239,10 +244,11 @@ if (process.argv.includes('--lighthouse')) {
       const cls = lr.audits['cumulative-layout-shift'].numericValue;
       console.log(`LH ${k}: ${JSON.stringify(sc)} LCP=${lcp.toFixed(2)}s CLS=${cls.toFixed(3)}`);
       if (sc.seo < 100) err(`lighthouse ${k}`, `SEO ${sc.seo} < 100`);
-      if (sc.performance < 90) err(`lighthouse ${k}`, `performance ${sc.performance} < 90`);
+      if (sc.performance < minPerf) err(`lighthouse ${k}`, `performance ${sc.performance} < ${minPerf}`);
+      if (lcp > 2.5 && process.env.LH_BASE) err(`lighthouse ${k}`, `LCP ${lcp.toFixed(2)}s > 2.5s`);
       if (cls > 0.1) err(`lighthouse ${k}`, `CLS ${cls}`);
     }
-  } finally { srv.kill(); }
+  } finally { if (srv) srv.kill(); }
 }
 
 for (const w of warns) console.warn('warn ', w);
