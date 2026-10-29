@@ -23,3 +23,7 @@ footer.iu-foot{display:block!important;border-top:1px solid rgba(255,255,255,.08
 @media(max-width:768px){table:not(.iu-keep){display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}}
 @media(max-width:900px){.iu-foot-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:560px){.iu-foot-grid{grid-template-columns:1fr;gap:28px;}footer.iu-foot{padding:40px 20px 28px!important;}.iu-crumbs{padding:24px 20px 0;}.iu-lang{margin-right:8px;padding:6px 8px;}}
+/* Inline-styled card grids (related services etc.) must collapse on phones — inline styles can't carry media queries */
+@media(max-width:600px){.mob-grid-3,[style*="grid-template-columns:repeat("],[style*="grid-template-columns: repeat("]{grid-template-columns:1fr!important;}}
+@media(min-width:601px) and (max-width:900px){[style*="grid-template-columns:repeat(4"],[style*="grid-template-columns:repeat(3"]{grid-template-columns:repeat(2,1fr)!important;}}
+[style*="grid-template-columns:repeat("]>*{min-width:0;}
