@@ -35,3 +35,5 @@ footer.iu-foot{display:block!important;border-top:1px solid rgba(255,255,255,.08
 .breadcrumb span{opacity:.75!important;}
 /* a11y: touch target for the mobile menu close button */
 #mobX{min-width:44px;min-height:44px;}
+@media(max-width:480px){.trust-grid{grid-template-columns:minmax(0,1fr)!important;}.process-grid{grid-template-columns:minmax(0,1fr)!important;gap:0!important;}.process-item{padding-left:20px!important;padding-right:20px!important;}}
+@media(max-width:768px){html,body{overflow-x:clip;}}

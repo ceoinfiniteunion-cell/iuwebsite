@@ -35,13 +35,11 @@
     "html-validate": "8.7.4",
     "js-beautify": "^2.0.3",
     "node-html-parser": "^7.1.0",
+    "serve": "^14.2.6",
     "stylelint": "^17.14.0",
     "stylelint-config-standard": "^40.0.0",
     "terser": "^5.49.0",
     "three": "^0.185.1"
   },
-  "type": "module",
-  "dependencies": {
-    "serve": "^14.2.0"
-  }
+  "type": "module"
 }
