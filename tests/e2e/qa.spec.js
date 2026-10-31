@@ -19,8 +19,10 @@ test.describe.configure({ mode: 'parallel' });
 
 for (const p of pages) {
   for (const w of WIDTHS) {
-    test(`${p.path} @${w}`, async ({ page }) => {
+    test(`${p.path} @${w}`, async ({ page }, testInfo) => {
       // Home pages run three.js + WebGL globe on desktop; CI runners render WebGL in software.
+      // A phone profile (DPR 2.75) at 1440px is not a real device and the desktop 3D stalls there; chromium covers 1440.
+      test.skip(p.type === 'home' && w >= 1000 && testInfo.project.name === 'mobile-chrome', 'phone DPR at desktop width');
       if (p.type === 'home' && w >= 1000) test.slow();
       const problems = [];
       page.on('pageerror', e => problems.push(`pageerror: ${e.message}`));
