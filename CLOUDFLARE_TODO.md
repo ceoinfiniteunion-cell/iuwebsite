@@ -1,5 +1,8 @@
 # Cloudflare — що зробити руками
 
+> **Статус 2026-10-31 (зроблено через API):** Redirect Rules (3 правила, 301, query string зберігається) ✅ · Managed robots.txt вимкнено ✅ · Purge Everything ✅ · Googlebot за 29 днів не отримував challenge/block ✅.
+> **Залишилось руками:** JavaScript Detections (на Free не вимикається, поки увімкнено Bot Fight Mode — див. 2b) · за бажанням вимкнути Bot Fight Mode (челенджить Google-Ads-Conversions, Google-Lens) · Browser Cache TTL (п. 3).
+
 Сайт віддає GitHub Pages; серверних редиректів там немає, тому 301 налаштовуються в Cloudflare.
 
 ## 1. Редиректи 301 зі старих `.html` URL (P0)

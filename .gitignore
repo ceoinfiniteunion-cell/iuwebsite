@@ -16,3 +16,6 @@ playwright-report/
 NIGHT_LOG.md
 MORNING_REPORT.md
 SEO_AUDIT.md
+
+# Cloudflare config backup (local only)
+cf-backup.json

@@ -1,4 +1,4 @@
-# AI-training crawlers are additionally blocked by Cloudflare's managed robots.txt block.
+# Block AI-training crawlers; search engines are allowed.
 User-agent: *
 Allow: /
 
