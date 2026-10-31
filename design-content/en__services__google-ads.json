@@ -1,0 +1,867 @@
+{
+  "url": "https://infiniteunion.com.ua/en/services/google-ads/",
+  "path": "/en/services/google-ads/",
+  "file": "en/services/google-ads/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/services/google-ads/",
+    "url": "https://infiniteunion.com.ua/services/google-ads/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "Google Ads",
+  "title": "Google Ads Management — Setup from $300 | Infinite Union",
+  "description": "Google Ads setup and management: Search, Performance Max, YouTube, remarketing and conversion tracking. Setup from $300, management from $200/month.",
+  "keyword": "Google Ads management",
+  "priceFrom": 300,
+  "robots": "index, follow",
+  "h1": "Google Ads management",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Google Ads",
+      "url": "/en/services/google-ads/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#F5F0E8",
+    "--bg2": "#EDE8E0",
+    "--dark": "#0A0A0A",
+    "--text": "#1A1A1A",
+    "--muted": "#777",
+    "--border": "rgba(0,0,0,0.07)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ease": "cubic-bezier(0.76,0,0.24,1)",
+    "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+  },
+  "words": 1133,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Back",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/services/google-ads/"
+    },
+    {
+      "k": "link",
+      "text": "LAUNCH GOOGLE ADS",
+      "href": "/en/services/google-ads/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "Google Ads management",
+      "items": [
+        {
+          "k": "text",
+          "text": "$300",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "Setup",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "one-off, from",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "$200",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "Management",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "per month, from",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "Ad budget",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "per month, suggested start",
+          "role": "hm-sub"
+        },
+        {
+          "k": "decor",
+          "text": "SCROLL"
+        },
+        {
+          "k": "decor",
+          "text": "02"
+        },
+        {
+          "k": "text",
+          "text": "GOOGLE ADS · SEARCH · PERFORMANCE MAX",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Google Ads management"
+        },
+        {
+          "k": "text",
+          "text": "Google Ads management for small and mid-sized businesses in the EU and Ukraine. Infinite Union is an agency in Kharkiv: we set up Search, Performance Max and YouTube campaigns with proper conversion tracking, then manage them every week. Setup from $300, management from $200/month, ad budget separate."
+        },
+        {
+          "k": "text",
+          "text": "$300",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "setup, from",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$200/mo",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "management, from",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "15min",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "reply time, working hours",
+          "role": "hero-stat-label"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "GOOGLE SEARCH →PERFORMANCE MAX →YOUTUBE ADS →DISPLAY →REMARKETING →GA4 →CONVERSION TRACKING →MERCHANT CENTER →GOOGLE SEARCH →PERFORMANCE MAX →YOUTUBE ADS →DISPLAY →REMARKETING →GA4 →CONVERSION TRACKING →MERCHANT CENTER →"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Clicks are easy. Customers are not.",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHY CAMPAIGNS LEAK MONEY",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Clicks are easy. Customers are not."
+        },
+        {
+          "k": "text",
+          "text": "A typical self-run Google Ads account has the same set of issues: broad keywords that match irrelevant searches, no negative keyword list, every ad sending people to the home page, and conversion tracking that counts page views as leads. The budget gets spent, the dashboard looks busy, and nobody can say which campaign brought a paying customer."
+        },
+        {
+          "k": "text",
+          "text": "Another common case: Performance Max switched on with default settings, so Google decides where your money goes and you see very little of why. Good Google Ads management fixes this with a clear account structure, clean conversion data and regular search-term reviews — not with a bigger budget."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "What our Google Ads management covers",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHAT'S INCLUDED",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "What our Google Ads management covers"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Search campaigns"
+        },
+        {
+          "k": "text",
+          "text": "Ads for people who are already typing your service or product into Google. We build the keyword list by intent, split it into tight ad groups, write responsive search ads, add sitelinks, callouts and call assets, and maintain negative keywords from day one.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Keyword research · Responsive search ads · Negative keywords",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Conversion tracking"
+        },
+        {
+          "k": "text",
+          "text": "Before launch we set up GA4 and Google Ads conversions for the actions that matter: form submissions, calls, Telegram or WhatsApp clicks, purchases. Without this, Smart Bidding optimises for the wrong thing.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "GA4 · Google Tag Manager · Enhanced conversions",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Performance Max and Shopping"
+        },
+        {
+          "k": "text",
+          "text": "For online stores we connect Google Merchant Center, clean up the product feed and run Performance Max with separate asset groups and audience signals, so you can see which product groups earn money and which only spend it.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Merchant Center · Product feed · Asset groups",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "YouTube and remarketing"
+        },
+        {
+          "k": "text",
+          "text": "Video and display remarketing for people who visited your site but did not get in touch. It works best for services with a longer decision cycle, such as education, renovation or B2B.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Remarketing lists · YouTube in-stream · Customer Match",
+          "role": "service-tags"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "From brief to first optimisation",
+      "items": [
+        {
+          "k": "text",
+          "text": "HOW WE WORK",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "From brief to first optimisation"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Brief and audit"
+        },
+        {
+          "k": "text",
+          "text": "We review your site, offer, competitors and your current account, if you have one.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Keywords and structure"
+        },
+        {
+          "k": "text",
+          "text": "Keyword research, negative lists, campaign and ad group structure, ad copy.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "2–3 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Tracking and launch"
+        },
+        {
+          "k": "text",
+          "text": "Conversion tracking, billing check, launch and close monitoring in the first week.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1 week",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Optimisation"
+        },
+        {
+          "k": "text",
+          "text": "Search-term clean-up, bid and budget changes, ad tests, monthly report.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "Ongoing",
+          "role": "process-time"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Google Ads pricing",
+      "items": [
+        {
+          "k": "text",
+          "text": "PRICING",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Google Ads pricing"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "TIER 01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Setup — from $300"
+        },
+        {
+          "k": "text",
+          "text": "One-off. Audit of the existing account or a new one, keyword research, campaign structure, ads, conversion tracking in GA4 and Google Ads, launch.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "One-off",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "TIER 02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Management — from $200/month"
+        },
+        {
+          "k": "text",
+          "text": "Weekly search-term reviews, negative keywords, bid and budget changes, ad copy tests and a monthly report in plain language.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Monthly",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "TIER 03",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Large budgets and e-commerce — from $500/month"
+        },
+        {
+          "k": "text",
+          "text": "Several campaign types at once: Search, Performance Max, Shopping and remarketing, product feed maintenance and more frequent reviews.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "BUDGET",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ad budget — paid to Google"
+        },
+        {
+          "k": "text",
+          "text": "The ad budget is always separate from our fee and is charged by Google directly to your card. We suggest starting from $300/month so campaigns collect enough data to optimise.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Separate",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "Prices for every service we offer, from websites to SEO, are on one page: Infinite Union pricing."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "What we build around ads",
+      "items": [
+        {
+          "k": "text",
+          "text": "FROM OUR PORTFOLIO",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "What we build around ads"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ad Tracker by IU"
+        },
+        {
+          "k": "text",
+          "text": "Our own dashboard that puts Google Ads, Meta Ads and TikTok Ads in one window, refreshes every 2 hours and keeps 90 days of history. It is still in development; on our side it already saves 5+ hours a week on reporting.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Google Ads · Meta Ads · TikTok Ads",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Transfer Kharkiv"
+        },
+        {
+          "k": "text",
+          "text": "Landing page for a transfer company with an 8.4% conversion rate and a Telegram bot that accepts bookings 24/7. Paid clicks only pay off when the page they land on is fast and clear — this is the kind of page we build for that.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Landing page · Telegram bot",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "More projects in our portfolio."
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq",
+      "heading": "Questions we get asked",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Questions we get asked"
+        },
+        {
+          "k": "faq",
+          "q": "How much does Google Ads management cost?",
+          "a": "Setup starts from $300 as a one-off payment. Monthly management starts from $200, or from $500/month for large budgets and e-commerce. The ad budget is paid to Google separately and is not part of our fee."
+        },
+        {
+          "k": "faq",
+          "q": "What ad budget do I need?",
+          "a": "We suggest starting from $300/month. With less, campaigns collect data slowly and it takes longer to see which keywords bring enquiries. Before launch we estimate realistic click costs for your niche and country."
+        },
+        {
+          "k": "faq",
+          "q": "How soon will I see results?",
+          "a": "Search ads can start showing as soon as Google approves them. The first weeks are about collecting data; we judge campaigns by enquiries and sales over several weeks, not by the first few days of clicks."
+        },
+        {
+          "k": "faq",
+          "q": "Do you guarantee leads or the first position?",
+          "a": "No. Nobody can honestly guarantee positions or a number of leads: competition, click prices and your offer all play a part. What we do commit to is transparent work — you own the account, see every change and get a monthly report."
+        },
+        {
+          "k": "faq",
+          "q": "Will the Google Ads account be mine?",
+          "a": "Yes. The Google Ads account, GA4 property and all data stay in your name. We work through manager access, and if we stop working together, everything stays with you."
+        },
+        {
+          "k": "faq",
+          "q": "Do I need a website first?",
+          "a": "You need a page that matches the ad: offer, price and an easy way to get in touch. If your current site is slow or unclear, we can build a landing page from $600 — see website development."
+        },
+        {
+          "k": "faq",
+          "q": "Do you work with businesses outside Ukraine?",
+          "a": "Yes. We run campaigns for clients in Ukraine and the EU, including Poland, Germany, the Netherlands, Czechia, Slovakia and the UK. Communication is in English or Ukrainian, by Telegram, WhatsApp or call."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "related-services",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Other ways to get customers",
+      "items": [
+        {
+          "k": "text",
+          "text": "RELATED SERVICES",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Other ways to get customers"
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/meta-ads/",
+          "items": [
+            {
+              "k": "text",
+              "text": "01"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Facebook and Instagram ads"
+            },
+            {
+              "k": "text",
+              "text": "Pixel, Conversions API, audiences and creatives. Setup from $250."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/seo/",
+          "items": [
+            {
+              "k": "text",
+              "text": "02"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "SEO services"
+            },
+            {
+              "k": "text",
+              "text": "Organic traffic that does not stop when the budget does. From $150/month."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/websites/",
+          "items": [
+            {
+              "k": "text",
+              "text": "03"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Website development"
+            },
+            {
+              "k": "text",
+              "text": "Landing pages built for paid traffic. From $600."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Ready to launch Google Ads?",
+      "items": [
+        {
+          "k": "decor",
+          "text": "GOOGLE"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Ready to launch Google Ads?"
+        },
+        {
+          "k": "text",
+          "text": "Tell us about your business and target market. We reply within 15 minutes during working hours."
+        },
+        {
+          "k": "link",
+          "text": "MESSAGE ON TELEGRAM",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WHATSAPP",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "VIBER",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380 68 828 6969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "link",
+          "text": "FILL IN THE FORM",
+          "href": "/en/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [
+    {
+      "q": "How much does Google Ads management cost?",
+      "a": "Setup starts from $300 as a one-off payment. Monthly management starts from $200, or from $500/month for large budgets and e-commerce. The ad budget is paid to Google separately and is not part of our fee."
+    },
+    {
+      "q": "What ad budget do I need?",
+      "a": "We suggest starting from $300/month. With less, campaigns collect data slowly and it takes longer to see which keywords bring enquiries. Before launch we estimate realistic click costs for your niche and country."
+    },
+    {
+      "q": "How soon will I see results?",
+      "a": "Search ads can start showing as soon as Google approves them. The first weeks are about collecting data; we judge campaigns by enquiries and sales over several weeks, not by the first few days of clicks."
+    },
+    {
+      "q": "Do you guarantee leads or the first position?",
+      "a": "No. Nobody can honestly guarantee positions or a number of leads: competition, click prices and your offer all play a part. What we do commit to is transparent work — you own the account, see every change and get a monthly report."
+    },
+    {
+      "q": "Will the Google Ads account be mine?",
+      "a": "Yes. The Google Ads account, GA4 property and all data stay in your name. We work through manager access, and if we stop working together, everything stays with you."
+    },
+    {
+      "q": "Do I need a website first?",
+      "a": "You need a page that matches the ad: offer, price and an easy way to get in touch. If your current site is slow or unclear, we can build a landing page from $600 — see website development."
+    },
+    {
+      "q": "Do you work with businesses outside Ukraine?",
+      "a": "Yes. We run campaigns for clients in Ukraine and the EU, including Poland, Germany, the Netherlands, Czechia, Slovakia and the UK. Communication is in English or Ukrainian, by Telegram, WhatsApp or call."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "Infinite Union pricing",
+      "href": "/en/pricing/",
+      "block": 6
+    },
+    {
+      "text": "portfolio",
+      "href": "/en/portfolio/",
+      "block": 7
+    },
+    {
+      "text": "website development",
+      "href": "/en/services/websites/",
+      "block": 8
+    },
+    {
+      "text": "01 Facebook and Instagram ads Pixel, Conversions API, audiences and creatives. Setup from $250. Learn more →",
+      "href": "/en/services/meta-ads/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "02 SEO services Organic traffic that does not stop when the budget does. From $150/month. Learn more →",
+      "href": "/en/services/seo/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "03 Website development Landing pages built for paid traffic. From $600. Learn more →",
+      "href": "/en/services/websites/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "FILL IN THE FORM",
+      "href": "/en/#contact",
+      "block": 10
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "MESSAGE ON TELEGRAM",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 10
+    },
+    {
+      "text": "WHATSAPP",
+      "href": "https://wa.me/380688286969",
+      "block": 10
+    },
+    {
+      "text": "VIBER",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 10
+    },
+    {
+      "text": "+380 68 828 6969",
+      "href": "tel:+380688286969",
+      "block": 10
+    }
+  ]
+}

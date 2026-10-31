@@ -1,0 +1,1015 @@
+{
+  "url": "https://infiniteunion.com.ua/en/services/platforms/",
+  "path": "/en/services/platforms/",
+  "file": "en/services/platforms/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/services/platforms/",
+    "url": "https://infiniteunion.com.ua/services/platforms/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "Web platforms & SaaS",
+  "title": "Web Platform & SaaS Development — MVP from $2,500",
+  "description": "Web platform and SaaS development: dashboards, client portals, internal tools. React/Next.js, FastAPI, PostgreSQL. MVP from $2,500 in 4–8 weeks.",
+  "keyword": "SaaS development",
+  "priceFrom": 2500,
+  "robots": "index, follow",
+  "h1": "SaaS development from MVP to full platform.",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Web platforms & SaaS",
+      "url": "/en/services/platforms/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--red-glow": "rgba(212,0,0,0.15)",
+    "--bg": "#060404",
+    "--bg2": "#0e0b0b",
+    "--border": "rgba(255,255,255,0.08)",
+    "--text": "#fff",
+    "--muted": "rgba(255,255,255,0.45)",
+    "--muted2": "rgba(255,255,255,0.25)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ease": "cubic-bezier(0.76,0,0.24,1)",
+    "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+  },
+  "words": 977,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Back",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/services/platforms/"
+    },
+    {
+      "k": "link",
+      "text": "ORDER PLATFORM",
+      "href": "/en/services/platforms/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "SaaS development from MVP to full platform.",
+      "items": [
+        {
+          "k": "text",
+          "text": "SERVICE 03 · SAAS AND WEB PLATFORMS",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "SaaS development from MVP to full platform."
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union is a development agency in Kharkiv, Ukraine, working with founders and companies across the EU. We build SaaS products, client portals, dashboards and internal tools with React, Next.js, FastAPI and PostgreSQL. An MVP starts at $2,500 and takes 4–8 weeks."
+        },
+        {
+          "k": "text",
+          "text": "$2,500",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "MVP FROM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "4–8 wks",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "TYPICAL MVP TIMELINE",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$6,000",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "FULL PLATFORM FROM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "15 min",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "REPLY TIME, BUSINESS HOURS",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "decor",
+          "text": "app.example.com/dashboard TYPICAL MVP SCOPE Sign-up and rolesAuth SubscriptionsStripe Core featureYour product Admin and reportsDashboard IntegrationsREST API"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "REACT NEXT.JS TYPESCRIPT FASTAPI POSTGRESQL REDIS SaaS REST API REACT NEXT.JS TYPESCRIPT FASTAPI POSTGRESQL REDIS SaaS REST API"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "When spreadsheets and plugins stop working",
+      "items": [
+        {
+          "k": "text",
+          "text": "THE PROBLEM",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "When spreadsheets and plugins stop working"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "The idea needs real users"
+        },
+        {
+          "k": "text",
+          "text": "You have a product idea and want paying customers before investing a year of development. You need a focused MVP that does one job well, not a prototype that falls apart once real users arrive.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "The business outgrew its tools"
+        },
+        {
+          "k": "text",
+          "text": "Orders live in one spreadsheet, clients in another, reports are put together by hand every Friday. Off-the-shelf software covers most of the process, and the part it misses is where the time goes.",
+          "role": "what-desc"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "class": "what",
+      "heading": "SaaS development and web apps we deliver",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHAT WE BUILD",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "SaaS development and web apps we deliver"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "SaaS products"
+        },
+        {
+          "k": "text",
+          "text": "Subscription services with user accounts, roles, billing and an admin panel. Stripe for EU customers, LiqPay or Monobank for Ukraine.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Subscriptions · Stripe · Roles",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Client portals"
+        },
+        {
+          "k": "text",
+          "text": "A private area where your clients see orders, documents, invoices and status updates, instead of asking for them by email.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Accounts · Documents · Notifications",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Dashboards and reporting"
+        },
+        {
+          "k": "text",
+          "text": "Data from your ad accounts, CRM or database collected in one screen and refreshed automatically. Our own Ad Tracker, which pulls Meta, Google and TikTok Ads into one dashboard, is built this way.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Analytics · API · Auto-refresh",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Internal tools"
+        },
+        {
+          "k": "text",
+          "text": "Order management, task tracking, payroll or stock: software built around how your team actually works, connected to Telegram for notifications.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Workflows · Telegram · Integrations",
+          "role": "what-tags"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Stages and timelines",
+      "items": [
+        {
+          "k": "text",
+          "text": "HOW WE WORK",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Stages and timelines"
+        },
+        {
+          "k": "text",
+          "text": "STAGE 01 · 1–2 DAYS",
+          "role": "stack-cat"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Discovery"
+        },
+        {
+          "k": "text",
+          "text": "Users, core scenarios and what goes into version one. You get a written scope and a fixed quote.",
+          "role": "stack-sub"
+        },
+        {
+          "k": "text",
+          "text": "STAGE 02 · 3–5 DAYS",
+          "role": "stack-cat"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Prototype"
+        },
+        {
+          "k": "text",
+          "text": "Clickable screens for the main flows, so you can test the logic before code is written.",
+          "role": "stack-sub"
+        },
+        {
+          "k": "text",
+          "text": "STAGE 03 · 4–8 WEEKS FOR AN MVP",
+          "role": "stack-cat"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Development"
+        },
+        {
+          "k": "text",
+          "text": "Regular progress updates on a staging link, so you see working features as they are built.",
+          "role": "stack-sub"
+        },
+        {
+          "k": "text",
+          "text": "STAGE 04 · 2–4 DAYS + 1 DAY",
+          "role": "stack-cat"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Testing and launch"
+        },
+        {
+          "k": "text",
+          "text": "End-to-end testing, deployment, then handover of the repository, documentation and access.",
+          "role": "stack-sub"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "tech-stack",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "The stack we build on",
+      "items": [
+        {
+          "k": "text",
+          "text": "TECHNOLOGY",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "The stack we build on"
+        },
+        {
+          "k": "text",
+          "text": "FRONTEND",
+          "role": "stack-cat"
+        },
+        {
+          "k": "text",
+          "text": "React / Next.js",
+          "role": "stack-item"
+        },
+        {
+          "k": "text",
+          "text": "Fast interfaces and server rendering",
+          "role": "stack-sub"
+        },
+        {
+          "k": "text",
+          "text": "TypeScript",
+          "role": "stack-item"
+        },
+        {
+          "k": "text",
+          "text": "Fewer bugs as the code grows",
+          "role": "stack-sub"
+        },
+        {
+          "k": "text",
+          "text": "BACKEND",
+          "role": "stack-cat"
+        },
+        {
+          "k": "text",
+          "text": "Python / FastAPI",
+          "role": "stack-item"
+        },
+        {
+          "k": "text",
+          "text": "Async APIs",
+          "role": "stack-sub"
+        },
+        {
+          "k": "text",
+          "text": "PostgreSQL",
+          "role": "stack-item"
+        },
+        {
+          "k": "text",
+          "text": "Reliable relational database",
+          "role": "stack-sub"
+        },
+        {
+          "k": "text",
+          "text": "INFRASTRUCTURE",
+          "role": "stack-cat"
+        },
+        {
+          "k": "text",
+          "text": "Railway",
+          "role": "stack-item"
+        },
+        {
+          "k": "text",
+          "text": "Cloud hosting and deploys",
+          "role": "stack-sub"
+        },
+        {
+          "k": "text",
+          "text": "Cloudflare",
+          "role": "stack-item"
+        },
+        {
+          "k": "text",
+          "text": "CDN and protection",
+          "role": "stack-sub"
+        },
+        {
+          "k": "text",
+          "text": "DATA AND AI",
+          "role": "stack-cat"
+        },
+        {
+          "k": "text",
+          "text": "Redis",
+          "role": "stack-item"
+        },
+        {
+          "k": "text",
+          "text": "Caching and queues",
+          "role": "stack-sub"
+        },
+        {
+          "k": "text",
+          "text": "n8n · Claude API",
+          "role": "stack-item"
+        },
+        {
+          "k": "text",
+          "text": "Automation and AI features",
+          "role": "stack-sub"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "pricing-tiers",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "SaaS development cost",
+      "items": [
+        {
+          "k": "text",
+          "text": "PRICING",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "SaaS development cost"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "MVP"
+        },
+        {
+          "k": "text",
+          "text": "from $2,500",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "First version for real users · 4–8 weeks",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Core product features",
+            "Sign-up, login and roles",
+            "Basic admin dashboard",
+            "REST API",
+            "Cloud deployment",
+            "Payments",
+            "Advanced analytics"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "DISCUSS YOUR MVP",
+          "href": "/en/services/platforms/#contact"
+        },
+        {
+          "k": "text",
+          "text": "MOST REQUESTED",
+          "role": "level-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Platform"
+        },
+        {
+          "k": "text",
+          "text": "from $6,000",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "Complete product · 2–4 months",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Full feature set",
+            "Mobile-friendly interface",
+            "Payments and subscriptions",
+            "Analytics and reports",
+            "Admin panel",
+            "Third-party integrations",
+            "Automated deploys"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "DISCUSS YOUR PLATFORM",
+          "href": "/en/services/platforms/#contact"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Enterprise"
+        },
+        {
+          "k": "text",
+          "text": "from $15,000",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "Large system · scope agreed individually",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Multiple user groups and permissions",
+            "Integrations with your existing systems",
+            "Custom reporting",
+            "Technical documentation",
+            "Team training and handover"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "DISCUSS YOUR PROJECT",
+          "href": "/en/services/platforms/#contact"
+        },
+        {
+          "k": "text",
+          "text": "Hosting and third-party services are billed separately. Support after launch starts at $150/month or by the hour. See all prices on the pricing page. If you mainly need a website, bot and CRM connected together, business automation starts at $2,000. A Telegram-first product can also start as a Telegram bot or Mini App."
+        }
+      ],
+      "tiers": [
+        {
+          "name": "MVP",
+          "price": "from $2,500",
+          "priceNote": "First version for real users · 4–8 weeks",
+          "term": "First version for real users · 4–8 weeks",
+          "includes": [
+            "Core product features",
+            "Sign-up, login and roles",
+            "Basic admin dashboard",
+            "REST API",
+            "Cloud deployment",
+            "Payments",
+            "Advanced analytics"
+          ],
+          "cta": [
+            {
+              "text": "DISCUSS YOUR MVP",
+              "href": "#contact"
+            }
+          ]
+        },
+        {
+          "name": "Platform",
+          "badge": "MOST REQUESTED",
+          "price": "from $6,000",
+          "priceNote": "Complete product · 2–4 months",
+          "term": "Complete product · 2–4 months",
+          "includes": [
+            "Full feature set",
+            "Mobile-friendly interface",
+            "Payments and subscriptions",
+            "Analytics and reports",
+            "Admin panel",
+            "Third-party integrations",
+            "Automated deploys"
+          ],
+          "cta": [
+            {
+              "text": "DISCUSS YOUR PLATFORM",
+              "href": "#contact"
+            }
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "price": "from $15,000",
+          "priceNote": "Large system · scope agreed individually",
+          "term": "",
+          "includes": [
+            "Multiple user groups and permissions",
+            "Integrations with your existing systems",
+            "Custom reporting",
+            "Technical documentation",
+            "Team training and handover"
+          ],
+          "cta": [
+            {
+              "text": "DISCUSS YOUR PROJECT",
+              "href": "#contact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Platforms we have built",
+      "items": [
+        {
+          "k": "text",
+          "text": "FROM OUR PORTFOLIO",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Platforms we have built"
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-ad-tracker",
+          "items": [
+            {
+              "k": "text",
+              "text": "AD TRACKER BY IU",
+              "role": "what-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Ad reporting portal"
+            },
+            {
+              "k": "text",
+              "text": "Meta, Google and TikTok Ads in one dashboard, refreshed every 2 hours with 90 days of history. Saves 5+ hours a week on reports. Currently in development.",
+              "role": "what-desc"
+            },
+            {
+              "k": "text",
+              "text": "Next.js · PostgreSQL · Ads APIs",
+              "role": "what-tags"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-respect-car",
+          "items": [
+            {
+              "k": "text",
+              "text": "RESPECT CAR",
+              "role": "what-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Car dealer platform"
+            },
+            {
+              "k": "text",
+              "text": "Sales, buyback and US import for a Kharkiv car dealer, with a live catalogue and an admin panel that runs inside Telegram.",
+              "role": "what-desc"
+            },
+            {
+              "k": "text",
+              "text": "Next.js 16 · React 19 · Redis",
+              "role": "what-tags"
+            }
+          ]
+        },
+        {
+          "k": "text",
+          "text": "View the full portfolio"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq",
+      "heading": "SaaS development: common questions",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "SaaS development: common questions"
+        },
+        {
+          "k": "faq",
+          "q": "How is a web platform different from a website?",
+          "a": "A website mostly presents information. A platform has user accounts, a database, business logic and an API: people log in and do work in it, such as placing orders, managing subscriptions or viewing reports."
+        },
+        {
+          "k": "faq",
+          "q": "How much does SaaS development cost?",
+          "a": "An MVP starts at $2,500 (4–8 weeks), a full platform at $6,000 (2–4 months) and enterprise systems at $15,000. After the discovery call we split the scope into tasks and give you a fixed quote."
+        },
+        {
+          "k": "faq",
+          "q": "What should go into an MVP?",
+          "a": "Only what a first customer needs to get value and pay: sign-up, the core feature and a simple admin. Everything else goes on a list for version two, based on what real users ask for."
+        },
+        {
+          "k": "faq",
+          "q": "Can you take over a project someone else started?",
+          "a": "Yes, after a code review. If the code is in reasonable shape, we continue. If there are serious problems, we tell you plainly and suggest a plan to fix them."
+        },
+        {
+          "k": "faq",
+          "q": "Who owns the code?",
+          "a": "You do. We hand over the repository, all access, technical documentation and deployment instructions, and walk your team through the codebase."
+        },
+        {
+          "k": "faq",
+          "q": "Do you work with founders outside Ukraine?",
+          "a": "Yes. We are based in Kharkiv and work with clients across the EU and the UK. All communication is in English, by chat, email or video call, and payment is split into stages."
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Let's scope your product",
+      "items": [
+        {
+          "k": "text",
+          "text": "HAVE AN IDEA?",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Let's scope your product"
+        },
+        {
+          "k": "text",
+          "text": "Free technical consultation. We reply within 15 minutes during business hours.",
+          "role": "cta-final-sub"
+        },
+        {
+          "k": "link",
+          "text": "MESSAGE ON TELEGRAM",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WHATSAPP",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "FILL IN THE FORM",
+          "href": "/en/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [
+    {
+      "block": 7,
+      "section": "SaaS development cost",
+      "name": "MVP",
+      "price": "from $2,500",
+      "priceNote": "First version for real users · 4–8 weeks",
+      "term": "First version for real users · 4–8 weeks",
+      "includes": [
+        "Core product features",
+        "Sign-up, login and roles",
+        "Basic admin dashboard",
+        "REST API",
+        "Cloud deployment",
+        "Payments",
+        "Advanced analytics"
+      ],
+      "cta": [
+        {
+          "text": "DISCUSS YOUR MVP",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 7,
+      "section": "SaaS development cost",
+      "name": "Platform",
+      "badge": "MOST REQUESTED",
+      "price": "from $6,000",
+      "priceNote": "Complete product · 2–4 months",
+      "term": "Complete product · 2–4 months",
+      "includes": [
+        "Full feature set",
+        "Mobile-friendly interface",
+        "Payments and subscriptions",
+        "Analytics and reports",
+        "Admin panel",
+        "Third-party integrations",
+        "Automated deploys"
+      ],
+      "cta": [
+        {
+          "text": "DISCUSS YOUR PLATFORM",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 7,
+      "section": "SaaS development cost",
+      "name": "Enterprise",
+      "price": "from $15,000",
+      "priceNote": "Large system · scope agreed individually",
+      "term": "",
+      "includes": [
+        "Multiple user groups and permissions",
+        "Integrations with your existing systems",
+        "Custom reporting",
+        "Technical documentation",
+        "Team training and handover"
+      ],
+      "cta": [
+        {
+          "text": "DISCUSS YOUR PROJECT",
+          "href": "#contact"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is a web platform different from a website?",
+      "a": "A website mostly presents information. A platform has user accounts, a database, business logic and an API: people log in and do work in it, such as placing orders, managing subscriptions or viewing reports."
+    },
+    {
+      "q": "How much does SaaS development cost?",
+      "a": "An MVP starts at $2,500 (4–8 weeks), a full platform at $6,000 (2–4 months) and enterprise systems at $15,000. After the discovery call we split the scope into tasks and give you a fixed quote."
+    },
+    {
+      "q": "What should go into an MVP?",
+      "a": "Only what a first customer needs to get value and pay: sign-up, the core feature and a simple admin. Everything else goes on a list for version two, based on what real users ask for."
+    },
+    {
+      "q": "Can you take over a project someone else started?",
+      "a": "Yes, after a code review. If the code is in reasonable shape, we continue. If there are serious problems, we tell you plainly and suggest a plan to fix them."
+    },
+    {
+      "q": "Who owns the code?",
+      "a": "You do. We hand over the repository, all access, technical documentation and deployment instructions, and walk your team through the codebase."
+    },
+    {
+      "q": "Do you work with founders outside Ukraine?",
+      "a": "Yes. We are based in Kharkiv and work with clients across the EU and the UK. All communication is in English, by chat, email or video call, and payment is split into stages."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "DISCUSS YOUR MVP",
+      "href": "/en/services/platforms/#contact",
+      "block": 7
+    },
+    {
+      "text": "DISCUSS YOUR PLATFORM",
+      "href": "/en/services/platforms/#contact",
+      "block": 7
+    },
+    {
+      "text": "DISCUSS YOUR PROJECT",
+      "href": "/en/services/platforms/#contact",
+      "block": 7
+    },
+    {
+      "text": "pricing page",
+      "href": "/en/pricing/",
+      "block": 7
+    },
+    {
+      "text": "business automation",
+      "href": "/en/services/ecosystems/",
+      "block": 7
+    },
+    {
+      "text": "Telegram bot or Mini App",
+      "href": "/en/services/bots/",
+      "block": 7
+    },
+    {
+      "text": "AD TRACKER BY IU Ad reporting portal Meta, Google and TikTok Ads in one dashboard, refreshed every 2 hours with 90 days of history. Saves 5+ hours a week on reports. Currently in development. Next.jsPostgreSQLAds APIs",
+      "href": "/en/portfolio/#p-ad-tracker",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "RESPECT CAR Car dealer platform Sales, buyback and US import for a Kharkiv car dealer, with a live catalogue and an admin panel that runs inside Telegram. Next.js 16React 19Redis",
+      "href": "/en/portfolio/#p-respect-car",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "View the full portfolio",
+      "href": "/en/portfolio/",
+      "block": 8
+    },
+    {
+      "text": "FILL IN THE FORM",
+      "href": "/en/#contact",
+      "block": 10
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "MESSAGE ON TELEGRAM",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 10
+    },
+    {
+      "text": "WHATSAPP",
+      "href": "https://wa.me/380688286969",
+      "block": 10
+    }
+  ]
+}

@@ -1,0 +1,1144 @@
+{
+  "url": "https://infiniteunion.com.ua/en/services/websites/",
+  "path": "/en/services/websites/",
+  "file": "en/services/websites/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/services/websites/",
+    "url": "https://infiniteunion.com.ua/services/websites/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "Website development",
+  "title": "Website Development in Ukraine — from $600 | Infinite Union",
+  "description": "Custom website development from a Ukrainian agency: landing pages, corporate sites, online stores. Unique design, SEO-ready code, you own everything.",
+  "keyword": "website development Ukraine",
+  "secondaryKeywords": "website development Ukraine, web development company Ukraine, hire Ukrainian web developers. `/en/pricing/`: custom website development cost, how much does a website cost, website price Ukraine",
+  "priceFrom": 600,
+  "robots": "index, follow",
+  "h1": "Website development in Ukraine.",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Website development",
+      "url": "/en/services/websites/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#060404",
+    "--bg2": "#0e0b0b",
+    "--border": "rgba(255,255,255,0.08)",
+    "--text": "#fff",
+    "--muted": "rgba(255,255,255,0.45)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif"
+  },
+  "words": 1169,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Back",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/services/websites/"
+    },
+    {
+      "k": "link",
+      "text": "ORDER WEBSITE",
+      "href": "/en/services/websites/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "Website development in Ukraine.",
+      "items": [
+        {
+          "k": "text",
+          "text": "SERVICE 01 · WEBSITE DEVELOPMENT",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Website development in Ukraine."
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union is a web studio based in Kharkiv, Ukraine, working with small businesses at home and across the EU. We design and build landing pages, corporate websites and online stores: custom design, SEO-ready code, launch in 10 days to 5 weeks. Landing pages from $600. Get a quote."
+        },
+        {
+          "k": "text",
+          "text": "$600",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "LANDING PAGES FROM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$1,000",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "CORPORATE SITES FROM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$1,200",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "ONLINE STORES FROM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "15 min",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "REPLY TIME, BUSINESS HOURS",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "FLAGSHIP PROJECT",
+          "role": "flagship-tag"
+        },
+        {
+          "k": "text",
+          "text": "Transfer Kharkiv",
+          "role": "flagship-name"
+        },
+        {
+          "k": "text",
+          "text": "transferkharkiv.com.ua",
+          "role": "flagship-url"
+        },
+        {
+          "k": "text",
+          "text": "8.4%",
+          "role": "fm-val"
+        },
+        {
+          "k": "text",
+          "text": "Landing page conversion",
+          "role": "fm-key"
+        },
+        {
+          "k": "text",
+          "text": "119+",
+          "role": "fm-val"
+        },
+        {
+          "k": "text",
+          "text": "Search positions in the top",
+          "role": "fm-key"
+        },
+        {
+          "k": "text",
+          "text": "24/7",
+          "role": "fm-val"
+        },
+        {
+          "k": "text",
+          "text": "Bookings via Telegram bot",
+          "role": "fm-key"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Why most small business sites underperform",
+      "items": [
+        {
+          "k": "text",
+          "text": "THE PROBLEM",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Why most small business sites underperform"
+        },
+        {
+          "k": "text",
+          "text": "A template site looks fine on the day it goes live. Then the problems show up: it loads slowly on mobile, Google indexes half the pages, the contact form sends enquiries to an inbox nobody checks, and every small change needs the original freelancer, who no longer replies."
+        },
+        {
+          "k": "text",
+          "text": "We fix that at the source. Every website we build has a clear structure planned around what your customers search for, fast hand-written code, and a lead form connected to Telegram or your CRM, so enquiries reach a person within minutes."
+        },
+        {
+          "k": "text",
+          "text": "When the project is done, the source code, domain, hosting and analytics accounts are yours. You can keep working with us or hand the site to any other team."
+        },
+        {
+          "k": "text",
+          "text": "10 days",
+          "role": "cred-val"
+        },
+        {
+          "k": "text",
+          "text": "Landing page from brief to launch",
+          "role": "cred-label"
+        },
+        {
+          "k": "text",
+          "text": "1 month",
+          "role": "cred-val"
+        },
+        {
+          "k": "text",
+          "text": "Support included after launch",
+          "role": "cred-label"
+        },
+        {
+          "k": "text",
+          "text": "2 stages",
+          "role": "cred-val"
+        },
+        {
+          "k": "text",
+          "text": "Payment split into stages",
+          "role": "cred-label"
+        },
+        {
+          "k": "text",
+          "text": "100%",
+          "role": "cred-val"
+        },
+        {
+          "k": "text",
+          "text": "Source code handed over",
+          "role": "cred-label"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "class": "what",
+      "heading": "What every website project includes",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHAT'S INCLUDED",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "What every website project includes"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Structure and copy plan"
+        },
+        {
+          "k": "text",
+          "text": "We look at your competitors and the search terms your customers use, then plan the pages and sections around them. You approve the structure before design starts.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Competitor review · Keyword map · Sitemap",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Custom design"
+        },
+        {
+          "k": "text",
+          "text": "A design made for your brand, not a purchased theme. Mobile layouts are designed first, because that is where most of your visitors arrive.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Figma · Mobile-first · Brand styling",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Fast, clean front end"
+        },
+        {
+          "k": "text",
+          "text": "Semantic HTML, light pages and animations that do not slow the site down. We build with plain HTML/CSS/JS or Next.js and React, depending on what the project needs.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "HTML/CSS/JS · Next.js · Core Web Vitals",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "SEO basics and lead delivery"
+        },
+        {
+          "k": "text",
+          "text": "Meta tags, schema markup, sitemap, robots.txt and analytics are set up before launch. Form enquiries go straight to Telegram or your CRM.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "On-page SEO · Schema.org · Telegram / CRM",
+          "role": "what-tags"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "pricing-tiers",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Website types and prices",
+      "items": [
+        {
+          "k": "text",
+          "text": "PRICING",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Website types and prices"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Landing page"
+        },
+        {
+          "k": "text",
+          "text": "from $600",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "One page built to get enquiries",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Start from $600: 5–7 sections, up to 10 days",
+            "Pro from $1,200: 10+ sections, up to 3 weeks",
+            "Max from $2,000: extended scope and integrations",
+            "Good for a single service, offer or ad campaign"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "DISCUSS A LANDING PAGE",
+          "href": "/en/services/websites/#contact"
+        },
+        {
+          "k": "text",
+          "text": "MOST REQUESTED",
+          "role": "level-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Corporate website"
+        },
+        {
+          "k": "text",
+          "text": "from $1,000",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "Multi-page site for a company",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Business from $1,000: 5–8 pages, about 3 weeks",
+            "Pro from $2,000: 10–20 pages, 4–5 weeks",
+            "Enterprise from $4,000: 50+ pages",
+            "Services, team, case studies, blog, multilingual"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "DISCUSS A COMPANY SITE",
+          "href": "/en/services/websites/#contact"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Online store"
+        },
+        {
+          "k": "text",
+          "text": "from $1,200",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "Catalogue, cart and payments",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Start from $1,200: up to 100 products, about 3 weeks",
+            "Pro from $2,500: unlimited products, about 5 weeks",
+            "Marketplace from $5,000: multiple sellers",
+            "Payments, delivery and order notifications"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "DISCUSS A STORE",
+          "href": "/en/services/websites/#contact"
+        },
+        {
+          "k": "text",
+          "text": "Every price includes custom design, responsive layout, basic SEO setup, a basic Telegram or CRM integration and one month of support. Hosting and domain are paid separately. Support after the first month starts at $150/month. Compare all packages on the pricing page. If you need user accounts, dashboards or billing, that is a web platform: see SaaS development. Need the site, a bot and a CRM working together? See business automation."
+        }
+      ],
+      "tiers": [
+        {
+          "name": "Landing page",
+          "price": "from $600",
+          "priceNote": "One page built to get enquiries",
+          "term": "Start from $600: 5–7 sections, up to 10 days",
+          "includes": [
+            "Start from $600: 5–7 sections, up to 10 days",
+            "Pro from $1,200: 10+ sections, up to 3 weeks",
+            "Max from $2,000: extended scope and integrations",
+            "Good for a single service, offer or ad campaign"
+          ],
+          "cta": [
+            {
+              "text": "DISCUSS A LANDING PAGE",
+              "href": "#contact"
+            }
+          ]
+        },
+        {
+          "name": "Corporate website",
+          "badge": "MOST REQUESTED",
+          "price": "from $1,000",
+          "priceNote": "Multi-page site for a company",
+          "term": "Business from $1,000: 5–8 pages, about 3 weeks",
+          "includes": [
+            "Business from $1,000: 5–8 pages, about 3 weeks",
+            "Pro from $2,000: 10–20 pages, 4–5 weeks",
+            "Enterprise from $4,000: 50+ pages",
+            "Services, team, case studies, blog, multilingual"
+          ],
+          "cta": [
+            {
+              "text": "DISCUSS A COMPANY SITE",
+              "href": "#contact"
+            }
+          ]
+        },
+        {
+          "name": "Online store",
+          "price": "from $1,200",
+          "priceNote": "Catalogue, cart and payments",
+          "term": "Start from $1,200: up to 100 products, about 3 weeks",
+          "includes": [
+            "Start from $1,200: up to 100 products, about 3 weeks",
+            "Pro from $2,500: unlimited products, about 5 weeks",
+            "Marketplace from $5,000: multiple sellers",
+            "Payments, delivery and order notifications"
+          ],
+          "cta": [
+            {
+              "text": "DISCUSS A STORE",
+              "href": "#contact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "class": "process",
+      "heading": "From brief to launch",
+      "items": [
+        {
+          "k": "text",
+          "text": "HOW WE WORK",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "From brief to launch"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Brief"
+        },
+        {
+          "k": "text",
+          "text": "Goals, audience, competitors and a fixed quote",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Prototype"
+        },
+        {
+          "k": "text",
+          "text": "Page structure and key screens for your approval",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "3–5 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Design and build"
+        },
+        {
+          "k": "text",
+          "text": "Final design, code, forms and integrations on a staging link",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "Depends on scope",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Testing"
+        },
+        {
+          "k": "text",
+          "text": "Phones, browsers, forms, speed and SEO checks",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "2–4 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Launch"
+        },
+        {
+          "k": "text",
+          "text": "Go-live, analytics, handover of code and access",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "1 day, then support",
+          "role": "process-time"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-tiers",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "After the site goes live",
+      "items": [
+        {
+          "k": "text",
+          "text": "ADD-ONS",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "After the site goes live"
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/seo/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "📈"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "SEO"
+            },
+            {
+              "k": "text",
+              "text": "Keyword research, technical fixes, content and links. A one-off SEO audit starts at $100 (up to 50 pages). First results usually take 3–6 months.",
+              "role": "extra-desc"
+            },
+            {
+              "k": "text",
+              "text": "from $150 / month",
+              "role": "extra-price"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/google-ads/",
+          "items": [
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Google and Meta Ads"
+            },
+            {
+              "k": "text",
+              "text": "Campaign setup from $300 (Google) or $250 (Meta), with conversion tracking connected to your new site. Ad budget is paid separately.",
+              "role": "extra-desc"
+            },
+            {
+              "k": "text",
+              "text": "management from $200 / month",
+              "role": "extra-price"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/bots/",
+          "items": [
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Telegram bot"
+            },
+            {
+              "k": "text",
+              "text": "A bot that takes bookings, answers common questions and sends every lead from the site to your team.",
+              "role": "extra-desc"
+            },
+            {
+              "k": "text",
+              "text": "from $300",
+              "role": "extra-price"
+            }
+          ]
+        }
+      ],
+      "tiers": [
+        {
+          "name": "SEO",
+          "price": "from $150 / month",
+          "term": "",
+          "includes": [],
+          "cta": []
+        },
+        {
+          "name": "Google and Meta Ads",
+          "price": "management from $200 / month",
+          "term": "",
+          "includes": [],
+          "cta": []
+        },
+        {
+          "name": "Telegram bot",
+          "price": "from $300",
+          "term": "",
+          "includes": [],
+          "cta": []
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq",
+      "heading": "Website development: common questions",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Website development: common questions"
+        },
+        {
+          "k": "faq",
+          "q": "How long does it take to build a website?",
+          "a": "A Start landing page takes up to 10 days, a Pro landing page up to 3 weeks. A corporate website takes about 3 weeks for 5–8 pages and 4–5 weeks for 10–20 pages. An online store takes about 3 weeks (Start) or 5 weeks (Pro). The timeline is agreed in writing before we start."
+        },
+        {
+          "k": "faq",
+          "q": "How much does a website cost?",
+          "a": "Landing pages start at $600, corporate websites at $1,000 and online stores at $1,200. The price includes design, responsive layout, basic SEO, a basic Telegram or CRM integration and one month of support. Hosting and domain are extra."
+        },
+        {
+          "k": "faq",
+          "q": "Do you work with clients outside Ukraine?",
+          "a": "Yes. We are based in Kharkiv and work with clients in Poland, Germany, the Netherlands, Czechia, Slovakia and the UK. Communication is in English over Telegram, WhatsApp, email or video calls, and prices are quoted in US dollars."
+        },
+        {
+          "k": "faq",
+          "q": "How does payment work?",
+          "a": "You pay in stages. For most websites it is 50% before work starts and 50% after launch. Larger projects are split into milestones."
+        },
+        {
+          "k": "faq",
+          "q": "Will I own the website?",
+          "a": "Yes. We hand over the full source code and all access: domain, hosting, analytics and admin panel. You are not locked into working with us."
+        },
+        {
+          "k": "faq",
+          "q": "What happens after launch?",
+          "a": "The first month of support is included: fixes and small edits. After that you can choose a support plan from $150/month, pay by the hour, or add SEO and ads to bring in traffic."
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Websites we have built",
+      "items": [
+        {
+          "k": "text",
+          "text": "FROM OUR PORTFOLIO",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Websites we have built"
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-transfer-kharkiv",
+          "items": [
+            {
+              "k": "text",
+              "text": "LANDING PAGE"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Transfer Kharkiv"
+            },
+            {
+              "k": "text",
+              "text": "Landing page for a transfer company with 8.4% conversion and 119+ search positions in the top. A Telegram bot takes bookings around the clock."
+            },
+            {
+              "k": "text",
+              "text": "See the project →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-respect-car",
+          "items": [
+            {
+              "k": "text",
+              "text": "CATALOGUE WEBSITE"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Respect Car"
+            },
+            {
+              "k": "text",
+              "text": "Website for a Kharkiv car dealer: sales, buyback and imports from the USA. Live car catalogue with photos, managed from a Telegram admin panel."
+            },
+            {
+              "k": "text",
+              "text": "See the project →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-parrot-school",
+          "items": [
+            {
+              "k": "text",
+              "text": "WEBSITE + BOTS"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Parrot School"
+            },
+            {
+              "k": "text",
+              "text": "Website for an English school in Kharkiv plus a Telegram system for students, parents and teachers, with a separate admin bot."
+            },
+            {
+              "k": "text",
+              "text": "See the project →"
+            }
+          ]
+        },
+        {
+          "k": "text",
+          "text": "View the full portfolio"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Let's talk about your website",
+      "items": [
+        {
+          "k": "text",
+          "text": "READY TO START?",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Let's talk about your website"
+        },
+        {
+          "k": "text",
+          "text": "Send a short description of your business and what the site should do. We reply within 15 minutes during business hours, in English.",
+          "role": "cta-final-sub"
+        },
+        {
+          "k": "link",
+          "text": "MESSAGE ON TELEGRAM",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WHATSAPP",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "FILL IN THE FORM",
+          "href": "/en/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [
+    {
+      "block": 4,
+      "section": "Website types and prices",
+      "name": "Landing page",
+      "price": "from $600",
+      "priceNote": "One page built to get enquiries",
+      "term": "Start from $600: 5–7 sections, up to 10 days",
+      "includes": [
+        "Start from $600: 5–7 sections, up to 10 days",
+        "Pro from $1,200: 10+ sections, up to 3 weeks",
+        "Max from $2,000: extended scope and integrations",
+        "Good for a single service, offer or ad campaign"
+      ],
+      "cta": [
+        {
+          "text": "DISCUSS A LANDING PAGE",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 4,
+      "section": "Website types and prices",
+      "name": "Corporate website",
+      "badge": "MOST REQUESTED",
+      "price": "from $1,000",
+      "priceNote": "Multi-page site for a company",
+      "term": "Business from $1,000: 5–8 pages, about 3 weeks",
+      "includes": [
+        "Business from $1,000: 5–8 pages, about 3 weeks",
+        "Pro from $2,000: 10–20 pages, 4–5 weeks",
+        "Enterprise from $4,000: 50+ pages",
+        "Services, team, case studies, blog, multilingual"
+      ],
+      "cta": [
+        {
+          "text": "DISCUSS A COMPANY SITE",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 4,
+      "section": "Website types and prices",
+      "name": "Online store",
+      "price": "from $1,200",
+      "priceNote": "Catalogue, cart and payments",
+      "term": "Start from $1,200: up to 100 products, about 3 weeks",
+      "includes": [
+        "Start from $1,200: up to 100 products, about 3 weeks",
+        "Pro from $2,500: unlimited products, about 5 weeks",
+        "Marketplace from $5,000: multiple sellers",
+        "Payments, delivery and order notifications"
+      ],
+      "cta": [
+        {
+          "text": "DISCUSS A STORE",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 6,
+      "section": "After the site goes live",
+      "name": "SEO",
+      "price": "from $150 / month",
+      "term": "",
+      "includes": [],
+      "cta": []
+    },
+    {
+      "block": 6,
+      "section": "After the site goes live",
+      "name": "Google and Meta Ads",
+      "price": "management from $200 / month",
+      "term": "",
+      "includes": [],
+      "cta": []
+    },
+    {
+      "block": 6,
+      "section": "After the site goes live",
+      "name": "Telegram bot",
+      "price": "from $300",
+      "term": "",
+      "includes": [],
+      "cta": []
+    }
+  ],
+  "faq": [
+    {
+      "q": "How long does it take to build a website?",
+      "a": "A Start landing page takes up to 10 days, a Pro landing page up to 3 weeks. A corporate website takes about 3 weeks for 5–8 pages and 4–5 weeks for 10–20 pages. An online store takes about 3 weeks (Start) or 5 weeks (Pro). The timeline is agreed in writing before we start."
+    },
+    {
+      "q": "How much does a website cost?",
+      "a": "Landing pages start at $600, corporate websites at $1,000 and online stores at $1,200. The price includes design, responsive layout, basic SEO, a basic Telegram or CRM integration and one month of support. Hosting and domain are extra."
+    },
+    {
+      "q": "Do you work with clients outside Ukraine?",
+      "a": "Yes. We are based in Kharkiv and work with clients in Poland, Germany, the Netherlands, Czechia, Slovakia and the UK. Communication is in English over Telegram, WhatsApp, email or video calls, and prices are quoted in US dollars."
+    },
+    {
+      "q": "How does payment work?",
+      "a": "You pay in stages. For most websites it is 50% before work starts and 50% after launch. Larger projects are split into milestones."
+    },
+    {
+      "q": "Will I own the website?",
+      "a": "Yes. We hand over the full source code and all access: domain, hosting, analytics and admin panel. You are not locked into working with us."
+    },
+    {
+      "q": "What happens after launch?",
+      "a": "The first month of support is included: fixes and small edits. After that you can choose a support plan from $150/month, pay by the hour, or add SEO and ads to bring in traffic."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "Get a quote",
+      "href": "/en/services/websites/#contact",
+      "block": 1
+    },
+    {
+      "text": "DISCUSS A LANDING PAGE",
+      "href": "/en/services/websites/#contact",
+      "block": 4
+    },
+    {
+      "text": "DISCUSS A COMPANY SITE",
+      "href": "/en/services/websites/#contact",
+      "block": 4
+    },
+    {
+      "text": "DISCUSS A STORE",
+      "href": "/en/services/websites/#contact",
+      "block": 4
+    },
+    {
+      "text": "pricing page",
+      "href": "/en/pricing/",
+      "block": 4
+    },
+    {
+      "text": "SaaS development",
+      "href": "/en/services/platforms/",
+      "block": 4
+    },
+    {
+      "text": "business automation",
+      "href": "/en/services/ecosystems/",
+      "block": 4
+    },
+    {
+      "text": "📈 SEO Keyword research, technical fixes, content and links. A one-off SEO audit starts at $100 (up to 50 pages). First results usually take 3–6 months. from $150 / month",
+      "href": "/en/services/seo/",
+      "block": 6,
+      "card": true
+    },
+    {
+      "text": "Google and Meta Ads Campaign setup from $300 (Google) or $250 (Meta), with conversion tracking connected to your new site. Ad budget is paid separately. management from $200 / month",
+      "href": "/en/services/google-ads/",
+      "block": 6,
+      "card": true
+    },
+    {
+      "text": "Telegram bot A bot that takes bookings, answers common questions and sends every lead from the site to your team. from $300",
+      "href": "/en/services/bots/",
+      "block": 6,
+      "card": true
+    },
+    {
+      "text": "LANDING PAGE Transfer Kharkiv Landing page for a transfer company with 8.4% conversion and 119+ search positions in the top. A Telegram bot takes bookings around the clock. See the project →",
+      "href": "/en/portfolio/#p-transfer-kharkiv",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "CATALOGUE WEBSITE Respect Car Website for a Kharkiv car dealer: sales, buyback and imports from the USA. Live car catalogue with photos, managed from a Telegram admin panel. See the project →",
+      "href": "/en/portfolio/#p-respect-car",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "WEBSITE + BOTS Parrot School Website for an English school in Kharkiv plus a Telegram system for students, parents and teachers, with a separate admin bot. See the project →",
+      "href": "/en/portfolio/#p-parrot-school",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "View the full portfolio",
+      "href": "/en/portfolio/",
+      "block": 8
+    },
+    {
+      "text": "FILL IN THE FORM",
+      "href": "/en/#contact",
+      "block": 9
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "MESSAGE ON TELEGRAM",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 9
+    },
+    {
+      "text": "WHATSAPP",
+      "href": "https://wa.me/380688286969",
+      "block": 9
+    }
+  ]
+}

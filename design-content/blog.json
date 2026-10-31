@@ -1,0 +1,438 @@
+{
+  "url": "https://infiniteunion.com.ua/blog/",
+  "path": "/blog/",
+  "file": "blog/index.html",
+  "lang": "uk",
+  "alt": null,
+  "template": "blog-list",
+  "registryType": "blog",
+  "name": "Блог",
+  "title": "Блог Infinite Union — сайти, боти, SEO та реклама",
+  "description": "Практичні статті від Infinite Union: скільки коштує сайт, як вибрати веб-студію, Telegram-боти для бізнесу, SEO-аудит, Google Ads чи SEO.",
+  "keyword": "блог про сайти та маркетинг",
+  "robots": "index, follow",
+  "h1": "Блог Infinite Union: сайти, боти, SEO і реклама",
+  "breadcrumbs": [
+    {
+      "name": "Головна",
+      "url": "/"
+    },
+    {
+      "name": "Блог",
+      "url": "/blog/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#060404",
+    "--bg2": "#0e0b0b",
+    "--border": "rgba(255,255,255,.08)",
+    "--muted": "rgba(255,255,255,.45)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif"
+  },
+  "words": 262,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "Сайти",
+      "href": "/services/websites/"
+    },
+    {
+      "k": "link",
+      "text": "Боти",
+      "href": "/services/bots/"
+    },
+    {
+      "k": "link",
+      "text": "SEO",
+      "href": "/services/seo/"
+    },
+    {
+      "k": "link",
+      "text": "Блог",
+      "href": "/blog/"
+    },
+    {
+      "k": "link",
+      "text": "EN",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "ЗВ'ЯЗАТИСЬ",
+      "href": "/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "div",
+      "class": "hero",
+      "heading": "Блог Infinite Union: сайти, боти, SEO і реклама",
+      "items": [
+        {
+          "k": "text",
+          "text": "БЛОГ · INFINITE UNION · ХАРКІВ",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Блог Infinite Union: сайти, боти, SEO і реклама"
+        },
+        {
+          "k": "text",
+          "text": "Блог про сайти та маркетинг від веб-студії з Харкова. Пишемо про те, з чим приходять клієнти: скільки коштує сайт, як вибрати підрядника, коли потрібен Telegram-бот, що дає SEO-аудит і куди вкласти перший рекламний бюджет. Наші актуальні ціни — на сторінці «Ціни»."
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "filters",
+      "viewport": "all",
+      "tag": "div",
+      "class": "filters",
+      "heading": "",
+      "items": [
+        {
+          "k": "link",
+          "text": "Ціни",
+          "href": "/pricing/"
+        },
+        {
+          "k": "link",
+          "text": "Розробка сайтів",
+          "href": "/services/websites/"
+        },
+        {
+          "k": "link",
+          "text": "Telegram-боти",
+          "href": "/services/bots/"
+        },
+        {
+          "k": "link",
+          "text": "SEO",
+          "href": "/services/seo/"
+        },
+        {
+          "k": "link",
+          "text": "Google Ads",
+          "href": "/services/google-ads/"
+        },
+        {
+          "k": "link",
+          "text": "Meta Ads",
+          "href": "/services/meta-ads/"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "posts-list",
+      "viewport": "all",
+      "tag": "div",
+      "class": "posts",
+      "heading": "",
+      "items": [
+        {
+          "k": "card-link",
+          "href": "/blog/skilky-koshtuye-sayt-2026/",
+          "items": [
+            {
+              "k": "text",
+              "text": "РОЗРОБКА САЙТІВ",
+              "role": "post-tag"
+            },
+            {
+              "k": "h",
+              "level": 2,
+              "text": "Ціни на сайти у 2026: ринкові вилки в Україні"
+            },
+            {
+              "k": "text",
+              "text": "Скільки коштують лендінг, корпоративний сайт, інтернет-магазин і SaaS на ринку: фриланс, студії, агенції. Від чого залежить вартість і як не переплатити.",
+              "role": "post-excerpt"
+            },
+            {
+              "k": "text",
+              "text": "30 липня 2026 · 9 хв читання",
+              "role": "post-meta"
+            },
+            {
+              "k": "text",
+              "text": "Читати статтю →",
+              "role": "read-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/blog/zamovyty-sayt-kharkiv/",
+          "items": [
+            {
+              "k": "text",
+              "text": "ВИБІР ПІДРЯДНИКА",
+              "role": "post-tag"
+            },
+            {
+              "k": "h",
+              "level": 2,
+              "text": "Як вибрати веб-студію і не помилитись: чек-лист 2026"
+            },
+            {
+              "k": "text",
+              "text": "Що запитати у студії перед підписанням договору, на що звернути увагу в портфоліо та які червоні прапори вказують на проблемного виконавця.",
+              "role": "post-excerpt"
+            },
+            {
+              "k": "text",
+              "text": "30 липня 2026 · 7 хв читання",
+              "role": "post-meta"
+            },
+            {
+              "k": "text",
+              "text": "Читати статтю →",
+              "role": "read-link"
+            }
+          ]
+        },
+        {
+          "k": "text",
+          "text": "НОВІ СТАТТІ",
+          "role": "section-label"
+        },
+        {
+          "k": "card-link",
+          "href": "/blog/telegram-bot-dlya-biznesu/",
+          "items": [
+            {
+              "k": "text",
+              "text": "TELEGRAM-БОТИ",
+              "role": "post-tag"
+            },
+            {
+              "k": "h",
+              "level": 2,
+              "text": "Telegram-бот для бізнесу: що вміє, кому потрібен, ціна"
+            },
+            {
+              "k": "text",
+              "text": "Які задачі закриває бот, для яких ніш підходить, з чого складається вартість і скільки триває розробка.",
+              "role": "post-excerpt"
+            },
+            {
+              "k": "text",
+              "text": "30 липня 2026 · 8 хв",
+              "role": "post-meta"
+            },
+            {
+              "k": "text",
+              "text": "Читати →",
+              "role": "read-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/blog/google-ads-chy-seo/",
+          "items": [
+            {
+              "k": "text",
+              "text": "РЕКЛАМА І SEO",
+              "role": "post-tag"
+            },
+            {
+              "k": "h",
+              "level": 2,
+              "text": "Google Ads чи SEO: що обрати бізнесу на старті"
+            },
+            {
+              "k": "text",
+              "text": "Порівнюємо швидкість результату, вартість і довгостроковий ефект. Пояснюємо, коли варто поєднувати обидва канали.",
+              "role": "post-excerpt"
+            },
+            {
+              "k": "text",
+              "text": "30 липня 2026 · 8 хв",
+              "role": "post-meta"
+            },
+            {
+              "k": "text",
+              "text": "Читати →",
+              "role": "read-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/blog/seo-audit-shcho-tse/",
+          "items": [
+            {
+              "k": "text",
+              "text": "SEO",
+              "role": "post-tag"
+            },
+            {
+              "k": "h",
+              "level": 2,
+              "text": "Що таке SEO-аудит сайту і що в ньому перевіряють"
+            },
+            {
+              "k": "text",
+              "text": "Індексація, швидкість, структура, контент, посилання: що саме перевіряють в аудиті і чому сайт може не виходити в топ Google.",
+              "role": "post-excerpt"
+            },
+            {
+              "k": "text",
+              "text": "30 липня 2026 · 7 хв",
+              "role": "post-meta"
+            },
+            {
+              "k": "text",
+              "text": "Читати →",
+              "role": "read-link"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "div",
+      "class": "cta-section",
+      "heading": "Є питання про ваш проєкт?",
+      "items": [
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Є питання про ваш проєкт?"
+        },
+        {
+          "k": "text",
+          "text": "Напишіть нам — відповімо протягом 15 хвилин у робочий час і підкажемо, з чого почати."
+        },
+        {
+          "k": "link",
+          "text": "Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WhatsApp",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Viber",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380688286969",
+          "href": "tel:+380688286969"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [],
+  "internalLinks": [
+    {
+      "text": "«Ціни»",
+      "href": "/pricing/",
+      "block": 1
+    },
+    {
+      "text": "Ціни",
+      "href": "/pricing/",
+      "block": 2
+    },
+    {
+      "text": "Розробка сайтів",
+      "href": "/services/websites/",
+      "block": 2
+    },
+    {
+      "text": "Telegram-боти",
+      "href": "/services/bots/",
+      "block": 2
+    },
+    {
+      "text": "SEO",
+      "href": "/services/seo/",
+      "block": 2
+    },
+    {
+      "text": "Google Ads",
+      "href": "/services/google-ads/",
+      "block": 2
+    },
+    {
+      "text": "Meta Ads",
+      "href": "/services/meta-ads/",
+      "block": 2
+    },
+    {
+      "text": "РОЗРОБКА САЙТІВ Ціни на сайти у 2026: ринкові вилки в Україні Скільки коштують лендінг, корпоративний сайт, інтернет-магазин і SaaS на ринку: фриланс, студії, агенції. Від чого залежить вартість і як не переплатити. 30 липня 2026 9 хв читання Читати статтю →",
+      "href": "/blog/skilky-koshtuye-sayt-2026/",
+      "block": 3,
+      "card": true
+    },
+    {
+      "text": "ВИБІР ПІДРЯДНИКА Як вибрати веб-студію і не помилитись: чек-лист 2026 Що запитати у студії перед підписанням договору, на що звернути увагу в портфоліо та які червоні прапори вказують на проблемного виконавця. 30 липня 2026 7 хв читання Читати статтю →",
+      "href": "/blog/zamovyty-sayt-kharkiv/",
+      "block": 3,
+      "card": true
+    },
+    {
+      "text": "TELEGRAM-БОТИ Telegram-бот для бізнесу: що вміє, кому потрібен, ціна Які задачі закриває бот, для яких ніш підходить, з чого складається вартість і скільки триває розробка. 30 липня 2026 8 хв Читати →",
+      "href": "/blog/telegram-bot-dlya-biznesu/",
+      "block": 3,
+      "card": true
+    },
+    {
+      "text": "РЕКЛАМА І SEO Google Ads чи SEO: що обрати бізнесу на старті Порівнюємо швидкість результату, вартість і довгостроковий ефект. Пояснюємо, коли варто поєднувати обидва канали. 30 липня 2026 8 хв Читати →",
+      "href": "/blog/google-ads-chy-seo/",
+      "block": 3,
+      "card": true
+    },
+    {
+      "text": "SEO Що таке SEO-аудит сайту і що в ньому перевіряють Індексація, швидкість, структура, контент, посилання: що саме перевіряють в аудиті і чому сайт може не виходити в топ Google. 30 липня 2026 7 хв Читати →",
+      "href": "/blog/seo-audit-shcho-tse/",
+      "block": 3,
+      "card": true
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 4
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 4
+    },
+    {
+      "text": "Viber",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 4
+    },
+    {
+      "text": "+380688286969",
+      "href": "tel:+380688286969",
+      "block": 4
+    }
+  ]
+}

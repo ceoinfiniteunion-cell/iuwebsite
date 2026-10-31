@@ -1,0 +1,1312 @@
+{
+  "url": "https://infiniteunion.com.ua/en/",
+  "path": "/en/",
+  "file": "en/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/",
+    "url": "https://infiniteunion.com.ua/"
+  },
+  "template": "home",
+  "registryType": "home",
+  "name": "Home",
+  "title": "Web Development Agency in Ukraine | Infinite Union",
+  "description": "Infinite Union is a web development agency from Kharkiv, Ukraine. Websites from $600, Telegram bots from $300, Google & Meta Ads, SEO. EU clients welcome.",
+  "keyword": "web development agency Ukraine",
+  "robots": "index, follow",
+  "h1": "Web development agency in Ukraine",
+  "breadcrumbs": [],
+  "theme": {
+    "--bg": "#0a0706",
+    "--bg2": "#0C0808",
+    "--bg3": "#110D0D",
+    "--fg": "#EDE8E5",
+    "--muted": "#8A8080",
+    "--muted2": "#A89E9E",
+    "--red": "#D40000",
+    "--red-glow": "rgba(212, 0, 0, 0.25)",
+    "--border": "rgba(237, 232, 229, 0.07)",
+    "--fh": "'Space Grotesk', sans-serif",
+    "--fb": "'Inter', sans-serif",
+    "--ease": "cubic-bezier(0.76, 0, 0.24, 1)",
+    "--ease2": "cubic-bezier(0.23, 1, 0.32, 1)"
+  },
+  "words": 955,
+  "chrome": [
+    {
+      "k": "img",
+      "src": "/avatar.jpeg",
+      "alt": "Infinite Union mascot"
+    },
+    {
+      "k": "text",
+      "text": "INFINITE UNION",
+      "role": "l-logo"
+    },
+    {
+      "k": "text",
+      "text": "0%",
+      "role": "l-pct"
+    },
+    {
+      "k": "text",
+      "text": "• Loading",
+      "role": "l-status"
+    },
+    {
+      "k": "text",
+      "text": "49° 59′ N / 36° 14′ E Kharkiv, Ukraine",
+      "role": "l-coords"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/#hero"
+    },
+    {
+      "k": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Services",
+          "href": "/en/#services"
+        },
+        {
+          "text": "Portfolio",
+          "href": "/en/#portfolio"
+        },
+        {
+          "text": "Contact",
+          "href": "/en/#contact"
+        }
+      ]
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "Start a project",
+      "href": "/en/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "mobile-menu",
+      "viewport": "mobile",
+      "tag": "div",
+      "id": "mob",
+      "class": "mob",
+      "heading": "",
+      "items": [
+        {
+          "k": "button",
+          "text": "×",
+          "type": "button"
+        },
+        {
+          "k": "link",
+          "text": "Services",
+          "href": "/en/#services"
+        },
+        {
+          "k": "link",
+          "text": "Portfolio",
+          "href": "/en/#portfolio"
+        },
+        {
+          "k": "link",
+          "text": "Contact",
+          "href": "/en/#contact"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "snake-intro",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "INFINITE"
+        },
+        {
+          "k": "text",
+          "text": "49° 59′ N • 36° 14′ E",
+          "role": "si-coords"
+        },
+        {
+          "k": "text",
+          "text": "01 ·",
+          "role": "si-num"
+        },
+        {
+          "k": "text",
+          "text": "Websites & online stores"
+        },
+        {
+          "k": "text",
+          "text": "02 ·",
+          "role": "si-num"
+        },
+        {
+          "k": "text",
+          "text": "Telegram bots & automation"
+        },
+        {
+          "k": "text",
+          "text": "03 ·",
+          "role": "si-num"
+        },
+        {
+          "k": "text",
+          "text": "SaaS platforms & web apps"
+        },
+        {
+          "k": "text",
+          "text": "04 ·",
+          "role": "si-num"
+        },
+        {
+          "k": "text",
+          "text": "Site, bot and CRM as one system"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "stats",
+      "viewport": "all",
+      "tag": "section",
+      "id": "stats",
+      "heading": "",
+      "items": [
+        {
+          "k": "text",
+          "text": "3000+",
+          "role": "sn"
+        },
+        {
+          "k": "text",
+          "text": "Active users of the KNEU bot we built",
+          "role": "sl"
+        },
+        {
+          "k": "text",
+          "text": "$600",
+          "role": "sn"
+        },
+        {
+          "k": "text",
+          "text": "Websites from",
+          "role": "sl"
+        },
+        {
+          "k": "text",
+          "text": "$300",
+          "role": "sn"
+        },
+        {
+          "k": "text",
+          "text": "Telegram bots from",
+          "role": "sl"
+        },
+        {
+          "k": "text",
+          "text": "15 min",
+          "role": "sn"
+        },
+        {
+          "k": "text",
+          "text": "Reply time in business hours",
+          "role": "sl"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "services",
+      "class": "sec",
+      "heading": "Web development agency in Ukraine",
+      "items": [
+        {
+          "k": "text",
+          "text": "Services",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Web development agency in Ukraine"
+        },
+        {
+          "k": "text",
+          "text": "01 / 02",
+          "role": "snum"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union is a web development agency based in Kharkiv, Ukraine, working with small and mid-sized businesses across the EU. We build websites, Telegram bots and SaaS platforms, and we run Google, Meta and TikTok ads. You talk directly to the people who build your project, in English, and when we finish you own the source code and every account. Fixed prices start at $600 for a website and $300 for a bot. See the full breakdown on our pricing page."
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "directions",
+      "class": "dir-section",
+      "heading": "IT Development",
+      "items": [
+        {
+          "k": "text",
+          "text": "Digital · 01",
+          "role": "dir-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "IT Development"
+        },
+        {
+          "k": "text",
+          "text": "From a one-page landing page to a website, bot and CRM that work as one system. Agreed scope, staged payments, and the code is handed over to you."
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "01WebsitesLanding · Corporate · Store↗",
+              "href": "/en/services/websites/"
+            },
+            {
+              "text": "02Telegram botsSales · Bookings · CRM↗",
+              "href": "/en/services/bots/"
+            },
+            {
+              "text": "03SaaS & web appsMVP · Dashboards · API↗",
+              "href": "/en/services/platforms/"
+            },
+            {
+              "text": "04Business automationWebsite + bot + CRM↗",
+              "href": "/en/services/ecosystems/"
+            },
+            {
+              "text": "05Something else?Tell us and we will suggest a plan→",
+              "href": "/en/#contact"
+            }
+          ]
+        },
+        {
+          "k": "text",
+          "text": "Marketing · 02",
+          "role": "dir-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Digital Marketing"
+        },
+        {
+          "k": "text",
+          "text": "Paid and organic traffic, with conversion tracking set up before the first campaign goes live, so you can see what each lead cost. Ad budgets are paid separately, directly to the platforms."
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "01Meta AdsFacebook · Instagram · Reels↗",
+              "href": "/en/services/meta-ads/"
+            },
+            {
+              "text": "02Google AdsSearch · Performance Max · YouTube↗",
+              "href": "/en/services/google-ads/"
+            },
+            {
+              "text": "03SEOAudit · Content · Local SEO↗",
+              "href": "/en/services/seo/"
+            },
+            {
+              "text": "04TikTok AdsIn-Feed · Spark Ads · UGC↗",
+              "href": "/en/services/tiktok-ads/"
+            }
+          ]
+        },
+        {
+          "k": "link",
+          "text": "Discuss your marketing→",
+          "href": "/en/#contact"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "id": "process",
+      "class": "sec proc-section",
+      "heading": "How we work with EU clients",
+      "items": [
+        {
+          "k": "text",
+          "text": "Process",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "How we work with EU clients"
+        },
+        {
+          "k": "text",
+          "text": "03 / 08",
+          "role": "snum"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Briefing"
+        },
+        {
+          "k": "text",
+          "text": "A call or a chat about your business, your customers and what the project has to achieve. You get a written scope with a fixed price and timeline."
+        },
+        {
+          "k": "text",
+          "text": "· 1–2 days",
+          "role": "proc-term"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Prototype"
+        },
+        {
+          "k": "text",
+          "text": "We show the structure and user flow before any code is written. Changes at this stage are quick and cost nothing extra."
+        },
+        {
+          "k": "text",
+          "text": "· 3–5 days",
+          "role": "proc-term"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Development"
+        },
+        {
+          "k": "text",
+          "text": "Design, code and integrations. You get a staging link and regular progress updates, so there are no surprises at the end."
+        },
+        {
+          "k": "text",
+          "text": "· depends on scope",
+          "role": "proc-term"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Testing"
+        },
+        {
+          "k": "text",
+          "text": "We test real scenarios on phones and desktops: forms, payments, bot flows and edge cases. Bugs get fixed before launch."
+        },
+        {
+          "k": "text",
+          "text": "· 2–4 days",
+          "role": "proc-term"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Launch"
+        },
+        {
+          "k": "text",
+          "text": "We deploy, connect analytics and hand over the source code and all access. The product is registered to you, not to us."
+        },
+        {
+          "k": "text",
+          "text": "· 1 day",
+          "role": "proc-term"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Support"
+        },
+        {
+          "k": "text",
+          "text": "One month of support is included with every website. After that, support plans start at $150/month, or we work by the hour."
+        },
+        {
+          "k": "text",
+          "text": "· ongoing",
+          "role": "proc-term"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "tech-stack",
+      "viewport": "all",
+      "tag": "section",
+      "id": "stack",
+      "class": "sec",
+      "heading": "What's under the hood",
+      "items": [
+        {
+          "k": "text",
+          "text": "Technologies",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "What's under the hood"
+        },
+        {
+          "k": "text",
+          "text": "04 / 08",
+          "role": "snum"
+        },
+        {
+          "k": "text",
+          "text": "Many websites quietly lose an enquiry when something fails at the moment of sending. We build the lead path so that does not happen."
+        },
+        {
+          "k": "text",
+          "text": "Form",
+          "role": "stack-node__name"
+        },
+        {
+          "k": "decor",
+          "text": "→"
+        },
+        {
+          "k": "text",
+          "text": "Validation",
+          "role": "stack-node__name"
+        },
+        {
+          "k": "text",
+          "text": "Database",
+          "role": "stack-node__name"
+        },
+        {
+          "k": "text",
+          "text": "Queue",
+          "role": "stack-node__name"
+        },
+        {
+          "k": "text",
+          "text": "Telegram",
+          "role": "stack-node__name"
+        },
+        {
+          "k": "text",
+          "text": "Every enquiry from the form is saved to PostgreSQL first, then passed through a Redis queue with automatic retries and delivered to your Telegram. If one step fails, the lead waits in the queue instead of disappearing.",
+          "role": "stack-highlight"
+        },
+        {
+          "k": "text",
+          "text": "Next.js / React · fast websites and web apps",
+          "role": "stack-tag"
+        },
+        {
+          "k": "text",
+          "text": "FastAPI · async Python backend",
+          "role": "stack-tag"
+        },
+        {
+          "k": "text",
+          "text": "PostgreSQL · reliable data storage",
+          "role": "stack-tag"
+        },
+        {
+          "k": "text",
+          "text": "Redis · queues and retries",
+          "role": "stack-tag"
+        },
+        {
+          "k": "text",
+          "text": "aiogram 3 · Telegram bots",
+          "role": "stack-tag"
+        },
+        {
+          "k": "text",
+          "text": "Railway · Cloudflare · hosting, CDN and protection",
+          "role": "stack-tag"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "id": "portfolio",
+      "class": "sec",
+      "heading": "Selected projects",
+      "items": [
+        {
+          "k": "text",
+          "text": "Portfolio",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Selected projects"
+        },
+        {
+          "k": "text",
+          "text": "02 / 03",
+          "role": "snum"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "FLAGSHIP",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "Transfer Kharkiv",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Landing page for a transfer company: 8.4% conversion, 119+ search positions in the top results, bookings via a Telegram bot.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "8.4% conversion · 119+ SEO",
+          "role": "gs-stats"
+        },
+        {
+          "k": "link",
+          "text": "Visit site ↗",
+          "href": "https://transferkharkiv.com.ua/"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "SAAS",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "Realty Monitor",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Real estate monitoring service with LiqPay payments and FSM-based bot flows.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "LiqPay · FSM",
+          "role": "gs-stats"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "UNIVERSITY",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "KNEU Bot",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Official university Telegram bot: timetable, news and notifications for 3,000+ active users.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "3,000+ users · aiogram",
+          "role": "gs-stats"
+        },
+        {
+          "k": "link",
+          "text": "Case study →",
+          "href": "/en/portfolio/#p-kneu-bot"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "AUTOMATION",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "IU Bot",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Our own lead bot: a quiz qualifies the request and passes the lead to the CRM.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "FastAPI · Redis",
+          "role": "gs-stats"
+        },
+        {
+          "k": "link",
+          "text": "Case study →",
+          "href": "/en/portfolio/#p-iu-bot"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "AI AUTOMATION",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "InfinityCreo",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "AI ad creatives for media buyers, built on n8n. About 3 minutes from brief to banner.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "n8n · 10+ formats",
+          "role": "gs-stats"
+        },
+        {
+          "k": "link",
+          "text": "Try it ↗",
+          "href": "https://t.me/infinitycreo_bot"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "SMALL BUSINESS",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "BizBot",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Payroll, tasks and bookkeeping in Telegram, with automatic Excel filling. Saves the owner 4+ hours a week.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "Excel API · FastAPI",
+          "role": "gs-stats"
+        },
+        {
+          "k": "link",
+          "text": "Case study →",
+          "href": "/en/portfolio/#p-bizbot"
+        },
+        {
+          "k": "text",
+          "text": "07",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "IU PRODUCT",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "Ad Tracker by IU",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Ad reporting portal: Meta, Google and TikTok Ads in one dashboard. Currently in development.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "Next.js 14 · Meta API",
+          "role": "gs-stats"
+        },
+        {
+          "k": "link",
+          "text": "Case study →",
+          "href": "/en/portfolio/#p-ad-tracker"
+        },
+        {
+          "k": "text",
+          "text": "08",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "MINI APP",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "EduApp",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Telegram Mini App for an English language school.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "Mini App · Telegram",
+          "role": "gs-stats"
+        },
+        {
+          "k": "text",
+          "text": "09",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "CAR DEALER",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "Respect Car",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Website for a Kharkiv car dealer: sales, buyback and imports from the USA. Live catalogue, admin panel in Telegram.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "Next.js 16 · PostgreSQL",
+          "role": "gs-stats"
+        },
+        {
+          "k": "link",
+          "text": "Visit site ↗",
+          "href": "https://respectcar.com.ua/"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "avatar-sec",
+      "heading": "",
+      "items": [
+        {
+          "k": "text",
+          "text": "Infinite Union",
+          "role": "slabel"
+        },
+        {
+          "k": "text",
+          "text": "A website, a bot and a CRM that talk to each other, built and supported by one team.",
+          "role": "av-quote"
+        },
+        {
+          "k": "text",
+          "text": "Based in",
+          "role": "av-attr-l"
+        },
+        {
+          "k": "text",
+          "text": "Kharkiv, Ukraine, working with clients across the EU",
+          "role": "av-attr-v"
+        },
+        {
+          "k": "text",
+          "text": "Stack",
+          "role": "av-attr-l"
+        },
+        {
+          "k": "text",
+          "text": "Next.js, Python, PostgreSQL",
+          "role": "av-attr-v"
+        },
+        {
+          "k": "text",
+          "text": "Ownership",
+          "role": "av-attr-l"
+        },
+        {
+          "k": "text",
+          "text": "Source code and access are yours",
+          "role": "av-attr-v"
+        },
+        {
+          "k": "text",
+          "text": "Support",
+          "role": "av-attr-l"
+        },
+        {
+          "k": "text",
+          "text": "Reply within 15 min in business hours",
+          "role": "av-attr-v"
+        },
+        {
+          "k": "text",
+          "text": "See the projects in detail in our portfolio, or compare packages on the pricing page."
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "philo",
+      "heading": "Every form, bot and campaign we launch is tracked, so you can see where each lead came from and what it cost.",
+      "items": [
+        {
+          "k": "text",
+          "text": "Our approach",
+          "role": "ph-q"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Every form, bot and campaign we launch is tracked, so you can see where each lead came from and what it cost."
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "type": "cta-form",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "heading": "Ready to start?",
+      "items": [
+        {
+          "k": "text",
+          "text": "Contact",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Ready to start?"
+        },
+        {
+          "k": "text",
+          "text": "Free first consultation. Message our manager on Telegram or WhatsApp, in English. We reply within 15 minutes during business hours."
+        },
+        {
+          "k": "link",
+          "text": "Message on Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WhatsApp",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380688286969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "text",
+          "text": "49° 59′ N / 36° 14′ E Kharkiv, Ukraine · 2026",
+          "role": "ct-coords"
+        },
+        {
+          "k": "field",
+          "type": "text",
+          "name": "cn",
+          "label": "Name",
+          "placeholder": "Your name",
+          "required": true
+        },
+        {
+          "k": "field",
+          "type": "text",
+          "name": "cc",
+          "label": "Telegram or WhatsApp",
+          "placeholder": "@username or +49...",
+          "required": true
+        },
+        {
+          "k": "field",
+          "type": "text",
+          "name": "cphone",
+          "label": "Phone",
+          "placeholder": "+ country code",
+          "required": false
+        },
+        {
+          "k": "field",
+          "type": "select",
+          "name": "ctype",
+          "label": "Project type",
+          "placeholder": "",
+          "required": false,
+          "options": [
+            {
+              "label": "Choose...",
+              "value": ""
+            },
+            {
+              "label": "Website",
+              "value": "Конверсійний сайт"
+            },
+            {
+              "label": "Telegram bot",
+              "value": "Telegram-бот"
+            },
+            {
+              "label": "SaaS / web app",
+              "value": "Платформа / вебдодаток"
+            },
+            {
+              "label": "Business automation",
+              "value": "Цифрова екосистема"
+            },
+            {
+              "label": "Ads / SEO",
+              "value": "Інше"
+            },
+            {
+              "label": "Other",
+              "value": "Інше"
+            }
+          ]
+        },
+        {
+          "k": "field",
+          "type": "select",
+          "name": "cbudget",
+          "label": "Budget",
+          "placeholder": "",
+          "required": false,
+          "options": [
+            {
+              "label": "Choose...",
+              "value": ""
+            },
+            {
+              "label": "Up to $500",
+              "value": "до $500"
+            },
+            {
+              "label": "$500–$1,000",
+              "value": "$500–$1 000"
+            },
+            {
+              "label": "$1,000–$3,000",
+              "value": "$1 000–$3 000"
+            },
+            {
+              "label": "$3,000+",
+              "value": "$3 000+"
+            }
+          ]
+        },
+        {
+          "k": "field",
+          "type": "date",
+          "name": "cdeadline",
+          "label": "Deadline",
+          "placeholder": "",
+          "required": false
+        },
+        {
+          "k": "field",
+          "type": "textarea",
+          "name": "cp",
+          "label": "About the project",
+          "placeholder": "What would you like to build?",
+          "required": false
+        },
+        {
+          "k": "text",
+          "text": "✓ Request sent. We will reply within 15 minutes during business hours.",
+          "role": "form-ok"
+        },
+        {
+          "k": "button",
+          "text": "Send →",
+          "type": "submit"
+        },
+        {
+          "k": "decor",
+          "text": "Website"
+        },
+        {
+          "k": "text",
+          "text": "Messengers",
+          "role": "ci-l"
+        },
+        {
+          "k": "text",
+          "text": "@infiniteunion_manager / WhatsApp / +380688286969",
+          "role": "ci-v"
+        },
+        {
+          "k": "text",
+          "text": "Email",
+          "role": "ci-l"
+        },
+        {
+          "k": "text",
+          "text": "supportinfiniteunion@gmail.com",
+          "role": "ci-v"
+        },
+        {
+          "k": "text",
+          "text": "Reply time",
+          "role": "ci-l"
+        },
+        {
+          "k": "text",
+          "text": "15 minutes, business hours",
+          "role": "ci-v"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [],
+  "internalLinks": [
+    {
+      "text": "Services",
+      "href": "/en/#services",
+      "block": 1
+    },
+    {
+      "text": "Portfolio",
+      "href": "/en/#portfolio",
+      "block": 1
+    },
+    {
+      "text": "Contact",
+      "href": "/en/#contact",
+      "block": 1
+    },
+    {
+      "text": "pricing page",
+      "href": "/en/pricing/",
+      "block": 4
+    },
+    {
+      "text": "01WebsitesLanding · Corporate · Store↗",
+      "href": "/en/services/websites/",
+      "block": 5
+    },
+    {
+      "text": "02Telegram botsSales · Bookings · CRM↗",
+      "href": "/en/services/bots/",
+      "block": 5
+    },
+    {
+      "text": "03SaaS & web appsMVP · Dashboards · API↗",
+      "href": "/en/services/platforms/",
+      "block": 5
+    },
+    {
+      "text": "04Business automationWebsite + bot + CRM↗",
+      "href": "/en/services/ecosystems/",
+      "block": 5
+    },
+    {
+      "text": "05Something else?Tell us and we will suggest a plan→",
+      "href": "/en/#contact",
+      "block": 5
+    },
+    {
+      "text": "01Meta AdsFacebook · Instagram · Reels↗",
+      "href": "/en/services/meta-ads/",
+      "block": 5
+    },
+    {
+      "text": "02Google AdsSearch · Performance Max · YouTube↗",
+      "href": "/en/services/google-ads/",
+      "block": 5
+    },
+    {
+      "text": "03SEOAudit · Content · Local SEO↗",
+      "href": "/en/services/seo/",
+      "block": 5
+    },
+    {
+      "text": "04TikTok AdsIn-Feed · Spark Ads · UGC↗",
+      "href": "/en/services/tiktok-ads/",
+      "block": 5
+    },
+    {
+      "text": "Discuss your marketing→",
+      "href": "/en/#contact",
+      "block": 5
+    },
+    {
+      "text": "Case study →",
+      "href": "/en/portfolio/#p-kneu-bot",
+      "block": 8
+    },
+    {
+      "text": "Case study →",
+      "href": "/en/portfolio/#p-iu-bot",
+      "block": 8
+    },
+    {
+      "text": "Case study →",
+      "href": "/en/portfolio/#p-bizbot",
+      "block": 8
+    },
+    {
+      "text": "Case study →",
+      "href": "/en/portfolio/#p-ad-tracker",
+      "block": 8
+    },
+    {
+      "text": "portfolio",
+      "href": "/en/portfolio/",
+      "block": 9
+    },
+    {
+      "text": "pricing page",
+      "href": "/en/pricing/",
+      "block": 9
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "Visit site ↗",
+      "href": "https://transferkharkiv.com.ua/",
+      "block": 8
+    },
+    {
+      "text": "Try it ↗",
+      "href": "https://t.me/infinitycreo_bot",
+      "block": 8
+    },
+    {
+      "text": "Visit site ↗",
+      "href": "https://respectcar.com.ua/",
+      "block": 8
+    },
+    {
+      "text": "Message on Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 11
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 11
+    },
+    {
+      "text": "+380688286969",
+      "href": "tel:+380688286969",
+      "block": 11
+    },
+    {
+      "text": "@infiniteunion_manager",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 11
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 11
+    },
+    {
+      "text": "+380688286969",
+      "href": "tel:+380688286969",
+      "block": 11
+    },
+    {
+      "text": "supportinfiniteunion@gmail.com",
+      "href": "mailto:supportinfiniteunion@gmail.com",
+      "block": 11
+    }
+  ]
+}

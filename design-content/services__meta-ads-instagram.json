@@ -1,0 +1,900 @@
+{
+  "url": "https://infiniteunion.com.ua/services/meta-ads-instagram/",
+  "path": "/services/meta-ads-instagram/",
+  "file": "services/meta-ads-instagram/index.html",
+  "lang": "uk",
+  "alt": null,
+  "template": "cluster",
+  "registryType": "service",
+  "parent": "/services/meta-ads/",
+  "name": "Реклама в Instagram",
+  "title": "Реклама в Instagram — Reels, Stories, стрічка | від $250",
+  "description": "Реклама в Instagram для бізнесу: Reels, Stories і стрічка, підбір аудиторій, креативи під формат, заявки в Direct або на сайт. Запуск від $250.",
+  "keyword": "реклама в Instagram",
+  "priceFrom": 250,
+  "robots": "index, follow",
+  "h1": "Реклама в Instagram",
+  "breadcrumbs": [
+    {
+      "name": "Головна",
+      "url": "/"
+    },
+    {
+      "name": "Таргет Facebook та Instagram",
+      "url": "/services/meta-ads/"
+    },
+    {
+      "name": "Реклама в Instagram",
+      "url": "/services/meta-ads-instagram/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#060404",
+    "--bg2": "#0e0b0b",
+    "--border": "rgba(255,255,255,0.08)",
+    "--text": "#fff",
+    "--muted": "rgba(255,255,255,0.45)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ig": "#E1306C",
+    "--ig2": "#833AB4",
+    "--ig3": "#F77737"
+  },
+  "words": 721,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Meta Ads",
+      "href": "/services/meta-ads/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "EN",
+      "href": "/en/services/meta-ads/"
+    },
+    {
+      "k": "link",
+      "text": "ЗАМОВИТИ РЕКЛАМУ",
+      "href": "/services/meta-ads-instagram/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "Реклама в Instagram",
+      "items": [
+        {
+          "k": "text",
+          "text": "INSTAGRAM · REELS · STORIES · СТРІЧКА",
+          "role": "hero-tag"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Реклама в Instagram"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union з Харкова налаштовує рекламу в Instagram для кафе, салонів, онлайн-магазинів, брендів і сервісів, які продають через візуал. Креативи під кожен формат, аудиторії, заявки в Direct або на сайт. Запуск від $250, рекламний бюджет — окремо, від $300/міс."
+        },
+        {
+          "k": "text",
+          "text": "Reels",
+          "role": "format-badge"
+        },
+        {
+          "k": "text",
+          "text": "Stories",
+          "role": "format-badge"
+        },
+        {
+          "k": "text",
+          "text": "Стрічка",
+          "role": "format-badge"
+        },
+        {
+          "k": "link",
+          "text": "ОБГОВОРИТИ РЕКЛАМУ",
+          "href": "/services/meta-ads-instagram/#contact"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "REELS РЕКЛАМА·STORIES ADS·ТАРГЕТИНГ АУДИТОРІЙ·LOOKALIKE·РЕТАРГЕТИНГ ПІКСЕЛЕМ·A/B ТЕСТИ·REELS РЕКЛАМА·STORIES ADS·ТАРГЕТИНГ АУДИТОРІЙ·LOOKALIKE·РЕТАРГЕТИНГ ПІКСЕЛЕМ·A/B ТЕСТИ·"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Чому реклама в Instagram не окупається",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЗАДАЧА",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Чому реклама в Instagram не окупається"
+        },
+        {
+          "k": "text",
+          "text": "В Instagram люди не шукають — вони дивляться. На те, щоб зупинити палець, у вас секунда. Найчастіша помилка — один горизонтальний банер, обрізаний під усі плейсменти: у Stories він губиться, у Reels виглядає чужим."
+        },
+        {
+          "k": "text",
+          "text": "Друга — заявки йдуть у Direct, а відповідають на них через кілька годин. Реклама в Instagram — це ланцюжок: креатив, профіль і швидка відповідь. Ми налаштовуємо всі три ланки: формати, аудиторії та маршрут заявки — Direct, лід-форма, сайт або Telegram-бот."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Реклама в Instagram: що ми робимо",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЩО ВХОДИТЬ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Реклама в Instagram: що ми робимо"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Reels"
+        },
+        {
+          "k": "text",
+          "text": "Вертикальні відео 9:16, які виглядають як звичайний контент. Найбільше охоплення серед форматів Instagram.",
+          "role": "feat-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Stories з кнопкою"
+        },
+        {
+          "k": "text",
+          "text": "Повноекранний формат із переходом на сайт, у Direct або на лід-форму. Окремий креатив, а не обрізаний банер.",
+          "role": "feat-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Стрічка і каруселі"
+        },
+        {
+          "k": "text",
+          "text": "Для каталогу, кейсів «до/після», кількох послуг в одному оголошенні.",
+          "role": "feat-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Профіль як посадкова"
+        },
+        {
+          "k": "text",
+          "text": "Перевіряємо шапку, хайлайти й закріплені дописи — те, що людина бачить одразу після кліку на рекламу.",
+          "role": "feat-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Заявки в Direct і лід-форми"
+        },
+        {
+          "k": "text",
+          "text": "Автовідповіді, швидкі запитання, передача заявок у Telegram, щоб жодна не загубилась.",
+          "role": "feat-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ретаргетинг на взаємодії"
+        },
+        {
+          "k": "text",
+          "text": "Показуємо рекламу тим, хто дивився Reels, писав у Direct, зберігав дописи або був на сайті.",
+          "role": "feat-desc"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Як запускаємо",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЕТАПИ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Як запускаємо"
+        },
+        {
+          "k": "text",
+          "text": "01 · 1–2 дні",
+          "role": "level-note"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Бриф і аудит профілю"
+        },
+        {
+          "k": "text",
+          "text": "Продукт, аудиторія, географія, стан профілю. Підключаємо Instagram до Meta Business Suite.",
+          "role": "feat-desc"
+        },
+        {
+          "k": "text",
+          "text": "02 · 3–5 днів",
+          "role": "level-note"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Креативи і трекінг"
+        },
+        {
+          "k": "text",
+          "text": "Креативи окремо під Reels, Stories і стрічку, Pixel і Conversions API, якщо є сайт.",
+          "role": "feat-desc"
+        },
+        {
+          "k": "text",
+          "text": "03 · далі щотижня",
+          "role": "level-note"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Запуск і тести"
+        },
+        {
+          "k": "text",
+          "text": "Перші 1–2 тижні алгоритм навчається. Далі залишаємо креативи, що дають заявки, решту замінюємо.",
+          "role": "feat-desc"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-tiers",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Ціна реклами в Instagram",
+      "items": [
+        {
+          "k": "text",
+          "text": "ВАРТІСТЬ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Ціна реклами в Instagram"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Старт"
+        },
+        {
+          "k": "text",
+          "text": "від $250",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "налаштування · разово",
+          "role": "level-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Підключення до Meta Business Suite",
+            "Pixel і події (якщо є сайт)",
+            "Кампанія на Reels, Stories і стрічку",
+            "Аудиторії під продукт",
+            "Перші креативи і тексти",
+            "Ретаргетинг",
+            "Щомісячні звіти"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "ОБГОВОРИТИ",
+          "href": "/services/meta-ads-instagram/#contact"
+        },
+        {
+          "k": "text",
+          "text": "НАЙЧАСТІШЕ",
+          "role": "level-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ведення"
+        },
+        {
+          "k": "text",
+          "text": "від $200/міс",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "оптимізація + креативи",
+          "role": "level-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Нові креативи під формати",
+            "Тести аудиторій",
+            "Ретаргетинг і Lookalike",
+            "Conversions API",
+            "Зведення щотижня",
+            "Звіт щомісяця"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "ОБГОВОРИТИ",
+          "href": "/services/meta-ads-instagram/#contact"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "E-commerce"
+        },
+        {
+          "k": "text",
+          "text": "від $400/міс",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "магазини з каталогом",
+          "role": "level-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Каталог товарів у Commerce Manager",
+            "Динамічні оголошення товарів",
+            "Advantage+ для магазинів",
+            "Кампанії під категорії",
+            "Передача замовлень у CRM"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "ОБГОВОРИТИ",
+          "href": "/services/meta-ads-instagram/#contact"
+        },
+        {
+          "k": "text",
+          "text": "Рекламний бюджет оплачується окремо, напряму в Meta; рекомендуємо від $300/міс. Ціну заявки й ROAS до запуску не обіцяємо. Якщо вам потрібен і Facebook — дивіться таргетовану рекламу Facebook та Instagram, усі тарифи — на сторінці цін."
+        }
+      ],
+      "tiers": [
+        {
+          "name": "Старт",
+          "price": "від $250",
+          "priceNote": "налаштування · разово",
+          "term": "",
+          "includes": [
+            "Підключення до Meta Business Suite",
+            "Pixel і події (якщо є сайт)",
+            "Кампанія на Reels, Stories і стрічку",
+            "Аудиторії під продукт",
+            "Перші креативи і тексти",
+            "Ретаргетинг",
+            "Щомісячні звіти"
+          ],
+          "cta": [
+            {
+              "text": "ОБГОВОРИТИ",
+              "href": "#contact"
+            }
+          ]
+        },
+        {
+          "name": "Ведення",
+          "badge": "НАЙЧАСТІШЕ",
+          "price": "від $200/міс",
+          "priceNote": "оптимізація + креативи",
+          "term": "",
+          "includes": [
+            "Нові креативи під формати",
+            "Тести аудиторій",
+            "Ретаргетинг і Lookalike",
+            "Conversions API",
+            "Зведення щотижня",
+            "Звіт щомісяця"
+          ],
+          "cta": [
+            {
+              "text": "ОБГОВОРИТИ",
+              "href": "#contact"
+            }
+          ]
+        },
+        {
+          "name": "E-commerce",
+          "price": "від $400/міс",
+          "priceNote": "магазини з каталогом",
+          "term": "",
+          "includes": [
+            "Каталог товарів у Commerce Manager",
+            "Динамічні оголошення товарів",
+            "Advantage+ для магазинів",
+            "Кампанії під категорії",
+            "Передача замовлень у CRM"
+          ],
+          "cta": [
+            {
+              "text": "ОБГОВОРИТИ",
+              "href": "#contact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Наші інструменти",
+      "items": [
+        {
+          "k": "text",
+          "text": "ПОРТФОЛІО",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Наші інструменти"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "InfinityCreo"
+        },
+        {
+          "k": "text",
+          "text": "AI-генерація рекламних креативів через n8n: від брифу до банера приблизно за 3 хвилини, 10+ форматів — зручно, коли під Reels, Stories і стрічку потрібні різні версії.",
+          "role": "feat-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ad Tracker by IU"
+        },
+        {
+          "k": "text",
+          "text": "Власний дашборд IU: Meta, Google і TikTok Ads в одному вікні, автооновлення кожні 2 години, 90 днів історії. Економить 5+ годин на тиждень на звітах. Зараз у розробці.",
+          "role": "feat-desc"
+        },
+        {
+          "k": "text",
+          "text": "Усі проєкти — у портфоліо."
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Може зацікавити",
+      "items": [
+        {
+          "k": "text",
+          "text": "ПОВ'ЯЗАНІ ПОСЛУГИ"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Може зацікавити"
+        },
+        {
+          "k": "card-link",
+          "href": "/services/meta-ads/",
+          "items": [
+            {
+              "k": "text",
+              "text": "Facebook + Instagram"
+            },
+            {
+              "k": "text",
+              "text": "Таргетована реклама"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/services/tiktok-ads/",
+          "items": [
+            {
+              "k": "text",
+              "text": "Вертикальне відео"
+            },
+            {
+              "k": "text",
+              "text": "Реклама в TikTok"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/services/websites-landing/",
+          "items": [
+            {
+              "k": "text",
+              "text": "Посадкова під рекламу"
+            },
+            {
+              "k": "text",
+              "text": "Лендінг від $600"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/pricing/",
+          "items": [
+            {
+              "k": "text",
+              "text": "Усі ціни"
+            },
+            {
+              "k": "text",
+              "text": "Тарифи агенції"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше →"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq-section",
+      "heading": "Часті запитання",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "faq-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Часті запитання"
+        },
+        {
+          "k": "faq",
+          "q": "Скільки коштує реклама в Instagram?",
+          "a": "Налаштування — від $250 разово, ведення — від $200/міс, для магазинів з каталогом — від $400/міс. Рекламний бюджет — окремо, рекомендуємо від $300/міс."
+        },
+        {
+          "k": "faq",
+          "q": "Який формат обрати: Reels, Stories чи стрічку?",
+          "a": "Reels дають найбільше охоплення, Stories — швидкий перехід за кнопкою, стрічка і каруселі — для каталогу й кейсів. Зазвичай запускаємо всі три з окремими креативами і залишаємо те, що дає заявки."
+        },
+        {
+          "k": "faq",
+          "q": "Чи потрібен сайт?",
+          "a": "Ні, заявки можна збирати в Direct або через лід-форму. Але сайт з Pixel дає алгоритму більше даних і відкриває ретаргетинг."
+        },
+        {
+          "k": "faq",
+          "q": "Хто робить креативи?",
+          "a": "Статичні макети, каруселі й тексти — ми, в межах ведення. Зйомку Reels з людьми або UGC-контент — окремо, або монтуємо з ваших матеріалів."
+        },
+        {
+          "k": "faq",
+          "q": "Що потрібно від мене для старту?",
+          "a": "Професійний акаунт Instagram (бізнес або автор), підключений до Meta Business Suite, і доступ до платіжного профілю. Якщо чогось немає — допоможемо налаштувати."
+        },
+        {
+          "k": "faq",
+          "q": "Коли буде результат?",
+          "a": "Перші 1–2 тижні кампанія навчається, вартість заявки в цей час коливається. Висновки робимо після накопичення даних; конкретну кількість заявок заздалегідь не обіцяємо."
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Покажемо ваш продукт тим, кому він потрібен",
+      "items": [
+        {
+          "k": "text",
+          "text": "ГОТОВІ ДО РЕКЛАМИ В INSTAGRAM?",
+          "role": "cta-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Покажемо ваш продукт тим, кому він потрібен"
+        },
+        {
+          "k": "text",
+          "text": "Надішліть посилання на профіль — відповімо протягом 15 хвилин у робочий час"
+        },
+        {
+          "k": "link",
+          "text": "Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WhatsApp",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Viber",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380688286969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "link",
+          "text": "ЗАПОВНИТИ ФОРМУ",
+          "href": "/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [
+    {
+      "block": 6,
+      "section": "Ціна реклами в Instagram",
+      "name": "Старт",
+      "price": "від $250",
+      "priceNote": "налаштування · разово",
+      "term": "",
+      "includes": [
+        "Підключення до Meta Business Suite",
+        "Pixel і події (якщо є сайт)",
+        "Кампанія на Reels, Stories і стрічку",
+        "Аудиторії під продукт",
+        "Перші креативи і тексти",
+        "Ретаргетинг",
+        "Щомісячні звіти"
+      ],
+      "cta": [
+        {
+          "text": "ОБГОВОРИТИ",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 6,
+      "section": "Ціна реклами в Instagram",
+      "name": "Ведення",
+      "badge": "НАЙЧАСТІШЕ",
+      "price": "від $200/міс",
+      "priceNote": "оптимізація + креативи",
+      "term": "",
+      "includes": [
+        "Нові креативи під формати",
+        "Тести аудиторій",
+        "Ретаргетинг і Lookalike",
+        "Conversions API",
+        "Зведення щотижня",
+        "Звіт щомісяця"
+      ],
+      "cta": [
+        {
+          "text": "ОБГОВОРИТИ",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 6,
+      "section": "Ціна реклами в Instagram",
+      "name": "E-commerce",
+      "price": "від $400/міс",
+      "priceNote": "магазини з каталогом",
+      "term": "",
+      "includes": [
+        "Каталог товарів у Commerce Manager",
+        "Динамічні оголошення товарів",
+        "Advantage+ для магазинів",
+        "Кампанії під категорії",
+        "Передача замовлень у CRM"
+      ],
+      "cta": [
+        {
+          "text": "ОБГОВОРИТИ",
+          "href": "#contact"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Скільки коштує реклама в Instagram?",
+      "a": "Налаштування — від $250 разово, ведення — від $200/міс, для магазинів з каталогом — від $400/міс. Рекламний бюджет — окремо, рекомендуємо від $300/міс."
+    },
+    {
+      "q": "Який формат обрати: Reels, Stories чи стрічку?",
+      "a": "Reels дають найбільше охоплення, Stories — швидкий перехід за кнопкою, стрічка і каруселі — для каталогу й кейсів. Зазвичай запускаємо всі три з окремими креативами і залишаємо те, що дає заявки."
+    },
+    {
+      "q": "Чи потрібен сайт?",
+      "a": "Ні, заявки можна збирати в Direct або через лід-форму. Але сайт з Pixel дає алгоритму більше даних і відкриває ретаргетинг."
+    },
+    {
+      "q": "Хто робить креативи?",
+      "a": "Статичні макети, каруселі й тексти — ми, в межах ведення. Зйомку Reels з людьми або UGC-контент — окремо, або монтуємо з ваших матеріалів."
+    },
+    {
+      "q": "Що потрібно від мене для старту?",
+      "a": "Професійний акаунт Instagram (бізнес або автор), підключений до Meta Business Suite, і доступ до платіжного профілю. Якщо чогось немає — допоможемо налаштувати."
+    },
+    {
+      "q": "Коли буде результат?",
+      "a": "Перші 1–2 тижні кампанія навчається, вартість заявки в цей час коливається. Висновки робимо після накопичення даних; конкретну кількість заявок заздалегідь не обіцяємо."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "ОБГОВОРИТИ РЕКЛАМУ",
+      "href": "/services/meta-ads-instagram/#contact",
+      "block": 1
+    },
+    {
+      "text": "ОБГОВОРИТИ",
+      "href": "/services/meta-ads-instagram/#contact",
+      "block": 6
+    },
+    {
+      "text": "ОБГОВОРИТИ",
+      "href": "/services/meta-ads-instagram/#contact",
+      "block": 6
+    },
+    {
+      "text": "ОБГОВОРИТИ",
+      "href": "/services/meta-ads-instagram/#contact",
+      "block": 6
+    },
+    {
+      "text": "таргетовану рекламу Facebook та Instagram",
+      "href": "/services/meta-ads/",
+      "block": 6
+    },
+    {
+      "text": "цін",
+      "href": "/pricing/",
+      "block": 6
+    },
+    {
+      "text": "портфоліо",
+      "href": "/portfolio/",
+      "block": 7
+    },
+    {
+      "text": "Facebook + Instagram Таргетована реклама Детальніше →",
+      "href": "/services/meta-ads/",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "Вертикальне відео Реклама в TikTok Детальніше →",
+      "href": "/services/tiktok-ads/",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "Посадкова під рекламу Лендінг від $600 Детальніше →",
+      "href": "/services/websites-landing/",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "Усі ціни Тарифи агенції Детальніше →",
+      "href": "/pricing/",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "ЗАПОВНИТИ ФОРМУ",
+      "href": "/#contact",
+      "block": 10
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 10
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 10
+    },
+    {
+      "text": "Viber",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 10
+    },
+    {
+      "text": "+380688286969",
+      "href": "tel:+380688286969",
+      "block": 10
+    }
+  ]
+}

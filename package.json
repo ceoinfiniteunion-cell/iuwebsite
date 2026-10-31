@@ -22,7 +22,8 @@
     "build:pages": "npm run build:seo && npm run build:sitemap",
     "check:static": "node scripts/check.mjs",
     "check": "node scripts/check.mjs --lighthouse",
-    "build:site": "node scripts/build-site.mjs"
+    "build:site": "node scripts/build-site.mjs",
+    "design:content": "node scripts/design-content.mjs"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.63.0",

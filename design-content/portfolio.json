@@ -1,0 +1,892 @@
+{
+  "url": "https://infiniteunion.com.ua/portfolio/",
+  "path": "/portfolio/",
+  "file": "portfolio/index.html",
+  "lang": "uk",
+  "alt": {
+    "lang": "en",
+    "path": "/en/portfolio/",
+    "url": "https://infiniteunion.com.ua/en/portfolio/"
+  },
+  "template": "portfolio",
+  "registryType": "portfolio",
+  "name": "Портфоліо",
+  "title": "Портфоліо Infinite Union — сайти, Telegram-боти, SaaS",
+  "description": "Реальні проєкти Infinite Union: лендінг Transfer Kharkiv з конверсією 8.4%, бот КНЕУ на 3000+ користувачів, Respect Car, Parrot School та інші.",
+  "keyword": "портфоліо веб-студії",
+  "robots": "index, follow",
+  "h1": "Портфоліо Infinite Union: сайти, боти та SaaS",
+  "breadcrumbs": [
+    {
+      "name": "Головна",
+      "url": "/"
+    },
+    {
+      "name": "Портфоліо",
+      "url": "/portfolio/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--red2": "#8B0000",
+    "--ink": "#0a0a0a",
+    "--ink2": "#242121",
+    "--muted": "#6b6560",
+    "--muted2": "#a39d97",
+    "--bg": "#ffffff",
+    "--bg2": "#f7f5f3",
+    "--border": "rgba(10,8,8,.1)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif"
+  },
+  "words": 619,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Назад",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "EN",
+      "href": "/en/portfolio/"
+    },
+    {
+      "k": "link",
+      "text": "Замовити проєкт",
+      "href": "/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "header",
+      "class": "hero",
+      "heading": "Портфоліо Infinite Union: сайти, боти та SaaS",
+      "items": [
+        {
+          "k": "decor",
+          "text": "IU"
+        },
+        {
+          "k": "text",
+          "text": "49° 59′ N · 36° 14′ E · Kharkiv, Ukraine",
+          "role": "hero-coords"
+        },
+        {
+          "k": "text",
+          "text": "Портфоліо · Infinite Union",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Портфоліо Infinite Union: сайти, боти та SaaS"
+        },
+        {
+          "k": "text",
+          "text": "Портфоліо веб-студії Infinite Union з Харкова: 8 проєктів, які працюють у продакшні. Лендінг Transfer Kharkiv з конверсією 8.4%, офіційний бот КНЕУ на 3 000+ користувачів, сайт автомайданчика Respect Car, екосистема школи Parrot School і власні інструменти. Скільки коштує схожий проєкт — на сторінці «Ціни»."
+        },
+        {
+          "k": "text",
+          "text": "8",
+          "role": "hero-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "проєктів у продакшні",
+          "role": "hero-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "3 000+",
+          "role": "hero-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "користувачів у ботах",
+          "role": "hero-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "8.4%",
+          "role": "hero-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "конверсія Transfer Kharkiv",
+          "role": "hero-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "119+",
+          "role": "hero-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "SEO-позицій в топі",
+          "role": "hero-stat-l"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "filters",
+      "viewport": "all",
+      "tag": "div",
+      "class": "filters-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "button",
+          "text": "Всі",
+          "type": "button"
+        },
+        {
+          "k": "button",
+          "text": "Сайти",
+          "type": "button"
+        },
+        {
+          "k": "button",
+          "text": "Боти",
+          "type": "button"
+        },
+        {
+          "k": "button",
+          "text": "AI",
+          "type": "button"
+        },
+        {
+          "k": "button",
+          "text": "SaaS",
+          "type": "button"
+        },
+        {
+          "k": "text",
+          "text": "8 / 8 проєктів",
+          "role": "filter-total"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "portfolio-grid",
+      "viewport": "all",
+      "tag": "main",
+      "class": "grid-wrap",
+      "heading": "Ad Tracker by Infinite Union",
+      "items": [
+        {
+          "k": "text",
+          "text": "01 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "SaaS · Флагман IU",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ad Tracker by Infinite Union"
+        },
+        {
+          "k": "text",
+          "text": "Один дашборд замість трьох вкладок",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "Власний дашборд аналітики реклами, який ми будуємо для клієнтів і використовуємо самі. Meta Ads, Google Ads і TikTok Ads — в одному вікні, дані оновлюються автоматично кожні 2 години, історія — 90 днів. Без ручного зведення звітів в Excel."
+        },
+        {
+          "k": "text",
+          "text": "Next.js 14 · PostgreSQL · Meta API · Google API · TikTok API · Railway",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "3",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "платформи в одному дашборді",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "2 год",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "автооновлення даних",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "5+ год",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "економії на звітах щотижня",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Послуги: Вебплатформи / SaaS · Google Ads · Meta Ads · TikTok Ads",
+          "role": "p-services"
+        },
+        {
+          "k": "text",
+          "text": "В розробці · Приватний проєкт",
+          "role": "p-link"
+        },
+        {
+          "k": "text",
+          "text": "02 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "Автобізнес · Харків",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Respect Car"
+        },
+        {
+          "k": "text",
+          "text": "Повний цикл: від каталогу до угоди",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "Сайт автомайданчика в Харкові з продажем, викупом та імпортом авто зі США. Живий каталог з фото, а адмінка — прямо в Telegram: власник керує сайтом з телефону, не чіпаючи жодного рядка коду."
+        },
+        {
+          "k": "text",
+          "text": "Next.js 16 · React 19 · TypeScript · PostgreSQL · Redis · Cloudinary · Telegram Bot · Cloudflare",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "Фото",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "живий каталог авто",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "TG",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "адмінка в Telegram",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "CDN",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "захист Cloudflare",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Послуги: Корпоративний сайт · Telegram-бот (адмінка) · Сайти в Харкові",
+          "role": "p-services"
+        },
+        {
+          "k": "link",
+          "text": "respectcar.com.ua",
+          "href": "https://respectcar.com.ua/"
+        },
+        {
+          "k": "text",
+          "text": "03 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "Освіта · Екосистема",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Parrot School"
+        },
+        {
+          "k": "text",
+          "text": "Сайт + бот для учня, батька і вчителя",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "Сайт школи англійської мови в Харкові та повноцінна Telegram-екосистема навколо нього: учні бачать розклад і оцінки, батьки — прогрес дитини, вчителі — свій кабінет. Плюс окремий адмін-бот для команди школи."
+        },
+        {
+          "k": "text",
+          "text": "Static HTML/CSS/JS · Python · aiogram · Railway",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "ролі в одному боті",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "+1",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "адмін-бот для команди",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "24/7",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "сповіщення без дзвінків",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Послуги: Цифрова екосистема · Telegram-боти · Розробка сайтів",
+          "role": "p-services"
+        },
+        {
+          "k": "link",
+          "text": "parrotschool.com.ua",
+          "href": "https://parrotschool.com.ua/"
+        },
+        {
+          "k": "text",
+          "text": "04 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "Флагман · SEO",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Transfer Kharkiv"
+        },
+        {
+          "k": "text",
+          "text": "Лендінг + SEO + бот для заявок",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "Лендінг трансферної компанії з конверсією 8.4%. SEO вивело сайт у топ за 119+ запитами, а Telegram-бот приймає заявки 24/7 і одразу передає їх диспетчеру."
+        },
+        {
+          "k": "text",
+          "text": "Static HTML/CSS/JS · Python-бот · SEO",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "8.4%",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "конверсія лендінгу",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "119+",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "SEO-позицій у топі",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "заявки без менеджера",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Послуги: Лендінг · SEO-просування · Telegram-бот",
+          "role": "p-services"
+        },
+        {
+          "k": "link",
+          "text": "transferkharkiv.com.ua",
+          "href": "https://transferkharkiv.com.ua/"
+        },
+        {
+          "k": "text",
+          "text": "05 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "Університет · 3000+ юзерів",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "KNEU Bot"
+        },
+        {
+          "k": "text",
+          "text": "Бот, яким користується цілий університет",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "Офіційний Telegram-бот Київського національного економічного університету. Розклад, новини та сповіщення — у кишені кожного з понад 3 000 активних студентів, щодня."
+        },
+        {
+          "k": "text",
+          "text": "Python · aiogram · PostgreSQL · Railway",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "3 000+",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "активних користувачів",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Live",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "розклад і новини",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Push",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "миттєві сповіщення",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Послуги: Розробка Telegram-ботів",
+          "role": "p-services"
+        },
+        {
+          "k": "text",
+          "text": "Офіційний бот КНЕУ",
+          "role": "p-link"
+        },
+        {
+          "k": "text",
+          "text": "06 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "Автоматизація · Бізнес",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "BizBot"
+        },
+        {
+          "k": "text",
+          "text": "Бухгалтер, який не бере відпустку",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "Telegram-бот, що автоматизує бухгалтерію малого бізнесу: зарплати, задачі, автозаповнення Excel. Власник економить понад 4 години рутини щотижня."
+        },
+        {
+          "k": "text",
+          "text": "Python · aiogram · FastAPI · Excel API · Railway",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "4+ год",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "економії щотижня",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Задачі",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "і зарплати в одному боті",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Auto",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "Excel автоматично",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Послуги: Telegram-боти · Інтеграції та автоматизація",
+          "role": "p-services"
+        },
+        {
+          "k": "text",
+          "text": "Приватний проєкт",
+          "role": "p-link"
+        },
+        {
+          "k": "text",
+          "text": "07 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "AI · Автоматизація",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "InfinityCreo"
+        },
+        {
+          "k": "text",
+          "text": "Від брифу до банера за ~3 хвилини",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "AI-генерація рекламних креативів через n8n. Ви описуєте бриф — бот за ~3 хвилини повертає готовий банер у потрібному форматі, без окремого замовлення дизайнеру."
+        },
+        {
+          "k": "text",
+          "text": "n8n · Claude API · Midjourney API · Telegram Bot",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "3 хв",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "від брифу до банера",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "10+",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "форматів креативів",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "n8n",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "автоматизація сценарію",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Послуги: Telegram-боти · Meta Ads",
+          "role": "p-services"
+        },
+        {
+          "k": "link",
+          "text": "@infinitycreo_bot",
+          "href": "https://t.me/infinitycreo_bot"
+        },
+        {
+          "k": "text",
+          "text": "08 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "Internal · Автоматизація",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "IU Bot"
+        },
+        {
+          "k": "text",
+          "text": "Квіз, кваліфікація ліда, передача в CRM",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "Внутрішній lead-бот Infinite Union з квізом, що кваліфікує клієнта ще до першого дзвінка. FSM-сценарії ведуть діалог, а CRM отримує вже теплого ліда — повністю автоматично."
+        },
+        {
+          "k": "text",
+          "text": "Python · aiogram · FastAPI · PostgreSQL · Redis · Railway",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "кваліфікація лідів",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "FSM",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "сценарії діалогу",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "CRM",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "інтеграція без ручних дій",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Послуги: Бот для продажів · CRM-інтеграція",
+          "role": "p-services"
+        },
+        {
+          "k": "text",
+          "text": "Внутрішній інструмент IU",
+          "role": "p-link"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "class": "cta-band",
+      "heading": "Обговоримо ваш проєкт?",
+      "items": [
+        {
+          "k": "text",
+          "text": "Ваш проєкт — наступний",
+          "role": "cta-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Обговоримо ваш проєкт?"
+        },
+        {
+          "k": "text",
+          "text": "Відповідаємо протягом 15 хвилин у робочий час і чесно кажемо, що варто робити, а що — ні."
+        },
+        {
+          "k": "link",
+          "text": "Обговорити проєкт",
+          "href": "/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [],
+  "internalLinks": [
+    {
+      "text": "«Ціни»",
+      "href": "/pricing/",
+      "block": 1
+    },
+    {
+      "text": "Вебплатформи / SaaS",
+      "href": "/services/platforms/",
+      "block": 3
+    },
+    {
+      "text": "Google Ads",
+      "href": "/services/google-ads/",
+      "block": 3
+    },
+    {
+      "text": "Meta Ads",
+      "href": "/services/meta-ads/",
+      "block": 3
+    },
+    {
+      "text": "TikTok Ads",
+      "href": "/services/tiktok-ads/",
+      "block": 3
+    },
+    {
+      "text": "Корпоративний сайт",
+      "href": "/services/websites-corporate/",
+      "block": 3
+    },
+    {
+      "text": "Telegram-бот (адмінка)",
+      "href": "/services/bots/",
+      "block": 3
+    },
+    {
+      "text": "Сайти в Харкові",
+      "href": "/services/websites-kharkiv/",
+      "block": 3
+    },
+    {
+      "text": "Цифрова екосистема",
+      "href": "/services/ecosystems/",
+      "block": 3
+    },
+    {
+      "text": "Telegram-боти",
+      "href": "/services/bots/",
+      "block": 3
+    },
+    {
+      "text": "Розробка сайтів",
+      "href": "/services/websites/",
+      "block": 3
+    },
+    {
+      "text": "Лендінг",
+      "href": "/services/websites-landing/",
+      "block": 3
+    },
+    {
+      "text": "SEO-просування",
+      "href": "/services/seo/",
+      "block": 3
+    },
+    {
+      "text": "Telegram-бот",
+      "href": "/services/bots/",
+      "block": 3
+    },
+    {
+      "text": "Розробка Telegram-ботів",
+      "href": "/services/bots/",
+      "block": 3
+    },
+    {
+      "text": "Telegram-боти",
+      "href": "/services/bots/",
+      "block": 3
+    },
+    {
+      "text": "Інтеграції та автоматизація",
+      "href": "/services/bots-crm/",
+      "block": 3
+    },
+    {
+      "text": "Telegram-боти",
+      "href": "/services/bots/",
+      "block": 3
+    },
+    {
+      "text": "Meta Ads",
+      "href": "/services/meta-ads/",
+      "block": 3
+    },
+    {
+      "text": "Бот для продажів",
+      "href": "/services/bots-sales/",
+      "block": 3
+    },
+    {
+      "text": "CRM-інтеграція",
+      "href": "/services/bots-crm/",
+      "block": 3
+    },
+    {
+      "text": "Обговорити проєкт",
+      "href": "/#contact",
+      "block": 4
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "respectcar.com.ua",
+      "href": "https://respectcar.com.ua/",
+      "block": 3
+    },
+    {
+      "text": "parrotschool.com.ua",
+      "href": "https://parrotschool.com.ua/",
+      "block": 3
+    },
+    {
+      "text": "transferkharkiv.com.ua",
+      "href": "https://transferkharkiv.com.ua/",
+      "block": 3
+    },
+    {
+      "text": "@infinitycreo_bot",
+      "href": "https://t.me/infinitycreo_bot",
+      "block": 3
+    }
+  ]
+}

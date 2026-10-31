@@ -1,0 +1,998 @@
+{
+  "url": "https://infiniteunion.com.ua/en/pricing/",
+  "path": "/en/pricing/",
+  "file": "en/pricing/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/pricing/",
+    "url": "https://infiniteunion.com.ua/pricing/"
+  },
+  "template": "pricing",
+  "registryType": "pricing",
+  "name": "Pricing",
+  "title": "Website Development Cost in 2026 — Pricing | Infinite Union",
+  "description": "How much does a custom website cost? Landing page from $600, corporate site from $1,000, online store from $1,200, Telegram bot from $300. What's included.",
+  "keyword": "custom website development cost",
+  "robots": "index, follow",
+  "h1": "Custom website development cost",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Pricing",
+      "url": "/en/pricing/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#060404",
+    "--bg2": "#0e0b0b",
+    "--border": "rgba(255,255,255,0.08)",
+    "--text": "#fff",
+    "--muted": "rgba(255,255,255,0.45)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif"
+  },
+  "words": 1331,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Back",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/pricing/"
+    },
+    {
+      "k": "link",
+      "text": "GET A QUOTE",
+      "href": "/en/pricing/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "Custom website development cost",
+      "items": [
+        {
+          "k": "text",
+          "text": "PRICING · 2026 · USD",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Custom website development cost"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union is a web agency in Kharkiv, Ukraine, working with businesses in the EU and Ukraine. Below is our custom website development cost for 2026, plus prices for Telegram bots, web platforms, ads and SEO. All prices are starting prices in USD; the final quote is fixed after a short brief."
+        },
+        {
+          "k": "text",
+          "text": "$600",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "LANDING PAGE, FROM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$1,000",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "CORPORATE SITE, FROM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$1,200",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "ONLINE STORE, FROM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$300",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "TELEGRAM BOT, FROM",
+          "role": "hero-stat-label"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "pricing-table",
+      "viewport": "all",
+      "tag": "section",
+      "class": "what",
+      "heading": "How much does a website cost?",
+      "items": [
+        {
+          "k": "text",
+          "text": "PRICE LIST",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "How much does a website cost?"
+        },
+        {
+          "k": "table",
+          "rows": [
+            [
+              "Service",
+              "Tier",
+              "Price",
+              "Scope and timeline"
+            ],
+            [
+              "Websites"
+            ],
+            [
+              "Landing page",
+              "Start",
+              "from $600",
+              "5–7 sections, up to 10 days"
+            ],
+            [
+              "Landing page",
+              "Pro",
+              "from $1,200",
+              "10+ sections, up to 3 weeks"
+            ],
+            [
+              "Landing page",
+              "Max",
+              "from $2,000",
+              "Quoted per project"
+            ],
+            [
+              "Corporate website",
+              "Business",
+              "from $1,000",
+              "5–8 pages, about 3 weeks"
+            ],
+            [
+              "Corporate website",
+              "Pro",
+              "from $2,000",
+              "10–20 pages, 4–5 weeks"
+            ],
+            [
+              "Corporate website",
+              "Enterprise",
+              "from $4,000",
+              "50+ pages"
+            ],
+            [
+              "Online store",
+              "Start",
+              "from $1,200",
+              "Up to 100 products, about 3 weeks"
+            ],
+            [
+              "Online store",
+              "Pro",
+              "from $2,500",
+              "Unlimited products, about 5 weeks"
+            ],
+            [
+              "Online store",
+              "Marketplace",
+              "from $5,000",
+              "Quoted per project"
+            ],
+            [
+              "Platforms and automation"
+            ],
+            [
+              "Web platform / SaaS",
+              "MVP",
+              "from $2,500",
+              "4–8 weeks"
+            ],
+            [
+              "Web platform / SaaS",
+              "Platform",
+              "from $6,000",
+              "2–4 months"
+            ],
+            [
+              "Web platform / SaaS",
+              "Enterprise",
+              "from $15,000",
+              "Quoted per project"
+            ],
+            [
+              "Digital ecosystem",
+              "Website + bot + CRM",
+              "from $2,000",
+              "One system for leads, sales and notifications"
+            ],
+            [
+              "Telegram bots"
+            ],
+            [
+              "Telegram bot",
+              "Starter",
+              "from $300",
+              "Simple bot, up to 2 weeks"
+            ],
+            [
+              "Telegram bot",
+              "Business",
+              "from $700",
+              "Payments, CRM, 1 month of support, up to 4 weeks"
+            ],
+            [
+              "Telegram bot",
+              "Enterprise",
+              "from $1,500",
+              "Mini App, AI, 3 months of support"
+            ],
+            [
+              "Sales bot",
+              "Start / Pro / Max",
+              "from $500 / $1,200 / $2,500",
+              "7 days / 14 days / quoted"
+            ],
+            [
+              "Restaurant bot",
+              "Cafe / Restaurant / Chain",
+              "from $600 / $1,200 / $2,500",
+              "Cafe: up to 50 menu items, 7 days; Restaurant: 14 days"
+            ],
+            [
+              "Bot + CRM integration",
+              "Start / Pro / Enterprise",
+              "from $800 / $1,500 / $3,000",
+              "Start: 1 CRM, 7 days; Pro: 14 days"
+            ],
+            [
+              "Advertising (ad budget separate)"
+            ],
+            [
+              "Google Ads",
+              "Setup / Management",
+              "from $300 / $200 mo",
+              "Large budgets and e-commerce from $500/month; suggested ad budget from $300/month"
+            ],
+            [
+              "Meta Ads (Facebook, Instagram)",
+              "Setup / Management",
+              "from $250 / $200 mo",
+              "E-commerce from $400/month; suggested ad budget from $300/month"
+            ],
+            [
+              "TikTok Ads",
+              "Setup / Management",
+              "from $250 / $150 mo",
+              "Minimum ad budget from $200/month"
+            ],
+            [
+              "SEO"
+            ],
+            [
+              "SEO",
+              "Monthly",
+              "from $150 mo",
+              "First results usually in 3–6 months"
+            ],
+            [
+              "SEO audit",
+              "Basic / Full",
+              "from $100 / $300",
+              "Basic: up to 50 pages, 3 days; Full: 5 days"
+            ],
+            [
+              "Local SEO",
+              "Start / Local Pro / Multi-location",
+              "from $200 / $150 mo / $400 mo",
+              "Start is one-off; Google Business Profile and local pages"
+            ],
+            [
+              "After launch"
+            ],
+            [
+              "Support and updates",
+              "Monthly or hourly",
+              "from $150 mo",
+              "Fixes, content updates, monitoring"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "What you get in every website",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHAT'S INCLUDED",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "What you get in every website"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Custom design"
+        },
+        {
+          "k": "text",
+          "text": "A layout designed for your business and audience, not a purchased theme. You approve the prototype before development starts.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Responsive build"
+        },
+        {
+          "k": "text",
+          "text": "The site works on phones, tablets and desktops and is checked on real devices before launch.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Basic SEO"
+        },
+        {
+          "k": "text",
+          "text": "Titles and descriptions, clean structure, sitemap, robots.txt, structured data and fast loading from day one.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Telegram or CRM integration"
+        },
+        {
+          "k": "text",
+          "text": "Form enquiries go to Telegram or your CRM, so no lead sits unread in a mailbox.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "One month of support"
+        },
+        {
+          "k": "text",
+          "text": "Fixes and small changes during the first month after launch are included in the price.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Source code and access"
+        },
+        {
+          "k": "text",
+          "text": "You receive the full source code and every account. The product belongs to you, not to the agency.",
+          "role": "what-desc"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "not-included",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Paid separately, always",
+      "items": [
+        {
+          "k": "text",
+          "text": "NOT INCLUDED",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Paid separately, always"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Hosting and domain"
+        },
+        {
+          "k": "text",
+          "text": "Registered and paid in your name, so you never depend on us to keep the site online.",
+          "role": "extra-desc"
+        },
+        {
+          "k": "text",
+          "text": "Paid to the provider",
+          "role": "extra-price"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ad budget"
+        },
+        {
+          "k": "text",
+          "text": "Money for Google, Meta or TikTok ads is charged by the platform directly to your card. Our fee covers the work only.",
+          "role": "extra-desc"
+        },
+        {
+          "k": "text",
+          "text": "Paid to the ad platform",
+          "role": "extra-price"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Paid APIs and services"
+        },
+        {
+          "k": "text",
+          "text": "Usage-based services such as AI models (for example, Claude API), SMS, paid plugins or a third-party CRM subscription.",
+          "role": "extra-desc"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "pricing-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Why two websites cost differently",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHAT AFFECTS THE PRICE",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Why two websites cost differently"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Design"
+        },
+        {
+          "k": "text",
+          "text": "A clean layout costs less than custom illustrations, 3D or complex animation.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Number of pages"
+        },
+        {
+          "k": "text",
+          "text": "A 6-section landing page and a 20-page corporate site are different amounts of work.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Languages"
+        },
+        {
+          "k": "text",
+          "text": "Each extra language adds layout checks, translated metadata and separate SEO pages.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Integrations"
+        },
+        {
+          "k": "text",
+          "text": "Payments (Stripe, LiqPay, WayForPay, Monobank), CRM, delivery services or a custom admin panel.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Content"
+        },
+        {
+          "k": "text",
+          "text": "Ready texts and photos from you, or copywriting and product descriptions from us.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Support"
+        },
+        {
+          "k": "text",
+          "text": "One month is included; after that, support starts from $150/month or is billed hourly.",
+          "role": "what-desc"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "class": "process",
+      "heading": "How long it takes",
+      "items": [
+        {
+          "k": "text",
+          "text": "TIMELINES",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "How long it takes"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Briefing"
+        },
+        {
+          "k": "text",
+          "text": "Goals, audience, competitors, scope",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Prototype"
+        },
+        {
+          "k": "text",
+          "text": "Structure and key screens for approval",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "3–5 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Development"
+        },
+        {
+          "k": "text",
+          "text": "Design, build, integrations",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "Depends on scope",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Testing"
+        },
+        {
+          "k": "text",
+          "text": "Devices, forms, speed, analytics",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "2–4 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Launch"
+        },
+        {
+          "k": "text",
+          "text": "Go live, then support",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "1 day",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "In practice: a Start landing page takes up to 10 days, a business website about 3 weeks, an online store 3–5 weeks, a platform MVP 4–8 weeks. A simple Telegram bot is ready in up to 2 weeks."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "why-us",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "A fixed quote, paid in stages",
+      "items": [
+        {
+          "k": "text",
+          "text": "HOW WE ESTIMATE",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "A fixed quote, paid in stages"
+        },
+        {
+          "k": "text",
+          "text": "You describe the task in a message or a short call. We ask what the site must do, which pages and languages you need and what integrations are involved, then send a written estimate with scope, timeline and price. The price is agreed before work starts."
+        },
+        {
+          "k": "text",
+          "text": "Payment is staged: we recommend 50% upfront and 50% after launch. Larger projects are split into milestones, so you only pay for work you have seen."
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "why-us",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Ukrainian agency, EU standards",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHY THE PRICE IS LOWER",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Ukrainian agency, EU standards"
+        },
+        {
+          "k": "text",
+          "text": "Our prices are usually lower than Western European agency rates for one simple reason: salaries, rent and the cost of living in Ukraine are lower. That changes the price, not the tools or the result."
+        },
+        {
+          "k": "text",
+          "text": "We use the same stack as agencies in Berlin or Amsterdam — Next.js, React, TypeScript, Python, PostgreSQL, Cloudflare — and work remotely in a time zone one hour ahead of Central European Time. You get the source code and all access, staged payment and direct contact with the people building your project. See what we have built in our portfolio."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq",
+      "heading": "Pricing questions",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Pricing questions"
+        },
+        {
+          "k": "faq",
+          "q": "How much does a website cost in 2026?",
+          "a": "With us, a landing page starts from $600, a corporate website from $1,000, an online store from $1,200 and a web platform MVP from $2,500. The exact price depends on pages, design, languages and integrations."
+        },
+        {
+          "k": "faq",
+          "q": "Why are your prices \"from\"?",
+          "a": "Because two projects of the same type can differ a lot in scope. The starting price covers the basic tier; after a brief we send a fixed quote that does not change unless the scope does."
+        },
+        {
+          "k": "faq",
+          "q": "Are hosting and domain included?",
+          "a": "No. Hosting and domain are paid separately and registered in your name. We help you choose and set them up."
+        },
+        {
+          "k": "faq",
+          "q": "Is the ad budget included in Google Ads or Meta Ads prices?",
+          "a": "No. Our fee covers setup and management. The ad budget is paid directly to Google, Meta or TikTok. We suggest starting from $300/month for Google and Meta and from $200/month for TikTok."
+        },
+        {
+          "k": "faq",
+          "q": "How does payment work?",
+          "a": "In stages. We recommend 50% upfront and 50% after launch; larger projects are split into milestones. Monthly services such as SEO or ad management are paid per month."
+        },
+        {
+          "k": "faq",
+          "q": "What happens after the first month of support?",
+          "a": "You can continue with support from $150/month, pay hourly for changes, or take the code and maintain it yourself — you own everything."
+        },
+        {
+          "k": "faq",
+          "q": "Do you work with clients outside Ukraine?",
+          "a": "Yes. We work with businesses in Ukraine and the EU, including Poland, Germany, the Netherlands, Czechia, Slovakia and the UK. Prices are in USD."
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Tell us about your project",
+      "items": [
+        {
+          "k": "text",
+          "text": "GET A QUOTE",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Tell us about your project"
+        },
+        {
+          "k": "text",
+          "text": "Send a short description and get an estimate. We reply within 15 minutes during working hours."
+        },
+        {
+          "k": "link",
+          "text": "MESSAGE ON TELEGRAM",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WHATSAPP",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "VIBER",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380 68 828 6969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "link",
+          "text": "FILL IN THE FORM",
+          "href": "/en/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [
+    {
+      "q": "How much does a website cost in 2026?",
+      "a": "With us, a landing page starts from $600, a corporate website from $1,000, an online store from $1,200 and a web platform MVP from $2,500. The exact price depends on pages, design, languages and integrations."
+    },
+    {
+      "q": "Why are your prices \"from\"?",
+      "a": "Because two projects of the same type can differ a lot in scope. The starting price covers the basic tier; after a brief we send a fixed quote that does not change unless the scope does."
+    },
+    {
+      "q": "Are hosting and domain included?",
+      "a": "No. Hosting and domain are paid separately and registered in your name. We help you choose and set them up."
+    },
+    {
+      "q": "Is the ad budget included in Google Ads or Meta Ads prices?",
+      "a": "No. Our fee covers setup and management. The ad budget is paid directly to Google, Meta or TikTok. We suggest starting from $300/month for Google and Meta and from $200/month for TikTok."
+    },
+    {
+      "q": "How does payment work?",
+      "a": "In stages. We recommend 50% upfront and 50% after launch; larger projects are split into milestones. Monthly services such as SEO or ad management are paid per month."
+    },
+    {
+      "q": "What happens after the first month of support?",
+      "a": "You can continue with support from $150/month, pay hourly for changes, or take the code and maintain it yourself — you own everything."
+    },
+    {
+      "q": "Do you work with clients outside Ukraine?",
+      "a": "Yes. We work with businesses in Ukraine and the EU, including Poland, Germany, the Netherlands, Czechia, Slovakia and the UK. Prices are in USD."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "Websites",
+      "href": "/en/services/websites/",
+      "block": 2
+    },
+    {
+      "text": "Platforms and automation",
+      "href": "/en/services/platforms/",
+      "block": 2
+    },
+    {
+      "text": "Digital ecosystem",
+      "href": "/en/services/ecosystems/",
+      "block": 2
+    },
+    {
+      "text": "Telegram bots",
+      "href": "/en/services/bots/",
+      "block": 2
+    },
+    {
+      "text": "Google Ads",
+      "href": "/en/services/google-ads/",
+      "block": 2
+    },
+    {
+      "text": "Meta Ads",
+      "href": "/en/services/meta-ads/",
+      "block": 2
+    },
+    {
+      "text": "TikTok Ads",
+      "href": "/en/services/tiktok-ads/",
+      "block": 2
+    },
+    {
+      "text": "SEO",
+      "href": "/en/services/seo/",
+      "block": 2
+    },
+    {
+      "text": "portfolio",
+      "href": "/en/portfolio/",
+      "block": 8
+    },
+    {
+      "text": "FILL IN THE FORM",
+      "href": "/en/#contact",
+      "block": 10
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "MESSAGE ON TELEGRAM",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 10
+    },
+    {
+      "text": "WHATSAPP",
+      "href": "https://wa.me/380688286969",
+      "block": 10
+    },
+    {
+      "text": "VIBER",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 10
+    },
+    {
+      "text": "+380 68 828 6969",
+      "href": "tel:+380688286969",
+      "block": 10
+    }
+  ]
+}

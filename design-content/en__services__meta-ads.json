@@ -1,0 +1,867 @@
+{
+  "url": "https://infiniteunion.com.ua/en/services/meta-ads/",
+  "path": "/en/services/meta-ads/",
+  "file": "en/services/meta-ads/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/services/meta-ads/",
+    "url": "https://infiniteunion.com.ua/services/meta-ads/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "Meta Ads",
+  "title": "Facebook & Instagram Ads Agency — from $250 | Infinite Union",
+  "description": "Facebook and Instagram advertising: Pixel and Conversions API, audiences, creatives, retargeting, clear reports. Setup from $250, management from $200/mo.",
+  "keyword": "Facebook and Instagram ads agency",
+  "priceFrom": 250,
+  "robots": "index, follow",
+  "h1": "Facebook and Instagram ads agency",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Meta Ads",
+      "url": "/en/services/meta-ads/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#F5F0E8",
+    "--bg2": "#EDE8E0",
+    "--dark": "#0A0A0A",
+    "--text": "#1A1A1A",
+    "--muted": "#777",
+    "--border": "rgba(0,0,0,0.07)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ease": "cubic-bezier(0.76,0,0.24,1)",
+    "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+  },
+  "words": 1008,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Back",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/services/meta-ads/"
+    },
+    {
+      "k": "link",
+      "text": "ORDER ADS",
+      "href": "/en/services/meta-ads/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "Facebook and Instagram ads agency",
+      "items": [
+        {
+          "k": "text",
+          "text": "$250",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "Setup",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "one-off, from",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "$200",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "Management",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "per month, from",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "$300",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "Ad budget",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "per month, suggested start",
+          "role": "hm-sub"
+        },
+        {
+          "k": "decor",
+          "text": "SCROLL"
+        },
+        {
+          "k": "decor",
+          "text": "01"
+        },
+        {
+          "k": "text",
+          "text": "FACEBOOK · INSTAGRAM · REELS",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Facebook and Instagram ads agency"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union is a Facebook and Instagram ads agency from Kharkiv, Ukraine, working with small businesses across the EU. We set up Meta Pixel and Conversions API, build audiences, prepare creatives and run campaigns in Feed, Stories and Reels. Setup from $250, management from $200/month, ad budget paid separately."
+        },
+        {
+          "k": "text",
+          "text": "$250",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "setup, from",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$200/mo",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "management, from",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "15min",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "reply time, working hours",
+          "role": "hero-stat-label"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "FACEBOOK ADS →INSTAGRAM ADS →REELS →STORIES →RETARGETING →LOOKALIKE →META PIXEL →CONVERSIONS API →FACEBOOK ADS →INSTAGRAM ADS →REELS →STORIES →RETARGETING →LOOKALIKE →META PIXEL →CONVERSIONS API →"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Boosted posts are not a strategy",
+      "items": [
+        {
+          "k": "text",
+          "text": "THE PROBLEM",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Boosted posts are not a strategy"
+        },
+        {
+          "k": "text",
+          "text": "Many businesses start with the Boost button on Instagram. It brings likes and profile visits, but rarely enquiries, because the campaign is optimised for engagement, not for leads or sales. Meta never learns who actually contacted you or bought something."
+        },
+        {
+          "k": "text",
+          "text": "Browser tracking alone also misses part of your conversions since the privacy changes on iOS and in browsers. If Pixel events are set up incorrectly, the algorithm learns from incomplete data and shows ads to the wrong people. So the fix starts with the technical part — correct events, Conversions API, a clear funnel — and only then comes the budget."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "What a Facebook and Instagram ads agency does",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHAT'S INCLUDED",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "What a Facebook and Instagram ads agency does"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Pixel and Conversions API"
+        },
+        {
+          "k": "text",
+          "text": "We set up Meta Pixel and server-side Conversions API for the events that matter — lead, purchase, add to cart, message — and check event deduplication in Events Manager before any money is spent.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Meta Pixel · Conversions API · Events Manager",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Instagram ads: Reels, Stories, Feed"
+        },
+        {
+          "k": "text",
+          "text": "Instagram needs vertical, native-looking creatives. We plan formats per placement: short Reels videos, Stories with one clear call to action, and carousels for products or services.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Reels · Stories · Carousel",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Audiences and retargeting"
+        },
+        {
+          "k": "text",
+          "text": "Broad and interest audiences for cold traffic, lookalikes from your customer list, and retargeting for site visitors, video viewers and people who opened a lead form but did not send it.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Custom Audiences · Lookalike · Advantage+",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Creatives and testing"
+        },
+        {
+          "k": "text",
+          "text": "We write ad copy, design static banners and prepare video scripts, or brief your designer. New creatives are tested in small batches, and only the ones that bring enquiries get more budget.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Ad copy · Banners · Video scripts",
+          "role": "service-tags"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Four steps to a working funnel",
+      "items": [
+        {
+          "k": "text",
+          "text": "HOW WE WORK",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Four steps to a working funnel"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Brief and research"
+        },
+        {
+          "k": "text",
+          "text": "Your offer and audience, competitors' ads in the Meta Ad Library, your current account if you have one.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Tracking and setup"
+        },
+        {
+          "k": "text",
+          "text": "Business Manager, Pixel, Conversions API, audiences and the first campaigns.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "2–3 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Testing"
+        },
+        {
+          "k": "text",
+          "text": "Several audiences and creatives run side by side to find what brings enquiries.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 weeks",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Scaling"
+        },
+        {
+          "k": "text",
+          "text": "Budget moves to what works, weak ads are paused, new creatives are added.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "Ongoing",
+          "role": "process-time"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Meta Ads pricing",
+      "items": [
+        {
+          "k": "text",
+          "text": "PRICING",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Meta Ads pricing"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "TIER 01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Setup — from $250"
+        },
+        {
+          "k": "text",
+          "text": "One-off. Business Manager and ad account check, Pixel and Conversions API, audiences, campaign structure and launch.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "One-off",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "TIER 02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Management — from $200/month"
+        },
+        {
+          "k": "text",
+          "text": "Ongoing optimisation, creative tests, audience updates and a monthly report with the same numbers you see in Ads Manager.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Monthly",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "TIER 03",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "E-commerce — from $400/month"
+        },
+        {
+          "k": "text",
+          "text": "Product catalog, dynamic ads for people who viewed or added products to cart, Advantage+ shopping campaigns.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "BUDGET",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ad budget — paid to Meta"
+        },
+        {
+          "k": "text",
+          "text": "Your ad budget is charged by Meta directly and is never mixed with our fee. We suggest starting from $300/month.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Separate",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "All our prices in one place: pricing for websites, bots, ads and SEO."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Tools we built for advertising",
+      "items": [
+        {
+          "k": "text",
+          "text": "FROM OUR PORTFOLIO",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Tools we built for advertising"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "InfinityCreo"
+        },
+        {
+          "k": "text",
+          "text": "Our AI tool for ad creatives, built on n8n and available as @infinitycreo_bot. It goes from a short brief to a finished banner in about 3 minutes and supports 10+ formats, which makes it faster to prepare variations for testing.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "n8n · AI · Telegram bot",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ad Tracker by IU"
+        },
+        {
+          "k": "text",
+          "text": "A dashboard in development that shows Meta, Google and TikTok campaigns in one window, with auto-refresh every 2 hours and 90 days of history.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Reporting · Dashboard",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "See the rest of our work in the portfolio."
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq",
+      "heading": "Questions we get asked",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Questions we get asked"
+        },
+        {
+          "k": "faq",
+          "q": "How much does a Facebook and Instagram ads agency cost?",
+          "a": "With us, setup starts from $250 one-off, and management from $200/month; e-commerce management starts from $400/month. The ad budget goes to Meta directly and is not part of our fee."
+        },
+        {
+          "k": "faq",
+          "q": "What is the minimum ad budget?",
+          "a": "We suggest from $300/month. A smaller budget makes it hard to test several audiences and creatives at the same time, so the learning phase takes longer."
+        },
+        {
+          "k": "faq",
+          "q": "Can you run Instagram ads only?",
+          "a": "Yes. In Ads Manager we can choose placements, so a campaign can run only in Instagram Feed, Stories and Reels. Whether Facebook placements are worth adding is a decision we make based on your data."
+        },
+        {
+          "k": "faq",
+          "q": "Do you create the ads?",
+          "a": "Yes: copy, static banners and video scripts. Filming with real people or products is usually done by you or a creator; we provide a script and a shot list."
+        },
+        {
+          "k": "faq",
+          "q": "Is my type of business allowed?",
+          "a": "Meta has special rules for categories such as finance, employment, housing, health, alcohol and gambling. Some need extra verification or have limited targeting. We check this before setup."
+        },
+        {
+          "k": "faq",
+          "q": "Do you guarantee leads or ROAS?",
+          "a": "No. Results depend on your offer, prices, market and budget. We commit to correct tracking, regular testing and honest reporting."
+        },
+        {
+          "k": "faq",
+          "q": "Will the ad account be mine?",
+          "a": "Yes. Everything stays in your Business Manager, and we work through partner access. If we stop working together, your account, audiences and data remain yours."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "related-services",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Other channels worth testing",
+      "items": [
+        {
+          "k": "text",
+          "text": "RELATED SERVICES",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Other channels worth testing"
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/google-ads/",
+          "items": [
+            {
+              "k": "text",
+              "text": "01"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Google Ads management"
+            },
+            {
+              "k": "text",
+              "text": "Search and Performance Max for people already looking for you. Setup from $300."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/tiktok-ads/",
+          "items": [
+            {
+              "k": "text",
+              "text": "02"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "TikTok ads"
+            },
+            {
+              "k": "text",
+              "text": "In-Feed and Spark Ads with UGC-style video. Setup from $250."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/websites/",
+          "items": [
+            {
+              "k": "text",
+              "text": "03"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Landing pages"
+            },
+            {
+              "k": "text",
+              "text": "A page built for ad traffic, from $600."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Let's plan your Meta Ads",
+      "items": [
+        {
+          "k": "decor",
+          "text": "ADS"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Let's plan your Meta Ads"
+        },
+        {
+          "k": "text",
+          "text": "Tell us about your business and target market. We reply within 15 minutes during working hours."
+        },
+        {
+          "k": "link",
+          "text": "MESSAGE ON TELEGRAM",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WHATSAPP",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "VIBER",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380 68 828 6969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "link",
+          "text": "FILL IN THE FORM",
+          "href": "/en/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [
+    {
+      "q": "How much does a Facebook and Instagram ads agency cost?",
+      "a": "With us, setup starts from $250 one-off, and management from $200/month; e-commerce management starts from $400/month. The ad budget goes to Meta directly and is not part of our fee."
+    },
+    {
+      "q": "What is the minimum ad budget?",
+      "a": "We suggest from $300/month. A smaller budget makes it hard to test several audiences and creatives at the same time, so the learning phase takes longer."
+    },
+    {
+      "q": "Can you run Instagram ads only?",
+      "a": "Yes. In Ads Manager we can choose placements, so a campaign can run only in Instagram Feed, Stories and Reels. Whether Facebook placements are worth adding is a decision we make based on your data."
+    },
+    {
+      "q": "Do you create the ads?",
+      "a": "Yes: copy, static banners and video scripts. Filming with real people or products is usually done by you or a creator; we provide a script and a shot list."
+    },
+    {
+      "q": "Is my type of business allowed?",
+      "a": "Meta has special rules for categories such as finance, employment, housing, health, alcohol and gambling. Some need extra verification or have limited targeting. We check this before setup."
+    },
+    {
+      "q": "Do you guarantee leads or ROAS?",
+      "a": "No. Results depend on your offer, prices, market and budget. We commit to correct tracking, regular testing and honest reporting."
+    },
+    {
+      "q": "Will the ad account be mine?",
+      "a": "Yes. Everything stays in your Business Manager, and we work through partner access. If we stop working together, your account, audiences and data remain yours."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "pricing for websites, bots, ads and SEO",
+      "href": "/en/pricing/",
+      "block": 6
+    },
+    {
+      "text": "portfolio",
+      "href": "/en/portfolio/",
+      "block": 7
+    },
+    {
+      "text": "01 Google Ads management Search and Performance Max for people already looking for you. Setup from $300. Learn more →",
+      "href": "/en/services/google-ads/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "02 TikTok ads In-Feed and Spark Ads with UGC-style video. Setup from $250. Learn more →",
+      "href": "/en/services/tiktok-ads/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "03 Landing pages A page built for ad traffic, from $600. Learn more →",
+      "href": "/en/services/websites/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "FILL IN THE FORM",
+      "href": "/en/#contact",
+      "block": 10
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "MESSAGE ON TELEGRAM",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 10
+    },
+    {
+      "text": "WHATSAPP",
+      "href": "https://wa.me/380688286969",
+      "block": 10
+    },
+    {
+      "text": "VIBER",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 10
+    },
+    {
+      "text": "+380 68 828 6969",
+      "href": "tel:+380688286969",
+      "block": 10
+    }
+  ]
+}

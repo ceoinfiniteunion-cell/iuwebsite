@@ -1,0 +1,822 @@
+{
+  "url": "https://infiniteunion.com.ua/en/portfolio/",
+  "path": "/en/portfolio/",
+  "file": "en/portfolio/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/portfolio/",
+    "url": "https://infiniteunion.com.ua/portfolio/"
+  },
+  "template": "portfolio",
+  "registryType": "portfolio",
+  "name": "Portfolio",
+  "title": "Portfolio — Websites, Telegram Bots, SaaS | Infinite Union",
+  "description": "Real projects by Infinite Union: Transfer Kharkiv landing page with 8.4% conversion, a university Telegram bot with 3,000+ users, Respect Car and more.",
+  "keyword": "web agency portfolio",
+  "robots": "index, follow",
+  "h1": "Our web agency portfolio.",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Portfolio",
+      "url": "/en/portfolio/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--red2": "#8B0000",
+    "--ink": "#0a0a0a",
+    "--ink2": "#242121",
+    "--muted": "#6b6560",
+    "--muted2": "#a39d97",
+    "--bg": "#ffffff",
+    "--bg2": "#f7f5f3",
+    "--border": "rgba(10,8,8,.1)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif"
+  },
+  "words": 755,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Back",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/portfolio/"
+    },
+    {
+      "k": "link",
+      "text": "Start a project",
+      "href": "/en/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "header",
+      "class": "hero",
+      "heading": "Our web agency portfolio.",
+      "items": [
+        {
+          "k": "decor",
+          "text": "IU"
+        },
+        {
+          "k": "text",
+          "text": "49° 59′ N · 36° 14′ E · Kharkiv, Ukraine",
+          "role": "hero-coords"
+        },
+        {
+          "k": "text",
+          "text": "Portfolio · Infinite Union",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Our web agency portfolio."
+        },
+        {
+          "k": "text",
+          "text": "Real projects by Infinite Union, a web agency in Kharkiv, Ukraine, working with clients across the EU: websites, Telegram bots, SaaS dashboards and AI automation. From a landing page with 8.4% conversion to a university bot used by 3,000+ people. Looking for something similar? See website development, Telegram bots or SaaS development."
+        },
+        {
+          "k": "text",
+          "text": "3000+",
+          "role": "hero-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "active users of KNEU Bot",
+          "role": "hero-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "8.4%",
+          "role": "hero-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "Transfer Kharkiv conversion",
+          "role": "hero-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "119+",
+          "role": "hero-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "search positions in the top",
+          "role": "hero-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "3 min",
+          "role": "hero-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "from brief to banner in InfinityCreo",
+          "role": "hero-stat-l"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "filters",
+      "viewport": "all",
+      "tag": "div",
+      "class": "filters-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "button",
+          "text": "All",
+          "type": "button"
+        },
+        {
+          "k": "button",
+          "text": "Websites",
+          "type": "button"
+        },
+        {
+          "k": "button",
+          "text": "Bots",
+          "type": "button"
+        },
+        {
+          "k": "button",
+          "text": "AI",
+          "type": "button"
+        },
+        {
+          "k": "button",
+          "text": "SaaS",
+          "type": "button"
+        },
+        {
+          "k": "text",
+          "text": "8 / 8 projects",
+          "role": "filter-total"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "portfolio-grid",
+      "viewport": "all",
+      "tag": "main",
+      "class": "grid-wrap",
+      "heading": "Ad Tracker by Infinite Union",
+      "items": [
+        {
+          "k": "text",
+          "text": "01 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "SaaS · IU product",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Ad Tracker by Infinite Union"
+        },
+        {
+          "k": "text",
+          "text": "One dashboard instead of three ad accounts",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "An ad reporting portal that we are building for clients and already use ourselves. Meta Ads, Google Ads and TikTok Ads on one screen, refreshed automatically every 2 hours with 90 days of history, so nobody has to compile reports by hand in Excel."
+        },
+        {
+          "k": "text",
+          "text": "Next.js 14 · PostgreSQL · Meta API · Google API · TikTok API · Railway",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "3",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "ad platforms in one dashboard",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "2 h",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "automatic data refresh",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "5+ h",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "saved on reports every week",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "In development · Private project",
+          "role": "p-link"
+        },
+        {
+          "k": "text",
+          "text": "02 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "Car dealer · Kharkiv",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Respect Car"
+        },
+        {
+          "k": "text",
+          "text": "From catalogue to deal in one place",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "Website for a car dealer in Kharkiv covering sales, buyback and car imports from the USA. A live catalogue with photos, and an admin panel that runs inside Telegram: the owner manages the site from a phone without touching any code."
+        },
+        {
+          "k": "text",
+          "text": "Next.js 16 · React 19 · TypeScript · PostgreSQL · Redis · Cloudinary · Telegram Bot · Cloudflare",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "Photos",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "live car catalogue",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "TG",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "admin panel in Telegram",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "CDN",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "Cloudflare protection",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "link",
+          "text": "respectcar.com.ua",
+          "href": "https://respectcar.com.ua/"
+        },
+        {
+          "k": "card-link",
+          "href": "https://parrotschool.com.ua/",
+          "items": [
+            {
+              "k": "text",
+              "text": "03 / 08",
+              "role": "p-num"
+            },
+            {
+              "k": "text",
+              "text": "Education · Website + bots",
+              "role": "p-badge"
+            },
+            {
+              "k": "h",
+              "level": 2,
+              "text": "Parrot School"
+            },
+            {
+              "k": "text",
+              "text": "A website and bots for students, parents and teachers",
+              "role": "p-tagline"
+            },
+            {
+              "k": "text",
+              "text": "Website for an English language school in Kharkiv, plus a Telegram system built around it: students see their timetable and grades, parents follow their child's progress, and teachers have their own workspace. A separate admin bot serves the school team."
+            },
+            {
+              "k": "text",
+              "text": "Static HTML/CSS/JS · Python · aiogram · Railway",
+              "role": "p-stack"
+            },
+            {
+              "k": "text",
+              "text": "3",
+              "role": "p-stat-n"
+            },
+            {
+              "k": "text",
+              "text": "roles in one bot",
+              "role": "p-stat-l"
+            },
+            {
+              "k": "text",
+              "text": "+1",
+              "role": "p-stat-n"
+            },
+            {
+              "k": "text",
+              "text": "admin bot for the team",
+              "role": "p-stat-l"
+            },
+            {
+              "k": "text",
+              "text": "Online",
+              "role": "p-stat-n"
+            },
+            {
+              "k": "text",
+              "text": "timetable and grades",
+              "role": "p-stat-l"
+            },
+            {
+              "k": "text",
+              "text": "parrotschool.com.ua",
+              "role": "p-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "https://transferkharkiv.com.ua/",
+          "items": [
+            {
+              "k": "text",
+              "text": "04 / 08",
+              "role": "p-num"
+            },
+            {
+              "k": "text",
+              "text": "Flagship · SEO",
+              "role": "p-badge"
+            },
+            {
+              "k": "h",
+              "level": 2,
+              "text": "Transfer Kharkiv"
+            },
+            {
+              "k": "text",
+              "text": "A landing page that brings in bookings",
+              "role": "p-tagline"
+            },
+            {
+              "k": "text",
+              "text": "Landing page for a transfer company with an 8.4% conversion rate. SEO work took the site into the top results for 119+ search queries, and a Telegram bot accepts booking requests 24/7, including outside office hours."
+            },
+            {
+              "k": "text",
+              "text": "Static HTML/CSS/JS · Python bot · SEO",
+              "role": "p-stack"
+            },
+            {
+              "k": "text",
+              "text": "8.4%",
+              "role": "p-stat-n"
+            },
+            {
+              "k": "text",
+              "text": "landing page conversion",
+              "role": "p-stat-l"
+            },
+            {
+              "k": "text",
+              "text": "119+",
+              "role": "p-stat-n"
+            },
+            {
+              "k": "text",
+              "text": "search positions in the top",
+              "role": "p-stat-l"
+            },
+            {
+              "k": "text",
+              "text": "24/7",
+              "role": "p-stat-n"
+            },
+            {
+              "k": "text",
+              "text": "bookings via Telegram bot",
+              "role": "p-stat-l"
+            },
+            {
+              "k": "text",
+              "text": "transferkharkiv.com.ua",
+              "role": "p-link"
+            }
+          ]
+        },
+        {
+          "k": "text",
+          "text": "05 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "University · 3,000+ users",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "KNEU Bot"
+        },
+        {
+          "k": "text",
+          "text": "A bot used across a whole university",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "The official Telegram bot of Kyiv National Economic University (KNEU). Timetable, news and notifications, delivered every day to more than 3,000 active users."
+        },
+        {
+          "k": "text",
+          "text": "Python · aiogram · PostgreSQL · Railway",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "3,000+",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "active users",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Live",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "timetable and news",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Push",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "instant notifications",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Official KNEU bot",
+          "role": "p-link"
+        },
+        {
+          "k": "text",
+          "text": "06 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "Automation · Small business",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "BizBot"
+        },
+        {
+          "k": "text",
+          "text": "Bookkeeping help that never takes a day off",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "A Telegram bot that automates bookkeeping for a small business: payroll, tasks and automatic Excel filling. The owner saves more than 4 hours of routine work every week and gets a report in one tap."
+        },
+        {
+          "k": "text",
+          "text": "Python · aiogram · FastAPI · Excel API · Railway",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "4+ h",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "saved every week",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "1 tap",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "report instead of hours",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Auto",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "Excel filled automatically",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Private project",
+          "role": "p-link"
+        },
+        {
+          "k": "card-link",
+          "href": "https://t.me/infinitycreo_bot",
+          "items": [
+            {
+              "k": "text",
+              "text": "07 / 08",
+              "role": "p-num"
+            },
+            {
+              "k": "text",
+              "text": "AI · Automation",
+              "role": "p-badge"
+            },
+            {
+              "k": "h",
+              "level": 2,
+              "text": "InfinityCreo"
+            },
+            {
+              "k": "text",
+              "text": "From brief to banner in about 3 minutes",
+              "role": "p-tagline"
+            },
+            {
+              "k": "text",
+              "text": "AI generation of ad creatives for media buyers, built on n8n. Send a brief and get a finished banner in a few minutes, in 10+ formats, without waiting for a designer or going through endless rounds of edits."
+            },
+            {
+              "k": "text",
+              "text": "n8n · Claude API · Midjourney API · Telegram Bot",
+              "role": "p-stack"
+            },
+            {
+              "k": "text",
+              "text": "~3 min",
+              "role": "p-stat-n"
+            },
+            {
+              "k": "text",
+              "text": "from brief to banner",
+              "role": "p-stat-l"
+            },
+            {
+              "k": "text",
+              "text": "10+",
+              "role": "p-stat-n"
+            },
+            {
+              "k": "text",
+              "text": "creative formats",
+              "role": "p-stat-l"
+            },
+            {
+              "k": "text",
+              "text": "n8n",
+              "role": "p-stat-n"
+            },
+            {
+              "k": "text",
+              "text": "automated pipeline",
+              "role": "p-stat-l"
+            },
+            {
+              "k": "text",
+              "text": "@infinitycreo_bot",
+              "role": "p-link"
+            }
+          ]
+        },
+        {
+          "k": "text",
+          "text": "08 / 08",
+          "role": "p-num"
+        },
+        {
+          "k": "text",
+          "text": "Internal · Automation",
+          "role": "p-badge"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "IU Bot"
+        },
+        {
+          "k": "text",
+          "text": "Lead qualification before the first call",
+          "role": "p-tagline"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union's own lead bot. A quiz qualifies the client before the first call, FSM flows guide the conversation, and the CRM receives a lead that is ready for a proper conversation, with no manual steps."
+        },
+        {
+          "k": "text",
+          "text": "Python · aiogram · FastAPI · PostgreSQL · Redis · Railway",
+          "role": "p-stack"
+        },
+        {
+          "k": "text",
+          "text": "Quiz",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "lead qualification",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "FSM",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "conversation flows",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "CRM",
+          "role": "p-stat-n"
+        },
+        {
+          "k": "text",
+          "text": "handover without manual work",
+          "role": "p-stat-l"
+        },
+        {
+          "k": "text",
+          "text": "Internal IU tool",
+          "role": "p-link"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "class": "cta-band",
+      "heading": "Want a project like these?",
+      "items": [
+        {
+          "k": "text",
+          "text": "Your project could be next",
+          "role": "cta-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Want a project like these?"
+        },
+        {
+          "k": "text",
+          "text": "Tell us what you need. We reply within 15 minutes during business hours and will tell you honestly what is worth building and what is not. Prices start at $600 for a website and $300 for a Telegram bot; see the pricing page, or read about business automation."
+        },
+        {
+          "k": "link",
+          "text": "Message on Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "text",
+          "text": "WhatsApp · Fill in the form"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [],
+  "internalLinks": [
+    {
+      "text": "website development",
+      "href": "/en/services/websites/",
+      "block": 1
+    },
+    {
+      "text": "Telegram bots",
+      "href": "/en/services/bots/",
+      "block": 1
+    },
+    {
+      "text": "SaaS development",
+      "href": "/en/services/platforms/",
+      "block": 1
+    },
+    {
+      "text": "pricing page",
+      "href": "/en/pricing/",
+      "block": 4
+    },
+    {
+      "text": "business automation",
+      "href": "/en/services/ecosystems/",
+      "block": 4
+    },
+    {
+      "text": "Fill in the form",
+      "href": "/en/#contact",
+      "block": 4
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "respectcar.com.ua",
+      "href": "https://respectcar.com.ua/",
+      "block": 3
+    },
+    {
+      "text": "03 / 08 Education · Website + bots Parrot School A website and bots for students, parents and teachers Website for an English language school in Kharkiv, plus a Telegram system built around it: students see their timetable and grades, parents follow their child's progress, and teachers have their own workspace. A separate admin bot serves the school team. Static HTML/CSS/JSPythonaiogramRailway 3 roles in one bot +1 admin bot for the team Online timetable and grades parrotschool.com.ua",
+      "href": "https://parrotschool.com.ua/",
+      "block": 3,
+      "card": true
+    },
+    {
+      "text": "04 / 08 Flagship · SEO Transfer Kharkiv A landing page that brings in bookings Landing page for a transfer company with an 8.4% conversion rate. SEO work took the site into the top results for 119+ search queries, and a Telegram bot accepts booking requests 24/7, including outside office hours. Static HTML/CSS/JSPython botSEO 8.4% landing page conversion 119+ search positions in the top 24/7 bookings via Telegram bot transferkharkiv.com.ua",
+      "href": "https://transferkharkiv.com.ua/",
+      "block": 3,
+      "card": true
+    },
+    {
+      "text": "07 / 08 AI · Automation InfinityCreo From brief to banner in about 3 minutes AI generation of ad creatives for media buyers, built on n8n. Send a brief and get a finished banner in a few minutes, in 10+ formats, without waiting for a designer or going through endless rounds of edits. n8nClaude APIMidjourney APITelegram Bot ~3 min from brief to banner 10+ creative formats n8n automated pipeline @infinitycreo_bot",
+      "href": "https://t.me/infinitycreo_bot",
+      "block": 3,
+      "card": true
+    },
+    {
+      "text": "Message on Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 4
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 4
+    }
+  ]
+}

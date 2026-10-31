@@ -1,0 +1,927 @@
+{
+  "url": "https://infiniteunion.com.ua/en/services/seo/",
+  "path": "/en/services/seo/",
+  "file": "en/services/seo/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/services/seo/",
+    "url": "https://infiniteunion.com.ua/services/seo/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "SEO services",
+  "title": "SEO Services from Ukraine — from $150/month | Infinite Union",
+  "description": "SEO services: technical audit, keyword research, site structure, content, link building and monthly reports. From $150/month, first results in 3–6 months.",
+  "keyword": "SEO services Ukraine",
+  "priceFrom": 150,
+  "robots": "index, follow",
+  "h1": "SEO services from Ukraine",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "SEO services",
+      "url": "/en/services/seo/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#F5F0E8",
+    "--bg2": "#EDE8E0",
+    "--dark": "#0A0A0A",
+    "--text": "#1A1A1A",
+    "--muted": "#777",
+    "--border": "rgba(0,0,0,0.07)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ease": "cubic-bezier(0.76,0,0.24,1)",
+    "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+  },
+  "words": 1143,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Back",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/services/seo/"
+    },
+    {
+      "k": "link",
+      "text": "ORDER SEO",
+      "href": "/en/services/seo/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "SEO services from Ukraine",
+      "items": [
+        {
+          "k": "text",
+          "text": "$150",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "SEO",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "per month, from",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "$100",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "Audit",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "one-off, from",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "3–6",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "Months",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "to first results",
+          "role": "hm-sub"
+        },
+        {
+          "k": "decor",
+          "text": "SCROLL"
+        },
+        {
+          "k": "decor",
+          "text": "03"
+        },
+        {
+          "k": "text",
+          "text": "TECHNICAL SEO · CONTENT · LOCAL SEO",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "SEO services from Ukraine"
+        },
+        {
+          "k": "text",
+          "text": "SEO services from Ukraine for small businesses in the EU and Ukraine. Infinite Union, an agency in Kharkiv, handles technical SEO, keyword research, site structure, content and local SEO for Google Maps. SEO from $150/month, audits from $100. First results usually take 3–6 months, and we never promise rankings."
+        },
+        {
+          "k": "text",
+          "text": "$150/mo",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "SEO, from",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$100",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "SEO audit, from",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "3–6mo",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "to first results",
+          "role": "hero-stat-label"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "TECHNICAL SEO →KEYWORD RESEARCH →CONTENT →LINK BUILDING →CORE WEB VITALS →SCHEMA.ORG →LOCAL SEO →GOOGLE BUSINESS PROFILE →TECHNICAL SEO →KEYWORD RESEARCH →CONTENT →LINK BUILDING →CORE WEB VITALS →SCHEMA.ORG →LOCAL SEO →GOOGLE BUSINESS PROFILE →"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Your site exists. Google ignores it.",
+      "items": [
+        {
+          "k": "text",
+          "text": "THE PROBLEM",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Your site exists. Google ignores it."
+        },
+        {
+          "k": "text",
+          "text": "A familiar picture: the website looks fine, but brings almost no search traffic. Some pages are not indexed, titles are duplicated, the site is slow on mobile, and the texts do not match what people actually type into Google. Each page tries to rank for everything and ends up ranking for nothing."
+        },
+        {
+          "k": "text",
+          "text": "SEO fixes this step by step: technical problems first, then structure and keywords, then content and links. It is slower than ads, but the traffic does not vanish the moment you pause a budget. That is why we combine SEO with paid ads when a business needs enquiries now."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "What our SEO services include",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHAT'S INCLUDED",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "What our SEO services include"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "SEO audit"
+        },
+        {
+          "k": "text",
+          "text": "A technical and on-page check: indexing, crawl errors, speed and Core Web Vitals, mobile version, duplicates, meta tags and structured data. You get a prioritised list of fixes you can hand to any developer.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Indexing · Core Web Vitals · Structured data",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Keyword research and structure"
+        },
+        {
+          "k": "text",
+          "text": "We collect search queries for your languages and markets, group them by intent and map each group to one page. Missing pages go into a content plan.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Keyword research · Clustering · Site structure",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "On-page and content"
+        },
+        {
+          "k": "text",
+          "text": "Titles, headings, internal links and texts written for people first. We improve existing pages and create new ones only where there is real search demand.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "On-page SEO · Content plan",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Local SEO"
+        },
+        {
+          "k": "text",
+          "text": "Google Business Profile, categories, photos, a process for collecting reviews, consistent name, address and phone across listings, and local landing pages for each city or branch.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Google Business Profile · Google Maps · Local pages",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Link building"
+        },
+        {
+          "k": "text",
+          "text": "Careful, relevant links: industry directories, partner sites, guest articles. No link farms or schemes that put your site at risk of penalties.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Relevant links · Digital PR",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Monthly reporting"
+        },
+        {
+          "k": "text",
+          "text": "A short report based on Google Search Console and GA4: impressions, clicks, pages that grew or dropped, what we did and what comes next.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Search Console · GA4",
+          "role": "service-tags"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "SEO in four stages",
+      "items": [
+        {
+          "k": "text",
+          "text": "HOW WE WORK",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "SEO in four stages"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Audit"
+        },
+        {
+          "k": "text",
+          "text": "Technical audit of the site and a look at competitors in your niche.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "3–5 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Strategy"
+        },
+        {
+          "k": "text",
+          "text": "Keyword map, priorities and a content plan for the next months.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1 week",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Optimisation"
+        },
+        {
+          "k": "text",
+          "text": "Technical fixes, page optimisation, first new pages.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 months",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Growth"
+        },
+        {
+          "k": "text",
+          "text": "New content, links, wider keyword coverage, monthly review.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "Ongoing",
+          "role": "process-time"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "SEO, audit and local SEO pricing",
+      "items": [
+        {
+          "k": "text",
+          "text": "PRICING",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "SEO, audit and local SEO pricing"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "SEO",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "SEO — from $150/month"
+        },
+        {
+          "k": "text",
+          "text": "Ongoing technical work, content and links, monthly report. First results usually in 3–6 months.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Monthly",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "AUDIT",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Basic SEO audit — from $100"
+        },
+        {
+          "k": "text",
+          "text": "Up to 50 pages, ready in 3 days. Technical issues and a prioritised list of fixes.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "One-off · 3 days",
+          "role": "service-tags"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Full SEO audit — from $300"
+        },
+        {
+          "k": "text",
+          "text": "Technical, on-page and content audit with keyword gaps and competitor comparison. Ready in 5 days.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "One-off · 5 days",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "LOCAL",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Local SEO start — from $200"
+        },
+        {
+          "k": "text",
+          "text": "One-off Google Business Profile setup or clean-up, categories, listings and a local landing page plan.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "One-off",
+          "role": "service-tags"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Local Pro — from $150/month"
+        },
+        {
+          "k": "text",
+          "text": "Ongoing local SEO for one location: profile updates, posts, reviews workflow, local pages.",
+          "role": "service-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Multi-location — from $400/month"
+        },
+        {
+          "k": "text",
+          "text": "Local SEO for a network of branches, with a separate profile and page for each location.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Website, bot and advertising prices are on the pricing page."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "SEO built into real projects",
+      "items": [
+        {
+          "k": "text",
+          "text": "FROM OUR PORTFOLIO",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "SEO built into real projects"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Transfer Kharkiv"
+        },
+        {
+          "k": "text",
+          "text": "Landing page for a transfer company: static HTML/CSS/JS for speed and SEO built in from the start. It holds 119+ search positions in Google's top results, converts at 8.4% and passes bookings to a Telegram bot.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Static HTML · SEO · Telegram bot",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Respect Car"
+        },
+        {
+          "k": "text",
+          "text": "Website for a car dealership in Kharkiv — sales, buyback and imports from the USA — with a live photo catalog and a Telegram admin panel. Built on Next.js, React, PostgreSQL and Cloudflare: a fast technical base is where SEO starts.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Next.js · Cloudflare",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "Full case list in our portfolio."
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq",
+      "heading": "Questions we get asked",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Questions we get asked"
+        },
+        {
+          "k": "faq",
+          "q": "How long does SEO take to show results?",
+          "a": "Usually 3–6 months for the first noticeable results. It depends on competition, the age of the site and how many technical issues need fixing first."
+        },
+        {
+          "k": "faq",
+          "q": "How much do your SEO services cost?",
+          "a": "SEO starts from $150/month. A basic audit is from $100 (up to 50 pages, 3 days), a full audit from $300 (5 days). Local SEO starts from $200 one-off, $150/month for one location or $400/month for a network of branches."
+        },
+        {
+          "k": "faq",
+          "q": "Do you guarantee top positions?",
+          "a": "No, and be careful with anyone who does. Google's algorithms and your competitors change all the time. We commit to a clear plan, monthly work you can check, and reports based on Search Console data."
+        },
+        {
+          "k": "faq",
+          "q": "Should I start with an audit or monthly SEO?",
+          "a": "If you are not sure what is wrong with the site, start with an audit. It gives a list of fixes your own developer can implement. Monthly SEO makes sense when you want us to do the work and keep growing the site."
+        },
+        {
+          "k": "faq",
+          "q": "Can you do SEO for sites in German, Polish or English?",
+          "a": "Yes. Keyword research is done separately for each language and country. Texts in a language we do not write natively should be reviewed by a native speaker — on your side or a translator you trust."
+        },
+        {
+          "k": "faq",
+          "q": "What do you need from us?",
+          "a": "Access to the website admin or code, Google Search Console and GA4. If they are not set up yet, we set them up at the start."
+        },
+        {
+          "k": "faq",
+          "q": "Is local SEO worth it for a small business?",
+          "a": "If your customers come from one city or area — a clinic, a salon, a repair service, a restaurant — Google Maps is often where they find you. A complete, active Google Business Profile is one of the most practical things to fix first."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "related-services",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Works well together with SEO",
+      "items": [
+        {
+          "k": "text",
+          "text": "RELATED SERVICES",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Works well together with SEO"
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/websites/",
+          "items": [
+            {
+              "k": "text",
+              "text": "01"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Website development"
+            },
+            {
+              "k": "text",
+              "text": "Fast sites with SEO basics built in. From $600."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/google-ads/",
+          "items": [
+            {
+              "k": "text",
+              "text": "02"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Google Ads management"
+            },
+            {
+              "k": "text",
+              "text": "Enquiries while SEO is still growing. Setup from $300."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/pricing/",
+          "items": [
+            {
+              "k": "text",
+              "text": "03"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Full pricing"
+            },
+            {
+              "k": "text",
+              "text": "Every service and starting price on one page."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Let's grow your organic traffic",
+      "items": [
+        {
+          "k": "decor",
+          "text": "SEO"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Let's grow your organic traffic"
+        },
+        {
+          "k": "text",
+          "text": "Tell us about your business and target market. We reply within 15 minutes during working hours."
+        },
+        {
+          "k": "link",
+          "text": "MESSAGE ON TELEGRAM",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WHATSAPP",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "VIBER",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380 68 828 6969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "link",
+          "text": "FILL IN THE FORM",
+          "href": "/en/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [
+    {
+      "q": "How long does SEO take to show results?",
+      "a": "Usually 3–6 months for the first noticeable results. It depends on competition, the age of the site and how many technical issues need fixing first."
+    },
+    {
+      "q": "How much do your SEO services cost?",
+      "a": "SEO starts from $150/month. A basic audit is from $100 (up to 50 pages, 3 days), a full audit from $300 (5 days). Local SEO starts from $200 one-off, $150/month for one location or $400/month for a network of branches."
+    },
+    {
+      "q": "Do you guarantee top positions?",
+      "a": "No, and be careful with anyone who does. Google's algorithms and your competitors change all the time. We commit to a clear plan, monthly work you can check, and reports based on Search Console data."
+    },
+    {
+      "q": "Should I start with an audit or monthly SEO?",
+      "a": "If you are not sure what is wrong with the site, start with an audit. It gives a list of fixes your own developer can implement. Monthly SEO makes sense when you want us to do the work and keep growing the site."
+    },
+    {
+      "q": "Can you do SEO for sites in German, Polish or English?",
+      "a": "Yes. Keyword research is done separately for each language and country. Texts in a language we do not write natively should be reviewed by a native speaker — on your side or a translator you trust."
+    },
+    {
+      "q": "What do you need from us?",
+      "a": "Access to the website admin or code, Google Search Console and GA4. If they are not set up yet, we set them up at the start."
+    },
+    {
+      "q": "Is local SEO worth it for a small business?",
+      "a": "If your customers come from one city or area — a clinic, a salon, a repair service, a restaurant — Google Maps is often where they find you. A complete, active Google Business Profile is one of the most practical things to fix first."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "pricing page",
+      "href": "/en/pricing/",
+      "block": 6
+    },
+    {
+      "text": "portfolio",
+      "href": "/en/portfolio/",
+      "block": 7
+    },
+    {
+      "text": "01 Website development Fast sites with SEO basics built in. From $600. Learn more →",
+      "href": "/en/services/websites/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "02 Google Ads management Enquiries while SEO is still growing. Setup from $300. Learn more →",
+      "href": "/en/services/google-ads/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "03 Full pricing Every service and starting price on one page. Learn more →",
+      "href": "/en/pricing/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "FILL IN THE FORM",
+      "href": "/en/#contact",
+      "block": 10
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "MESSAGE ON TELEGRAM",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 10
+    },
+    {
+      "text": "WHATSAPP",
+      "href": "https://wa.me/380688286969",
+      "block": 10
+    },
+    {
+      "text": "VIBER",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 10
+    },
+    {
+      "text": "+380 68 828 6969",
+      "href": "tel:+380688286969",
+      "block": 10
+    }
+  ]
+}
