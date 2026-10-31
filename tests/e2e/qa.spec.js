@@ -20,6 +20,8 @@ test.describe.configure({ mode: 'parallel' });
 for (const p of pages) {
   for (const w of WIDTHS) {
     test(`${p.path} @${w}`, async ({ page }) => {
+      // Home pages run three.js + WebGL globe on desktop; CI runners render WebGL in software.
+      if (p.type === 'home' && w >= 1000) test.slow();
       const problems = [];
       page.on('pageerror', e => problems.push(`pageerror: ${e.message}`));
       page.on('console', m => { if (m.type() === 'error' && !IGNORE.test(m.text())) problems.push(`console: ${m.text()}`); });
@@ -98,6 +100,7 @@ test('mobile menu opens and closes (home @375)', async ({ page }) => {
 });
 
 test('lead form posts to the API with all fields', async ({ page }) => {
+  test.slow(); // desktop home (WebGL) — see above
   let body = null;
   await page.route(/api\.infiniteunion\.com\.ua\/lead/, async route => {
     body = JSON.parse(route.request().postData() || '{}');
@@ -111,7 +114,7 @@ test('lead form posts to the API with all fields', async ({ page }) => {
   if (await page.locator('#cphone').count()) await page.fill('#cphone', '+380000000000');
   await page.fill('#cp', 'Playwright QA — mocked request, not sent to the real API');
   await page.locator('#cForm button[type=submit]').click();
-  await expect(page.locator('#cOk')).toBeVisible({ timeout: 5000 });
+  await expect(page.locator('#cOk')).toBeVisible({ timeout: 15000 });
   expect(body).toBeTruthy();
   expect(body.name).toBe('QA Test');
   expect(body.contact).toBe('@qa_test');
