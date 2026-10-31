@@ -246,7 +246,7 @@ function footerHtml(p) {
   const dev = inLang.filter(q => q.group === 'dev').map(q => q.path);
   const mkt = inLang.filter(q => q.group === 'ads' || q.group === 'seo').map(q => q.path);
   const company = inLang.filter(q => q.group === 'info').map(q => q.path);
-  if (p.lang === 'uk') company.push('/blog/');
+  if (p.lang === 'uk' && !company.includes('/blog/')) company.push('/blog/');
   const crumbs = chain(p);
   const crumbsHtml = crumbs.length > 1
     ? `<div class="iu-crumbs" role="navigation" aria-label="${t.crumbs}"><ol>${crumbs.map((c, i) =>
