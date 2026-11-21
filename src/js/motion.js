@@ -269,11 +269,8 @@ function start() {
     } else if (!RM) {
       // inner-page hero
       if (heroWord) set(heroWord, 'transform', `translateX(${(-y * .15).toFixed(1)}px)`);
-      if (ringA) ringA.style.transform = `rotate(${(t / 90).toFixed(2)}deg)`;
-      if (ringB) ringB.style.transform = `rotate(${(-t / 60).toFixed(2)}deg)`;
-      if (gR1) gR1.style.transform = `rotate(${(t / 80).toFixed(2)}deg)`;
-      if (gR2) gR2.style.transform = `rotate(${(-t / 55).toFixed(2)}deg)`;
-      if (gHalo) gHalo.style.opacity = (.8 + Math.sin(t / 900) * .2).toFixed(3);
+      // rings / halo of the inner-page hero run as CSS animations (compositor thread) — see base.css
+      void ringA; void ringB; void gR1; void gR2; void gHalo;
     }
     if (scene3d.glyph && ihH) scene3d.glyph.setScroll(clamp(y / (ihH * .9)));
     if (stillImg && !scene3d.snake && !scene3d.glyph) {

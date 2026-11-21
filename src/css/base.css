@@ -71,6 +71,16 @@ html.iu-lock, html.iu-lock body { overflow: hidden; }
 html.static #grain, html.static #g404, html.static #spot, html.static #veil, html.static #loader { display: none !important; }
 html.static *, html.static *::before, html.static *::after { animation-play-state: paused !important; animation-delay: 0s !important; transition: none !important; }
 
+/* Inner-page hero rings & halo: same periods as the prototype's frame() (rotate t/80, -t/55, t/90, -t/60 deg/ms;
+   opacity .8 + .2·sin(t/900)) but driven by the compositor instead of a per-frame style write */
+@keyframes iuSpin { to { transform: rotate(360deg); } }
+@keyframes iuHalo { 0%, 100% { opacity: .8; } 25% { opacity: 1; } 75% { opacity: .6; } }
+#glyph-ring1 { animation: iuSpin 28.8s linear infinite; }
+#glyph-ring2 { animation: iuSpin 19.8s linear infinite reverse; }
+#ring-a { animation: iuSpin 32.4s linear infinite; }
+#ring-b { animation: iuSpin 21.6s linear infinite reverse; }
+#glyph-halo { animation: iuHalo 5.655s ease-in-out infinite; }
+
 /* Static 3D fallback frame (weak devices / no WebGL) */
 
 /* height-fit = same projection as the live scene (the 3D camera has a fixed vertical FOV) */
