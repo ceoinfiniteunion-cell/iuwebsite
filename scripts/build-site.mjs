@@ -9,7 +9,7 @@ const cfg = JSON.parse(fs.readFileSync('scripts/pages.json'));
 const pageDirs = new Set(cfg.pages.map(p => p.path.split('/')[1]).filter(Boolean));
 const DIRS = new Set(['assets', ...pageDirs]); // design/, src/, scripts/, .cache/ never ship
 const ROOT_FILE = /\.(html|png|ico|jpe?g|svg|webp|avif|xml|txt|json|js|webmanifest)$|^CNAME$/;
-const ROOT_DENY = new Set(['package.json', 'package-lock.json', 'eslint.config.js', 'playwright.config.js', 'serve.json']);
+const ROOT_DENY = new Set(['package.json', 'package-lock.json', 'eslint.config.js', 'playwright.config.js', 'serve.json', 'cf-backup.json']);
 const SKIP = new Set(['.DS_Store']);
 
 fs.rmSync(OUT, { recursive: true, force: true });

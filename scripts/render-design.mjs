@@ -260,7 +260,7 @@ for (const p of PAGES) {
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="${csp(scripts.map(sha256))}">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-${seoHead(p, { faq, items })}
+${seoHead(p, { faq, items, ogImage: `/assets/img/og/${p.lang === 'en' ? 'en' : ({ home: 'home', '404': 'home', pricing: 'pricing', portfolio: 'portfolio', blog: 'blog', post: 'blog' })[p.type] || 'service'}.jpg` })}
 <script>${BOOT}</script>
 ${preFonts.map(f => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin>`).join('\n')}
 <link rel="preload" href="/assets/css/${siteCssName}" as="style" data-iu-css>
