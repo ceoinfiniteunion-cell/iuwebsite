@@ -215,7 +215,8 @@ for (const p of PAGES) {
     snakeC.insertAdjacentHTML('beforebegin', `<picture>${p.key === '404' ? '' : '<source type="image/avif" media="(max-width: 819.98px)" srcset="/assets/img/3d/snake-m.avif"><source media="(max-width: 819.98px)" srcset="/assets/img/3d/snake-m.webp">'}<source type="image/avif" srcset="/assets/img/3d/${name}.avif"><img class="iu-still" data-still src="/assets/img/3d/${name}.webp" alt="" width="1440" height="900" decoding="async" fetchpriority="high"></picture>`);
   }
   const glyphC = $('#glyph-canvas');
-  if (glyphC) glyphC.insertAdjacentHTML('beforebegin', `<img class="${glyphC.getAttribute('class')} iu-still-g" data-still src="/assets/img/3d/glyph-${glyphKind(p.path)}.webp" alt="" width="720" height="680" decoding="async">`);
+  const glyphStill = glyphC ? `/assets/img/3d/glyph-${glyphKind(p.path)}` : '';
+  if (glyphC) glyphC.insertAdjacentHTML('beforebegin', `<picture><source type="image/avif" srcset="${glyphStill}.avif"><img class="${glyphC.getAttribute('class')} iu-still-g" data-still src="${glyphStill}.webp" alt="" width="720" height="680" decoding="async" fetchpriority="high"></picture>`);
 
   // touch targets ≥ 44×44 (TZ §9): an invisible ::after hit area on touch screens; layout untouched.
   // Elements without their own positioning get position:relative (class iu-tr) so the ::after anchors to them.
@@ -262,7 +263,7 @@ for (const p of PAGES) {
 <meta name="referrer" content="strict-origin-when-cross-origin">
 ${seoHead(p, { faq, items, ogImage: `/assets/img/og/${p.lang === 'en' ? 'en' : ({ home: 'home', '404': 'home', pricing: 'pricing', portfolio: 'portfolio', blog: 'blog', post: 'blog' })[p.type] || 'service'}.jpg` })}
 <script>${BOOT}</script>
-${p.key === 'home' ? '<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake-m.avif" media="(max-width: 819.98px)" fetchpriority="high">\n<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake.avif" media="(min-width: 820px)" fetchpriority="high">\n' : p.key === '404' ? '<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake-404.avif" fetchpriority="high">\n' : ''}${preFonts.map(f => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin>`).join('\n')}
+${glyphStill ? `<link rel="preload" as="image" type="image/avif" href="${glyphStill}.avif" fetchpriority="high">\n` : ''}${p.key === 'home' ? '<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake-m.avif" media="(max-width: 819.98px)" fetchpriority="high">\n<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake.avif" media="(min-width: 820px)" fetchpriority="high">\n' : p.key === '404' ? '<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake-404.avif" fetchpriority="high">\n' : ''}${preFonts.map(f => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin>`).join('\n')}
 <link rel="preload" href="/assets/css/${siteCssName}" as="style" data-iu-css>
 <noscript><link rel="stylesheet" href="/assets/css/${siteCssName}"></noscript>
 ${p.key === 'home' || p.key === '404' ? '<link rel="preconnect" href="https://res.cloudinary.com" crossorigin>\n' : ''}<style>${critical}</style>

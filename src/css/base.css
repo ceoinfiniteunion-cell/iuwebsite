@@ -53,7 +53,7 @@ input[type="date"] { color-scheme: dark; }
 .iu-toast b { display: block; margin-bottom: 4px; font: 500 11px/1.4 "JetBrains Mono", monospace; letter-spacing: .18em; text-transform: uppercase; color: var(--red-hot); }
 
 /* Grain: static noise texture (prototype generated it with canvas on mount) */
-#grain, #g404 { background-image: url("/assets/img/grain.png"); }
+html.grain-on #grain, html.grain-on #g404 { background-image: url("/assets/img/grain.webp"); }
 
 /* Page-transition veil: hidden unless we arrived through it (html.veil-in, set in <head>).
    Pure-CSS lift so a JS failure can never leave the page covered. */

@@ -36,6 +36,7 @@ if (!STATIC) {
   start();
 }
 addEventListener('load', () => {
+  de.classList.add('grain-on'); // decorative film grain: after load, off the critical path
   if ('serviceWorker' in navigator && !STATIC && isSecureContext) navigator.serviceWorker.register('/sw.js').catch(() => {});
   setTimeout(() => idle(loadSentry, 4000), 3000);
 }, { once: true });
