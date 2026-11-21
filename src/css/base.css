@@ -72,7 +72,9 @@ html.static #grain, html.static #g404, html.static #spot, html.static #veil, htm
 html.static *, html.static *::before, html.static *::after { animation-play-state: paused !important; animation-delay: 0s !important; transition: none !important; }
 
 /* Static 3D fallback frame (weak devices / no WebGL) */
-.iu-still { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; pointer-events: none; transition: opacity .7s; }
+
+/* height-fit = same projection as the live scene (the 3D camera has a fixed vertical FOV) */
+.iu-still { position: absolute; top: 0; left: 50%; z-index: 1; width: auto; max-width: none; height: 100%; transform: translateX(-50%); pointer-events: none; transition: opacity .7s; }
 .iu-still-g { pointer-events: none !important; cursor: default !important; object-fit: contain; transition: opacity .7s; }
 .iu-live-on [data-still] { opacity: 0; }
 

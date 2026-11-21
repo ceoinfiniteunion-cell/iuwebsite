@@ -279,7 +279,7 @@ function start() {
     if (stillImg && !scene3d.snake && !scene3d.glyph) {
       const k = home ? clamp(y / Math.max(1, hh - H)) : (ihH ? clamp(y / (ihH * .9)) : 0);
       set(stillImg, 'opacity', String(clamp(1 - k * (home ? 1.15 : 1.3))));
-      set(stillImg, 'transform', home ? `scale(${(1 - k * .28).toFixed(3)})` : `translateY(${(-k * 60).toFixed(1)}px)`);
+      set(stillImg, 'transform', home ? `translateX(-50%) scale(${(1 - k * .28).toFixed(3)})` : `translateY(${(-k * 60).toFixed(1)}px)`);
     }
 
     // A2 curtains
