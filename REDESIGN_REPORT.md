@@ -33,22 +33,22 @@
 
 | режим | шаблон | Perf | A11y | BP | SEO | LCP | CLS | TBT |
 |---|---|---|---|---|---|---|---|---|
-| mobile | / | 92 | 96 | 75 | 100 | 2.09 s | 0.003 | 221 ms |
-| mobile | /services/websites/ | 99 | 96 | 75 | 100 | 1.83 s | 0 | 55 ms |
-| mobile | /pricing/ | 98 | 95 | 75 | 100 | 2.04 s | 0 | 51 ms |
-| mobile | /portfolio/ | 99 | 100 | 75 | 100 | 1.8 s | 0 | 50 ms |
-| mobile | /blog/skilky-koshtuye-sayt-2026/ | 99 | 100 | 75 | 100 | 1.91 s | 0 | 53 ms |
-| mobile | /en/ | 99 | 95 | 75 | 100 | 1.99 s | 0 | 49 ms |
-| mobile | /404.html | 100 | 99 | 75 | 100 | 1.54 s | 0 | 52 ms |
-| desktop | / | 99 | 96 | 74 | 100 | 0.55 s | 0.007 | 0 ms |
-| desktop | /services/websites/ | 100 | 95 | 74 | 100 | 0.56 s | 0 | 0 ms |
-| desktop | /pricing/ | 100 | 95 | 74 | 100 | 0.5 s | 0 | 0 ms |
-| desktop | /portfolio/ | 100 | 99 | 74 | 100 | 0.5 s | 0 | 0 ms |
-| desktop | /blog/skilky-koshtuye-sayt-2026/ | 100 | 99 | 74 | 100 | 0.53 s | 0 | 0 ms |
-| desktop | /en/ | 100 | 95 | 74 | 100 | 0.52 s | 0 | 0 ms |
-| desktop | /404.html | 100 | 99 | 74 | 100 | 0.48 s | 0 | 0 ms |
+| mobile | / | 95 | 96 | 75 | 100 | 2.26 s | 0.01 | 65 ms |
+| mobile | /services/websites/ | 98 | 96 | 75 | 100 | 2.02 s | 0 | 52 ms |
+| mobile | /pricing/ | 99 | 95 | 75 | 100 | 1.83 s | 0 | 43 ms |
+| mobile | /portfolio/ | 99 | 100 | 75 | 100 | 1.81 s | 0 | 54 ms |
+| mobile | /blog/skilky-koshtuye-sayt-2026/ | 98 | 100 | 75 | 100 | 2.19 s | 0 | 45 ms |
+| mobile | /en/ | 99 | 95 | 75 | 100 | 2.09 s | 0 | 57 ms |
+| mobile | /404.html | 98 | 99 | 75 | 100 | 2.26 s | 0 | 54 ms |
+| desktop | / | 99 | 96 | 74 | 100 | 0.51 s | 0.007 | 0 ms |
+| desktop | /services/websites/ | 100 | 95 | 74 | 100 | 0.53 s | 0 | 0 ms |
+| desktop | /pricing/ | 100 | 95 | 74 | 100 | 0.52 s | 0 | 0 ms |
+| desktop | /portfolio/ | 100 | 99 | 74 | 100 | 0.53 s | 0 | 0 ms |
+| desktop | /blog/skilky-koshtuye-sayt-2026/ | 100 | 99 | 74 | 100 | 0.49 s | 0 | 0 ms |
+| desktop | /en/ | 100 | 95 | 74 | 100 | 0.53 s | 0 | 0 ms |
+| desktop | /404.html | 100 | 99 | 74 | 100 | 0.45 s | 0 | 0 ms |
 
-BP на проде ниже, чем локально, из-за `errors-in-console`: Cloudflare вставляет инлайн-скрипт «JS Detections» (Bot Fight Mode) с уникальным параметром на каждый запрос — CSP его блокирует (на старом сайте было так же). LCP на проде 1.8–2.2 с от прогона к прогону (реальная сеть до Cloudflare).
+BP на проде ниже, чем локально, из-за `errors-in-console`: Cloudflare вставляет инлайн-скрипт «JS Detections» (Bot Fight Mode) с уникальным параметром на каждый запрос — CSP его блокирует (на старом сайте было так же). **LCP на проде (mobile) 1.8–2.3 с** от прогона к прогону: в части прогонов чуть выше цели 2.0 с (замер с реальной сетью до Cloudflare); локально и в CI (симуляция 4G) все шаблоны ≤ 1.96 с. Финальный замер после последнего деплоя (2026-11-21 ~03:40 UTC).
 
 **Lighthouse CI в GitHub Actions** (7 шаблонов × 3 прогона, медиана): блокирует домены аналитики (GTM/GA4/Ads/Sentry/Cloudinary) и проверяет бюджеты **нашего кода**, включая Best Practices = 100. Причина: на общих раннерах сторонние скрипты из сети дают нестабильные 300–500 мс TBT и `test_cookie` Ads — CI краснел бы от сети, а не от кода. Полные замеры с аналитикой — `npm run qa` (локально) и таблица живого сайта выше.
 
