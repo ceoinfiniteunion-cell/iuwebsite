@@ -11,7 +11,7 @@
         "http://localhost/en/index.html",
         "http://localhost/404.html"
       ],
-      "numberOfRuns": 1,
+      "numberOfRuns": 3,
       "settings": {
         "onlyCategories": [
           "performance",
@@ -29,43 +29,50 @@
         "categories:performance": [
           "error",
           {
-            "minScore": 0.9
+            "minScore": 0.9,
+            "aggregationMethod": "median-run"
           }
         ],
         "categories:accessibility": [
           "error",
           {
-            "minScore": 0.95
+            "minScore": 0.95,
+            "aggregationMethod": "median-run"
           }
         ],
         "categories:seo": [
           "error",
           {
-            "minScore": 1
+            "minScore": 1,
+            "aggregationMethod": "median-run"
           }
         ],
         "categories:best-practices": [
           "warn",
           {
-            "minScore": 1
+            "minScore": 1,
+            "aggregationMethod": "median-run"
           }
         ],
         "largest-contentful-paint": [
           "error",
           {
-            "maxNumericValue": 2000
+            "maxNumericValue": 2000,
+            "aggregationMethod": "median-run"
           }
         ],
         "cumulative-layout-shift": [
           "error",
           {
-            "maxNumericValue": 0.05
+            "maxNumericValue": 0.05,
+            "aggregationMethod": "median-run"
           }
         ],
         "total-blocking-time": [
           "error",
           {
-            "maxNumericValue": 200
+            "maxNumericValue": 200,
+            "aggregationMethod": "median-run"
           }
         ]
       }
