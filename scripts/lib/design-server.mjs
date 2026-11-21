@@ -39,7 +39,13 @@ export function transformTemplate(name, src, mode) {
     s = s.replace('setTimeout(tick, 16);\n    setTimeout(() => this.setState({ glbReady: true }), 6500);', 'if (!window.__SSG) { setTimeout(tick, 16); setTimeout(() => this.setState({ glbReady: true }), 6500); }');
     s = s.replace("import('./iu-snake.js').then", "(window.__SSG ? new Promise(() => {}) : import('./iu-snake.js')).then");
   }
-  if (/Page/.test(name)) s = s.replace("if (gc && !this.glyph) import(", "if (gc && !this.glyph && !window.__SSG) import(");
+  if (/Page/.test(name)) {
+    s = s.replace("if (gc && !this.glyph) import(", "if (gc && !this.glyph && !window.__SSG) import(");
+    // prototype bug: norm() keeps only the first H2 of a block, so a 'portfolio-grid' with one H2 per project
+    // lost half of the projects (EN portfolio: 4 of 8). Every H2 of that block is a project card.
+    s = s.replace("if (it.k === 'h') { if (it.level <= 2) { if (!v.h) v.h = it.text; }", "if (it.k === 'h') { if (it.level <= 2 && b.type !== 'portfolio-grid') { if (!v.h) v.h = it.text; }");
+    s = s.replace("label: '', h: b.heading || '',", "label: '', h: b.type === 'portfolio-grid' ? '' : (b.heading || ''),");
+  }
   if (mode !== 'ssg') return s;
 
   // ---- width-independent markup ----

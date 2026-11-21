@@ -193,6 +193,7 @@ function start() {
   const aiFull = ai ? ai.textContent : '';
   const innerHero = $('main header');
   const scene3d = { snake: null, glyph: null };
+  const stillImg = $('[data-still]');
   const SPRING_D = WEAK ? .35 : .2;
   if (RM) { procs.forEach(p => { if (p.spark) p.spark.style.display = 'none'; }); }
 
@@ -254,6 +255,11 @@ function start() {
       if (gHalo) gHalo.style.opacity = (.8 + Math.sin(t / 900) * .2).toFixed(3);
     }
     if (scene3d.glyph && ihH) scene3d.glyph.setScroll(clamp(y / (ihH * .9)));
+    if (stillImg && !scene3d.snake && !scene3d.glyph) {
+      const k = home ? clamp(y / Math.max(1, hh - H)) : (ihH ? clamp(y / (ihH * .9)) : 0);
+      set(stillImg, 'opacity', String(clamp(1 - k * (home ? 1.15 : 1.3))));
+      set(stillImg, 'transform', home ? `scale(${(1 - k * .28).toFixed(3)})` : `translateY(${(-k * 60).toFixed(1)}px)`);
+    }
 
     // A2 curtains
     curt.forEach((c, i) => {
@@ -362,18 +368,15 @@ function start() {
   setInterval(() => { if (d.hidden) try { frame(performance.now()); } catch (_) { /* ignore */ } }, 150);
 
   // 3D — lazy, after first render (home: after the preloader), never on weak devices
-  const go3d = () => idle(() => load3d(scene3d), 3000);
+  const go3d = () => setTimeout(() => idle(() => load3d(scene3d), 4000), home ? 0 : 3500);
   if (home && byId('loader')) d.addEventListener('iu:loader-done', go3d, { once: true });
   else if (d.readyState === 'complete') go3d(); else addEventListener('load', go3d, { once: true });
 }
 
 /* ------------------------------------------------------------------ 3D scenes */
-function still(canvas, name) {
-  const img = new Image();
-  img.className = 'iu-still'; img.alt = ''; img.decoding = 'async';
-  img.src = `/assets/img/3d/${name}.webp`;
-  img.onerror = () => img.remove();
-  canvas.after(img); canvas.style.display = 'none';
+function still(canvas) {
+  canvas.style.display = 'none';
+  canvas.parentElement.classList.remove('iu-live-on');
 }
 function watchFps(canvas, name, dispose) {
   let n = 0, t0 = 0;
@@ -392,7 +395,8 @@ async function load3d(scene3d) {
       const { createScene } = await import(BASE_3D + 'iu-snake.js');
       let sc = null;
       const fps = watchFps(c, name, () => { sc && sc.dispose(); scene3d.snake = null; });
-      sc = createScene(c, { mode: 'glb', glb: GLB, onFrame: now => fps(now) });
+      let shown = false;
+      sc = createScene(c, { mode: 'glb', glb: GLB, onFrame: now => { if (!shown && sc && sc.ready) { shown = true; c.parentElement.classList.add('iu-live-on'); } fps(now); } });
       scene3d.snake = sc;
     } catch (e) { console.error(e); still(c, name); }
   } else if (KIND === '404') {
@@ -401,7 +405,8 @@ async function load3d(scene3d) {
     try {
       const { createScene } = await import(BASE_3D + 'iu-snake.js');
       const nw = narrow();
-      const sc = createScene(c, { mode: 'glb', glb: GLB });
+      let shown = false, sc = null;
+      sc = createScene(c, { mode: 'glb', glb: GLB, onFrame: () => { if (!shown && sc && sc.ready) { shown = true; c.parentElement.classList.add('iu-live-on'); } } });
       sc.setPose({ x: nw ? 0 : .9, y: nw ? .55 : .1, z: 0, rx: .15, ry: -1.4, rz: .5, s: nw ? .6 : .9, o: 1 }); sc.snap();
       const t0 = performance.now();
       const spin = () => { const t = (performance.now() - t0) / 1000; sc.setPose({ ry: -1.4 + Math.sin(t * .4) * .6, rz: .5 + Math.sin(t * .7) * .12 }); requestAnimationFrame(spin); };
@@ -416,8 +421,9 @@ async function load3d(scene3d) {
       if (WEAK || RM) { still(c, 'glyph-' + kind); return; }
       let g = null;
       const fps = watchFps(c, 'glyph-' + kind, () => { g && g.dispose(); scene3d.glyph = null; });
-      g = createGlyph(c, kind, { onFrame: now => fps(now) });
-      if (!g) still(c, 'glyph-' + kind); else scene3d.glyph = g;
+      let shown = false;
+      g = createGlyph(c, kind, { onFrame: now => { if (!shown) { shown = true; c.parentElement.classList.add('iu-live-on'); } fps(now); } });
+      if (g) scene3d.glyph = g;
     } catch (e) { console.error(e); }
   }
 }

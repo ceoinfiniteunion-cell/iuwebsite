@@ -132,6 +132,9 @@ const hrefOf = h => {
   return h;
 };
 const report = [];
+const glyphKind = pth => /google-ads/.test(pth) ? 'google' : /meta-ads-instagram/.test(pth) ? 'instagram' : /meta-ads/.test(pth) ? 'meta'
+  : /tiktok/.test(pth) ? 'tiktok' : /seo-local/.test(pth) ? 'pin' : /seo/.test(pth) ? 'seo' : /bots/.test(pth) ? 'telegram'
+  : /websites|constructor/.test(pth) ? 'code' : /pricing/.test(pth) ? 'coins' : /platforms/.test(pth) ? 'cubes' : /ecosystems/.test(pth) ? 'rings' : 'infinity';
 
 for (const p of PAGES) {
   if (only.length && !only.includes(p.key)) continue;
@@ -204,7 +207,34 @@ for (const p of PAGES) {
   for (const a of $$('a[href^="tel:"]')) if (/\d/.test(a.text) && a.text.length < 40) a.set_content(a.innerHTML.replace(/(\S) (?=\S)/g, "$1&nbsp;"));
   // 3D canvases get an accessible fallback name; decorative
   for (const c of $$('canvas')) c.setAttribute('aria-hidden', 'true');
+  // pre-rendered frame of the 3D scene: painted with the page (early LCP, no late image), the live
+  // WebGL canvas cross-fades over it when ready; weak devices / reduced motion keep only this frame
+  const snakeC = $('#snake-canvas') || $('#c404');
+  if (snakeC) {
+    const name = p.key === '404' ? 'snake-404' : 'snake';
+    snakeC.insertAdjacentHTML('beforebegin', `<picture>${p.key === '404' ? '' : '<source media="(max-width: 819.98px)" srcset="/assets/img/3d/snake-m.webp">'}<img class="iu-still" data-still src="/assets/img/3d/${name}.webp" alt="" width="1440" height="900" decoding="async"></picture>`);
+  }
+  const glyphC = $('#glyph-canvas');
+  if (glyphC) glyphC.insertAdjacentHTML('beforebegin', `<img class="${glyphC.getAttribute('class')} iu-still-g" data-still src="/assets/img/3d/glyph-${glyphKind(p.path)}.webp" alt="" width="720" height="680" decoding="async">`);
 
+  // touch targets ≥ 44×44 (TZ §9): an invisible ::after hit area on touch screens; layout untouched.
+  // Elements without their own positioning get position:relative (class iu-tr) so the ::after anchors to them.
+  const posOf = new Map([...styleCls].map(([b, c]) => [c, /(^|;)position:/.test(b)]));
+  for (const el of $$('a[href], button, summary')) {
+    if (el.classList.contains('iu-skip')) continue;
+    const own = (el.getAttribute('class') || '').split(' ').some(c => posOf.get(c));
+    el.classList.add('iu-t'); if (!own) el.classList.add('iu-tr');
+  }
+  // heading hierarchy: a section without its own H2 promotes its card titles H3 → H2 (classes keep the look)
+  for (const sec of $$('main section')) {
+    if (sec.querySelector('h2')) continue;
+    for (const h of sec.querySelectorAll('h3')) h.tagName = 'h2';
+  }
+  // EN portfolio: keep the anchors of the previous site (/en/portfolio/#p-…) on the project cards
+  if (p.path === '/en/portfolio/') {
+    const ids = ['p-ad-tracker', 'p-respect-car', 'p-parrot-school', 'p-transfer-kharkiv', 'p-kneu-bot', 'p-bizbot', 'p-infinitycreo', 'p-iu-bot'];
+    $$('main [data-card]').forEach((c, i) => { if (ids[i]) c.setAttribute('id', ids[i]); });
+  }
   // FAQ (visible <details>) → FAQPage JSON-LD
   const faq = $$('main details').map(dt => {
     const sum = dt.querySelector('summary');

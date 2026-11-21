@@ -1,7 +1,7 @@
 // Infinite Union service worker (redesign 2026). Version is stamped at build time.
 // HTML: network-first (cache = offline fallback). Hashed assets / fonts / images / 3D: cache-first.
 // Third parties (Google, Sentry, Cloudflare) and the lead API are never intercepted.
-const CACHE = 'iu-r2026-fc537d7eba';
+const CACHE = 'iu-r2026-a373707076';
 const IMMUTABLE = /^\/assets\/(css\/[^/]+\.[0-9a-f]{10}\.css|js\/[^/]+\.[0-9a-f]{10}\.js|3d\/|fonts\/|img\/)/;
 
 self.addEventListener('install', () => self.skipWaiting());
