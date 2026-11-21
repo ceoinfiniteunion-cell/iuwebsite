@@ -3,9 +3,9 @@ import { startServer } from './lib/design-server.mjs';
 const site = await startServer(process.cwd());
 const b = await chromium.launch();
 const ctx = await b.newContext({ ...devices['Pixel 7'] });
-await ctx.route(/googletagmanager|google-analytics|doubleclick/, r => r.abort());
+
 const p = await ctx.newPage();
-const cdp = await ctx.newCDPSession(p); await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
+const cdp = await ctx.newCDPSession(p); await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 }); await cdp.send('Network.enable'); await cdp.send('Network.emulateNetworkConditions', { offline: false, latency: 150, downloadThroughput: 1.6 * 1024 * 1024 / 8, uploadThroughput: 750 * 1024 / 8 });
 await p.addInitScript(() => {
   window.__lcp = []; window.__cls = [];
   new PerformanceObserver(l => l.getEntries().forEach(e => window.__lcp.push({ t: Math.round(e.startTime), el: e.element ? e.element.tagName + '.' + (e.element.className || '') + ' ' + (e.element.textContent || '').trim().slice(0, 40) : '?', size: e.size }))).observe({ type: 'largest-contentful-paint', buffered: true });

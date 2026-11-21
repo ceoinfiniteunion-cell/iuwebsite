@@ -25,8 +25,10 @@ async function render(name, w, h, code) {
   await page.waitForTimeout(1500);
   const png = `${TMP}/${name}.png`;
   await page.locator('#c').screenshot({ path: png, omitBackground: true });
-  const big = w > 1000 ? ['-resize', '1200', '0', '-q', '72', '-alpha_q', '80'] : ['-q', '80', '-alpha_q', '90'];
+  const big = name.startsWith('snake') ? [...(w > 1000 ? ['-resize', '1100', '0'] : []), '-q', '62', '-alpha_q', '70'] : ['-q', '80', '-alpha_q', '90'];
   execFileSync('cwebp', ['-quiet', ...big, '-m', '6', png, '-o', `${OUT}/${name}.webp`]);
+  // snake frames are LCP candidates: AVIF (preloaded) + WebP fallback, small enough to land before 2 s on 4G
+  if (name.startsWith('snake')) execFileSync('magick', [png, ...(w > 1000 ? ['-resize', name === 'snake-404' ? '1000x' : '1100x'] : []), '-strip', '-quality', '50', `${OUT}/${name}.avif`]);
   console.log(name, fs.statSync(`${OUT}/${name}.webp`).size);
   await page.close();
 }

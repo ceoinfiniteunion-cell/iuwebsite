@@ -197,9 +197,24 @@ function start() {
   const SPRING_D = WEAK ? .35 : .2;
   if (RM) { procs.forEach(p => { if (p.spark) p.spark.style.display = 'none'; }); }
 
+  // Geometry is re-read only when it can have changed (scroll, resize, fonts, images, every 500 ms as a safety net);
+  // other frames reuse it, so the time-driven writes (rings, pulses) never force a synchronous layout.
+  let dirty = true, lastRead = 0, G = null;
+  const markDirty = () => { dirty = true; };
+  addEventListener('scroll', markDirty, { passive: true });
+  addEventListener('resize', markDirty);
+  addEventListener('load', markDirty);
+  d.fonts && d.fonts.addEventListener && d.fonts.addEventListener('loadingdone', markDirty);
   function frame(t) {
     const H = innerHeight, y = scrollY, n = narrow();
+    // the home hero is fully covered by the preloader — nothing to animate behind it
+    if (home && byId('loader')) return;
+    if (dirty || !G || t - lastRead > 500) { G = read(); dirty = false; lastRead = t; }
+    write(t, H, y, n, G);
+  }
+  function read() {
     // ---------------- READ phase
+    const H = innerHeight;
     const docH = prog ? de.scrollHeight : 0;
     const hh = hero ? hero.offsetHeight : H;
     const ihH = innerHero ? innerHero.offsetHeight : 0;
@@ -213,7 +228,12 @@ function start() {
     const pfR = pf ? pf.getBoundingClientRect() : null, pfH = pf ? pf.offsetHeight : 0;
     const sw = stage ? stage.clientWidth : 0, sh = stage ? stage.clientHeight : 0;
     const innerOv = pfS.map(s => (s.inner ? Math.max(0, s.inner.scrollHeight - s.inner.parentElement.clientHeight) : 0));
-
+    void H;
+    return { docH, hh, ihH, pendTops, countTops, curtR, lineTops, rowR, procR, wordR, pfR, pfH, sw, sh, innerOv };
+  }
+  function write(t, H, y, n, g) {
+    const { docH, hh, ihH, countTops, curtR, lineTops, rowR, procR, wordR, pfR, pfH, sw, sh, innerOv } = g;
+    const pendTops = g.pendTops;
     // ---------------- WRITE phase
     vel = lerp(vel, y - lastY, .15); lastY = y;
     if (nav) { const sc = y > (home ? 40 : 30); if (sc !== nav._sc) { nav._sc = sc; nav.style.background = sc ? (home ? 'rgba(10,7,6,.72)' : 'rgba(10,7,6,.74)') : 'transparent'; nav.style.backdropFilter = nav.style.webkitBackdropFilter = sc ? 'blur(14px)' : 'none'; nav.style.borderBottomColor = sc ? 'rgba(237,232,229,.08)' : 'transparent'; } }
@@ -275,7 +295,7 @@ function start() {
       if (c.line) { const ww = r.ww; set(c.line, 'width', Math.hypot(ww, R - L).toFixed(1) + 'px'); set(c.line, 'transform', `translateY(${L.toFixed(1)}px) rotate(${Math.atan2(R - L, ww).toFixed(4)}rad)`); set(c.line, 'opacity', k > .02 && k < .98 ? Math.sin(k * Math.PI).toFixed(3) : '0'); }
     });
     // A7 counters
-    if (counts.length) counts = counts.filter((c, i) => { if (countTops[i] > H * .85) return true; c.t0 = t; running.push(c); return false; });
+    if (counts.length) { const before = counts.length; counts = counts.filter((c, i) => { if (countTops[i] > H * .85) return true; c.t0 = t; running.push(c); return false; }); if (counts.length !== before) dirty = true; }
     for (let i = running.length - 1; i >= 0; i--) {
       const c = running[i], k = Math.min(1, (t - c.t0) / (c.home ? 1700 : 1500)), e = 1 - Math.pow(1 - k, 3);
       if (c.home) c.el.textContent = k >= 1 ? nbsp(c.raw.replace(/\s/g, '')) : nbsp((c.num * e).toFixed(c.dec));
@@ -283,7 +303,7 @@ function start() {
       if (k >= 1) running.splice(i, 1);
     }
     // A1 reveals
-    if (pending.length) pending = pending.filter((el, i) => { if (pendTops[i] > H * .9) return true; el.style.clipPath = 'inset(-6% -6% -6% -6%)'; el.style.transform = 'none'; return false; });
+    if (pending.length) { const before = pending.length; pending = pending.filter((el, i) => { if (pendTops[i] > H * .9) return true; el.style.clipPath = 'inset(-6% -6% -6% -6%)'; el.style.transform = 'none'; return false; }); if (pending.length !== before) dirty = true; }
     // A3 lines
     lines.forEach((l, i) => { if (!l.on && lineTops[i] < H * .8) { l.on = true; l.el.style.width = '100%'; } });
     // A4 rows
