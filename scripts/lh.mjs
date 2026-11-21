@@ -21,6 +21,7 @@ try {
     const out = `.cache/lh/${form}-${p.replace(/\W+/g, '_')}.json`;
     const flags = ['lighthouse', base + p, '--quiet', '--chrome-flags=--headless=new', '--only-categories=performance,seo,accessibility,best-practices', '--output=json', `--output-path=${out}`];
     if (form === 'desktop') flags.push('--preset=desktop');
+    if (/404/.test(p)) flags.push('--skip-audits=is-crawlable'); // 404 is noindex by design
     try { execFileSync('npx', flags, { stdio: 'ignore', timeout: 180000 }); } catch { /* LH exits non-zero on some runtime errors but still writes the report */ }
     const lr = JSON.parse(fs.readFileSync(out, 'utf8'));
     const sc = k => Math.round((lr.categories[k]?.score || 0) * 100);
@@ -30,7 +31,13 @@ try {
     const miss = [];
     if (r.perf < BUDGET[form].performance) miss.push(`perf ${r.perf}`);
     if (r.seo < BUDGET.seo) miss.push(`seo ${r.seo}`);
-    if (r.bp < BUDGET.bp) miss.push(`bp ${r.bp}`);
+    // Best Practices: every audit must pass, except the Google Ads third-party cookie (doubleclick test_cookie set by the
+    // AW conversion tag the TZ requires on every page) — accepted only if ALL offending items are Google Ads domains.
+    const ADS = /doubleclick\.net|googleadservices\.com|google\.com\/pagead|googlesyndication/;
+    const bpFails = lr.categories['best-practices'].auditRefs.filter(x => x.weight > 0 && lr.audits[x.id].score !== null && lr.audits[x.id].score < 1).map(x => x.id)
+      .filter(id => !(['third-party-cookies', 'inspector-issues'].includes(id) && JSON.stringify(lr.audits[id].details?.items || []).match(/https?:\/\/[^"\s]+/g)?.every(u => ADS.test(u))));
+    r.bpFails = bpFails;
+    if (bpFails.length) miss.push(`bp ${r.bp}: ${bpFails.join(',')}`);
     if (r.a11y < BUDGET.a11y) miss.push(`a11y ${r.a11y}`);
     if (r.lcp > BUDGET[form].lcp) miss.push(`LCP ${r.lcp}s`);
     if (r.cls > BUDGET.cls) miss.push(`CLS ${r.cls}`);

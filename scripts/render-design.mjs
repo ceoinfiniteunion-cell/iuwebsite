@@ -212,7 +212,7 @@ for (const p of PAGES) {
   const snakeC = $('#snake-canvas') || $('#c404');
   if (snakeC) {
     const name = p.key === '404' ? 'snake-404' : 'snake';
-    snakeC.insertAdjacentHTML('beforebegin', `<picture>${p.key === '404' ? '' : '<source media="(max-width: 819.98px)" srcset="/assets/img/3d/snake-m.webp">'}<img class="iu-still" data-still src="/assets/img/3d/${name}.webp" alt="" width="1440" height="900" decoding="async"></picture>`);
+    snakeC.insertAdjacentHTML('beforebegin', `<picture>${p.key === '404' ? '' : '<source media="(max-width: 819.98px)" srcset="/assets/img/3d/snake-m.webp">'}<img class="iu-still" data-still src="/assets/img/3d/${name}.webp" alt="" width="1440" height="900" decoding="async"${p.key === '404' ? ' fetchpriority="high"' : ''}></picture>`);
   }
   const glyphC = $('#glyph-canvas');
   if (glyphC) glyphC.insertAdjacentHTML('beforebegin', `<img class="${glyphC.getAttribute('class')} iu-still-g" data-still src="/assets/img/3d/glyph-${glyphKind(p.path)}.webp" alt="" width="720" height="680" decoding="async">`);

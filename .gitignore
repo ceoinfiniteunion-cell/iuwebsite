@@ -27,3 +27,4 @@ env dont push, only gitignor
 design/baseline/
 # design source screenshot (1.4 MB, over the 800 KB repo limit) — optimized copy lives in assets/img/portfolio/
 design/assets/shot-gym4fit.png
+.lighthouseci/

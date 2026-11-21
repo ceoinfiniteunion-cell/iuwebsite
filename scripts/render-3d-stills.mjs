@@ -25,7 +25,8 @@ async function render(name, w, h, code) {
   await page.waitForTimeout(1500);
   const png = `${TMP}/${name}.png`;
   await page.locator('#c').screenshot({ path: png, omitBackground: true });
-  execFileSync('cwebp', ['-quiet', '-q', '80', '-alpha_q', '90', '-m', '6', png, '-o', `${OUT}/${name}.webp`]);
+  const big = w > 1000 ? ['-resize', '1200', '0', '-q', '72', '-alpha_q', '80'] : ['-q', '80', '-alpha_q', '90'];
+  execFileSync('cwebp', ['-quiet', ...big, '-m', '6', png, '-o', `${OUT}/${name}.webp`]);
   console.log(name, fs.statSync(`${OUT}/${name}.webp`).size);
   await page.close();
 }

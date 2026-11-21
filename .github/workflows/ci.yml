@@ -2,15 +2,17 @@ name: CI
 
 on:
   push:
-    branches: [main, refactor/split-monolith]
+    branches: [main, redesign-2026]
   pull_request:
-    branches: [main, refactor/split-monolith]
+    branches: [main]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -25,6 +27,8 @@ jobs:
         run: npm run lint:css
       - name: ESLint
         run: npm run lint:js
+      - name: SEO & integrity checks
+        run: npm run check:static
 
   e2e:
     runs-on: ubuntu-latest
@@ -37,12 +41,18 @@ jobs:
           cache: 'npm'
       - name: Install deps
         run: npm ci
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
-      - name: Run E2E tests (local server)
+      - name: Install Playwright browsers (Chromium, WebKit, Firefox)
+        run: npx playwright install --with-deps chromium webkit firefox
+      - name: E2E — forms (mocked API), menu, SW, reduced motion, smoke on 5 devices
         run: npx playwright test --reporter=list
         env:
           CI: true
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-results
+          path: test-results/
+          retention-days: 7
 
   lighthouse:
     runs-on: ubuntu-latest
@@ -55,5 +65,5 @@ jobs:
           cache: 'npm'
       - name: Install deps
         run: npm ci
-      - name: Lighthouse CI
+      - name: Lighthouse CI (templates, mobile budgets)
         run: npm run lhci
