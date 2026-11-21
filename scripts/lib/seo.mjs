@@ -163,6 +163,5 @@ export function csp(hashes) {
     "frame-src https://www.googletagmanager.com",
     "object-src 'none'",
     "base-uri 'self'",
-    'upgrade-insecure-requests',
   ].join('; ');
 }

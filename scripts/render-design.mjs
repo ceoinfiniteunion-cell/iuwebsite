@@ -198,6 +198,10 @@ for (const p of PAGES) {
   if (vn) vn.set_content(esc(p.name || '∞'));
   const main = $('main');
   if (main) main.setAttribute('id', 'main'); else report.push(`${p.key}: no <main>`);
+  for (const a of $$('a[target="_blank"]')) a.setAttribute('rel', 'noopener noreferrer');
+  for (const i of $$('input:not([type])')) i.setAttribute('type', 'text');
+  for (const b of $$('button:not([type])')) b.setAttribute('type', 'button');
+  for (const a of $$('a[href^="tel:"]')) if (/\d/.test(a.text) && a.text.length < 40) a.set_content(a.innerHTML.replace(/(\S) (?=\S)/g, "$1&nbsp;"));
   // 3D canvases get an accessible fallback name; decorative
   for (const c of $$('canvas')) c.setAttribute('aria-hidden', 'true');
 
@@ -229,6 +233,8 @@ for (const p of PAGES) {
 ${seoHead(p, { faq, items })}
 <script>${BOOT}</script>
 ${preFonts.map(f => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin>`).join('\n')}
+<link rel="preload" href="/assets/css/${siteCssName}" as="style" data-iu-css>
+<noscript><link rel="stylesheet" href="/assets/css/${siteCssName}"></noscript>
 ${p.key === 'home' || p.key === '404' ? '<link rel="preconnect" href="https://res.cloudinary.com" crossorigin>\n' : ''}<style>${critical}</style>
 <script>${GTM}</script>
 <script>${GTAG}</script>
@@ -237,7 +243,6 @@ ${p.key === 'home' || p.key === '404' ? '<link rel="preconnect" href="https://re
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXZW3NHF" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 <a class="iu-skip" href="#main">${t.skip}</a>
 ${out.trim()}
-<link rel="stylesheet" href="/assets/css/${siteCssName}">
 <script type="module" src="/assets/js/${motionName}"></script>
 </body>
 </html>

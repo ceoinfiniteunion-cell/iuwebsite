@@ -22,6 +22,9 @@ const WEAK = (() => {
 })();
 const idle = (fn, timeout = 2500) => ('requestIdleCallback' in window ? requestIdleCallback(fn, { timeout }) : setTimeout(fn, 200));
 
+/* ------------------------------------------------------------------ interaction stylesheet (hover/focus), non-blocking */
+{ const pre = $('link[data-iu-css]'); if (pre) { const l = d.createElement('link'); l.rel = 'stylesheet'; l.href = pre.href; d.head.appendChild(l); } }
+
 /* ------------------------------------------------------------------ always-on UI (also in ?static=1) */
 initMenu();
 initForms();

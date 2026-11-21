@@ -19,7 +19,7 @@ const CYR = /[а-яА-ЯіїєґІЇЄҐ]/;
 // ---------- every HTML file in the repo must be a registered page (or 404) ----------
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (e.name.startsWith('.') || ['node_modules', 'vendor', 'test-results', 'tests', 'docs', 'audit-screens', 'scripts', 'src', '_site'].includes(e.name)) continue;
+    if (e.name.startsWith('.') || ['node_modules', 'design', 'design-content', 'test-results', 'tests', 'docs', 'audit-screens', 'scripts', 'src', '_site', 'playwright-report'].includes(e.name)) continue;
     const p = path.join(dir, e.name);
     if (e.isDirectory()) walk(p, out);
     else if (e.name.endsWith('.html')) out.push(p);
@@ -110,9 +110,10 @@ for (const p of pages) {
     if (p.path !== '/' && p.path !== '/en/' && !types.includes('BreadcrumbList')) err(f, 'no BreadcrumbList');
   }
   // FAQ JSON-LD must mirror visible FAQ
-  const faqVisible = root.querySelectorAll('.faq-item .faq-q').length;
+  const faqVisible = root.querySelectorAll('main details summary').length;
   const faqLd = (html.match(/"@type": "Question"/g) || []).length;
-  if (faqVisible !== faqLd) err(f, `FAQ JSON-LD (${faqLd}) != visible FAQ (${faqVisible}) — run npm run build:seo`);
+  if (faqVisible !== faqLd) err(f, `FAQ JSON-LD (${faqLd}) != visible FAQ (${faqVisible}) — run npm run build`);
+  if (/\{\{|\}\}/.test(html.replace(/<style>[\s\S]*?<\/style>/g, '').replace(/<script>[\s\S]*?<\/script>/g, ''))) err(f, 'template braces {{ }} left in output (markup or JSON-LD)');
 
   // analytics must not be blocked by the page CSP (GTM loads GA4 + Ads gtag.js and sends to *.google-analytics.com)
   const csp = root.querySelector('meta[http-equiv="Content-Security-Policy"]')?.getAttribute('content');
@@ -125,9 +126,17 @@ for (const p of pages) {
   // body structure
   const h1 = root.querySelectorAll('h1');
   if (h1.length !== 1) err(f, `expected exactly 1 <h1>, got ${h1.length}`);
-  if (!html.includes('<!-- iu:content -->') || !html.includes('<!-- /iu:content -->')) err(f, 'content markers missing');
-  if (!root.querySelector('footer.iu-foot')) err(f, 'shared footer missing');
-  if (!html.includes('<!-- iu:lang -->')) err(f, 'language switcher missing');
+  if (!root.querySelector('main#main')) err(f, '<main id="main"> missing (skip-link target)');
+  if (!root.querySelector('a.iu-skip[href="#main"]')) err(f, 'skip link missing');
+  if (!root.querySelector('footer')) err(f, 'footer missing');
+  if (!root.querySelector('footer a[href="/services/privacy/"]')) err(f, 'footer without privacy policy link');
+  if (p.alt && !root.querySelector(`a[href="${p.alt}"]`)) err(f, `no link to the ${p.lang === 'uk' ? 'EN' : 'UA'} version ${p.alt}`);
+  for (const form of root.querySelectorAll('form[data-lead]')) {
+    if (!form.querySelector('input[name="website"][tabindex="-1"]')) err(f, 'lead form without honeypot');
+    if (!form.querySelector('a[href="/services/privacy/"]')) err(f, 'lead form without privacy consent line');
+  }
+  if (!html.includes('GTM-WXZW3NHF') || !html.includes('ns.html?id=GTM-WXZW3NHF')) err(f, 'GTM snippet / noscript missing');
+  if (!html.includes("gtag('config','AW-18360841103')")) err(f, 'Google Ads gtag config missing');
   if (/gtag\/js\?id=/.test(html)) err(f, 'direct gtag.js loader present (analytics must go through GTM)');
   if (/<body[\s>]/.test(html.slice(html.indexOf('<body') + 5))) err(f, 'duplicate <body>');
 
@@ -139,7 +148,7 @@ for (const p of pages) {
 
   // EN pages: no Ukrainian outside <head>
   if (p.lang === 'en') {
-    const body = html.slice(html.indexOf('<body'));
+    const body = html.slice(html.indexOf('<body')).replace(/></g, '> <');
     const bodyRoot = parse(body, { comment: false });
     for (const el of bodyRoot.querySelectorAll('script[type="application/ld+json"]')) el.remove();
     const text = bodyRoot.structuredText + ' ' + [...body.matchAll(/\s(?:alt|title|aria-label|placeholder|content)="([^"]*)"/g)].map(m => m[1]).join(' ');

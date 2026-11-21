@@ -5,6 +5,7 @@
   --red: #d40000; --red-hot: #ff3b2f; --red-text: #ff2a1f;
   --line: rgba(237, 232, 229, .1);
   --ease-curtain: cubic-bezier(.76, 0, .24, 1); --ease-soft: cubic-bezier(.23, 1, .32, 1);
+
   color-scheme: dark;
 }
 
