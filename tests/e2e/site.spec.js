@@ -155,11 +155,11 @@ test('skip link moves focus to main', async ({ page, isMobile }) => {
 /* ---------------------------------------------------------------- service worker: old design → new */
 test('new service worker drops the old caches', async ({ page, browserName }) => {
   test.skip(browserName !== 'chromium', 'SW lifecycle checked in Chromium');
-  await page.goto('/404.html?static=1');
+  await page.goto('/robots.txt'); // a page that never registers the SW: seed the cache of the previous design first
   await page.evaluate(async () => { const c = await caches.open('iu-1793311479325'); await c.put('/assets/css/main.css', new Response('old')); });
   await page.goto('/');
   await page.waitForFunction(async () => (await navigator.serviceWorker.getRegistration())?.active?.state === 'activated', null, { timeout: 20000 });
   await page.waitForFunction(async () => !(await caches.keys()).includes('iu-1793311479325'), null, { timeout: 10000 });
   const keys = await page.evaluate(() => caches.keys());
-  expect(keys.every(k => k.startsWith('iu-r2026-'))).toBe(true);
+  expect(keys.filter(k => !k.startsWith('iu-r2026-'))).toEqual([]);
 });
