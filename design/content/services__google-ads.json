@@ -1,0 +1,919 @@
+{
+  "url": "https://infiniteunion.com.ua/services/google-ads/",
+  "path": "/services/google-ads/",
+  "file": "services/google-ads/index.html",
+  "lang": "uk",
+  "alt": {
+    "lang": "en",
+    "path": "/en/services/google-ads/",
+    "url": "https://infiniteunion.com.ua/en/services/google-ads/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "Google Ads",
+  "title": "Налаштування Google Ads і ведення — від $300 | IU",
+  "description": "Налаштування та ведення Google Ads: пошук, Performance Max, YouTube, ремаркетинг, відстеження конверсій. Налаштування від $300, ведення від $200/міс.",
+  "keyword": "налаштування Google Ads",
+  "secondaryKeywords": "налаштування Google Ads, ведення Google Ads, Google реклама. Пошуковий інтент («контекстна реклама», «реклама в пошуку Google») → `/services/google-ads-search/`",
+  "priceFrom": 300,
+  "robots": "index, follow",
+  "h1": "Налаштування Google Ads",
+  "breadcrumbs": [
+    {
+      "name": "Головна",
+      "url": "/"
+    },
+    {
+      "name": "Google Ads",
+      "url": "/services/google-ads/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#F5F0E8",
+    "--bg2": "#EDE8E0",
+    "--dark": "#0A0A0A",
+    "--text": "#1A1A1A",
+    "--muted": "#777",
+    "--border": "rgba(0,0,0,0.07)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ease": "cubic-bezier(0.76,0,0.24,1)",
+    "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+  },
+  "words": 900,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Назад",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "EN",
+      "href": "/en/services/google-ads/"
+    },
+    {
+      "k": "link",
+      "text": "ЗАПУСТИТИ GOOGLE ADS",
+      "href": "/services/google-ads/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "Налаштування Google Ads",
+      "items": [
+        {
+          "k": "text",
+          "text": "від $300",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "SETUP",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "Налаштування, разово",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "від $200",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "MGMT",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "Ведення, на місяць",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "BUDGET",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "Бюджет на рекламу — окремо",
+          "role": "hm-sub"
+        },
+        {
+          "k": "decor",
+          "text": "SCROLL"
+        },
+        {
+          "k": "decor",
+          "text": "02"
+        },
+        {
+          "k": "text",
+          "text": "GOOGLE ADS · ХАРКІВ · УКРАЇНА / ЄС",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Налаштування Google Ads"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union — агенція з Харкова. Робимо налаштування Google Ads і ведемо кампанії для малого та середнього бізнесу в Україні та ЄС: пошук, Performance Max, YouTube, ремаркетинг, відстеження заявок. Налаштування від $300, ведення від $200/міс, рекламний бюджет — окремо. Обговорити задачу →"
+        },
+        {
+          "k": "text",
+          "text": "$300+",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "налаштування, від",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$200/міс",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "ведення, від",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "4",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "типи кампаній під задачу",
+          "role": "hero-stat-label"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "GOOGLE SEARCH →DISPLAY →YOUTUBE ADS →PERFORMANCE MAX →SMART BIDDING →REMARKETING →GA4 →GOOGLE MERCHANT →GOOGLE SEARCH →DISPLAY →YOUTUBE ADS →PERFORMANCE MAX →SMART BIDDING →REMARKETING →GA4 →GOOGLE MERCHANT →"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Чому реклама в Google з'їдає бюджет",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЗАДАЧА",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Чому реклама в Google з'їдає бюджет"
+        },
+        {
+          "k": "text",
+          "text": "Найчастіше ми бачимо одну картину: кампанію запустили самостійно або в «розумному» режимі, гроші списуються, а заявок мало і незрозуміло, звідки вони. Причини прозаїчні: широкі ключові слова без мінус-слів, одна кампанія на всі послуги, не налаштовані конверсії. Алгоритм Google тоді оптимізує показ під кліки, а не під дзвінки й форми."
+        },
+        {
+          "k": "text",
+          "text": "Тому налаштування Google Ads ми починаємо не з оголошень, а з двох питань: яка дія на сайті для вас є результатом і скільки ви готові за неї платити. Від відповідей залежать структура акаунта, типи кампаній і стратегія ставок."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Що входить у налаштування Google Ads",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЩО ВХОДИТЬ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Що входить у налаштування Google Ads"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Пошукові кампанії"
+        },
+        {
+          "k": "text",
+          "text": "Семантика за наміром, мінус-слова, адаптивні оголошення, розширення. Детально — на сторінці контекстної реклами Google.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Search · RSA · Мінус-слова",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Performance Max"
+        },
+        {
+          "k": "text",
+          "text": "Для інтернет-магазинів і бізнесу з каталогом: групи об'єктів, сигнали аудиторій, фід Merchant Center. Запускаємо, коли вже працює відстеження конверсій.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "PMax · Merchant Center · Фід товарів",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "YouTube і відео"
+        },
+        {
+          "k": "text",
+          "text": "In-stream і Shorts для охоплення та ремаркетингу на тих, хто вже знає бренд. Якщо відео немає — підкажемо, яке потрібно під формат.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "In-stream · Shorts · Bumper",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ремаркетинг"
+        },
+        {
+          "k": "text",
+          "text": "Окремі оголошення для відвідувачів сайту, тих, хто дивився ціни або почав заповнювати форму.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Списки аудиторій · Customer Match",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Відстеження конверсій"
+        },
+        {
+          "k": "text",
+          "text": "GA4 і Google Tag Manager: форми, кліки по телефону, переходи в Telegram і Viber. Без цього оптимізувати рекламу неможливо — алгоритму нема на чому вчитися.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "GA4 · GTM · Конверсії",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Звіти без води"
+        },
+        {
+          "k": "text",
+          "text": "Щотижневе коротке зведення в Telegram і щомісячний звіт: витрати, заявки, ціна заявки, що змінили і що плануємо далі. Доступ до акаунта у вас відкритий постійно.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Telegram · Щомісячний звіт",
+          "role": "service-tags"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Етапи запуску",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЯК МИ ПРАЦЮЄМО",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Етапи запуску"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Бриф і аудит"
+        },
+        {
+          "k": "text",
+          "text": "Розбираємо послуги, географію, маржу й конкурентів. Якщо акаунт уже є — перевіряємо поточні кампанії.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 дні",
+          "role": "process-time"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Структура і трекінг"
+        },
+        {
+          "k": "text",
+          "text": "Семантика, структура кампаній, GA4 і конверсії, тексти оголошень — на ваше погодження.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "3–5 днів",
+          "role": "process-time"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Запуск"
+        },
+        {
+          "k": "text",
+          "text": "Вмикаємо кампанії з денними лімітами й перевіряємо, що конверсії записуються коректно.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1 день",
+          "role": "process-time"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Оптимізація"
+        },
+        {
+          "k": "text",
+          "text": "Чистимо пошукові запити, тестуємо оголошення, перерозподіляємо бюджет на те, що дає заявки.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "Щотижня",
+          "role": "process-time"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Ціна налаштування і ведення",
+      "items": [
+        {
+          "k": "text",
+          "text": "ВАРТІСТЬ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Ціна налаштування і ведення"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01 · РАЗОВО",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Налаштування — від $300"
+        },
+        {
+          "k": "text",
+          "text": "Аудит або створення акаунта, семантика, перші кампанії, оголошення, GA4 і конверсії. Підходить, якщо далі ви ведете рекламу самі: акаунт і всі доступи залишаються вашими.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "02 · ЩОМІСЯЦЯ",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ведення — від $200/міс"
+        },
+        {
+          "k": "text",
+          "text": "Чистка запитів, тести оголошень, коригування ставок і бюджету, щотижневі зведення та щомісячний звіт.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "03 · ЩОМІСЯЦЯ",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Великі бюджети та e-commerce — від $500/міс"
+        },
+        {
+          "k": "text",
+          "text": "Performance Max, Merchant Center, динамічний ремаркетинг, кілька регіонів або мов.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "04 · БЮДЖЕТ",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Реклама — від $300/міс"
+        },
+        {
+          "k": "text",
+          "text": "Рекламний бюджет оплачується окремо, напряму в Google Ads з вашого платіжного профілю. Ціну заявки чи ROAS до запуску не обіцяємо: вони залежать від ніші, конкуренції та сайту. Усі тарифи агенції — на сторінці цін.",
+          "role": "service-desc"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Що ми вже зробили",
+      "items": [
+        {
+          "k": "text",
+          "text": "ПОРТФОЛІО",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Що ми вже зробили"
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "ЛЕНДІНГ + SEO",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Transfer Kharkiv"
+            },
+            {
+              "k": "text",
+              "text": "Лендінг трансферної компанії: конверсія 8.4%, 119+ SEO-позицій у топі, заявки 24/7 приймає Telegram-бот. Саме на таку сторінку вигідно вести платний трафік — швидка, з одним зрозумілим сценарієм дії.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "HTML/CSS/JS · Python-бот · SEO",
+              "role": "service-tags"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "ВЛАСНИЙ ІНСТРУМЕНТ",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Ad Tracker by IU"
+            },
+            {
+              "k": "text",
+              "text": "Власний дашборд Infinite Union: Meta, Google і TikTok Ads в одному вікні, автооновлення кожні 2 години, 90 днів історії. Економить команді 5+ годин на тиждень на звітах. Зараз у розробці.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "Google Ads · Meta Ads · TikTok Ads",
+              "role": "service-tags"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "stats",
+      "viewport": "all",
+      "tag": "div",
+      "class": "results-strip",
+      "heading": "",
+      "items": [
+        {
+          "k": "text",
+          "text": "8.4%",
+          "role": "result-val"
+        },
+        {
+          "k": "text",
+          "text": "Конверсія лендінгу Transfer Kharkiv",
+          "role": "result-label"
+        },
+        {
+          "k": "text",
+          "text": "119+",
+          "role": "result-val"
+        },
+        {
+          "k": "text",
+          "text": "SEO-позицій у топі Google",
+          "role": "result-label"
+        },
+        {
+          "k": "text",
+          "text": "2год",
+          "role": "result-val"
+        },
+        {
+          "k": "text",
+          "text": "Оновлення даних в Ad Tracker",
+          "role": "result-label"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "types",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Оберіть канал під задачу",
+      "items": [
+        {
+          "k": "text",
+          "text": "ФОРМАТИ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Оберіть канал під задачу"
+        },
+        {
+          "k": "card-link",
+          "href": "/services/google-ads-search/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "GOOGLE SEARCH",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Контекстна реклама Google"
+            },
+            {
+              "k": "text",
+              "text": "Тільки пошукові кампанії: для послуг і товарів, які вже шукають. Семантика, мінус-слова, відстеження дзвінків.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "Від $300",
+              "role": "service-tags"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/services/seo/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "ОРГАНІКА",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "SEO просування сайту"
+            },
+            {
+              "k": "text",
+              "text": "Другий канал, який накопичує ефект. Порівняння двох підходів — у статті «Google Ads чи SEO» в нашому блозі.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "Від $150/міс",
+              "role": "service-tags"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq-section",
+      "heading": "Часті запитання",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "faq-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Часті запитання"
+        },
+        {
+          "k": "faq",
+          "q": "Скільки коштує налаштування Google Ads?",
+          "a": "Налаштування — від $300 разово, ведення — від $200/міс, для великих бюджетів та e-commerce — від $500/міс. Рекламний бюджет оплачується окремо, рекомендований старт — від $300/міс."
+        },
+        {
+          "k": "faq",
+          "q": "Коли з'являться перші заявки?",
+          "a": "Пошукові кампанії отримують кліки одразу після модерації оголошень. Перші заявки часто приходять у перші дні, але стабільну ціну заявки видно після 2–4 тижнів збору даних. Конкретну кількість заявок до запуску не гарантуємо."
+        },
+        {
+          "k": "faq",
+          "q": "Чи потрібен сайт для Google Ads?",
+          "a": "Для пошуку та Performance Max — так: потрібна сторінка, яка швидко завантажується і має зрозумілу форму або кнопку дзвінка. Якщо сайту немає, можемо зробити лендінг — від $600."
+        },
+        {
+          "k": "faq",
+          "q": "Кому належить рекламний акаунт?",
+          "a": "Вам. Створюємо акаунт на вашу компанію або працюємо у вашому через доступ менеджера. Якщо співпраця завершиться, кампанії, історія та доступи залишаються у вас."
+        },
+        {
+          "k": "faq",
+          "q": "Як ви звітуєте про результати?",
+          "a": "Щотижня — коротке зведення в Telegram, раз на місяць — звіт: витрати, кліки, заявки, ціна заявки, зміни і план. Доступ до акаунта Google Ads у вас відкритий весь час."
+        },
+        {
+          "k": "faq",
+          "q": "Що обрати на старті: Google Ads чи SEO?",
+          "a": "Реклама дає трафік з першого дня, поки ви платите за кліки. SEO накопичує ефект, але перші результати — через 3–6 місяців. Докладно — у статті «Google Ads чи SEO»."
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Обговоримо вашу рекламу",
+      "items": [
+        {
+          "k": "decor",
+          "text": "GOOGLE"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Обговоримо вашу рекламу"
+        },
+        {
+          "k": "text",
+          "text": "Напишіть, що рекламуєте і в якому регіоні — відповімо протягом 15 хвилин у робочий час"
+        },
+        {
+          "k": "link",
+          "text": "Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WhatsApp",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Viber",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380688286969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "link",
+          "text": "ЗАПОВНИТИ ФОРМУ",
+          "href": "/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [
+    {
+      "q": "Скільки коштує налаштування Google Ads?",
+      "a": "Налаштування — від $300 разово, ведення — від $200/міс, для великих бюджетів та e-commerce — від $500/міс. Рекламний бюджет оплачується окремо, рекомендований старт — від $300/міс."
+    },
+    {
+      "q": "Коли з'являться перші заявки?",
+      "a": "Пошукові кампанії отримують кліки одразу після модерації оголошень. Перші заявки часто приходять у перші дні, але стабільну ціну заявки видно після 2–4 тижнів збору даних. Конкретну кількість заявок до запуску не гарантуємо."
+    },
+    {
+      "q": "Чи потрібен сайт для Google Ads?",
+      "a": "Для пошуку та Performance Max — так: потрібна сторінка, яка швидко завантажується і має зрозумілу форму або кнопку дзвінка. Якщо сайту немає, можемо зробити лендінг — від $600."
+    },
+    {
+      "q": "Кому належить рекламний акаунт?",
+      "a": "Вам. Створюємо акаунт на вашу компанію або працюємо у вашому через доступ менеджера. Якщо співпраця завершиться, кампанії, історія та доступи залишаються у вас."
+    },
+    {
+      "q": "Як ви звітуєте про результати?",
+      "a": "Щотижня — коротке зведення в Telegram, раз на місяць — звіт: витрати, кліки, заявки, ціна заявки, зміни і план. Доступ до акаунта Google Ads у вас відкритий весь час."
+    },
+    {
+      "q": "Що обрати на старті: Google Ads чи SEO?",
+      "a": "Реклама дає трафік з першого дня, поки ви платите за кліки. SEO накопичує ефект, але перші результати — через 3–6 місяців. Докладно — у статті «Google Ads чи SEO»."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "Обговорити задачу →",
+      "href": "/services/google-ads/#contact",
+      "block": 1
+    },
+    {
+      "text": "контекстної реклами Google",
+      "href": "/services/google-ads-search/",
+      "block": 4
+    },
+    {
+      "text": "цін",
+      "href": "/pricing/",
+      "block": 6
+    },
+    {
+      "text": "↗ ЛЕНДІНГ + SEO Transfer Kharkiv Лендінг трансферної компанії: конверсія 8.4%, 119+ SEO-позицій у топі, заявки 24/7 приймає Telegram-бот. Саме на таку сторінку вигідно вести платний трафік — швидка, з одним зрозумілим сценарієм дії. HTML/CSS/JSPython-ботSEO",
+      "href": "/portfolio/",
+      "block": 7,
+      "card": true
+    },
+    {
+      "text": "↗ ВЛАСНИЙ ІНСТРУМЕНТ Ad Tracker by IU Власний дашборд Infinite Union: Meta, Google і TikTok Ads в одному вікні, автооновлення кожні 2 години, 90 днів історії. Економить команді 5+ годин на тиждень на звітах. Зараз у розробці. Google AdsMeta AdsTikTok Ads",
+      "href": "/portfolio/",
+      "block": 7,
+      "card": true
+    },
+    {
+      "text": "↗ GOOGLE SEARCH Контекстна реклама Google Тільки пошукові кампанії: для послуг і товарів, які вже шукають. Семантика, мінус-слова, відстеження дзвінків. Від $300",
+      "href": "/services/google-ads-search/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "↗ ОРГАНІКА SEO просування сайту Другий канал, який накопичує ефект. Порівняння двох підходів — у статті «Google Ads чи SEO» в нашому блозі. Від $150/міс",
+      "href": "/services/seo/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "лендінг",
+      "href": "/services/websites-landing/",
+      "block": 10
+    },
+    {
+      "text": "«Google Ads чи SEO»",
+      "href": "/blog/google-ads-chy-seo/",
+      "block": 10
+    },
+    {
+      "text": "ЗАПОВНИТИ ФОРМУ",
+      "href": "/#contact",
+      "block": 11
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 11
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 11
+    },
+    {
+      "text": "Viber",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 11
+    },
+    {
+      "text": "+380688286969",
+      "href": "tel:+380688286969",
+      "block": 11
+    }
+  ]
+}

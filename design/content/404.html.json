@@ -1,0 +1,155 @@
+{
+  "url": "https://infiniteunion.com.ua/404.html",
+  "path": "/404.html",
+  "file": "404.html",
+  "lang": "uk",
+  "alt": null,
+  "template": "404",
+  "registryType": "notfound",
+  "name": "404",
+  "title": "404 — Сторінку не знайдено | Infinite Union",
+  "description": "Сторінку не знайдено. Перейдіть на головну Infinite Union або оберіть послугу: сайти, Telegram-боти, реклама, SEO.",
+  "keyword": "",
+  "robots": "noindex, follow",
+  "h1": "Схоже, ця сторінка кудись пішла.",
+  "breadcrumbs": [],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#060404",
+    "--border": "rgba(255,255,255,.08)",
+    "--muted": "rgba(255,255,255,.4)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif"
+  },
+  "words": 38,
+  "chrome": [],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "content",
+      "viewport": "all",
+      "tag": "body",
+      "heading": "Схоже, ця сторінка кудись пішла.",
+      "items": [
+        {
+          "k": "link",
+          "text": "INFINITE UNION",
+          "href": "/"
+        },
+        {
+          "k": "text",
+          "text": "СТОРІНКУ НЕ ЗНАЙДЕНО",
+          "role": "status"
+        },
+        {
+          "k": "decor",
+          "text": "404"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Схоже, ця сторінка кудись пішла."
+        },
+        {
+          "k": "text",
+          "text": "Можливо посилання застаріло або сторінку було переміщено. Поверніться на головну або оберіть послугу."
+        },
+        {
+          "k": "link",
+          "text": "← НА ГОЛОВНУ",
+          "href": "/"
+        },
+        {
+          "k": "link",
+          "text": "ЗВ'ЯЗАТИСЬ З НАМИ",
+          "href": "/#contact"
+        },
+        {
+          "k": "link",
+          "text": "Сайти",
+          "href": "/services/websites/"
+        },
+        {
+          "k": "link",
+          "text": "Боти",
+          "href": "/services/bots/"
+        },
+        {
+          "k": "link",
+          "text": "SEO",
+          "href": "/services/seo/"
+        },
+        {
+          "k": "link",
+          "text": "Реклама",
+          "href": "/services/google-ads/"
+        },
+        {
+          "k": "link",
+          "text": "Ціни",
+          "href": "/pricing/"
+        },
+        {
+          "k": "link",
+          "text": "English",
+          "href": "/en/"
+        },
+        {
+          "k": "text",
+          "text": "ХАРКІВ · УКРАЇНА · ЄВРОПА",
+          "role": "geo"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [],
+  "internalLinks": [
+    {
+      "text": "INFINITE UNION",
+      "href": "/",
+      "block": 1
+    },
+    {
+      "text": "← НА ГОЛОВНУ",
+      "href": "/",
+      "block": 1
+    },
+    {
+      "text": "ЗВ'ЯЗАТИСЬ З НАМИ",
+      "href": "/#contact",
+      "block": 1
+    },
+    {
+      "text": "Сайти",
+      "href": "/services/websites/",
+      "block": 1
+    },
+    {
+      "text": "Боти",
+      "href": "/services/bots/",
+      "block": 1
+    },
+    {
+      "text": "SEO",
+      "href": "/services/seo/",
+      "block": 1
+    },
+    {
+      "text": "Реклама",
+      "href": "/services/google-ads/",
+      "block": 1
+    },
+    {
+      "text": "Ціни",
+      "href": "/pricing/",
+      "block": 1
+    },
+    {
+      "text": "English",
+      "href": "/en/",
+      "block": 1
+    }
+  ],
+  "externalLinks": []
+}

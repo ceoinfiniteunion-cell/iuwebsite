@@ -2,8 +2,9 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- iu:seo -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-2iRFQfFwCf5q5Xe3esoUsJKrS0CY8a1bDOq4M2vcayE=' 'sha256-XPydJgSjW+lJiVp0zW6Am4rWmJk1/vqZuLJuCVGTAq4=' 'sha256-18IQnlxusBKNvMLTbivmAMW/cmrHxdEo96YoX6RaUGQ=' https://www.googletagmanager.com https://googleads.googleapis.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net https://ad.doubleclick.net https://js-de.sentry-cdn.com https://browser.sentry-cdn.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: blob:; connect-src 'self' https://api.infiniteunion.com.ua https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.googletagmanager.com https://www.google-analytics.com https://stats.g.doubleclick.net https://googleads.g.doubleclick.net https://ad.doubleclick.net https://www.google.com https://res.cloudinary.com https://o4511772270002176.ingest.de.sentry.io https://browser.sentry-cdn.com https://static.cloudflareinsights.com blob:; worker-src 'self' blob:; frame-src https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Telegram-бот для продажів — воронка й оплата, від $500</title>
 <meta name="description" content="Telegram-бот для продажів: квіз-кваліфікація, каталог, оплата в чаті, передача теплих лідів менеджеру чи в CRM. Від $500, запуск від 7 днів.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
@@ -12,9 +13,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#060404">
-<link rel="stylesheet" href="/assets/css/site-shared.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="theme-color" content="#0a0706">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Infinite Union">
 <meta property="og:locale" content="uk_UA">
@@ -24,7 +23,7 @@
 <meta property="og:image" content="https://infiniteunion.com.ua/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Infinite Union">
+<meta property="og:image:alt" content="Бот для продажів — Infinite Union">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Telegram-бот для продажів — воронка й оплата, від $500">
 <meta name="twitter:description" content="Telegram-бот для продажів: квіз-кваліфікація, каталог, оплата в чаті, передача теплих лідів менеджеру чи в CRM. Від $500, запуск від 7 днів.">
@@ -184,877 +183,814 @@
  ]
 }
 </script>
-<!-- /iu:seo -->
-<!-- Google Tag Manager -->
+<script>(function(d){var h=d.documentElement,c=h.classList;c.add('js');try{if(/[?&]static=1/.test(location.search)){c.add('static','no-loader');return}var s=sessionStorage;if(s.getItem('iu_seen')||matchMedia('(prefers-reduced-motion: reduce)').matches)c.add('no-loader');if(s.getItem('iu_veil')){s.removeItem('iu_veil');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)c.add('veil-in')}}catch(e){}})(document);</script>
+<link rel="preload" href="/assets/fonts/sg-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/jbm-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url(/assets/fonts/jbm-cyrillic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url(/assets/fonts/jbm-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url(/assets/fonts/jbm-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400 700;font-display:swap;src:url(/assets/fonts/sg-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400 700;font-display:swap;src:url(/assets/fonts/sg-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}html,body{margin:0;padding:0;background:#0a0706;color:#EDE8E5}body{font-family:'Space Grotesk','SG Fallback',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:#EDE8E5;text-decoration:none}a:hover{color:#ff3b2f}*{box-sizing:border-box}::selection{background:#D40000;color:#fff}summary{list-style:none}summary::-webkit-details-marker{display:none}input::placeholder,textarea::placeholder{color:#6e6464}select option{background:#110D0D}@keyframes iuPulse{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}@keyframes iuMq{to{transform:translateX(-50%)}}@keyframes iuSheen{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(260%) skewX(-20deg)}}@keyframes iuType{0%,100%{opacity:.25}50%{opacity:1}}@keyframes iuFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}:root{--bg-0: #0a0706;--bg-1: #0e0909;--bg-2: #120d0d;--bg-deep: #070504;--card: #0c0808;--fg: #ede8e5;--fg-2: #c9c0bc;--muted: #b3a9a9;--muted-2: #a89e9e;--muted-3: #8a8080;--red: #d40000;--red-hot: #ff3b2f;--red-text: #ff2a1f;--line: rgba(237,232,229,.1);--ease-curtain: cubic-bezier(.76,0,.24,1);--ease-soft: cubic-bezier(.23,1,.32,1);color-scheme: dark}@font-face{font-family: "SG Fallback";src: local("Arial"),local("Helvetica"),local("Roboto");size-adjust: 106%;ascent-override: 92.8%;descent-override: 27.5%;line-gap-override: 0%;unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}.iu-skip{position: fixed;left: 16px;top: -80px;z-index: 300;padding: 14px 20px;background: var(--red);color: #fff;font: 500 12px/1 "JetBrains Mono",monospace;letter-spacing: .14em;text-transform: uppercase;border-radius: 999px;box-shadow: 0 0 34px rgba(212,0,0,.55);transition: top .3s var(--ease-soft)}.iu-skip:focus{top: 16px;color: #fff}:focus-visible{outline: 2px solid var(--red-hot);outline-offset: 3px}:focus:not(:focus-visible){outline: none}@media (max-width: 819.98px){[data-wide]{display: none !important}[data-pf-grid]{grid-template-columns: minmax(0,1fr) !important;grid-template-rows: minmax(0,1.2fr) minmax(0,1fr) !important}[data-pf-ul]{display: none !important}}@media (min-width: 820px){[data-narrow]{display: none !important}}[data-sent][hidden]{display: none !important}.iu-hp{position: absolute !important;left: -10000px !important;width: 1px;height: 1px;overflow: hidden}.iu-consent{margin: 0;font-size: 12px;line-height: 1.55;color: var(--muted-2)}.iu-consent a{color: var(--fg-2);border-bottom: 1px solid rgba(212,0,0,.6)}.iu-consent a:hover{color: #fff}[data-lead] [aria-invalid="true"]{border-bottom-color: var(--red-hot) !important}.iu-err{display: block;margin-top: 4px;font: 11px/1.4 "JetBrains Mono",monospace;letter-spacing: .08em;color: var(--red-hot)}input[type="date"]{color-scheme: dark}@media (pointer: coarse){input,select,textarea{font-size: max(16px,1em) !important}}.iu-toast{position: fixed;left: 50%;bottom: max(24px,env(safe-area-inset-bottom));z-index: 400;transform: translate(-50%,20px);opacity: 0;max-width: min(92vw,460px);padding: 16px 22px;background: #120d0d;border: 1px solid rgba(255,59,47,.55);box-shadow: 0 0 40px rgba(212,0,0,.35),0 20px 50px rgba(0,0,0,.6);color: var(--fg);font-size: 14px;line-height: 1.5;transition: opacity .4s,transform .4s var(--ease-soft);pointer-events: none}.iu-toast.on{opacity: 1;transform: translate(-50%,0);pointer-events: auto}.iu-toast a{color: #fff;border-bottom: 1px solid var(--red)}.iu-toast b{display: block;margin-bottom: 4px;font: 500 11px/1.4 "JetBrains Mono",monospace;letter-spacing: .18em;text-transform: uppercase;color: var(--red-hot)}#grain,#g404{background-image: url("/assets/img/grain.png")}#veil{transform: translateY(-101%)}html.veil-in #veil{animation: iuVeilOut 1s var(--ease-curtain) .15s both}@keyframes iuVeilOut{from{transform: translateY(0)}to{transform: translateY(-101%)}}html.no-loader #loader{display: none !important}#loader{animation: iuLoaderOut 1.1s var(--ease-curtain) 3.2s forwards}@keyframes iuLoaderOut{to{clip-path: inset(0 0 100% 0);visibility: hidden}}html.iu-lock,html.iu-lock body{overflow: hidden}html.static #grain,html.static #g404,html.static #spot,html.static #veil,html.static #loader{display: none !important}html.static *,html.static *::before,html.static *::after{animation-play-state: paused !important;animation-delay: 0s !important;transition: none !important}.iu-still{position: absolute;inset: 0;width: 100%;height: 100%;object-fit: contain;pointer-events: none}@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration: .001ms !important;animation-iteration-count: 1 !important;animation-delay: 0s !important;transition-duration: .001ms !important;scroll-behavior: auto !important}#veil{display: none !important}}.s2{position:fixed;inset:0px;pointer-events:none;z-index:80;opacity:0.06;mix-blend-mode:overlay}.sg{display:grid;gap:6px}.s18{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:12px;padding:18px 28px;background:var(--red);color:rgb(255, 255, 255);border-radius:999px;font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;box-shadow:rgba(212, 0, 0, 0.55) 0px 0px 34px}.s19{position:absolute;top:0px;bottom:0px;left:0px;width:40%;background:linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));animation:3.4s ease 0s infinite normal none running iuSheen}.s1a{position:relative}.s1b{display:inline-flex;align-items:center;padding:18px 26px;border:1px solid rgba(237, 232, 229, 0.25);border-radius:999px;font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase}.s1j{position:absolute;left:0px;top:-1px;width:44px;height:1px;background:var(--red-hot);box-shadow:var(--red) 0px 0px 12px}.s1p{position:absolute;left:0px;top:0px;height:2px;transform-origin:0px 50%;background:linear-gradient(90deg, rgba(212, 0, 0, 0), var(--red-hot) 25%, rgb(255, 255, 255) 50%, var(--red-hot) 75%, rgba(212, 0, 0, 0));box-shadow:rgba(212, 0, 0, 0.6) 0px 0px 26px 5px;z-index:6;pointer-events:none;opacity:0}.s1t{width:28px;height:1px;background:var(--red-hot);box-shadow:var(--red) 0px 0px 8px}.s23{margin:0px;color:var(--muted);line-height:1.6}.s2h{position:absolute;left:24px;top:0px;bottom:0px;width:1px;background:rgba(237, 232, 229, 0.1)}.s2i{position:absolute;left:24px;top:0px;width:1px;height:0px;background:linear-gradient(rgba(212, 0, 0, 0.2), var(--red-hot));box-shadow:var(--red) 0px 0px 12px}.s2j{position:absolute;left:24px;top:0px;width:11px;height:11px;margin:-5px 0px 0px -5px;border-radius:50%;background:rgb(255, 255, 255);box-shadow:var(--red-hot) 0px 0px 10px 3px, rgba(212, 0, 0, 0.6) 0px 0px 40px 12px;opacity:0}.s2o{font-family:"JetBrains Mono", monospace;font-size:12px;color:var(--red-hot)}.s38{color:var(--red-hot)}.s63{color:var(--muted-2)}.s7o{display:grid;border-top:1px solid rgba(237, 232, 229, 0.12)}.s7p{border-bottom:1px solid rgba(237, 232, 229, 0.12)}.s7s{flex:0 0 auto;width:32px;height:32px;border-radius:50%;border:1px solid rgba(255, 59, 47, 0.5);display:grid;place-items:center;color:var(--red-hot);transition:transform 0.4s}.s7w{position:absolute;left:-15vw;bottom:-30vh;width:70vw;height:70vw;border-radius:50%;background:radial-gradient(circle, rgba(212, 0, 0, 0.16), rgba(212, 0, 0, 0) 62%);pointer-events:none}.s82{display:flex;justify-content:space-between;padding:18px 20px;border:1px solid rgba(237, 232, 229, 0.16);font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase}.s85{position:absolute;left:-1px;top:-1px;width:60px;height:1px;background:var(--red-hot);box-shadow:var(--red) 0px 0px 12px}.s86{position:absolute;left:-1px;top:-1px;width:1px;height:60px;background:var(--red-hot);box-shadow:var(--red) 0px 0px 12px}.s87{font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted-2)}.s88{font-size:12px;color:var(--muted-2)}.s8d{background:none;border-width:0px 0px 1px;border-style:none none solid;border-color:currentcolor currentcolor rgba(237, 232, 229, 0.16);border-image:initial;outline:0px;color:var(--fg);font-family:"Space Grotesk", "SG Fallback", sans-serif;font-size:17px;padding:6px 0px 12px;resize:vertical}.s8e{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.s8f{position:relative;overflow:hidden;padding:20px 34px;background:var(--red);color:rgb(255, 255, 255);border:0px;border-radius:999px;font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;box-shadow:rgba(212, 0, 0, 0.55) 0px 0px 34px}.s8g{font-size:13px;color:var(--muted-2)}.s8h{font-family:"JetBrains Mono", monospace;font-size:12px;letter-spacing:0.14em;color:var(--red-hot);text-shadow:rgba(212, 0, 0, 0.7) 0px 0px 14px}.s8l{font-family:"JetBrains Mono", monospace;font-size:11px;color:var(--red-hot);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:6px}.s8m{color:var(--fg-2)}.s8p{display:flex;gap:16px;flex-wrap:wrap}.s8s{padding-right:0.3em;color:transparent;-webkit-text-stroke:1px rgba(237, 232, 229, 0.2)}.s8t{color:var(--red);-webkit-text-stroke:0px;text-shadow:rgba(212, 0, 0, 0.5) 0px 0px 50px}.s8u{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 0px 28px;font-family:"JetBrains Mono", monospace;font-size:11px;color:var(--muted-3);letter-spacing:0.12em}.s98{position:relative;min-height:100vh;min-height:100svh;background:var(--bg-0);color:var(--fg);font-family:"Space Grotesk", "SG Fallback", sans-serif;overflow-x:clip}.s99{position:fixed;left:0px;top:0px;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle, rgba(212, 0, 0, 0.12) 0%, rgba(212, 0, 0, 0.043) 35%, rgba(212, 0, 0, 0) 65%);pointer-events:none;z-index:3;mix-blend-mode:screen;opacity:0;transition:opacity 0.6s}.s9a{position:fixed;inset:0px;z-index:95;background:var(--bg-0);pointer-events:none;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding:40px 5vw 48px;transform:translateY(0px)}.s9b{position:absolute;left:0px;right:0px;bottom:0px;height:2px;background:linear-gradient(90deg, rgba(212, 0, 0, 0), var(--red-hot) 30%, rgb(255, 255, 255) 50%, var(--red-hot) 70%, rgba(212, 0, 0, 0));box-shadow:rgba(212, 0, 0, 0.65) 0px 0px 30px 6px}.s9c{font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.24em;color:var(--muted-2)}.s9d{font-size:clamp(36px, 6vw, 104px);font-weight:700;letter-spacing:-0.05em;line-height:0.9;color:var(--red-text);text-shadow:rgba(212, 0, 0, 0.6) 0px 0px 50px;text-align:right;max-width:70vw}.s9e{position:fixed;left:0px;top:0px;height:2px;width:0px;z-index:70;background:linear-gradient(90deg, var(--red), var(--red-hot));box-shadow:var(--red) 0px 0px 12px 1px}.s9f{position:fixed;top:0px;left:0px;right:0px;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 5vw;border-bottom:1px solid transparent;transition:background 0.4s, border-color 0.4s}.s9g{display:flex;align-items:center;gap:22px;min-width:0px}.s9h{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:0.18em;font-size:12px;flex:0 0 auto}.s9i{width:30px;height:30px;display:block;filter:drop-shadow(rgba(212, 0, 0, 0.55) 0px 0px 12px)}.s9j{font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.12em;color:var(--muted-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.s9k{display:flex;align-items:center;gap:16px;flex:0 0 auto}.s9l{position:relative;overflow:hidden;font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;padding:12px 18px;background:var(--red);color:rgb(255, 255, 255);border-radius:999px;box-shadow:rgba(212, 0, 0, 0.45) 0px 0px 24px;white-space:nowrap}.s9m{position:relative;min-height:100vh;min-height:100svh;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 460px), 1fr));gap:40px 5vw;align-items:center;padding:130px 5vw 90px;overflow:hidden;background:radial-gradient(90% 70% at 75% 40%, rgb(26, 7, 7) 0%, var(--bg-0) 62%)}.s9n{position:absolute;right:-8vw;top:8vh;width:70vmin;height:70vmin;border-radius:50%;background:radial-gradient(circle, rgba(212, 0, 0, 0.34), rgba(212, 0, 0, 0.08) 40%, rgba(212, 0, 0, 0) 68%);pointer-events:none}.s9o{position:absolute;left:0px;right:0px;bottom:-3vw;text-align:center;font-size:clamp(90px, 20vw, 360px);font-weight:700;letter-spacing:-0.06em;line-height:0.8;color:transparent;-webkit-text-stroke:1px rgba(237, 232, 229, 0.07);white-space:nowrap;pointer-events:none}.s9p{position:relative;z-index:2}.s9q{display:flex;flex-wrap:wrap;gap:6px 10px;margin-bottom:26px;font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted-3)}.s9r{display:flex;gap:10px}.s9s{color:rgb(94, 85, 85)}.s9t{margin:0px 0px 26px;font-size:clamp(40px, 6.2vw, 104px);line-height:0.9;letter-spacing:-0.05em;font-weight:700;text-wrap:balance}.s9u{color:var(--red-text);text-shadow:rgba(212, 0, 0, 0.6) 0px 0px 40px}.s9v{margin:0px 0px 16px;font-size:clamp(16px, 1.25vw, 19px);line-height:1.6;color:var(--fg-2);max-width:620px;text-wrap:pretty}.s9w{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.s9x{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 120px), 1fr));gap:1px;margin-top:44px;background:rgba(237, 232, 229, 0.1);border:1px solid rgba(237, 232, 229, 0.1);max-width:640px}.s9y{background:var(--card);padding:18px 16px}.s9z{font-size:clamp(24px, 2.4vw, 36px);font-weight:700;letter-spacing:-0.04em;white-space:nowrap}.sa0{font-family:"JetBrains Mono", monospace;font-size:10px;letter-spacing:0.14em;color:var(--muted-2);margin-top:6px;text-transform:uppercase}.sa1{position:relative;z-index:1;min-height:clamp(360px, 52vh, 620px);display:grid;place-items:center}.sa2{position:absolute;left:50%;top:48%;width:min(92%, 560px);aspect-ratio:1 / 1;transform:translate(-50%, -50%);border-radius:50%;background:radial-gradient(circle, rgba(212, 0, 0, 0.38) 0%, rgba(212, 0, 0, 0.1) 38%, rgba(212, 0, 0, 0) 68%);pointer-events:none}.sa3{position:absolute;left:50%;top:48%;width:min(80%, 480px);aspect-ratio:1 / 1;margin:calc(-0.5 * min(80%, 480px)) 0px 0px calc(-0.5 * min(80%, 480px));border-radius:50%;border:1px dashed rgba(237, 232, 229, 0.14);pointer-events:none}.sa4{position:absolute;left:50%;top:48%;width:min(100%, 600px);aspect-ratio:1 / 1;margin:calc(-0.5 * min(100%, 600px)) 0px 0px calc(-0.5 * min(100%, 600px));border-radius:50%;border:1px solid rgba(212, 0, 0, 0.22);pointer-events:none}.sa5{position:absolute;left:50%;top:-5px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--red-hot);box-shadow:var(--red) 0px 0px 14px 4px}.sa6{position:absolute;inset:-6% -10%;width:120%;height:112%;cursor:grab;pointer-events:auto}.sa7{position:absolute;left:50%;bottom:2%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;font-family:"JetBrains Mono", monospace;font-size:10px;letter-spacing:0.26em;color:var(--muted-3);white-space:nowrap}.sa8{width:6px;height:6px;border-radius:50%;background:var(--red-hot);box-shadow:var(--red) 0px 0px 8px 2px;animation:1.6s ease 0s infinite normal none running iuPulse}.sa9{position:relative;padding:120px 5vw;background:var(--bg-1);border-top:1px solid rgba(237, 232, 229, 0.06)}.saa{position:absolute;left:0px;top:-1px;height:1px;width:0px;background:var(--red-hot);box-shadow:var(--red) 0px 0px 16px 1px;transition:width 1.4s cubic-bezier(0.76, 0, 0.24, 1)}.sab{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 420px), 1fr));gap:30px 5vw;align-items:end;margin-bottom:56px}.sac{display:flex;align-items:center;gap:14px;font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--red-hot);margin-bottom:22px}.sad{margin:0px;font-size:clamp(34px, 4.6vw, 76px);line-height:0.94;letter-spacing:-0.045em;font-weight:700;text-wrap:balance}.sae{margin:0px 0px 14px;color:var(--muted);font-size:clamp(15px, 1.2vw, 18px);line-height:1.65;max-width:640px;text-wrap:pretty}.saf{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 190px), 1fr));gap:0px 24px;margin-bottom:50px}.sag{position:relative;padding:28px 0px;border-top:1px solid rgba(237, 232, 229, 0.12)}.sah{font-size:clamp(40px, 4.6vw, 72px);font-weight:700;letter-spacing:-0.05em;line-height:0.9;white-space:nowrap}.sai{margin-top:12px;color:var(--muted-2);font-size:14px}.saj{position:relative;padding:120px 5vw;background:var(--bg-2);border-top:1px solid rgba(237, 232, 229, 0.06)}.sak{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:1px;background:rgba(237, 232, 229, 0.08);border:1px solid rgba(237, 232, 229, 0.08)}.sal{position:relative;display:flex;flex-direction:column;gap:16px;padding:34px 30px 30px;background:var(--bg-2);min-height:240px;overflow:hidden;transition:background 0.5s}.sam{position:absolute;inset:0px;pointer-events:none;opacity:0;transition:opacity 0.4s}.san{display:flex;justify-content:space-between;align-items:center;font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.14em;color:var(--muted-3)}.sao{position:relative;margin:auto 0px 0px;font-size:clamp(22px, 2vw, 30px);line-height:1.05;letter-spacing:-0.03em;font-weight:600}.sap{position:relative;margin:0px;color:var(--muted);line-height:1.6;font-size:15px}.sas{position:relative;font-family:"JetBrains Mono", monospace;font-size:11px;color:var(--muted-2);letter-spacing:0.06em;line-height:1.6}.sat{position:relative;padding:120px 5vw;background:var(--bg-0)}.sau{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 400px), 1fr));gap:50px 6vw;align-items:start}.sav{position:sticky;top:110px}.saw{margin:0px 0px 20px;font-size:clamp(34px, 4.6vw, 76px);line-height:0.94;letter-spacing:-0.045em;font-weight:700;text-wrap:balance}.sax{position:relative;padding-left:80px}.say{position:relative;padding-bottom:56px;transition:opacity 0.5s;opacity:0.45}.saz{position:absolute;left:-80px;top:-6px;width:49px;height:49px;border-radius:50%;border:1px solid rgba(237, 232, 229, 0.16);background:var(--bg-1);display:grid;place-items:center;font-family:"JetBrains Mono", monospace;font-size:12px;color:var(--muted-2);transition:0.5s}.sb0{display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap;margin-bottom:10px}.sb1{margin:0px;font-size:clamp(22px, 2.2vw, 34px);letter-spacing:-0.03em;font-weight:600}.sb2{position:relative;padding:120px 5vw;background:var(--bg-1);overflow:hidden}.sb3{position:absolute;left:50%;top:40%;width:80vw;height:60vw;margin-left:-40vw;border-radius:50%;background:radial-gradient(circle, rgba(212, 0, 0, 0.12), rgba(212, 0, 0, 0) 60%);pointer-events:none}.sb4{position:relative;margin-bottom:56px;max-width:900px}.sb5{margin:0px 0px 18px;font-size:clamp(34px, 4.6vw, 76px);line-height:0.94;letter-spacing:-0.045em;font-weight:700;text-wrap:balance}.sb6{position:relative;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 290px), 1fr));gap:18px;align-items:stretch}.sb7{position:relative;display:flex;flex-direction:column;padding:34px 30px;border:1px solid rgba(237, 232, 229, 0.12);background:var(--card);box-shadow:none;transition:transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)}.sb8{font-family:"JetBrains Mono", monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted-2);margin-bottom:18px}.sb9{font-size:clamp(36px, 3.6vw, 56px);font-weight:700;letter-spacing:-0.05em;line-height:0.9;margin-bottom:10px;white-space:nowrap}.sba{font-size:13px;color:var(--muted-2);margin-bottom:26px}.sbb{list-style:none;margin:0px 0px 30px;padding:22px 0px 0px;display:grid;gap:11px;border-top:1px solid rgba(237, 232, 229, 0.1);flex:1 1 0%}.sbc{display:grid;grid-template-columns:12px 1fr;gap:12px;font-size:14px;line-height:1.45;color:var(--fg-2)}.sbd{width:6px;height:6px;margin-top:0.5em;border-radius:50%;background:var(--red-hot);box-shadow:var(--red) 0px 0px 8px}.sbe{display:flex;justify-content:center;padding:16px;border-radius:999px;font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;background:transparent;border:1px solid rgba(237, 232, 229, 0.25);color:rgb(255, 255, 255)}.sbf{position:relative;display:flex;flex-direction:column;padding:34px 30px;border:1px solid rgba(255, 59, 47, 0.7);background:linear-gradient(rgb(42, 7, 7), var(--bg-1) 60%);box-shadow:rgba(212, 0, 0, 0.25) 0px 0px 60px, rgba(212, 0, 0, 0.12) 0px 0px 40px inset;transition:transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)}.sbg{position:absolute;top:-1px;right:24px;padding:6px 12px;background:var(--red);color:rgb(255, 255, 255);font-family:"JetBrains Mono", monospace;font-size:10px;letter-spacing:0.16em;box-shadow:rgba(212, 0, 0, 0.7) 0px 0px 18px}.sbh{display:flex;justify-content:center;padding:16px;border-radius:999px;font-family:"JetBrains Mono", monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;background:var(--red);border:1px solid var(--red);color:rgb(255, 255, 255)}.sbi{position:relative;padding:120px 5vw;background:var(--bg-1)}.sbj{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 380px), 1fr));gap:40px 6vw;align-items:start}.sbk{margin:0px;font-size:clamp(32px, 4.2vw, 68px);line-height:0.94;letter-spacing:-0.045em;font-weight:700;text-wrap:balance}.sbl{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0px;cursor:pointer}.sbm{margin:0px;font-size:clamp(17px, 1.5vw, 22px);font-weight:600;letter-spacing:-0.02em}.sbn{margin:0px 0px 24px;color:var(--muted);line-height:1.65;max-width:660px}.sbo{position:relative;padding:120px 5vw;background:var(--bg-0);overflow:hidden;border-top:1px solid rgba(237, 232, 229, 0.06)}.sbp{position:relative;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 400px), 1fr));gap:56px 6vw;align-items:start}.sbq{margin:0px 0px 22px;font-size:clamp(38px, 5.2vw, 90px);line-height:0.9;letter-spacing:-0.05em;font-weight:700;text-wrap:balance}.sbr{margin:0px 0px 14px;color:var(--muted);font-size:17px;line-height:1.6;max-width:480px}.sbs{display:grid;grid-template-columns:repeat(2, minmax(0px, 1fr));gap:10px;max-width:480px;margin-top:30px}.sbt{position:relative;display:grid;gap:24px;padding:clamp(24px, 3vw, 44px);border:1px solid rgba(237, 232, 229, 0.12);background:rgba(18, 13, 13, 0.7)}.sbu{background:none;border-width:0px 0px 1px;border-style:none none solid;border-color:currentcolor currentcolor rgba(237, 232, 229, 0.16);border-image:initial;outline:0px;color:var(--fg);font-family:"Space Grotesk", "SG Fallback", sans-serif;font-size:20px;padding:6px 0px 12px}.sbv{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:24px 28px}.sbw{position:relative;background:var(--bg-deep);padding:80px 5vw 0px;border-top:1px solid rgba(237, 232, 229, 0.08);overflow:hidden}.sbx{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 210px), 1fr));gap:40px 32px;font-size:14px}.sby{display:grid;gap:11px;align-content:start}.sbz{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 240px), 1fr));gap:22px 32px;margin-top:60px;padding:28px 0px;border-top:1px solid rgba(237, 232, 229, 0.08);font-size:14px;color:var(--fg-2)}.sc0{margin:0px -5vw;overflow:hidden;border-top:1px solid rgba(237, 232, 229, 0.06);padding-top:12px}.sc1{display:flex;width:max-content;animation:36s linear 0s infinite normal none running iuMq;font-size:clamp(64px, 12vw, 210px);font-weight:700;letter-spacing:-0.055em;line-height:0.9;white-space:nowrap}.sc8{position:relative;display:flex;flex-direction:column;gap:16px;padding:34px 30px 30px;background:var(--bg-1);min-height:240px;overflow:hidden;transition:background 0.5s}</style>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WXZW3NHF');</script>
-<!-- End Google Tag Manager -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18360841103');
-</script>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://res.cloudinary.com https://www.googletagmanager.com https://googleads.googleapis.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://api.infiniteunion.com.ua https://res.cloudinary.com https://www.googletagmanager.com https://www.google-analytics.com https://stats.g.doubleclick.net https://googleads.g.doubleclick.net https://ad.doubleclick.net https://www.google.com https://static.cloudflareinsights.com blob:; object-src 'none'; base-uri 'self';">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-::selection{background:#D40000;color:#fff;}
-:root{
-  --red:#D40000;
-  --bg:#060404;
-  --bg2:#0e0b0b;
-  --border:rgba(255,255,255,0.08);
-  --text:#fff;
-  --muted:rgba(255,255,255,0.45);
-  --font:'Space Grotesk',sans-serif;
-  --body:'Inter',sans-serif;
-  --tg:#229ED9;
-}
-html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:border-color .3s,background .3s;}
-nav.scrolled{background:rgba(6,4,4,.95);backdrop-filter:blur(16px);border-color:var(--border);}
-.nav-logo{font-family:var(--font);font-weight:700;font-size:15px;letter-spacing:.12em;text-decoration:none;color:#fff;}
-.nav-logo span{color:var(--red);}
-.nav-back{font-size:12px;letter-spacing:.1em;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s;}
-.nav-back:hover{color:#fff;}
-.nav-cta{background:var(--red);color:#fff;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.1em;padding:10px 24px;text-decoration:none;transition:opacity .2s;}
-.nav-cta:hover{opacity:.85;}
-
-/* HERO */
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:120px 40px 80px;gap:80px;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 70% at 20% 50%,rgba(212,0,0,.08) 0%,transparent 60%);}
-.hero-content{position:relative;z-index:1;}
-.hero-tag{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(34,158,217,.3);padding:6px 16px;margin-bottom:32px;background:rgba(34,158,217,.05);}
-.hero-tag-icon{width:16px;height:16px;}
-.hero-tag-text{font-size:11px;letter-spacing:.18em;color:rgba(34,158,217,.9);font-family:var(--font);font-weight:600;}
-h1.hero-title{font-family:var(--font);font-size:clamp(44px,5.5vw,80px);font-weight:700;line-height:.9;letter-spacing:-.03em;margin-bottom:32px;}
-h1.hero-title em{font-style:normal;color:var(--red);}
-.hero-sub{font-size:16px;color:var(--muted);line-height:1.75;margin-bottom:40px;max-width:440px;}
-.hero-proof{display:flex;gap:32px;margin-top:40px;padding-top:32px;border-top:1px solid var(--border);}
-.proof-item{text-align:center;}
-.proof-val{font-family:var(--font);font-size:28px;font-weight:700;color:var(--red);}
-.proof-key{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.05em;}
-
-/* CHAT VISUAL */
-.chat-wrap{position:relative;z-index:1;}
-.chat-phone{width:280px;margin:0 auto;background:#111;border-radius:32px;border:1px solid rgba(255,255,255,.1);overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.6);}
-.chat-header{background:#1a1a1a;padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.06);}
-.chat-avatar{width:36px;height:36px;background:var(--tg);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:14px;font-weight:700;color:#fff;flex-shrink:0;}
-.chat-name{font-family:var(--font);font-size:13px;font-weight:600;}
-.chat-status{font-size:11px;color:rgba(34,158,217,.8);}
-.chat-body{padding:16px;min-height:360px;position:relative;overflow:hidden;}
-.chat-canvas{position:absolute;inset:0;width:100%;height:100%;}
-
-/* FUNNEL */
-.funnel{padding:120px 40px;background:var(--bg2);}
-.sec-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:16px;}
-.sec-title{font-family:var(--font);font-size:clamp(36px,5vw,68px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:64px;}
-.funnel-visual{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.funnel-canvas-wrap{position:relative;height:480px;}
-.funnel-canvas{width:100%;height:100%;display:block;}
-.funnel-steps{list-style:none;}
-.fstep{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border);align-items:flex-start;}
-.fstep:first-child{border-top:1px solid var(--border);}
-.fstep-num{width:40px;height:40px;border:1px solid var(--red);display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:13px;font-weight:700;color:var(--red);flex-shrink:0;}
-.fstep-name{font-family:var(--font);font-size:15px;font-weight:700;margin-bottom:4px;}
-.fstep-desc{font-size:13px;color:var(--muted);line-height:1.6;}
-.fstep-metric{font-size:11px;color:var(--red);font-family:var(--font);font-weight:600;margin-top:6px;}
-
-/* FEATURES */
-.features{padding:120px 40px;}
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.feat{border:1px solid var(--border);padding:40px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;}
-.feat:hover{border-color:rgba(212,0,0,.3);transform:translateY(-3px);}
-.feat-icon{margin-bottom:24px;}
-.feat-name{font-family:var(--font);font-size:18px;font-weight:700;margin-bottom:12px;}
-.feat-desc{font-size:13px;color:var(--muted);line-height:1.7;}
-.feat-tag{display:inline-block;margin-top:16px;font-size:10px;letter-spacing:.1em;color:var(--tg);border:1px solid rgba(34,158,217,.2);padding:3px 10px;font-family:var(--font);}
-
-/* LEVELS */
-.levels{padding:120px 40px;background:var(--bg2);}
-.levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.level{border:1px solid var(--border);padding:40px;position:relative;transition:border-color .3s,transform .3s;}
-.level:hover{border-color:rgba(212,0,0,.3);transform:translateY(-4px);}
-.level--pro{border-color:var(--red);}
-.level-badge{position:absolute;top:-1px;left:40px;background:var(--red);font-family:var(--font);font-size:10px;font-weight:700;letter-spacing:.1em;padding:4px 12px;color:#fff;}
-.level-name{font-family:var(--font);font-size:22px;font-weight:700;margin-bottom:8px;margin-top:8px;}
-.level-price{font-family:var(--font);font-size:40px;font-weight:700;color:var(--red);line-height:1;}
-.level-note{font-size:12px;color:var(--muted);margin-top:4px;margin-bottom:32px;}
-.level-list{list-style:none;}
-.level-list li{font-size:14px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;line-height:1.4;}
-.level-list li.on{color:#fff;}
-.level-list li::before{content:'';width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0;opacity:.4;}
-.level-list li.on::before{opacity:1;}
-.level-cta{display:block;margin-top:32px;text-align:center;padding:14px;border:1px solid var(--border);font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.08em;color:#fff;text-decoration:none;transition:all .25s;}
-.level--pro .level-cta{background:var(--red);border-color:var(--red);}
-.level-cta:hover{background:var(--red);border-color:var(--red);}
-
-/* STATS */
-.stats{padding:80px 40px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
-.stat-cell{padding:40px;border-right:1px solid var(--border);text-align:center;}
-.stat-cell:last-child{border-right:none;}
-.stat-val{font-family:var(--font);font-size:48px;font-weight:700;line-height:1;}
-.stat-val em{color:var(--red);font-style:normal;}
-.stat-key{font-size:12px;color:var(--muted);margin-top:8px;letter-spacing:.05em;}
-
-/* PROCESS */
-.process{padding:120px 40px;}
-.process-steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative;}
-.process-steps::before{content:'';position:absolute;top:27px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);}
-.pstep{text-align:center;padding:0 12px;}
-.pstep-dot{width:56px;height:56px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:var(--font);font-size:13px;font-weight:700;background:var(--bg);position:relative;z-index:1;}
-.pstep.active .pstep-dot{background:var(--red);border-color:var(--red);}
-.pstep-name{font-family:var(--font);font-size:13px;font-weight:600;margin-bottom:8px;}
-.pstep-desc{font-size:12px;color:var(--muted);line-height:1.6;}
-.pstep-time{font-size:11px;color:var(--red);font-family:var(--font);margin-top:8px;font-weight:600;}
-
-/* FAQ */
-.faq{padding:120px 40px;background:var(--bg2);}
-.faq-list{max-width:800px;}
-.faq-item{border-bottom:1px solid var(--border);}
-.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:var(--font);font-size:17px;font-weight:600;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;}
-.faq-q span{font-size:20px;color:var(--red);transition:transform .3s;flex-shrink:0;}
-.faq-item.open .faq-q span{transform:rotate(45deg);}
-.faq-a{font-size:15px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;}
-.faq-item.open .faq-a{max-height:300px;padding-bottom:28px;}
-
-/* CTA */
-.cta-final{text-align:center;padding:160px 40px;position:relative;overflow:hidden;}
-.cta-bg{position:absolute;inset:0;width:100%;height:100%;}
-.cta-label{font-size:11px;letter-spacing:.2em;color:var(--red);font-family:var(--font);font-weight:600;margin-bottom:24px;position:relative;z-index:1;}
-.cta-title{font-family:var(--font);font-size:clamp(40px,6vw,88px);font-weight:700;line-height:.93;letter-spacing:-.03em;margin-bottom:32px;position:relative;z-index:1;}
-.cta-title em{font-style:normal;color:var(--red);}
-.cta-sub{font-size:17px;color:var(--muted);margin-bottom:48px;position:relative;z-index:1;}
-.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
-.btn-primary{display:inline-block;background:var(--red);color:#fff;font-family:var(--font);font-size:13px;font-weight:700;letter-spacing:.1em;padding:18px 52px;text-decoration:none;transition:opacity .2s,transform .2s;}
-.btn-primary:hover{opacity:.85;}
-.btn-ghost{display:inline-block;border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.1em;padding:18px 40px;text-decoration:none;transition:border-color .2s;}
-.btn-ghost:hover{border-color:rgba(255,255,255,.3);}
-
-/* MARQUEE */
-.marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;}
-.marquee-track{display:flex;gap:60px;width:max-content;animation:marquee 26s linear infinite;}
-.marquee-track span{font-family:var(--font);font-size:12px;letter-spacing:.2em;color:var(--muted);white-space:nowrap;}
-.marquee-track span em{color:var(--red);font-style:normal;}
-@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
-footer{border-top:1px solid var(--border);padding:40px;display:flex;justify-content:space-between;align-items:center;}
-.footer-logo{font-family:var(--font);font-weight:700;font-size:14px;letter-spacing:.1em;text-decoration:none;color:#fff;}
-.footer-logo span{color:var(--red);}
-.footer-copy{font-size:12px;color:var(--muted);}
-
-.rev{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease;}
-.rev.v{opacity:1;transform:none;}
-.rev-l{opacity:0;transform:translateX(-36px);transition:opacity .7s ease,transform .7s ease;}
-.rev-l.v{opacity:1;transform:none;}
-.rev-r{opacity:0;transform:translateX(36px);transition:opacity .7s ease,transform .7s ease;}
-.rev-r.v{opacity:1;transform:none;}
-
-@media(max-width:768px){
-  nav{padding:16px 20px;}
-  .hero{grid-template-columns:1fr;padding:120px 20px 60px;gap:48px;}
-  .chat-phone{width:240px;}
-  .funnel-visual{grid-template-columns:1fr;gap:48px;}
-  .funnel-canvas-wrap{height:300px;}
-  .features-grid,.levels-grid{grid-template-columns:1fr;}
-  .stats-grid{grid-template-columns:1fr 1fr;}
-  .stat-cell{padding:24px;}
-  .process-steps{grid-template-columns:1fr;gap:32px;}
-  .process-steps::before{display:none;}
-  .funnel,.features,.levels,.stats,.process,.faq,.cta-final{padding:80px 20px;}
-  footer{flex-direction:column;gap:16px;text-align:center;}
-  .cta-btns{flex-direction:column;align-items:center;}
-}
-</style>
-<style>
-.contact-btns-group{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
-.cbtn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-decoration:none;transition:opacity .2s,transform .2s;white-space:nowrap;}
-.cbtn:hover{opacity:.85;transform:translateY(-2px);}
-.cbtn-tg{background:#229ED9;color:#fff;}
-.cbtn-wa{background:#25D366;color:#fff;}
-.cbtn-viber{background:#7360F2;color:#fff;}
-.cbtn-tel{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.2);}
-@media(max-width:600px){.cbtn{padding:11px 16px;font-size:11px;}.contact-btns-group{gap:8px;}}
-</style>
-<style>
-.faq-section{background:#0a0706;padding:100px 48px;border-top:1px solid rgba(237,232,229,0.07)}
-.faq-inner{max-width:860px;margin:0 auto}
-.faq-label{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#D40000;margin-bottom:16px}
-.faq-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(32px,4vw,52px);font-weight:700;letter-spacing:-.03em;color:#EDE8E5;margin-bottom:60px}
-.faq-item{border-bottom:1px solid rgba(237,232,229,0.08);overflow:hidden}
-.faq-q{width:100%;background:none;border:none;text-align:left;padding:28px 0;font-family:"Space Grotesk",sans-serif;font-size:16px;font-weight:500;color:#EDE8E5;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;letter-spacing:-.01em}
-.faq-arr{font-size:24px;color:#D40000;flex-shrink:0;transition:transform .3s}
-.faq-item.open .faq-arr{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.faq-item.open .faq-a{max-height:300px}
-.faq-a p{padding:0 0 28px;font-size:15px;color:#8A8080;line-height:1.8}
-@media(max-width:768px){.faq-section{padding:60px 20px}.faq-q{font-size:14px}}
-</style>
-<style>
-.iu-crumbs{padding:28px 40px 0;font:400 13px/1.6 'Inter',system-ui,sans-serif;color:rgba(255,255,255,.55);}
-.iu-crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;}
-.iu-crumbs li+li::before{content:'/';margin-right:6px;color:rgba(255,255,255,.3);}
-.iu-crumbs a{color:rgba(255,255,255,.75);text-decoration:none;}
-.iu-crumbs a:hover{color:#fff;}
-footer.iu-foot{display:block!important;border-top:1px solid rgba(255,255,255,.08);padding:56px 40px 32px!important;margin:0;background:#060404;color:#fff;text-align:left;position:relative;z-index:1;}
-.iu-foot-grid{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:40px;max-width:1400px;margin:0 auto;}
-.iu-foot-brand{font:700 15px/1 'Space Grotesk',sans-serif;letter-spacing:.12em;color:#fff;text-decoration:none;}
-.iu-foot-brand span{color:#D40000;}
-.iu-foot p{font:400 13px/1.7 'Inter',system-ui,sans-serif;color:rgba(255,255,255,.6);margin:16px 0 0;max-width:320px;}
-.iu-foot h2{font:600 11px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#D40000;margin:0 0 16px;}
-.iu-foot ul{list-style:none;margin:0;padding:0;}
-.iu-foot li{margin:0 0 10px;}
-.iu-foot a{font:400 14px/1.4 'Inter',system-ui,sans-serif;color:rgba(255,255,255,.72);text-decoration:none;}
-.iu-foot a:hover,.iu-foot a:focus-visible{color:#fff;text-decoration:underline;}
-.iu-foot-bottom{max-width:1400px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:400 12px/1.6 'Inter',system-ui,sans-serif;color:rgba(255,255,255,.55);}
-.iu-foot-bottom a{font-size:12px;}
-.iu-lang{font:600 12px/1 'Space Grotesk',sans-serif;letter-spacing:.12em;color:rgba(255,255,255,.75)!important;text-decoration:none;padding:8px 10px;border:1px solid rgba(255,255,255,.18);margin:0 12px 0 auto;display:inline-flex;align-items:center;min-height:32px;}
-.iu-lang:hover,.iu-lang:focus-visible{color:#fff!important;border-color:rgba(255,255,255,.5);}
-/* reduced motion: hero blocks animate in from opacity:0 — show them immediately instead of never */
-@media(prefers-reduced-motion:reduce){.hero-label,.hero-title,.hero-sub,.hero-stats,.hero-btns,.hero-cta,.hero-badge,.rev,.rev-l,.rev-r{opacity:1!important;transform:none!important;animation:none!important;}.hero-flagship{opacity:1!important;animation:none!important;transform:translateY(-50%)!important;}}
-@media(max-width:768px){table:not(.iu-keep){display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}}
-@media(max-width:900px){.iu-foot-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){.iu-foot-grid{grid-template-columns:1fr;gap:28px;}footer.iu-foot{padding:40px 20px 28px!important;}.iu-crumbs{padding:24px 20px 0;}.iu-lang{margin-right:8px;padding:6px 8px;}}
-</style>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18360841103');</script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXZW3NHF" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<nav id="nav">
-  <a href="/services/bots/" class="nav-back">← Telegram боти</a>
-  <a href="/" class="nav-logo">INFINITE <span>UNION</span></a>
-  <!-- iu:lang --><a class="iu-lang" href="/en/services/bots/" hreflang="en" lang="en" title="English version">EN</a><!-- /iu:lang -->
-  <a href="#contact" class="nav-cta">ЗАМОВИТИ БОТА</a>
-</nav>
-<!-- iu:content -->
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-tag">
-      <svg aria-hidden="true" class="hero-tag-icon" viewBox="0 0 16 16" fill="none"><path d="M8 1L1 5v6l7 4 7-4V5L8 1z" stroke="rgba(34,158,217,.8)" stroke-width="1.2" stroke-linejoin="round"/><circle cx="8" cy="8" r="2" fill="rgba(34,158,217,.6)"/></svg>
-      <span class="hero-tag-text">TELEGRAM · ВОРОНКА · ОПЛАТА В ЧАТІ</span>
-    </div>
-    <h1 class="hero-title">Телеграм-бот<br>для <em>продажів</em></h1>
-    <p class="hero-sub">Телеграм-бот для продажів від Infinite Union (Харків) кваліфікує звернення, показує пропозицію, приймає оплату й передає менеджеру лише готових до покупки клієнтів. Для онлайн-шкіл, сервісів і магазинів, які отримують заявки в Telegram. Від $500, запуск від 7 днів.</p>
-    <div class="hero-proof">
-      <div class="proof-item"><div class="proof-val">$500</div><div class="proof-key">СТАРТ, ВІД</div></div>
-      <div class="proof-item"><div class="proof-val">7дн</div><div class="proof-key">ЗАПУСК ВІД</div></div>
-      <div class="proof-item"><div class="proof-val">15хв</div><div class="proof-key">ВІДПОВІДЬ НА ЗАПИТ</div></div>
-    </div>
+<a class="iu-skip" href="#main">До контенту</a>
+<div id="iup" class="s98">
+  <div id="spot" class="s99"></div>
+  <div id="grain" class="s2"></div>
+  <div id="veil" aria-hidden="true" class="s9a">
+    <div class="s9b"></div>
+    <span class="s9c">INFINITE UNION</span>
+    <span id="veil-name" class="s9d">Бот для продажів</span>
   </div>
-  <div class="chat-wrap rev-r" aria-hidden="true">
-    <div class="chat-phone">
-      <div class="chat-header">
-        <div class="chat-avatar">🤖</div>
-        <div><div class="chat-name">Sales Bot</div><div class="chat-status">● online</div></div>
-      </div>
-      <div class="chat-body">
-        <canvas id="chatCanvas" class="chat-canvas"></canvas>
-      </div>
+  <div id="progress" class="s9e"></div>
+
+  <nav id="nav" class="s9f">
+    <div class="s9g">
+      <a href="/" class="s9h"><img src="/assets/img/iu-logo.png" alt="Infinite Union" class="s9i" width="30" height="30" decoding="async"><span data-wide="">INFINITE UNION</span></a>
+      <a data-wide="" href="/services/bots/" class="s9j">← Telegram боти</a>
     </div>
+    <div class="s9k">
+
+      <a href="#contact" class="s9l hb"><span data-wide="">ЗАМОВИТИ БОТА</span><span data-narrow="">→</span></a>
+    </div>
+  </nav>
+
+
+
+  <main id="main">
+  <div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+      <header class="s9m">
+        <div aria-hidden="true" class="s9n"></div>
+        <div id="hero-word" aria-hidden="true" class="s9o">ТЕЛЕГРАМ</div>
+        <div class="s9p">
+          <nav aria-label="breadcrumbs" class="s9q"><span class="s9r"><a href="/" class="s63">Головна</a><span class="s9s">/</span></span><span class="s9r"><a href="/services/bots/" class="s63">Telegram-боти</a><span class="s9s">/</span></span></nav>
+
+          <h1 data-reveal="" class="s9t">Телеграм-бот для <span class="s9u">продажів</span></h1>
+          <p data-reveal="" class="s9v">TELEGRAM · ВОРОНКА · ОПЛАТА В ЧАТІ</p><p data-reveal="" class="s9v">Телеграм-бот для продажів від Infinite Union (Харків) кваліфікує звернення, показує пропозицію, приймає оплату й передає менеджеру лише готових до покупки клієнтів. Для онлайн-шкіл, сервісів і магазинів, які отримують заявки в Telegram. Від $500, запуск від 7 днів.</p>
+          <div class="s9w">
+            <a href="#contact" data-mag="" class="s18 h1"><span class="s19"></span><span class="s1a">Замовити →</span></a>
+            <a href="/pricing/" class="s1b h2">Усі ціни</a>
+          </div>
+
+            <div data-reveal="" class="s9x">
+              <div class="s9y"><div data-stat-v="" class="s9z">$500</div><div class="sa0">СТАРТ, ВІД</div></div><div class="s9y"><div data-stat-v="" class="s9z">7дн</div><div class="sa0">ЗАПУСК ВІД</div></div><div class="s9y"><div data-stat-v="" class="s9z">15хв</div><div class="sa0">ВІДПОВІДЬ НА ЗАПИТ</div></div>
+            </div>
+
+        </div>
+        <div id="hero-vis" aria-hidden="true" class="sa1">
+          <div id="glyph-halo" class="sa2"></div>
+          <div id="glyph-ring1" class="sa3"></div>
+          <div id="glyph-ring2" class="sa4"><span class="sa5"></span></div>
+          <canvas id="glyph-canvas" class="sa6" aria-hidden="true"></canvas>
+          <div class="sa7"><span class="sa8"></span>БОТ ДЛЯ ПРОДАЖІВ · 3D</div>
+        </div>
+      </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+      <section id="b2" class="saj">
+        <div data-line="" class="saa"></div>
+        <div class="sab">
+          <div>
+            <div class="sac"><span class="s1t"></span>ДЕ ВТРАЧАЮТЬСЯ ПРОДАЖІ</div>
+            <h2 data-reveal="" class="sad">Навіщо бізнесу бот для продажів</h2>
+          </div>
+          <div>
+
+          </div>
+        </div>
+
+
+
+
+          <div class="sak">
+
+              <a href="#contact" data-reveal="" data-card="" class="sal he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38"></span></div>
+                <h3 class="sao">Довга перша відповідь</h3>
+                <p class="sap">Клієнт написав увечері, менеджер побачив повідомлення зранку. За цей час людина вже купила в того, хто відповів першим.</p>
+
+                <div class="sas">ШВИДКІСТЬ</div>
+
+              </a>
+
+              <a href="#contact" data-reveal="" data-card="" class="sal he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38"></span></div>
+                <h3 class="sao">Однакові питання</h3>
+                <p class="sap">«Скільки коштує?», «Є в наявності?», «Як оплатити?» — менеджер щодня відповідає на це вручну замість того, щоб закривати угоди.</p>
+
+                <div class="sas">РУТИНА</div>
+
+              </a>
+
+              <a href="#contact" data-reveal="" data-card="" class="sal he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38"></span></div>
+                <h3 class="sao">Заявки без контексту</h3>
+                <p class="sap">Контакти лежать у різних чатах, невідомо, хто з якої реклами прийшов і на якому етапі зупинився. Повторно написати нікому.</p>
+
+                <div class="sas">КОНТРОЛЬ</div>
+
+              </a>
+
+          </div>
+
+
+
+
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="b3" class="sat">
+        <div class="sau">
+          <div class="sav">
+            <div class="sac"><span class="s1t"></span>ЯК ПРАЦЮЄ ВОРОНКА</div>
+            <h2 data-reveal="" class="saw">Шлях клієнта у боті для продажів</h2>
+
+          </div>
+          <div data-proc="" class="sax">
+            <div class="s2h"></div>
+            <div data-proc-fill="" class="s2i"></div>
+            <div data-proc-spark="" class="s2j"></div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz">01</div>
+                <div class="sb0"><h3 class="sb1">Вхід у бота</h3><span class="s2o"></span></div>
+                <p class="s23">Клієнт натискає /start із реклами, сайту чи QR-коду. Бот фіксує джерело переходу й вітається. → джерело ліда записано</p>
+              </div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz">02</div>
+                <div class="sb0"><h3 class="sb1">Кваліфікація</h3><span class="s2o"></span></div>
+                <p class="s23">3–5 питань-кнопок: що потрібно, бюджет, терміни. Відповіді визначають, яку пропозицію показати далі. → потреба й бюджет відомі</p>
+              </div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz">03</div>
+                <div class="sb0"><h3 class="sb1">Пропозиція</h3><span class="s2o"></span></div>
+                <p class="s23">Бот показує відповідний товар, тариф чи каталог з цінами. На складне питання — кнопка «написати менеджеру». → клієнт бачить ціну одразу</p>
+              </div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz">04</div>
+                <div class="sb0"><h3 class="sb1">Оплата</h3><span class="s2o"></span></div>
+                <p class="s23">LiqPay, WayForPay, Monobank, Stripe або Telegram Payments прямо в чаті. Бот підтверджує оплату й надсилає чек. → без переходу на сайт</p>
+              </div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz">05</div>
+                <div class="sb0"><h3 class="sb1">Передача менеджеру</h3><span class="s2o"></span></div>
+                <p class="s23">Заявка з усіма відповідями приходить менеджеру в Telegram або падає в CRM. Хто не купив — отримує нагадування. → ліди в одному місці</p>
+              </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+      <section id="b4" class="sa9">
+        <div data-line="" class="saa"></div>
+        <div class="sab">
+          <div>
+            <div class="sac"><span class="s1t"></span>ЩО ВХОДИТЬ</div>
+            <h2 data-reveal="" class="sad">Що вміє бот для продажів</h2>
+          </div>
+          <div>
+
+          </div>
+        </div>
+
+
+
+
+          <div class="sak">
+
+              <a href="#contact" data-reveal="" data-card="" class="sc8 he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38"></span></div>
+                <h3 class="sao">Квіз і гілки сценарію</h3>
+                <p class="sap">Від простого квізу до воронки з умовними переходами: різні відповіді ведуть до різних пропозицій.</p>
+
+                <div class="sas">AIOGRAM 3 · FSM</div>
+
+              </a>
+
+              <a href="#contact" data-reveal="" data-card="" class="sc8 he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38"></span></div>
+                <h3 class="sao">Каталог і оплата</h3>
+                <p class="sap">Товари чи тарифи з фото й цінами, кошик, оплата в чаті. Для більшого каталогу — Telegram Mini App.</p>
+
+                <div class="sas">LIQPAY · MONOBANK</div>
+
+              </a>
+
+              <a href="#contact" data-reveal="" data-card="" class="sc8 he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38"></span></div>
+                <h3 class="sao">Ліди в CRM</h3>
+                <p class="sap">Кожен контакт з відповідями квізу потрапляє в Google Sheets або CRM. Як це працює — на сторінці інтеграції бота з CRM.</p>
+
+                <div class="sas">BITRIX24 · AMOCRM</div>
+
+              </a>
+
+              <a href="#contact" data-reveal="" data-card="" class="sc8 he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38"></span></div>
+                <h3 class="sao">Нагадування й розсилки</h3>
+                <p class="sap">Бот сам нагадує тим, хто не завершив покупку, і робить розсилки за сегментами — за правилами, які ви задали.</p>
+
+                <div class="sas">ТРИГЕРИ</div>
+
+              </a>
+
+              <a href="#contact" data-reveal="" data-card="" class="sc8 he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38"></span></div>
+                <h3 class="sao">Статистика воронки</h3>
+                <p class="sap">Скільки людей почали діалог, дійшли до пропозиції й оплатили. Видно, на якому кроці клієнти зупиняються.</p>
+
+                <div class="sas">АДМІН-ПАНЕЛЬ</div>
+
+              </a>
+
+              <a href="#contact" data-reveal="" data-card="" class="sc8 he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38"></span></div>
+                <h3 class="sao">AI-відповіді</h3>
+                <p class="sap">Для нестандартних питань підключаємо Claude API: бот відповідає за вашою базою знань, а складне передає людині.</p>
+
+                <div class="sas">CLAUDE API</div>
+
+              </a>
+
+          </div>
+
+
+
+
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+      <section id="b5" class="saj">
+        <div data-line="" class="saa"></div>
+        <div class="sab">
+          <div>
+
+
+          </div>
+          <div>
+
+          </div>
+        </div>
+
+
+          <div class="saf">
+            <div data-reveal="" class="sag"><div class="s1j"></div><div data-stat-v="" class="sah">7дн</div><div class="sai">ЗАПУСК ТАРИФУ START</div></div><div data-reveal="" class="sag"><div class="s1j"></div><div data-stat-v="" class="sah">14дн</div><div class="sai">ЗАПУСК ТАРИФУ PRO</div></div><div data-reveal="" class="sag"><div class="s1j"></div><div data-stat-v="" class="sah">5</div><div class="sai">ПЛАТІЖНИХ СИСТЕМ НА ВИБІР</div></div><div data-reveal="" class="sag"><div class="s1j"></div><div data-stat-v="" class="sah">15хв</div><div class="sai">ВІДПОВІДЬ У РОБОЧИЙ ЧАС</div></div>
+          </div>
+
+
+
+
+
+
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="b6" class="sb2">
+        <div aria-hidden="true" class="sb3"></div>
+        <div class="sb4">
+          <div class="sac"><span class="s1t"></span>ВАРТІСТЬ</div>
+          <h2 data-reveal="" class="sb5">Скільки коштує бот для продажів</h2>
+
+        </div>
+        <div class="sb6">
+
+            <div data-reveal="" data-tier="" class="sb7 hg">
+
+              <div class="sb8">Start</div>
+              <div class="sb9">від $500</div>
+              <div class="sba">проста воронка · 7 днів</div>
+              <ul class="sbb">
+                <li class="sbc"><span class="sbd"></span><span>Воронка до 5 кроків</span></li><li class="sbc"><span class="sbd"></span><span>Збір контактів і відповідей</span></li><li class="sbc"><span class="sbd"></span><span>Сповіщення менеджеру</span></li><li class="sbc"><span class="sbd"></span><span>Кнопки та меню</span></li><li class="sbc"><span class="sbd"></span><span>Оплата в боті</span></li><li class="sbc"><span class="sbd"></span><span>CRM-інтеграція</span></li><li class="sbc"><span class="sbd"></span><span>Статистика воронки</span></li>
+              </ul>
+              <a href="#contact" class="sbe hh">Обговорити</a>
+            </div>
+
+            <div data-reveal="" data-tier="" class="sbf hg">
+              <div class="sbg">ЧАСТО ОБИРАЮТЬ</div>
+              <div class="sb8">Pro</div>
+              <div class="sb9">від $1 200</div>
+              <div class="sba">повна воронка · 14 днів</div>
+              <ul class="sbb">
+                <li class="sbc"><span class="sbd"></span><span>Квіз і гілки сценарію</span></li><li class="sbc"><span class="sbd"></span><span>Каталог з цінами</span></li><li class="sbc"><span class="sbd"></span><span>Оплата в чаті</span></li><li class="sbc"><span class="sbd"></span><span>Передача лідів у CRM</span></li><li class="sbc"><span class="sbd"></span><span>Нагадування й розсилки</span></li><li class="sbc"><span class="sbd"></span><span>Адмін-панель і статистика</span></li>
+              </ul>
+              <a href="#contact" class="sbh hh">Обговорити</a>
+            </div>
+
+            <div data-reveal="" data-tier="" class="sb7 hg">
+
+              <div class="sb8">Max</div>
+              <div class="sb9">від $2 500</div>
+              <div class="sba">кілька воронок · план робіт окремо</div>
+              <ul class="sbb">
+                <li class="sbc"><span class="sbd"></span><span>Кілька воронок і продуктів</span></li><li class="sbc"><span class="sbd"></span><span>AI-кваліфікація лідів</span></li><li class="sbc"><span class="sbd"></span><span>Telegram Mini App</span></li><li class="sbc"><span class="sbd"></span><span>Кілька платіжних систем</span></li><li class="sbc"><span class="sbd"></span><span>Інтеграції з вашими API</span></li><li class="sbc"><span class="sbd"></span><span>Власний дашборд</span></li>
+              </ul>
+              <a href="#contact" class="sbe hh">Обговорити</a>
+            </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="b7" class="sat">
+        <div class="sau">
+          <div class="sav">
+            <div class="sac"><span class="s1t"></span>ЕТАПИ</div>
+            <h2 data-reveal="" class="saw">Від сценарію до запуску</h2>
+
+          </div>
+          <div data-proc="" class="sax">
+            <div class="s2h"></div>
+            <div data-proc-fill="" class="s2i"></div>
+            <div data-proc-spark="" class="s2j"></div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz">01</div>
+                <div class="sb0"><h3 class="sb1">Бриф</h3><span class="s2o">1–2 дні</span></div>
+                <p class="s23">Продукт, аудиторія, звідки приходять клієнти</p>
+              </div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz">02</div>
+                <div class="sb0"><h3 class="sb1">Сценарій</h3><span class="s2o">2–3 дні</span></div>
+                <p class="s23">Карта діалогів, питання квізу, тексти</p>
+              </div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz">03</div>
+                <div class="sb0"><h3 class="sb1">Розробка</h3><span class="s2o">3–7 днів</span></div>
+                <p class="s23">Логіка, оплата, CRM, адмін-панель</p>
+              </div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz">04</div>
+                <div class="sb0"><h3 class="sb1">Тестування</h3><span class="s2o">2–4 дні</span></div>
+                <p class="s23">Проходимо всі гілки й тестові оплати</p>
+              </div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz">05</div>
+                <div class="sb0"><h3 class="sb1">Запуск</h3><span class="s2o">1 день</span></div>
+                <p class="s23">Деплой, передача коду й доступів</p>
+              </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="b8" class="sat">
+        <div class="sau">
+          <div class="sav">
+            <div class="sac"><span class="s1t"></span>ПРИКЛАДИ</div>
+            <h2 data-reveal="" class="saw">Наші боти, що працюють із лідами</h2>
+
+          </div>
+          <div data-proc="" class="sax">
+            <div class="s2h"></div>
+            <div data-proc-fill="" class="s2i"></div>
+            <div data-proc-spark="" class="s2j"></div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz"></div>
+                <div class="sb0"><h3 class="sb1">IU Bot</h3><span class="s2o">КВІЗ · FSM · CRM</span></div>
+                <p class="s23">Наш власний lead-бот: квіз, покрокові сценарії, передача ліда в CRM. На ньому ми перевіряємо ту саму логіку, яку робимо клієнтам.</p>
+              </div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz"></div>
+                <div class="sb0"><h3 class="sb1">Transfer Kharkiv</h3><span class="s2o">PYTHON-БОТ · SEO</span></div>
+                <p class="s23">Лендінг трансферної компанії з Telegram-ботом, який приймає заявки цілодобово. Конверсія лендінгу — 8.4%.</p>
+              </div>
+
+              <div data-step="" class="say">
+                <div data-step-n="" class="saz"></div>
+                <div class="sb0"><h3 class="sb1">Realty Monitor</h3><span class="s2o">LIQPAY · FSM</span></div>
+                <p class="s23">Бот моніторингу нерухомості з платною підпискою через LiqPay і покроковими сценаріями. Більше проєктів — у портфоліо. Інші типи ботів і загальні тарифи — на сторінці розробки телеграм-ботів, порівняння всіх послуг — у розділі ціни. Про те, як бот вписується у продажі, читайте в статті «Telegram-бот для бізнесу».</p>
+              </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="b9" class="sbi">
+        <div class="sbj">
+          <div>
+            <div class="sac"><span class="s1t"></span>FAQ</div>
+            <h2 data-reveal="" class="sbk">Питання про бот для продажів</h2>
+          </div>
+          <div class="s7o">
+
+              <details class="s7p"><summary class="sbl"><h3 class="sbm">Скільки коштує телеграм-бот для продажів?</h3><span data-faq-ico="" class="s7s">+</span></summary><p class="sbn">Start — від $500 (проста воронка, 7 днів), Pro — від $1 200 (квіз, оплата, CRM, 14 днів), Max — від $2 500. Точну суму фіксуємо після брифу. Комісії платіжних систем і сервер — окремо.</p></details>
+
+              <details class="s7p"><summary class="sbl"><h3 class="sbm">Чи може бот приймати оплату?</h3><span data-faq-ico="" class="s7s">+</span></summary><p class="sbn">Так. Підключаємо LiqPay, WayForPay, Monobank, Stripe або Telegram Payments. Клієнт платить у чаті, бот підтверджує оплату й повідомляє менеджера.</p></details>
+
+              <details class="s7p"><summary class="sbl"><h3 class="sbm">Чи замінить бот менеджера з продажів?</h3><span data-faq-ico="" class="s7s">+</span></summary><p class="sbn">Ні, і не має. Бот бере першу відповідь, типові питання й збір даних. Менеджер отримує клієнта, який уже знає ціну й залишив контакт, і витрачає час на розмову, а не на анкету.</p></details>
+
+              <details class="s7p"><summary class="sbl"><h3 class="sbm">З якими CRM можна інтегрувати бота?</h3><span data-faq-ico="" class="s7s">+</span></summary><p class="sbn">Bitrix24, amoCRM, Pipedrive, Google Sheets або будь-яка система з API чи webhook. Підключення CRM входить у тариф Pro.</p></details>
+
+              <details class="s7p"><summary class="sbl"><h3 class="sbm">Чи можу я сам змінювати тексти й ціни?</h3><span data-faq-ico="" class="s7s">+</span></summary><p class="sbn">Так. Робимо адмін-панель у Telegram або редагування через Google Sheets, щоб міняти тексти, ціни й товари без розробника.</p></details>
+
+              <details class="s7p"><summary class="sbl"><h3 class="sbm">Що, якщо бот не знає відповіді?</h3><span data-faq-ico="" class="s7s">+</span></summary><p class="sbn">Бот передає діалог менеджеру разом з історією розмови. За бажанням підключаємо AI на Claude API, який відповідає за вашою базою знань.</p></details>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+      <section id="b10" class="sa9">
+        <div data-line="" class="saa"></div>
+        <div class="sab">
+          <div>
+
+            <h2 data-reveal="" class="sad">Може знадобитися</h2>
+          </div>
+          <div>
+            <p data-reveal="" class="sae">ПОВ'ЯЗАНІ ПОСЛУГИ</p>
+          </div>
+        </div>
+
+
+
+
+          <div class="sak">
+
+              <a href="/services/bots-crm/" data-reveal="" data-card="" class="sc8 he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38">01</span></div>
+                <h3 class="sao">Ліди одразу в CRM</h3>
+                <p class="sap">Ліди одразу в CRM Бот + CRM Детальніше →</p>
+
+
+
+              </a>
+
+              <a href="/services/bots-restaurant/" data-reveal="" data-card="" class="sc8 he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38">02</span></div>
+                <h3 class="sao">Меню та замовлення</h3>
+                <p class="sap">Меню та замовлення Бот для ресторану Детальніше →</p>
+
+
+
+              </a>
+
+              <a href="/services/websites-landing/" data-reveal="" data-card="" class="sc8 he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38">03</span></div>
+                <h3 class="sao">Сторінка під воронку</h3>
+                <p class="sap">Сторінка під воронку Лендінг Детальніше →</p>
+
+
+
+              </a>
+
+              <a href="/services/meta-ads/" data-reveal="" data-card="" class="sc8 he">
+                <div data-card-glow="" class="sam"></div>
+                <div class="san"><span></span><span class="s38">04</span></div>
+                <h3 class="sao">Трафік у бота</h3>
+                <p class="sap">Трафік у бота Meta Ads Детальніше →</p>
+
+
+
+              </a>
+
+          </div>
+
+
+
+
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div><div data-curtain="" class="s1a"><div data-cline="" class="s1p"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="contact" class="sbo">
+        <div aria-hidden="true" class="s7w"></div>
+        <div class="sbp">
+          <div>
+            <div class="sac"><span class="s1t"></span>Контакт</div>
+            <h2 data-reveal="" class="sbq">Покажіть, як ви продаєте зараз</h2>
+            <p class="sbr">Опишіть продукт і звідки приходять клієнти — у робочий час відповімо протягом 15 хвилин</p>
+            <div class="sbs">
+              <a href="https://t.me/infiniteunion_manager" class="s82 h6">Telegram<span>↗</span></a>
+              <a href="https://wa.me/380688286969" class="s82 h6">WhatsApp<span>↗</span></a>
+              <a href="viber://chat?number=%2B380688286969" class="s82 h6">Viber<span>↗</span></a>
+              <a href="tel:+380688286969" class="s82 h6">Дзвінок<span>↗</span></a>
+            </div>
+          </div>
+          <form data-lead class="sbt" novalidate aria-label="Заявка на проєкт">
+            <div aria-hidden="true" class="s85"></div>
+            <div aria-hidden="true" class="s86"></div>
+            <div class="s87">Залишити заявку</div>
+            <label class="sg"><span class="s88">Ім'я *</span><input name="cn" class="sbu h7" autocomplete="name"></label>
+            <div class="sbv">
+              <label class="sg"><span class="s88">Telegram *</span><input name="cc" placeholder="@username" class="sbu h7" autocomplete="off"></label>
+              <label class="sg"><span class="s88">Телефон</span><input name="cphone" type="tel" placeholder="+380..." class="sbu h7" autocomplete="tel" inputmode="tel"></label>
+            </div>
+            <label class="sg"><span class="s88">Про проєкт</span><textarea name="cp" rows="3" class="s8d h7"></textarea></label>
+            <div class="s8e">
+              <button type="submit" data-mag="" class="s8f h9"><span class="s19"></span><span class="s1a">Надіслати заявку →</span></button>
+              <span class="s8g">Відповімо протягом 15 хв у робочий час</span>
+            </div>
+            <label class="iu-hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label><p class="iu-consent">Надсилаючи заявку, ви погоджуєтесь з <a href="/services/privacy/">політикою конфіденційності</a>.</p><div data-sent role="status" class="s8h" hidden aria-live="polite">✓ ЗАЯВКУ НАДІСЛАНО — ВІДПОВІМО ПРОТЯГОМ 15 ХВ</div>
+          </form>
+        </div>
+      </section>
+
+
   </div>
-</section>
+  </main>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-track">
-    <span>КВІЗ-<em>КВАЛІФІКАЦІЯ</em></span><span>·</span>
-    <span>КАТАЛОГ У TELEGRAM</span><span>·</span>
-    <span>ОПЛАТА <em>В ЧАТІ</em></span><span>·</span>
-    <span>ПЕРЕДАЧА В CRM</span><span>·</span>
-    <span>НАГАДУВАННЯ</span><span>·</span>
-    <span>СТАТИСТИКА ВОРОНКИ</span><span>·</span>
-    <span>КВІЗ-<em>КВАЛІФІКАЦІЯ</em></span><span>·</span>
-    <span>КАТАЛОГ У TELEGRAM</span><span>·</span>
-    <span>ОПЛАТА <em>В ЧАТІ</em></span><span>·</span>
-    <span>ПЕРЕДАЧА В CRM</span><span>·</span>
-    <span>НАГАДУВАННЯ</span><span>·</span>
-    <span>СТАТИСТИКА ВОРОНКИ</span><span>·</span>
+
+  <footer class="sbw">
+    <div class="sbx">
+
+        <nav class="sby"><div class="s8l">Сайти</div><a href="/services/websites/" class="s8m ha">Розробка сайтів під ключ</a><a href="/services/websites-landing/" class="s8m ha">Розробка лендінгу</a><a href="/services/websites-shop/" class="s8m ha">Інтернет-магазин</a><a href="/services/websites-corporate/" class="s8m ha">Корпоративний сайт</a><a href="/services/websites-kharkiv/" class="s8m ha">Сайт у Харкові</a><a href="/services/constructor/" class="s8m ha">AI-конструктор</a></nav>
+
+        <nav class="sby"><div class="s8l">Боти та платформи</div><a href="/services/bots/" class="s8m ha">Telegram-боти</a><a href="/services/bots-sales/" class="s8m ha">Бот для продажів</a><a href="/services/bots-restaurant/" class="s8m ha">Бот для ресторану</a><a href="/services/bots-crm/" class="s8m ha">Бот + CRM</a><a href="/services/platforms/" class="s8m ha">Вебплатформи</a><a href="/services/ecosystems/" class="s8m ha">Сайт + бот + CRM</a></nav>
+
+        <nav class="sby"><div class="s8l">Реклама та SEO</div><a href="/services/google-ads/" class="s8m ha">Google Ads</a><a href="/services/google-ads-search/" class="s8m ha">Пошукова реклама</a><a href="/services/meta-ads/" class="s8m ha">Таргет Meta</a><a href="/services/meta-ads-instagram/" class="s8m ha">Реклама в Instagram</a><a href="/services/tiktok-ads/" class="s8m ha">TikTok Ads</a><a href="/services/seo/" class="s8m ha">SEO-просування</a><a href="/services/seo-audit/" class="s8m ha">SEO-аудит</a><a href="/services/seo-local/" class="s8m ha">Локальне SEO</a></nav>
+
+        <nav class="sby"><div class="s8l">Студія</div><a href="/portfolio/" class="s8m ha">Портфоліо</a><a href="/pricing/" class="s8m ha">Ціни</a><a href="/blog/" class="s8m ha">Блог</a><a href="/services/privacy/" class="s8m ha">Політика конфіденційності</a><a href="/en/" class="s8m ha">English</a></nav>
+
+    </div>
+    <div class="sbz">
+      <div>Infinite Union · Харків, Україна</div>
+      <a href="mailto:supportinfiniteunion@gmail.com">supportinfiniteunion@gmail.com</a>
+      <a href="tel:+380688286969">+380688286969</a>
+      <div class="s8p"><a href="https://instagram.com/infinite_union">Instagram</a><a href="https://t.me/infinite_union_channel">Telegram</a></div>
+    </div>
+    <div aria-hidden="true" class="sc0">
+      <div class="sc1"><span class="s8s">INFINITE <span class="s8t">∞</span> UNION ·&nbsp;</span><span class="s8s">INFINITE <span class="s8t">∞</span> UNION ·&nbsp;</span></div>
+    </div>
+    <div class="s8u"><span>© 2026 Infinite Union</span><span>infiniteunion.com.ua</span></div>
+  </footer>
   </div>
-</div>
-
-<!-- PROBLEM -->
-<section class="features">
-  <div class="sec-label">ДЕ ВТРАЧАЮТЬСЯ ПРОДАЖІ</div>
-  <h2 class="sec-title rev">Навіщо бізнесу<br>бот для продажів</h2>
-  <div class="features-grid">
-    <div class="feat rev">
-      <h3 class="feat-name">Довга перша відповідь</h3>
-      <div class="feat-desc">Клієнт написав увечері, менеджер побачив повідомлення зранку. За цей час людина вже купила в того, хто відповів першим.</div>
-      <div class="feat-tag">ШВИДКІСТЬ</div>
-    </div>
-    <div class="feat rev">
-      <h3 class="feat-name">Однакові питання</h3>
-      <div class="feat-desc">«Скільки коштує?», «Є в наявності?», «Як оплатити?» — менеджер щодня відповідає на це вручну замість того, щоб закривати угоди.</div>
-      <div class="feat-tag">РУТИНА</div>
-    </div>
-    <div class="feat rev">
-      <h3 class="feat-name">Заявки без контексту</h3>
-      <div class="feat-desc">Контакти лежать у різних чатах, невідомо, хто з якої реклами прийшов і на якому етапі зупинився. Повторно написати нікому.</div>
-      <div class="feat-tag">КОНТРОЛЬ</div>
-    </div>
-  </div>
-</section>
-
-<!-- FUNNEL -->
-<section class="funnel">
-  <div class="sec-label">ЯК ПРАЦЮЄ ВОРОНКА</div>
-  <h2 class="sec-title rev">Шлях клієнта<br>у боті для продажів</h2>
-  <div class="funnel-visual">
-    <div class="funnel-canvas-wrap rev-l" aria-hidden="true">
-      <canvas id="funnelCanvas" class="funnel-canvas"></canvas>
-    </div>
-    <ul class="funnel-steps">
-      <li class="fstep rev">
-        <div class="fstep-num">01</div>
-        <div><h3 class="fstep-name">Вхід у бота</h3><div class="fstep-desc">Клієнт натискає /start із реклами, сайту чи QR-коду. Бот фіксує джерело переходу й вітається.</div><div class="fstep-metric">→ джерело ліда записано</div></div>
-      </li>
-      <li class="fstep rev">
-        <div class="fstep-num">02</div>
-        <div><h3 class="fstep-name">Кваліфікація</h3><div class="fstep-desc">3–5 питань-кнопок: що потрібно, бюджет, терміни. Відповіді визначають, яку пропозицію показати далі.</div><div class="fstep-metric">→ потреба й бюджет відомі</div></div>
-      </li>
-      <li class="fstep rev">
-        <div class="fstep-num">03</div>
-        <div><h3 class="fstep-name">Пропозиція</h3><div class="fstep-desc">Бот показує відповідний товар, тариф чи каталог з цінами. На складне питання — кнопка «написати менеджеру».</div><div class="fstep-metric">→ клієнт бачить ціну одразу</div></div>
-      </li>
-      <li class="fstep rev">
-        <div class="fstep-num">04</div>
-        <div><h3 class="fstep-name">Оплата</h3><div class="fstep-desc">LiqPay, WayForPay, Monobank, Stripe або Telegram Payments прямо в чаті. Бот підтверджує оплату й надсилає чек.</div><div class="fstep-metric">→ без переходу на сайт</div></div>
-      </li>
-      <li class="fstep rev">
-        <div class="fstep-num">05</div>
-        <div><h3 class="fstep-name">Передача менеджеру</h3><div class="fstep-desc">Заявка з усіма відповідями приходить менеджеру в Telegram або падає в CRM. Хто не купив — отримує нагадування.</div><div class="fstep-metric">→ ліди в одному місці</div></div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features">
-  <div class="sec-label">ЩО ВХОДИТЬ</div>
-  <h2 class="sec-title rev">Що вміє<br>бот для продажів</h2>
-  <div class="features-grid">
-    <div class="feat rev">
-      <svg aria-hidden="true" class="feat-icon" width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="26" height="32" rx="4" stroke="rgba(34,158,217,.4)" stroke-width="1.5"/><rect x="18" y="14" width="26" height="32" rx="4" stroke="#D40000" stroke-width="1.5"/><rect x="22" y="20" width="18" height="4" rx="2" fill="rgba(212,0,0,.15)"/></svg>
-      <h3 class="feat-name">Квіз і гілки сценарію</h3>
-      <div class="feat-desc">Від простого квізу до воронки з умовними переходами: різні відповіді ведуть до різних пропозицій.</div>
-      <div class="feat-tag">AIOGRAM 3 · FSM</div>
-    </div>
-    <div class="feat rev">
-      <svg aria-hidden="true" class="feat-icon" width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="14" width="36" height="22" rx="4" stroke="#D40000" stroke-width="1.5"/><rect x="6" y="20" width="36" height="6" fill="rgba(212,0,0,.08)"/><rect x="24" y="27" width="12" height="4" rx="2" fill="rgba(212,0,0,.5)"/></svg>
-      <h3 class="feat-name">Каталог і оплата</h3>
-      <div class="feat-desc">Товари чи тарифи з фото й цінами, кошик, оплата в чаті. Для більшого каталогу — Telegram Mini App.</div>
-      <div class="feat-tag">LIQPAY · MONOBANK</div>
-    </div>
-    <div class="feat rev">
-      <svg aria-hidden="true" class="feat-icon" width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="22" height="28" rx="3" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/><rect x="30" y="16" width="14" height="16" rx="3" stroke="#D40000" stroke-width="1.5"/><path d="M26 24h4" stroke="#D40000" stroke-width="1.5" stroke-linecap="round"/></svg>
-      <h3 class="feat-name">Ліди в CRM</h3>
-      <div class="feat-desc">Кожен контакт з відповідями квізу потрапляє в Google Sheets або CRM. Як це працює — на сторінці <a href="/services/bots-crm/" style="color:#fff;">інтеграції бота з CRM</a>.</div>
-      <div class="feat-tag">BITRIX24 · AMOCRM</div>
-    </div>
-    <div class="feat rev">
-      <svg aria-hidden="true" class="feat-icon" width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/><path d="M24 8v16l10 6" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <h3 class="feat-name">Нагадування й розсилки</h3>
-      <div class="feat-desc">Бот сам нагадує тим, хто не завершив покупку, і робить розсилки за сегментами — за правилами, які ви задали.</div>
-      <div class="feat-tag">ТРИГЕРИ</div>
-    </div>
-    <div class="feat rev">
-      <svg aria-hidden="true" class="feat-icon" width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M8 36L16 20L24 26L32 12L40 24" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="38" width="36" height="1" rx=".5" fill="rgba(255,255,255,.08)"/></svg>
-      <h3 class="feat-name">Статистика воронки</h3>
-      <div class="feat-desc">Скільки людей почали діалог, дійшли до пропозиції й оплатили. Видно, на якому кроці клієнти зупиняються.</div>
-      <div class="feat-tag">АДМІН-ПАНЕЛЬ</div>
-    </div>
-    <div class="feat rev">
-      <svg aria-hidden="true" class="feat-icon" width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="4" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/><path d="M14 24h6l4-8 4 16 4-8h6" stroke="#D40000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <h3 class="feat-name">AI-відповіді</h3>
-      <div class="feat-desc">Для нестандартних питань підключаємо Claude API: бот відповідає за вашою базою знань, а складне передає людині.</div>
-      <div class="feat-tag">CLAUDE API</div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats">
-  <div class="stats-grid">
-    <div class="stat-cell rev"><div class="stat-val">7<em>дн</em></div><div class="stat-key">ЗАПУСК ТАРИФУ START</div></div>
-    <div class="stat-cell rev"><div class="stat-val">14<em>дн</em></div><div class="stat-key">ЗАПУСК ТАРИФУ PRO</div></div>
-    <div class="stat-cell rev"><div class="stat-val">5</div><div class="stat-key">ПЛАТІЖНИХ СИСТЕМ НА ВИБІР</div></div>
-    <div class="stat-cell rev"><div class="stat-val">15<em>хв</em></div><div class="stat-key">ВІДПОВІДЬ У РОБОЧИЙ ЧАС</div></div>
-  </div>
-</div>
-
-<!-- LEVELS -->
-<section class="levels">
-  <div class="sec-label">ВАРТІСТЬ</div>
-  <h2 class="sec-title rev">Скільки коштує<br>бот для продажів</h2>
-  <div class="levels-grid">
-    <div class="level rev">
-      <h3 class="level-name">Start</h3>
-      <div class="level-price">від $500</div>
-      <div class="level-note">проста воронка · 7 днів</div>
-      <ul class="level-list">
-        <li class="on">Воронка до 5 кроків</li>
-        <li class="on">Збір контактів і відповідей</li>
-        <li class="on">Сповіщення менеджеру</li>
-        <li class="on">Кнопки та меню</li>
-        <li>Оплата в боті</li>
-        <li>CRM-інтеграція</li>
-        <li>Статистика воронки</li>
-      </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
-    </div>
-    <div class="level level--pro rev">
-      <div class="level-badge">ЧАСТО ОБИРАЮТЬ</div>
-      <h3 class="level-name">Pro</h3>
-      <div class="level-price">від $1 200</div>
-      <div class="level-note">повна воронка · 14 днів</div>
-      <ul class="level-list">
-        <li class="on">Квіз і гілки сценарію</li>
-        <li class="on">Каталог з цінами</li>
-        <li class="on">Оплата в чаті</li>
-        <li class="on">Передача лідів у CRM</li>
-        <li class="on">Нагадування й розсилки</li>
-        <li class="on">Адмін-панель і статистика</li>
-      </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
-    </div>
-    <div class="level rev">
-      <h3 class="level-name">Max</h3>
-      <div class="level-price">від $2 500</div>
-      <div class="level-note">кілька воронок · план робіт окремо</div>
-      <ul class="level-list">
-        <li class="on">Кілька воронок і продуктів</li>
-        <li class="on">AI-кваліфікація лідів</li>
-        <li class="on">Telegram Mini App</li>
-        <li class="on">Кілька платіжних систем</li>
-        <li class="on">Інтеграції з вашими API</li>
-        <li class="on">Власний дашборд</li>
-      </ul>
-      <a href="#contact" class="level-cta">ОБГОВОРИТИ</a>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process">
-  <div class="sec-label">ЕТАПИ</div>
-  <h2 class="sec-title rev">Від сценарію<br>до запуску</h2>
-  <div class="process-steps">
-    <div class="pstep active rev"><div class="pstep-dot">01</div><h3 class="pstep-name">Бриф</h3><div class="pstep-desc">Продукт, аудиторія, звідки приходять клієнти</div><div class="pstep-time">1–2 дні</div></div>
-    <div class="pstep rev"><div class="pstep-dot">02</div><h3 class="pstep-name">Сценарій</h3><div class="pstep-desc">Карта діалогів, питання квізу, тексти</div><div class="pstep-time">2–3 дні</div></div>
-    <div class="pstep rev"><div class="pstep-dot">03</div><h3 class="pstep-name">Розробка</h3><div class="pstep-desc">Логіка, оплата, CRM, адмін-панель</div><div class="pstep-time">3–7 днів</div></div>
-    <div class="pstep rev"><div class="pstep-dot">04</div><h3 class="pstep-name">Тестування</h3><div class="pstep-desc">Проходимо всі гілки й тестові оплати</div><div class="pstep-time">2–4 дні</div></div>
-    <div class="pstep rev"><div class="pstep-dot">05</div><h3 class="pstep-name">Запуск</h3><div class="pstep-desc">Деплой, передача коду й доступів</div><div class="pstep-time">1 день</div></div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section class="features">
-  <div class="sec-label">ПРИКЛАДИ</div>
-  <h2 class="sec-title rev">Наші боти,<br>що працюють із лідами</h2>
-  <div class="features-grid">
-    <div class="feat rev">
-      <h3 class="feat-name">IU Bot</h3>
-      <div class="feat-desc">Наш власний lead-бот: квіз, покрокові сценарії, передача ліда в CRM. На ньому ми перевіряємо ту саму логіку, яку робимо клієнтам.</div>
-      <div class="feat-tag">КВІЗ · FSM · CRM</div>
-    </div>
-    <div class="feat rev">
-      <h3 class="feat-name">Transfer Kharkiv</h3>
-      <div class="feat-desc">Лендінг трансферної компанії з Telegram-ботом, який приймає заявки цілодобово. Конверсія лендінгу — 8.4%.</div>
-      <div class="feat-tag">PYTHON-БОТ · SEO</div>
-    </div>
-    <div class="feat rev">
-      <h3 class="feat-name">Realty Monitor</h3>
-      <div class="feat-desc">Бот моніторингу нерухомості з платною підпискою через LiqPay і покроковими сценаріями.</div>
-      <div class="feat-tag">LIQPAY · FSM</div>
-    </div>
-  </div>
-  <p class="fstep-desc" style="margin-top:40px;max-width:760px;font-size:15px;">Більше проєктів — у <a href="/portfolio/" style="color:#fff;">портфоліо</a>. Інші типи ботів і загальні тарифи — на сторінці <a href="/services/bots/" style="color:#fff;">розробки телеграм-ботів</a>, порівняння всіх послуг — у розділі <a href="/pricing/" style="color:#fff;">ціни</a>. Про те, як бот вписується у продажі, читайте в статті <a href="/blog/telegram-bot-dlya-biznesu/" style="color:#fff;">«Telegram-бот для бізнесу»</a>.</p>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="sec-label">ЧАСТІ ПИТАННЯ</div>
-  <h2 class="sec-title rev">Питання про<br>бот для продажів</h2>
-  <div class="faq-list">
-    <div class="faq-item rev">
-      <button type="button" class="faq-q">Скільки коштує телеграм-бот для продажів? <span>+</span></button>
-      <div class="faq-a">Start — від $500 (проста воронка, 7 днів), Pro — від $1 200 (квіз, оплата, CRM, 14 днів), Max — від $2 500. Точну суму фіксуємо після брифу. Комісії платіжних систем і сервер — окремо.</div>
-    </div>
-    <div class="faq-item rev">
-      <button type="button" class="faq-q">Чи може бот приймати оплату? <span>+</span></button>
-      <div class="faq-a">Так. Підключаємо LiqPay, WayForPay, Monobank, Stripe або Telegram Payments. Клієнт платить у чаті, бот підтверджує оплату й повідомляє менеджера.</div>
-    </div>
-    <div class="faq-item rev">
-      <button type="button" class="faq-q">Чи замінить бот менеджера з продажів? <span>+</span></button>
-      <div class="faq-a">Ні, і не має. Бот бере першу відповідь, типові питання й збір даних. Менеджер отримує клієнта, який уже знає ціну й залишив контакт, і витрачає час на розмову, а не на анкету.</div>
-    </div>
-    <div class="faq-item rev">
-      <button type="button" class="faq-q">З якими CRM можна інтегрувати бота? <span>+</span></button>
-      <div class="faq-a">Bitrix24, amoCRM, Pipedrive, Google Sheets або будь-яка система з API чи webhook. Підключення CRM входить у тариф Pro.</div>
-    </div>
-    <div class="faq-item rev">
-      <button type="button" class="faq-q">Чи можу я сам змінювати тексти й ціни? <span>+</span></button>
-      <div class="faq-a">Так. Робимо адмін-панель у Telegram або редагування через Google Sheets, щоб міняти тексти, ціни й товари без розробника.</div>
-    </div>
-    <div class="faq-item rev">
-      <button type="button" class="faq-q">Що, якщо бот не знає відповіді? <span>+</span></button>
-      <div class="faq-a">Бот передає діалог менеджеру разом з історією розмови. За бажанням підключаємо AI на Claude API, який відповідає за вашою базою знань.</div>
-    </div>
-  </div>
-</section>
-
-<!-- RELATED -->
-<section style="padding:80px 40px;border-top:1px solid rgba(255,255,255,.08);">
-  <div style="font-size:11px;letter-spacing:.2em;color:#D40000;font-family:'Space Grotesk',sans-serif;font-weight:600;margin-bottom:16px;">ПОВ'ЯЗАНІ ПОСЛУГИ</div>
-  <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1;letter-spacing:-.02em;margin-bottom:40px;">Може знадобитися</h2>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
-    <a href="/services/bots-crm/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Ліди одразу в CRM</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Бот + CRM</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-    <a href="/services/bots-restaurant/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Меню та замовлення</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Бот для ресторану</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-    <a href="/services/websites-landing/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Сторінка під воронку</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Лендінг</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-    <a href="/services/meta-ads/" style="border:1px solid rgba(255,255,255,.08);padding:24px;text-decoration:none;color:#fff;display:block;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(212,0,0,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
-  <div style="font-size:11px;letter-spacing:.1em;color:#D40000;font-family:'Space Grotesk',sans-serif;margin-bottom:10px;">Трафік у бота</div>
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;">Meta Ads</div>
-  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:8px;">Детальніше →</div>
-</a>
-  </div>
-</section>
-
-<section class="cta-final" id="contact">
-  <canvas id="ctaBg" class="cta-bg" aria-hidden="true"></canvas>
-  <div class="cta-label">ОБГОВОРИТИ ВОРОНКУ</div>
-  <h2 class="cta-title">Покажіть, як ви<br><em>продаєте</em> зараз</h2>
-  <p class="cta-sub">Опишіть продукт і звідки приходять клієнти — у робочий час відповімо протягом 15 хвилин</p>
-  <div class="cta-btns">
-    <div class="contact-btns-group">
-  <a href="https://t.me/infiniteunion_manager" class="cbtn cbtn-tg" rel="noopener noreferrer">
-    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
-    Telegram
-  </a>
-  <a href="https://wa.me/380688286969" class="cbtn cbtn-wa" rel="noopener noreferrer">
-    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </a>
-  <a href="viber://chat?number=%2B380688286969" class="cbtn cbtn-viber" rel="noopener noreferrer">
-    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C8.55-.05 2.9.64 1.05 6.39.41 8.37.19 10.14.17 11.3c-.03 1.16-.05 3.35.65 5.21h.01c1.1 3.03 3.66 5.01 6.88 5.35v2.33s-.02.55.34.66c.44.13.69-.28 1.11-.73.23-.25.55-.62.79-.9 2.16.18 3.83-.28 4.01-.34.44-.14 2.9-.46 3.31-3.74 0 0 .42-2.65-.17-4.74-.17-.6-.33-.87-.46-1.04l.17-.08c0-.01-.04-.05-.08-.09l-.07-.07v-.01c-.44-.44-1.17-.88-1.17-.88s-.15-.08-.18-.05c-.02.03-.01.12.01.23.05.15.1.32.1.48.01.17 0 .36 0 .54-.01.17-.04.33-.09.45-.05.13-.13.22-.23.26-.11.04-.23.05-.33.02-.1-.03-.2-.11-.28-.2a2.4 2.4 0 01-.2-.29c-.04-.08-.07-.16-.06-.23.01-.07.08-.15.16-.21.08-.05.19-.07.29-.05.1.03.19.1.26.2.07.1.11.22.11.34 0 .12-.05.24-.12.34a.58.58 0 01-.27.19c-.1.03-.22.03-.32-.01a.59.59 0 01-.24-.19.59.59 0 01-.1-.33c0-.12.04-.24.1-.33.06-.1.15-.17.25-.21.1-.03.21-.03.31.02zm1.19 2.15c.09 0 .18 0 .26.01 3.14.22 5.62 2.74 5.62 5.78 0 .06 0 .13-.01.19-.13 3.11-2.63 5.59-5.62 5.59-.09 0-.18 0-.27-.01-3.13-.22-5.61-2.74-5.61-5.77 0-.07 0-.13 0-.2.14-3.1 2.63-5.59 5.62-5.59z"/></svg>
-    Viber
-  </a>
-  <a href="tel:+380688286969" class="cbtn cbtn-tel">
-    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-    +380688286969
-  </a>
-</div>
-    <a href="/#contact" class="btn-ghost">ЗАПОВНИТИ ФОРМУ</a>
-  </div>
-</section>
-
-<!-- /iu:content -->
-<!-- iu:footer -->
-<div class="iu-crumbs" role="navigation" aria-label="Ви тут"><ol><li><a href="/">Головна</a></li><li><a href="/services/bots/">Telegram-боти</a></li><li aria-current="page">Бот для продажів</li></ol></div>
-<footer class="iu-foot">
-  <div class="iu-foot-grid">
-    <div>
-      <a href="/" class="iu-foot-brand">INFINITE <span>UNION</span></a>
-      <p>Infinite Union — веб-студія з Харкова. Сайти, Telegram-боти, реклама та SEO.</p>
-    </div>
-    <div><h2>Розробка</h2><ul><li><a href="/services/websites/">Розробка сайтів</a></li><li><a href="/services/websites-landing/">Лендінг під ключ</a></li><li><a href="/services/websites-shop/">Інтернет-магазин</a></li><li><a href="/services/websites-corporate/">Корпоративний сайт</a></li><li><a href="/services/websites-kharkiv/">Сайти в Харкові</a></li><li><a href="/services/bots/">Telegram-боти</a></li><li><a href="/services/bots-sales/">Бот для продажів</a></li><li><a href="/services/bots-restaurant/">Бот для ресторану</a></li><li><a href="/services/bots-crm/">Бот + CRM</a></li><li><a href="/services/platforms/">Вебплатформи та SaaS</a></li><li><a href="/services/ecosystems/">Цифрові екосистеми</a></li></ul></div>
-    <div><h2>Реклама і SEO</h2><ul><li><a href="/services/google-ads/">Google Ads</a></li><li><a href="/services/google-ads-search/">Пошукова реклама</a></li><li><a href="/services/meta-ads/">Таргет Facebook та Instagram</a></li><li><a href="/services/meta-ads-instagram/">Реклама в Instagram</a></li><li><a href="/services/tiktok-ads/">TikTok Ads</a></li><li><a href="/services/seo/">SEO просування</a></li><li><a href="/services/seo-audit/">SEO аудит</a></li><li><a href="/services/seo-local/">Локальне SEO</a></li></ul></div>
-    <div><h2>Компанія</h2><ul><li><a href="/pricing/">Ціни</a></li><li><a href="/services/constructor/">AI-конструктор</a></li><li><a href="/portfolio/">Портфоліо</a></li><li><a href="/blog/">Блог</a></li><li><a href="/en/services/bots/" hreflang="en">English</a></li></ul>
-      <h2 style="margin-top:28px">Контакти</h2><ul>
-        <li><a href="https://t.me/infiniteunion_manager" rel="noopener noreferrer">Telegram</a></li>
-        <li><a href="https://wa.me/380688286969" rel="noopener noreferrer">WhatsApp</a></li>
-        <li><a href="tel:+380688286969">+380688286969</a></li>
-        <li><a href="mailto:supportinfiniteunion@gmail.com">supportinfiniteunion@gmail.com</a></li>
-      </ul></div>
-  </div>
-  <div class="iu-foot-bottom">
-    <span>© 2026 Infinite Union · Харків, Україна</span>
-    <span><a href="https://instagram.com/infinite_union" rel="noopener noreferrer">Instagram</a> · <a href="https://t.me/infinite_union_channel" rel="noopener noreferrer">Telegram-канал</a> · <a href="/services/privacy/">Політика конфіденційності</a></span>
-  </div>
-</footer>
-<!-- /iu:footer -->
-
-<script>
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
-},{passive:true});
-
-document.querySelectorAll('.faq-item').forEach(item=>{
-  item.querySelector('.faq-q').addEventListener('click',()=>{
-    const isOpen=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-    if(!isOpen)item.classList.add('open');
-  });
-});
-
-const revObs=new IntersectionObserver(es=>{
-  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');revObs.unobserve(e.target);}});
-},{threshold:.08});
-document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>revObs.observe(el));
-
-(function(){
-  const nums=document.querySelectorAll('[data-count]');
-  const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;
-  nums.forEach(el=>{
-    const target=parseInt(el.dataset.count,10);
-    const suffix=el.querySelector('em');
-    const suffixHTML=suffix?suffix.outerHTML:'';
-    const dur=1400;let started=false;
-    const obs=new IntersectionObserver(([e])=>{
-      if(e.isIntersecting&&!started){
-        started=true;
-        const start=performance.now();
-        const tick=now=>{const p=Math.min((now-start)/dur,1);el.innerHTML=Math.round(ease(p)*target)+suffixHTML;if(p<1)requestAnimationFrame(tick);};
-        requestAnimationFrame(tick);obs.disconnect();
-      }
-    },{threshold:.3});
-    obs.observe(el);
-  });
-})();
-
-document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.level-cta').forEach(btn=>{
-  btn.addEventListener('mousemove',e=>{
-    const r=btn.getBoundingClientRect();
-    btn.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.12}px)`;
-  });
-  btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
-});
-
-// CHAT CANVAS — animated chat messages appearing
-(function(){
-  const c=document.getElementById('chatCanvas');
-  if(!c)return;
-  const ctx=c.getContext('2d');
-  const W=c.width=c.offsetWidth;
-  const H=c.height=c.offsetHeight;
-
-  const messages=[
-    {side:'bot',text:'Привіт! 👋 Я допоможу підібрати рішення для вашого бізнесу.',delay:0},
-    {side:'bot',text:'Який у вас тип бізнесу?',delay:1.5,buttons:['Послуги','Товари','SaaS']},
-    {side:'user',text:'Послуги',delay:3},
-    {side:'bot',text:'Чудово! Скільки заявок ви обробляєте на день?',delay:4},
-    {side:'user',text:'20-50 на день',delay:5.5},
-    {side:'bot',text:'Підібрав для вас рішення 🎯\nБот для продажів: від $500\nЗапуск: від 7 днів',delay:6.5},
-    {side:'bot',text:'Оформити замовлення?',delay:8,buttons:['✅ Так, замовляю','📞 Зв\'язатись']},
-  ];
-
-  let t=0;
-  const visibleMessages=[];
-  let lastTime=0;
-
-  function wrapText(ctx,text,maxWidth){
-    const words=text.split(' ');
-    const lines=[];let line='';
-    words.forEach(w=>{
-      const test=line?line+' '+w:w;
-      if(ctx.measureText(test).width>maxWidth&&line){lines.push(line);line=w;}
-      else line=test;
-    });
-    if(line)lines.push(line);
-    return lines;
-  }
-
-  function drawMessage(msg,y,alpha){
-    const isBot=msg.side==='bot';
-    const pad=10;const maxW=W*.7;
-    ctx.font='12px Inter,sans-serif';
-    const lines=wrapText(ctx,msg.text,maxW-24);
-    const lh=18;
-    const bh=lines.length*lh+16;
-    const bw=Math.min(maxW,lines.reduce((m,l)=>Math.max(m,ctx.measureText(l).width),0)+24);
-    const bx=isBot?8:W-bw-8;
-
-    ctx.globalAlpha=alpha;
-    ctx.fillStyle=isBot?'rgba(34,158,217,.2)':'rgba(212,0,0,.2)';
-    ctx.beginPath();
-    const r=10;
-    ctx.roundRect(bx,y,bw,bh,r);
-    ctx.fill();
-    ctx.strokeStyle=isBot?'rgba(34,158,217,.4)':'rgba(212,0,0,.4)';
-    ctx.lineWidth=.8;
-    ctx.stroke();
-
-    ctx.fillStyle=isBot?'rgba(34,158,217,.9)':'rgba(255,255,255,.8)';
-    ctx.font='12px Inter,sans-serif';
-    lines.forEach((l,i)=>ctx.fillText(l,bx+12,y+20+i*lh));
-    ctx.globalAlpha=1;
-
-    let nextY=y+bh+6;
-
-    if(msg.buttons){
-      msg.buttons.forEach(btn=>{
-        const bw2=ctx.measureText(btn).width+20;
-        const bx2=isBot?8:W-bw2-8;
-        ctx.globalAlpha=alpha*.8;
-        ctx.fillStyle='rgba(34,158,217,.1)';
-        ctx.strokeStyle='rgba(34,158,217,.5)';
-        ctx.lineWidth=.8;
-        ctx.beginPath();ctx.roundRect(bx2,nextY,bw2,24,6);ctx.fill();ctx.stroke();
-        ctx.fillStyle='rgba(34,158,217,.9)';
-        ctx.font='11px Space Grotesk,sans-serif';
-        ctx.fillText(btn,bx2+10,nextY+15);
-        ctx.globalAlpha=1;
-        nextY+=30;
-      });
-    }
-    return nextY;
-  }
-
-  function draw(ts){
-    ctx.clearRect(0,0,W,H);
-    t+=.016;
-
-    // Add messages based on time
-    messages.forEach(msg=>{
-      if(t>msg.delay&&!visibleMessages.includes(msg)){
-        visibleMessages.push({...msg,appeared:t});
-      }
-    });
-
-    // Restart loop
-    if(t>12){t=0;visibleMessages.length=0;}
-
-    // Draw messages from bottom
-    let y=12;
-    visibleMessages.forEach(msg=>{
-      const age=t-msg.appeared;
-      const alpha=Math.min(1,age*3);
-      y=drawMessage(msg,y,alpha)+4;
-    });
-
-    requestAnimationFrame(draw);
-  }
-  draw(0);
-})();
-
-// FUNNEL CANVAS — animated funnel with conversion rates
-(function(){
-  const c=document.getElementById('funnelCanvas');
-  if(!c)return;
-  const ctx=c.getContext('2d');
-  c.width=c.offsetWidth;c.height=c.offsetHeight;
-  const W=c.width,H=c.height;
-
-  const stages=[
-    {label:'ВІДВІДУВАЧІ',val:1000,color:'rgba(255,255,255,.2)',pct:1},
-    {label:'СТАРТ БОТА',val:680,color:'rgba(34,158,217,.4)',pct:.68},
-    {label:'КВАЛІФІКОВАНІ',val:340,color:'rgba(34,158,217,.6)',pct:.34},
-    {label:'ОФФЕР',val:180,color:'rgba(212,0,0,.5)',pct:.18},
-    {label:'ОПЛАТА',val:85,color:'rgba(212,0,0,.9)',pct:.085},
-  ];
-
-  let progress=0;let animating=false;
-
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    const totalH=H-80;
-    const topPad=40;
-
-    stages.forEach((s,i)=>{
-      const stageH=totalH/stages.length;
-      const y=topPad+i*stageH;
-      const maxW=W-80;
-      const w=maxW*s.pct*Math.min(progress,1);
-      const x=(W-w)/2;
-
-      // Bar
-      ctx.fillStyle=s.color;
-      ctx.fillRect(x,y+2,w,stageH-8);
-
-      // Label left
-      ctx.fillStyle='rgba(255,255,255,.5)';
-      ctx.font='10px Space Grotesk,sans-serif';
-      ctx.textAlign='left';
-      ctx.fillText(s.label,8,y+stageH/2+4);
-
-      // Value right
-      if(progress>.3){
-        ctx.fillStyle='rgba(255,255,255,.7)';
-        ctx.textAlign='right';
-        ctx.font='bold 12px Space Grotesk,sans-serif';
-        ctx.fillText(Math.round(s.val*Math.min(progress,1)),W-8,y+stageH/2+4);
-      }
-
-      // Arrow between stages
-      if(i<stages.length-1){
-        const convRate=Math.round((stages[i+1].val/s.val)*100);
-        ctx.fillStyle='rgba(212,0,0,.6)';
-        ctx.font='10px Inter,sans-serif';
-        ctx.textAlign='center';
-        ctx.fillText(`↓ ${convRate}%`,W/2,y+stageH+4);
-      }
-    });
-
-    if(animating&&progress<1){
-      progress=Math.min(progress+.015,1);
-      requestAnimationFrame(draw);
-    }
-  }
-
-  draw();
-
-  const obs=new IntersectionObserver(([e])=>{
-    if(e.isIntersecting&&!animating){animating=true;draw();obs.disconnect();}
-  },{threshold:.3});
-  obs.observe(c);
-})();
-
-// CTA BG
-(function(){
-  const c=document.getElementById('ctaBg');
-  if(!c)return;
-  const ctx=c.getContext('2d');
-  let W,H;
-  function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
-  resize();
-
-  const bubbles=Array.from({length:20},()=>({
-    x:Math.random()*1000,y:Math.random()*600,
-    r:Math.random()*40+10,
-    vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,
-    alpha:Math.random()*.03+.01
-  }));
-
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    bubbles.forEach(b=>{
-      b.x+=b.vx;b.y+=b.vy;
-      if(b.x<-50)b.x=W+50;if(b.x>W+50)b.x=-50;
-      if(b.y<-50)b.y=H+50;if(b.y>H+50)b.y=-50;
-      ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,Math.PI*2);
-      ctx.strokeStyle=`rgba(212,0,0,${b.alpha})`;
-      ctx.lineWidth=1;ctx.stroke();
-    });
-    requestAnimationFrame(draw);
-  }
-
-  const obs=new IntersectionObserver(([e])=>{if(e.isIntersecting){draw();obs.disconnect();}});
-  obs.observe(c);
-})();
-</script>
-
+<link rel="stylesheet" href="/assets/css/site.77b3e7f792.css">
+<script type="module" src="/assets/js/motion.5a1132d130.js"></script>
 </body>
 </html>

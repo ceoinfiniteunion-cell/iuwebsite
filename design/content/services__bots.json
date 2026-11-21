@@ -1,0 +1,1207 @@
+{
+  "url": "https://infiniteunion.com.ua/services/bots/",
+  "path": "/services/bots/",
+  "file": "services/bots/index.html",
+  "lang": "uk",
+  "alt": {
+    "lang": "en",
+    "path": "/en/services/bots/",
+    "url": "https://infiniteunion.com.ua/en/services/bots/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "Telegram-боти",
+  "title": "Розробка Telegram-бота під ключ — від $300 | Infinite Union",
+  "description": "Розробка Telegram-ботів для бізнесу: заявки, запис, оплати, CRM, розсилки, Mini App. aiogram 3, PostgreSQL. Простий бот від $300, запуск до 2 тижнів.",
+  "keyword": "розробка телеграм бота",
+  "secondaryKeywords": "розробка телеграм бота, створення телеграм бота, телеграм бот для бізнесу (інформаційний варіант → блог), чат-бот telegram",
+  "priceFrom": 300,
+  "robots": "index, follow",
+  "h1": "Розробка телеграм-бота для бізнесу",
+  "breadcrumbs": [
+    {
+      "name": "Головна",
+      "url": "/"
+    },
+    {
+      "name": "Telegram-боти",
+      "url": "/services/bots/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--red-glow": "rgba(212,0,0,0.15)",
+    "--bg": "#060404",
+    "--bg2": "#0e0b0b",
+    "--bg3": "#111",
+    "--border": "rgba(255,255,255,0.08)",
+    "--text": "#fff",
+    "--muted": "rgba(255,255,255,0.45)",
+    "--muted2": "rgba(255,255,255,0.25)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ease": "cubic-bezier(0.76,0,0.24,1)",
+    "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+  },
+  "words": 992,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Назад",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "EN",
+      "href": "/en/services/bots/"
+    },
+    {
+      "k": "link",
+      "text": "ЗАМОВИТИ БОТА",
+      "href": "/services/bots/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "Розробка телеграм-бота для бізнесу",
+      "items": [
+        {
+          "k": "text",
+          "text": "ПОСЛУГА · РОЗРОБКА TELEGRAM-БОТІВ",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Розробка телеграм-бота для бізнесу"
+        },
+        {
+          "k": "text",
+          "text": "Розробка телеграм-бота в Infinite Union — це бот, який приймає заявки, записує клієнтів, бере оплату й передає дані в CRM. Ми агенція з Харкова, працюємо з малим і середнім бізнесом в Україні та ЄС. Простий бот — від $300 і до 2 тижнів, код і доступи передаємо вам."
+        },
+        {
+          "k": "text",
+          "text": "3000+",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "АКТИВНИХ КОРИСТУВАЧІВ KNEU BOT",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$300",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "ПРОСТИЙ БОТ, ВІД",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "2тиж",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "ЗАПУСК ПРОСТОГО БОТА",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "15хв",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "ВІДПОВІДЬ У РОБОЧИЙ ЧАС",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "ПРОЄКТ З ПОРТФОЛІО",
+          "role": "flagship-tag"
+        },
+        {
+          "k": "text",
+          "text": "KNEU Bot",
+          "role": "flagship-name"
+        },
+        {
+          "k": "text",
+          "text": "Офіційний Telegram-бот КНЕУ",
+          "role": "flagship-url"
+        },
+        {
+          "k": "text",
+          "text": "3000+",
+          "role": "fm-val"
+        },
+        {
+          "k": "text",
+          "text": "Активних користувачів",
+          "role": "fm-key"
+        },
+        {
+          "k": "text",
+          "text": "Розклад",
+          "role": "fm-val"
+        },
+        {
+          "k": "text",
+          "text": "Завжди актуальний у чаті",
+          "role": "fm-key"
+        },
+        {
+          "k": "text",
+          "text": "Новини",
+          "role": "fm-val"
+        },
+        {
+          "k": "text",
+          "text": "Університету в одному місці",
+          "role": "fm-key"
+        },
+        {
+          "k": "text",
+          "text": "Push",
+          "role": "fm-val"
+        },
+        {
+          "k": "text",
+          "text": "Сповіщення студентам",
+          "role": "fm-key"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "AIOGRAM 3 → FASTAPI → POSTGRESQL → REDIS → LIQPAY → MONOBANK → MINI APP → CRM → AIOGRAM 3 → FASTAPI → POSTGRESQL → REDIS → LIQPAY → MONOBANK → MINI APP → CRM →"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Коли бізнесу потрібен бот",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЗАДАЧА",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Коли бізнесу потрібен бот"
+        },
+        {
+          "k": "text",
+          "text": "Клієнти пишуть у Telegram о 23:00, а менеджер відповідає зранку. Половина питань однакові: ціна, графік, наявність, «як записатися». Заявки з різних чатів губляться, а таблицю з контактами ведуть вручну."
+        },
+        {
+          "k": "text",
+          "text": "Бот забирає цю рутину: відповідає на типові питання, збирає контакти за сценарієм, приймає оплату й одразу сповіщає відповідального. Менеджер отримує вже готову заявку з іменем, телефоном і суттю запиту."
+        },
+        {
+          "k": "text",
+          "text": "Ми не ставимо шаблонний конструктор. Розробка телеграм-бота в нас — це код на Python (aiogram 3), власна база PostgreSQL і логіка під ваш процес. Бот, база й доступи належать вам."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "class": "what",
+      "heading": "Що входить у розробку телеграм-бота",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЩО ВХОДИТЬ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Що входить у розробку телеграм-бота"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Сценарії та логіка"
+        },
+        {
+          "k": "text",
+          "text": "Розписуємо діалоги, кнопки й гілки: що бот питає, що відповідає, коли передає розмову людині. Стани зберігаються в Redis, тож користувач продовжує з того місця, де зупинився.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "aiogram 3 · FSM · Redis",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "База і CRM"
+        },
+        {
+          "k": "text",
+          "text": "Кожна заявка записується в PostgreSQL і приходить адміністратору в Telegram. За потреби синхронізуємо з Google Sheets або CRM — детальніше на сторінці інтеграції бота з CRM.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "PostgreSQL · Google Sheets · REST API",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Оплата в чаті"
+        },
+        {
+          "k": "text",
+          "text": "Підключаємо LiqPay, WayForPay, Monobank, Stripe або Telegram Payments. Клієнт платить, не виходячи з Telegram, а бот сам підтверджує оплату й видає доступ чи чек.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "LiqPay · WayForPay · Monobank",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Адмінка й розсилки"
+        },
+        {
+          "k": "text",
+          "text": "Керування ботом — прямо в Telegram: нові заявки, зміна статусів, розсилка за сегментами, базова статистика. Технічні знання для цього не потрібні.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Адмін-бот · Ролі · Розсилки",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Mini App і AI"
+        },
+        {
+          "k": "text",
+          "text": "Коли кнопок замало — робимо Telegram Mini App: каталог, кабінет чи форму всередині Telegram. AI-функції (відповіді, генерація текстів) будуємо на Claude API або через n8n.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Mini App · Claude API · n8n",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Запуск і передача"
+        },
+        {
+          "k": "text",
+          "text": "Розгортаємо на Railway або вашому сервері, налаштовуємо логи й автоперезапуск. Передаємо вихідний код, доступи до бази та інструкцію для адміністратора.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Railway · VPS · Код — ваш",
+          "role": "what-tags"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "types",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Бот під конкретну задачу",
+      "items": [
+        {
+          "k": "text",
+          "text": "ТИПИ БОТІВ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Бот під конкретну задачу"
+        },
+        {
+          "k": "card-link",
+          "href": "/services/bots-sales/",
+          "items": [
+            {
+              "k": "text",
+              "text": "01"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Бот для продажів"
+            },
+            {
+              "k": "text",
+              "text": "Квіз-кваліфікація, каталог, оплата в чаті й передача теплого ліда менеджеру. Від $500, від 7 днів."
+            },
+            {
+              "k": "text",
+              "text": "Детальніше →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/services/bots-restaurant/",
+          "items": [
+            {
+              "k": "text",
+              "text": "02"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Бот для ресторану"
+            },
+            {
+              "k": "text",
+              "text": "Меню з фото, замовлення на доставку й самовивіз, бронювання столиків. Від $600."
+            },
+            {
+              "k": "text",
+              "text": "Детальніше →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/services/bots-crm/",
+          "items": [
+            {
+              "k": "text",
+              "text": "03"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Бот + CRM"
+            },
+            {
+              "k": "text",
+              "text": "Ліди, угоди й статуси синхронізуються з Bitrix24, amoCRM, Pipedrive або Google Sheets. Від $800."
+            },
+            {
+              "k": "text",
+              "text": "Детальніше →"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-tiers",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Скільки коштує телеграм-бот",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЦІНИ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Скільки коштує телеграм-бот"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Starter"
+        },
+        {
+          "k": "text",
+          "text": "від $300",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "Простий бот · до 2 тижнів",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Заявки, квіз або запис",
+            "Відповіді на типові питання",
+            "Сповіщення адміністратору",
+            "База даних PostgreSQL",
+            "Запуск на Railway",
+            "Оплати",
+            "CRM-інтеграція",
+            "Mini App"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "ОБГОВОРИТИ ПРОЄКТ",
+          "href": "/services/bots/#contact"
+        },
+        {
+          "k": "text",
+          "text": "ЧАСТО ОБИРАЮТЬ",
+          "role": "level-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Business"
+        },
+        {
+          "k": "text",
+          "text": "від $700",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "Повноцінний бот · до 4 тижнів",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Багатокрокові сценарії",
+            "Оплати в чаті",
+            "CRM або Google Sheets",
+            "Кілька адміністраторів і ролі",
+            "Розсилки за сегментами",
+            "Базова статистика",
+            "1 місяць підтримки",
+            "Mini App"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "ОБГОВОРИТИ ПРОЄКТ",
+          "href": "/services/bots/#contact"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Enterprise"
+        },
+        {
+          "k": "text",
+          "text": "від $1 500",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "Складна система · план робіт окремо",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Telegram Mini App",
+            "AI-функції (Claude API, n8n)",
+            "Кілька ботів і ролей",
+            "Веб-дашборд для команди",
+            "Інтеграції з вашими API",
+            "3 місяці підтримки"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "ОБГОВОРИТИ ПРОЄКТ",
+          "href": "/services/bots/#contact"
+        },
+        {
+          "k": "text",
+          "text": "Точну суму фіксуємо після брифу. Оплата поетапно. Сервер і комісії платіжних систем оплачуються окремо. Ціни на сайти, рекламу та SEO — на сторінці ціни. Що врахувати перед замовленням, ми розібрали в статті «Telegram-бот для бізнесу»."
+        }
+      ],
+      "tiers": [
+        {
+          "name": "Starter",
+          "price": "від $300",
+          "priceNote": "Простий бот · до 2 тижнів",
+          "term": "Простий бот · до 2 тижнів",
+          "includes": [
+            "Заявки, квіз або запис",
+            "Відповіді на типові питання",
+            "Сповіщення адміністратору",
+            "База даних PostgreSQL",
+            "Запуск на Railway",
+            "Оплати",
+            "CRM-інтеграція",
+            "Mini App"
+          ],
+          "cta": [
+            {
+              "text": "ОБГОВОРИТИ ПРОЄКТ",
+              "href": "#contact"
+            }
+          ]
+        },
+        {
+          "name": "Business",
+          "badge": "ЧАСТО ОБИРАЮТЬ",
+          "price": "від $700",
+          "priceNote": "Повноцінний бот · до 4 тижнів",
+          "term": "Повноцінний бот · до 4 тижнів",
+          "includes": [
+            "Багатокрокові сценарії",
+            "Оплати в чаті",
+            "CRM або Google Sheets",
+            "Кілька адміністраторів і ролі",
+            "Розсилки за сегментами",
+            "Базова статистика",
+            "1 місяць підтримки",
+            "Mini App"
+          ],
+          "cta": [
+            {
+              "text": "ОБГОВОРИТИ ПРОЄКТ",
+              "href": "#contact"
+            }
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "price": "від $1 500",
+          "priceNote": "Складна система · план робіт окремо",
+          "term": "",
+          "includes": [
+            "Telegram Mini App",
+            "AI-функції (Claude API, n8n)",
+            "Кілька ботів і ролей",
+            "Веб-дашборд для команди",
+            "Інтеграції з вашими API",
+            "3 місяці підтримки"
+          ],
+          "cta": [
+            {
+              "text": "ОБГОВОРИТИ ПРОЄКТ",
+              "href": "#contact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "class": "process",
+      "heading": "Як ми працюємо",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЕТАПИ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Як ми працюємо"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Бриф"
+        },
+        {
+          "k": "text",
+          "text": "Розбираємо процес, ролі та що має робити бот",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 дні",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Сценарій"
+        },
+        {
+          "k": "text",
+          "text": "Схема діалогів і кнопок, погоджуємо з вами",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "3–5 днів",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Розробка"
+        },
+        {
+          "k": "text",
+          "text": "Код, база, оплати, інтеграції, адмінка",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "Залежно від тарифу",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Тестування"
+        },
+        {
+          "k": "text",
+          "text": "Проходимо всі сценарії, виправляємо помилки",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "2–4 дні",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Запуск"
+        },
+        {
+          "k": "text",
+          "text": "Деплой, передача коду й доступів, підтримка",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "1 день",
+          "role": "process-time"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Боти, які ми вже запустили",
+      "items": [
+        {
+          "k": "text",
+          "text": "ПОРТФОЛІО",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Боти, які ми вже запустили"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "KNEU Bot"
+        },
+        {
+          "k": "text",
+          "text": "Офіційний бот КНЕУ: розклад, новини, сповіщення. 3 000+ активних користувачів.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Python, aiogram",
+            "PostgreSQL",
+            "Railway"
+          ]
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Parrot School"
+        },
+        {
+          "k": "text",
+          "text": "Telegram-екосистема школи англійської: окремі ролі для учня, батьків і вчителя плюс адмін-бот.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "3 ролі + адмін-бот",
+            "aiogram",
+            "Railway"
+          ]
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "BizBot"
+        },
+        {
+          "k": "text",
+          "text": "Бот для бухгалтерії малого бізнесу: зарплати, задачі, автозаповнення Excel. Економить 4+ години на тиждень.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "aiogram",
+            "FastAPI",
+            "Приватний проєкт"
+          ]
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "IU Bot"
+        },
+        {
+          "k": "text",
+          "text": "Наш власний lead-бот: квіз, покрокові сценарії, передача ліда в CRM.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Квіз-кваліфікація",
+            "FSM-сценарії",
+            "CRM"
+          ]
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "InfinityCreo"
+        },
+        {
+          "k": "text",
+          "text": "AI-генерація рекламних креативів через n8n: від брифу до банера приблизно за 3 хвилини, 10+ форматів.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "n8n",
+            "AI-генерація",
+            "@infinitycreo_bot"
+          ]
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Realty Monitor"
+        },
+        {
+          "k": "text",
+          "text": "Моніторинг об'єктів нерухомості з оплатою підписки через LiqPay і покроковими сценаріями.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "LiqPay",
+            "FSM",
+            "Сповіщення"
+          ]
+        },
+        {
+          "k": "text",
+          "text": "Сайти, рекламні та інші проєкти — у портфоліо. Якщо боту потрібен ще й сайт і CRM як одна система, дивіться автоматизацію бізнесу."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq",
+      "heading": "Питання про розробку бота",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЧАСТІ ПИТАННЯ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Питання про розробку бота"
+        },
+        {
+          "k": "faq",
+          "q": "Скільки коштує розробка телеграм-бота?",
+          "a": "Starter — від $300, Business з оплатами й CRM — від $700, Enterprise з Mini App чи AI — від $1 500. Точну суму фіксуємо після брифу. Сервер і комісії платіжних систем — окремо."
+        },
+        {
+          "k": "faq",
+          "q": "Скільки часу займає розробка?",
+          "a": "Простий бот — до 2 тижнів, бот рівня Business — до 4 тижнів. Для Enterprise складаємо окремий план етапів після брифу."
+        },
+        {
+          "k": "faq",
+          "q": "Які оплати можна підключити до бота?",
+          "a": "LiqPay, WayForPay, Monobank, Stripe і Telegram Payments. Бот сам підтверджує оплату, надсилає чек і видає доступ або передає замовлення в роботу."
+        },
+        {
+          "k": "faq",
+          "q": "Чи можна зв'язати бота з CRM або сайтом?",
+          "a": "Так. Бот може передавати ліди в Google Sheets чи CRM і отримувати заявки з сайту через webhook. Варіанти й ціни — на сторінці інтеграції з CRM."
+        },
+        {
+          "k": "faq",
+          "q": "Кому належить бот після запуску?",
+          "a": "Вам. Бот реєструється на ваш акаунт через @BotFather, а ми передаємо вихідний код, доступи до бази та сервера. Без абонплати за «оренду» бота."
+        },
+        {
+          "k": "faq",
+          "q": "Хто підтримує бота після запуску?",
+          "a": "У тариф Business входить 1 місяць підтримки, у Enterprise — 3 місяці. Далі — від $150/міс або погодинно, коли потрібні зміни."
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Розкажіть, що має робити бот",
+      "items": [
+        {
+          "k": "text",
+          "text": "ОБГОВОРИТИ БОТА",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Розкажіть, що має робити бот"
+        },
+        {
+          "k": "text",
+          "text": "Опишіть задачу в месенджері — у робочий час відповідаємо протягом 15 хвилин і пропонуємо тариф",
+          "role": "cta-final-sub"
+        },
+        {
+          "k": "link",
+          "text": "Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WhatsApp",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Viber",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380688286969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "link",
+          "text": "ЗАПОВНИТИ ФОРМУ",
+          "href": "/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [
+    {
+      "block": 6,
+      "section": "Скільки коштує телеграм-бот",
+      "name": "Starter",
+      "price": "від $300",
+      "priceNote": "Простий бот · до 2 тижнів",
+      "term": "Простий бот · до 2 тижнів",
+      "includes": [
+        "Заявки, квіз або запис",
+        "Відповіді на типові питання",
+        "Сповіщення адміністратору",
+        "База даних PostgreSQL",
+        "Запуск на Railway",
+        "Оплати",
+        "CRM-інтеграція",
+        "Mini App"
+      ],
+      "cta": [
+        {
+          "text": "ОБГОВОРИТИ ПРОЄКТ",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 6,
+      "section": "Скільки коштує телеграм-бот",
+      "name": "Business",
+      "badge": "ЧАСТО ОБИРАЮТЬ",
+      "price": "від $700",
+      "priceNote": "Повноцінний бот · до 4 тижнів",
+      "term": "Повноцінний бот · до 4 тижнів",
+      "includes": [
+        "Багатокрокові сценарії",
+        "Оплати в чаті",
+        "CRM або Google Sheets",
+        "Кілька адміністраторів і ролі",
+        "Розсилки за сегментами",
+        "Базова статистика",
+        "1 місяць підтримки",
+        "Mini App"
+      ],
+      "cta": [
+        {
+          "text": "ОБГОВОРИТИ ПРОЄКТ",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 6,
+      "section": "Скільки коштує телеграм-бот",
+      "name": "Enterprise",
+      "price": "від $1 500",
+      "priceNote": "Складна система · план робіт окремо",
+      "term": "",
+      "includes": [
+        "Telegram Mini App",
+        "AI-функції (Claude API, n8n)",
+        "Кілька ботів і ролей",
+        "Веб-дашборд для команди",
+        "Інтеграції з вашими API",
+        "3 місяці підтримки"
+      ],
+      "cta": [
+        {
+          "text": "ОБГОВОРИТИ ПРОЄКТ",
+          "href": "#contact"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Скільки коштує розробка телеграм-бота?",
+      "a": "Starter — від $300, Business з оплатами й CRM — від $700, Enterprise з Mini App чи AI — від $1 500. Точну суму фіксуємо після брифу. Сервер і комісії платіжних систем — окремо."
+    },
+    {
+      "q": "Скільки часу займає розробка?",
+      "a": "Простий бот — до 2 тижнів, бот рівня Business — до 4 тижнів. Для Enterprise складаємо окремий план етапів після брифу."
+    },
+    {
+      "q": "Які оплати можна підключити до бота?",
+      "a": "LiqPay, WayForPay, Monobank, Stripe і Telegram Payments. Бот сам підтверджує оплату, надсилає чек і видає доступ або передає замовлення в роботу."
+    },
+    {
+      "q": "Чи можна зв'язати бота з CRM або сайтом?",
+      "a": "Так. Бот може передавати ліди в Google Sheets чи CRM і отримувати заявки з сайту через webhook. Варіанти й ціни — на сторінці інтеграції з CRM."
+    },
+    {
+      "q": "Кому належить бот після запуску?",
+      "a": "Вам. Бот реєструється на ваш акаунт через @BotFather, а ми передаємо вихідний код, доступи до бази та сервера. Без абонплати за «оренду» бота."
+    },
+    {
+      "q": "Хто підтримує бота після запуску?",
+      "a": "У тариф Business входить 1 місяць підтримки, у Enterprise — 3 місяці. Далі — від $150/міс або погодинно, коли потрібні зміни."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "інтеграції бота з CRM",
+      "href": "/services/bots-crm/",
+      "block": 4
+    },
+    {
+      "text": "01 Бот для продажів Квіз-кваліфікація, каталог, оплата в чаті й передача теплого ліда менеджеру. Від $500, від 7 днів. Детальніше →",
+      "href": "/services/bots-sales/",
+      "block": 5,
+      "card": true
+    },
+    {
+      "text": "02 Бот для ресторану Меню з фото, замовлення на доставку й самовивіз, бронювання столиків. Від $600. Детальніше →",
+      "href": "/services/bots-restaurant/",
+      "block": 5,
+      "card": true
+    },
+    {
+      "text": "03 Бот + CRM Ліди, угоди й статуси синхронізуються з Bitrix24, amoCRM, Pipedrive або Google Sheets. Від $800. Детальніше →",
+      "href": "/services/bots-crm/",
+      "block": 5,
+      "card": true
+    },
+    {
+      "text": "ОБГОВОРИТИ ПРОЄКТ",
+      "href": "/services/bots/#contact",
+      "block": 6
+    },
+    {
+      "text": "ОБГОВОРИТИ ПРОЄКТ",
+      "href": "/services/bots/#contact",
+      "block": 6
+    },
+    {
+      "text": "ОБГОВОРИТИ ПРОЄКТ",
+      "href": "/services/bots/#contact",
+      "block": 6
+    },
+    {
+      "text": "ціни",
+      "href": "/pricing/",
+      "block": 6
+    },
+    {
+      "text": "«Telegram-бот для бізнесу»",
+      "href": "/blog/telegram-bot-dlya-biznesu/",
+      "block": 6
+    },
+    {
+      "text": "портфоліо",
+      "href": "/portfolio/",
+      "block": 8
+    },
+    {
+      "text": "автоматизацію бізнесу",
+      "href": "/services/ecosystems/",
+      "block": 8
+    },
+    {
+      "text": "інтеграції з CRM",
+      "href": "/services/bots-crm/",
+      "block": 9
+    },
+    {
+      "text": "ЗАПОВНИТИ ФОРМУ",
+      "href": "/#contact",
+      "block": 10
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 10
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 10
+    },
+    {
+      "text": "Viber",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 10
+    },
+    {
+      "text": "+380688286969",
+      "href": "tel:+380688286969",
+      "block": 10
+    }
+  ]
+}

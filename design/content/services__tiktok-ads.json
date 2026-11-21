@@ -1,0 +1,878 @@
+{
+  "url": "https://infiniteunion.com.ua/services/tiktok-ads/",
+  "path": "/services/tiktok-ads/",
+  "file": "services/tiktok-ads/index.html",
+  "lang": "uk",
+  "alt": {
+    "lang": "en",
+    "path": "/en/services/tiktok-ads/",
+    "url": "https://infiniteunion.com.ua/en/services/tiktok-ads/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "TikTok Ads",
+  "title": "Реклама в TikTok для бізнесу — запуск від $250",
+  "description": "Реклама в TikTok: In-Feed, Spark Ads, TikTok Pixel, UGC-креативи під формат платформи. Налаштування від $250, ведення від $150/міс, бюджет від $200.",
+  "keyword": "реклама в TikTok",
+  "priceFrom": 250,
+  "robots": "index, follow",
+  "h1": "Реклама в TikTok",
+  "breadcrumbs": [
+    {
+      "name": "Головна",
+      "url": "/"
+    },
+    {
+      "name": "TikTok Ads",
+      "url": "/services/tiktok-ads/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#F5F0E8",
+    "--bg2": "#EDE8E0",
+    "--dark": "#0A0A0A",
+    "--text": "#1A1A1A",
+    "--muted": "#777",
+    "--border": "rgba(0,0,0,0.07)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ease": "cubic-bezier(0.76,0,0.24,1)",
+    "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+  },
+  "words": 799,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Назад",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "EN",
+      "href": "/en/services/tiktok-ads/"
+    },
+    {
+      "k": "link",
+      "text": "ЗАПУСТИТИ TIKTOK ADS",
+      "href": "/services/tiktok-ads/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "Реклама в TikTok",
+      "items": [
+        {
+          "k": "text",
+          "text": "від $250",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "SETUP",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "Налаштування, разово",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "від $150",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "MGMT",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "Ведення, на місяць",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "від $200",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "BUDGET",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "Мінімальний бюджет — окремо",
+          "role": "hm-sub"
+        },
+        {
+          "k": "decor",
+          "text": "SCROLL"
+        },
+        {
+          "k": "decor",
+          "text": "04"
+        },
+        {
+          "k": "text",
+          "text": "TIKTOK ADS · SPARK ADS · UGC",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Реклама в TikTok"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union налаштовує рекламу в TikTok для брендів, онлайн-магазинів і сервісів, чия аудиторія дивиться вертикальне відео. In-Feed і Spark Ads, TikTok Pixel, креативи у стилі платформи. Налаштування від $250, ведення від $150/міс, бюджет від $200/міс — окремо. Обговорити запуск →"
+        },
+        {
+          "k": "text",
+          "text": "$250+",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "налаштування, від",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$150/міс",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "ведення, від",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "9:16",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "формат усіх креативів",
+          "role": "hero-stat-label"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "TIKTOK ADS →IN-FEED ADS →TOPVIEW →UGC ВІДЕО →SPARK ADS →TIKTOK PIXEL →CREATOR MARKETPLACE →VIRAL CONTENT →TIKTOK ADS →IN-FEED ADS →TOPVIEW →UGC ВІДЕО →SPARK ADS →TIKTOK PIXEL →CREATOR MARKETPLACE →VIRAL CONTENT →"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "TikTok не пробачає «рекламного» вигляду",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЗАДАЧА",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "TikTok не пробачає «рекламного» вигляду"
+        },
+        {
+          "k": "text",
+          "text": "Реклама в TikTok провалюється з однієї причини частіше за інші: туди заливають банер або ролик, зроблений для телевізора чи Facebook. Користувач гортає далі за секунду, а ви платите за покази, які ніхто не подивився."
+        },
+        {
+          "k": "text",
+          "text": "Працюють ролики, які виглядають як звичайний контент: обличчя в кадрі, сильний перший кадр, субтитри, живий звук. Тому реклама в TikTok — це передусім сценарії та тест кількох креативів, а вже потім налаштування аудиторій і ставок."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Що входить у рекламу в TikTok",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЩО ВХОДИТЬ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Що входить у рекламу в TikTok"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "TikTok Pixel і події"
+        },
+        {
+          "k": "text",
+          "text": "Встановлюємо Pixel на сайт, налаштовуємо події заявки чи покупки, щоб алгоритм оптимізував показ під результат.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "TikTok Pixel · Events",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "In-Feed Ads"
+        },
+        {
+          "k": "text",
+          "text": "Ролики у стрічці «Для вас» з кнопкою переходу на сайт, у профіль або на лід-форму.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "In-Feed · Лід-форми",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Spark Ads"
+        },
+        {
+          "k": "text",
+          "text": "Просуваємо органічні відео вашого акаунта або авторів (з їхнього дозволу). Лайки й коментарі залишаються на оригінальному відео.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Spark Ads · Автори",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Сценарії креативів"
+        },
+        {
+          "k": "text",
+          "text": "Пишемо короткі сценарії під формат: перший кадр, текст на екрані, заклик до дії. Знімаєте ви або автори — ми даємо структуру і монтаж-ТЗ.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "UGC · Сценарії · 9:16",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Аудиторії"
+        },
+        {
+          "k": "text",
+          "text": "Інтереси, поведінка, схожі аудиторії та ретаргетинг на тих, хто дивився ролики чи заходив на сайт.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Interest · Lookalike · Retargeting",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Звіти"
+        },
+        {
+          "k": "text",
+          "text": "Щотижневе зведення та щомісячний звіт: витрати, перегляди, переходи, заявки — і які ролики варто перезняти.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Щотижня · Щомісяця",
+          "role": "service-tags"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Етапи запуску",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЯК МИ ПРАЦЮЄМО",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Етапи запуску"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Бриф"
+        },
+        {
+          "k": "text",
+          "text": "Продукт, аудиторія, наявний відеоконтент, ціль кампанії: продажі, заявки чи підписники.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 дні",
+          "role": "process-time"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Pixel і сценарії"
+        },
+        {
+          "k": "text",
+          "text": "TikTok Ads Manager, Pixel, події, 3–5 сценаріїв для перших тестів.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "2–3 дні",
+          "role": "process-time"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Зйомка і запуск"
+        },
+        {
+          "k": "text",
+          "text": "Ви знімаєте за сценаріями, ми монтуємо ТЗ і запускаємо кілька креативів паралельно.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "Залежить від зйомки",
+          "role": "process-time"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Тести і оновлення"
+        },
+        {
+          "k": "text",
+          "text": "Креативи в TikTok «вигорають» швидше, ніж деінде, тому регулярно оновлюємо ролики.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "Щотижня",
+          "role": "process-time"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Ціна реклами в TikTok",
+      "items": [
+        {
+          "k": "text",
+          "text": "ВАРТІСТЬ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Ціна реклами в TikTok"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01 · РАЗОВО",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Налаштування — від $250"
+        },
+        {
+          "k": "text",
+          "text": "Рекламний кабінет, Pixel і події, аудиторії, сценарії та перша кампанія з кількома креативами.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "02 · ЩОМІСЯЦЯ",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ведення — від $150/міс"
+        },
+        {
+          "k": "text",
+          "text": "Тести креативів і аудиторій, Spark Ads, оптимізація бюджету, щотижневі зведення і щомісячний звіт.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "03 · БЮДЖЕТ",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Реклама — від $200/міс"
+        },
+        {
+          "k": "text",
+          "text": "Рекламний бюджет оплачується окремо, напряму в TikTok. Менший бюджет алгоритм не встигає ефективно використати.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "04 · НЕ ВХОДИТЬ",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Що оплачується окремо"
+        },
+        {
+          "k": "text",
+          "text": "Зйомка відео, гонорари авторів і рекламний бюджет. Кількість переглядів чи продажів заздалегідь не обіцяємо. Усі ціни агенції — на сторінці тарифів.",
+          "role": "service-desc"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Наші інструменти",
+      "items": [
+        {
+          "k": "text",
+          "text": "ПОРТФОЛІО",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Наші інструменти"
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "ВЛАСНИЙ ІНСТРУМЕНТ",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Ad Tracker by IU"
+            },
+            {
+              "k": "text",
+              "text": "Власний дашборд Infinite Union: Meta, Google і TikTok Ads в одному вікні, автооновлення кожні 2 години, 90 днів історії. Економить команді 5+ годин на тиждень на звітах. Зараз у розробці.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "TikTok Ads · Meta Ads · Google Ads",
+              "role": "service-tags"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "AI-КРЕАТИВИ",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "InfinityCreo"
+            },
+            {
+              "k": "text",
+              "text": "Бот на n8n для генерації рекламних креативів: від брифу до банера приблизно за 3 хвилини, 10+ форматів.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "n8n · AI",
+              "role": "service-tags"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "related-services",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Поєднайте TikTok з іншими каналами",
+      "items": [
+        {
+          "k": "text",
+          "text": "ІНШІ КАНАЛИ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Поєднайте TikTok з іншими каналами"
+        },
+        {
+          "k": "card-link",
+          "href": "/services/meta-ads/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "META",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Таргетована реклама Facebook та Instagram"
+            },
+            {
+              "k": "text",
+              "text": "Ті самі відео можна використати в Reels — часто це найшвидший спосіб перевірити креатив на двох платформах.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "Від $250",
+              "role": "service-tags"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/services/meta-ads-instagram/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "INSTAGRAM",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Реклама в Instagram"
+            },
+            {
+              "k": "text",
+              "text": "Reels, Stories і стрічка, заявки в Direct.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "Від $250",
+              "role": "service-tags"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq-section",
+      "heading": "Часті запитання",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "faq-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Часті запитання"
+        },
+        {
+          "k": "faq",
+          "q": "Скільки коштує реклама в TikTok?",
+          "a": "Налаштування — від $250 разово, ведення — від $150/міс. Рекламний бюджет оплачується окремо, мінімум — від $200/міс."
+        },
+        {
+          "k": "faq",
+          "q": "Чи потрібен акаунт у TikTok і власні відео?",
+          "a": "Для In-Feed реклами достатньо рекламного кабінету, але з активним акаунтом і органічними відео можна запускати Spark Ads — вони зазвичай виглядають природніше. Відео знімаєте ви або автори, сценарії готуємо ми."
+        },
+        {
+          "k": "faq",
+          "q": "Що таке Spark Ads?",
+          "a": "Це формат, коли рекламою стає вже опубліковане відео — ваше або автора, який дав дозвіл. Реакції й підписки залишаються на оригінальному акаунті."
+        },
+        {
+          "k": "faq",
+          "q": "Чому бюджет від $200/міс?",
+          "a": "TikTok має мінімальні денні ліміти для кампаній і груп оголошень, а алгоритму потрібні дані для навчання. З меншим бюджетом тест кількох креативів просто не набирає статистики."
+        },
+        {
+          "k": "faq",
+          "q": "Кому підходить реклама в TikTok?",
+          "a": "Брендам і магазинам з візуальним продуктом, сервісам для молодшої аудиторії, закладам, які можна показати у відео. Якщо ваш продукт активно шукають у Google, почніть з Google Ads — про вибір між пошуковими каналами є стаття «Google Ads чи SEO»."
+        },
+        {
+          "k": "faq",
+          "q": "Як ви звітуєте?",
+          "a": "Щотижня — коротке зведення, раз на місяць — звіт із витратами, переглядами, переходами й заявками. Дані з TikTok, Meta і Google збираємо в Ad Tracker — нашому дашборді, який зараз у розробці."
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Запустимо рекламу в TikTok",
+      "items": [
+        {
+          "k": "decor",
+          "text": "TIKTOK"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Запустимо рекламу в TikTok"
+        },
+        {
+          "k": "text",
+          "text": "Надішліть посилання на продукт або профіль — відповімо протягом 15 хвилин у робочий час"
+        },
+        {
+          "k": "link",
+          "text": "Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WhatsApp",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Viber",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380688286969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "link",
+          "text": "ЗАПОВНИТИ ФОРМУ",
+          "href": "/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [
+    {
+      "q": "Скільки коштує реклама в TikTok?",
+      "a": "Налаштування — від $250 разово, ведення — від $150/міс. Рекламний бюджет оплачується окремо, мінімум — від $200/міс."
+    },
+    {
+      "q": "Чи потрібен акаунт у TikTok і власні відео?",
+      "a": "Для In-Feed реклами достатньо рекламного кабінету, але з активним акаунтом і органічними відео можна запускати Spark Ads — вони зазвичай виглядають природніше. Відео знімаєте ви або автори, сценарії готуємо ми."
+    },
+    {
+      "q": "Що таке Spark Ads?",
+      "a": "Це формат, коли рекламою стає вже опубліковане відео — ваше або автора, який дав дозвіл. Реакції й підписки залишаються на оригінальному акаунті."
+    },
+    {
+      "q": "Чому бюджет від $200/міс?",
+      "a": "TikTok має мінімальні денні ліміти для кампаній і груп оголошень, а алгоритму потрібні дані для навчання. З меншим бюджетом тест кількох креативів просто не набирає статистики."
+    },
+    {
+      "q": "Кому підходить реклама в TikTok?",
+      "a": "Брендам і магазинам з візуальним продуктом, сервісам для молодшої аудиторії, закладам, які можна показати у відео. Якщо ваш продукт активно шукають у Google, почніть з Google Ads — про вибір між пошуковими каналами є стаття «Google Ads чи SEO»."
+    },
+    {
+      "q": "Як ви звітуєте?",
+      "a": "Щотижня — коротке зведення, раз на місяць — звіт із витратами, переглядами, переходами й заявками. Дані з TikTok, Meta і Google збираємо в Ad Tracker — нашому дашборді, який зараз у розробці."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "Обговорити запуск →",
+      "href": "/services/tiktok-ads/#contact",
+      "block": 1
+    },
+    {
+      "text": "тарифів",
+      "href": "/pricing/",
+      "block": 6
+    },
+    {
+      "text": "↗ ВЛАСНИЙ ІНСТРУМЕНТ Ad Tracker by IU Власний дашборд Infinite Union: Meta, Google і TikTok Ads в одному вікні, автооновлення кожні 2 години, 90 днів історії. Економить команді 5+ годин на тиждень на звітах. Зараз у розробці. TikTok AdsMeta AdsGoogle Ads",
+      "href": "/portfolio/",
+      "block": 7,
+      "card": true
+    },
+    {
+      "text": "↗ AI-КРЕАТИВИ InfinityCreo Бот на n8n для генерації рекламних креативів: від брифу до банера приблизно за 3 хвилини, 10+ форматів. n8nAI",
+      "href": "/portfolio/",
+      "block": 7,
+      "card": true
+    },
+    {
+      "text": "↗ META Таргетована реклама Facebook та Instagram Ті самі відео можна використати в Reels — часто це найшвидший спосіб перевірити креатив на двох платформах. Від $250",
+      "href": "/services/meta-ads/",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "↗ INSTAGRAM Реклама в Instagram Reels, Stories і стрічка, заявки в Direct. Від $250",
+      "href": "/services/meta-ads-instagram/",
+      "block": 8,
+      "card": true
+    },
+    {
+      "text": "Google Ads",
+      "href": "/services/google-ads/",
+      "block": 9
+    },
+    {
+      "text": "«Google Ads чи SEO»",
+      "href": "/blog/google-ads-chy-seo/",
+      "block": 9
+    },
+    {
+      "text": "ЗАПОВНИТИ ФОРМУ",
+      "href": "/#contact",
+      "block": 10
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 10
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 10
+    },
+    {
+      "text": "Viber",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 10
+    },
+    {
+      "text": "+380688286969",
+      "href": "tel:+380688286969",
+      "block": 10
+    }
+  ]
+}

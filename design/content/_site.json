@@ -1,0 +1,1355 @@
+{
+  "generated": "2026-10-31T20:36:31.730Z",
+  "source": "main @ b7b90b7",
+  "site": "https://infiniteunion.com.ua",
+  "templates": {
+    "404": [
+      "/404.html"
+    ],
+    "home": [
+      "/",
+      "/en/"
+    ],
+    "service": [
+      "/services/websites/",
+      "/services/bots/",
+      "/services/platforms/",
+      "/services/ecosystems/",
+      "/services/google-ads/",
+      "/services/meta-ads/",
+      "/services/tiktok-ads/",
+      "/services/seo/",
+      "/en/services/websites/",
+      "/en/services/bots/",
+      "/en/services/platforms/",
+      "/en/services/ecosystems/",
+      "/en/services/google-ads/",
+      "/en/services/meta-ads/",
+      "/en/services/tiktok-ads/",
+      "/en/services/seo/"
+    ],
+    "cluster": [
+      "/services/websites-landing/",
+      "/services/websites-shop/",
+      "/services/websites-corporate/",
+      "/services/websites-kharkiv/",
+      "/services/bots-sales/",
+      "/services/bots-restaurant/",
+      "/services/bots-crm/",
+      "/services/google-ads-search/",
+      "/services/meta-ads-instagram/",
+      "/services/seo-audit/",
+      "/services/seo-local/"
+    ],
+    "pricing": [
+      "/pricing/",
+      "/en/pricing/"
+    ],
+    "constructor": [
+      "/services/constructor/"
+    ],
+    "portfolio": [
+      "/portfolio/",
+      "/en/portfolio/"
+    ],
+    "blog-list": [
+      "/blog/"
+    ],
+    "blog-post": [
+      "/blog/skilky-koshtuye-sayt-2026/",
+      "/blog/zamovyty-sayt-kharkiv/",
+      "/blog/telegram-bot-dlya-biznesu/",
+      "/blog/seo-audit-shcho-tse/",
+      "/blog/google-ads-chy-seo/"
+    ],
+    "privacy": [
+      "/services/privacy/"
+    ]
+  },
+  "nav": [
+    {
+      "links": [
+        "INFINITE UNION → /#hero",
+        "Послуги → /#services",
+        "Роботи → /portfolio/",
+        "Ціни → /pricing/",
+        "Контакт → /#contact",
+        "Блог → /blog/",
+        "EN → /en/",
+        "Замовити проект → /#contact",
+        "01 Послуги → /#services",
+        "02 Портфоліо → /portfolio/",
+        "03 Ціни → /pricing/",
+        "04 Блог → /blog/"
+      ],
+      "pages": [
+        "/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/services/websites/",
+        "ЗАМОВИТИ САЙТ → /services/websites/#contact"
+      ],
+      "pages": [
+        "/services/websites/"
+      ]
+    },
+    {
+      "links": [
+        "← Розробка сайтів → /services/websites/",
+        "INFINITE UNION → /",
+        "EN → /en/services/websites/",
+        "ЗАМОВИТИ ЛЕНДІНГ → /services/websites-landing/#contact"
+      ],
+      "pages": [
+        "/services/websites-landing/"
+      ]
+    },
+    {
+      "links": [
+        "← Розробка сайтів → /services/websites/",
+        "INFINITE UNION → /",
+        "EN → /en/services/websites/",
+        "ЗАМОВИТИ МАГАЗИН → /services/websites-shop/#contact"
+      ],
+      "pages": [
+        "/services/websites-shop/"
+      ]
+    },
+    {
+      "links": [
+        "← Розробка сайтів → /services/websites/",
+        "INFINITE UNION → /",
+        "EN → /en/services/websites/",
+        "ЗАМОВИТИ САЙТ → /services/websites-corporate/#contact"
+      ],
+      "pages": [
+        "/services/websites-corporate/"
+      ]
+    },
+    {
+      "links": [
+        "← Розробка сайтів → /services/websites/",
+        "INFINITE UNION → /",
+        "EN → /en/services/websites/",
+        "ЗАМОВИТИ ЛЕНДІНГ → /services/websites-kharkiv/#contact"
+      ],
+      "pages": [
+        "/services/websites-kharkiv/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/pricing/",
+        "ДІЗНАТИСЬ ЦІНУ → /pricing/#contact"
+      ],
+      "pages": [
+        "/pricing/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/services/bots/",
+        "ЗАМОВИТИ БОТА → /services/bots/#contact"
+      ],
+      "pages": [
+        "/services/bots/"
+      ]
+    },
+    {
+      "links": [
+        "← Telegram боти → /services/bots/",
+        "INFINITE UNION → /",
+        "EN → /en/services/bots/",
+        "ЗАМОВИТИ БОТА → /services/bots-sales/#contact"
+      ],
+      "pages": [
+        "/services/bots-sales/"
+      ]
+    },
+    {
+      "links": [
+        "← Telegram боти → /services/bots/",
+        "INFINITE UNION → /",
+        "EN → /en/services/bots/",
+        "ЗАМОВИТИ БОТА → /services/bots-restaurant/#contact"
+      ],
+      "pages": [
+        "/services/bots-restaurant/"
+      ]
+    },
+    {
+      "links": [
+        "← Telegram боти → /services/bots/",
+        "INFINITE UNION → /",
+        "EN → /en/services/bots/",
+        "ЗАМОВИТИ ІНТЕГРАЦІЮ → /services/bots-crm/#contact"
+      ],
+      "pages": [
+        "/services/bots-crm/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/services/platforms/",
+        "ЗАМОВИТИ ПЛАТФОРМУ → /services/platforms/#contact"
+      ],
+      "pages": [
+        "/services/platforms/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/services/ecosystems/",
+        "ЗАМОВИТИ ЕКОСИСТЕМУ → /services/ecosystems/#contact"
+      ],
+      "pages": [
+        "/services/ecosystems/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/services/google-ads/",
+        "ЗАПУСТИТИ GOOGLE ADS → /services/google-ads/#contact"
+      ],
+      "pages": [
+        "/services/google-ads/"
+      ]
+    },
+    {
+      "links": [
+        "← Google Реклама → /services/google-ads/",
+        "INFINITE UNION → /",
+        "EN → /en/services/google-ads/",
+        "ЗАМОВИТИ РЕКЛАМУ → /services/google-ads-search/#contact"
+      ],
+      "pages": [
+        "/services/google-ads-search/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/services/meta-ads/",
+        "ЗАМОВИТИ РЕКЛАМУ → /services/meta-ads/#contact"
+      ],
+      "pages": [
+        "/services/meta-ads/"
+      ]
+    },
+    {
+      "links": [
+        "← Meta Ads → /services/meta-ads/",
+        "INFINITE UNION → /",
+        "EN → /en/services/meta-ads/",
+        "ЗАМОВИТИ РЕКЛАМУ → /services/meta-ads-instagram/#contact"
+      ],
+      "pages": [
+        "/services/meta-ads-instagram/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/services/tiktok-ads/",
+        "ЗАПУСТИТИ TIKTOK ADS → /services/tiktok-ads/#contact"
+      ],
+      "pages": [
+        "/services/tiktok-ads/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/services/seo/",
+        "ЗАМОВИТИ SEO → /services/seo/#contact"
+      ],
+      "pages": [
+        "/services/seo/"
+      ]
+    },
+    {
+      "links": [
+        "← SEO просування → /services/seo/",
+        "INFINITE UNION → /",
+        "EN → /en/services/seo/",
+        "ЗАМОВИТИ АУДИТ → /services/seo-audit/#contact"
+      ],
+      "pages": [
+        "/services/seo-audit/"
+      ]
+    },
+    {
+      "links": [
+        "← SEO просування → /services/seo/",
+        "INFINITE UNION → /",
+        "EN → /en/services/seo/",
+        "ЗАМОВИТИ LOCAL SEO → /services/seo-local/#contact"
+      ],
+      "pages": [
+        "/services/seo-local/"
+      ]
+    },
+    {
+      "links": [
+        "Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/"
+      ],
+      "pages": [
+        "/services/constructor/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/portfolio/",
+        "Замовити проєкт → /#contact"
+      ],
+      "pages": [
+        "/portfolio/"
+      ]
+    },
+    {
+      "links": [
+        "INFINITE UNION → /",
+        "Сайти → /services/websites/",
+        "Боти → /services/bots/",
+        "SEO → /services/seo/",
+        "Блог → /blog/",
+        "EN → /en/",
+        "ЗВ'ЯЗАТИСЬ → /#contact"
+      ],
+      "pages": [
+        "/blog/"
+      ]
+    },
+    {
+      "links": [
+        "INFINITE UNION → /",
+        "EN → /en/",
+        "ЗАМОВИТИ САЙТ → /#contact"
+      ],
+      "pages": [
+        "/blog/skilky-koshtuye-sayt-2026/",
+        "/blog/zamovyty-sayt-kharkiv/"
+      ]
+    },
+    {
+      "links": [
+        "INFINITE UNION → /",
+        "EN → /en/",
+        "ЗАМОВИТИ БОТА → /#contact"
+      ],
+      "pages": [
+        "/blog/telegram-bot-dlya-biznesu/"
+      ]
+    },
+    {
+      "links": [
+        "INFINITE UNION → /",
+        "EN → /en/",
+        "ЗАМОВИТИ АУДИТ → /#contact"
+      ],
+      "pages": [
+        "/blog/seo-audit-shcho-tse/"
+      ]
+    },
+    {
+      "links": [
+        "INFINITE UNION → /",
+        "EN → /en/",
+        "ОТРИМАТИ КОНСУЛЬТАЦІЮ → /#contact"
+      ],
+      "pages": [
+        "/blog/google-ads-chy-seo/"
+      ]
+    },
+    {
+      "links": [
+        "← Назад → /",
+        "INFINITE UNION → /",
+        "EN → /en/"
+      ],
+      "pages": [
+        "/services/privacy/"
+      ]
+    },
+    {
+      "links": [
+        "INFINITE UNION → /en/#hero",
+        "Services → /en/#services",
+        "Portfolio → /en/#portfolio",
+        "Contact → /en/#contact",
+        "UA → /",
+        "Start a project → /en/#contact"
+      ],
+      "pages": [
+        "/en/"
+      ]
+    },
+    {
+      "links": [
+        "← Back → /en/",
+        "INFINITE UNION → /en/",
+        "UA → /services/websites/",
+        "ORDER WEBSITE → /en/services/websites/#contact"
+      ],
+      "pages": [
+        "/en/services/websites/"
+      ]
+    },
+    {
+      "links": [
+        "← Back → /en/",
+        "INFINITE UNION → /en/",
+        "UA → /pricing/",
+        "GET A QUOTE → /en/pricing/#contact"
+      ],
+      "pages": [
+        "/en/pricing/"
+      ]
+    },
+    {
+      "links": [
+        "← Back → /en/",
+        "INFINITE UNION → /en/",
+        "UA → /services/bots/",
+        "ORDER BOT → /en/services/bots/#contact"
+      ],
+      "pages": [
+        "/en/services/bots/"
+      ]
+    },
+    {
+      "links": [
+        "← Back → /en/",
+        "INFINITE UNION → /en/",
+        "UA → /services/platforms/",
+        "ORDER PLATFORM → /en/services/platforms/#contact"
+      ],
+      "pages": [
+        "/en/services/platforms/"
+      ]
+    },
+    {
+      "links": [
+        "← Back → /en/",
+        "INFINITE UNION → /en/",
+        "UA → /services/ecosystems/",
+        "ORDER ECOSYSTEM → /en/services/ecosystems/#contact"
+      ],
+      "pages": [
+        "/en/services/ecosystems/"
+      ]
+    },
+    {
+      "links": [
+        "← Back → /en/",
+        "INFINITE UNION → /en/",
+        "UA → /services/google-ads/",
+        "LAUNCH GOOGLE ADS → /en/services/google-ads/#contact"
+      ],
+      "pages": [
+        "/en/services/google-ads/"
+      ]
+    },
+    {
+      "links": [
+        "← Back → /en/",
+        "INFINITE UNION → /en/",
+        "UA → /services/meta-ads/",
+        "ORDER ADS → /en/services/meta-ads/#contact"
+      ],
+      "pages": [
+        "/en/services/meta-ads/"
+      ]
+    },
+    {
+      "links": [
+        "← Back → /en/",
+        "INFINITE UNION → /en/",
+        "UA → /services/tiktok-ads/",
+        "LAUNCH TIKTOK ADS → /en/services/tiktok-ads/#contact"
+      ],
+      "pages": [
+        "/en/services/tiktok-ads/"
+      ]
+    },
+    {
+      "links": [
+        "← Back → /en/",
+        "INFINITE UNION → /en/",
+        "UA → /services/seo/",
+        "ORDER SEO → /en/services/seo/#contact"
+      ],
+      "pages": [
+        "/en/services/seo/"
+      ]
+    },
+    {
+      "links": [
+        "← Back → /en/",
+        "INFINITE UNION → /en/",
+        "UA → /portfolio/",
+        "Start a project → /en/#contact"
+      ],
+      "pages": [
+        "/en/portfolio/"
+      ]
+    },
+    {
+      "links": [],
+      "pages": [
+        "/404.html"
+      ]
+    }
+  ],
+  "footer": {
+    "uk": {
+      "groups": [
+        {
+          "title": "(бренд)",
+          "links": [
+            {
+              "text": "INFINITE UNION",
+              "href": "/"
+            }
+          ],
+          "text": "Infinite Union — веб-студія з Харкова. Сайти, Telegram-боти, реклама та SEO."
+        },
+        {
+          "title": "Розробка",
+          "links": [
+            {
+              "text": "Розробка сайтів",
+              "href": "/services/websites/"
+            },
+            {
+              "text": "Лендінг під ключ",
+              "href": "/services/websites-landing/"
+            },
+            {
+              "text": "Інтернет-магазин",
+              "href": "/services/websites-shop/"
+            },
+            {
+              "text": "Корпоративний сайт",
+              "href": "/services/websites-corporate/"
+            },
+            {
+              "text": "Сайти в Харкові",
+              "href": "/services/websites-kharkiv/"
+            },
+            {
+              "text": "Telegram-боти",
+              "href": "/services/bots/"
+            },
+            {
+              "text": "Бот для продажів",
+              "href": "/services/bots-sales/"
+            },
+            {
+              "text": "Бот для ресторану",
+              "href": "/services/bots-restaurant/"
+            },
+            {
+              "text": "Бот + CRM",
+              "href": "/services/bots-crm/"
+            },
+            {
+              "text": "Вебплатформи та SaaS",
+              "href": "/services/platforms/"
+            },
+            {
+              "text": "Цифрові екосистеми",
+              "href": "/services/ecosystems/"
+            }
+          ]
+        },
+        {
+          "title": "Реклама і SEO",
+          "links": [
+            {
+              "text": "Google Ads",
+              "href": "/services/google-ads/"
+            },
+            {
+              "text": "Пошукова реклама",
+              "href": "/services/google-ads-search/"
+            },
+            {
+              "text": "Таргет Facebook та Instagram",
+              "href": "/services/meta-ads/"
+            },
+            {
+              "text": "Реклама в Instagram",
+              "href": "/services/meta-ads-instagram/"
+            },
+            {
+              "text": "TikTok Ads",
+              "href": "/services/tiktok-ads/"
+            },
+            {
+              "text": "SEO просування",
+              "href": "/services/seo/"
+            },
+            {
+              "text": "SEO аудит",
+              "href": "/services/seo-audit/"
+            },
+            {
+              "text": "Локальне SEO",
+              "href": "/services/seo-local/"
+            }
+          ]
+        },
+        {
+          "title": "Компанія",
+          "links": [
+            {
+              "text": "Ціни",
+              "href": "/pricing/"
+            },
+            {
+              "text": "AI-конструктор",
+              "href": "/services/constructor/"
+            },
+            {
+              "text": "Портфоліо",
+              "href": "/portfolio/"
+            },
+            {
+              "text": "Блог",
+              "href": "/blog/"
+            },
+            {
+              "text": "English",
+              "href": "/en/"
+            }
+          ]
+        },
+        {
+          "title": "Контакти",
+          "links": [
+            {
+              "text": "Telegram",
+              "href": "https://t.me/infiniteunion_manager"
+            },
+            {
+              "text": "WhatsApp",
+              "href": "https://wa.me/380688286969"
+            },
+            {
+              "text": "+380688286969",
+              "href": "tel:+380688286969"
+            },
+            {
+              "text": "supportinfiniteunion@gmail.com",
+              "href": "mailto:supportinfiniteunion@gmail.com"
+            }
+          ]
+        }
+      ],
+      "bottom": {
+        "text": "© 2026 Infinite Union · Харків, Україна Instagram · Telegram-канал · Політика конфіденційності",
+        "links": [
+          {
+            "text": "Instagram",
+            "href": "https://instagram.com/infinite_union"
+          },
+          {
+            "text": "Telegram-канал",
+            "href": "https://t.me/infinite_union_channel"
+          },
+          {
+            "text": "Політика конфіденційності",
+            "href": "/services/privacy/"
+          }
+        ]
+      }
+    },
+    "en": {
+      "groups": [
+        {
+          "title": "(бренд)",
+          "links": [
+            {
+              "text": "INFINITE UNION",
+              "href": "/en/"
+            }
+          ],
+          "text": "Infinite Union — web development agency from Kharkiv, Ukraine. Websites, Telegram bots, ads and SEO."
+        },
+        {
+          "title": "Development",
+          "links": [
+            {
+              "text": "Website development",
+              "href": "/en/services/websites/"
+            },
+            {
+              "text": "Telegram bots",
+              "href": "/en/services/bots/"
+            },
+            {
+              "text": "Web platforms & SaaS",
+              "href": "/en/services/platforms/"
+            },
+            {
+              "text": "Business automation",
+              "href": "/en/services/ecosystems/"
+            }
+          ]
+        },
+        {
+          "title": "Marketing",
+          "links": [
+            {
+              "text": "Google Ads",
+              "href": "/en/services/google-ads/"
+            },
+            {
+              "text": "Meta Ads",
+              "href": "/en/services/meta-ads/"
+            },
+            {
+              "text": "TikTok Ads",
+              "href": "/en/services/tiktok-ads/"
+            },
+            {
+              "text": "SEO services",
+              "href": "/en/services/seo/"
+            }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            {
+              "text": "Pricing",
+              "href": "/en/pricing/"
+            },
+            {
+              "text": "Portfolio",
+              "href": "/en/portfolio/"
+            },
+            {
+              "text": "Українською",
+              "href": "/"
+            }
+          ]
+        },
+        {
+          "title": "Contact",
+          "links": [
+            {
+              "text": "Telegram",
+              "href": "https://t.me/infiniteunion_manager"
+            },
+            {
+              "text": "WhatsApp",
+              "href": "https://wa.me/380688286969"
+            },
+            {
+              "text": "+380688286969",
+              "href": "tel:+380688286969"
+            },
+            {
+              "text": "supportinfiniteunion@gmail.com",
+              "href": "mailto:supportinfiniteunion@gmail.com"
+            }
+          ]
+        }
+      ],
+      "bottom": {
+        "text": "© 2026 Infinite Union · Kharkiv, Ukraine Instagram · Telegram channel · Privacy policy (UA)",
+        "links": [
+          {
+            "text": "Instagram",
+            "href": "https://instagram.com/infinite_union"
+          },
+          {
+            "text": "Telegram channel",
+            "href": "https://t.me/infinite_union_channel"
+          },
+          {
+            "text": "Privacy policy (UA)",
+            "href": "/services/privacy/"
+          }
+        ]
+      }
+    }
+  },
+  "contacts": "- Назва: Infinite Union (IU). Digital-агенція / веб-студія, Харків, Україна (49°59′N 36°14′E).\n- Працюємо по Україні та з клієнтами з ЄС (areaServed: UA, PL, DE, NL, CZ, SK, GB).\n- Контакти: Telegram https://t.me/infiniteunion_manager · WhatsApp https://wa.me/380688286969 ·\n  Viber viber://chat?number=%2B380688286969 · тел. +380688286969.\n- Відповідаємо на запит протягом 15 хвилин (у робочий час — так формулювати).\n- Передаємо клієнту весь вихідний код і доступи — продукт належить клієнту.\n- Оплата поетапно (у блозі рекомендуємо 50% / 50%).\n- Стек: HTML/CSS/JS, Next.js, React, TypeScript, Python, FastAPI, aiogram 3, PostgreSQL, Redis, Railway, Cloudflare, n8n, Claude API.\n- Процес (з головної): Брифінг 1–2 дні → Прототип 3–5 днів → Розробка (залежно від проєкту) → Тестування 2–4 дні → Запуск 1 день → Підтримка.\n- Ліди з форми: зберігаються в PostgreSQL, черга Redis з повторною обробкою, сповіщення в Telegram.\n- Ad Tracker: власний дашборд IU (Meta, Google, TikTok Ads в одному вікні, автооновлення кожні 2 години, 90 днів історії) — app.infinitetracker.com.ua. У розробці.\n- AI-конструктор: /services/constructor/ — безкоштовне AI-прев'ю сайту (до 3 генерацій), це концепт, не готовий сайт.",
+  "prices": "Сайти (з таблиць тарифів сторінок + блог «Скільки коштує сайт», розділ «наші ціни»):\n- Лендінг: Start від $600 (5–7 секцій, до 10 днів) · Pro від $1 200 (10+ секцій, до 3 тижнів) · Max від $2 000.\n- Корпоративний сайт: Представницький від $1 000 (5–8 сторінок, ~3 тижні) · Pro від $2 000 (10–20 сторінок, 4–5 тижнів) · Enterprise від $4 000 (50+ сторінок).\n- Інтернет-магазин: Start від $1 200 (до 100 товарів, ~3 тижні) · Pro від $2 500 (необмежено товарів, ~5 тижнів, Nova Poshta API) · Маркетплейс від $5 000.\n- Вебплатформа / SaaS: MVP від $2 500 (4–8 тижнів) · Platform від $6 000 (2–4 місяці) · Enterprise від $15 000.\n- Цифрова екосистема (сайт + бот + CRM): від $2 000.\n- У вартість сайту входить: унікальний дизайн, адаптивна верстка, базова SEO-оптимізація, базова інтеграція з Telegram або CRM, 1 місяць підтримки. Хостинг і домен — окремо.\n- Підтримка після запуску: від $150/міс або погодинно.\nTelegram-боти:\n- Загальна сторінка: Starter від $300 (простий бот, до 2 тижнів) · Business від $700 (до 4 тижнів, оплати, CRM, 1 міс. підтримки) · Enterprise від $1 500 (Mini App, AI, 3 міс. підтримки).\n- Бот для продажів: Start від $500 (7 днів) · Pro від $1 200 (14 днів) · Max від $2 500.\n- Бот для ресторану: Кафе від $600 (до 50 позицій, 7 днів) · Ресторан від $1 200 (14 днів) · Мережа від $2 500.\n- CRM-інтеграція бота: Старт від $800 (1 CRM, 7 днів) · Pro від $1 500 (14 днів) · Enterprise від $3 000.\n- Платіжки, які підключаємо: LiqPay, WayForPay, Monobank, Stripe, Telegram Payments.\nРеклама та SEO (рекламний бюджет — окремо):\n- Google Ads: налаштування від $300 разово · ведення від $200/міс · великі бюджети / e-commerce від $500/міс. Рекомендований стартовий бюджет від $300/міс.\n- Meta Ads (Facebook/Instagram): налаштування від $250 · ведення від $200/міс · e-commerce від $400/міс. Рекомендований бюджет від $300/міс.\n- TikTok Ads: налаштування від $250 · ведення від $150/міс. Мінімальний бюджет від $200/міс.\n- SEO просування: від $150/міс (перші результати 3–6 міс.).\n- SEO аудит: базовий від $100 (до 50 сторінок, 3 дні) · повний від $300 (5 днів).\n- Локальне SEO: старт від $200 разово · Local Pro від $150/міс · мережа філій від $400/міс.",
+  "doNotUse": "- Відгуки «Олексій Коваленко», «Марина Сидоренко», «Дмитро Мельник» та будь-які інші відгуки.\n- Показники рекламних «кейсів» без джерела: 3.8x ROAS, $4.2 CPL, +38%, 2.4M views, 8.3% ER, +210% трафіку, ROI 300%, «+40% конверсія», «конверсія від 8%» як гарантія.\n- «99.9% uptime гарантія», «0 втрачених заявок», «34+ сторінок», «10 проєктів на місяць / N місць залишилось».\n- «гарантований топ», будь-які гарантії позицій.\n- Кліше: «продукти що приносять/генерують прибуток», «боти що продають поки ви спите», «на новий рівень», «під ваш бізнес» без конкретики, «senior команда» як порожнє слово.",
+  "themes": [
+    {
+      "vars": {
+        "--bg": "#0a0706",
+        "--bg2": "#0C0808",
+        "--bg3": "#110D0D",
+        "--fg": "#EDE8E5",
+        "--muted": "#8A8080",
+        "--muted2": "#A89E9E",
+        "--red": "#D40000",
+        "--red-glow": "rgba(212, 0, 0, 0.25)",
+        "--border": "rgba(237, 232, 229, 0.07)",
+        "--fh": "'Space Grotesk', sans-serif",
+        "--fb": "'Inter', sans-serif",
+        "--ease": "cubic-bezier(0.76, 0, 0.24, 1)",
+        "--ease2": "cubic-bezier(0.23, 1, 0.32, 1)"
+      },
+      "pages": [
+        "/",
+        "/en/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,0.08)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif"
+      },
+      "pages": [
+        "/services/websites/",
+        "/services/websites-shop/",
+        "/services/websites-corporate/",
+        "/pricing/",
+        "/services/ecosystems/",
+        "/services/privacy/",
+        "/en/services/websites/",
+        "/en/pricing/",
+        "/en/services/ecosystems/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,0.08)",
+        "--border2": "rgba(255,255,255,0.15)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif"
+      },
+      "pages": [
+        "/services/websites-landing/",
+        "/services/websites-kharkiv/",
+        "/services/constructor/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--red-glow": "rgba(212,0,0,0.15)",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--bg3": "#111",
+        "--border": "rgba(255,255,255,0.08)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--muted2": "rgba(255,255,255,0.25)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--ease": "cubic-bezier(0.76,0,0.24,1)",
+        "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+      },
+      "pages": [
+        "/services/bots/",
+        "/en/services/bots/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,0.08)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--tg": "#229ED9"
+      },
+      "pages": [
+        "/services/bots-sales/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,0.08)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--tg": "#229ED9",
+        "--warm": "#FF6B35"
+      },
+      "pages": [
+        "/services/bots-restaurant/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,0.08)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--blue": "#3B82F6",
+        "--green": "#22C55E",
+        "--purple": "#A855F7"
+      },
+      "pages": [
+        "/services/bots-crm/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--red-glow": "rgba(212,0,0,0.15)",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,0.08)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--muted2": "rgba(255,255,255,0.25)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--ease": "cubic-bezier(0.76,0,0.24,1)",
+        "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+      },
+      "pages": [
+        "/services/platforms/",
+        "/en/services/platforms/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#F5F0E8",
+        "--bg2": "#EDE8E0",
+        "--dark": "#0A0A0A",
+        "--text": "#1A1A1A",
+        "--muted": "#777",
+        "--border": "rgba(0,0,0,0.07)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--ease": "cubic-bezier(0.76,0,0.24,1)",
+        "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+      },
+      "pages": [
+        "/services/google-ads/",
+        "/services/meta-ads/",
+        "/services/tiktok-ads/",
+        "/services/seo/",
+        "/en/services/google-ads/",
+        "/en/services/meta-ads/",
+        "/en/services/tiktok-ads/",
+        "/en/services/seo/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,0.08)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--google": "#4285F4"
+      },
+      "pages": [
+        "/services/google-ads-search/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,0.08)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--ig": "#E1306C",
+        "--ig2": "#833AB4",
+        "--ig3": "#F77737"
+      },
+      "pages": [
+        "/services/meta-ads-instagram/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,0.08)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--green": "#22C55E",
+        "--yellow": "#F59E0B",
+        "--orange": "#F97316"
+      },
+      "pages": [
+        "/services/seo-audit/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,0.08)",
+        "--text": "#fff",
+        "--muted": "rgba(255,255,255,0.45)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--map": "#4285F4",
+        "--pin": "#D40000"
+      },
+      "pages": [
+        "/services/seo-local/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--red2": "#8B0000",
+        "--ink": "#0a0a0a",
+        "--ink2": "#242121",
+        "--muted": "#6b6560",
+        "--muted2": "#a39d97",
+        "--bg": "#ffffff",
+        "--bg2": "#f7f5f3",
+        "--border": "rgba(10,8,8,.1)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif"
+      },
+      "pages": [
+        "/portfolio/",
+        "/en/portfolio/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,.08)",
+        "--muted": "rgba(255,255,255,.45)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif"
+      },
+      "pages": [
+        "/blog/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,.08)",
+        "--muted": "rgba(255,255,255,.5)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif"
+      },
+      "pages": [
+        "/blog/skilky-koshtuye-sayt-2026/",
+        "/blog/zamovyty-sayt-kharkiv/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,.08)",
+        "--muted": "rgba(255,255,255,.5)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--tg": "#229ED9"
+      },
+      "pages": [
+        "/blog/telegram-bot-dlya-biznesu/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,.08)",
+        "--muted": "rgba(255,255,255,.5)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--green": "#22C55E",
+        "--yellow": "#F59E0B"
+      },
+      "pages": [
+        "/blog/seo-audit-shcho-tse/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--bg2": "#0e0b0b",
+        "--border": "rgba(255,255,255,.08)",
+        "--muted": "rgba(255,255,255,.5)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif",
+        "--google": "#4285F4",
+        "--green": "#22C55E"
+      },
+      "pages": [
+        "/blog/google-ads-chy-seo/"
+      ]
+    },
+    {
+      "vars": {
+        "--red": "#D40000",
+        "--bg": "#060404",
+        "--border": "rgba(255,255,255,.08)",
+        "--muted": "rgba(255,255,255,.4)",
+        "--font": "'Space Grotesk',sans-serif",
+        "--body": "'Inter',sans-serif"
+      },
+      "pages": [
+        "/404.html"
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "href": "fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap",
+      "pages": [
+        "/",
+        "/en/"
+      ]
+    },
+    {
+      "href": "fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap",
+      "pages": [
+        "/services/websites/",
+        "/services/websites-landing/",
+        "/services/websites-shop/",
+        "/services/websites-corporate/",
+        "/services/websites-kharkiv/",
+        "/pricing/",
+        "/services/bots/",
+        "/services/bots-sales/",
+        "/services/bots-restaurant/",
+        "/services/bots-crm/",
+        "/services/platforms/",
+        "/services/ecosystems/",
+        "/services/google-ads-search/",
+        "/services/meta-ads-instagram/",
+        "/services/seo-audit/",
+        "/services/seo-local/",
+        "/services/constructor/",
+        "/blog/",
+        "/blog/skilky-koshtuye-sayt-2026/",
+        "/blog/zamovyty-sayt-kharkiv/",
+        "/blog/telegram-bot-dlya-biznesu/",
+        "/blog/seo-audit-shcho-tse/",
+        "/blog/google-ads-chy-seo/",
+        "/services/privacy/",
+        "/en/services/websites/",
+        "/en/pricing/",
+        "/en/services/bots/",
+        "/en/services/platforms/",
+        "/en/services/ecosystems/"
+      ]
+    },
+    {
+      "href": "fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap",
+      "pages": [
+        "/services/google-ads/",
+        "/services/meta-ads/",
+        "/services/tiktok-ads/",
+        "/services/seo/",
+        "/en/services/google-ads/",
+        "/en/services/meta-ads/",
+        "/en/services/tiktok-ads/",
+        "/en/services/seo/"
+      ]
+    },
+    {
+      "href": "fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap",
+      "pages": [
+        "/portfolio/",
+        "/en/portfolio/"
+      ]
+    },
+    {
+      "href": "fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400&display=swap",
+      "pages": [
+        "/404.html"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "/favicon-32.png",
+      "bytes": 1021,
+      "size": "32×32",
+      "usedIn": 42,
+      "where": [
+        "404.html",
+        "blog/google-ads-chy-seo/index.html",
+        "blog/index.html",
+        "blog/seo-audit-shcho-tse/index.html"
+      ]
+    },
+    {
+      "path": "/favicon.png",
+      "bytes": 107995,
+      "size": "512×512",
+      "usedIn": 1,
+      "where": [
+        "sw.js"
+      ]
+    },
+    {
+      "path": "/favicon.ico",
+      "bytes": 2966,
+      "size": "",
+      "usedIn": 43,
+      "where": [
+        "404.html",
+        "blog/google-ads-chy-seo/index.html",
+        "blog/index.html",
+        "blog/seo-audit-shcho-tse/index.html"
+      ]
+    },
+    {
+      "path": "/apple-touch-icon.png",
+      "bytes": 15263,
+      "size": "180×180",
+      "usedIn": 41,
+      "where": [
+        "blog/google-ads-chy-seo/index.html",
+        "blog/index.html",
+        "blog/seo-audit-shcho-tse/index.html",
+        "blog/skilky-koshtuye-sayt-2026/index.html"
+      ]
+    },
+    {
+      "path": "/icon-192.png",
+      "bytes": 17148,
+      "size": "192×192",
+      "usedIn": 1,
+      "where": [
+        "manifest.json"
+      ]
+    },
+    {
+      "path": "/icon-512.png",
+      "bytes": 107995,
+      "size": "512×512",
+      "usedIn": 3,
+      "where": [
+        "en/index.html",
+        "index.html",
+        "manifest.json"
+      ]
+    },
+    {
+      "path": "/og-image.png",
+      "bytes": 193137,
+      "size": "1200×630",
+      "usedIn": 41,
+      "where": [
+        "blog/google-ads-chy-seo/index.html",
+        "blog/index.html",
+        "blog/seo-audit-shcho-tse/index.html",
+        "blog/skilky-koshtuye-sayt-2026/index.html"
+      ]
+    },
+    {
+      "path": "/og-image.svg",
+      "bytes": 3039,
+      "size": "1200×630",
+      "usedIn": 0,
+      "where": []
+    },
+    {
+      "path": "/avatar.jpeg",
+      "bytes": 55595,
+      "size": "656×711",
+      "usedIn": 3,
+      "where": [
+        "en/index.html",
+        "index.html",
+        "sw.js"
+      ]
+    },
+    {
+      "path": "/avatar.png",
+      "bytes": 245311,
+      "size": "480×520",
+      "usedIn": 0,
+      "where": []
+    },
+    {
+      "path": "/assets/pattern-bg.jpg",
+      "bytes": 96042,
+      "size": "1280×714",
+      "usedIn": 1,
+      "where": [
+        "assets/css/main.css"
+      ]
+    }
+  ],
+  "model3d": {
+    "url": "https://res.cloudinary.com/etdq5y69/raw/upload/v1783282631/snake3d.glb",
+    "usedBy": "/assets/js/snake.js (головна, тільки десктоп, Draco: /vendor/three/draco-r185/)"
+  },
+  "scripts": {
+    "globe": "/cobe.umd.js + /assets/js/globe.js (глобус, головні)",
+    "orbit": "/assets/js/orbit.js (орбіта стеку, головні)",
+    "hero": "/assets/js/hero.js (3D hero, десктоп)",
+    "preloader": "/assets/js/preloader.js",
+    "mobileAnimations": "/assets/js/mobile-animations.js (GSAP, мобільна головна)"
+  }
+}

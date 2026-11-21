@@ -1,0 +1,702 @@
+{
+  "url": "https://infiniteunion.com.ua/en/services/ecosystems/",
+  "path": "/en/services/ecosystems/",
+  "file": "en/services/ecosystems/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/services/ecosystems/",
+    "url": "https://infiniteunion.com.ua/services/ecosystems/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "Business automation",
+  "title": "Business Automation: Website + Bot + CRM — from $2,000",
+  "description": "Business automation as one system: website, Telegram bot, CRM and analytics connected end to end. No lost leads, no manual reports. From $2,000.",
+  "keyword": "business automation",
+  "priceFrom": 2000,
+  "robots": "index, follow",
+  "h1": "Business automation: site, bot, CRM.",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Business automation",
+      "url": "/en/services/ecosystems/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#060404",
+    "--bg2": "#0e0b0b",
+    "--border": "rgba(255,255,255,0.08)",
+    "--text": "#fff",
+    "--muted": "rgba(255,255,255,0.45)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif"
+  },
+  "words": 1039,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Back",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/services/ecosystems/"
+    },
+    {
+      "k": "link",
+      "text": "ORDER ECOSYSTEM",
+      "href": "/en/services/ecosystems/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "Business automation: site, bot, CRM.",
+      "items": [
+        {
+          "k": "text",
+          "text": "SERVICE 04 · BUSINESS AUTOMATION",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Business automation: site, bot, CRM."
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union, a development agency in Kharkiv, Ukraine, builds business automation for small companies in Ukraine and the EU: a website, a Telegram bot, a CRM and analytics connected end to end. Leads stop getting lost between tools, and reports stop being made by hand. From $2,000."
+        },
+        {
+          "k": "text",
+          "text": "$2,000",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "COMPLETE SYSTEM FROM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "3 in 1",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "WEBSITE · BOT · CRM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "1",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "TEAM RESPONSIBLE FOR ALL OF IT",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "15 min",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "REPLY TIME, BUSINESS HOURS",
+          "role": "hero-stat-label"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "WEBSITE ·TELEGRAM BOT ·CRM ·SEO ·GOOGLE ADS ·ANALYTICS ·N8N ·ONE SYSTEM · WEBSITE ·TELEGRAM BOT ·CRM ·SEO ·GOOGLE ADS ·ANALYTICS ·N8N ·ONE SYSTEM ·"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Separate tools vs one system",
+      "items": [
+        {
+          "k": "text",
+          "text": "THE PROBLEM",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Separate tools vs one system"
+        },
+        {
+          "k": "text",
+          "text": "WHAT WE USUALLY SEE",
+          "role": "compare-title"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "—The website was built by one contractor, the bot by another, and they are not connected",
+            "—Leads from ads end up in an inbox, a chat and a spreadsheet at the same time",
+            "—Nobody can say which channel brought the last ten customers",
+            "—A manager copies requests from one system to another by hand",
+            "—When something breaks, each contractor points at the other"
+          ]
+        },
+        {
+          "k": "text",
+          "text": "WHAT WE BUILD INSTEAD",
+          "role": "compare-title"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "+Website, bot and CRM designed and connected by one team",
+            "+Every lead is saved to a database first, then queued and delivered to Telegram and the CRM",
+            "+Tracking from the ad click to the request, so you see what each channel brings",
+            "+Routine steps automated: confirmations, reminders, status updates",
+            "+One contact who answers for the whole system"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Business automation, layer by layer",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHAT'S INCLUDED",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Business automation, layer by layer"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "eco-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Website"
+        },
+        {
+          "k": "text",
+          "text": "ENTRY POINT",
+          "role": "eco-type"
+        },
+        {
+          "k": "text",
+          "text": "A fast, SEO-ready site with clear offers and a short form. The form is wired to the bot and the CRM from day one, so no request sits unread in a mailbox.",
+          "role": "eco-desc"
+        },
+        {
+          "k": "text",
+          "text": "Custom design · Basic SEO · Form → bot → CRM",
+          "role": "eco-includes"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "eco-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Telegram bot"
+        },
+        {
+          "k": "text",
+          "text": "FIRST RESPONSE",
+          "role": "eco-type"
+        },
+        {
+          "k": "text",
+          "text": "The bot answers common questions, runs a short quiz to qualify the request, takes bookings or payments and sends reminders. Your team gets a complete request instead of \"hi, how much?\".",
+          "role": "eco-desc"
+        },
+        {
+          "k": "text",
+          "text": "Quiz · Payments · Reminders · FSM flows",
+          "role": "eco-includes"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "eco-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "CRM"
+        },
+        {
+          "k": "text",
+          "text": "ONE CUSTOMER BASE",
+          "role": "eco-type"
+        },
+        {
+          "k": "text",
+          "text": "Requests from the site, the bot and ads land in one place with status, owner and history. We connect your existing CRM or set up a simple one around your sales process.",
+          "role": "eco-desc"
+        },
+        {
+          "k": "text",
+          "text": "Pipeline · Statuses · Notifications",
+          "role": "eco-includes"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "eco-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Automations"
+        },
+        {
+          "k": "text",
+          "text": "NO MANUAL COPYING",
+          "role": "eco-type"
+        },
+        {
+          "k": "text",
+          "text": "Workflows in n8n or custom code move data between tools: new order to spreadsheet, payment to invoice, status change to a message for the client. AI steps with the Claude API where they save real time.",
+          "role": "eco-desc"
+        },
+        {
+          "k": "text",
+          "text": "n8n · Claude API · Google Sheets",
+          "role": "eco-includes"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "eco-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Traffic and reporting"
+        },
+        {
+          "k": "text",
+          "text": "OPTIONAL",
+          "role": "eco-type"
+        },
+        {
+          "k": "text",
+          "text": "If you also want us to bring in traffic, we run Google Ads, Meta Ads or SEO on top of the system, with conversions tracked to the request. Reports come from the data, not from a manager's spreadsheet.",
+          "role": "eco-desc"
+        },
+        {
+          "k": "text",
+          "text": "Google Analytics 4 · Conversion tracking · Ad reports",
+          "role": "eco-includes"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Stages and timelines",
+      "items": [
+        {
+          "k": "text",
+          "text": "HOW WE WORK",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Stages and timelines"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "1. Audit and plan · 1–7 days"
+        },
+        {
+          "k": "text",
+          "text": "We map how a lead travels through your business today and where it gets stuck (1–2 days), then show a prototype of the new flow and the system layout (3–5 days).",
+          "role": "why-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "2. Build and connect"
+        },
+        {
+          "k": "text",
+          "text": "Website, bot, CRM and automations are built and connected on a test environment. The timeline depends on how many parts and integrations you need.",
+          "role": "why-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "3. Test, launch, support"
+        },
+        {
+          "k": "text",
+          "text": "We run real requests through the whole chain (2–4 days), launch (1 day) and train your team. Then we stay on support so the system keeps working as you grow.",
+          "role": "why-desc"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "What business automation costs",
+      "items": [
+        {
+          "k": "text",
+          "text": "PRICING",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "What business automation costs"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Core system · from $2,000"
+        },
+        {
+          "k": "text",
+          "text": "Website, Telegram bot and CRM connected into one lead pipeline, with notifications and basic analytics. The final price depends on the number of pages, bot flows and integrations.",
+          "role": "why-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Traffic · from $200/month"
+        },
+        {
+          "k": "text",
+          "text": "Optional ad management: Google Ads from $200/month after a $300 setup, Meta Ads from $200/month after a $250 setup, SEO from $150/month. Ad budgets are paid separately.",
+          "role": "why-desc"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Support · from $150/month"
+        },
+        {
+          "k": "text",
+          "text": "Fixes, updates and small improvements after launch, or hourly work if you prefer. Full price list on the pricing page.",
+          "role": "why-desc"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Connected systems we have built",
+      "items": [
+        {
+          "k": "text",
+          "text": "FROM OUR PORTFOLIO",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Connected systems we have built"
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-parrot-school",
+          "items": [
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Parrot School"
+            },
+            {
+              "k": "text",
+              "text": "Website for an English school in Kharkiv plus a Telegram system with three roles (student, parent, teacher) and a separate admin bot. aiogram, Railway.",
+              "role": "why-desc"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-transfer-kharkiv",
+          "items": [
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Transfer Kharkiv"
+            },
+            {
+              "k": "text",
+              "text": "Landing page with 8.4% conversion and 119+ search positions in the top, connected to a Telegram bot that takes bookings around the clock.",
+              "role": "why-desc"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-iu-bot",
+          "items": [
+            {
+              "k": "h",
+              "level": 3,
+              "text": "IU Bot"
+            },
+            {
+              "k": "text",
+              "text": "Our own lead bot: a quiz qualifies the request, FSM flows guide the conversation, and the lead is passed to the CRM automatically.",
+              "role": "why-desc"
+            }
+          ]
+        },
+        {
+          "k": "text",
+          "text": "View the full portfolio · Individual parts: website development, Telegram bots, SaaS and web platforms."
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq",
+      "heading": "Business automation: common questions",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Business automation: common questions"
+        },
+        {
+          "k": "faq",
+          "q": "Is this worth it for a small business?",
+          "a": "Usually yes, if you get leads from more than one channel or spend hours a week moving data by hand. We start with the parts that save the most time and add the rest later."
+        },
+        {
+          "k": "faq",
+          "q": "How much does business automation cost?",
+          "a": "A connected website, Telegram bot and CRM starts at $2,000. Ad management and SEO are optional monthly services, and ad budgets are paid separately. You get an exact quote after the first call."
+        },
+        {
+          "k": "faq",
+          "q": "Can you connect the tools we already use?",
+          "a": "Yes. If you already have a website or CRM, we connect new parts to it. If a tool has no API or blocks integration, we say so and suggest an alternative."
+        },
+        {
+          "k": "faq",
+          "q": "How long does it take?",
+          "a": "Audit and planning take about a week. The build depends on scope: a landing page with a bot is much faster than a multi-page site with a custom CRM. We agree the timeline in writing before starting."
+        },
+        {
+          "k": "faq",
+          "q": "What happens if one part stops working?",
+          "a": "Leads are saved to the database before anything else, and failed deliveries are retried from a queue, so a temporary error does not lose a request. On support, we are the single contact for fixes."
+        },
+        {
+          "k": "faq",
+          "q": "Who owns the system?",
+          "a": "You do. We hand over all source code, accounts and documentation, so you can keep working with us or pass the system to another team."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Tell us about your business",
+      "items": [
+        {
+          "k": "text",
+          "text": "READY TO AUTOMATE?",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Tell us about your business"
+        },
+        {
+          "k": "text",
+          "text": "Describe how leads reach you today. We reply within 15 minutes during business hours and suggest what to automate first.",
+          "role": "cta-final-sub"
+        },
+        {
+          "k": "link",
+          "text": "MESSAGE ON TELEGRAM",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WHATSAPP",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "FILL IN THE FORM",
+          "href": "/en/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [
+    {
+      "q": "Is this worth it for a small business?",
+      "a": "Usually yes, if you get leads from more than one channel or spend hours a week moving data by hand. We start with the parts that save the most time and add the rest later."
+    },
+    {
+      "q": "How much does business automation cost?",
+      "a": "A connected website, Telegram bot and CRM starts at $2,000. Ad management and SEO are optional monthly services, and ad budgets are paid separately. You get an exact quote after the first call."
+    },
+    {
+      "q": "Can you connect the tools we already use?",
+      "a": "Yes. If you already have a website or CRM, we connect new parts to it. If a tool has no API or blocks integration, we say so and suggest an alternative."
+    },
+    {
+      "q": "How long does it take?",
+      "a": "Audit and planning take about a week. The build depends on scope: a landing page with a bot is much faster than a multi-page site with a custom CRM. We agree the timeline in writing before starting."
+    },
+    {
+      "q": "What happens if one part stops working?",
+      "a": "Leads are saved to the database before anything else, and failed deliveries are retried from a queue, so a temporary error does not lose a request. On support, we are the single contact for fixes."
+    },
+    {
+      "q": "Who owns the system?",
+      "a": "You do. We hand over all source code, accounts and documentation, so you can keep working with us or pass the system to another team."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "Google Ads",
+      "href": "/en/services/google-ads/",
+      "block": 4
+    },
+    {
+      "text": "Meta Ads",
+      "href": "/en/services/meta-ads/",
+      "block": 4
+    },
+    {
+      "text": "SEO",
+      "href": "/en/services/seo/",
+      "block": 4
+    },
+    {
+      "text": "pricing page",
+      "href": "/en/pricing/",
+      "block": 6
+    },
+    {
+      "text": "Parrot School Website for an English school in Kharkiv plus a Telegram system with three roles (student, parent, teacher) and a separate admin bot. aiogram, Railway.",
+      "href": "/en/portfolio/#p-parrot-school",
+      "block": 7,
+      "card": true
+    },
+    {
+      "text": "Transfer Kharkiv Landing page with 8.4% conversion and 119+ search positions in the top, connected to a Telegram bot that takes bookings around the clock.",
+      "href": "/en/portfolio/#p-transfer-kharkiv",
+      "block": 7,
+      "card": true
+    },
+    {
+      "text": "IU Bot Our own lead bot: a quiz qualifies the request, FSM flows guide the conversation, and the lead is passed to the CRM automatically.",
+      "href": "/en/portfolio/#p-iu-bot",
+      "block": 7,
+      "card": true
+    },
+    {
+      "text": "View the full portfolio",
+      "href": "/en/portfolio/",
+      "block": 7
+    },
+    {
+      "text": "website development",
+      "href": "/en/services/websites/",
+      "block": 7
+    },
+    {
+      "text": "Telegram bots",
+      "href": "/en/services/bots/",
+      "block": 7
+    },
+    {
+      "text": "SaaS and web platforms",
+      "href": "/en/services/platforms/",
+      "block": 7
+    },
+    {
+      "text": "FILL IN THE FORM",
+      "href": "/en/#contact",
+      "block": 9
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "MESSAGE ON TELEGRAM",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 9
+    },
+    {
+      "text": "WHATSAPP",
+      "href": "https://wa.me/380688286969",
+      "block": 9
+    }
+  ]
+}

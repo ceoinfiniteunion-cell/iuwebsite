@@ -1,0 +1,1968 @@
+{
+  "url": "https://infiniteunion.com.ua/",
+  "path": "/",
+  "file": "index.html",
+  "lang": "uk",
+  "alt": {
+    "lang": "en",
+    "path": "/en/",
+    "url": "https://infiniteunion.com.ua/en/"
+  },
+  "template": "home",
+  "registryType": "home",
+  "name": "Головна",
+  "title": "Веб-студія у Харкові — сайти, боти, реклама | Infinite Union",
+  "description": "Infinite Union — веб-студія з Харкова. Сайти під ключ від $600, Telegram-боти від $300, Google Ads, таргет і SEO. Працюємо по Україні та ЄС.",
+  "keyword": "веб-студія Харків",
+  "robots": "index, follow",
+  "h1": "Веб-студія в Харкові: сайти, Telegram-боти та реклама",
+  "breadcrumbs": [],
+  "theme": {
+    "--bg": "#0a0706",
+    "--bg2": "#0C0808",
+    "--bg3": "#110D0D",
+    "--fg": "#EDE8E5",
+    "--muted": "#8A8080",
+    "--muted2": "#A89E9E",
+    "--red": "#D40000",
+    "--red-glow": "rgba(212, 0, 0, 0.25)",
+    "--border": "rgba(237, 232, 229, 0.07)",
+    "--fh": "'Space Grotesk', sans-serif",
+    "--fb": "'Inter', sans-serif",
+    "--ease": "cubic-bezier(0.76, 0, 0.24, 1)",
+    "--ease2": "cubic-bezier(0.23, 1, 0.32, 1)"
+  },
+  "words": 1161,
+  "chrome": [
+    {
+      "k": "img",
+      "src": "/avatar.jpeg",
+      "alt": "Infinite Union mascot"
+    },
+    {
+      "k": "text",
+      "text": "INFINITE UNION",
+      "role": "l-logo"
+    },
+    {
+      "k": "text",
+      "text": "0%",
+      "role": "l-pct"
+    },
+    {
+      "k": "text",
+      "text": "• Ініціалізація",
+      "role": "l-status"
+    },
+    {
+      "k": "text",
+      "text": "49° 59′ N / 36° 14′ E Kharkiv, Ukraine",
+      "role": "l-coords"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/#hero"
+    },
+    {
+      "k": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Послуги",
+          "href": "/#services"
+        },
+        {
+          "text": "Роботи",
+          "href": "/portfolio/"
+        },
+        {
+          "text": "Ціни",
+          "href": "/pricing/"
+        },
+        {
+          "text": "Контакт",
+          "href": "/#contact"
+        },
+        {
+          "text": "Блог",
+          "href": "/blog/"
+        }
+      ]
+    },
+    {
+      "k": "link",
+      "text": "EN",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "Замовити проект",
+      "href": "/#contact"
+    },
+    {
+      "k": "text",
+      "text": "INFINITE UNION",
+      "role": "mob-logo"
+    },
+    {
+      "k": "button",
+      "text": "Закрити меню",
+      "type": "button"
+    },
+    {
+      "k": "link",
+      "text": "01 Послуги",
+      "href": "/#services"
+    },
+    {
+      "k": "link",
+      "text": "02 Портфоліо",
+      "href": "/portfolio/"
+    },
+    {
+      "k": "link",
+      "text": "03 Ціни",
+      "href": "/pricing/"
+    },
+    {
+      "k": "link",
+      "text": "04 Блог",
+      "href": "/blog/"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "mobile-cta",
+      "viewport": "mobile",
+      "tag": "div",
+      "class": "mob-cta-section",
+      "heading": "",
+      "items": [
+        {
+          "k": "link",
+          "text": "Замовити проект",
+          "href": "/#contact"
+        },
+        {
+          "k": "link",
+          "text": "Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WhatsApp",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Viber",
+          "href": "viber://chat?number=380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Зателефонувати",
+          "href": "tel:+380688286969"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "snake-intro",
+      "heading": "",
+      "items": [
+        {
+          "k": "text",
+          "text": "INFINITE",
+          "role": "si-bg-text"
+        },
+        {
+          "k": "text",
+          "text": "49° 59′ N • 36° 23′ E",
+          "role": "si-coords"
+        },
+        {
+          "k": "text",
+          "text": "01 ·",
+          "role": "si-num"
+        },
+        {
+          "k": "text",
+          "text": "Сайти від $600"
+        },
+        {
+          "k": "text",
+          "text": "02 ·",
+          "role": "si-num"
+        },
+        {
+          "k": "text",
+          "text": "Telegram-боти від $300"
+        },
+        {
+          "k": "text",
+          "text": "03 ·",
+          "role": "si-num"
+        },
+        {
+          "k": "text",
+          "text": "Вебплатформи MVP від $2 500"
+        },
+        {
+          "k": "text",
+          "text": "04 ·",
+          "role": "si-num"
+        },
+        {
+          "k": "text",
+          "text": "Реклама та SEO Google · Meta"
+        },
+        {
+          "k": "text",
+          "text": "Веб-студія в Харкові: сайти, Telegram-боти та реклама"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "hero",
+      "viewport": "mobile",
+      "tag": "section",
+      "id": "mobile-hero",
+      "heading": "Веб-студія в Харкові: сайти, Telegram-боти та реклама",
+      "items": [
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Веб-студія в Харкові: сайти, Telegram-боти та реклама"
+        },
+        {
+          "k": "text",
+          "text": "Infinite · Union",
+          "role": "mh-title"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union робить сайти від $600 і Telegram-боти від $300 для малого й середнього бізнесу в Україні та ЄС, налаштовує Google Ads, таргет і SEO. Код і доступи — ваші."
+        },
+        {
+          "k": "link",
+          "text": "Обговорити проєкт",
+          "href": "/#contact"
+        },
+        {
+          "k": "link",
+          "text": "01 Сайти — від $600",
+          "href": "/services/websites/"
+        },
+        {
+          "k": "link",
+          "text": "02 Telegram-боти — від $300",
+          "href": "/services/bots/"
+        },
+        {
+          "k": "link",
+          "text": "03 Google · Meta Ads",
+          "href": "/services/google-ads/"
+        },
+        {
+          "k": "link",
+          "text": "04 SEO просування",
+          "href": "/services/seo/"
+        },
+        {
+          "k": "text",
+          "text": "49° 59′ N · 36° 14′ E · Kharkiv, Ukraine",
+          "role": "mh-coords"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "stats",
+      "viewport": "all",
+      "tag": "section",
+      "id": "stats",
+      "heading": "",
+      "items": [
+        {
+          "k": "text",
+          "text": "8",
+          "role": "sn"
+        },
+        {
+          "k": "text",
+          "text": "Проєктів у портфоліо",
+          "role": "sl"
+        },
+        {
+          "k": "text",
+          "text": "3000+",
+          "role": "sn"
+        },
+        {
+          "k": "text",
+          "text": "Користувачів KNEU Bot",
+          "role": "sl"
+        },
+        {
+          "k": "text",
+          "text": "8.4%",
+          "role": "sn"
+        },
+        {
+          "k": "text",
+          "text": "Конверсія лендінгу Transfer Kharkiv",
+          "role": "sl"
+        },
+        {
+          "k": "text",
+          "text": "15хв",
+          "role": "sn"
+        },
+        {
+          "k": "text",
+          "text": "Відповідь у робочий час",
+          "role": "sl"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "services",
+      "class": "sec",
+      "heading": "Що ми робимо",
+      "items": [
+        {
+          "k": "text",
+          "text": "Послуги",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Що ми робимо"
+        },
+        {
+          "k": "text",
+          "text": "01 / 02",
+          "role": "snum"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union — веб-студія з Харкова. Розробляємо сайти, Telegram-боти та вебплатформи, запускаємо рекламу в Google, Facebook, Instagram і TikTok та просуваємо сайти в пошуку. Працюємо з малим і середнім бізнесом в Україні та ЄС. Лендінг — від $600, Telegram-бот — від $300; усі тарифи на сторінці Ціни, приклади робіт — у портфоліо."
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "directions",
+      "class": "dir-section",
+      "heading": "IT Розробка",
+      "items": [
+        {
+          "k": "text",
+          "text": "Digital · 01",
+          "role": "dir-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "IT Розробка"
+        },
+        {
+          "k": "text",
+          "text": "Лендінги, корпоративні сайти, інтернет-магазини, Telegram-боти й вебплатформи. Пишемо код самі й передаємо вам вихідний код і всі доступи."
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "01СайтиЛендінг від $600 · магазин від $1 200",
+              "href": "/services/websites/"
+            },
+            {
+              "text": "02Telegram-ботиВід $300 · оплати · CRM",
+              "href": "/services/bots/"
+            },
+            {
+              "text": "03Вебплатформи та SaaSMVP від $2 500 · 4–8 тижнів",
+              "href": "/services/platforms/"
+            },
+            {
+              "text": "04Сайт + бот + CRMАвтоматизація від $2 000",
+              "href": "/services/ecosystems/"
+            },
+            {
+              "text": "05Ціни на всі послугиТарифи, терміни, що входить",
+              "href": "/pricing/"
+            }
+          ]
+        },
+        {
+          "k": "text",
+          "text": "Marketing · 02",
+          "role": "dir-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Digital Реклама"
+        },
+        {
+          "k": "text",
+          "text": "Налаштовуємо й ведемо рекламу та SEO: відстеження заявок, звіти по кампаніях. Рекламний бюджет оплачується окремо."
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "01Таргет Facebook та InstagramНалаштування від $250",
+              "href": "/services/meta-ads/"
+            },
+            {
+              "text": "02Google AdsНалаштування від $300",
+              "href": "/services/google-ads/"
+            },
+            {
+              "text": "03SEO просуванняВід $150/міс",
+              "href": "/services/seo/"
+            },
+            {
+              "text": "04TikTok AdsНалаштування від $250",
+              "href": "/services/tiktok-ads/"
+            }
+          ]
+        },
+        {
+          "k": "link",
+          "text": "Обговорити рекламу",
+          "href": "/#contact"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "id": "process",
+      "class": "sec proc-section",
+      "heading": "Як ми працюємо",
+      "items": [
+        {
+          "k": "text",
+          "text": "Процес",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Як ми працюємо"
+        },
+        {
+          "k": "text",
+          "text": "03 / 08",
+          "role": "snum"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Брифінг"
+        },
+        {
+          "k": "text",
+          "text": "Обговорюємо задачу, аудиторію, бюджет і терміни. Фіксуємо, що вважаємо результатом. На виході — технічне завдання і кошторис."
+        },
+        {
+          "k": "text",
+          "text": "· 1–2 дні",
+          "role": "proc-term"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Прототип"
+        },
+        {
+          "k": "text",
+          "text": "Показуємо структуру сторінок або сценарій бота до написання коду. Правки на цьому етапі коштують найменше."
+        },
+        {
+          "k": "text",
+          "text": "· 3–5 днів",
+          "role": "proc-term"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Розробка"
+        },
+        {
+          "k": "text",
+          "text": "Верстаємо, програмуємо, підключаємо оплати, CRM і Telegram. Показуємо проміжні результати, оплата поетапна."
+        },
+        {
+          "k": "text",
+          "text": "· залежно від проєкту",
+          "role": "proc-term"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Тестування"
+        },
+        {
+          "k": "text",
+          "text": "Перевіряємо форми, оплати, мобільну версію і швидкість завантаження на реальних сценаріях."
+        },
+        {
+          "k": "text",
+          "text": "· 2–4 дні",
+          "role": "proc-term"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Запуск"
+        },
+        {
+          "k": "text",
+          "text": "Публікуємо на хостингу, підключаємо домен і аналітику. Передаємо вихідний код і всі доступи — продукт належить вам."
+        },
+        {
+          "k": "text",
+          "text": "· 1 день",
+          "role": "proc-term"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "proc-n"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Підтримка"
+        },
+        {
+          "k": "text",
+          "text": "Перший місяць підтримки входить у вартість сайту. Далі — від $150/міс або погодинно."
+        },
+        {
+          "k": "text",
+          "text": "· постійно",
+          "role": "proc-term"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "tech-stack",
+      "viewport": "all",
+      "tag": "section",
+      "id": "stack",
+      "class": "sec",
+      "heading": "Що під капотом",
+      "items": [
+        {
+          "k": "text",
+          "text": "Технології",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Що під капотом"
+        },
+        {
+          "k": "text",
+          "text": "04 / 08",
+          "role": "snum"
+        },
+        {
+          "k": "text",
+          "text": "Як влаштована обробка заявок на наших сайтах: форма → перевірка даних → запис у PostgreSQL → черга Redis → сповіщення в Telegram."
+        },
+        {
+          "k": "text",
+          "text": "Форма",
+          "role": "stack-node__name"
+        },
+        {
+          "k": "text",
+          "text": "Валідація",
+          "role": "stack-node__name"
+        },
+        {
+          "k": "text",
+          "text": "База даних",
+          "role": "stack-node__name"
+        },
+        {
+          "k": "text",
+          "text": "Черга",
+          "role": "stack-node__name"
+        },
+        {
+          "k": "text",
+          "text": "Telegram",
+          "role": "stack-node__name"
+        },
+        {
+          "k": "text",
+          "text": "Заявка спочатку зберігається в базі, а вже потім надсилається вам. Якщо Telegram чи CRM у цей момент недоступні, вона стає в чергу на повторну відправку. Збій месенджера не означає втрачену заявку.",
+          "role": "stack-highlight"
+        },
+        {
+          "k": "text",
+          "text": "FastAPI · швидкий асинхронний бекенд",
+          "role": "stack-tag"
+        },
+        {
+          "k": "text",
+          "text": "PostgreSQL · надійне сховище даних",
+          "role": "stack-tag"
+        },
+        {
+          "k": "text",
+          "text": "Redis · черги та захист від навантаження",
+          "role": "stack-tag"
+        },
+        {
+          "k": "text",
+          "text": "aiogram · Telegram-автоматизація",
+          "role": "stack-tag"
+        },
+        {
+          "k": "text",
+          "text": "Railway · хмарний хостинг ботів і API",
+          "role": "stack-tag"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "ai-constructor",
+      "heading": "Побачте свій сайт до замовлення",
+      "items": [
+        {
+          "k": "text",
+          "text": "AI-конструктор",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Побачте свій сайт до замовлення"
+        },
+        {
+          "k": "text",
+          "text": "Опишіть бізнес — AI збере концепт головної сторінки. 3 безкоштовні генерації на день, без реєстрації. Це ескіз для обговорення: робочий сайт за ним ми робимо окремо."
+        },
+        {
+          "k": "link",
+          "text": "Спробувати конструктор",
+          "href": "/services/constructor/"
+        },
+        {
+          "k": "text",
+          "text": "infiniteunion.com.ua/services/constructor/",
+          "role": "ai-preview-bar"
+        },
+        {
+          "k": "text",
+          "text": "AI · ГЕНЕРАЦІЯ",
+          "role": "ai-preview-label"
+        },
+        {
+          "k": "text",
+          "text": "Барбершоп у Харкові, темний стиль...",
+          "role": "ai-preview-heading"
+        },
+        {
+          "k": "text",
+          "text": "ГЕНЕРУЄМО КОД... 75%",
+          "role": "ai-progress-label"
+        },
+        {
+          "k": "text",
+          "text": "← Підбираємо кольорову палітру ← Будуємо структуру сторінки ← Додаємо анімації...",
+          "role": "ai-code-preview"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "portfolio",
+      "viewport": "mobile",
+      "tag": "section",
+      "id": "mobile-works",
+      "heading": "Наші роботи",
+      "items": [
+        {
+          "k": "text",
+          "text": "Портфоліо",
+          "role": "mw-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Наші роботи"
+        },
+        {
+          "k": "text",
+          "text": "8 проєктів: лендінг Transfer Kharkiv з конверсією 8.4%, бот КНЕУ на 3 000+ користувачів, сайти, боти та внутрішні сервіси."
+        },
+        {
+          "k": "link",
+          "text": "Переглянути всі роботи",
+          "href": "/portfolio/"
+        },
+        {
+          "k": "button",
+          "text": "Попередній проєкт",
+          "type": "button"
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/#p-ad-tracker",
+          "items": [
+            {
+              "k": "text",
+              "text": "SaaS · Флагман IU · 01",
+              "role": "mw-card-top"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Ad Tracker by Infinite Union"
+            },
+            {
+              "k": "text",
+              "text": "Один дашборд замість трьох вкладок — Meta, Google і TikTok Ads разом"
+            },
+            {
+              "k": "text",
+              "text": "3 платформи · 5+ год економії щотижня",
+              "role": "mw-card-stats"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше",
+              "role": "mw-card-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/#p-respect-car",
+          "items": [
+            {
+              "k": "text",
+              "text": "Автобізнес · Харків · 02",
+              "role": "mw-card-top"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Respect Car"
+            },
+            {
+              "k": "text",
+              "text": "Продаж, викуп та імпорт авто зі США — з адмінкою прямо в Telegram"
+            },
+            {
+              "k": "text",
+              "text": "Фото каталог авто · TG адмінка",
+              "role": "mw-card-stats"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше",
+              "role": "mw-card-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/#p-parrot-school",
+          "items": [
+            {
+              "k": "text",
+              "text": "Освіта · Екосистема · 03",
+              "role": "mw-card-top"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Parrot School"
+            },
+            {
+              "k": "text",
+              "text": "Сайт + Telegram-бот для учня, батька і вчителя школи англійської"
+            },
+            {
+              "k": "text",
+              "text": "3 ролі в боті · + адмін-бот",
+              "role": "mw-card-stats"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше",
+              "role": "mw-card-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/#p-transfer-kharkiv",
+          "items": [
+            {
+              "k": "text",
+              "text": "Флагман · SEO · 04",
+              "role": "mw-card-top"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Transfer Kharkiv"
+            },
+            {
+              "k": "text",
+              "text": "Лендінг трансферної компанії + Telegram-бот, що приймає заявки 24/7"
+            },
+            {
+              "k": "text",
+              "text": "8.4% конверсія · 119+ SEO-позицій",
+              "role": "mw-card-stats"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше",
+              "role": "mw-card-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/#p-kneu-bot",
+          "items": [
+            {
+              "k": "text",
+              "text": "Університет · 3000+ юзерів · 05",
+              "role": "mw-card-top"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "KNEU Bot"
+            },
+            {
+              "k": "text",
+              "text": "Офіційний Telegram-бот КНЕУ: розклад, новини, сповіщення"
+            },
+            {
+              "k": "text",
+              "text": "3 000+ користувачів · Live розклад",
+              "role": "mw-card-stats"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше",
+              "role": "mw-card-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/#p-bizbot",
+          "items": [
+            {
+              "k": "text",
+              "text": "Автоматизація · Бізнес · 06",
+              "role": "mw-card-top"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "BizBot"
+            },
+            {
+              "k": "text",
+              "text": "Бот для бухгалтерії малого бізнесу: зарплати, задачі, автозаповнення Excel"
+            },
+            {
+              "k": "text",
+              "text": "4+ год економії · Excel автозаповнення",
+              "role": "mw-card-stats"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше",
+              "role": "mw-card-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/#p-infinitycreo",
+          "items": [
+            {
+              "k": "text",
+              "text": "AI · Автоматизація · 07",
+              "role": "mw-card-top"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "InfinityCreo"
+            },
+            {
+              "k": "text",
+              "text": "Від брифу до готового рекламного банера за 3 хвилини"
+            },
+            {
+              "k": "text",
+              "text": "3 хв на креатив · 10+ форматів",
+              "role": "mw-card-stats"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше",
+              "role": "mw-card-link"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/#p-iu-bot",
+          "items": [
+            {
+              "k": "text",
+              "text": "Internal · Автоматизація · 08",
+              "role": "mw-card-top"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "IU Bot"
+            },
+            {
+              "k": "text",
+              "text": "Внутрішній lead-бот IU: квіз, FSM-сценарії, передача ліда в CRM"
+            },
+            {
+              "k": "text",
+              "text": "Квіз кваліфікація · CRM інтеграція",
+              "role": "mw-card-stats"
+            },
+            {
+              "k": "text",
+              "text": "Детальніше",
+              "role": "mw-card-link"
+            }
+          ]
+        },
+        {
+          "k": "button",
+          "text": "Наступний проєкт",
+          "type": "button"
+        },
+        {
+          "k": "text",
+          "text": "01 / 08",
+          "role": "mw-counter"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "id": "portfolio",
+      "class": "sec",
+      "heading": "Портфоліо",
+      "items": [
+        {
+          "k": "text",
+          "text": "Роботи",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Портфоліо"
+        },
+        {
+          "k": "text",
+          "text": "02 / 03",
+          "role": "snum"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "ФЛАГМАН",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "Transfer Kharkiv",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Лендінг з конверсією 8.4%, боти, SEO під ключ.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "119 SEO · 24/7",
+          "role": "gs-stats"
+        },
+        {
+          "k": "link",
+          "text": "Переглянути",
+          "href": "https://transferkharkiv.com.ua/"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "SAAS",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "Realty Monitor",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Моніторинг нерухомості з LiqPay та FSM.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "LiqPay · FSM",
+          "role": "gs-stats"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "УНІВЕРСИТЕТ",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "KNEU Bot",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Офіційний бот з 3 000+ користувачів.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "3 000+ · aiogram",
+          "role": "gs-stats"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "АВТОМАТИЗАЦІЯ",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "IU Bot",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Lead-бот з квізом, PostgreSQL, Railway.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "FastAPI · Redis",
+          "role": "gs-stats"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "ШІ-АВТОМАТИЗАЦІЯ",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "InfinityCreo",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "ШІ-генерація креативів для медіабаєрів через n8n. Від брифу до банера.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "n8n · AI",
+          "role": "gs-stats"
+        },
+        {
+          "k": "link",
+          "text": "Спробувати",
+          "href": "https://t.me/infinitycreo_bot"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "БІЗНЕС",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "BizBot",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Бухгалтерія, зарплати та задачі в Telegram. Автозаповнення Excel.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "Excel API · FastAPI",
+          "role": "gs-stats"
+        },
+        {
+          "k": "text",
+          "text": "07",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "ФЛАГМАН IU",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "Ad Tracker by IU",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Клієнтський портал реклами. Meta, Google, TikTok в одному дашборді.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "Next.js 14 · Meta API",
+          "role": "gs-stats"
+        },
+        {
+          "k": "text",
+          "text": "08",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "MINI APP",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "EduApp",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Telegram Mini App для школи англійської. Розробляємо під ключ.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "Mini App · На замовлення",
+          "role": "gs-stats"
+        },
+        {
+          "k": "text",
+          "text": "09",
+          "role": "gs-num"
+        },
+        {
+          "k": "text",
+          "text": "SAAS IU",
+          "role": "gs-badge"
+        },
+        {
+          "k": "text",
+          "text": "IU Tracker",
+          "role": "gs-title"
+        },
+        {
+          "k": "text",
+          "text": "Платформа IU для медіабаєрів. Аналітика кампаній, звіти, CSV.",
+          "role": "gs-desc"
+        },
+        {
+          "k": "text",
+          "text": "PostgreSQL · Railway",
+          "role": "gs-stats"
+        },
+        {
+          "k": "text",
+          "text": "ПОРТФОЛІО",
+          "role": "pf-cta-label"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Усі проєкти — на окремій сторінці"
+        },
+        {
+          "k": "text",
+          "text": "Задача, рішення, стек і результат кожного проєкту"
+        },
+        {
+          "k": "link",
+          "text": "Переглянути всі роботи",
+          "href": "/portfolio/"
+        },
+        {
+          "k": "text",
+          "text": "08 / 08",
+          "role": "pf-cta-num"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "id": "tracker-showcase",
+      "class": "sec",
+      "heading": "Ad Tracker — дашборд для вашої реклами",
+      "items": [
+        {
+          "k": "text",
+          "text": "Наш власний продукт",
+          "role": "ts-eyebrow"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Ad Tracker — дашборд для вашої реклами"
+        },
+        {
+          "k": "text",
+          "text": "Власний дашборд Infinite Union для рекламних кампаній: Meta, Google Ads і TikTok Ads в одному вікні, автооновлення кожні 2 години, 90 днів історії. Економить нам 5+ годин на тиждень на звітах. Продукт зараз у розробці."
+        },
+        {
+          "k": "text",
+          "text": "3",
+          "role": "ts-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "рекламні платформи",
+          "role": "ts-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "2 год",
+          "role": "ts-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "автооновлення",
+          "role": "ts-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "90 днів",
+          "role": "ts-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "історія даних",
+          "role": "ts-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "5+ год",
+          "role": "ts-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "економії на звітах щотижня",
+          "role": "ts-stat-label"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Три платформи — один дашбордMeta, Google, TikTok",
+            "Автооновлення кожні 2 годинисвіжі дані без ручного експорту",
+            "Клієнтський порталкожен клієнт бачить лише свої кампанії"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "Спробувати трекер",
+          "href": "https://infinitetracker.com.ua/"
+        },
+        {
+          "k": "link",
+          "text": "Дізнатись більше",
+          "href": "https://infinitetracker.com.ua/"
+        },
+        {
+          "k": "decor",
+          "text": "app.infinitetracker.com.ua Meta Google TikTok Дашборд CTR 4.8% +12% ROAS 6.2x +8% Spend $14.2k −3% Meta Ads Google Ads TikTok Ads"
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "avatar-sec",
+      "heading": "",
+      "items": [
+        {
+          "k": "text",
+          "text": "Infinite Union",
+          "role": "slabel"
+        },
+        {
+          "k": "text",
+          "text": "Ви отримуєте робочий інструмент, а не макет: сайт чи бот з вашим кодом, доступами і заявками в Telegram.",
+          "role": "av-quote"
+        },
+        {
+          "k": "text",
+          "text": "Оплата",
+          "role": "av-attr-l"
+        },
+        {
+          "k": "text",
+          "text": "Поетапно",
+          "role": "av-attr-v"
+        },
+        {
+          "k": "text",
+          "text": "Стек",
+          "role": "av-attr-l"
+        },
+        {
+          "k": "text",
+          "text": "Next.js · Python · PostgreSQL",
+          "role": "av-attr-v"
+        },
+        {
+          "k": "text",
+          "text": "Власність",
+          "role": "av-attr-l"
+        },
+        {
+          "k": "text",
+          "text": "Код і доступи — ваші",
+          "role": "av-attr-v"
+        },
+        {
+          "k": "text",
+          "text": "Підтримка",
+          "role": "av-attr-l"
+        },
+        {
+          "k": "text",
+          "text": "Відповідь за 15 хв у робочий час",
+          "role": "av-attr-v"
+        },
+        {
+          "k": "img",
+          "src": "/avatar.jpeg",
+          "alt": "Орел — талісман веб-студії Infinite Union"
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "type": "content",
+      "viewport": "all",
+      "tag": "section",
+      "id": "philo",
+      "heading": "До старту домовляємося, що вважаємо результатом — заявки, оплати чи зекономлені години, — і будуємо продукт так, щоб це можна було порахувати.",
+      "items": [
+        {
+          "k": "text",
+          "text": "Наш підхід",
+          "role": "ph-q"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "До старту домовляємося, що вважаємо результатом — заявки, оплати чи зекономлені години, — і будуємо продукт так, щоб це можна було порахувати."
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "type": "cta-form",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "heading": "Розкажіть про задачу",
+      "items": [
+        {
+          "k": "text",
+          "text": "Контакт",
+          "role": "slabel"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Розкажіть про задачу"
+        },
+        {
+          "k": "text",
+          "text": "Відповідаємо протягом 15 хвилин у робочий час. Після короткого брифу називаємо орієнтовну ціну й терміни. Базові ціни — на сторінці Ціни."
+        },
+        {
+          "k": "link",
+          "text": "Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WhatsApp",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Viber",
+          "href": "viber://chat?number=380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Зателефонувати",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "text",
+          "text": "49° 59′ N / 36° 14′ E · Kharkiv, Ukraine · 2026",
+          "role": "ct-new-coords"
+        },
+        {
+          "k": "text",
+          "text": "Залишити заявку",
+          "role": "form-new-title"
+        },
+        {
+          "k": "field",
+          "type": "text",
+          "name": "cn",
+          "label": "Ім'я",
+          "placeholder": "Як до вас звертатися?",
+          "required": true
+        },
+        {
+          "k": "field",
+          "type": "text",
+          "name": "cc",
+          "label": "Telegram",
+          "placeholder": "@username",
+          "required": true
+        },
+        {
+          "k": "field",
+          "type": "text",
+          "name": "cphone",
+          "label": "Телефон",
+          "placeholder": "+380...",
+          "required": false
+        },
+        {
+          "k": "field",
+          "type": "select",
+          "name": "ctype",
+          "label": "Тип проєкту",
+          "placeholder": "",
+          "required": false,
+          "options": [
+            {
+              "label": "Оберіть...",
+              "value": ""
+            },
+            {
+              "label": "Сайт (лендінг, корпоративний, магазин)",
+              "value": "Конверсійний сайт"
+            },
+            {
+              "label": "Telegram-бот",
+              "value": "Telegram-бот"
+            },
+            {
+              "label": "Платформа / вебдодаток",
+              "value": "Платформа / вебдодаток"
+            },
+            {
+              "label": "Цифрова екосистема",
+              "value": "Цифрова екосистема"
+            },
+            {
+              "label": "Інше",
+              "value": "Інше"
+            }
+          ]
+        },
+        {
+          "k": "field",
+          "type": "select",
+          "name": "cbudget",
+          "label": "Бюджет",
+          "placeholder": "",
+          "required": false,
+          "options": [
+            {
+              "label": "Оберіть...",
+              "value": ""
+            },
+            {
+              "label": "до $500",
+              "value": "до $500"
+            },
+            {
+              "label": "$500–$1 000",
+              "value": "$500–$1 000"
+            },
+            {
+              "label": "$1 000–$3 000",
+              "value": "$1 000–$3 000"
+            },
+            {
+              "label": "$3 000+",
+              "value": "$3 000+"
+            }
+          ]
+        },
+        {
+          "k": "field",
+          "type": "date",
+          "name": "cdeadline",
+          "label": "Дедлайн",
+          "placeholder": "",
+          "required": false
+        },
+        {
+          "k": "field",
+          "type": "textarea",
+          "name": "cp",
+          "label": "Про проєкт",
+          "placeholder": "Коротко опишіть задачу",
+          "required": false
+        },
+        {
+          "k": "text",
+          "text": "✓ ЗАЯВКУ НАДІСЛАНО — ВІДПОВІМО ПРОТЯГОМ 15 ХВ",
+          "role": "form-ok-new"
+        },
+        {
+          "k": "button",
+          "text": "Надіслати заявку",
+          "type": "submit"
+        },
+        {
+          "k": "text",
+          "text": "Відповімо протягом 15 хв у робочий час"
+        },
+        {
+          "k": "decor",
+          "text": "Website"
+        },
+        {
+          "k": "link",
+          "text": "Написати в Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "Написати в WhatsApp",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Написати у Viber",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Подзвонити +380688286969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "text",
+          "text": "Email",
+          "role": "ci-l"
+        },
+        {
+          "k": "text",
+          "text": "supportinfiniteunion@gmail.com",
+          "role": "ci-v"
+        },
+        {
+          "k": "text",
+          "text": "Час відповіді",
+          "role": "ci-l"
+        },
+        {
+          "k": "text",
+          "text": "15 хвилин у робочий час",
+          "role": "ci-v"
+        },
+        {
+          "k": "text",
+          "text": "Ми в мережі",
+          "role": "ci-l"
+        },
+        {
+          "k": "text",
+          "text": "Instagram @infinite_union · Telegram-канал · Google Maps",
+          "role": "ci-v"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [],
+  "internalLinks": [
+    {
+      "text": "Замовити проект",
+      "href": "/#contact",
+      "block": 1
+    },
+    {
+      "text": "Обговорити проєкт",
+      "href": "/#contact",
+      "block": 3
+    },
+    {
+      "text": "01 Сайти — від $600",
+      "href": "/services/websites/",
+      "block": 3
+    },
+    {
+      "text": "02 Telegram-боти — від $300",
+      "href": "/services/bots/",
+      "block": 3
+    },
+    {
+      "text": "03 Google · Meta Ads",
+      "href": "/services/google-ads/",
+      "block": 3
+    },
+    {
+      "text": "04 SEO просування",
+      "href": "/services/seo/",
+      "block": 3
+    },
+    {
+      "text": "Ціни",
+      "href": "/pricing/",
+      "block": 5
+    },
+    {
+      "text": "портфоліо",
+      "href": "/portfolio/",
+      "block": 5
+    },
+    {
+      "text": "01СайтиЛендінг від $600 · магазин від $1 200",
+      "href": "/services/websites/",
+      "block": 6
+    },
+    {
+      "text": "02Telegram-ботиВід $300 · оплати · CRM",
+      "href": "/services/bots/",
+      "block": 6
+    },
+    {
+      "text": "03Вебплатформи та SaaSMVP від $2 500 · 4–8 тижнів",
+      "href": "/services/platforms/",
+      "block": 6
+    },
+    {
+      "text": "04Сайт + бот + CRMАвтоматизація від $2 000",
+      "href": "/services/ecosystems/",
+      "block": 6
+    },
+    {
+      "text": "05Ціни на всі послугиТарифи, терміни, що входить",
+      "href": "/pricing/",
+      "block": 6
+    },
+    {
+      "text": "01Таргет Facebook та InstagramНалаштування від $250",
+      "href": "/services/meta-ads/",
+      "block": 6
+    },
+    {
+      "text": "02Google AdsНалаштування від $300",
+      "href": "/services/google-ads/",
+      "block": 6
+    },
+    {
+      "text": "03SEO просуванняВід $150/міс",
+      "href": "/services/seo/",
+      "block": 6
+    },
+    {
+      "text": "04TikTok AdsНалаштування від $250",
+      "href": "/services/tiktok-ads/",
+      "block": 6
+    },
+    {
+      "text": "Обговорити рекламу",
+      "href": "/#contact",
+      "block": 6
+    },
+    {
+      "text": "Спробувати конструктор",
+      "href": "/services/constructor/",
+      "block": 9
+    },
+    {
+      "text": "Переглянути всі роботи",
+      "href": "/portfolio/",
+      "block": 10
+    },
+    {
+      "text": "SaaS · Флагман IU01 Ad Tracker by Infinite Union Один дашборд замість трьох вкладок — Meta, Google і TikTok Ads разом 3 платформи5+ год економії щотижня Детальніше",
+      "href": "/portfolio/#p-ad-tracker",
+      "block": 10,
+      "card": true
+    },
+    {
+      "text": "Автобізнес · Харків02 Respect Car Продаж, викуп та імпорт авто зі США — з адмінкою прямо в Telegram Фото каталог автоTG адмінка Детальніше",
+      "href": "/portfolio/#p-respect-car",
+      "block": 10,
+      "card": true
+    },
+    {
+      "text": "Освіта · Екосистема03 Parrot School Сайт + Telegram-бот для учня, батька і вчителя школи англійської 3 ролі в боті+ адмін-бот Детальніше",
+      "href": "/portfolio/#p-parrot-school",
+      "block": 10,
+      "card": true
+    },
+    {
+      "text": "Флагман · SEO04 Transfer Kharkiv Лендінг трансферної компанії + Telegram-бот, що приймає заявки 24/7 8.4% конверсія119+ SEO-позицій Детальніше",
+      "href": "/portfolio/#p-transfer-kharkiv",
+      "block": 10,
+      "card": true
+    },
+    {
+      "text": "Університет · 3000+ юзерів05 KNEU Bot Офіційний Telegram-бот КНЕУ: розклад, новини, сповіщення 3 000+ користувачівLive розклад Детальніше",
+      "href": "/portfolio/#p-kneu-bot",
+      "block": 10,
+      "card": true
+    },
+    {
+      "text": "Автоматизація · Бізнес06 BizBot Бот для бухгалтерії малого бізнесу: зарплати, задачі, автозаповнення Excel 4+ год економіїExcel автозаповнення Детальніше",
+      "href": "/portfolio/#p-bizbot",
+      "block": 10,
+      "card": true
+    },
+    {
+      "text": "AI · Автоматизація07 InfinityCreo Від брифу до готового рекламного банера за 3 хвилини 3 хв на креатив10+ форматів Детальніше",
+      "href": "/portfolio/#p-infinitycreo",
+      "block": 10,
+      "card": true
+    },
+    {
+      "text": "Internal · Автоматизація08 IU Bot Внутрішній lead-бот IU: квіз, FSM-сценарії, передача ліда в CRM Квіз кваліфікаціяCRM інтеграція Детальніше",
+      "href": "/portfolio/#p-iu-bot",
+      "block": 10,
+      "card": true
+    },
+    {
+      "text": "Переглянути всі роботи",
+      "href": "/portfolio/",
+      "block": 11
+    },
+    {
+      "text": "Ціни",
+      "href": "/pricing/",
+      "block": 15
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 1
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 1
+    },
+    {
+      "text": "Viber",
+      "href": "viber://chat?number=380688286969",
+      "block": 1
+    },
+    {
+      "text": "Зателефонувати",
+      "href": "tel:+380688286969",
+      "block": 1
+    },
+    {
+      "text": "Переглянути",
+      "href": "https://transferkharkiv.com.ua/",
+      "block": 11
+    },
+    {
+      "text": "Спробувати",
+      "href": "https://t.me/infinitycreo_bot",
+      "block": 11
+    },
+    {
+      "text": "Спробувати трекер",
+      "href": "https://infinitetracker.com.ua/",
+      "block": 12
+    },
+    {
+      "text": "Дізнатись більше",
+      "href": "https://infinitetracker.com.ua/",
+      "block": 12
+    },
+    {
+      "text": "Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 15
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 15
+    },
+    {
+      "text": "Viber",
+      "href": "viber://chat?number=380688286969",
+      "block": 15
+    },
+    {
+      "text": "Зателефонувати",
+      "href": "tel:+380688286969",
+      "block": 15
+    },
+    {
+      "text": "Написати в Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 15
+    },
+    {
+      "text": "Написати в WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 15
+    },
+    {
+      "text": "Написати у Viber",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 15
+    },
+    {
+      "text": "Подзвонити +380688286969",
+      "href": "tel:+380688286969",
+      "block": 15
+    },
+    {
+      "text": "supportinfiniteunion@gmail.com",
+      "href": "mailto:supportinfiniteunion@gmail.com",
+      "block": 15
+    },
+    {
+      "text": "Instagram @infinite_union",
+      "href": "https://instagram.com/infinite_union",
+      "block": 15
+    },
+    {
+      "text": "Telegram-канал",
+      "href": "https://t.me/infinite_union_channel",
+      "block": 15
+    },
+    {
+      "text": "Google Maps",
+      "href": "https://maps.app.goo.gl/sDMRaLPPcaLcZkHH9",
+      "block": 15
+    }
+  ]
+}

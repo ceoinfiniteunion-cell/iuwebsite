@@ -1,0 +1,1001 @@
+{
+  "url": "https://infiniteunion.com.ua/services/seo/",
+  "path": "/services/seo/",
+  "file": "services/seo/index.html",
+  "lang": "uk",
+  "alt": {
+    "lang": "en",
+    "path": "/en/services/seo/",
+    "url": "https://infiniteunion.com.ua/en/services/seo/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "SEO просування",
+  "title": "SEO просування сайту в Google — від $150/міс",
+  "description": "SEO просування сайту: технічний аудит, семантичне ядро, структура, тексти, посилання, щомісячні звіти. Від $150/міс, перші результати за 3–6 місяців.",
+  "keyword": "SEO просування сайту",
+  "secondaryKeywords": "SEO просування, просування сайту в Google, розкрутка сайту. Аудит → `/services/seo-audit/` (комерційний) vs `/blog/seo-audit-shcho-tse/` (інформаційний «що таке»). Локальне → `/services/seo-local/`",
+  "priceFrom": 150,
+  "robots": "index, follow",
+  "h1": "SEO просування сайту",
+  "breadcrumbs": [
+    {
+      "name": "Головна",
+      "url": "/"
+    },
+    {
+      "name": "SEO просування",
+      "url": "/services/seo/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#F5F0E8",
+    "--bg2": "#EDE8E0",
+    "--dark": "#0A0A0A",
+    "--text": "#1A1A1A",
+    "--muted": "#777",
+    "--border": "rgba(0,0,0,0.07)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ease": "cubic-bezier(0.76,0,0.24,1)",
+    "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+  },
+  "words": 797,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Назад",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/"
+    },
+    {
+      "k": "link",
+      "text": "EN",
+      "href": "/en/services/seo/"
+    },
+    {
+      "k": "link",
+      "text": "ЗАМОВИТИ SEO",
+      "href": "/services/seo/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "SEO просування сайту",
+      "items": [
+        {
+          "k": "text",
+          "text": "від $150",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "SEO",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "Просування, на місяць",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "від $100",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "AUDIT",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "SEO аудит, разово",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "3–6 міс",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "TIME",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "До перших результатів",
+          "role": "hm-sub"
+        },
+        {
+          "k": "decor",
+          "text": "SCROLL"
+        },
+        {
+          "k": "decor",
+          "text": "03"
+        },
+        {
+          "k": "text",
+          "text": "SEO · GOOGLE · ХАРКІВ · УКРАЇНА / ЄС",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "SEO просування сайту"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union — веб-студія з Харкова. SEO просування сайту в Google для бізнесу в Україні та ЄС: технічний аудит, семантика, структура, тексти, посилання й щомісячні звіти. Від $150/міс, перші результати — через 3–6 місяців. Обговорити сайт →"
+        },
+        {
+          "k": "text",
+          "text": "$150/міс",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "просування, від",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "3–6міс",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "до перших результатів",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "119+",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "позицій у топі Transfer Kharkiv",
+          "role": "hero-stat-label"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "ТЕХНІЧНЕ SEO →СЕМАНТИЧНЕ ЯДРО →КОНТЕНТ →ПОСИЛАННЯ →CORE WEB VITALS →SCHEMA.ORG →LOCAL SEO →E-E-A-T →ТЕХНІЧНЕ SEO →СЕМАНТИЧНЕ ЯДРО →КОНТЕНТ →ПОСИЛАННЯ →CORE WEB VITALS →SCHEMA.ORG →LOCAL SEO →E-E-A-T →"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Сайт є, а з Google — тиша",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЗАДАЧА",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Сайт є, а з Google — тиша"
+        },
+        {
+          "k": "text",
+          "text": "Типова ситуація: сайт зробили, він гарний, але в Google його знаходять тільки за назвою компанії. Причини зазвичай технічні й структурні: сторінки не в індексі, під кожну послугу немає окремої сторінки, тексти написані «про нас», а не під запити клієнтів."
+        },
+        {
+          "k": "text",
+          "text": "SEO просування сайту — це не разова «оптимізація», а щомісячна робота: виправити технічну базу, зібрати семантику, розширити структуру, оновлювати тексти й нарощувати згадки про сайт. Ефект накопичується повільно, зате не зникає, щойно ви перестаєте платити за кліки."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Що входить у SEO просування сайту",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЩО ВХОДИТЬ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Що входить у SEO просування сайту"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Технічний аудит"
+        },
+        {
+          "k": "text",
+          "text": "Індексація, швидкість, Core Web Vitals, дублікати, редиректи, мікророзмітка. Окремою послугою — SEO аудит сайту.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Search Console · Core Web Vitals",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Семантичне ядро"
+        },
+        {
+          "k": "text",
+          "text": "Збираємо запити, за якими вас шукають клієнти, і групуємо їх за сторінками. Без цього тексти пишуться навмання.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Кластеризація · Інтент",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Структура і посадкові сторінки"
+        },
+        {
+          "k": "text",
+          "text": "Окрема сторінка під кожну послугу, категорію чи місто. Логічні внутрішні посилання між ними.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Структура · Перелінковка",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Тексти й мета-теги"
+        },
+        {
+          "k": "text",
+          "text": "Оновлюємо або пишемо тексти під запити: title, description, заголовки, FAQ. Пишемо для людей, а не для щільності ключів.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Контент · Title · FAQ",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Посилання і згадки"
+        },
+        {
+          "k": "text",
+          "text": "Тематичні каталоги, профілі компанії, партнерські публікації. Без масових бірж і спаму, через які сайт може отримати санкції.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Каталоги · Публікації",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "06",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Локальне SEO"
+        },
+        {
+          "k": "text",
+          "text": "Якщо у вас є адреса чи зона обслуговування — профіль Google Business і Google Maps. Детально — на сторінці локального SEO.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Google Maps · GBP",
+          "role": "service-tags"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Етапи просування",
+      "items": [
+        {
+          "k": "text",
+          "text": "ЯК МИ ПРАЦЮЄМО",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Етапи просування"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Аудит"
+        },
+        {
+          "k": "text",
+          "text": "Технічний аудит і аналіз конкурентів у видачі. Отримуєте список задач з пріоритетами.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "3–5 днів",
+          "role": "process-time"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Стратегія"
+        },
+        {
+          "k": "text",
+          "text": "Семантика, структура сторінок і план робіт на перші місяці.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 тижні",
+          "role": "process-time"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Впровадження"
+        },
+        {
+          "k": "text",
+          "text": "Технічні виправлення, нові сторінки, тексти, посилання — за планом.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "Щомісяця",
+          "role": "process-time"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Звіт і корекція"
+        },
+        {
+          "k": "text",
+          "text": "Видимість, трафік із Google, заявки, виконані задачі й план на наступний місяць.",
+          "role": "process-item-desc"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Ціна SEO просування",
+      "items": [
+        {
+          "k": "text",
+          "text": "ВАРТІСТЬ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Ціна SEO просування"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01 · РАЗОВО",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "SEO аудит — від $100"
+        },
+        {
+          "k": "text",
+          "text": "Базовий — від $100 (до 50 сторінок, 3 дні), повний — від $300 (5 днів). Звіт з пріоритетами виправлень.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "02 · ЩОМІСЯЦЯ",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "SEO просування — від $150/міс"
+        },
+        {
+          "k": "text",
+          "text": "Технічна база, семантика, сторінки, тексти, посилання, щомісячний звіт. Перші результати — через 3–6 місяців.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "03 · GOOGLE MAPS",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Локальне SEO — від $200"
+        },
+        {
+          "k": "text",
+          "text": "Старт від $200 разово, ведення Local Pro — від $150/міс, мережа філій — від $400/міс.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "04 · ЧЕСНО",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Що ми не обіцяємо"
+        },
+        {
+          "k": "text",
+          "text": "Гарантованих позицій у Google не дає ніхто — алгоритм нам не належить. Ми обіцяємо зрозумілий план, виконані задачі й прозорі звіти. Усі ціни — на сторінці тарифів.",
+          "role": "service-desc"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Приклад з портфоліо",
+      "items": [
+        {
+          "k": "text",
+          "text": "ПОРТФОЛІО",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Приклад з портфоліо"
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "ЛЕНДІНГ + SEO",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Transfer Kharkiv"
+            },
+            {
+              "k": "text",
+              "text": "Лендінг трансферної компанії на статичному HTML/CSS/JS з SEO-оптимізацією: 119+ позицій у топі Google, конверсія 8.4%, заявки 24/7 приймає Telegram-бот.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "SEO · HTML/CSS/JS · Python-бот",
+              "role": "service-tags"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/portfolio/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "ПОРТФОЛІО",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Інші проєкти"
+            },
+            {
+              "k": "text",
+              "text": "Сайти, Telegram-боти та екосистеми, які ми зробили для бізнесу в Харкові та Україні.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "Усі кейси →",
+              "role": "service-tags"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "stats",
+      "viewport": "all",
+      "tag": "div",
+      "class": "results-strip",
+      "heading": "",
+      "items": [
+        {
+          "k": "text",
+          "text": "119+",
+          "role": "result-val"
+        },
+        {
+          "k": "text",
+          "text": "SEO-позицій у топі Transfer Kharkiv",
+          "role": "result-label"
+        },
+        {
+          "k": "text",
+          "text": "8.4%",
+          "role": "result-val"
+        },
+        {
+          "k": "text",
+          "text": "Конверсія лендінгу",
+          "role": "result-label"
+        },
+        {
+          "k": "text",
+          "text": "24/7",
+          "role": "result-val"
+        },
+        {
+          "k": "text",
+          "text": "Прийом заявок Telegram-ботом",
+          "role": "result-label"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "related-services",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Почніть з того, що потрібно саме вам",
+      "items": [
+        {
+          "k": "text",
+          "text": "НАПРЯМИ SEO",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Почніть з того, що потрібно саме вам"
+        },
+        {
+          "k": "card-link",
+          "href": "/services/seo-audit/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "АУДИТ",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "SEO аудит сайту"
+            },
+            {
+              "k": "text",
+              "text": "Технічна перевірка і план виправлень. Від $100, 3–5 днів.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "Від $100",
+              "role": "service-tags"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/services/seo-local/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "GOOGLE MAPS",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Локальне SEO"
+            },
+            {
+              "k": "text",
+              "text": "Профіль Google Business, карта, відгуки, локальні сторінки.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "Від $200",
+              "role": "service-tags"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/blog/seo-audit-shcho-tse/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "БЛОГ",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Що таке SEO аудит"
+            },
+            {
+              "k": "text",
+              "text": "Простими словами: з чого складається аудит і коли він потрібен.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "Стаття",
+              "role": "service-tags"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/blog/google-ads-chy-seo/",
+          "items": [
+            {
+              "k": "decor",
+              "text": "↗"
+            },
+            {
+              "k": "text",
+              "text": "БЛОГ",
+              "role": "service-num"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Google Ads чи SEO"
+            },
+            {
+              "k": "text",
+              "text": "Порівнюємо швидкість, вартість і довгостроковий ефект двох каналів.",
+              "role": "service-desc"
+            },
+            {
+              "k": "text",
+              "text": "Стаття",
+              "role": "service-tags"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq-section",
+      "heading": "Часті запитання",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "faq-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Часті запитання"
+        },
+        {
+          "k": "faq",
+          "q": "Скільки коштує SEO просування сайту?",
+          "a": "Від $150/міс. Ціна залежить від кількості сторінок, конкуренції в ніші та обсягу контенту. Перед стартом радимо аудит — від $100."
+        },
+        {
+          "k": "faq",
+          "q": "Коли будуть результати?",
+          "a": "Перші результати — зазвичай через 3–6 місяців. Технічні виправлення Google враховує швидше, а зростання видимості за конкурентними запитами потребує часу."
+        },
+        {
+          "k": "faq",
+          "q": "Ви гарантуєте топ-3 або топ-10?",
+          "a": "Ні. Гарантувати позиції не може жодна агенція: алгоритм Google нам не належить. Ми гарантуємо виконання погодженого плану робіт і прозорі щомісячні звіти."
+        },
+        {
+          "k": "faq",
+          "q": "Що ви робите щомісяця?",
+          "a": "Виправляємо технічні помилки, створюємо або оновлюємо сторінки й тексти, працюємо з посиланнями, стежимо за індексацією. Наприкінці місяця — звіт: що зроблено, як змінились видимість і трафік, що далі."
+        },
+        {
+          "k": "faq",
+          "q": "Чи треба переробляти сайт?",
+          "a": "Не обов'язково. Спочатку робимо аудит. Якщо сайт технічно слабкий і дешевше зробити новий, скажемо про це прямо — ми також розробляємо сайти."
+        },
+        {
+          "k": "faq",
+          "q": "Можна поєднати SEO і рекламу?",
+          "a": "Так, і часто це найкращий варіант: Google Ads дає заявки зараз, поки SEO набирає обертів. Порівняння каналів — у статті «Google Ads чи SEO»."
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Розберемо ваш сайт",
+      "items": [
+        {
+          "k": "decor",
+          "text": "SEO"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Розберемо ваш сайт"
+        },
+        {
+          "k": "text",
+          "text": "Надішліть адресу сайту — відповімо протягом 15 хвилин у робочий час"
+        },
+        {
+          "k": "link",
+          "text": "Telegram",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WhatsApp",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "Viber",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380688286969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "link",
+          "text": "ЗАПОВНИТИ ФОРМУ",
+          "href": "/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [
+    {
+      "q": "Скільки коштує SEO просування сайту?",
+      "a": "Від $150/міс. Ціна залежить від кількості сторінок, конкуренції в ніші та обсягу контенту. Перед стартом радимо аудит — від $100."
+    },
+    {
+      "q": "Коли будуть результати?",
+      "a": "Перші результати — зазвичай через 3–6 місяців. Технічні виправлення Google враховує швидше, а зростання видимості за конкурентними запитами потребує часу."
+    },
+    {
+      "q": "Ви гарантуєте топ-3 або топ-10?",
+      "a": "Ні. Гарантувати позиції не може жодна агенція: алгоритм Google нам не належить. Ми гарантуємо виконання погодженого плану робіт і прозорі щомісячні звіти."
+    },
+    {
+      "q": "Що ви робите щомісяця?",
+      "a": "Виправляємо технічні помилки, створюємо або оновлюємо сторінки й тексти, працюємо з посиланнями, стежимо за індексацією. Наприкінці місяця — звіт: що зроблено, як змінились видимість і трафік, що далі."
+    },
+    {
+      "q": "Чи треба переробляти сайт?",
+      "a": "Не обов'язково. Спочатку робимо аудит. Якщо сайт технічно слабкий і дешевше зробити новий, скажемо про це прямо — ми також розробляємо сайти."
+    },
+    {
+      "q": "Можна поєднати SEO і рекламу?",
+      "a": "Так, і часто це найкращий варіант: Google Ads дає заявки зараз, поки SEO набирає обертів. Порівняння каналів — у статті «Google Ads чи SEO»."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "Обговорити сайт →",
+      "href": "/services/seo/#contact",
+      "block": 1
+    },
+    {
+      "text": "SEO аудит сайту",
+      "href": "/services/seo-audit/",
+      "block": 4
+    },
+    {
+      "text": "локального SEO",
+      "href": "/services/seo-local/",
+      "block": 4
+    },
+    {
+      "text": "тарифів",
+      "href": "/pricing/",
+      "block": 6
+    },
+    {
+      "text": "↗ ЛЕНДІНГ + SEO Transfer Kharkiv Лендінг трансферної компанії на статичному HTML/CSS/JS з SEO-оптимізацією: 119+ позицій у топі Google, конверсія 8.4%, заявки 24/7 приймає Telegram-бот. SEOHTML/CSS/JSPython-бот",
+      "href": "/portfolio/",
+      "block": 7,
+      "card": true
+    },
+    {
+      "text": "↗ ПОРТФОЛІО Інші проєкти Сайти, Telegram-боти та екосистеми, які ми зробили для бізнесу в Харкові та Україні. Усі кейси →",
+      "href": "/portfolio/",
+      "block": 7,
+      "card": true
+    },
+    {
+      "text": "↗ АУДИТ SEO аудит сайту Технічна перевірка і план виправлень. Від $100, 3–5 днів. Від $100",
+      "href": "/services/seo-audit/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "↗ GOOGLE MAPS Локальне SEO Профіль Google Business, карта, відгуки, локальні сторінки. Від $200",
+      "href": "/services/seo-local/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "↗ БЛОГ Що таке SEO аудит Простими словами: з чого складається аудит і коли він потрібен. Стаття",
+      "href": "/blog/seo-audit-shcho-tse/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "↗ БЛОГ Google Ads чи SEO Порівнюємо швидкість, вартість і довгостроковий ефект двох каналів. Стаття",
+      "href": "/blog/google-ads-chy-seo/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "розробляємо сайти",
+      "href": "/services/websites/",
+      "block": 10
+    },
+    {
+      "text": "Google Ads",
+      "href": "/services/google-ads/",
+      "block": 10
+    },
+    {
+      "text": "«Google Ads чи SEO»",
+      "href": "/blog/google-ads-chy-seo/",
+      "block": 10
+    },
+    {
+      "text": "ЗАПОВНИТИ ФОРМУ",
+      "href": "/#contact",
+      "block": 11
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "Telegram",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 11
+    },
+    {
+      "text": "WhatsApp",
+      "href": "https://wa.me/380688286969",
+      "block": 11
+    },
+    {
+      "text": "Viber",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 11
+    },
+    {
+      "text": "+380688286969",
+      "href": "tel:+380688286969",
+      "block": 11
+    }
+  ]
+}

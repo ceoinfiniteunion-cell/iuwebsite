@@ -1,0 +1,863 @@
+{
+  "url": "https://infiniteunion.com.ua/en/services/tiktok-ads/",
+  "path": "/en/services/tiktok-ads/",
+  "file": "en/services/tiktok-ads/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/services/tiktok-ads/",
+    "url": "https://infiniteunion.com.ua/services/tiktok-ads/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "TikTok Ads",
+  "title": "TikTok Ads Agency — Campaign Setup from $250",
+  "description": "TikTok advertising for business: In-Feed and Spark Ads, TikTok Pixel, UGC-style creatives. Setup from $250, management from $150/month.",
+  "keyword": "TikTok ads agency",
+  "priceFrom": 250,
+  "robots": "index, follow",
+  "h1": "TikTok ads agency",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "TikTok Ads",
+      "url": "/en/services/tiktok-ads/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--bg": "#F5F0E8",
+    "--bg2": "#EDE8E0",
+    "--dark": "#0A0A0A",
+    "--text": "#1A1A1A",
+    "--muted": "#777",
+    "--border": "rgba(0,0,0,0.07)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ease": "cubic-bezier(0.76,0,0.24,1)",
+    "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+  },
+  "words": 942,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Back",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/services/tiktok-ads/"
+    },
+    {
+      "k": "link",
+      "text": "LAUNCH TIKTOK ADS",
+      "href": "/en/services/tiktok-ads/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "TikTok ads agency",
+      "items": [
+        {
+          "k": "text",
+          "text": "$250",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "Setup",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "one-off, from",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "$150",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "Management",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "per month, from",
+          "role": "hm-sub"
+        },
+        {
+          "k": "text",
+          "text": "$200",
+          "role": "hm-val"
+        },
+        {
+          "k": "text",
+          "text": "Ad budget",
+          "role": "hm-key"
+        },
+        {
+          "k": "text",
+          "text": "per month, minimum",
+          "role": "hm-sub"
+        },
+        {
+          "k": "decor",
+          "text": "SCROLL"
+        },
+        {
+          "k": "decor",
+          "text": "04"
+        },
+        {
+          "k": "text",
+          "text": "IN-FEED · SPARK ADS · TIKTOK PIXEL",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "TikTok ads agency"
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union is a TikTok ads agency based in Kharkiv, Ukraine. We launch In-Feed and Spark Ads for small businesses in the EU and Ukraine: TikTok Pixel and events, audiences, UGC-style video scripts and weekly optimisation. Setup from $250, management from $150/month, ad budget from $200/month paid separately."
+        },
+        {
+          "k": "text",
+          "text": "$250",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "setup, from",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$150/mo",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "management, from",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$200/mo",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "minimum ad budget",
+          "role": "hero-stat-label"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "TIKTOK ADS →IN-FEED ADS →SPARK ADS →UGC VIDEO →TIKTOK PIXEL →EVENTS API →CREATIVE TESTING →LEAD GENERATION →TIKTOK ADS →IN-FEED ADS →SPARK ADS →UGC VIDEO →TIKTOK PIXEL →EVENTS API →CREATIVE TESTING →LEAD GENERATION →"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "TikTok skips ads that look like ads",
+      "items": [
+        {
+          "k": "text",
+          "text": "THE PROBLEM",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "TikTok skips ads that look like ads"
+        },
+        {
+          "k": "text",
+          "text": "Polished TV-style videos and recycled Instagram banners usually get scrolled past on TikTok in the first second. The platform rewards content that looks native: vertical, fast, with a real person talking and a clear hook at the start."
+        },
+        {
+          "k": "text",
+          "text": "The second problem is data. Without TikTok Pixel and correct events, campaigns optimise for cheap views, and you get reach without enquiries. A TikTok ads agency has to fix both sides at once: the creative approach and the signals the algorithm learns from."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "What our TikTok ads agency work covers",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHAT'S INCLUDED",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "What our TikTok ads agency work covers"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "In-Feed Ads"
+        },
+        {
+          "k": "text",
+          "text": "Native video ads in the For You feed, with campaign objectives set for traffic, leads or sales — not just views. Each campaign has a clear target action and a landing page or form to match.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "In-Feed · Lead generation · Website conversions",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Spark Ads"
+        },
+        {
+          "k": "text",
+          "text": "We promote your own posts, or a creator's posts with their permission, as ads. Likes, comments and follows stay on the original post, so paid reach also builds your profile.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Spark Ads · Creator posts",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "UGC-style scripts"
+        },
+        {
+          "k": "text",
+          "text": "Hooks, scripts and shot lists for 15–30 second videos that you or a creator can film on a phone. One idea becomes several variations with different hooks to test.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Hooks · Scripts · Shot lists",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "TikTok Pixel and events"
+        },
+        {
+          "k": "text",
+          "text": "Pixel and Events API setup for leads, purchases and messages, checked in TikTok Events Manager before launch, so you can see what the ads actually bring.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "TikTok Pixel · Events API",
+          "role": "service-tags"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "From idea to first tests",
+      "items": [
+        {
+          "k": "text",
+          "text": "HOW WE WORK",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "From idea to first tests"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Strategy"
+        },
+        {
+          "k": "text",
+          "text": "Your niche on TikTok, competitors' content, formats and audiences to start with.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "2–3 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Content"
+        },
+        {
+          "k": "text",
+          "text": "Scripts and briefs for UGC-style videos, or a selection of posts for Spark Ads.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "3–5 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Launch"
+        },
+        {
+          "k": "text",
+          "text": "Ad account, Pixel, conversion events and the first campaigns.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Optimisation"
+        },
+        {
+          "k": "text",
+          "text": "New creatives every cycle, budget moves to the ads that bring enquiries.",
+          "role": "process-item-desc"
+        },
+        {
+          "k": "text",
+          "text": "Ongoing",
+          "role": "process-time"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-cards",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "TikTok Ads pricing",
+      "items": [
+        {
+          "k": "text",
+          "text": "PRICING",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "TikTok Ads pricing"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "TIER 01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Setup — from $250"
+        },
+        {
+          "k": "text",
+          "text": "One-off. Ad account, TikTok Pixel and events, audiences, campaign structure, first creative brief and launch.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "One-off",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "TIER 02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Management — from $150/month"
+        },
+        {
+          "k": "text",
+          "text": "Creative testing, budget and targeting changes, new script ideas every cycle and a monthly report.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Monthly",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "BUDGET",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ad budget — from $200/month"
+        },
+        {
+          "k": "text",
+          "text": "The ad budget is paid to TikTok directly. Below about $200/month there is too little data to compare creatives properly.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Separate",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "NOTE",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Not included"
+        },
+        {
+          "k": "text",
+          "text": "Video production on location, actors and creator fees. We can help you find a creator, but their fee is agreed with them separately.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Compare with our other services on the pricing page."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Our own tools for ad work",
+      "items": [
+        {
+          "k": "text",
+          "text": "FROM OUR PORTFOLIO",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Our own tools for ad work"
+        },
+        {
+          "k": "decor",
+          "text": "↗"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "InfinityCreo"
+        },
+        {
+          "k": "text",
+          "text": "AI generator of ad creatives (@infinitycreo_bot) built on n8n: about 3 minutes from brief to banner, 10+ formats. Handy for static cover images and test variations alongside video.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "n8n · AI creatives",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "service-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Ad Tracker by IU"
+        },
+        {
+          "k": "text",
+          "text": "TikTok, Meta and Google Ads results in one dashboard, refreshed every 2 hours, with 90 days of history. Currently in development.",
+          "role": "service-desc"
+        },
+        {
+          "k": "text",
+          "text": "Reporting",
+          "role": "service-tags"
+        },
+        {
+          "k": "text",
+          "text": "Websites, bots and other projects are in our portfolio."
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq",
+      "heading": "Questions we get asked",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Questions we get asked"
+        },
+        {
+          "k": "faq",
+          "q": "Is TikTok advertising available in the EU and Ukraine?",
+          "a": "Yes, TikTok Ads Manager is available for businesses in Ukraine and in most EU countries. Some ad categories and targeting options differ by country, so we check the rules for your market before setup."
+        },
+        {
+          "k": "faq",
+          "q": "How much does a TikTok ads agency cost?",
+          "a": "With us, setup starts from $250 and management from $150/month. The ad budget is separate, with a minimum of about $200/month, and is paid directly to TikTok."
+        },
+        {
+          "k": "faq",
+          "q": "Is TikTok right for my business?",
+          "a": "It works best for consumer products and services with a visual story: e-commerce, beauty, fitness, food, education, events. For narrow B2B services, Google Ads usually fits better, and we will tell you so."
+        },
+        {
+          "k": "faq",
+          "q": "Do I need a TikTok account?",
+          "a": "You need a TikTok Business account to run Spark Ads with your own posts. Standard In-Feed ads can run without active posting, but a profile with a few real videos makes people trust the ad more."
+        },
+        {
+          "k": "faq",
+          "q": "Who films the videos?",
+          "a": "Usually you, your team or a creator, on a phone. We write the hooks, scripts and shot lists, so filming takes a few hours, not days."
+        },
+        {
+          "k": "faq",
+          "q": "How quickly will we know if it works?",
+          "a": "The first week is a learning phase while TikTok tests your ads on different people. We evaluate creatives after one to two weeks and decide by cost per lead or sale, not by views."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "related-services",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Other ad channels",
+      "items": [
+        {
+          "k": "text",
+          "text": "RELATED SERVICES",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Other ad channels"
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/meta-ads/",
+          "items": [
+            {
+              "k": "text",
+              "text": "01"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Facebook and Instagram ads"
+            },
+            {
+              "k": "text",
+              "text": "Reels, Stories and retargeting. Setup from $250."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/google-ads/",
+          "items": [
+            {
+              "k": "text",
+              "text": "02"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Google Ads management"
+            },
+            {
+              "k": "text",
+              "text": "Search campaigns for high-intent queries. Setup from $300."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/services/websites/",
+          "items": [
+            {
+              "k": "text",
+              "text": "03"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "Landing pages"
+            },
+            {
+              "k": "text",
+              "text": "A fast mobile page for TikTok traffic. From $600."
+            },
+            {
+              "k": "text",
+              "text": "Learn more →"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Start with TikTok ads",
+      "items": [
+        {
+          "k": "decor",
+          "text": "TIKTOK"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Start with TikTok ads"
+        },
+        {
+          "k": "text",
+          "text": "Tell us about your business and target market. We reply within 15 minutes during working hours."
+        },
+        {
+          "k": "link",
+          "text": "MESSAGE ON TELEGRAM",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WHATSAPP",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "VIBER",
+          "href": "viber://chat?number=%2B380688286969"
+        },
+        {
+          "k": "link",
+          "text": "+380 68 828 6969",
+          "href": "tel:+380688286969"
+        },
+        {
+          "k": "link",
+          "text": "FILL IN THE FORM",
+          "href": "/en/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [],
+  "faq": [
+    {
+      "q": "Is TikTok advertising available in the EU and Ukraine?",
+      "a": "Yes, TikTok Ads Manager is available for businesses in Ukraine and in most EU countries. Some ad categories and targeting options differ by country, so we check the rules for your market before setup."
+    },
+    {
+      "q": "How much does a TikTok ads agency cost?",
+      "a": "With us, setup starts from $250 and management from $150/month. The ad budget is separate, with a minimum of about $200/month, and is paid directly to TikTok."
+    },
+    {
+      "q": "Is TikTok right for my business?",
+      "a": "It works best for consumer products and services with a visual story: e-commerce, beauty, fitness, food, education, events. For narrow B2B services, Google Ads usually fits better, and we will tell you so."
+    },
+    {
+      "q": "Do I need a TikTok account?",
+      "a": "You need a TikTok Business account to run Spark Ads with your own posts. Standard In-Feed ads can run without active posting, but a profile with a few real videos makes people trust the ad more."
+    },
+    {
+      "q": "Who films the videos?",
+      "a": "Usually you, your team or a creator, on a phone. We write the hooks, scripts and shot lists, so filming takes a few hours, not days."
+    },
+    {
+      "q": "How quickly will we know if it works?",
+      "a": "The first week is a learning phase while TikTok tests your ads on different people. We evaluate creatives after one to two weeks and decide by cost per lead or sale, not by views."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "pricing page",
+      "href": "/en/pricing/",
+      "block": 6
+    },
+    {
+      "text": "portfolio",
+      "href": "/en/portfolio/",
+      "block": 7
+    },
+    {
+      "text": "Google Ads",
+      "href": "/en/services/google-ads/",
+      "block": 8
+    },
+    {
+      "text": "01 Facebook and Instagram ads Reels, Stories and retargeting. Setup from $250. Learn more →",
+      "href": "/en/services/meta-ads/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "02 Google Ads management Search campaigns for high-intent queries. Setup from $300. Learn more →",
+      "href": "/en/services/google-ads/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "03 Landing pages A fast mobile page for TikTok traffic. From $600. Learn more →",
+      "href": "/en/services/websites/",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "FILL IN THE FORM",
+      "href": "/en/#contact",
+      "block": 10
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "MESSAGE ON TELEGRAM",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 10
+    },
+    {
+      "text": "WHATSAPP",
+      "href": "https://wa.me/380688286969",
+      "block": 10
+    },
+    {
+      "text": "VIBER",
+      "href": "viber://chat?number=%2B380688286969",
+      "block": 10
+    },
+    {
+      "text": "+380 68 828 6969",
+      "href": "tel:+380688286969",
+      "block": 10
+    }
+  ]
+}

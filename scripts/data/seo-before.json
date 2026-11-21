@@ -1,0 +1,329 @@
+{
+ "/": {
+  "title": "Веб-студія у Харкові — сайти, боти, реклама | Infinite Union",
+  "description": "Infinite Union — веб-студія з Харкова. Сайти під ключ від $600, Telegram-боти від $300, Google Ads, таргет і SEO. Працюємо по Україні та ЄС.",
+  "h1": "Веб-студія в Харкові: сайти, Telegram-боти та реклама",
+  "h2": 15,
+  "words": 1135,
+  "keyword": "веб-студія Харків"
+ },
+ "/services/websites/": {
+  "title": "Розробка сайтів під ключ — від $600 | Infinite Union",
+  "description": "Розробка сайтів під ключ у Харкові: лендінги, корпоративні сайти, інтернет-магазини. Унікальний дизайн, SEO-основа, код і доступи — ваші. Від $600.",
+  "h1": "Розробка сайтів під ключ.",
+  "h2": 12,
+  "words": 1141,
+  "keyword": "розробка сайтів під ключ"
+ },
+ "/services/websites-landing/": {
+  "title": "Створення лендингу під ключ — від $600, 10 днів",
+  "description": "Створення лендингу під рекламу: структура під конверсію, унікальний дизайн, форма з передачею заявок у Telegram чи CRM. Запуск від 10 днів, від $600.",
+  "h1": "Створення лендингу під рекламу і заявки.",
+  "h2": 12,
+  "words": 912,
+  "keyword": "створення лендингу"
+ },
+ "/services/websites-shop/": {
+  "title": "Інтернет-магазин під ключ — від $1200 | Infinite Union",
+  "description": "Розробка інтернет-магазину під ключ: каталог, фільтри, кошик, оплата LiqPay/WayForPay, Нова Пошта, адмінка. Запуск від 3 тижнів, ціна від $1200.",
+  "h1": "Інтернет-магазин під ключ",
+  "h2": 13,
+  "words": 953,
+  "keyword": "інтернет-магазин під ключ"
+ },
+ "/services/websites-corporate/": {
+  "title": "Корпоративний сайт під ключ — від $1000 | Infinite Union",
+  "description": "Корпоративний сайт компанії під ключ: 5–50+ сторінок, мультимовність, блог, CMS, заявки в CRM. Від $1000, запуск від 3 тижнів. Харків, Україна, ЄС.",
+  "h1": "Корпоративний сайт під ключ",
+  "h2": 13,
+  "words": 862,
+  "keyword": "корпоративний сайт під ключ"
+ },
+ "/services/websites-kharkiv/": {
+  "title": "Розробка сайту в Харкові — веб-студія Infinite Union",
+  "description": "Розробка сайтів у Харкові: лендінги, корпоративні сайти, магазини для харківського бізнесу. Зустріч офлайн, договір, код ваш. Ціни від $600.",
+  "h1": "Розробка сайту у Харкові",
+  "h2": 12,
+  "words": 939,
+  "keyword": "розробка сайту Харків"
+ },
+ "/pricing/": {
+  "title": "Скільки коштує сайт — ціни на розробку 2026 | Infinite Union",
+  "description": "Скільки коштує розробити сайт: лендінг від $600, корпоративний від $1000, магазин від $1200, бот від $300. Що входить у ціну, терміни, FAQ.",
+  "h1": "Скільки коштує сайт в Infinite Union: ціни на розробку 2026",
+  "h2": 12,
+  "words": 1146,
+  "keyword": "скільки коштує сайт"
+ },
+ "/services/bots/": {
+  "title": "Розробка Telegram-бота під ключ — від $300 | Infinite Union",
+  "description": "Розробка Telegram-ботів для бізнесу: заявки, запис, оплати, CRM, розсилки, Mini App. aiogram 3, PostgreSQL. Простий бот від $300, запуск до 2 тижнів.",
+  "h1": "Розробка телеграм-бота для бізнесу",
+  "h2": 12,
+  "words": 1022,
+  "keyword": "розробка телеграм бота"
+ },
+ "/services/bots-sales/": {
+  "title": "Telegram-бот для продажів — воронка й оплата, від $500",
+  "description": "Telegram-бот для продажів: квіз-кваліфікація, каталог, оплата в чаті, передача теплих лідів менеджеру чи в CRM. Від $500, запуск від 7 днів.",
+  "h1": "Телеграм-бот для продажів",
+  "h2": 13,
+  "words": 939,
+  "keyword": "телеграм бот для продажів"
+ },
+ "/services/bots-restaurant/": {
+  "title": "Telegram-бот для ресторану й кафе — замовлення, від $600",
+  "description": "Telegram-бот для ресторану чи кафе: меню з фото, замовлення на доставку й самовивіз, оплата, бронювання столиків. Без комісії агрегаторів. Від $600.",
+  "h1": "Телеграм-бот для ресторану і кафе",
+  "h2": 12,
+  "words": 863,
+  "keyword": "телеграм бот для ресторану"
+ },
+ "/services/bots-crm/": {
+  "title": "Інтеграція Telegram-бота з CRM — Bitrix24, amoCRM, від $800",
+  "description": "Інтеграція Telegram-бота з CRM: ліди, угоди й статуси синхронізуються з Bitrix24, amoCRM, Pipedrive чи Google Sheets автоматично. Від $800, від 7 днів.",
+  "h1": "Інтеграція телеграм-бота з CRM",
+  "h2": 12,
+  "words": 851,
+  "keyword": "інтеграція телеграм бота з CRM"
+ },
+ "/services/platforms/": {
+  "title": "Розробка вебплатформ і SaaS — MVP від $2500 | Infinite Union",
+  "description": "Розробка вебплатформ, SaaS, кабінетів і внутрішніх систем: React/Next.js, FastAPI, PostgreSQL. MVP від $2500 за 4–8 тижнів, код і доступи — ваші.",
+  "h1": "Розробка вебплатформи і SaaS",
+  "h2": 12,
+  "words": 798,
+  "keyword": "розробка вебплатформи"
+ },
+ "/services/ecosystems/": {
+  "title": "Автоматизація бізнесу: сайт + бот + CRM — від $2000",
+  "description": "Автоматизація бізнесу під ключ: сайт, Telegram-бот, CRM і аналітика працюють як одна система. Заявки не губляться, звіти — без Excel. Від $2000.",
+  "h1": "Автоматизація бізнесу: сайт, бот і CRM",
+  "h2": 11,
+  "words": 943,
+  "keyword": "автоматизація бізнесу"
+ },
+ "/services/google-ads/": {
+  "title": "Налаштування Google Ads і ведення — від $300 | IU",
+  "description": "Налаштування та ведення Google Ads: пошук, Performance Max, YouTube, ремаркетинг, відстеження конверсій. Налаштування від $300, ведення від $200/міс.",
+  "h1": "Налаштування Google Ads",
+  "h2": 12,
+  "words": 935,
+  "keyword": "налаштування Google Ads"
+ },
+ "/services/google-ads-search/": {
+  "title": "Контекстна реклама в пошуку Google — запуск від $300",
+  "description": "Контекстна реклама в пошуку Google: семантика, мінус-слова, оголошення, ставки й відстеження дзвінків та заявок. Запуск від $300, ведення від $200/міс.",
+  "h1": "Контекстна реклама Google у пошуку",
+  "h2": 12,
+  "words": 848,
+  "keyword": "контекстна реклама Google"
+ },
+ "/services/meta-ads/": {
+  "title": "Таргетована реклама Facebook та Instagram — від $250",
+  "description": "Таргетована реклама у Facebook та Instagram: Pixel і Conversions API, аудиторії, креативи, ретаргетинг, звіти. Налаштування від $250, ведення від $200/міс.",
+  "h1": "Таргетована реклама Facebook та Instagram",
+  "h2": 12,
+  "words": 880,
+  "keyword": "таргетована реклама"
+ },
+ "/services/meta-ads-instagram/": {
+  "title": "Реклама в Instagram — Reels, Stories, стрічка | від $250",
+  "description": "Реклама в Instagram для бізнесу: Reels, Stories і стрічка, підбір аудиторій, креативи під формат, заявки в Direct або на сайт. Запуск від $250.",
+  "h1": "Реклама в Instagram",
+  "h2": 12,
+  "words": 774,
+  "keyword": "реклама в Instagram"
+ },
+ "/services/tiktok-ads/": {
+  "title": "Реклама в TikTok для бізнесу — запуск від $250",
+  "description": "Реклама в TikTok: In-Feed, Spark Ads, TikTok Pixel, UGC-креативи під формат платформи. Налаштування від $250, ведення від $150/міс, бюджет від $200.",
+  "h1": "Реклама в TikTok",
+  "h2": 12,
+  "words": 837,
+  "keyword": "реклама в TikTok"
+ },
+ "/services/seo/": {
+  "title": "SEO просування сайту в Google — від $150/міс",
+  "description": "SEO просування сайту: технічний аудит, семантичне ядро, структура, тексти, посилання, щомісячні звіти. Від $150/міс, перші результати за 3–6 місяців.",
+  "h1": "SEO просування сайту",
+  "h2": 12,
+  "words": 831,
+  "keyword": "SEO просування сайту"
+ },
+ "/services/seo-audit/": {
+  "title": "SEO аудит сайту — технічний аналіз від $100 | Infinite Union",
+  "description": "SEO аудит сайту: індексація, швидкість і Core Web Vitals, структура, мета-теги, дублікати, розмітка. Звіт з пріоритетами виправлень. Від $100, 3–5 днів.",
+  "h1": "SEO аудит сайту з планом виправлень",
+  "h2": 12,
+  "words": 781,
+  "keyword": "SEO аудит сайту"
+ },
+ "/services/seo-local/": {
+  "title": "Локальне SEO і Google Maps — профіль компанії від $200",
+  "description": "Локальне SEO: оптимізація профілю Google Business, позиції в Google Maps, локальні сторінки, NAP, робота з відгуками. Старт від $200, ведення від $150/міс.",
+  "h1": "Локальне SEO і Google Maps",
+  "h2": 12,
+  "words": 760,
+  "keyword": "локальне SEO Google Maps"
+ },
+ "/services/constructor/": {
+  "title": "AI-конструктор сайтів — безкоштовне прев'ю за хвилину",
+  "description": "Безкоштовний AI-конструктор: опишіть бізнес і отримайте прев'ю майбутнього сайту за хвилину. Сподобався концепт — зробимо з нього робочий сайт.",
+  "h1": "AI конструктор сайтів: прев'ю до замовлення",
+  "h2": 9,
+  "words": 665,
+  "keyword": "AI конструктор сайтів"
+ },
+ "/portfolio/": {
+  "title": "Портфоліо Infinite Union — сайти, Telegram-боти, SaaS",
+  "description": "Реальні проєкти Infinite Union: лендінг Transfer Kharkiv з конверсією 8.4%, бот КНЕУ на 3000+ користувачів, Respect Car, Parrot School та інші.",
+  "h1": "Портфоліо Infinite Union: сайти, боти та SaaS",
+  "h2": 5,
+  "words": 624,
+  "keyword": "портфоліо веб-студії"
+ },
+ "/blog/": {
+  "title": "Блог Infinite Union — сайти, боти, SEO та реклама",
+  "description": "Практичні статті від Infinite Union: скільки коштує сайт, як вибрати веб-студію, Telegram-боти для бізнесу, SEO-аудит, Google Ads чи SEO.",
+  "h1": "Блог Infinite Union: сайти, боти, SEO і реклама",
+  "h2": 10,
+  "words": 327,
+  "keyword": "блог про сайти та маркетинг"
+ },
+ "/blog/skilky-koshtuye-sayt-2026/": {
+  "title": "Ціни на сайти у 2026: ринкові вилки в Україні",
+  "description": "Ринкові ціни на розробку сайтів в Україні у 2026: лендінг, візитка, корпоративний сайт, магазин, SaaS. Від чого залежить вартість і як не переплатити.",
+  "h1": "Ціни на сайти у 2026: ринкові вилки в Україні",
+  "h2": 14,
+  "words": 1194,
+  "keyword": "ціни на сайти 2026"
+ },
+ "/blog/zamovyty-sayt-kharkiv/": {
+  "title": "Як вибрати веб-студію і не помилитись: чек-лист 2026",
+  "description": "Як вибрати веб-студію: що перевірити в портфоліо, які питання поставити до договору, червоні прапори і як розбити оплату на етапи.",
+  "h1": "Як вибрати веб-студію і не помилитись: чек-лист 2026",
+  "h2": 11,
+  "words": 874,
+  "keyword": "як вибрати веб-студію"
+ },
+ "/blog/telegram-bot-dlya-biznesu/": {
+  "title": "Telegram-бот для бізнесу: що вміє, кому потрібен, ціна",
+  "description": "Telegram-бот для бізнесу простими словами: які задачі закриває, кому потрібен, з чого складається вартість і скільки триває розробка.",
+  "h1": "Telegram-бот для бізнесу: що вміє, кому потрібен, ціна",
+  "h2": 12,
+  "words": 743,
+  "keyword": "telegram бот для бізнесу"
+ },
+ "/blog/seo-audit-shcho-tse/": {
+  "title": "Що таке SEO-аудит сайту і що в ньому перевіряють",
+  "description": "Що таке SEO-аудит, які пункти перевіряють (індексація, швидкість, структура, контент, посилання) і чому сайт може не виходити в топ Google.",
+  "h1": "Що таке SEO-аудит сайту і що в ньому перевіряють",
+  "h2": 11,
+  "words": 716,
+  "keyword": "що таке SEO аудит"
+ },
+ "/blog/google-ads-chy-seo/": {
+  "title": "Google Ads чи SEO: що обрати бізнесу на старті",
+  "description": "Google Ads чи SEO: порівнюємо швидкість результату, вартість, довгостроковий ефект і пояснюємо, коли варто поєднувати обидва канали.",
+  "h1": "Google Ads чи SEO: що обрати бізнесу на старті",
+  "h2": 12,
+  "words": 796,
+  "keyword": "google ads чи seo"
+ },
+ "/services/privacy/": {
+  "title": "Політика конфіденційності — Infinite Union",
+  "description": "Політика конфіденційності Infinite Union: які дані ми збираємо через форми та месенджери, як їх використовуємо і захищаємо.",
+  "h1": "Політика конфіденційності",
+  "h2": 17,
+  "words": 1460
+ },
+ "/en/": {
+  "title": "Web Development Agency in Ukraine | Infinite Union",
+  "description": "Infinite Union is a web development agency from Kharkiv, Ukraine. Websites from $600, Telegram bots from $300, Google & Meta Ads, SEO. EU clients welcome.",
+  "h1": "Web development agency in Ukraine",
+  "h2": 11,
+  "words": 907,
+  "keyword": "web development agency Ukraine"
+ },
+ "/en/services/websites/": {
+  "title": "Website Development in Ukraine — from $600 | Infinite Union",
+  "description": "Custom website development from a Ukrainian agency: landing pages, corporate sites, online stores. Unique design, SEO-ready code, you own everything.",
+  "h1": "Website development in Ukraine.",
+  "h2": 12,
+  "words": 1181,
+  "keyword": "website development Ukraine"
+ },
+ "/en/pricing/": {
+  "title": "Website Development Cost in 2026 — Pricing | Infinite Union",
+  "description": "How much does a custom website cost? Landing page from $600, corporate site from $1,000, online store from $1,200, Telegram bot from $300. What's included.",
+  "h1": "Custom website development cost",
+  "h2": 13,
+  "words": 1281,
+  "keyword": "custom website development cost"
+ },
+ "/en/services/bots/": {
+  "title": "Telegram Bot Development — from $300 | Infinite Union",
+  "description": "Custom Telegram bot development for business: lead capture, bookings, payments, CRM sync, Mini Apps. Python, aiogram 3. Simple bots from $300.",
+  "h1": "Telegram bot development for business.",
+  "h2": 12,
+  "words": 1300,
+  "keyword": "Telegram bot development"
+ },
+ "/en/services/platforms/": {
+  "title": "Web Platform & SaaS Development — MVP from $2,500",
+  "description": "Web platform and SaaS development: dashboards, client portals, internal tools. React/Next.js, FastAPI, PostgreSQL. MVP from $2,500 in 4–8 weeks.",
+  "h1": "SaaS development from MVP to full platform.",
+  "h2": 12,
+  "words": 902,
+  "keyword": "SaaS development"
+ },
+ "/en/services/ecosystems/": {
+  "title": "Business Automation: Website + Bot + CRM — from $2,000",
+  "description": "Business automation as one system: website, Telegram bot, CRM and analytics connected end to end. No lost leads, no manual reports. From $2,000.",
+  "h1": "Business automation: site, bot, CRM.",
+  "h2": 11,
+  "words": 1072,
+  "keyword": "business automation"
+ },
+ "/en/services/google-ads/": {
+  "title": "Google Ads Management — Setup from $300 | Infinite Union",
+  "description": "Google Ads setup and management: Search, Performance Max, YouTube, remarketing and conversion tracking. Setup from $300, management from $200/month.",
+  "h1": "Google Ads management",
+  "h2": 12,
+  "words": 1162,
+  "keyword": "Google Ads management"
+ },
+ "/en/services/meta-ads/": {
+  "title": "Facebook & Instagram Ads Agency — from $250 | Infinite Union",
+  "description": "Facebook and Instagram advertising: Pixel and Conversions API, audiences, creatives, retargeting, clear reports. Setup from $250, management from $200/mo.",
+  "h1": "Facebook and Instagram ads agency",
+  "h2": 12,
+  "words": 1033,
+  "keyword": "Facebook and Instagram ads agency"
+ },
+ "/en/services/tiktok-ads/": {
+  "title": "TikTok Ads Agency — Campaign Setup from $250",
+  "description": "TikTok advertising for business: In-Feed and Spark Ads, TikTok Pixel, UGC-style creatives. Setup from $250, management from $150/month.",
+  "h1": "TikTok ads agency",
+  "h2": 12,
+  "words": 971,
+  "keyword": "TikTok ads agency"
+ },
+ "/en/services/seo/": {
+  "title": "SEO Services from Ukraine — from $150/month | Infinite Union",
+  "description": "SEO services: technical audit, keyword research, site structure, content, link building and monthly reports. From $150/month, first results in 3–6 months.",
+  "h1": "SEO services from Ukraine",
+  "h2": 12,
+  "words": 1166,
+  "keyword": "SEO services Ukraine"
+ },
+ "/en/portfolio/": {
+  "title": "Portfolio — Websites, Telegram Bots, SaaS | Infinite Union",
+  "description": "Real projects by Infinite Union: Transfer Kharkiv landing page with 8.4% conversion, a university Telegram bot with 3,000+ users, Respect Car and more.",
+  "h1": "Our web agency portfolio.",
+  "h2": 13,
+  "words": 742,
+  "keyword": "web agency portfolio"
+ }
+}

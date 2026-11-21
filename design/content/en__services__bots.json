@@ -1,0 +1,1168 @@
+{
+  "url": "https://infiniteunion.com.ua/en/services/bots/",
+  "path": "/en/services/bots/",
+  "file": "en/services/bots/index.html",
+  "lang": "en",
+  "alt": {
+    "lang": "uk",
+    "path": "/services/bots/",
+    "url": "https://infiniteunion.com.ua/services/bots/"
+  },
+  "template": "service",
+  "registryType": "service",
+  "name": "Telegram bots",
+  "title": "Telegram Bot Development — from $300 | Infinite Union",
+  "description": "Custom Telegram bot development for business: lead capture, bookings, payments, CRM sync, Mini Apps. Python, aiogram 3. Simple bots from $300.",
+  "keyword": "Telegram bot development",
+  "priceFrom": 300,
+  "robots": "index, follow",
+  "h1": "Telegram bot development for business.",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Telegram bots",
+      "url": "/en/services/bots/"
+    }
+  ],
+  "theme": {
+    "--red": "#D40000",
+    "--red-glow": "rgba(212,0,0,0.15)",
+    "--bg": "#060404",
+    "--bg2": "#0e0b0b",
+    "--bg3": "#111",
+    "--border": "rgba(255,255,255,0.08)",
+    "--text": "#fff",
+    "--muted": "rgba(255,255,255,0.45)",
+    "--muted2": "rgba(255,255,255,0.25)",
+    "--font": "'Space Grotesk',sans-serif",
+    "--body": "'Inter',sans-serif",
+    "--ease": "cubic-bezier(0.76,0,0.24,1)",
+    "--ease2": "cubic-bezier(0.23,1,0.32,1)"
+  },
+  "words": 1277,
+  "chrome": [
+    {
+      "k": "link",
+      "text": "← Back",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "INFINITE UNION",
+      "href": "/en/"
+    },
+    {
+      "k": "link",
+      "text": "UA",
+      "href": "/services/bots/"
+    },
+    {
+      "k": "link",
+      "text": "ORDER BOT",
+      "href": "/en/services/bots/#contact"
+    }
+  ],
+  "blocks": [
+    {
+      "n": 1,
+      "type": "hero",
+      "viewport": "all",
+      "tag": "section",
+      "class": "hero",
+      "heading": "Telegram bot development for business.",
+      "items": [
+        {
+          "k": "text",
+          "text": "SERVICE 02 · TELEGRAM BOT DEVELOPMENT",
+          "role": "hero-label"
+        },
+        {
+          "k": "h",
+          "level": 1,
+          "text": "Telegram bot development for business."
+        },
+        {
+          "k": "text",
+          "text": "Infinite Union is a development agency in Kharkiv, Ukraine, working with businesses across the EU. We build Telegram bots that take orders, bookings and payments, and pass every lead to your CRM. Python and aiogram 3, launch in 1–4 weeks, simple bots from $300. Describe your bot."
+        },
+        {
+          "k": "text",
+          "text": "3000+",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "ACTIVE USERS IN THE KNEU BOT",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "$300",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "SIMPLE BOTS FROM",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "5",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "PAYMENT PROVIDERS SUPPORTED",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "15 min",
+          "role": "hero-stat-num"
+        },
+        {
+          "k": "text",
+          "text": "REPLY TIME, BUSINESS HOURS",
+          "role": "hero-stat-label"
+        },
+        {
+          "k": "text",
+          "text": "FLAGSHIP PROJECT",
+          "role": "flagship-tag"
+        },
+        {
+          "k": "text",
+          "text": "KNEU Bot",
+          "role": "flagship-name"
+        },
+        {
+          "k": "text",
+          "text": "Official university Telegram bot",
+          "role": "flagship-url"
+        },
+        {
+          "k": "text",
+          "text": "3,000+",
+          "role": "fm-val"
+        },
+        {
+          "k": "text",
+          "text": "Active users",
+          "role": "fm-key"
+        },
+        {
+          "k": "text",
+          "text": "Live",
+          "role": "fm-val"
+        },
+        {
+          "k": "text",
+          "text": "Timetable and news",
+          "role": "fm-key"
+        },
+        {
+          "k": "text",
+          "text": "Push",
+          "role": "fm-val"
+        },
+        {
+          "k": "text",
+          "text": "Notifications",
+          "role": "fm-key"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "type": "marquee",
+      "viewport": "all",
+      "tag": "div",
+      "class": "marquee-wrap",
+      "heading": "",
+      "items": [
+        {
+          "k": "decor",
+          "text": "AIOGRAM 3 → FASTAPI → POSTGRESQL → REDIS FSM → STRIPE → TELEGRAM PAYMENTS → MINI APPS → CRM INTEGRATION → AIOGRAM 3 → FASTAPI → POSTGRESQL → REDIS FSM → STRIPE → TELEGRAM PAYMENTS → MINI APPS → CRM INTEGRATION →"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "type": "problem",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Where a bot saves you time",
+      "items": [
+        {
+          "k": "text",
+          "text": "THE PROBLEM",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Where a bot saves you time"
+        },
+        {
+          "k": "text",
+          "text": "Your team answers the same ten questions every day: prices, opening hours, availability, delivery. Orders arrive as private messages, some get lost, and anything that comes in after 6 pm waits until the morning."
+        },
+        {
+          "k": "text",
+          "text": "A Telegram bot takes over that routine. It shows the menu or catalogue, collects the order or booking, takes payment and sends a complete request to your team, so a manager only steps in where a person is really needed."
+        },
+        {
+          "k": "text",
+          "text": "We build bots as proper applications, with a database, an admin panel and error handling, not as a script that stops working when Telegram changes something. You get the full source code and the bot account."
+        },
+        {
+          "k": "text",
+          "text": "2 wks",
+          "role": "cred-val"
+        },
+        {
+          "k": "text",
+          "text": "Simple bot, from brief to launch",
+          "role": "cred-label"
+        },
+        {
+          "k": "text",
+          "text": "1 mo",
+          "role": "cred-val"
+        },
+        {
+          "k": "text",
+          "text": "Support included from Business",
+          "role": "cred-label"
+        },
+        {
+          "k": "text",
+          "text": "aiogram 3",
+          "role": "cred-val"
+        },
+        {
+          "k": "text",
+          "text": "Current async framework",
+          "role": "cred-label"
+        },
+        {
+          "k": "text",
+          "text": "100%",
+          "role": "cred-val"
+        },
+        {
+          "k": "text",
+          "text": "Code and access handed over",
+          "role": "cred-label"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "type": "included-cards",
+      "viewport": "all",
+      "tag": "section",
+      "class": "what",
+      "heading": "What goes into a business bot",
+      "items": [
+        {
+          "k": "text",
+          "text": "WHAT'S INCLUDED",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "What goes into a business bot"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Conversation flows"
+        },
+        {
+          "k": "text",
+          "text": "We map every step of the dialogue: buttons, questions, branches and what happens if the user leaves halfway. Flows run on a finite state machine with Redis, so conversations do not get stuck.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "FSM · Redis · aiogram 3",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Database and CRM sync"
+        },
+        {
+          "k": "text",
+          "text": "Every order or lead is saved to PostgreSQL and sent to your manager. We can also push data to Google Sheets, Notion or your CRM through its API.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "PostgreSQL · Google Sheets · REST API",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Payments in the chat"
+        },
+        {
+          "k": "text",
+          "text": "Customers pay without leaving Telegram. We connect Stripe, Telegram Payments, LiqPay, WayForPay or Monobank, with automatic confirmation and receipts.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Stripe · Telegram Payments · LiqPay",
+          "role": "what-tags"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "what-num"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Admin panel and hosting"
+        },
+        {
+          "k": "text",
+          "text": "You manage content, orders and broadcasts from an admin menu inside Telegram. The bot is deployed on Railway or your own server, with automatic restarts and error logs.",
+          "role": "what-desc"
+        },
+        {
+          "k": "text",
+          "text": "Admin bot · Railway · Logging",
+          "role": "what-tags"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "type": "types",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Sales, restaurant and CRM bots",
+      "items": [
+        {
+          "k": "text",
+          "text": "BOT TYPES",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Sales, restaurant and CRM bots"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Sales bot"
+        },
+        {
+          "k": "text",
+          "text": "Catalogue, a short quiz to qualify the buyer, payment and follow-up messages for people who did not finish.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Start from $500, about 7 days",
+            "Pro from $1,200, about 14 days",
+            "Max from $2,500 for complex funnels",
+            "Abandoned order reminders"
+          ]
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Restaurant and cafe bot"
+        },
+        {
+          "k": "text",
+          "text": "Menu with photos and prices, orders for delivery or pickup, table bookings and promo broadcasts, without paying commission to a delivery app.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Cafe from $600: up to 50 menu items, 7 days",
+            "Restaurant from $1,200: about 14 days",
+            "Chain from $2,500: several locations",
+            "Bookings with confirmation"
+          ]
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "CRM integration"
+        },
+        {
+          "k": "text",
+          "text": "Leads from the bot land in your CRM with the right fields, status and owner, and your managers get notified in Telegram.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Start from $800: one CRM, 7 days",
+            "Pro from $1,500: about 14 days",
+            "Enterprise from $3,000",
+            "Two-way status updates"
+          ]
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Booking bot"
+        },
+        {
+          "k": "text",
+          "text": "For salons, clinics and other appointment-based services: online booking with a choice of specialist and time slot.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Choice of specialist and slot",
+            "Reminders before the visit",
+            "Cancel or reschedule in the chat",
+            "Feedback request afterwards"
+          ]
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Education bot"
+        },
+        {
+          "k": "text",
+          "text": "Timetables, homework, progress and course payments. We built this kind of system for Parrot School: separate roles for students, parents and teachers.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Lessons and materials on schedule",
+            "Tests and homework",
+            "Progress for parents",
+            "Course payment and access"
+          ]
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Internal team bot"
+        },
+        {
+          "k": "text",
+          "text": "Requests, tasks, payroll and reports for your own staff. BizBot, which we built for a small business, saves its owner 4+ hours a week.",
+          "role": "uc-desc"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Tasks and requests",
+            "Daily team reports",
+            "Automatic Excel filling",
+            "Roles and access levels"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "type": "pricing-tiers",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Telegram bot development cost",
+      "items": [
+        {
+          "k": "text",
+          "text": "PRICING",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Telegram bot development cost"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Starter"
+        },
+        {
+          "k": "text",
+          "text": "from $300",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "Simple bot · up to 2 weeks",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Lead form or quiz",
+            "Admin menu in Telegram",
+            "Database",
+            "Notifications to your team",
+            "Deployment on Railway",
+            "Payments",
+            "CRM integration"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "DISCUSS YOUR BOT",
+          "href": "/en/services/bots/#contact"
+        },
+        {
+          "k": "text",
+          "text": "MOST REQUESTED",
+          "role": "level-badge"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Business"
+        },
+        {
+          "k": "text",
+          "text": "from $700",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "Full bot · up to 4 weeks",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Multi-step flows",
+            "Payments in the chat",
+            "CRM or Google Sheets integration",
+            "Several admins and roles",
+            "Segmented broadcasts",
+            "1 month of support",
+            "Telegram Mini App"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "DISCUSS YOUR BOT",
+          "href": "/en/services/bots/#contact"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Enterprise"
+        },
+        {
+          "k": "text",
+          "text": "from $1,500",
+          "role": "level-price"
+        },
+        {
+          "k": "text",
+          "text": "Mini App and AI · scope agreed individually",
+          "role": "level-price-note"
+        },
+        {
+          "k": "list",
+          "ordered": false,
+          "items": [
+            "Telegram Mini App (web app inside Telegram)",
+            "AI features with the Claude API",
+            "Custom admin dashboard",
+            "Integrations with your systems",
+            "3 months of support"
+          ]
+        },
+        {
+          "k": "link",
+          "text": "DISCUSS YOUR BOT",
+          "href": "/en/services/bots/#contact"
+        },
+        {
+          "k": "text",
+          "text": "Prices are starting points; the final quote depends on the number of flows and integrations. Support after launch starts at $150/month. All our prices are on the pricing page. If the bot should work together with a new website and CRM, see business automation."
+        }
+      ],
+      "tiers": [
+        {
+          "name": "Starter",
+          "price": "from $300",
+          "priceNote": "Simple bot · up to 2 weeks",
+          "term": "Simple bot · up to 2 weeks",
+          "includes": [
+            "Lead form or quiz",
+            "Admin menu in Telegram",
+            "Database",
+            "Notifications to your team",
+            "Deployment on Railway",
+            "Payments",
+            "CRM integration"
+          ],
+          "cta": [
+            {
+              "text": "DISCUSS YOUR BOT",
+              "href": "#contact"
+            }
+          ]
+        },
+        {
+          "name": "Business",
+          "badge": "MOST REQUESTED",
+          "price": "from $700",
+          "priceNote": "Full bot · up to 4 weeks",
+          "term": "Full bot · up to 4 weeks",
+          "includes": [
+            "Multi-step flows",
+            "Payments in the chat",
+            "CRM or Google Sheets integration",
+            "Several admins and roles",
+            "Segmented broadcasts",
+            "1 month of support",
+            "Telegram Mini App"
+          ],
+          "cta": [
+            {
+              "text": "DISCUSS YOUR BOT",
+              "href": "#contact"
+            }
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "price": "from $1,500",
+          "priceNote": "Mini App and AI · scope agreed individually",
+          "term": "",
+          "includes": [
+            "Telegram Mini App (web app inside Telegram)",
+            "AI features with the Claude API",
+            "Custom admin dashboard",
+            "Integrations with your systems",
+            "3 months of support"
+          ],
+          "cta": [
+            {
+              "text": "DISCUSS YOUR BOT",
+              "href": "#contact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "type": "process",
+      "viewport": "all",
+      "tag": "section",
+      "class": "process",
+      "heading": "From idea to a live bot",
+      "items": [
+        {
+          "k": "text",
+          "text": "HOW WE WORK",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "From idea to a live bot"
+        },
+        {
+          "k": "text",
+          "text": "01",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Brief"
+        },
+        {
+          "k": "text",
+          "text": "We go through your process and agree what the bot does",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–2 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "02",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Flow map"
+        },
+        {
+          "k": "text",
+          "text": "Dialogue scheme, data fields and integrations for your approval",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "1–3 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "03",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Development"
+        },
+        {
+          "k": "text",
+          "text": "Code, payments, integrations and the admin menu",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "Depends on scope",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "04",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Testing"
+        },
+        {
+          "k": "text",
+          "text": "You test the bot on real scenarios, we fix what comes up",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "2–4 days",
+          "role": "process-time"
+        },
+        {
+          "k": "text",
+          "text": "05",
+          "role": "process-dot"
+        },
+        {
+          "k": "h",
+          "level": 3,
+          "text": "Launch"
+        },
+        {
+          "k": "text",
+          "text": "Deployment, handover of code and access, then support",
+          "role": "process-step-desc"
+        },
+        {
+          "k": "text",
+          "text": "1 day",
+          "role": "process-time"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "type": "faq",
+      "viewport": "all",
+      "tag": "section",
+      "class": "faq",
+      "heading": "Telegram bot development: FAQ",
+      "items": [
+        {
+          "k": "text",
+          "text": "FAQ",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Telegram bot development: FAQ"
+        },
+        {
+          "k": "faq",
+          "q": "How much does a Telegram bot cost?",
+          "a": "A simple bot starts at $300, a full business bot with payments and CRM at $700, and a bot with a Mini App or AI features at $1,500. Sales bots start at $500, restaurant bots at $600 and CRM integrations at $800."
+        },
+        {
+          "k": "faq",
+          "q": "How long does development take?",
+          "a": "A simple bot takes up to 2 weeks, a business bot up to 4 weeks. Focused bots such as a sales bot or a cafe bot can be ready in about 7 days."
+        },
+        {
+          "k": "faq",
+          "q": "Do I need any technical knowledge?",
+          "a": "No. You describe how your business works and create the bot account in @BotFather (we guide you through it). We handle everything else, and you manage the bot through buttons in an admin menu."
+        },
+        {
+          "k": "faq",
+          "q": "Which payment systems can the bot accept?",
+          "a": "Stripe and Telegram Payments for EU clients, plus LiqPay, WayForPay and Monobank for Ukrainian customers. Payment confirmation and receipts are automatic."
+        },
+        {
+          "k": "faq",
+          "q": "Can the bot work with my website and CRM?",
+          "a": "Yes. The bot can receive leads from your website form, send order notifications and sync customers with your CRM through its API."
+        },
+        {
+          "k": "faq",
+          "q": "Who owns the bot after launch?",
+          "a": "You do. The bot account is registered to you, and we hand over the full source code and server access. You can keep us on support from $150/month or move to another team."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "type": "portfolio",
+      "viewport": "all",
+      "tag": "section",
+      "heading": "Bots we have built",
+      "items": [
+        {
+          "k": "text",
+          "text": "FROM OUR PORTFOLIO",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Bots we have built"
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-kneu-bot",
+          "items": [
+            {
+              "k": "text",
+              "text": "UNIVERSITY"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "KNEU Bot"
+            },
+            {
+              "k": "text",
+              "text": "Official university bot with timetable, news and notifications for 3,000+ active users. Python, aiogram, PostgreSQL."
+            },
+            {
+              "k": "text",
+              "text": "See the project →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-bizbot",
+          "items": [
+            {
+              "k": "text",
+              "text": "SMALL BUSINESS"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "BizBot"
+            },
+            {
+              "k": "text",
+              "text": "Bookkeeping bot for a small business: payroll, tasks and automatic Excel filling. Saves 4+ hours a week."
+            },
+            {
+              "k": "text",
+              "text": "See the project →"
+            }
+          ]
+        },
+        {
+          "k": "card-link",
+          "href": "/en/portfolio/#p-infinitycreo",
+          "items": [
+            {
+              "k": "text",
+              "text": "AI BOT"
+            },
+            {
+              "k": "h",
+              "level": 3,
+              "text": "InfinityCreo"
+            },
+            {
+              "k": "text",
+              "text": "Telegram bot that generates ad creatives with AI through n8n: about 3 minutes from brief to banner, 10+ formats."
+            },
+            {
+              "k": "text",
+              "text": "See the project →"
+            }
+          ]
+        },
+        {
+          "k": "text",
+          "text": "View the full portfolio · Need a website for the bot to work with? See website development."
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "type": "cta",
+      "viewport": "all",
+      "tag": "section",
+      "id": "contact",
+      "class": "cta-final",
+      "heading": "Let's plan your bot",
+      "items": [
+        {
+          "k": "text",
+          "text": "READY TO AUTOMATE?",
+          "role": "sec-label"
+        },
+        {
+          "k": "h",
+          "level": 2,
+          "text": "Let's plan your bot"
+        },
+        {
+          "k": "text",
+          "text": "Tell us what the bot should do. We reply within 15 minutes during business hours and suggest a scope and price.",
+          "role": "cta-final-sub"
+        },
+        {
+          "k": "link",
+          "text": "MESSAGE ON TELEGRAM",
+          "href": "https://t.me/infiniteunion_manager"
+        },
+        {
+          "k": "link",
+          "text": "WHATSAPP",
+          "href": "https://wa.me/380688286969"
+        },
+        {
+          "k": "link",
+          "text": "FILL IN THE FORM",
+          "href": "/en/#contact"
+        }
+      ]
+    }
+  ],
+  "tiers": [
+    {
+      "block": 6,
+      "section": "Telegram bot development cost",
+      "name": "Starter",
+      "price": "from $300",
+      "priceNote": "Simple bot · up to 2 weeks",
+      "term": "Simple bot · up to 2 weeks",
+      "includes": [
+        "Lead form or quiz",
+        "Admin menu in Telegram",
+        "Database",
+        "Notifications to your team",
+        "Deployment on Railway",
+        "Payments",
+        "CRM integration"
+      ],
+      "cta": [
+        {
+          "text": "DISCUSS YOUR BOT",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 6,
+      "section": "Telegram bot development cost",
+      "name": "Business",
+      "badge": "MOST REQUESTED",
+      "price": "from $700",
+      "priceNote": "Full bot · up to 4 weeks",
+      "term": "Full bot · up to 4 weeks",
+      "includes": [
+        "Multi-step flows",
+        "Payments in the chat",
+        "CRM or Google Sheets integration",
+        "Several admins and roles",
+        "Segmented broadcasts",
+        "1 month of support",
+        "Telegram Mini App"
+      ],
+      "cta": [
+        {
+          "text": "DISCUSS YOUR BOT",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "block": 6,
+      "section": "Telegram bot development cost",
+      "name": "Enterprise",
+      "price": "from $1,500",
+      "priceNote": "Mini App and AI · scope agreed individually",
+      "term": "",
+      "includes": [
+        "Telegram Mini App (web app inside Telegram)",
+        "AI features with the Claude API",
+        "Custom admin dashboard",
+        "Integrations with your systems",
+        "3 months of support"
+      ],
+      "cta": [
+        {
+          "text": "DISCUSS YOUR BOT",
+          "href": "#contact"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much does a Telegram bot cost?",
+      "a": "A simple bot starts at $300, a full business bot with payments and CRM at $700, and a bot with a Mini App or AI features at $1,500. Sales bots start at $500, restaurant bots at $600 and CRM integrations at $800."
+    },
+    {
+      "q": "How long does development take?",
+      "a": "A simple bot takes up to 2 weeks, a business bot up to 4 weeks. Focused bots such as a sales bot or a cafe bot can be ready in about 7 days."
+    },
+    {
+      "q": "Do I need any technical knowledge?",
+      "a": "No. You describe how your business works and create the bot account in @BotFather (we guide you through it). We handle everything else, and you manage the bot through buttons in an admin menu."
+    },
+    {
+      "q": "Which payment systems can the bot accept?",
+      "a": "Stripe and Telegram Payments for EU clients, plus LiqPay, WayForPay and Monobank for Ukrainian customers. Payment confirmation and receipts are automatic."
+    },
+    {
+      "q": "Can the bot work with my website and CRM?",
+      "a": "Yes. The bot can receive leads from your website form, send order notifications and sync customers with your CRM through its API."
+    },
+    {
+      "q": "Who owns the bot after launch?",
+      "a": "You do. The bot account is registered to you, and we hand over the full source code and server access. You can keep us on support from $150/month or move to another team."
+    }
+  ],
+  "internalLinks": [
+    {
+      "text": "Describe your bot",
+      "href": "/en/services/bots/#contact",
+      "block": 1
+    },
+    {
+      "text": "DISCUSS YOUR BOT",
+      "href": "/en/services/bots/#contact",
+      "block": 6
+    },
+    {
+      "text": "DISCUSS YOUR BOT",
+      "href": "/en/services/bots/#contact",
+      "block": 6
+    },
+    {
+      "text": "DISCUSS YOUR BOT",
+      "href": "/en/services/bots/#contact",
+      "block": 6
+    },
+    {
+      "text": "pricing page",
+      "href": "/en/pricing/",
+      "block": 6
+    },
+    {
+      "text": "business automation",
+      "href": "/en/services/ecosystems/",
+      "block": 6
+    },
+    {
+      "text": "UNIVERSITY KNEU Bot Official university bot with timetable, news and notifications for 3,000+ active users. Python, aiogram, PostgreSQL. See the project →",
+      "href": "/en/portfolio/#p-kneu-bot",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "SMALL BUSINESS BizBot Bookkeeping bot for a small business: payroll, tasks and automatic Excel filling. Saves 4+ hours a week. See the project →",
+      "href": "/en/portfolio/#p-bizbot",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "AI BOT InfinityCreo Telegram bot that generates ad creatives with AI through n8n: about 3 minutes from brief to banner, 10+ formats. See the project →",
+      "href": "/en/portfolio/#p-infinitycreo",
+      "block": 9,
+      "card": true
+    },
+    {
+      "text": "View the full portfolio",
+      "href": "/en/portfolio/",
+      "block": 9
+    },
+    {
+      "text": "website development",
+      "href": "/en/services/websites/",
+      "block": 9
+    },
+    {
+      "text": "FILL IN THE FORM",
+      "href": "/en/#contact",
+      "block": 10
+    }
+  ],
+  "externalLinks": [
+    {
+      "text": "MESSAGE ON TELEGRAM",
+      "href": "https://t.me/infiniteunion_manager",
+      "block": 10
+    },
+    {
+      "text": "WHATSAPP",
+      "href": "https://wa.me/380688286969",
+      "block": 10
+    }
+  ]
+}
