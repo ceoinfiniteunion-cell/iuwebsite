@@ -19,3 +19,7 @@ SEO_AUDIT.md
 
 # Cloudflare config backup (local only)
 cf-backup.json
+
+# local secrets (GitHub PAT) — never commit
+env dont push, only gitignor
+*.token
