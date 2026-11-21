@@ -158,8 +158,12 @@ test('new service worker drops the old caches', async ({ page, browserName }) =>
   await page.goto('/robots.txt'); // a page that never registers the SW: seed the cache of the previous design first
   await page.evaluate(async () => { const c = await caches.open('iu-1793311479325'); await c.put('/assets/css/main.css', new Response('old')); });
   await page.goto('/');
-  await page.waitForFunction(async () => (await navigator.serviceWorker.getRegistration())?.active?.state === 'activated', null, { timeout: 20000 });
-  await page.waitForFunction(async () => !(await caches.keys()).includes('iu-1793311479325'), null, { timeout: 10000 });
+  // waitForFunction treats a Promise as truthy — poll from Node instead; the new SW reloads pages of the old
+  // design (client.navigate), so an evaluate may hit a destroyed context — that is retried
+  const ev = fn => page.evaluate(fn).catch(() => 'navigating');
+  await expect.poll(() => ev(async () => (await navigator.serviceWorker.getRegistration())?.active?.state || 'none'), { timeout: 20000 }).toBe('activated');
+  await expect.poll(() => ev(() => caches.keys()), { timeout: 10000 }).not.toContain('iu-1793311479325');
+  await page.waitForLoadState('load');
   const keys = await page.evaluate(() => caches.keys());
   expect(keys.filter(k => !k.startsWith('iu-r2026-'))).toEqual([]);
 });

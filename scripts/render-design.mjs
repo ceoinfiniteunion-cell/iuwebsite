@@ -212,7 +212,7 @@ for (const p of PAGES) {
   const snakeC = $('#snake-canvas') || $('#c404');
   if (snakeC) {
     const name = p.key === '404' ? 'snake-404' : 'snake';
-    snakeC.insertAdjacentHTML('beforebegin', `<picture>${p.key === '404' ? '' : '<source type="image/avif" media="(max-width: 819.98px)" srcset="/assets/img/3d/snake-m.avif"><source media="(max-width: 819.98px)" srcset="/assets/img/3d/snake-m.webp">'}<source type="image/avif" srcset="/assets/img/3d/${name}.avif"><img class="iu-still" data-still src="/assets/img/3d/${name}.webp" alt="" width="1440" height="900" decoding="async" fetchpriority="high"></picture>`);
+    snakeC.insertAdjacentHTML('beforebegin', `<picture>${p.key === '404' ? '' : '<source type="image/avif" media="(max-width: 819.98px)" srcset="/assets/img/3d/snake-m.avif 1x, /assets/img/3d/snake-m@2x.avif 2x"><source media="(max-width: 819.98px)" srcset="/assets/img/3d/snake-m.webp 1x, /assets/img/3d/snake-m@2x.webp 2x">'}<source type="image/avif" srcset="/assets/img/3d/${name}.avif"><img class="iu-still" data-still src="/assets/img/3d/${name}.webp" alt="" width="1440" height="900" decoding="async" fetchpriority="high"></picture>`);
   }
   const glyphC = $('#glyph-canvas');
   const glyphStill = glyphC ? `/assets/img/3d/glyph-${glyphKind(p.path)}` : '';
@@ -263,7 +263,7 @@ for (const p of PAGES) {
 <meta name="referrer" content="strict-origin-when-cross-origin">
 ${seoHead(p, { faq, items, ogImage: `/assets/img/og/${p.lang === 'en' ? 'en' : ({ home: 'home', '404': 'home', pricing: 'pricing', portfolio: 'portfolio', blog: 'blog', post: 'blog' })[p.type] || 'service'}.jpg` })}
 <script>${BOOT}</script>
-${glyphStill ? `<link rel="preload" as="image" type="image/avif" href="${glyphStill}.avif" fetchpriority="high">\n` : ''}${p.key === 'home' ? '<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake-m.avif" media="(max-width: 819.98px)" fetchpriority="high">\n<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake.avif" media="(min-width: 820px)" fetchpriority="high">\n' : p.key === '404' ? '<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake-404.avif" fetchpriority="high">\n' : ''}${preFonts.map(f => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin>`).join('\n')}
+${glyphStill ? `<link rel="preload" as="image" type="image/avif" href="${glyphStill}.avif" fetchpriority="high">\n` : ''}${p.key === 'home' ? '<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake-m.avif" imagesrcset="/assets/img/3d/snake-m.avif 1x, /assets/img/3d/snake-m@2x.avif 2x" media="(max-width: 819.98px)" fetchpriority="high">\n<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake.avif" media="(min-width: 820px)" fetchpriority="high">\n' : p.key === '404' ? '<link rel="preload" as="image" type="image/avif" href="/assets/img/3d/snake-404.avif" fetchpriority="high">\n' : ''}${preFonts.map(f => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin>`).join('\n')}
 <link rel="preload" href="/assets/css/${siteCssName}" as="style" data-iu-css>
 <noscript><link rel="stylesheet" href="/assets/css/${siteCssName}"></noscript>
 ${p.key === 'home' || p.key === '404' ? '<link rel="preconnect" href="https://res.cloudinary.com" crossorigin>\n' : ''}<style>${critical}</style>

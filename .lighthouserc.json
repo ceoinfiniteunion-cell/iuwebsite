@@ -21,6 +21,17 @@
         ],
         "skipAudits": [
           "is-crawlable"
+        ],
+        "blockedUrlPatterns": [
+          "*googletagmanager.com*",
+          "*google-analytics.com*",
+          "*doubleclick.net*",
+          "*googleadservices.com*",
+          "*google.com/pagead*",
+          "*google.com/rmkt*",
+          "*google.com/ccm*",
+          "*sentry-cdn.com*",
+          "*res.cloudinary.com*"
         ]
       }
     },
@@ -48,7 +59,7 @@
           }
         ],
         "categories:best-practices": [
-          "warn",
+          "error",
           {
             "minScore": 1,
             "aggregationMethod": "median-run"
