@@ -258,7 +258,7 @@ for (const p of PAGES) {
 <html lang="${lang}">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+${p.key === 'home' ? '<meta name="facebook-domain-verification" content="d9jze8k10onpkr9cacq054iokfceic" />\n' : ''}<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="${csp(scripts.map(sha256))}">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 ${seoHead(p, { faq, items, ogImage: `/assets/img/og/${p.lang === 'en' ? 'en' : ({ home: 'home', '404': 'home', pricing: 'pricing', portfolio: 'portfolio', blog: 'blog', post: 'blog' })[p.type] || 'service'}.jpg` })}
